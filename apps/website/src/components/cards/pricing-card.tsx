@@ -178,7 +178,7 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
 			{/* CTA */}
 			<motion.div variants={noAnim ? noMotion : itemVariants} className="mt-9">
 				<Link
-					href="#contact"
+					href="/demande-projet"
 					className={cn(
 						"block rounded-md py-3.5 text-center text-sm font-medium transition-all duration-300",
 						featured

@@ -25,7 +25,7 @@ export function Realisations() {
 				{/* CTA card */}
 				<StaggerItem>
 					<Link
-						href="#contact"
+						href="/demande-projet"
 						className="group flex h-full items-center justify-between rounded-xl border border-dashed border-border bg-surface-b p-8 transition-[border-color,background-color] duration-300 hover:border-djanni-orange/40 hover:bg-card md:p-10"
 					>
 						<div>

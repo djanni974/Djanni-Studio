@@ -1,7 +1,5 @@
 import type { Metadata } from "next"
 import { getTranslations, setRequestLocale } from "next-intl/server"
-import { Footer } from "@/components/layout/footer"
-import { Navbar } from "@/components/layout/navbar"
 import { AboutContent } from "@/components/sections/about-content"
 
 export async function generateMetadata({
@@ -27,12 +25,8 @@ export default async function AProposPage({ params }: { params: Promise<{ locale
 	setRequestLocale(locale)
 
 	return (
-		<>
-			<Navbar />
-			<main>
-				<AboutContent />
-			</main>
-			<Footer />
-		</>
+		<main>
+			<AboutContent />
+		</main>
 	)
 }

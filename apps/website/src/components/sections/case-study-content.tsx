@@ -260,7 +260,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 							</p>
 							<div className="mt-8 flex flex-col gap-4 sm:flex-row">
 								<Link
-									href="/#contact"
+									href="/demande-projet"
 									className="inline-flex items-center justify-center gap-2 rounded-lg bg-djanni-orange px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light"
 								>
 									{t("ctaButton")}

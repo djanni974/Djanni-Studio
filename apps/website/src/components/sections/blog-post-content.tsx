@@ -273,7 +273,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
 
 						<div className="mt-6 flex flex-wrap items-center gap-6 border-t border-border pt-6">
 							<div className="flex items-center gap-3">
-								<div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-djanni-orange to-[#c44008] font-heading text-sm font-extrabold text-white">
+								<div className="flex h-9 w-9 items-center justify-center rounded-full bg-linear-to-br from-djanni-orange to-[#c44008] font-heading text-sm font-extrabold text-white">
 									G
 								</div>
 								<div>
@@ -308,7 +308,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
 				<div className="mx-auto max-w-[720px]">
 					<div className="rounded-xl border border-border bg-card p-6 md:p-8">
 						<div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
-							<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-djanni-orange to-[#c44008] font-heading text-xl font-extrabold text-white">
+							<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-djanni-orange to-[#c44008] font-heading text-xl font-extrabold text-white">
 								G
 							</div>
 							<div className="flex-1">
@@ -346,7 +346,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
 							</p>
 							<div className="mt-6 flex flex-col gap-3 sm:flex-row">
 								<Link
-									href="/#contact"
+									href="/demande-projet"
 									className="inline-flex items-center justify-center gap-2 rounded-lg bg-djanni-orange px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light"
 								>
 									{t("ctaButton")}
@@ -354,7 +354,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
 								</Link>
 								<Link
 									href="/blog"
-									className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-djanni-gray hover:bg-foreground/[0.03]"
+									className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-djanni-gray hover:bg-foreground/3"
 								>
 									{t("ctaSecondary")}
 								</Link>

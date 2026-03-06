@@ -27,7 +27,7 @@ export function FloatingCta() {
 					className="fixed right-5 bottom-5 z-40 md:right-8 md:bottom-8"
 				>
 					<Link
-						href="#contact"
+						href="/demande-projet"
 						className="group flex items-center gap-2.5 rounded-full bg-djanni-orange px-5 py-3 text-sm font-medium text-white shadow-[0_4px_20px_rgba(232,80,10,0.4)] transition-all duration-300 hover:bg-djanni-orange-light hover:shadow-[0_4px_30px_rgba(232,80,10,0.5)]"
 					>
 						<IconMessageCircle

@@ -75,7 +75,7 @@ export function Hero() {
 					className="flex flex-wrap items-center gap-5"
 				>
 					<Link
-						href="#contact"
+						href="/demande-projet"
 						className="inline-flex items-center gap-2 rounded-lg bg-djanni-orange px-8 py-4 text-[15px] font-medium text-white transition-all hover:-translate-y-0.5 hover:bg-djanni-orange-light"
 					>
 						<IconPhone size={16} />

@@ -106,7 +106,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
 	return (
 		<html lang={locale} suppressHydrationWarning className={`${syne.variable} ${dmSans.variable}`}>
-			<body className="overflow-x-hidden antialiased" suppressHydrationWarning>
+			<body className="overflow-x-clip antialiased" suppressHydrationWarning>
 				<Script
 					async
 					src="https://plausible.io/js/pa-aLxLCVOVZYCrqMpHaGGKF.js"

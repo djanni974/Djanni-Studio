@@ -382,6 +382,65 @@
 		"cta": "Lezañ un ali war Google",
 		"footer": "30 eilenn eo ha skoazellañ a ra ac'hanon kalz. Trugarez !"
 	},
+	"projectRequest": {
+		"tag": "Goulenn raktres",
+		"title": "Komzomp eus ho raktres.",
+		"subtitle": "Leunit ar furmskrid-mañ evit reiñ din ar muiañ a gontekst posupl. Distro a rin deoc'h a-benn 24e.",
+		"step0Title": "Ho raktres",
+		"step1Title": "Budjed & Amzer",
+		"step2Title": "Ho titouroù",
+		"step3Title": "Deskrivit ho raktres",
+		"projectTypeLabel": "Seurt raktres",
+		"projectType": "Dibab ur seurt raktres",
+		"projectTypes": {
+			"site-vitrine": "Lec'hienn Vitrine",
+			"site-premium": "Lec'hienn Premium",
+			"refonte": "Adneveziañ lec'hienn",
+			"autre": "All"
+		},
+		"businessNameLabel": "Anv an embregerezh",
+		"businessNamePlaceholder": "Da sk. : Boulanjerezh Martin",
+		"existingUrlLabel": "URL al lec'hienn a zo",
+		"existingUrlPlaceholder": "https://www.ho-lec'hienn.bzh",
+		"budgetLabel": "Budjed a-dost (diret)",
+		"budget": "Budjed a-dost",
+		"budgets": {
+			"moins-1000": "Nebeutoc'h eget 1 000 €",
+			"1000-2000": "1 000 – 2 000 €",
+			"2000-3000": "2 000 – 3 000 €",
+			"plus-3000": "Muioc'h eget 3 000 €",
+			"pas-defini": "N'eo ket resisaet c'hoazh"
+		},
+		"deadlineLabel": "Amzer goulennet (diret)",
+		"deadlinePlaceholder": "Amzer goulennet",
+		"deadlines": {
+			"urgent": "Prim (< 2 sizhun)",
+			"1-mois": "Er miz",
+			"2-3-mois": "E 2-3 miz",
+			"pas-presse": "Ket war-hast"
+		},
+		"nameLabel": "Hoc'h anv",
+		"namePlaceholder": "Hoc'h anv",
+		"emailLabel": "Ho postel",
+		"emailPlaceholder": "Ho postel",
+		"messageLabel": "Kemennadenn",
+		"messagePlaceholder": "Deskrivit ho raktres e nebeut a linennoù : hoc'h oberiantiz, ar pezh a c'hortit eus al lec'hienn, ho mennadoù...",
+		"back": "Distreiñ",
+		"next": "Da-heul",
+		"send": "Kas",
+		"sending": "O kas...",
+		"successTitle": "Goulenn kaset !",
+		"successMessage": "Trugarez evit ho koulenn. Distro a rin deoc'h a-benn 24e evit komz anezhi.",
+		"or": "Pe war-eeun :",
+		"errors": {
+			"projectType": "Dibabit ur seurt raktres",
+			"businessName": "Anv an embregerezh a zo rekis",
+			"name": "Hoc'h anv a zo rekis",
+			"email": "Ho postel a zo rekis",
+			"emailInvalid": "Postel direizh",
+			"message": "Deskrivit ho raktres"
+		}
+	},
 	"footer": {
 		"tagline": "Lec'hiennoù web evit artizaned ha kenwerzhourion e Breizh",
 		"realisations": "Obererezhioù",

@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation"
 import { NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
+import { Footer } from "@/components/layout/footer"
+import { Navbar } from "@/components/layout/navbar"
 import { FloatingCta } from "@/components/ui/floating-cta"
 import { routing } from "@/i18n/routing"
 
@@ -26,7 +28,9 @@ export default async function LocaleLayout({ children, params }: Props) {
 
 	return (
 		<NextIntlClientProvider locale={locale} messages={messages}>
+			<Navbar />
 			{children}
+			<Footer />
 			<FloatingCta />
 		</NextIntlClientProvider>
 	)
