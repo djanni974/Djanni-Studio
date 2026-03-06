@@ -101,11 +101,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 		<html lang={locale} suppressHydrationWarning className={`${syne.variable} ${dmSans.variable}`}>
 			<body className="overflow-x-hidden antialiased" suppressHydrationWarning>
 				<Script
-					defer
-					data-domain="djannistudio.fr"
-					src="https://plausible.io/js/script.js"
+					async
+					src="https://plausible.io/js/pa-aLxLCVOVZYCrqMpHaGGKF.js"
 					strategy="afterInteractive"
 				/>
+				<Script id="plausible-init" strategy="afterInteractive">
+					{`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}
+				</Script>
 				<script
 					type="application/ld+json"
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
