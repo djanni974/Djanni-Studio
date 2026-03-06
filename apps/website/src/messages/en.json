@@ -382,6 +382,65 @@
 		"cta": "Leave a Google review",
 		"footer": "It only takes 30 seconds and helps me a lot. Thank you!"
 	},
+	"projectRequest": {
+		"tag": "Project request",
+		"title": "Let's talk about your project.",
+		"subtitle": "Fill out this form to give me as much context as possible. I'll get back to you within 24 hours.",
+		"step0Title": "Your project",
+		"step1Title": "Budget & timeline",
+		"step2Title": "Your details",
+		"step3Title": "Describe your project",
+		"projectTypeLabel": "Project type",
+		"projectType": "Choose a project type",
+		"projectTypes": {
+			"site-vitrine": "Starter Website",
+			"site-premium": "Premium Website",
+			"refonte": "Website Redesign",
+			"autre": "Other"
+		},
+		"businessNameLabel": "Business name",
+		"businessNamePlaceholder": "e.g. Martin Bakery",
+		"existingUrlLabel": "Current website URL",
+		"existingUrlPlaceholder": "https://www.yoursite.com",
+		"budgetLabel": "Approximate budget (optional)",
+		"budget": "Approximate budget",
+		"budgets": {
+			"moins-1000": "Less than €1,000",
+			"1000-2000": "€1,000 – €2,000",
+			"2000-3000": "€2,000 – €3,000",
+			"plus-3000": "More than €3,000",
+			"pas-defini": "Not yet defined"
+		},
+		"deadlineLabel": "Desired timeline (optional)",
+		"deadlinePlaceholder": "Desired timeline",
+		"deadlines": {
+			"urgent": "Urgent (< 2 weeks)",
+			"1-mois": "Within a month",
+			"2-3-mois": "Within 2-3 months",
+			"pas-presse": "No rush"
+		},
+		"nameLabel": "Your name",
+		"namePlaceholder": "Your name",
+		"emailLabel": "Your email",
+		"emailPlaceholder": "Your email",
+		"messageLabel": "Message",
+		"messagePlaceholder": "Describe your project in a few lines: your business, what you expect from the site, your ideas...",
+		"back": "Back",
+		"next": "Next",
+		"send": "Send",
+		"sending": "Sending...",
+		"successTitle": "Request sent!",
+		"successMessage": "Thank you for your request. I'll get back to you within 24 hours to discuss.",
+		"or": "Or directly:",
+		"errors": {
+			"projectType": "Choose a project type",
+			"businessName": "Business name is required",
+			"name": "Your name is required",
+			"email": "Your email is required",
+			"emailInvalid": "Invalid email",
+			"message": "Describe your project"
+		}
+	},
 	"footer": {
 		"tagline": "Websites for craftspeople and local businesses in Brittany",
 		"realisations": "Portfolio",

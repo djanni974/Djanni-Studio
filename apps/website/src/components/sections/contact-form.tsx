@@ -380,11 +380,11 @@ export function ContactForm() {
 								contact@djannistudio.fr
 							</Link>
 							<Link
-								href="tel:+33600000000"
+								href="tel:+33749547498"
 								className="inline-flex items-center gap-1.5 text-djanni-gray-light transition-colors hover:text-foreground"
 							>
 								<IconPhone size={14} />
-								06 XX XX XX XX
+								07 49 54 74 98
 							</Link>
 						</div>
 					</AnimatedSection>

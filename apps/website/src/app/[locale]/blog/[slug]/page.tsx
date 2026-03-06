@@ -1,8 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
-import { Footer } from "@/components/layout/footer"
-import { Navbar } from "@/components/layout/navbar"
 import { BlogPostContent } from "@/components/sections/blog-post-content"
 import { BLOG_POSTS } from "@/lib/constants"
 
@@ -45,12 +43,8 @@ export default async function BlogPostPage({
 	if (!post) notFound()
 
 	return (
-		<>
-			<Navbar />
-			<main>
-				<BlogPostContent post={post} />
-			</main>
-			<Footer />
-		</>
+		<main>
+			<BlogPostContent post={post} />
+		</main>
 	)
 }

@@ -1,7 +1,5 @@
 import { IconArrowLeft } from "@tabler/icons-react"
 import type { Metadata } from "next"
-import { Footer } from "@/components/layout/footer"
-import { Navbar } from "@/components/layout/navbar"
 import { Link } from "@/i18n/navigation"
 
 export const metadata: Metadata = {
@@ -29,7 +27,7 @@ const sections = [
 			"Code APE : 6201Z — Programmation informatique",
 			"Adresse : 4 boulevard Jules Verger, 35800 Dinard, France",
 			"Email : contact@djannistudio.fr",
-			"Téléphone : 06 XX XX XX XX",
+			"Téléphone : 07 49 54 74 98",
 			"__TVA non applicable, article 293 B du CGI.__",
 		],
 	},
@@ -192,51 +190,47 @@ function renderLine(line: string) {
 
 export default function CGV() {
 	return (
-		<>
-			<Navbar />
-			<main className="mx-auto max-w-[720px] px-6 pt-32 pb-20 md:px-12">
-				<Link
-					href="/"
-					className="mb-10 inline-flex items-center gap-2 text-sm text-djanni-gray-light transition-colors hover:text-foreground"
-				>
-					<IconArrowLeft size={14} />
-					Retour à l&apos;accueil
-				</Link>
+		<main className="mx-auto max-w-[720px] px-6 pt-32 pb-20 md:px-12">
+			<Link
+				href="/"
+				className="mb-10 inline-flex items-center gap-2 text-sm text-djanni-gray-light transition-colors hover:text-foreground"
+			>
+				<IconArrowLeft size={14} />
+				Retour à l&apos;accueil
+			</Link>
 
-				<h1 className="font-heading text-[clamp(28px,4vw,40px)] font-extrabold leading-tight tracking-tight">
-					Conditions Générales de Vente
-				</h1>
-				<p className="mt-3 text-sm text-djanni-gray-light">Dernière mise à jour : mars 2026</p>
+			<h1 className="font-heading text-[clamp(28px,4vw,40px)] font-extrabold leading-tight tracking-tight">
+				Conditions Générales de Vente
+			</h1>
+			<p className="mt-3 text-sm text-djanni-gray-light">Dernière mise à jour : mars 2026</p>
 
-				<div className="mt-12 space-y-10">
-					{sections.map((section) => (
-						<section key={section.title}>
-							<h2 className="mb-4 font-heading text-lg font-bold">{section.title}</h2>
-							<div className="space-y-2.5">
-								{section.content.map((line, i) => (
-									<p key={i} className="text-[15px] leading-relaxed text-djanni-gray-light">
-										{renderLine(line)}
-									</p>
-								))}
-							</div>
-						</section>
-					))}
-				</div>
+			<div className="mt-12 space-y-10">
+				{sections.map((section) => (
+					<section key={section.title}>
+						<h2 className="mb-4 font-heading text-lg font-bold">{section.title}</h2>
+						<div className="space-y-2.5">
+							{section.content.map((line, i) => (
+								<p key={i} className="text-[15px] leading-relaxed text-djanni-gray-light">
+									{renderLine(line)}
+								</p>
+							))}
+						</div>
+					</section>
+				))}
+			</div>
 
-				{/* Link to Mentions Légales */}
-				<div className="mt-14 rounded-lg border border-border bg-surface-b p-6 text-center">
-					<p className="text-sm text-djanni-gray-light">
-						Consultez également nos{" "}
-						<Link
-							href="/mentions-legales"
-							className="font-medium text-djanni-orange transition-colors hover:text-djanni-orange-light"
-						>
-							Mentions légales
-						</Link>
-					</p>
-				</div>
-			</main>
-			<Footer />
-		</>
+			{/* Link to Mentions Légales */}
+			<div className="mt-14 rounded-lg border border-border bg-surface-b p-6 text-center">
+				<p className="text-sm text-djanni-gray-light">
+					Consultez également nos{" "}
+					<Link
+						href="/mentions-legales"
+						className="font-medium text-djanni-orange transition-colors hover:text-djanni-orange-light"
+					>
+						Mentions légales
+					</Link>
+				</p>
+			</div>
+		</main>
 	)
 }

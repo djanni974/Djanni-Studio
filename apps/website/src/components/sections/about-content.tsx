@@ -1,6 +1,7 @@
 "use client"
 
 import { IconArrowRight, IconCode, IconHammer, IconHeart, IconMapPin } from "@tabler/icons-react"
+import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section"
 import { SectionHeader } from "@/components/ui/section-header"
@@ -56,8 +57,15 @@ export function AboutContent() {
 							</div>
 
 							<div className="flex flex-col items-center">
-								<div className="flex h-32 w-32 items-center justify-center rounded-2xl bg-gradient-to-br from-djanni-orange to-[#c44008] font-heading text-5xl font-extrabold text-white shadow-[0_0_60px_rgba(232,80,10,0.3)]">
-									G
+								<div className="relative h-32 w-32 overflow-hidden rounded-2xl shadow-[0_0_60px_rgba(232,80,10,0.3)]">
+									<Image
+										src="/gianni.webp"
+										alt="Gianni — Fondateur de Djanni Studio"
+										fill
+										className="object-cover object-[50%_35%]"
+										sizes="128px"
+										priority
+									/>
 								</div>
 								<div className="mt-4 text-center">
 									<div className="font-heading text-base font-bold">{t("founderName")}</div>
@@ -143,7 +151,7 @@ export function AboutContent() {
 							{SKILLS.map((skill) => (
 								<span
 									key={skill}
-									className="rounded-full border border-border bg-white/[0.06] px-5 py-2.5 text-sm text-djanni-gray-light transition-colors hover:border-djanni-orange/40 hover:text-foreground"
+									className="rounded-full border border-border bg-white/6 px-5 py-2.5 text-sm text-djanni-gray-light transition-colors hover:border-djanni-orange/40 hover:text-foreground"
 								>
 									{skill}
 								</span>
@@ -165,7 +173,7 @@ export function AboutContent() {
 								{t("cta.subtitle")}
 							</p>
 							<Link
-								href="/#contact"
+								href="/demande-projet"
 								className="mt-8 inline-flex items-center gap-2 rounded-lg bg-djanni-orange px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light"
 							>
 								{t("cta.button")}

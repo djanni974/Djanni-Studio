@@ -81,7 +81,7 @@ export function Navbar() {
 				</li>
 				<li>
 					<Link
-						href="#contact"
+						href="/demande-projet"
 						className="whitespace-nowrap rounded-md bg-djanni-orange px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light"
 					>
 						{t("cta")}
@@ -176,7 +176,7 @@ export function Navbar() {
 								}}
 							>
 								<Link
-									href="#contact"
+									href="/demande-projet"
 									onClick={() => setMobileOpen(false)}
 									className="flex items-center justify-center gap-2 rounded-md bg-djanni-orange px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light"
 								>

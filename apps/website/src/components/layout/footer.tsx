@@ -30,6 +30,18 @@ export function Footer() {
 						Djanni Studio
 					</span>
 					<span className="text-[13px] text-djanni-gray">{t("tagline")}</span>
+					<div className="flex flex-wrap items-center justify-center gap-4 text-[13px] text-djanni-gray-light">
+						<Link
+							href="mailto:contact@djannistudio.fr"
+							className="transition-colors hover:text-foreground"
+						>
+							contact@djannistudio.fr
+						</Link>
+						<span className="text-djanni-gray">·</span>
+						<Link href="tel:+33749547498" className="transition-colors hover:text-foreground">
+							07 49 54 74 98
+						</Link>
+					</div>
 					<nav className="mt-2 flex flex-col items-center gap-3 md:flex-row md:gap-8">
 						<Link
 							href="/realisations"
@@ -50,7 +62,7 @@ export function Footer() {
 							{t("blog")}
 						</Link>
 						<Link
-							href="/#contact"
+							href="/demande-projet"
 							className="text-sm text-djanni-gray-light transition-colors hover:text-foreground"
 						>
 							{t("contact")}

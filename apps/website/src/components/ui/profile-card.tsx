@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { SKILLS } from "@/lib/constants"
 
@@ -10,8 +11,14 @@ export function ProfileCard() {
 		<div className="rounded-xl border border-border bg-card p-8 md:p-10">
 			{/* Header */}
 			<div className="mb-7 flex items-center gap-4 border-b border-border pb-7">
-				<div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full bg-linear-to-br from-djanni-orange to-[#c44008] font-heading text-xl font-extrabold text-white">
-					G
+				<div className="relative h-[52px] w-[52px] shrink-0 overflow-hidden rounded-full">
+					<Image
+						src="/gianni.webp"
+						alt="Gianni"
+						fill
+						className="object-cover object-[50%_35%]"
+						sizes="52px"
+					/>
 				</div>
 				<div>
 					<div className="font-heading text-base font-bold">{t("name")}</div>

@@ -382,6 +382,65 @@
 		"cta": "Laisser un avis sur Google",
 		"footer": "Ça prend 30 secondes et ça m'aide énormément. Merci !"
 	},
+	"projectRequest": {
+		"tag": "Demande de projet",
+		"title": "Parlons de votre projet.",
+		"subtitle": "Remplissez ce formulaire pour me donner un maximum de contexte. Je reviens vers vous sous 24h.",
+		"step0Title": "Votre projet",
+		"step1Title": "Budget & délai",
+		"step2Title": "Vos coordonnées",
+		"step3Title": "Décrivez votre projet",
+		"projectTypeLabel": "Type de projet",
+		"projectType": "Choisir un type de projet",
+		"projectTypes": {
+			"site-vitrine": "Site Vitrine",
+			"site-premium": "Site Premium",
+			"refonte": "Refonte de site existant",
+			"autre": "Autre"
+		},
+		"businessNameLabel": "Nom de l'entreprise",
+		"businessNamePlaceholder": "Ex : Boulangerie Martin",
+		"existingUrlLabel": "URL du site actuel",
+		"existingUrlPlaceholder": "https://www.votresite.fr",
+		"budgetLabel": "Budget approximatif (optionnel)",
+		"budget": "Budget approximatif",
+		"budgets": {
+			"moins-1000": "Moins de 1 000 €",
+			"1000-2000": "1 000 – 2 000 €",
+			"2000-3000": "2 000 – 3 000 €",
+			"plus-3000": "Plus de 3 000 €",
+			"pas-defini": "Pas encore défini"
+		},
+		"deadlineLabel": "Délai souhaité (optionnel)",
+		"deadlinePlaceholder": "Délai souhaité",
+		"deadlines": {
+			"urgent": "Urgent (< 2 semaines)",
+			"1-mois": "Dans le mois",
+			"2-3-mois": "Dans 2-3 mois",
+			"pas-presse": "Pas pressé"
+		},
+		"nameLabel": "Votre nom",
+		"namePlaceholder": "Votre nom",
+		"emailLabel": "Votre email",
+		"emailPlaceholder": "Votre email",
+		"messageLabel": "Message",
+		"messagePlaceholder": "Décrivez votre projet en quelques lignes : votre activité, ce que vous attendez du site, vos idées...",
+		"back": "Retour",
+		"next": "Suivant",
+		"send": "Envoyer",
+		"sending": "Envoi...",
+		"successTitle": "Demande envoyée !",
+		"successMessage": "Merci pour votre demande. Je reviens vers vous sous 24h pour en discuter.",
+		"or": "Ou directement :",
+		"errors": {
+			"projectType": "Choisissez un type de projet",
+			"businessName": "Le nom de l'entreprise est requis",
+			"name": "Votre nom est requis",
+			"email": "Votre email est requis",
+			"emailInvalid": "Email invalide",
+			"message": "Décrivez votre projet"
+		}
+	},
 	"footer": {
 		"tagline": "Sites web pour artisans et commerçants en Bretagne",
 		"realisations": "Réalisations",

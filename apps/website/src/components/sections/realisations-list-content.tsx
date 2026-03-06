@@ -89,7 +89,7 @@ export function RealisationsListContent() {
 				<AnimatedSection delay={0.3}>
 					<div className="mt-16 text-center">
 						<Link
-							href="/#contact"
+							href="/demande-projet"
 							className="inline-flex items-center gap-2 rounded-lg bg-djanni-orange px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light"
 						>
 							{nav("cta")}

@@ -1,8 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
-import { Footer } from "@/components/layout/footer"
-import { Navbar } from "@/components/layout/navbar"
 import { CaseStudyContent } from "@/components/sections/case-study-content"
 import { PROJECTS } from "@/lib/constants"
 
@@ -42,12 +40,8 @@ export default async function CaseStudyPage({
 	if (!project) notFound()
 
 	return (
-		<>
-			<Navbar />
-			<main>
-				<CaseStudyContent project={project} />
-			</main>
-			<Footer />
-		</>
+		<main>
+			<CaseStudyContent project={project} />
+		</main>
 	)
 }
