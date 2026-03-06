@@ -32,5 +32,8 @@ pnpm-debug.log*
 .claude/
 settings.local.json
 
+# serwist (generated at build)
+apps/website/public/sw.js
+
 # misc
 *.tsbuildinfo
