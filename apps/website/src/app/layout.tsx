@@ -59,6 +59,10 @@ export const metadata: Metadata = {
 		title: "Djanni Studio — Sites web pour artisans & commerçants",
 		description: "Des sites modernes pour les artisans et commerçants locaux en Bretagne.",
 	},
+	icons: {
+		icon: "/favicon.svg",
+		apple: "/icons/icon-192.svg",
+	},
 	manifest: "/manifest.json",
 	appleWebApp: {
 		capable: true,
