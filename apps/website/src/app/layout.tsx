@@ -81,6 +81,9 @@ const jsonLd = {
 	image: "https://djannistudio.fr/opengraph-image",
 	address: {
 		"@type": "PostalAddress",
+		streetAddress: "4 boulevard Jules Verger",
+		addressLocality: "Dinard",
+		postalCode: "35800",
 		addressRegion: "Bretagne",
 		addressCountry: "FR",
 	},
