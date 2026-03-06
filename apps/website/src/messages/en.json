@@ -1,0 +1,395 @@
+{
+	"metadata": {
+		"title": "Djanni Studio — Websites for craftspeople & local businesses",
+		"description": "I create modern websites for local craftspeople and shop owners. No jargon, no surprises — just a site that represents you and brings in customers.",
+		"about": {
+			"title": "About — Djanni Studio",
+			"description": "From carpenter to web developer. I create custom websites for craftspeople and local businesses in Brittany. Discover my journey."
+		},
+		"realisations": {
+			"title": "Portfolio — Djanni Studio",
+			"description": "Discover the websites created by Djanni Studio for craftspeople and local businesses in Brittany. Detailed case studies."
+		},
+		"blog": {
+			"title": "Blog — Djanni Studio",
+			"description": "Tips, tricks and guides for craftspeople and local businesses who want to succeed online. Local SEO, websites, digital strategy."
+		},
+		"avis": {
+			"title": "Leave a Review — Djanni Studio",
+			"description": "Share your experience with Djanni Studio by leaving a review on Google."
+		}
+	},
+	"nav": {
+		"realisations": "Portfolio",
+		"offres": "Pricing",
+		"about": "About",
+		"blog": "Blog",
+		"cta": "Start a project",
+		"toggleTheme": "Toggle theme"
+	},
+	"hero": {
+		"badge": "Djanni Studio — Brittany",
+		"titleStart": "Websites that ",
+		"titleHighlight": "work",
+		"titleEnd": " for you.",
+		"subtitle": "I create modern websites for local craftspeople and shop owners. No jargon, no surprises — just a site that represents you and brings in customers.",
+		"cta": "Start a project",
+		"seeWork": "See my work"
+	},
+	"stats": {
+		"deliveryValue": "2 wks",
+		"deliveryLabel": "Average delivery time",
+		"responsiveValue": "100%",
+		"responsiveLabel": "Mobile responsive",
+		"paymentValue": "50%",
+		"paymentLabel": "Upfront, 50% on delivery"
+	},
+	"offres": {
+		"tag": "Pricing",
+		"title": "Simple. Clear. No surprises.",
+		"subtitle": "Three plans tailored to your project. Custom quote, no commitment."
+	},
+	"pricing": {
+		"vitrine": {
+			"badge": "Essential",
+			"priceLabel": "Starting at",
+			"price": "990",
+			"priceSuffix": "€",
+			"priceNote": "Based on number of pages • Payment in 2 installments",
+			"name": "Starter Website",
+			"description": "Perfect for businesses that need a clean and efficient web presence quickly.",
+			"features": [
+				"Up to 5 pages",
+				"100% mobile responsive",
+				"Contact form",
+				"Opening hours & Google Maps",
+				"SSL & deployment",
+				"Delivered in 2 weeks"
+			],
+			"ctaLabel": "Get started"
+		},
+		"premium": {
+			"badge": "Most popular",
+			"priceLabel": "Starting at",
+			"price": "1,990",
+			"priceSuffix": "€",
+			"priceNote": "Based on features • Payment in 2 installments",
+			"name": "Premium Website",
+			"description": "For businesses that want to stand out and project a truly professional image.",
+			"features": [
+				"Up to 8 pages",
+				"Product catalog / gallery",
+				"SEO optimization",
+				"Animations & polished design",
+				"Content management training",
+				"Delivered in 3 weeks"
+			],
+			"ctaLabel": "Get started"
+		},
+		"refonte": {
+			"badge": "Redesign",
+			"priceLabel": "Custom quote",
+			"price": "1,500",
+			"priceSuffix": "€+",
+			"priceNote": "Price varies based on existing site complexity",
+			"name": "Website Redesign",
+			"description": "Your site exists but it's aging badly. We give it a second life without starting from scratch.",
+			"features": [
+				"Current site analysis",
+				"Modern new design",
+				"Existing content migration",
+				"Seamless data migration",
+				"SSL & performance fixes",
+				"Custom quote"
+			],
+			"ctaLabel": "Request a quote"
+		}
+	},
+	"pourquoi": {
+		"tag": "Why me",
+		"title": "A dev who speaks your language.",
+		"subtitle": "Not an agency, not a student — a web craftsman who comes from the field.",
+		"reasons": [
+			{
+				"number": "01",
+				"title": "I understand craftspeople",
+				"text": "Carpenter by trade, I know what it's like to work with your hands and manage clients. No jargon, no BS."
+			},
+			{
+				"number": "02",
+				"title": "Local & available",
+				"text": "Based in Brittany, available to meet in person. Not a provider on the other side of the world you'll never see."
+			},
+			{
+				"number": "03",
+				"title": "Fixed price, no surprises",
+				"text": "Signed quote before starting. 50% upfront, 50% on delivery. You know exactly what you're paying."
+			},
+			{
+				"number": "04",
+				"title": "Delivered in 2-3 weeks",
+				"text": "No 6-month wait. A clear timeline, defined milestones, a site delivered on schedule."
+			}
+		]
+	},
+	"profileCard": {
+		"name": "Gianni — Djanni Studio",
+		"role": "Freelance web developer · Brittany",
+		"quote": "I'm a carpenter by trade. I learned to build things that are solid, lasting, and truly useful. I apply the same philosophy to the web."
+	},
+	"temoignages": {
+		"tag": "Testimonials",
+		"title": "What they say.",
+		"subtitle": "Craftspeople and local businesses who trusted Djanni Studio."
+	},
+	"process": {
+		"tag": "How it works",
+		"title": "4 steps, zero surprises.",
+		"subtitle": "A clear process from first contact to launch.",
+		"steps": [
+			{
+				"number": "01",
+				"title": "We talk",
+				"text": "A 30-minute call to understand your business, your needs, and what you want to convey."
+			},
+			{
+				"number": "02",
+				"title": "I propose",
+				"text": "A clear quote and a visual mockup. You see what your site will look like before signing."
+			},
+			{
+				"number": "03",
+				"title": "We build",
+				"text": "I develop your site, you validate each step. No surprises at delivery."
+			},
+			{
+				"number": "04",
+				"title": "We launch",
+				"text": "Deployment, SSL, content management training. Your site is ready to work for you."
+			}
+		]
+	},
+	"faq": {
+		"tag": "FAQ",
+		"title": "Still hesitating?",
+		"subtitle": "Answers to the questions everyone asks before starting their project.",
+		"items": [
+			{
+				"question": "How long does it take to create a website?",
+				"answer": "On average, a starter website is delivered in 2 weeks. A premium site takes about 3 weeks. I give you a precise timeline as soon as the quote is signed."
+			},
+			{
+				"question": "I know nothing about technology, is that a problem?",
+				"answer": "Not at all. That's actually most of my clients. I handle all the technical aspects and explain everything in simple terms. All you need to provide is your texts and photos."
+			},
+			{
+				"question": "What happens after the site goes live?",
+				"answer": "I train you on managing your content. If you need changes later, I'm available. A maintenance plan is also offered if you want peace of mind."
+			},
+			{
+				"question": "Why not a WordPress or Wix site?",
+				"answer": "These tools are convenient but limited in performance and customization. I develop custom sites that are faster, better ranked, and truly yours — no forced monthly subscription."
+			},
+			{
+				"question": "How does payment work?",
+				"answer": "Simple: 50% when signing the quote, 50% on delivery. No hidden fees, no mandatory subscription. The quoted price is the final price."
+			},
+			{
+				"question": "Can I see the site before paying?",
+				"answer": "Yes. I present a visual mockup before starting development. You approve the design, and only then do I build. At each stage, you can request adjustments."
+			},
+			{
+				"question": "Will my site be visible on Google?",
+				"answer": "Yes. Every site is optimized for natural search (SEO) from creation: clean technical structure, properly filled tags, maximum performance. I also help you choose the right keywords for your business."
+			},
+			{
+				"question": "Can I edit my site myself?",
+				"answer": "It depends on the plan chosen. For a starter site, changes go through me (included in the maintenance plan). For a premium site, I can integrate a content management system if you want to be autonomous."
+			},
+			{
+				"question": "Do you work outside of Brittany?",
+				"answer": "Of course. Most of my clients are in Brittany, but I work remotely with craftspeople and shop owners throughout France. Video call, phone, email — we adapt."
+			}
+		]
+	},
+	"contact": {
+		"tag": "Contact",
+		"title": "Your project deserves a great site.",
+		"subtitle": "Tell me what you do, I'll show you what it could look like. Free initial consultation, no commitment.",
+		"step0Title": "What's your project?",
+		"step1Title": "How can we reach you?",
+		"step2Title": "Tell us about your project",
+		"projectType": "Choose a project type",
+		"projectTypes": {
+			"site-vitrine": "Starter Website",
+			"site-premium": "Premium Website",
+			"refonte": "Website Redesign",
+			"autre": "Other"
+		},
+		"budget": "Approximate budget (optional)",
+		"budgets": {
+			"moins-1000": "Less than €1,000",
+			"1000-2000": "€1,000 – €2,000",
+			"2000-3000": "€2,000 – €3,000",
+			"plus-3000": "More than €3,000",
+			"pas-defini": "Not yet defined"
+		},
+		"namePlaceholder": "Your name",
+		"emailPlaceholder": "Your email",
+		"messagePlaceholder": "Describe your project in a few lines...",
+		"back": "Back",
+		"next": "Next",
+		"send": "Send",
+		"sending": "Sending...",
+		"successTitle": "Message sent!",
+		"successMessage": "Thank you for your message. I'll get back to you within 24 hours.",
+		"or": "Or directly:",
+		"errors": {
+			"projectType": "Choose a project type",
+			"name": "Your name is required",
+			"email": "Your email is required",
+			"emailInvalid": "Invalid email",
+			"message": "Tell us about your project"
+		}
+	},
+	"about": {
+		"tag": "About",
+		"titleLine1": "Carpenter by trade.",
+		"titleHighlight": "Developer",
+		"titleLine2": " by passion.",
+		"intro": "I'm Gianni, founder of Djanni Studio. I create custom websites for craftspeople and local businesses in Brittany. My unconventional background is my strength: I understand your craft because I come from the field.",
+		"founderName": "Gianni",
+		"founderRole": "Founder · Djanni Studio",
+		"journey": {
+			"tag": "My journey",
+			"title": "From the worksite to code.",
+			"subtitle": "An uncommon path, but one that makes all the difference when working with craftspeople.",
+			"steps": [
+				{
+					"year": "2018 — 2023",
+					"title": "Carpenter by trade",
+					"text": "I started on construction sites. Cut, adjust, assemble — building solid things with my hands. That's where I learned rigor, meeting deadlines, and the importance of work well done."
+				},
+				{
+					"year": "2023 — Today",
+					"title": "Self-taught web developer",
+					"text": "In parallel, I became passionate about code. React, Next.js, TypeScript — I learned by building real projects. Same philosophy as carpentry: solid work, custom-made, no shortcuts."
+				},
+				{
+					"year": "2025",
+					"title": "Djanni Studio was born",
+					"text": "I launched Djanni Studio with a clear mission: help Breton craftspeople and shop owners get a website that truly represents them. Because I know their daily life, I speak their language."
+				},
+				{
+					"year": "My mission",
+					"title": "The web accessible to craftspeople",
+					"text": "No jargon, no inflated prices, no endless delays. A beautiful, fast, and effective site, delivered in 2-3 weeks. It's that simple."
+				}
+			]
+		},
+		"values": {
+			"tag": "My values",
+			"title": "What I believe in.",
+			"subtitle": "Simple principles that guide every project.",
+			"items": [
+				{
+					"title": "Honesty",
+					"text": "Fixed price, clear quote, no hidden fees. What I say is what I do."
+				},
+				{
+					"title": "Quality",
+					"text": "Every site is custom coded. No templates, no WordPress — clean, high-performance code."
+				},
+				{
+					"title": "Proximity",
+					"text": "Based in Brittany, available for a coffee. Not a ghost provider behind a screen."
+				},
+				{
+					"title": "Simplicity",
+					"text": "I explain everything in simple terms. Your only job: tell me about your business."
+				}
+			]
+		},
+		"skills": {
+			"tag": "Skills",
+			"title": "The tools I use.",
+			"subtitle": "Modern technologies for fast, secure, and well-ranked websites."
+		},
+		"cta": {
+			"title": "Want to work together?",
+			"subtitle": "Free initial consultation, no commitment. Tell me about your project.",
+			"button": "Start a project"
+		}
+	},
+	"realisationsHome": {
+		"tag": "Portfolio",
+		"title": "What I build.",
+		"subtitle": "Completed sites and concepts — each project is designed for the business behind it.",
+		"ctaTitle": "Your project here?",
+		"ctaSubtitle": "Let's discuss your idea — first call free."
+	},
+	"blogPost": {
+		"backLink": "All articles",
+		"readingTime": "min read",
+		"authorRole": "Freelance web developer · Brittany",
+		"authorBio": "Carpenter by trade, developer by passion. I help craftspeople and local businesses in Brittany stand out online with custom websites.",
+		"publishedOn": "Published on",
+		"ctaTitle": "Need a website?",
+		"ctaSubtitle": "Free initial consultation. Let's discuss your project.",
+		"ctaButton": "Start a project",
+		"ctaSecondary": "Read more articles"
+	},
+	"realisationsPage": {
+		"tag": "Portfolio",
+		"title": "Projects that speak for themselves.",
+		"subtitle": "Each site is a story. Discover how I helped craftspeople and local businesses stand out online."
+	},
+	"caseStudy": {
+		"backLink": "Back to portfolio",
+		"client": "Client",
+		"location": "Location",
+		"duration": "Duration",
+		"year": "Year",
+		"visitSite": "Visit site",
+		"context": "Context",
+		"problem": "Challenge",
+		"solution": "Solution",
+		"results": "Results",
+		"techStack": "Tech stack",
+		"testimonial": "Client testimonial",
+		"ctaTitle": "A similar project?",
+		"ctaText": "Let's discuss your project. Free initial consultation, no commitment.",
+		"ctaButton": "Start a project"
+	},
+	"blogPage": {
+		"tag": "Blog",
+		"title": "Tips & resources.",
+		"subtitle": "Articles for craftspeople and local businesses who want to succeed online.",
+		"readMore": "Read article",
+		"minRead": "min read",
+		"backLink": "Back to blog",
+		"shareTitle": "Share this article"
+	},
+	"notFound": {
+		"title": "Page not found",
+		"subtitle": "The page you're looking for doesn't exist or has been moved.",
+		"backHome": "Back to home",
+		"seeWork": "See my work"
+	},
+	"avisPage": {
+		"title": "Your review matters.",
+		"subtitle": "Thank you for trusting Djanni Studio. Share your experience by leaving a review on Google.",
+		"cta": "Leave a Google review",
+		"footer": "It only takes 30 seconds and helps me a lot. Thank you!"
+	},
+	"footer": {
+		"tagline": "Websites for craftspeople and local businesses in Brittany",
+		"realisations": "Portfolio",
+		"about": "About",
+		"blog": "Blog",
+		"contact": "Contact",
+		"legal": "Legal notice",
+		"cgv": "Terms",
+		"copyright": "© 2026 Djanni Studio — All rights reserved"
+	}
+}

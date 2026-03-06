@@ -1,0 +1,395 @@
+{
+	"metadata": {
+		"title": "Djanni Studio — Lec'hiennoù web evit an artizaned ha kenwerzhourion",
+		"description": "Krouiñ a ran lec'hiennoù web modern evit an artizaned hag ar c'henwerzhourion lec'hel. Hep yezh vevenn, hep souezhadenn — ul lec'hienn a zere deoc'h hag a gas kustumerien.",
+		"about": {
+			"title": "Diwar-benn — Djanni Studio",
+			"description": "Eus charpaentour da ziorroerien web. Krouiñ a ran lec'hiennoù web war-bouez evit an artizaned hag ar c'henwerzhourion e Breizh."
+		},
+		"realisations": {
+			"title": "Obererezhioù — Djanni Studio",
+			"description": "Dizoleiit al lec'hiennoù web krouet gant Djanni Studio evit artizaned ha kenwerzhourion e Breizh."
+		},
+		"blog": {
+			"title": "Blog — Djanni Studio",
+			"description": "Alioù ha traoù talvoudus evit an artizaned hag ar c'henwerzhourion a fell dezho boud a-raok war internet."
+		},
+		"avis": {
+			"title": "Lezit un ali — Djanni Studio",
+			"description": "Rannit ho skiant-prenet gant Djanni Studio en ur lezañ un ali war Google."
+		}
+	},
+	"nav": {
+		"realisations": "Obererezhioù",
+		"offres": "Tarifioù",
+		"about": "Diwar-benn",
+		"blog": "Blog",
+		"cta": "Kregiñ gant ur raktres",
+		"toggleTheme": "Cheñch an tem"
+	},
+	"hero": {
+		"badge": "Djanni Studio — Breizh",
+		"titleStart": "Lec'hiennoù web a ",
+		"titleHighlight": "labour",
+		"titleEnd": " evidoc'h.",
+		"subtitle": "Krouiñ a ran lec'hiennoù web modern evit an artizaned hag ar c'henwerzhourion lec'hel. Hep yezh vevenn, hep souezhadenn — ul lec'hienn a zere deoc'h hag a gas kustumerien.",
+		"cta": "Kregiñ gant ur raktres",
+		"seeWork": "Gwelet ma obererezhioù"
+	},
+	"stats": {
+		"deliveryValue": "2 simun",
+		"deliveryLabel": "Amzer keit e keñver",
+		"responsiveValue": "100%",
+		"responsiveLabel": "Responsive hezoug",
+		"paymentValue": "50%",
+		"paymentLabel": "Da siñadur, 50% da vare al livradur"
+	},
+	"offres": {
+		"tag": "Tarifioù",
+		"title": "Aes. Splann. Hep souezhadenn.",
+		"subtitle": "Tri formulenn diazezet war ho raktres. Devis personel, hep gwarant."
+	},
+	"pricing": {
+		"vitrine": {
+			"badge": "Diazez",
+			"priceLabel": "Adalek",
+			"price": "990",
+			"priceSuffix": "€",
+			"priceNote": "Hervez an niver a bajennoù • Paeañ en 2 gwech",
+			"name": "Lec'hienn Vitrine",
+			"description": "Dedennus evit ar c'henwerzhourion o deus ezhomm eus ur prezañs web prop ha buan.",
+			"features": [
+				"Betek 5 pajenn",
+				"100% responsive hezoug",
+				"Formulenn darempred",
+				"Eurioù & Google Maps",
+				"SSL & lakaat en linenn",
+				"Livret e 2 sizhun"
+			],
+			"ctaLabel": "Kregiñ"
+		},
+		"premium": {
+			"badge": "Ar muiañ dibabet",
+			"priceLabel": "Adalek",
+			"price": "1 990",
+			"priceSuffix": "€",
+			"priceNote": "Hervez ar fonksionadurezhoù • Paeañ en 2 gwech",
+			"name": "Lec'hienn Premium",
+			"description": "Evit ar c'henwerzhourion a fell dezho bezañ disheñvel ha reiñ ur skeudenn a-vicher.",
+			"features": [
+				"Betek 8 pajenn",
+				"Katalog produioù / galerienn",
+				"Optimizañ SEO",
+				"Buhezegezh ha dezign kempenn",
+				"Stummadur da chom emren",
+				"Livret e 3 sizhun"
+			],
+			"ctaLabel": "Kregiñ"
+		},
+		"refonte": {
+			"badge": "Adneveziañ",
+			"priceLabel": "War devis",
+			"price": "1 500",
+			"priceSuffix": "€+",
+			"priceNote": "Priz hervez diaestérezh al lec'hienn a zo anezhañ",
+			"name": "Adneveziañ Lec'hienn",
+			"description": "Ho lec'hienn a zo anezhi met hi a gozhi fall. Reiñ a reomp ur vuhez nevez dezhi hep adkregiñ eus an derou.",
+			"features": [
+				"Dielfenniñ al lec'hienn a zo",
+				"Dezign modern nevez",
+				"Adkemer an danvez a zo",
+				"Treuzkas hep kolliñ roadennoù",
+				"Reizhadur SSL & perforzhañs",
+				"Devis war-bouez"
+			],
+			"ctaLabel": "Goulenn un devis"
+		}
+	},
+	"pourquoi": {
+		"tag": "Perak me",
+		"title": "Un diorroerien a gomz ho yezh.",
+		"subtitle": "Ket un ajantur, ket ur studier — un artizaned web a zeu eus ar maez.",
+		"reasons": [
+			{
+				"number": "01",
+				"title": "Kompren a ran an artizaned",
+				"text": "Charpaentour eus ma micher, gouzout a ran petra eo labourat gant e zaouarn ha merañ ur c'hustumer. Hep yezh vevenn."
+			},
+			{
+				"number": "02",
+				"title": "Lec'hel & hegerz",
+				"text": "E Breizh emaon, hegerz evit en em gavout. Ket ur prestataer e penn all ar bed na welo biken."
+			},
+			{
+				"number": "03",
+				"title": "Priz fiskal, hep souezhadenn",
+				"text": "Devis sinet a-raok kregiñ. 50% da siñadur, 50% da vare al livradur. Gouzout a rit penaos e paeit."
+			},
+			{
+				"number": "04",
+				"title": "Livret e 2-3 sizhun",
+				"text": "Ket 6 miz a c'hortoz. Un doare splann, pazennoù resisaet, ul lec'hienn livret en amzer."
+			}
+		]
+	},
+	"profileCard": {
+		"name": "Gianni — Djanni Studio",
+		"role": "Diorroerien web dizalc'h · Breizh",
+		"quote": "Charpaentour on eus ma micher. Desket am eus sevel traoù kreñv, a bad, hag a dalvez da vat. Implijout a ran an hevelep prederouriezh evit ar web."
+	},
+	"temoignages": {
+		"tag": "Testenioù",
+		"title": "Ar pezh a laront.",
+		"subtitle": "Artizaned ha kenwerzhourion o deus fiziañset e Djanni Studio."
+	},
+	"process": {
+		"tag": "Penaos ez a",
+		"title": "4 pazenn, zero souezhadenn.",
+		"subtitle": "Un doare splann eus an darempred kentañ betek al lakaat en linenn.",
+		"steps": [
+			{
+				"number": "01",
+				"title": "Komz a reomp",
+				"text": "Ur galv 30 munut evit kompren ho oberiantiz, ho ezhommoù, hag ar pezh a fell deoc'h treuzkas."
+			},
+			{
+				"number": "02",
+				"title": "Kinnig a ran",
+				"text": "Un devis splann hag ur maketenn gwelus. Gwelet a rit penaos e vo ho lec'hienn a-raok siñañ."
+			},
+			{
+				"number": "03",
+				"title": "Sevel a reomp",
+				"text": "Diorroerien a ran ho lec'hienn, talvezout a rit da bep pazenn. Souezhadenn ebet d'ar livradur."
+			},
+			{
+				"number": "04",
+				"title": "Lañsañ a reomp",
+				"text": "Lakaat en linenn, SSL, stummadur da verañ an danvez. Ho lec'hienn a zo prest da labourat evidoc'h."
+			}
+		]
+	},
+	"faq": {
+		"tag": "Goulennoù alies",
+		"title": "Houzañv c'hoazh ?",
+		"subtitle": "Respontoù d'ar goulennoù a vez graet gant an holl a-raok kregiñ o raktres.",
+		"items": [
+			{
+				"question": "Pegement a amzer ez eus ezhomm evit krouiñ ul lec'hienn ?",
+				"answer": "E keñver, ul lec'hienn vitrine a zo livret e 2 sizhun. Ul lec'hienn premium a bad 3 sizhun. Reiñ a ran deoc'h un doare resisaet a-benn ma vo sinet an devis."
+			},
+			{
+				"question": "N'ouzon ket netra eus an teknikel, ha ur gudenn eo ?",
+				"answer": "Ket da vat. An darn vrasañ eus ma c'hustumerien eo. Merañ a ran kement tra teknikel ha displegañ a ran pep tra e yezh aes. N'ho peus nemet da reiñ ho testennoù ha ho skeudennoù."
+			},
+			{
+				"question": "Petra a c'hoarvez goude al lakaat en linenn ?",
+				"answer": "Stummañ a ran ac'hanoc'h da verañ ho tanvez. Ma vez ezhomm kemmadurioù diwezhatoc'h, hegerz on. Ur forfed kendalc'hañ a zo kinniget ivez."
+			},
+			{
+				"question": "Perak ket ul lec'hienn WordPress pe Wix ?",
+				"answer": "An ostilhoù-se a zo pratikel met bevennet e perforzhañs ha personelaat. Diorroerien a ran lec'hiennoù war-bouez, buanoc'h, gwelloc'h renket, ha deoc'h e wirionez."
+			},
+			{
+				"question": "Penaos ez a ar paeañ ?",
+				"answer": "Aes : 50% da siñadur an devis, 50% d'al livradur. Fraoù kuzh ebet, abonnañ ebet rediet. Ar priz embannet eo ar priz diwezhañ."
+			},
+			{
+				"question": "Gallout a ran gwelet al lec'hienn a-raok paeañ ?",
+				"answer": "Ya. Kinnig a ran ur maketenn gwelus a-raok kregiñ gant an diorroadur. Talvezout a rit an dezign, ha neuze e savin. Da bep pazenn, goulenn a rit kemmadurioù."
+			},
+			{
+				"question": "Ha gwelus e vo ma lec'hienn war Google ?",
+				"answer": "Ya. Pep lec'hienn a zo optimizet evit an enklask naturel (SEO) adalek ar c'hrouiñ : framm teknikel prop, balizennoù leuniet mat, perforzhañs d'ar muiañ."
+			},
+			{
+				"question": "Gallout a ran cheñch ma lec'hienn da-unan ?",
+				"answer": "Hervez ar formulenn dibabet. Evit ul lec'hienn vitrine, ar c'hemmadurioù a dremen dre ma benn (endalc'het er forfed kendalc'hañ). Evit ul lec'hienn premium, e c'hellan enframmañ un reizhiad merañ danvez."
+			},
+			{
+				"question": "Labourat a rit er-maez eus Breizh ?",
+				"answer": "Sur. An darn vrasañ eus ma c'hustumerien a zo e Breizh, met labourat a ran a-bell gant artizaned ha kenwerzhourion e Bro-C'hall a-bezh. Video, pellgomz, postel — dont a reomp a-benn."
+			}
+		]
+	},
+	"contact": {
+		"tag": "Darempred",
+		"title": "Ho raktres a verit ul lec'hienn vat.",
+		"subtitle": "Lârit din petra a rit, diskouez a rin deoc'h petra a c'hallfe bezañ. Eskemm kentañ digoust, hep gwarant.",
+		"step0Title": "Petra eo ho raktres ?",
+		"step1Title": "Penaos e c'hallan mont e darempred ganeoc'h ?",
+		"step2Title": "Komzit deomp eus ho raktres",
+		"projectType": "Dibab ur seurt raktres",
+		"projectTypes": {
+			"site-vitrine": "Lec'hienn Vitrine",
+			"site-premium": "Lec'hienn Premium",
+			"refonte": "Adneveziañ lec'hienn",
+			"autre": "All"
+		},
+		"budget": "Budjed a-dost (diret)",
+		"budgets": {
+			"moins-1000": "Nebeutoc'h eget 1 000 €",
+			"1000-2000": "1 000 – 2 000 €",
+			"2000-3000": "2 000 – 3 000 €",
+			"plus-3000": "Muioc'h eget 3 000 €",
+			"pas-defini": "N'eo ket resisaet c'hoazh"
+		},
+		"namePlaceholder": "Hoc'h anv",
+		"emailPlaceholder": "Ho postel",
+		"messagePlaceholder": "Deskrivit ho raktres e nebeut a linennoù...",
+		"back": "Distreiñ",
+		"next": "Da-heul",
+		"send": "Kas",
+		"sending": "O kas...",
+		"successTitle": "Kemennadenn kaset !",
+		"successMessage": "Trugarez evit ho kemennadenn. Distro a rin deoc'h a-benn 24e.",
+		"or": "Pe war-eeun :",
+		"errors": {
+			"projectType": "Dibabit ur seurt raktres",
+			"name": "Hoc'h anv a zo rekis",
+			"email": "Ho postel a zo rekis",
+			"emailInvalid": "Postel direizh",
+			"message": "Deskrivit ho raktres"
+		}
+	},
+	"about": {
+		"tag": "Diwar-benn",
+		"titleLine1": "Charpaentour eus ma micher.",
+		"titleHighlight": "Diorroerien",
+		"titleLine2": " dre passion.",
+		"intro": "Gianni on, krouer Djanni Studio. Krouiñ a ran lec'hiennoù web war-bouez evit an artizaned hag ar c'henwerzhourion e Breizh. Ma hent dizingal eo ma nerzh : kompren a ran ho micher abalamour ma teuon eus ar maez.",
+		"founderName": "Gianni",
+		"founderRole": "Krouer · Djanni Studio",
+		"journey": {
+			"tag": "Ma hent",
+			"title": "Eus ar c'hantier d'ar c'hod.",
+			"subtitle": "Un hent divoutin, met a ra an diforc'h pa labourer gant artizaned.",
+			"steps": [
+				{
+					"year": "2018 — 2023",
+					"title": "Charpaentour eus ma micher",
+					"text": "Kregiñ am boa war ar c'hantierioù. Troc'hañ, kempenn, kemmañ — sevel traoù kreñv gant ma daouarn. Eno am boa desket ar rigor, an doujañs d'an amzerioù ha talvoud al labour graet mat."
+				},
+				{
+					"year": "2023 — Hiziv",
+					"title": "Diorroerien web emgefredur",
+					"text": "En un dro, emaon bet passionet gant ar c'hod. React, Next.js, TypeScript — desket am eus en ur sevel raktresoù gwir. Hevelep prederouriezh eget ar c'harpaentourezh : kreñv, war-bouez, hep berradenn."
+				},
+				{
+					"year": "2025",
+					"title": "Djanni Studio a zo ganet",
+					"text": "Lañset am eus Djanni Studio gant ur gefridi splann : sikour an artizaned hag ar c'henwerzhourion breizhiz da gaout ul lec'hienn web a zere dezho. Abalamour ma anavezan o buhez pemdeziek, komz a ran o yezh."
+				},
+				{
+					"year": "Ma gefridi",
+					"title": "Ar web hegerz d'an artizaned",
+					"text": "Hep yezh vevenn, hep prizioù laket da greskiñ, hep retardiñ hep fin. Ul lec'hienn kaer, buan ha efedus, livret e 2-3 sizhun. Ken aes ha kement-se."
+				}
+			]
+		},
+		"values": {
+			"tag": "Ma zalvoudoù",
+			"title": "Ar pezh a gredan.",
+			"subtitle": "Pennadoù aes a rener pep raktres.",
+			"items": [
+				{
+					"title": "Reizhdedouriezh",
+					"text": "Priz fiskal, devis splann, fraoù kuzh ebet. Ar pezh a lâran, ar pezh a ran."
+				},
+				{
+					"title": "Perzhded",
+					"text": "Pep lec'hienn a zo kodet war-bouez. Patrom ebet, WordPress ebet — kod prop ha performant."
+				},
+				{
+					"title": "Tostaat",
+					"text": "E Breizh emaon, hegerz evit ur gafé. Ket ur prestataer skeud a-dreñv ur skramm."
+				},
+				{
+					"title": "Eeunded",
+					"text": "Displegañ a ran pep tra e yezh aes. Hoc'h hini labour : komz din eus hoc'h oberiantiz."
+				}
+			]
+		},
+		"skills": {
+			"tag": "Gouiziegezhoù",
+			"title": "An ostilhoù a implijon.",
+			"subtitle": "Teknologiezhioù modern evit lec'hiennoù buan, surentez ha mat renket."
+		},
+		"cta": {
+			"title": "C'hoant labourat asambles ?",
+			"subtitle": "Eskemm kentañ digoust, hep gwarant. Komzit din eus ho raktres.",
+			"button": "Kregiñ gant ur raktres"
+		}
+	},
+	"realisationsHome": {
+		"tag": "Obererezhioù",
+		"title": "Petra a savin.",
+		"subtitle": "Lec'hiennoù savet ha modoù — pep raktres a zo savet evit ar c'henwerzh a zo ennañ.",
+		"ctaTitle": "Ho raktres amañ ?",
+		"ctaSubtitle": "Komzomp eus ho mennad — kensav kentañ digoust."
+	},
+	"blogPost": {
+		"backLink": "An holl bennadoù",
+		"readingTime": "min lenn",
+		"authorRole": "Diorroerien web dizalc'h · Breizh",
+		"authorBio": "Charpaentour eus ma micher, diorroerien dre passion. Sikour a ran an artizaned hag ar c'henwerzhourion breizhiz da vezañ disheñvel en linenn gant lec'hiennoù war-bouez.",
+		"publishedOn": "Embannet d'an",
+		"ctaTitle": "Ezhomm eus ul lec'hienn web ?",
+		"ctaSubtitle": "Kensav kentañ digoust. Komzomp eus ho raktres.",
+		"ctaButton": "Kregiñ gant ur raktres",
+		"ctaSecondary": "Lenn pennadoù all"
+	},
+	"realisationsPage": {
+		"tag": "Obererezhioù",
+		"title": "Raktresoù a gomz anezho o-unan.",
+		"subtitle": "Pep lec'hienn zo un istor. Dizoleiit penaos am eus sikouret artizaned ha kenwerzhourion da vezañ disheñvel en linenn."
+	},
+	"caseStudy": {
+		"backLink": "Distreiñ d'an obererezhioù",
+		"client": "Kustumer",
+		"location": "Lec'hiadur",
+		"duration": "Padelezh",
+		"year": "Bloaz",
+		"visitSite": "Gwelet al lec'hienn",
+		"context": "Kontekst",
+		"problem": "Kudenn",
+		"solution": "Diskoulm",
+		"results": "Disoc'hoù",
+		"techStack": "Stack teknikel",
+		"testimonial": "Testeni ar c'hustumer",
+		"ctaTitle": "Ur raktres heñvel ?",
+		"ctaText": "Komzomp eus ho raktres. Eskemm kentañ digoust, hep gwarant.",
+		"ctaButton": "Kregiñ gant ur raktres"
+	},
+	"blogPage": {
+		"tag": "Blog",
+		"title": "Alioù ha danvezioù.",
+		"subtitle": "Pennadoù evit an artizaned hag ar c'henwerzhourion a fell dezho boud a-raok en linenn.",
+		"readMore": "Lenn ar pennad",
+		"minRead": "min da lenn",
+		"backLink": "Distreiñ d'ar blog",
+		"shareTitle": "Rannañ ar pennad-mañ"
+	},
+	"notFound": {
+		"title": "Pajenn dizavet",
+		"subtitle": "Ar bajenn a glaskit n'eo ket anezhi pe eo bet dilec'hiet.",
+		"backHome": "Distreiñ d'ar gêr",
+		"seeWork": "Gwelet ma obererezhioù"
+	},
+	"avisPage": {
+		"title": "Ho ali a gont.",
+		"subtitle": "Trugarez da vezañ fiziañs e Djanni Studio. Rannit ho skiant-prenet en ur lezañ un ali war Google.",
+		"cta": "Lezañ un ali war Google",
+		"footer": "30 eilenn eo ha skoazellañ a ra ac'hanon kalz. Trugarez !"
+	},
+	"footer": {
+		"tagline": "Lec'hiennoù web evit artizaned ha kenwerzhourion e Breizh",
+		"realisations": "Obererezhioù",
+		"about": "Diwar-benn",
+		"blog": "Blog",
+		"contact": "Darempred",
+		"legal": "Menozoù lezennel",
+		"cgv": "DG",
+		"copyright": "© 2026 Djanni Studio — Pep gwir miret"
+	}
+}

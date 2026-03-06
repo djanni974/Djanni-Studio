@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Brand constants (shared between themes) */
+:root {
+	--black: #0c0c0b;
+	--white: #f5f2ec;
+	--cream: #ede9e0;
+	--orange: #e8500a;
+	--orange-light: #f07040;
+	--radius: 0.75rem;
+}
+
+/* Light theme (default) */
+:root {
+	--gray: #55524a;
+	--gray-light: #78756c;
+	--background: #faf8f5;
+	--foreground: #1a1a18;
+	--card: #ffffff;
+	--card-foreground: #1a1a18;
+	--popover: #ffffff;
+	--popover-foreground: #1a1a18;
+	--primary: var(--orange);
+	--primary-foreground: #ffffff;
+	--secondary: #f0ede8;
+	--secondary-foreground: #1a1a18;
+	--muted: #f0ede8;
+	--muted-foreground: var(--gray);
+	--accent: var(--orange-light);
+	--accent-foreground: #ffffff;
+	--destructive: #dc2626;
+	--destructive-foreground: #ffffff;
+	--border: rgba(0, 0, 0, 0.1);
+	--input: rgba(0, 0, 0, 0.1);
+	--surface-a: #faf8f5;
+	--surface-b: #f5f2ec;
+	--surface-c: #ede9e0;
+	--ring: var(--orange);
+}
+
+/* Dark theme */
+.dark {
+	--gray: #6b6860;
+	--gray-light: #b8b4ac;
+	--background: var(--black);
+	--foreground: var(--white);
+	--card: #0f0f0e;
+	--card-foreground: var(--white);
+	--popover: var(--black);
+	--popover-foreground: var(--white);
+	--primary: var(--orange);
+	--primary-foreground: var(--white);
+	--secondary: #1a1a18;
+	--secondary-foreground: var(--white);
+	--muted: #1a1a18;
+	--muted-foreground: var(--gray-light);
+	--accent: var(--orange-light);
+	--accent-foreground: var(--white);
+	--destructive: #dc2626;
+	--destructive-foreground: var(--white);
+	--border: rgba(255, 255, 255, 0.12);
+	--input: rgba(255, 255, 255, 0.12);
+	--surface-a: #0c0c0b;
+	--surface-b: #0f0f0e;
+	--surface-c: #111110;
+	--ring: var(--orange);
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+
+	--color-djanni-black: var(--black);
+	--color-djanni-white: var(--white);
+	--color-djanni-cream: var(--cream);
+	--color-djanni-orange: var(--orange);
+	--color-djanni-orange-light: var(--orange-light);
+	--color-djanni-gray: var(--gray);
+	--color-djanni-gray-light: var(--gray-light);
+	--color-surface-a: var(--surface-a);
+	--color-surface-b: var(--surface-b);
+	--color-surface-c: var(--surface-c);
+
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+
+	--font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+	--font-heading: "Syne", ui-sans-serif, system-ui, sans-serif;
+
+	--animate-aurora: aurora 60s linear infinite;
+}
+
+@keyframes aurora {
+	from {
+		background-position:
+			50% 50%,
+			50% 50%;
+	}
+	to {
+		background-position:
+			350% 50%,
+			350% 50%;
+	}
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-sans);
+}

@@ -1,0 +1,395 @@
+{
+	"metadata": {
+		"title": "Djanni Studio — Sites web pour artisans & commerçants",
+		"description": "Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — juste un site qui vous ressemble et qui ramène des clients.",
+		"about": {
+			"title": "À propos — Djanni Studio",
+			"description": "Charpentier devenu développeur web. Je crée des sites sur mesure pour les artisans et commerçants en Bretagne. Découvrez mon parcours."
+		},
+		"realisations": {
+			"title": "Réalisations — Djanni Studio",
+			"description": "Découvrez les sites web créés par Djanni Studio pour des artisans et commerçants en Bretagne. Études de cas détaillées."
+		},
+		"blog": {
+			"title": "Blog — Djanni Studio",
+			"description": "Conseils, astuces et guides pour les artisans et commerçants qui veulent réussir en ligne. SEO local, sites web, stratégie digitale."
+		},
+		"avis": {
+			"title": "Laisser un avis — Djanni Studio",
+			"description": "Partagez votre expérience avec Djanni Studio en laissant un avis sur Google."
+		}
+	},
+	"nav": {
+		"realisations": "Réalisations",
+		"offres": "Offres",
+		"about": "À propos",
+		"blog": "Blog",
+		"cta": "Démarrer un projet",
+		"toggleTheme": "Changer le thème"
+	},
+	"hero": {
+		"badge": "Djanni Studio — Bretagne",
+		"titleStart": "Des sites web qui ",
+		"titleHighlight": "travaillent",
+		"titleEnd": " pour vous.",
+		"subtitle": "Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — juste un site qui vous ressemble et qui ramène des clients.",
+		"cta": "Démarrer un projet",
+		"seeWork": "Voir mes réalisations"
+	},
+	"stats": {
+		"deliveryValue": "2 sem.",
+		"deliveryLabel": "Délai moyen de livraison",
+		"responsiveValue": "100%",
+		"responsiveLabel": "Responsive mobile",
+		"paymentValue": "50%",
+		"paymentLabel": "À la signature, 50% à la livraison"
+	},
+	"offres": {
+		"tag": "Offres",
+		"title": "Simple. Clair. Sans surprise.",
+		"subtitle": "Trois formules adaptées à votre projet. Devis personnalisé, sans engagement."
+	},
+	"pricing": {
+		"vitrine": {
+			"badge": "Essentiel",
+			"priceLabel": "À partir de",
+			"price": "990",
+			"priceSuffix": "€",
+			"priceNote": "Selon le nombre de pages • Paiement en 2 fois",
+			"name": "Site Vitrine",
+			"description": "Idéal pour les commerces qui ont besoin d'une présence web propre et efficace rapidement.",
+			"features": [
+				"Jusqu'à 5 pages",
+				"100% responsive mobile",
+				"Formulaire de contact",
+				"Horaires & Google Maps",
+				"SSL & mise en ligne",
+				"Livraison en 2 semaines"
+			],
+			"ctaLabel": "Démarrer"
+		},
+		"premium": {
+			"badge": "Le plus choisi",
+			"priceLabel": "À partir de",
+			"price": "1 990",
+			"priceSuffix": "€",
+			"priceNote": "Selon les fonctionnalités • Paiement en 2 fois",
+			"name": "Site Premium",
+			"description": "Pour les commerces qui veulent se démarquer et donner une vraie image professionnelle.",
+			"features": [
+				"Jusqu'à 8 pages",
+				"Catalogue produits / galerie",
+				"Optimisation SEO",
+				"Animations et design soigné",
+				"Formation à la mise à jour",
+				"Livraison en 3 semaines"
+			],
+			"ctaLabel": "Démarrer"
+		},
+		"refonte": {
+			"badge": "Refonte",
+			"priceLabel": "Sur devis",
+			"price": "1 500",
+			"priceSuffix": "€+",
+			"priceNote": "Prix variable selon la complexité du site existant",
+			"name": "Refonte Site Existant",
+			"description": "Votre site existe mais il vieillit mal. On lui donne une seconde vie sans repartir de zéro.",
+			"features": [
+				"Analyse du site actuel",
+				"Nouveau design moderne",
+				"Reprise du contenu existant",
+				"Migration sans perte de données",
+				"Correctif SSL & performances",
+				"Devis sur mesure"
+			],
+			"ctaLabel": "Demander un devis"
+		}
+	},
+	"pourquoi": {
+		"tag": "Pourquoi moi",
+		"title": "Un dev qui parle votre langue.",
+		"subtitle": "Pas une agence, pas un étudiant — un artisan du web qui vient du terrain.",
+		"reasons": [
+			{
+				"number": "01",
+				"title": "Je comprends les artisans",
+				"text": "Charpentier de métier, je sais ce que c'est de travailler avec ses mains et de gérer un client. Pas de jargon, pas de bullshit."
+			},
+			{
+				"number": "02",
+				"title": "Local & disponible",
+				"text": "Basé en Bretagne, disponible pour vous rencontrer. Pas un prestataire à l'autre bout du monde que vous ne verrez jamais."
+			},
+			{
+				"number": "03",
+				"title": "Prix fixe, pas de surprise",
+				"text": "Devis signé avant de commencer. 50% à la signature, 50% à la livraison. Vous savez exactement ce que vous payez."
+			},
+			{
+				"number": "04",
+				"title": "Livré en 2-3 semaines",
+				"text": "Pas 6 mois d'attente. Un planning clair, des étapes définies, un site livré dans les délais."
+			}
+		]
+	},
+	"profileCard": {
+		"name": "Gianni — Djanni Studio",
+		"role": "Développeur web freelance · Bretagne",
+		"quote": "Je suis charpentier de métier. J'ai appris à construire des choses solides, qui durent, et qui servent vraiment. J'applique la même philosophie au web."
+	},
+	"temoignages": {
+		"tag": "Témoignages",
+		"title": "Ce qu'ils en disent.",
+		"subtitle": "Des artisans et commerçants qui ont fait confiance à Djanni Studio."
+	},
+	"process": {
+		"tag": "Comment ça marche",
+		"title": "4 étapes, zéro surprise.",
+		"subtitle": "Un processus clair du premier contact à la mise en ligne.",
+		"steps": [
+			{
+				"number": "01",
+				"title": "On discute",
+				"text": "Un appel de 30 minutes pour comprendre votre activité, vos besoins, et ce que vous voulez transmettre."
+			},
+			{
+				"number": "02",
+				"title": "Je propose",
+				"text": "Un devis clair et une maquette visuelle. Vous voyez à quoi ressemblera votre site avant de signer."
+			},
+			{
+				"number": "03",
+				"title": "On construit",
+				"text": "Je développe votre site, vous validez chaque étape. Aucune surprise à la livraison."
+			},
+			{
+				"number": "04",
+				"title": "On lance",
+				"text": "Mise en ligne, SSL, formation à la gestion du contenu. Votre site est prêt à travailler pour vous."
+			}
+		]
+	},
+	"faq": {
+		"tag": "Questions fréquentes",
+		"title": "Vous hésitez encore ?",
+		"subtitle": "Les réponses aux questions que tout le monde se pose avant de lancer son projet.",
+		"items": [
+			{
+				"question": "Combien de temps faut-il pour créer un site ?",
+				"answer": "En moyenne, un site vitrine est livré en 2 semaines. Un site premium prend environ 3 semaines. Je vous donne un planning précis dès la signature du devis."
+			},
+			{
+				"question": "Je n'y connais rien en technique, c'est un problème ?",
+				"answer": "Pas du tout. C'est même la majorité de mes clients. Je m'occupe de toute la partie technique et je vous explique tout en langage simple. Vous n'avez qu'à me fournir vos textes et photos."
+			},
+			{
+				"question": "Que se passe-t-il après la mise en ligne ?",
+				"answer": "Je vous forme à la gestion de votre contenu. Si vous avez besoin de modifications par la suite, je reste disponible. Un forfait maintenance est aussi proposé si vous souhaitez être tranquille."
+			},
+			{
+				"question": "Pourquoi pas un site WordPress ou Wix ?",
+				"answer": "Ces outils sont pratiques mais limités en performance et personnalisation. Je développe des sites sur mesure, plus rapides, mieux référencés, et qui vous appartiennent vraiment — pas d'abonnement mensuel imposé."
+			},
+			{
+				"question": "Comment se passe le paiement ?",
+				"answer": "Simple : 50% à la signature du devis, 50% à la livraison. Pas de frais cachés, pas d'abonnement obligatoire. Le prix annoncé est le prix final."
+			},
+			{
+				"question": "Je peux voir le site avant de payer ?",
+				"answer": "Oui. Je vous présente une maquette visuelle avant de commencer le développement. Vous validez le design, et seulement ensuite je construis. À chaque étape, vous pouvez demander des ajustements."
+			},
+			{
+				"question": "Mon site sera-t-il visible sur Google ?",
+				"answer": "Oui. Chaque site est optimisé pour le référencement naturel (SEO) dès la création : structure technique propre, balises bien remplies, performance maximale. Je vous aide aussi à choisir les bons mots-clés pour votre activité."
+			},
+			{
+				"question": "Puis-je modifier mon site moi-même ?",
+				"answer": "Ça dépend de la formule choisie. Sur un site vitrine, les modifications passent par moi (c'est inclus dans le forfait maintenance). Sur un site premium, je peux intégrer un système de gestion de contenu si vous souhaitez être autonome."
+			},
+			{
+				"question": "Travaillez-vous en dehors de la Bretagne ?",
+				"answer": "Bien sûr. La majorité de mes clients sont en Bretagne, mais je travaille à distance avec des artisans et commerçants partout en France. Visio, téléphone, email — on s'adapte."
+			}
+		]
+	},
+	"contact": {
+		"tag": "Contact",
+		"title": "Votre projet mérite un bon site.",
+		"subtitle": "Dites-moi ce que vous faites, je vous montre ce que ça pourrait donner. Premier échange gratuit, sans engagement.",
+		"step0Title": "Quel est votre projet ?",
+		"step1Title": "Comment vous contacter ?",
+		"step2Title": "Parlez-nous de votre projet",
+		"projectType": "Choisir un type de projet",
+		"projectTypes": {
+			"site-vitrine": "Site Vitrine",
+			"site-premium": "Site Premium",
+			"refonte": "Refonte de site existant",
+			"autre": "Autre"
+		},
+		"budget": "Budget approximatif (optionnel)",
+		"budgets": {
+			"moins-1000": "Moins de 1 000 €",
+			"1000-2000": "1 000 – 2 000 €",
+			"2000-3000": "2 000 – 3 000 €",
+			"plus-3000": "Plus de 3 000 €",
+			"pas-defini": "Pas encore défini"
+		},
+		"namePlaceholder": "Votre nom",
+		"emailPlaceholder": "Votre email",
+		"messagePlaceholder": "Décrivez votre projet en quelques lignes...",
+		"back": "Retour",
+		"next": "Suivant",
+		"send": "Envoyer",
+		"sending": "Envoi...",
+		"successTitle": "Message envoyé !",
+		"successMessage": "Merci pour votre message. Je reviens vers vous sous 24h.",
+		"or": "Ou directement :",
+		"errors": {
+			"projectType": "Choisissez un type de projet",
+			"name": "Votre nom est requis",
+			"email": "Votre email est requis",
+			"emailInvalid": "Email invalide",
+			"message": "Décrivez-nous votre projet"
+		}
+	},
+	"about": {
+		"tag": "À propos",
+		"titleLine1": "Charpentier de métier.",
+		"titleHighlight": "Développeur",
+		"titleLine2": " par passion.",
+		"intro": "Je suis Gianni, fondateur de Djanni Studio. Je crée des sites web sur mesure pour les artisans et commerçants en Bretagne. Mon parcours atypique est ma force : je comprends votre métier parce que je viens du terrain.",
+		"founderName": "Gianni",
+		"founderRole": "Fondateur · Djanni Studio",
+		"journey": {
+			"tag": "Mon parcours",
+			"title": "Du chantier au code.",
+			"subtitle": "Un chemin pas commun, mais qui fait toute la différence quand on travaille avec des artisans.",
+			"steps": [
+				{
+					"year": "2018 — 2023",
+					"title": "Charpentier de métier",
+					"text": "J'ai commencé sur les chantiers. Couper, ajuster, assembler — construire des choses solides avec mes mains. C'est là que j'ai appris la rigueur, le respect des délais et l'importance du travail bien fait."
+				},
+				{
+					"year": "2023 — Aujourd'hui",
+					"title": "Développeur web autodidacte",
+					"text": "En parallèle, je me suis passionné pour le code. React, Next.js, TypeScript — j'ai appris en construisant des projets concrets. Même philosophie que la charpente : du solide, du sur mesure, pas de raccourci."
+				},
+				{
+					"year": "2025",
+					"title": "Djanni Studio est né",
+					"text": "J'ai lancé Djanni Studio avec une mission claire : aider les artisans et commerçants bretons à avoir un site web qui leur ressemble. Parce que je connais leur quotidien, je parle leur langue."
+				},
+				{
+					"year": "Ma mission",
+					"title": "Le web accessible aux artisans",
+					"text": "Pas de jargon, pas de prix gonflé, pas de délais interminables. Un site beau, rapide et efficace, livré en 2-3 semaines. C'est aussi simple que ça."
+				}
+			]
+		},
+		"values": {
+			"tag": "Mes valeurs",
+			"title": "Ce en quoi je crois.",
+			"subtitle": "Des principes simples qui guident chaque projet.",
+			"items": [
+				{
+					"title": "Honnêteté",
+					"text": "Prix fixe, devis clair, pas de frais cachés. Ce que je dis, c'est ce que je fais."
+				},
+				{
+					"title": "Qualité",
+					"text": "Chaque site est codé sur mesure. Pas de template, pas de WordPress — du code propre et performant."
+				},
+				{
+					"title": "Proximité",
+					"text": "Basé en Bretagne, disponible pour un café. Pas un prestataire fantôme derrière un écran."
+				},
+				{
+					"title": "Simplicité",
+					"text": "Je vous explique tout en langage simple. Votre seul travail : me parler de votre activité."
+				}
+			]
+		},
+		"skills": {
+			"tag": "Compétences",
+			"title": "Les outils que j'utilise.",
+			"subtitle": "Des technologies modernes pour des sites rapides, sécurisés et bien référencés."
+		},
+		"cta": {
+			"title": "Envie de travailler ensemble ?",
+			"subtitle": "Premier échange gratuit, sans engagement. Parlez-moi de votre projet.",
+			"button": "Démarrer un projet"
+		}
+	},
+	"realisationsHome": {
+		"tag": "Réalisations",
+		"title": "Ce que je construis.",
+		"subtitle": "Sites réalisés et concepts — chaque projet est pensé pour le commerce qui le porte.",
+		"ctaTitle": "Votre projet ici ?",
+		"ctaSubtitle": "Discutons de votre idée — premier échange gratuit."
+	},
+	"blogPost": {
+		"backLink": "Tous les articles",
+		"readingTime": "min de lecture",
+		"authorRole": "Développeur web freelance · Bretagne",
+		"authorBio": "Charpentier de métier, développeur par passion. J'aide les artisans et commerçants bretons à se démarquer en ligne avec des sites sur mesure.",
+		"publishedOn": "Publié le",
+		"ctaTitle": "Besoin d'un site web ?",
+		"ctaSubtitle": "Premier échange gratuit. Discutons de votre projet.",
+		"ctaButton": "Démarrer un projet",
+		"ctaSecondary": "Lire d'autres articles"
+	},
+	"realisationsPage": {
+		"tag": "Réalisations",
+		"title": "Des projets qui parlent d'eux-mêmes.",
+		"subtitle": "Chaque site est une histoire. Découvrez comment j'ai aidé des artisans et commerçants à se démarquer en ligne."
+	},
+	"caseStudy": {
+		"backLink": "Retour aux réalisations",
+		"client": "Client",
+		"location": "Localisation",
+		"duration": "Durée",
+		"year": "Année",
+		"visitSite": "Voir le site",
+		"context": "Contexte",
+		"problem": "Problématique",
+		"solution": "Solution",
+		"results": "Résultats",
+		"techStack": "Stack technique",
+		"testimonial": "Témoignage client",
+		"ctaTitle": "Un projet similaire ?",
+		"ctaText": "Discutons de votre projet. Premier échange gratuit, sans engagement.",
+		"ctaButton": "Démarrer un projet"
+	},
+	"blogPage": {
+		"tag": "Blog",
+		"title": "Conseils & ressources.",
+		"subtitle": "Des articles pour les artisans et commerçants qui veulent réussir en ligne.",
+		"readMore": "Lire l'article",
+		"minRead": "min de lecture",
+		"backLink": "Retour au blog",
+		"shareTitle": "Partager cet article"
+	},
+	"notFound": {
+		"title": "Page introuvable",
+		"subtitle": "La page que vous cherchez n'existe pas ou a été déplacée.",
+		"backHome": "Retour à l'accueil",
+		"seeWork": "Voir mes réalisations"
+	},
+	"avisPage": {
+		"title": "Votre avis compte.",
+		"subtitle": "Merci d'avoir fait confiance à Djanni Studio. Partagez votre expérience en laissant un avis sur Google.",
+		"cta": "Laisser un avis sur Google",
+		"footer": "Ça prend 30 secondes et ça m'aide énormément. Merci !"
+	},
+	"footer": {
+		"tagline": "Sites web pour artisans et commerçants en Bretagne",
+		"realisations": "Réalisations",
+		"about": "À propos",
+		"blog": "Blog",
+		"contact": "Contact",
+		"legal": "Mentions légales",
+		"cgv": "CGV",
+		"copyright": "© 2026 Djanni Studio — Tous droits réservés"
+	}
+}

@@ -1,0 +1,118 @@
+import type { Metadata } from "next"
+import { DM_Sans, Syne } from "next/font/google"
+import Script from "next/script"
+import { getLocale } from "next-intl/server"
+import { Providers } from "@/components/providers"
+import "./globals.css"
+
+const syne = Syne({
+	subsets: ["latin"],
+	variable: "--font-heading",
+	display: "swap",
+})
+
+const dmSans = DM_Sans({
+	subsets: ["latin"],
+	variable: "--font-sans",
+	display: "swap",
+})
+
+export const metadata: Metadata = {
+	metadataBase: new URL("https://djannistudio.fr"),
+	title: "Djanni Studio — Sites web pour artisans & commerçants",
+	description:
+		"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — juste un site qui vous ressemble et qui ramène des clients.",
+	keywords: [
+		"site web",
+		"artisan",
+		"commerçant",
+		"Bretagne",
+		"freelance",
+		"développeur web",
+		"création site internet",
+		"site vitrine",
+		"TPE",
+	],
+	authors: [{ name: "Gianni — Djanni Studio" }],
+	creator: "Djanni Studio",
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
+	openGraph: {
+		title: "Djanni Studio — Sites web pour artisans & commerçants",
+		description: "Des sites modernes pour les artisans et commerçants locaux en Bretagne.",
+		url: "https://djannistudio.fr",
+		siteName: "Djanni Studio",
+		type: "website",
+		locale: "fr_FR",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Djanni Studio — Sites web pour artisans & commerçants",
+		description: "Des sites modernes pour les artisans et commerçants locaux en Bretagne.",
+	},
+	manifest: "/manifest.json",
+	appleWebApp: {
+		capable: true,
+		statusBarStyle: "black-translucent",
+		title: "Djanni Studio",
+	},
+}
+
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "LocalBusiness",
+	name: "Djanni Studio",
+	description: "Création de sites web sur mesure pour artisans et commerçants en Bretagne",
+	url: "https://djannistudio.fr",
+	email: "contact@djannistudio.fr",
+	image: "https://djannistudio.fr/opengraph-image",
+	address: {
+		"@type": "PostalAddress",
+		addressRegion: "Bretagne",
+		addressCountry: "FR",
+	},
+	priceRange: "€€",
+	areaServed: {
+		"@type": "Place",
+		name: "Bretagne",
+	},
+	serviceType: [
+		"Création de sites web",
+		"Refonte de sites internet",
+		"Optimisation SEO",
+		"Développement web",
+	],
+	knowsLanguage: ["fr", "en", "br"],
+}
+
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+	const locale = await getLocale()
+
+	return (
+		<html lang={locale} suppressHydrationWarning className={`${syne.variable} ${dmSans.variable}`}>
+			<body className="overflow-x-hidden antialiased" suppressHydrationWarning>
+				<Script
+					defer
+					data-domain="djannistudio.fr"
+					src="https://plausible.io/js/script.js"
+					strategy="afterInteractive"
+				/>
+				<script
+					type="application/ld+json"
+					// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+				/>
+				<Providers>{children}</Providers>
+			</body>
+		</html>
+	)
+}
