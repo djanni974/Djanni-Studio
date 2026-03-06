@@ -24,8 +24,10 @@ const sections = [
 		content: [
 			"**Djanni Studio** — Gianni",
 			"Micro-entreprise — Création de sites web",
-			"SIRET : XXX XXX XXX XXXXX",
-			"Adresse : [Votre adresse], Bretagne, France",
+			"SIREN : 102 087 822",
+			"SIRET : 102 087 822 00015",
+			"Code APE : 6201Z — Programmation informatique",
+			"Adresse : 4 boulevard Jules Verger, 35800 Dinard, France",
 			"Email : contact@djannistudio.fr",
 			"Téléphone : 06 XX XX XX XX",
 			"__TVA non applicable, article 293 B du CGI.__",
