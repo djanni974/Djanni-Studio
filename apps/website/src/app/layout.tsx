@@ -18,7 +18,10 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://djannistudio.fr"),
+	metadataBase: new URL("https://www.djannistudio.fr"),
+	alternates: {
+		canonical: "/",
+	},
 	title: "Djanni Studio — Sites web pour artisans & commerçants",
 	description:
 		"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — juste un site qui vous ressemble et qui ramène des clients.",
