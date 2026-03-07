@@ -28,7 +28,7 @@ export function Offres() {
 		<section id="offres" className="bg-surface-a px-5 py-24 md:px-12">
 			<SectionHeader tag={t("tag")} title={t("title")} subtitle={t("subtitle")} />
 
-			<div className="mt-16 grid overflow-hidden rounded-xl border border-border md:grid-cols-3">
+			<div className="mt-16 grid gap-5 md:grid-cols-3">
 				{tiers.map((tier) => (
 					<PricingCard key={tier.name} tier={tier} />
 				))}

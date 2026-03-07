@@ -14,6 +14,10 @@
 			"title": "Blog — Djanni Studio",
 			"description": "Tips, tricks and guides for craftspeople and local businesses who want to succeed online. Local SEO, websites, digital strategy."
 		},
+		"offres": {
+			"title": "Pricing & Plans — Djanni Studio",
+			"description": "Discover my website packages for craftspeople and local businesses. Starter, premium or redesign — clear pricing, no surprises."
+		},
 		"avis": {
 			"title": "Leave a Review — Djanni Studio",
 			"description": "Share your experience with Djanni Studio by leaving a review on Google."
@@ -47,7 +51,34 @@
 	"offres": {
 		"tag": "Pricing",
 		"title": "Simple. Clear. No surprises.",
-		"subtitle": "Three plans tailored to your project. Custom quote, no commitment."
+		"subtitle": "Three plans tailored to your project. Custom quote, no commitment.",
+		"heroTitle": "Clear pricing,",
+		"heroHighlight": " no surprises.",
+		"heroSubtitle": "Choose the plan that fits your project. Every plan includes personalised support from start to finish.",
+		"guarantees": {
+			"tag": "Commitments",
+			"title": "What's included in every plan.",
+			"items": [
+				{
+					"title": "Fast delivery",
+					"text": "Your site is live in 2 weeks max. No endless delays."
+				},
+				{
+					"title": "Flexible payment",
+					"text": "50% upfront, 50% on delivery. Simple and transparent."
+				},
+				{
+					"title": "Support included",
+					"text": "30 days of support after launch. I'm here for your questions."
+				}
+			]
+		},
+		"cta": {
+			"tag": "Ready?",
+			"title": "Your project deserves the best.",
+			"subtitle": "Let's discuss your project — first call free, no commitment.",
+			"button": "Start my project"
+		}
 	},
 	"pricing": {
 		"vitrine": {
@@ -432,6 +463,9 @@
 		"successTitle": "Request sent!",
 		"successMessage": "Thank you for your request. I'll get back to you within 24 hours to discuss.",
 		"or": "Or directly:",
+		"trustResponse": "Response within 24h",
+		"trustFree": "Free quote",
+		"trustNoCommitment": "No commitment",
 		"errors": {
 			"projectType": "Choose a project type",
 			"businessName": "Business name is required",
@@ -444,9 +478,11 @@
 	"footer": {
 		"tagline": "Websites for craftspeople and local businesses in Brittany",
 		"realisations": "Portfolio",
+		"offres": "Pricing",
 		"about": "About",
 		"blog": "Blog",
 		"contact": "Contact",
+		"privacy": "Privacy policy",
 		"legal": "Legal notice",
 		"cgv": "Terms",
 		"copyright": "© 2026 Djanni Studio — All rights reserved"

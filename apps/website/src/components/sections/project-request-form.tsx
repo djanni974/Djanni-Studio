@@ -5,9 +5,11 @@ import {
 	IconArrowLeft,
 	IconArrowRight,
 	IconCheck,
+	IconClock,
 	IconMail,
 	IconPhone,
 	IconSend,
+	IconShieldCheck,
 } from "@tabler/icons-react"
 import { AnimatePresence, motion } from "motion/react"
 import { useTranslations } from "next-intl"
@@ -39,31 +41,54 @@ const selectClass =
 
 function StepIndicator({ currentStep }: { currentStep: number }) {
 	return (
-		<div className="mb-8 flex items-center justify-center gap-2">
-			{Array.from({ length: STEP_COUNT }, (_, i) => (
-				<div key={i} className="flex items-center gap-2">
-					<div
-						className={cn(
-							"flex h-8 w-8 items-center justify-center rounded-full border text-xs font-semibold transition-all duration-300",
-							i < currentStep
-								? "border-djanni-orange bg-djanni-orange text-white"
-								: i === currentStep
-									? "border-djanni-orange bg-djanni-orange/10 text-djanni-orange"
-									: "border-border text-djanni-gray",
-						)}
-					>
-						{i < currentStep ? <IconCheck size={14} /> : i + 1}
-					</div>
-					{i < STEP_COUNT - 1 && (
-						<div
+		<div className="mb-10 flex flex-col items-center gap-4">
+			<div className="flex items-center gap-2">
+				{Array.from({ length: STEP_COUNT }, (_, i) => (
+					<div key={i} className="flex items-center gap-2">
+						<motion.div
+							animate={{
+								scale: i === currentStep ? 1.1 : 1,
+								borderColor:
+									i <= currentStep ? "var(--color-djanni-orange)" : "var(--color-border)",
+							}}
+							transition={{ type: "spring", stiffness: 500, damping: 30 }}
 							className={cn(
-								"h-px w-8 transition-colors duration-300",
-								i < currentStep ? "bg-djanni-orange" : "bg-border",
+								"flex h-8 w-8 items-center justify-center rounded-full border text-xs font-semibold",
+								i < currentStep
+									? "bg-djanni-orange text-white"
+									: i === currentStep
+										? "bg-djanni-orange/10 text-djanni-orange"
+										: "text-djanni-gray",
 							)}
-						/>
-					)}
-				</div>
-			))}
+						>
+							{i < currentStep ? (
+								<motion.span
+									initial={{ scale: 0, rotate: -90 }}
+									animate={{ scale: 1, rotate: 0 }}
+									transition={{ type: "spring", stiffness: 500, damping: 25 }}
+								>
+									<IconCheck size={14} />
+								</motion.span>
+							) : (
+								i + 1
+							)}
+						</motion.div>
+						{i < STEP_COUNT - 1 && (
+							<div className="relative h-px w-8 bg-border">
+								<motion.div
+									className="absolute inset-y-0 left-0 bg-djanni-orange"
+									initial={{ width: "0%" }}
+									animate={{ width: i < currentStep ? "100%" : "0%" }}
+									transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+								/>
+							</div>
+						)}
+					</div>
+				))}
+			</div>
+			<p className="text-xs text-djanni-gray">
+				{currentStep + 1} / {STEP_COUNT}
+			</p>
 		</div>
 	)
 }
@@ -204,15 +229,47 @@ export function ProjectRequestForm() {
 			</AnimatedSection>
 
 			{submitted ? (
-				<AnimatedSection>
-					<div className="rounded-xl border border-djanni-orange/30 bg-djanni-orange/5 p-10 text-center">
-						<div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-djanni-orange/10">
-							<IconCheck size={28} className="text-djanni-orange" />
-						</div>
-						<h3 className="mb-2 font-heading text-xl font-bold">{t("successTitle")}</h3>
-						<p className="text-sm text-djanni-gray-light">{t("successMessage")}</p>
+				<motion.div
+					initial={{ opacity: 0, scale: 0.9 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+				>
+					<div className="relative overflow-hidden rounded-xl border border-djanni-orange/30 bg-djanni-orange/5 p-12 text-center">
+						{/* Glow behind check */}
+						<div className="pointer-events-none absolute top-1/2 left-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.1)_0%,transparent_70%)]" />
+
+						<motion.div
+							initial={{ scale: 0 }}
+							animate={{ scale: 1 }}
+							transition={{ type: "spring", stiffness: 400, damping: 20, delay: 0.2 }}
+							className="relative mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-djanni-orange/15"
+						>
+							<motion.div
+								initial={{ scale: 0, rotate: -90 }}
+								animate={{ scale: 1, rotate: 0 }}
+								transition={{ type: "spring", stiffness: 500, damping: 25, delay: 0.4 }}
+							>
+								<IconCheck size={30} className="text-djanni-orange" />
+							</motion.div>
+						</motion.div>
+						<motion.h3
+							initial={{ opacity: 0, y: 10 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.5, duration: 0.4 }}
+							className="relative mb-2 font-heading text-xl font-bold"
+						>
+							{t("successTitle")}
+						</motion.h3>
+						<motion.p
+							initial={{ opacity: 0, y: 10 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.6, duration: 0.4 }}
+							className="relative text-sm text-djanni-gray-light"
+						>
+							{t("successMessage")}
+						</motion.p>
 					</div>
-				</AnimatedSection>
+				</motion.div>
 			) : (
 				<AnimatedSection delay={0.15}>
 					<form
@@ -450,44 +507,59 @@ export function ProjectRequestForm() {
 
 						<div className="mt-8 flex items-center justify-between gap-4">
 							{currentStep > 0 ? (
-								<button
+								<motion.button
 									type="button"
 									onClick={handleBack}
-									className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+									whileHover={{ x: -2 }}
+									whileTap={{ scale: 0.97 }}
+									className="group inline-flex items-center gap-2 rounded-lg border border-border px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-djanni-orange/30 hover:bg-secondary"
 								>
-									<IconArrowLeft size={16} />
+									<IconArrowLeft
+										size={16}
+										className="transition-transform duration-300 group-hover:-translate-x-0.5"
+									/>
 									{t("back")}
-								</button>
+								</motion.button>
 							) : (
 								<div />
 							)}
 
 							{currentStep < STEP_COUNT - 1 ? (
-								<button
+								<motion.button
 									type="button"
 									onClick={handleNext}
-									className="inline-flex items-center gap-2 rounded-lg bg-djanni-orange px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light"
+									whileHover={{ y: -2 }}
+									whileTap={{ scale: 0.97 }}
+									className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-djanni-orange px-6 py-3 text-sm font-medium text-white shadow-[0_0_0_rgba(232,80,10,0)] transition-all duration-300 hover:bg-djanni-orange-light hover:shadow-[0_6px_24px_rgba(232,80,10,0.3)]"
 								>
-									{t("next")}
-									<IconArrowRight size={16} />
-								</button>
+									<span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-[-20deg] bg-linear-to-r from-transparent via-white/15 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
+									<span className="relative">{t("next")}</span>
+									<IconArrowRight
+										size={16}
+										className="relative transition-transform duration-300 group-hover:translate-x-0.5"
+									/>
+								</motion.button>
 							) : (
 								<motion.button
 									type="submit"
 									disabled={submitting}
-									className="inline-flex items-center gap-2 rounded-lg bg-djanni-orange px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light disabled:opacity-60"
 									whileHover={{ y: -2 }}
-									whileTap={{ scale: 0.98 }}
+									whileTap={{ scale: 0.97 }}
+									className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-djanni-orange px-8 py-3 text-sm font-medium text-white shadow-[0_0_0_rgba(232,80,10,0)] transition-all duration-300 hover:bg-djanni-orange-light hover:shadow-[0_8px_30px_rgba(232,80,10,0.35)] disabled:pointer-events-none disabled:opacity-60"
 								>
+									<span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-[-20deg] bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
 									{submitting ? (
 										<>
 											<div className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
-											{t("sending")}
+											<span className="relative">{t("sending")}</span>
 										</>
 									) : (
 										<>
-											<IconSend size={16} />
-											{t("send")}
+											<IconSend
+												size={16}
+												className="relative transition-transform duration-300 group-hover:-rotate-12"
+											/>
+											<span className="relative">{t("send")}</span>
 										</>
 									)}
 								</motion.button>
@@ -512,6 +584,28 @@ export function ProjectRequestForm() {
 							07 49 54 74 98
 						</Link>
 					</div>
+
+					{/* Trust indicators */}
+					<motion.div
+						initial={{ opacity: 0, y: 16 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+						viewport={{ once: true }}
+						className="mt-10 flex flex-wrap items-center justify-center gap-8"
+					>
+						<div className="flex items-center gap-2 text-xs text-djanni-gray-light">
+							<IconClock size={14} className="text-djanni-orange" />
+							{t("trustResponse")}
+						</div>
+						<div className="flex items-center gap-2 text-xs text-djanni-gray-light">
+							<IconShieldCheck size={14} className="text-djanni-orange" />
+							{t("trustFree")}
+						</div>
+						<div className="flex items-center gap-2 text-xs text-djanni-gray-light">
+							<IconCheck size={14} className="text-djanni-orange" />
+							{t("trustNoCommitment")}
+						</div>
+					</motion.div>
 				</AnimatedSection>
 			)}
 		</div>

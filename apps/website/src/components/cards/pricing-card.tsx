@@ -69,7 +69,7 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
 			whileInView="visible"
 			viewport={{ once: true, margin: "-60px" }}
 			className={cn(
-				"group relative flex flex-col overflow-hidden p-8 md:p-10",
+				"group relative flex flex-col overflow-hidden rounded-xl border border-border p-8 md:p-10",
 				featured ? "bg-djanni-orange" : "bg-linear-to-b from-surface-c to-surface-b",
 			)}
 		>
