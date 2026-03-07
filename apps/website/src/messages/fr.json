@@ -475,6 +475,13 @@
 			"message": "Décrivez votre projet"
 		}
 	},
+	"ctaContact": {
+		"tag": "Contact",
+		"title": "Votre projet mérite un bon site.",
+		"subtitle": "Dites-moi ce que vous faites, je vous montre ce que ça pourrait donner. Premier échange gratuit, sans engagement.",
+		"button": "Démarrer mon projet",
+		"or": "Ou appelez directement"
+	},
 	"footer": {
 		"tagline": "Sites web pour artisans et commerçants en Bretagne",
 		"realisations": "Réalisations",

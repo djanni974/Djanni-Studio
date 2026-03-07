@@ -475,6 +475,13 @@
 			"message": "Describe your project"
 		}
 	},
+	"ctaContact": {
+		"tag": "Contact",
+		"title": "Your project deserves a great website.",
+		"subtitle": "Tell me what you do, I'll show you what it could look like. First exchange free, no commitment.",
+		"button": "Start my project",
+		"or": "Or call directly"
+	},
 	"footer": {
 		"tagline": "Websites for craftspeople and local businesses in Brittany",
 		"realisations": "Portfolio",

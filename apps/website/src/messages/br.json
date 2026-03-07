@@ -475,6 +475,13 @@
 			"message": "Deskrivit ho raktres"
 		}
 	},
+	"ctaContact": {
+		"tag": "Darempred",
+		"title": "Ho raktres a verit ul lec'hienn vat.",
+		"subtitle": "Lavrit din petra a rit, me a ziskouez deoc'h petra a c'hallfe bezañ. Eskemm kentañ digoust, hep engouestl.",
+		"button": "Kregiñ gant ma raktres",
+		"or": "Pe pellgomzit war-eeun"
+	},
 	"footer": {
 		"tagline": "Lec'hiennoù web evit artizaned ha kenwerzhourion e Breizh",
 		"realisations": "Obererezhioù",
