@@ -50,6 +50,12 @@ export function Footer() {
 							{t("realisations")}
 						</Link>
 						<Link
+							href="/offres"
+							className="text-sm text-djanni-gray-light transition-colors hover:text-foreground"
+						>
+							{t("offres")}
+						</Link>
+						<Link
 							href="/a-propos"
 							className="text-sm text-djanni-gray-light transition-colors hover:text-foreground"
 						>
@@ -66,6 +72,12 @@ export function Footer() {
 							className="text-sm text-djanni-gray-light transition-colors hover:text-foreground"
 						>
 							{t("contact")}
+						</Link>
+						<Link
+							href="/politique-de-confidentialite"
+							className="text-sm text-djanni-gray-light transition-colors hover:text-foreground"
+						>
+							{t("privacy")}
 						</Link>
 						<Link
 							href="/mentions-legales"

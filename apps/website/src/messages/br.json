@@ -14,6 +14,10 @@
 			"title": "Blog — Djanni Studio",
 			"description": "Alioù ha traoù talvoudus evit an artizaned hag ar c'henwerzhourion a fell dezho boud a-raok war internet."
 		},
+		"offres": {
+			"title": "Tarifioù & Kinnigoù — Djanni Studio",
+			"description": "Dizoleiit ma c'hinnigoù evit krouiñ lec'hiennoù web evit an artizaned hag ar c'henwerzhourion. Lec'hienn vitrin, lec'hienn premium pe adnevesaat — tarifioù sklaer, hep souezhadenn."
+		},
 		"avis": {
 			"title": "Lezit un ali — Djanni Studio",
 			"description": "Rannit ho skiant-prenet gant Djanni Studio en ur lezañ un ali war Google."
@@ -47,7 +51,34 @@
 	"offres": {
 		"tag": "Tarifioù",
 		"title": "Aes. Splann. Hep souezhadenn.",
-		"subtitle": "Tri formulenn diazezet war ho raktres. Devis personel, hep gwarant."
+		"subtitle": "Tri formulenn diazezet war ho raktres. Devis personel, hep gwarant.",
+		"heroTitle": "Tarifioù sklaer,",
+		"heroHighlight": " hep souezhadenn.",
+		"heroSubtitle": "Dibabit ar formulenn a zere d'ho raktres. Pep formulenn a endalc'h un hentenn personel eus A da Z.",
+		"guarantees": {
+			"tag": "Gouarnamantoù",
+			"title": "Petra a zo endalc'het e pep formulenn.",
+			"items": [
+				{
+					"title": "Livrañ prim",
+					"text": "Ho lec'hienn a zo en linenn e 2 sizhun d'ar muiañ. Hep amlederioù hir."
+				},
+				{
+					"title": "Paeañ soubleg",
+					"text": "50% d'ar sinadur, 50% d'al livrañ. Eeun ha sklaer."
+				},
+				{
+					"title": "Skor endalc'het",
+					"text": "30 devezh a skor goude al lakaat en linenn. Hegerz on evit ho goulennoù."
+				}
+			]
+		},
+		"cta": {
+			"tag": "Prest?",
+			"title": "Ho raktres a verit ar gwellañ.",
+			"subtitle": "Komzomp eus ho raktres — eskemm kentañ digoust, hep engouestl.",
+			"button": "Kregiñ gant ma raktres"
+		}
 	},
 	"pricing": {
 		"vitrine": {
@@ -432,6 +463,9 @@
 		"successTitle": "Goulenn kaset !",
 		"successMessage": "Trugarez evit ho koulenn. Distro a rin deoc'h a-benn 24e evit komz anezhi.",
 		"or": "Pe war-eeun :",
+		"trustResponse": "Respont a-benn 24e",
+		"trustFree": "Devis digoust",
+		"trustNoCommitment": "Hep engouestl",
 		"errors": {
 			"projectType": "Dibabit ur seurt raktres",
 			"businessName": "Anv an embregerezh a zo rekis",
@@ -444,9 +478,11 @@
 	"footer": {
 		"tagline": "Lec'hiennoù web evit artizaned ha kenwerzhourion e Breizh",
 		"realisations": "Obererezhioù",
+		"offres": "Tarifioù",
 		"about": "Diwar-benn",
 		"blog": "Blog",
 		"contact": "Darempred",
+		"privacy": "Prevezded",
 		"legal": "Menozoù lezennel",
 		"cgv": "DG",
 		"copyright": "© 2026 Djanni Studio — Pep gwir miret"

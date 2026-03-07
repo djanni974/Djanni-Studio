@@ -31,17 +31,29 @@ export default function OgImage() {
 				}}
 			/>
 
-			{/* Orange glow */}
+			{/* Orange glow — top right */}
 			<div
 				style={{
 					position: "absolute",
-					top: "50%",
-					left: "50%",
-					transform: "translate(-50%, -50%)",
-					width: 500,
-					height: 500,
+					top: "-10%",
+					right: "-5%",
+					width: 600,
+					height: 600,
 					borderRadius: "50%",
-					background: "radial-gradient(ellipse, rgba(232,80,10,0.12) 0%, transparent 70%)",
+					background: "radial-gradient(ellipse, rgba(232,80,10,0.15) 0%, transparent 65%)",
+				}}
+			/>
+
+			{/* Orange glow — bottom left */}
+			<div
+				style={{
+					position: "absolute",
+					bottom: "-15%",
+					left: "-5%",
+					width: 400,
+					height: 400,
+					borderRadius: "50%",
+					background: "radial-gradient(ellipse, rgba(232,80,10,0.08) 0%, transparent 70%)",
 				}}
 			/>
 
@@ -51,20 +63,49 @@ export default function OgImage() {
 					display: "flex",
 					flexDirection: "column",
 					alignItems: "center",
-					gap: 20,
+					gap: 16,
 					position: "relative",
 				}}
 			>
-				{/* Logo text */}
+				{/* Badge */}
 				<div
 					style={{
-						fontSize: 72,
+						fontSize: 14,
+						fontWeight: 600,
+						color: "#e8500a",
+						letterSpacing: "0.2em",
+						textTransform: "uppercase",
+						marginBottom: 8,
+					}}
+				>
+					Djanni Studio — Bretagne
+				</div>
+
+				{/* Headline */}
+				<div
+					style={{
+						fontSize: 64,
 						fontWeight: 800,
 						letterSpacing: "-0.02em",
 						color: "#f5f3ef",
+						lineHeight: 1.1,
+						textAlign: "center",
+						maxWidth: 900,
 					}}
 				>
-					Djanni Studio
+					Des sites web qui
+				</div>
+				<div
+					style={{
+						fontSize: 64,
+						fontWeight: 800,
+						letterSpacing: "-0.02em",
+						color: "#e8500a",
+						lineHeight: 1.1,
+						textAlign: "center",
+					}}
+				>
+					travaillent pour vous.
 				</div>
 
 				{/* Orange accent bar */}
@@ -74,31 +115,39 @@ export default function OgImage() {
 						height: 4,
 						borderRadius: 2,
 						background: "#e8500a",
+						marginTop: 12,
 					}}
 				/>
 
 				{/* Subtitle */}
 				<div
 					style={{
-						fontSize: 24,
+						fontSize: 22,
 						color: "#b8b4ac",
 						letterSpacing: "0.01em",
+						textAlign: "center",
+						marginTop: 4,
 					}}
 				>
-					Sites web pour artisans & commerçants
+					Sites modernes pour artisans & commerçants locaux
 				</div>
 
-				{/* Location */}
+				{/* CTA */}
 				<div
 					style={{
-						fontSize: 16,
-						color: "#6b6860",
-						letterSpacing: "0.15em",
-						textTransform: "uppercase",
-						marginTop: 8,
+						display: "flex",
+						alignItems: "center",
+						gap: 8,
+						marginTop: 24,
+						background: "#e8500a",
+						color: "#ffffff",
+						fontSize: 18,
+						fontWeight: 600,
+						padding: "14px 32px",
+						borderRadius: 10,
 					}}
 				>
-					Bretagne, France
+					Demander un devis gratuit
 				</div>
 			</div>
 		</div>,

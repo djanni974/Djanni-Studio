@@ -4,7 +4,6 @@ import { Hero } from "@/components/sections/hero"
 import { Realisations } from "@/components/sections/realisations"
 import { SectionDivider } from "@/components/ui/section-divider"
 
-const Offres = dynamic(() => import("@/components/sections/offres").then((m) => m.Offres))
 const PourquoiMoi = dynamic(() =>
 	import("@/components/sections/pourquoi-moi").then((m) => m.PourquoiMoi),
 )
@@ -23,7 +22,6 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 			<Hero />
 			<Realisations />
 			<SectionDivider />
-			<Offres />
 			<PourquoiMoi />
 			<Process />
 			<SectionDivider />

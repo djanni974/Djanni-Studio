@@ -3,7 +3,6 @@
 import { IconArrowRight, IconPhone } from "@tabler/icons-react"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
-import { AuroraBackground } from "@/components/ui/aurora-background"
 import { Link } from "@/i18n/navigation"
 
 const fadeUp = {
@@ -30,10 +29,61 @@ export function Hero() {
 	]
 
 	return (
-		<AuroraBackground className="min-h-screen">
-			<section className="relative flex min-h-screen flex-col justify-center px-5 pt-[120px] pb-20 md:px-12">
-				<div className="pointer-events-none absolute -top-[200px] -right-[200px] h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.12)_0%,transparent_70%)]" />
+		<div className="relative min-h-screen overflow-hidden">
+			{/* Dot grid */}
+			<div
+				className="pointer-events-none absolute inset-0 opacity-[0.04]"
+				style={{
+					backgroundImage: "radial-gradient(circle, rgba(184,180,172,0.8) 1px, transparent 1px)",
+					backgroundSize: "24px 24px",
+				}}
+			/>
 
+			{/* Primary glow — top right */}
+			<div className="pointer-events-none absolute -top-[15%] -right-[10%] h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.14)_0%,transparent_65%)] blur-2xl" />
+
+			{/* Secondary glow — bottom left */}
+			<div className="pointer-events-none absolute -bottom-[10%] -left-[5%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.06)_0%,transparent_70%)] blur-2xl" />
+
+			{/* Diagonal accent line */}
+			<div className="pointer-events-none absolute top-0 right-[20%] h-full w-px bg-linear-to-b from-transparent via-djanni-orange/[0.07] to-transparent" />
+
+			{/* Orbital rings — desktop only */}
+			<motion.div
+				initial={{ opacity: 0, scale: 0.85 }}
+				animate={{ opacity: 1, scale: 1 }}
+				transition={{ duration: 1.4, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+				className="pointer-events-none absolute top-1/2 right-[10%] hidden h-[520px] w-[520px] -translate-y-[55%] lg:block"
+			>
+				{/* Core glow */}
+				<div className="absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-djanni-orange/25 blur-3xl" />
+				<div className="absolute top-1/2 left-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-djanni-orange/60" />
+
+				{/* Rings */}
+				<div className="absolute inset-[15%] rounded-full border border-white/8" />
+				<div className="absolute inset-[25%] rounded-full border border-djanni-orange/20" />
+				<div className="absolute inset-[38%] rounded-full border border-white/10" />
+
+				{/* Dashed orbit */}
+				<div className="absolute inset-[8%] rounded-full border border-dashed border-white/8" />
+
+				{/* Accent dots — placed precisely on ring paths */}
+				<div className="absolute top-[8%] left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-djanni-orange/60" />
+				<div className="absolute top-[25%] right-[15%] h-1.5 w-1.5 rounded-full bg-djanni-orange/40" />
+				<div className="absolute bottom-[15%] left-[25%] h-1.5 w-1.5 rounded-full bg-white/30" />
+
+				{/* Cross lines through center */}
+				<div className="absolute top-0 left-1/2 h-full w-px -translate-x-1/2 bg-linear-to-b from-transparent via-white/6 to-transparent" />
+				<div className="absolute top-1/2 left-0 h-px w-full -translate-y-1/2 bg-linear-to-r from-transparent via-white/6 to-transparent" />
+
+				{/* Fade mask */}
+				<div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,transparent_35%,var(--color-background)_70%)]" />
+			</motion.div>
+
+			{/* Bottom fade */}
+			<div className="pointer-events-none absolute right-0 bottom-0 left-0 h-40 bg-linear-to-b from-transparent to-(--color-background)" />
+
+			<section className="relative flex min-h-screen flex-col justify-center px-5 pt-[120px] pb-20 md:px-12">
 				<motion.span
 					custom={0}
 					variants={fadeUp}
@@ -107,6 +157,6 @@ export function Hero() {
 					))}
 				</motion.div>
 			</section>
-		</AuroraBackground>
+		</div>
 	)
 }

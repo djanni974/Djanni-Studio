@@ -6,12 +6,12 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/
 import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
-import { Link } from "@/i18n/navigation"
+import { Link, usePathname } from "@/i18n/navigation"
 import { LanguageSwitcher } from "./language-switcher"
 
 const NAV_KEYS = [
 	{ key: "realisations", href: "/realisations" },
-	{ key: "offres", href: "/#offres" },
+	{ key: "offres", href: "/offres" },
 	{ key: "about", href: "/a-propos" },
 	{ key: "blog", href: "/blog" },
 ] as const
@@ -23,6 +23,7 @@ export function Navbar() {
 	const { scrollY } = useScroll()
 	const { theme, setTheme } = useTheme()
 	const t = useTranslations("nav")
+	const pathname = usePathname()
 
 	useEffect(() => setMounted(true), [])
 
@@ -34,7 +35,7 @@ export function Navbar() {
 		<nav
 			className={cn(
 				"fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-6 py-5 transition-all duration-300 lg:px-12",
-				scrolled && "border-b border-border bg-background/92 backdrop-blur-xl",
+				scrolled && "bg-background/92 backdrop-blur-xl",
 			)}
 		>
 			<Link href="/" className="font-heading text-lg font-extrabold tracking-tight text-foreground">
@@ -43,16 +44,39 @@ export function Navbar() {
 
 			{/* Desktop nav */}
 			<ul className="hidden items-center gap-6 lg:flex xl:gap-9">
-				{NAV_KEYS.map((link) => (
-					<li key={link.href}>
-						<Link
-							href={link.href}
-							className="text-sm text-djanni-gray-light transition-colors hover:text-foreground"
-						>
-							{t(link.key)}
-						</Link>
-					</li>
-				))}
+				{NAV_KEYS.map((link) => {
+					const isActive = pathname === link.href || pathname.startsWith(`${link.href}/`)
+					return (
+						<li key={link.href}>
+							<Link
+								href={link.href}
+								className={cn(
+									"relative pb-1 text-sm transition-colors hover:text-foreground",
+									isActive ? "text-foreground" : "text-djanni-gray-light",
+								)}
+							>
+								{t(link.key)}
+								{isActive && (
+									<>
+										<motion.span
+											initial={{ scale: 0 }}
+											animate={{ scale: 1 }}
+											transition={{ type: "spring", stiffness: 500, damping: 25 }}
+											className="text-djanni-orange"
+										>
+											.
+										</motion.span>
+										<motion.span
+											layoutId="nav-underline"
+											className="absolute right-0 -bottom-0.5 left-0 h-0.5 rounded-full bg-djanni-orange"
+											transition={{ type: "spring", stiffness: 500, damping: 35 }}
+										/>
+									</>
+								)}
+							</Link>
+						</li>
+					)
+				})}
 				<li>
 					<LanguageSwitcher />
 				</li>
@@ -159,7 +183,12 @@ export function Navbar() {
 									<Link
 										href={link.href}
 										onClick={() => setMobileOpen(false)}
-										className="block text-base text-djanni-gray-light transition-colors hover:text-foreground"
+										className={cn(
+											"block text-base transition-colors hover:text-foreground",
+											pathname === link.href || pathname.startsWith(`${link.href}/`)
+												? "font-medium text-djanni-orange"
+												: "text-djanni-gray-light",
+										)}
 									>
 										{t(link.key)}
 									</Link>

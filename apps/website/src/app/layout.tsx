@@ -51,16 +51,27 @@ export const metadata: Metadata = {
 	},
 	openGraph: {
 		title: "Djanni Studio — Sites web pour artisans & commerçants",
-		description: "Des sites modernes pour les artisans et commerçants locaux en Bretagne.",
-		url: "https://djannistudio.fr",
+		description:
+			"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — juste un site qui vous ressemble et qui ramène des clients.",
+		url: "https://www.djannistudio.fr",
 		siteName: "Djanni Studio",
 		type: "website",
 		locale: "fr_FR",
+		images: [
+			{
+				url: "/opengraph-image",
+				width: 1200,
+				height: 630,
+				alt: "Djanni Studio — Sites web pour artisans & commerçants",
+			},
+		],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Djanni Studio — Sites web pour artisans & commerçants",
-		description: "Des sites modernes pour les artisans et commerçants locaux en Bretagne.",
+		description:
+			"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — juste un site qui vous ressemble et qui ramène des clients.",
+		images: ["/opengraph-image"],
 	},
 	icons: {
 		icon: "/favicon.svg",
@@ -79,9 +90,9 @@ const jsonLd = {
 	"@type": "LocalBusiness",
 	name: "Djanni Studio",
 	description: "Création de sites web sur mesure pour artisans et commerçants en Bretagne",
-	url: "https://djannistudio.fr",
+	url: "https://www.djannistudio.fr",
 	email: "contact@djannistudio.fr",
-	image: "https://djannistudio.fr/opengraph-image",
+	image: "https://www.djannistudio.fr/opengraph-image",
 	address: {
 		"@type": "PostalAddress",
 		streetAddress: "4 boulevard Jules Verger",

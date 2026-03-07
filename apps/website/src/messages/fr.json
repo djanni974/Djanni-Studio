@@ -14,6 +14,10 @@
 			"title": "Blog — Djanni Studio",
 			"description": "Conseils, astuces et guides pour les artisans et commerçants qui veulent réussir en ligne. SEO local, sites web, stratégie digitale."
 		},
+		"offres": {
+			"title": "Offres & Tarifs — Djanni Studio",
+			"description": "Découvrez mes offres de création de sites web pour artisans et commerçants. Site vitrine, site premium ou refonte — des formules claires, sans surprises."
+		},
 		"avis": {
 			"title": "Laisser un avis — Djanni Studio",
 			"description": "Partagez votre expérience avec Djanni Studio en laissant un avis sur Google."
@@ -47,7 +51,34 @@
 	"offres": {
 		"tag": "Offres",
 		"title": "Simple. Clair. Sans surprise.",
-		"subtitle": "Trois formules adaptées à votre projet. Devis personnalisé, sans engagement."
+		"subtitle": "Trois formules adaptées à votre projet. Devis personnalisé, sans engagement.",
+		"heroTitle": "Des formules claires,",
+		"heroHighlight": " sans surprise.",
+		"heroSubtitle": "Choisissez l'offre qui correspond à votre projet. Chaque formule inclut un accompagnement personnalisé de A à Z.",
+		"guarantees": {
+			"tag": "Engagements",
+			"title": "Ce qui est inclus dans chaque offre.",
+			"items": [
+				{
+					"title": "Livraison rapide",
+					"text": "Votre site est en ligne en 2 semaines maximum. Pas de délais à rallonge."
+				},
+				{
+					"title": "Paiement flexible",
+					"text": "50% à la signature, 50% à la livraison. Simple et transparent."
+				},
+				{
+					"title": "Support inclus",
+					"text": "30 jours de support après la mise en ligne. Je reste disponible pour vos questions."
+				}
+			]
+		},
+		"cta": {
+			"tag": "Prêt ?",
+			"title": "Votre projet mérite le meilleur.",
+			"subtitle": "Discutons de votre projet — premier échange gratuit, sans engagement.",
+			"button": "Démarrer mon projet"
+		}
 	},
 	"pricing": {
 		"vitrine": {
@@ -432,6 +463,9 @@
 		"successTitle": "Demande envoyée !",
 		"successMessage": "Merci pour votre demande. Je reviens vers vous sous 24h pour en discuter.",
 		"or": "Ou directement :",
+		"trustResponse": "Réponse sous 24h",
+		"trustFree": "Devis gratuit",
+		"trustNoCommitment": "Sans engagement",
 		"errors": {
 			"projectType": "Choisissez un type de projet",
 			"businessName": "Le nom de l'entreprise est requis",
@@ -444,9 +478,11 @@
 	"footer": {
 		"tagline": "Sites web pour artisans et commerçants en Bretagne",
 		"realisations": "Réalisations",
+		"offres": "Offres",
 		"about": "À propos",
 		"blog": "Blog",
 		"contact": "Contact",
+		"privacy": "Confidentialité",
 		"legal": "Mentions légales",
 		"cgv": "CGV",
 		"copyright": "© 2026 Djanni Studio — Tous droits réservés"
