@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
 			allow: "/",
 			disallow: "/api/",
 		},
-		sitemap: "https://djannistudio.fr/sitemap.xml",
+		sitemap: "https://www.djannistudio.fr/sitemap.xml",
 	}
 }

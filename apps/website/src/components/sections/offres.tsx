@@ -5,7 +5,7 @@ import { PricingCard } from "@/components/cards/pricing-card"
 import { SectionHeader } from "@/components/ui/section-header"
 import type { PricingTier } from "@/lib/constants"
 
-const TIER_KEYS = ["vitrine", "premium", "refonte"] as const
+const TIER_KEYS = ["presence", "vitrine", "surmesure"] as const
 
 export function Offres() {
 	const t = useTranslations("offres")
@@ -21,7 +21,7 @@ export function Offres() {
 		description: p(`${key}.description`),
 		features: p.raw(`${key}.features`) as string[],
 		ctaLabel: p(`${key}.ctaLabel`),
-		featured: key === "premium",
+		featured: key === "vitrine",
 	}))
 
 	return (

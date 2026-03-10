@@ -224,10 +224,15 @@ export function ContactForm() {
 													{t("step0Title")}
 												</h3>
 												<div>
+													<label htmlFor="contact-projectType" className="sr-only">
+														{t("projectType")}
+													</label>
 													<select
+														id="contact-projectType"
 														name="projectType"
 														value={formData.projectType}
 														onChange={handleChange}
+														aria-invalid={!!errors.projectType}
 														className={cn(
 															selectClass,
 															!formData.projectType && "text-djanni-gray",
@@ -245,7 +250,11 @@ export function ContactForm() {
 													)}
 												</div>
 												<div>
+													<label htmlFor="contact-budget" className="sr-only">
+														{t("budget")}
+													</label>
 													<select
+														id="contact-budget"
 														name="budget"
 														value={formData.budget}
 														onChange={handleChange}
@@ -267,7 +276,11 @@ export function ContactForm() {
 													{t("step1Title")}
 												</h3>
 												<div>
+													<label htmlFor="contact-name" className="sr-only">
+														{t("namePlaceholder")}
+													</label>
 													<input
+														id="contact-name"
 														type="text"
 														name="name"
 														placeholder={t("namePlaceholder")}
@@ -280,7 +293,11 @@ export function ContactForm() {
 													)}
 												</div>
 												<div>
+													<label htmlFor="contact-email" className="sr-only">
+														{t("emailPlaceholder")}
+													</label>
 													<input
+														id="contact-email"
 														type="email"
 														name="email"
 														placeholder={t("emailPlaceholder")}
@@ -301,7 +318,11 @@ export function ContactForm() {
 													{t("step2Title")}
 												</h3>
 												<div>
+													<label htmlFor="contact-message" className="sr-only">
+														{t("messagePlaceholder")}
+													</label>
 													<textarea
+														id="contact-message"
 														name="message"
 														placeholder={t("messagePlaceholder")}
 														rows={5}

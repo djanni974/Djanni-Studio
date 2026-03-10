@@ -1,11 +1,25 @@
 import type { Metadata } from "next"
-import { setRequestLocale } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 import { ProjectRequestForm } from "@/components/sections/project-request-form"
+import { getAlternates } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-	title: "Demande de projet — Djanni Studio",
-	description:
-		"Décrivez votre projet web et recevez une réponse sous 24h. Formulaire simple et rapide.",
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+	const { locale } = await params
+	const t = await getTranslations({ locale, namespace: "metadata.demandeProjet" })
+
+	return {
+		title: t("title"),
+		description: t("description"),
+		alternates: getAlternates("/demande-projet"),
+		openGraph: {
+			title: t("title"),
+			description: t("description"),
+		},
+	}
 }
 
 export default async function DemandeProjetPage({

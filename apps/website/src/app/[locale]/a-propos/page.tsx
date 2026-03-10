@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { AboutContent } from "@/components/sections/about-content"
+import { getAlternates } from "@/lib/metadata"
 
 export async function generateMetadata({
 	params,
@@ -13,6 +14,7 @@ export async function generateMetadata({
 	return {
 		title: t("title"),
 		description: t("description"),
+		alternates: getAlternates("/a-propos"),
 		openGraph: {
 			title: t("title"),
 			description: t("description"),

@@ -9,7 +9,7 @@ import { SectionHeader } from "@/components/ui/section-header"
 import { Link } from "@/i18n/navigation"
 import type { PricingTier } from "@/lib/constants"
 
-const TIER_KEYS = ["vitrine", "premium", "refonte"] as const
+const TIER_KEYS = ["presence", "vitrine", "surmesure"] as const
 const GUARANTEE_ICONS = [IconClock, IconCreditCard, IconHeadset]
 
 export function OffresContent() {
@@ -26,7 +26,7 @@ export function OffresContent() {
 		description: p(`${key}.description`),
 		features: p.raw(`${key}.features`) as string[],
 		ctaLabel: p(`${key}.ctaLabel`),
-		featured: key === "premium",
+		featured: key === "vitrine",
 	}))
 
 	const guarantees = (t.raw("guarantees.items") as { title: string; text: string }[]).map(

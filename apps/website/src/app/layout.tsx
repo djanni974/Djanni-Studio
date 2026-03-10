@@ -21,6 +21,12 @@ export const metadata: Metadata = {
 	metadataBase: new URL("https://www.djannistudio.fr"),
 	alternates: {
 		canonical: "/",
+		languages: {
+			fr: "/",
+			en: "/en",
+			br: "/br",
+			"x-default": "/",
+		},
 	},
 	title: "Djanni Studio — Sites web pour artisans & commerçants",
 	description:
@@ -59,7 +65,7 @@ export const metadata: Metadata = {
 		locale: "fr_FR",
 		images: [
 			{
-				url: "/opengraph-image",
+				url: "/og-image.png",
 				width: 1200,
 				height: 630,
 				alt: "Djanni Studio — Sites web pour artisans & commerçants",
@@ -71,7 +77,7 @@ export const metadata: Metadata = {
 		title: "Djanni Studio — Sites web pour artisans & commerçants",
 		description:
 			"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — juste un site qui vous ressemble et qui ramène des clients.",
-		images: ["/opengraph-image"],
+		images: ["/og-image.png"],
 	},
 	icons: {
 		icon: "/favicon.svg",
@@ -92,7 +98,7 @@ const jsonLd = {
 	description: "Création de sites web sur mesure pour artisans et commerçants en Bretagne",
 	url: "https://www.djannistudio.fr",
 	email: "contact@djannistudio.fr",
-	image: "https://www.djannistudio.fr/opengraph-image",
+	image: "https://www.djannistudio.fr/og-image.png",
 	address: {
 		"@type": "PostalAddress",
 		streetAddress: "4 boulevard Jules Verger",
@@ -123,7 +129,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 			<body className="overflow-x-clip antialiased" suppressHydrationWarning>
 				<Script
 					async
-					src="https://plausible.io/js/pa-aLxLCVOVZYCrqMpHaGGKF.js"
+					defer
+					data-domain="djannistudio.fr"
+					data-api="/api/event"
+					src="/js/script.js"
 					strategy="afterInteractive"
 				/>
 				<Script id="plausible-init" strategy="afterInteractive">

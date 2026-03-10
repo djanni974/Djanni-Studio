@@ -12,6 +12,37 @@ const nextConfig: NextConfig = {
 	experimental: {
 		optimizePackageImports: ["@tabler/icons-react", "motion/react"],
 	},
+	async rewrites() {
+		return [
+			{
+				source: "/js/script.js",
+				destination: "https://plausible.io/js/pa-aLxLCVOVZYCrqMpHaGGKF.js",
+			},
+			{
+				source: "/api/event",
+				destination: "https://plausible.io/api/event",
+			},
+		]
+	},
+	async headers() {
+		return [
+			{
+				source: "/js/script.js",
+				headers: [
+					{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+				],
+			},
+			{
+				source: "/:path*.(js|css|woff2|avif|webp|svg|ico)",
+				headers: [
+					{
+						key: "Cache-Control",
+						value: "public, max-age=31536000, immutable",
+					},
+				],
+			},
+		]
+	},
 }
 
 export default withSerwist({

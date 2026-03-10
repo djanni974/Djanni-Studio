@@ -75,8 +75,8 @@ function renderMarkdown(content: string) {
 						.filter((l) => l.startsWith("- "))
 						.map((l, j) => (
 							<li key={j} className="flex items-start gap-2 text-[15px] text-djanni-gray-light">
-								<span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-djanni-orange" />
-								{renderInline(l.slice(2))}
+								<span className="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-djanni-orange" />
+								<span>{renderInline(l.slice(2))}</span>
 							</li>
 						))}
 				</BriefBlock>,
@@ -190,6 +190,25 @@ function renderMarkdown(content: string) {
 			continue
 		}
 
+		// Ordered list items
+		if (/^\d+\.\s/.test(line)) {
+			const listItems: React.ReactNode[] = []
+			while (i < lines.length && /^\d+\.\s/.test(lines[i])) {
+				listItems.push(
+					<li key={i} className="text-[17px] leading-relaxed text-djanni-gray-light">
+						{renderInline(lines[i].replace(/^\d+\.\s/, ""))}
+					</li>,
+				)
+				i++
+			}
+			elements.push(
+				<ol key={`olist-${i}`} className="my-4 ml-6 list-decimal space-y-2">
+					{listItems}
+				</ol>,
+			)
+			continue
+		}
+
 		// Empty line
 		if (line.trim() === "") {
 			i++
@@ -209,14 +228,36 @@ function renderMarkdown(content: string) {
 }
 
 function renderInline(text: string): React.ReactNode {
-	// Bold **text**
-	const parts = text.split(/(\*\*[^*]+\*\*)/g)
+	// Split on bold, italic, and links
+	const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|\[[^\]]+\]\([^)]+\))/g)
 	return parts.map((part, i) => {
 		if (part.startsWith("**") && part.endsWith("**")) {
 			return (
 				<strong key={i} className="font-medium text-foreground">
 					{part.slice(2, -2)}
 				</strong>
+			)
+		}
+		if (part.startsWith("*") && part.endsWith("*") && !part.startsWith("**")) {
+			return (
+				<em key={i} className="italic">
+					{part.slice(1, -1)}
+				</em>
+			)
+		}
+		const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+		if (linkMatch) {
+			const [, label, href] = linkMatch
+			const isExternal = href.startsWith("http")
+			return (
+				<a
+					key={i}
+					href={href}
+					className="font-medium text-djanni-orange underline underline-offset-2 transition-colors hover:text-djanni-orange-light"
+					{...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+				>
+					{label}
+				</a>
 			)
 		}
 		return part

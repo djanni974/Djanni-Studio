@@ -21,6 +21,10 @@
 		"avis": {
 			"title": "Leave a Review — Djanni Studio",
 			"description": "Share your experience with Djanni Studio by leaving a review on Google."
+		},
+		"demandeProjet": {
+			"title": "Project Request — Djanni Studio",
+			"description": "Describe your web project and get a response within 24 hours. Simple and quick form."
 		}
 	},
 	"nav": {
@@ -52,8 +56,8 @@
 		"tag": "Pricing",
 		"title": "Simple. Clear. No surprises.",
 		"subtitle": "Three plans tailored to your project. Custom quote, no commitment.",
-		"heroTitle": "Clear pricing,",
-		"heroHighlight": " no surprises.",
+		"heroTitle": "Pricing ",
+		"heroHighlight": "& Plans",
 		"heroSubtitle": "Choose the plan that fits your project. Every plan includes personalised support from start to finish.",
 		"guarantees": {
 			"tag": "Commitments",
@@ -81,57 +85,66 @@
 		}
 	},
 	"pricing": {
-		"vitrine": {
-			"badge": "Essential",
+		"presence": {
+			"badge": "Presence",
 			"priceLabel": "Starting at",
 			"price": "990",
 			"priceSuffix": "€",
-			"priceNote": "Based on number of pages • Payment in 2 installments",
-			"name": "Starter Website",
-			"description": "Perfect for businesses that need a clean and efficient web presence quickly.",
+			"priceNote": "€495 upfront • €495 on delivery",
+			"name": "Presence",
+			"description": "For those who don't have a website yet and want to be visible quickly.",
 			"features": [
-				"Up to 5 pages",
+				"1 multi-section landing page",
+				"Custom design",
 				"100% mobile responsive",
-				"Contact form",
-				"Opening hours & Google Maps",
-				"SSL & deployment",
+				"Clickable phone + contact form",
+				"Basic SEO (title, OG)",
+				"SSL + deployment",
+				"1h training",
+				"30-day support",
 				"Delivered in 2 weeks"
 			],
 			"ctaLabel": "Get started"
 		},
-		"premium": {
+		"vitrine": {
 			"badge": "Most popular",
 			"priceLabel": "Starting at",
-			"price": "1,990",
+			"price": "1,490",
 			"priceSuffix": "€",
-			"priceNote": "Based on features • Payment in 2 installments",
-			"name": "Premium Website",
-			"description": "For businesses that want to stand out and project a truly professional image.",
+			"priceNote": "50% upfront • 50% on delivery",
+			"name": "Showcase",
+			"description": "For those who want a real structured website, not just a page.",
 			"features": [
-				"Up to 8 pages",
-				"Product catalog / gallery",
-				"SEO optimization",
-				"Animations & polished design",
-				"Content management training",
+				"Up to 5 pages",
+				"Photo gallery / portfolio",
+				"Before/after projects",
+				"Polished animations",
+				"Intermediate SEO (Lighthouse 90+)",
+				"Google Analytics or Plausible",
+				"2h training",
+				"1-month support",
 				"Delivered in 3 weeks"
 			],
 			"ctaLabel": "Get started"
 		},
-		"refonte": {
-			"badge": "Redesign",
-			"priceLabel": "Custom quote",
-			"price": "1,500",
-			"priceSuffix": "€+",
-			"priceNote": "Price varies based on existing site complexity",
-			"name": "Website Redesign",
-			"description": "Your site exists but it's aging badly. We give it a second life without starting from scratch.",
+		"surmesure": {
+			"badge": "Custom",
+			"priceLabel": "Starting at",
+			"price": "1,990",
+			"priceSuffix": "€",
+			"priceNote": "Price set after discussion • Payment in 2 installments",
+			"name": "Custom",
+			"description": "For those with specific needs.",
 			"features": [
-				"Current site analysis",
-				"Modern new design",
-				"Existing content migration",
-				"Seamless data migration",
-				"SSL & performance fixes",
-				"Custom quote"
+				"Up to 8 pages",
+				"Appointment booking (Cal.com)",
+				"Blog CMS",
+				"Product catalog",
+				"Multilingual",
+				"Advanced SEO (audit, keywords)",
+				"3-month support",
+				"1-month follow-up meeting",
+				"Delivered in 3-5 weeks"
 			],
 			"ctaLabel": "Request a quote"
 		}
@@ -200,6 +213,7 @@
 			}
 		]
 	},
+	"pricingNote": "A complete showcase website from €990, delivered in 2 weeks, no nasty surprises.",
 	"faq": {
 		"tag": "FAQ",
 		"title": "Still hesitating?",
