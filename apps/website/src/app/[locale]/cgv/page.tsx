@@ -150,6 +150,7 @@ const sections = [
 		title: "Article 15 — Médiation et litiges",
 		content: [
 			"En cas de litige, les parties s'engagent à rechercher une __solution amiable__ avant toute action en justice.",
+			// TODO: Remplacer par les vraies coordonnées du médiateur de la consommation
 			"**Client consommateur :** Conformément aux articles L.612-1 et suivants du Code de la consommation, vous avez le droit de recourir __gratuitement__ à un médiateur de la consommation. Médiateur compétent : [Nom du médiateur — à compléter]. Site : [URL du médiateur — à compléter].",
 			"À défaut de résolution amiable, les tribunaux compétents seront ceux du ressort du domicile du Prestataire, conformément au droit français.",
 		],

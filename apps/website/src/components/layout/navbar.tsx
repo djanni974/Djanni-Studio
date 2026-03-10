@@ -142,6 +142,7 @@ export function Navbar() {
 					onClick={() => setMobileOpen(!mobileOpen)}
 					className="text-foreground"
 					aria-label="Menu"
+					aria-expanded={mobileOpen}
 				>
 					<AnimatePresence mode="wait" initial={false}>
 						<motion.span

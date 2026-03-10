@@ -21,6 +21,10 @@
 		"avis": {
 			"title": "Lezit un ali — Djanni Studio",
 			"description": "Rannit ho skiant-prenet gant Djanni Studio en ur lezañ un ali war Google."
+		},
+		"demandeProjet": {
+			"title": "Goulenn raktres — Djanni Studio",
+			"description": "Deskrivit ho raktres web ha resevit ur respont a-benn 24e. Furmskrid simpl ha buan."
 		}
 	},
 	"nav": {
@@ -52,8 +56,8 @@
 		"tag": "Tarifioù",
 		"title": "Aes. Splann. Hep souezhadenn.",
 		"subtitle": "Tri formulenn diazezet war ho raktres. Devis personel, hep gwarant.",
-		"heroTitle": "Tarifioù sklaer,",
-		"heroHighlight": " hep souezhadenn.",
+		"heroTitle": "Tarifioù ",
+		"heroHighlight": "& Kinnigoù",
 		"heroSubtitle": "Dibabit ar formulenn a zere d'ho raktres. Pep formulenn a endalc'h un hentenn personel eus A da Z.",
 		"guarantees": {
 			"tag": "Gouarnamantoù",
@@ -81,57 +85,66 @@
 		}
 	},
 	"pricing": {
-		"vitrine": {
-			"badge": "Diazez",
+		"presence": {
+			"badge": "Prezañs",
 			"priceLabel": "Adalek",
 			"price": "990",
 			"priceSuffix": "€",
-			"priceNote": "Hervez an niver a bajennoù • Paeañ en 2 gwech",
-			"name": "Lec'hienn Vitrine",
-			"description": "Dedennus evit ar c'henwerzhourion o deus ezhomm eus ur prezañs web prop ha buan.",
+			"priceNote": "495€ da sinañ • 495€ da livriñ",
+			"name": "Prezañs",
+			"description": "Evit an hini n'en deus ket a lec'hienn ha fell dezhañ bezañ gwelus buan.",
 			"features": [
-				"Betek 5 pajenn",
+				"1 pajenn liesrannoù",
+				"Dezign war-bouez",
 				"100% responsive hezoug",
-				"Formulenn darempred",
-				"Eurioù & Google Maps",
-				"SSL & lakaat en linenn",
+				"Niverenn glikadus + formulenn",
+				"SEO diazez (titl, OG)",
+				"SSL + lakaat en linenn",
+				"Stummadur 1e",
+				"Skoazell 30 devezh",
 				"Livret e 2 sizhun"
 			],
 			"ctaLabel": "Kregiñ"
 		},
-		"premium": {
+		"vitrine": {
 			"badge": "Ar muiañ dibabet",
 			"priceLabel": "Adalek",
-			"price": "1 990",
+			"price": "1 490",
 			"priceSuffix": "€",
-			"priceNote": "Hervez ar fonksionadurezhoù • Paeañ en 2 gwech",
-			"name": "Lec'hienn Premium",
-			"description": "Evit ar c'henwerzhourion a fell dezho bezañ disheñvel ha reiñ ur skeudenn a-vicher.",
+			"priceNote": "50% da sinañ • 50% da livriñ",
+			"name": "Vitrine",
+			"description": "Evit an hini a fell dezhañ ul lec'hienn strukturoù, ket just ur bajenn.",
 			"features": [
-				"Betek 8 pajenn",
-				"Katalog produioù / galerienn",
-				"Optimizañ SEO",
-				"Buhezegezh ha dezign kempenn",
-				"Stummadur da chom emren",
+				"Betek 5 pajenn",
+				"Galerienn skeudennoù / portfolio",
+				"Obererezhioù kent/goude",
+				"Buhezegezh kempenn",
+				"SEO etre (Lighthouse 90+)",
+				"Google Analytics pe Plausible",
+				"Stummadur 2e",
+				"Skoazell 1 miz",
 				"Livret e 3 sizhun"
 			],
 			"ctaLabel": "Kregiñ"
 		},
-		"refonte": {
-			"badge": "Adneveziañ",
-			"priceLabel": "War devis",
-			"price": "1 500",
-			"priceSuffix": "€+",
-			"priceNote": "Priz hervez diaestérezh al lec'hienn a zo anezhañ",
-			"name": "Adneveziañ Lec'hienn",
-			"description": "Ho lec'hienn a zo anezhi met hi a gozhi fall. Reiñ a reomp ur vuhez nevez dezhi hep adkregiñ eus an derou.",
+		"surmesure": {
+			"badge": "War-bouez",
+			"priceLabel": "Adalek",
+			"price": "1 990",
+			"priceSuffix": "€",
+			"priceNote": "Priz difinet goude eskemm • Paeañ en 2 gwech",
+			"name": "War-bouez",
+			"description": "Evit an hini en deus ezhommoù resis.",
 			"features": [
-				"Dielfenniñ al lec'hienn a zo",
-				"Dezign modern nevez",
-				"Adkemer an danvez a zo",
-				"Treuzkas hep kolliñ roadennoù",
-				"Reizhadur SSL & perforzhañs",
-				"Devis war-bouez"
+				"Betek 8 pajenn",
+				"Kemer randevou (Cal.com)",
+				"Blog CMS",
+				"Katalog produioù",
+				"Liesyezhek",
+				"SEO araokaet (audit, gerioù-alc'hwez)",
+				"Skoazell 3 miz",
+				"Emvod heuliañ da 1 miz",
+				"Livret e 3-5 sizhun"
 			],
 			"ctaLabel": "Goulenn un devis"
 		}
@@ -200,6 +213,7 @@
 			}
 		]
 	},
+	"pricingNote": "Ul lec'hienn vitrin klok diwar 990 €, livret e 2 sizhun, hep souezhadenn fall.",
 	"faq": {
 		"tag": "Goulennoù alies",
 		"title": "Houzañv c'hoazh ?",
@@ -474,6 +488,13 @@
 			"emailInvalid": "Postel direizh",
 			"message": "Deskrivit ho raktres"
 		}
+	},
+	"ctaContact": {
+		"tag": "Darempred",
+		"title": "Ho raktres a verit ul lec'hienn vat.",
+		"subtitle": "Lavrit din petra a rit, me a ziskouez deoc'h petra a c'hallfe bezañ. Eskemm kentañ digoust, hep engouestl.",
+		"button": "Kregiñ gant ma raktres",
+		"or": "Pe pellgomzit war-eeun"
 	},
 	"footer": {
 		"tagline": "Lec'hiennoù web evit artizaned ha kenwerzhourion e Breizh",

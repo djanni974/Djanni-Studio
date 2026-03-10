@@ -10,7 +10,7 @@ function localizedUrl(baseUrl: string, path: string, locale: string) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const baseUrl = "https://djannistudio.fr"
+	const baseUrl = "https://www.djannistudio.fr"
 
 	const entries: MetadataRoute.Sitemap = []
 

@@ -1,6 +1,25 @@
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 
+// ─── Rate limiter ────────────────────────────────────────────
+const RATE_LIMIT_WINDOW_MS = 60 * 1000 // 1 minute
+const RATE_LIMIT_MAX = 3 // max 3 requests per window per IP
+
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
+
+function isRateLimited(ip: string): boolean {
+	const now = Date.now()
+	const entry = rateLimitMap.get(ip)
+
+	if (!entry || now > entry.resetAt) {
+		rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS })
+		return false
+	}
+
+	entry.count++
+	return entry.count > RATE_LIMIT_MAX
+}
+
 function getResend() {
 	const key = process.env.RESEND_API_KEY
 	if (!key) throw new Error("RESEND_API_KEY is not set")
@@ -49,7 +68,9 @@ function validate(data: unknown): data is ContactPayload {
 		typeof d.name === "string" &&
 		d.name.trim().length > 0 &&
 		typeof d.email === "string" &&
-		/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email) &&
+		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/.test(
+			d.email,
+		) &&
 		typeof d.projectType === "string" &&
 		d.projectType.trim().length > 0 &&
 		typeof d.message === "string" &&
@@ -238,6 +259,15 @@ function escapeHtml(str: string): string {
 
 export async function POST(request: Request) {
 	try {
+		const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown"
+
+		if (isRateLimited(ip)) {
+			return NextResponse.json(
+				{ error: "Trop de requêtes. Réessayez dans une minute." },
+				{ status: 429 },
+			)
+		}
+
 		const body = await request.json()
 
 		if (!validate(body)) {

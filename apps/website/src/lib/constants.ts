@@ -80,6 +80,73 @@ export const PROJECTS: Project[] = [
 			"OVH VPS",
 		],
 	},
+	{
+		name: "Boulangerie du Port",
+		slug: "boulangerie-du-port",
+		type: "Concept — Boulangerie artisanale",
+		accentColor: "#c8915a",
+		logoText: "BP",
+		client: "Boulangerie du Port",
+		location: "Saint-Malo, Bretagne",
+		duration: "2 semaines",
+		year: "2026",
+		context:
+			"La Boulangerie du Port est une boulangerie artisanale familiale installée à Saint-Malo depuis 15 ans. Connue pour ses pains au levain et ses viennoiseries maison, elle souhaitait un site vitrine pour présenter ses produits et permettre les commandes spéciales (gâteaux d'anniversaire, plateaux).",
+		problem:
+			"Aucune présence en ligne hormis une page Facebook peu suivie. Les clients ne trouvaient pas les horaires ni les produits disponibles. Les commandes spéciales se faisaient uniquement par téléphone, ce qui limitait le volume pendant les heures de pointe.",
+		solution:
+			'Site vitrine élégant avec galerie photo des créations, horaires en temps réel, carte interactive et formulaire de commande spéciale. Design chaleureux aux tons dorés rappelant le pain frais, optimisation SEO locale pour "boulangerie Saint-Malo".',
+		results: [
+			"Commandes spéciales en hausse de 40%",
+			"Score Lighthouse 96/100",
+			'Top 3 Google pour "boulangerie artisanale Saint-Malo"',
+			"Horaires consultés 200+ fois par semaine",
+		],
+		techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+		testimonial: {
+			quote:
+				"Gianni a compris mon commerce en 30 minutes. Le site est exactement ce que j'avais en tête, et mes clients me disent qu'ils nous trouvent enfin sur Google.",
+			author: "Marie Lefevre",
+			role: "Gérante — Boulangerie du Port",
+		},
+	},
+	{
+		name: "Atelier Kervadec",
+		slug: "atelier-kervadec",
+		type: "Concept — Ébénisterie",
+		accentColor: "#7a6548",
+		logoText: "AK",
+		client: "Atelier Kervadec",
+		location: "Quimper, Bretagne",
+		duration: "3 semaines",
+		year: "2026",
+		context:
+			"L'Atelier Kervadec est un ébéniste d'art installé à Quimper, spécialisé dans les meubles sur mesure en bois massif. Florian Kervadec cherchait un site premium pour montrer son savoir-faire et attirer une clientèle qui apprécie l'artisanat haut de gamme.",
+		problem:
+			"Les réseaux sociaux ne suffisaient plus pour présenter des pièces qui demandent des photos de qualité et du contexte. Les demandes de devis arrivaient au compte-gouttes et Florian passait trop de temps à répondre aux mêmes questions par téléphone.",
+		solution:
+			"Site premium avec galerie immersive de créations, filtrable par type de meuble (tables, bibliothèques, rangements). Chaque pièce a sa fiche détaillée avec dimensions, essence de bois et délai. Formulaire de devis structuré qui réduit les allers-retours. Animations soignées pour mettre en valeur le grain du bois.",
+		results: [
+			"Demandes de devis doublées en 2 mois",
+			"Score Lighthouse 97/100",
+			"Panier moyen en hausse grâce aux fiches détaillées",
+			"80% des clients mentionnent le site comme premier contact",
+		],
+		techStack: [
+			"Next.js",
+			"React",
+			"TypeScript",
+			"Tailwind CSS",
+			"Framer Motion",
+			"Galerie photo optimisée",
+		],
+		testimonial: {
+			quote:
+				"En tant qu'artisan, j'avais besoin d'un site qui montre mon savoir-faire. Gianni a créé quelque chose d'élégant qui met en valeur mes créations. Les demandes de devis ont doublé.",
+			author: "Florian Kervadec",
+			role: "Ébéniste — Atelier Kervadec, Quimper",
+		},
+	},
 ]
 
 // ─── Google Reviews ──────────────────────────────────────────
@@ -99,6 +166,115 @@ export type BlogPost = {
 }
 
 export const BLOG_POSTS: BlogPost[] = [
+	{
+		slug: "site-lent-10-secondes",
+		title: "Ce que vos clients vivent quand votre site met 10 secondes à charger",
+		excerpt:
+			"53% des visiteurs quittent un site qui met plus de 3 secondes à charger. Voici ce qui se passe vraiment dans la tête de vos clients pendant ces 10 secondes — et ce que ça coûte à votre commerce.",
+		category: "Performance web, concrètement",
+		publishedAt: "2026-03-10",
+		readingTime: 4,
+		content: `Votre site met plus de 3 secondes à charger ? Alors vous perdez des clients sans le savoir. Pas parce que votre offre est mauvaise, mais parce que personne ne la voit.
+
+Le problème, c'est que la lenteur d'un site est invisible pour celui qui le possède. Vous, vous le trouvez "correct". Vos clients, eux, sont déjà partis chez un concurrent.
+
+Dans cet article, on vous montre **ce que vos visiteurs vivent réellement** quand votre site met du temps à s'afficher — et ce que ça coûte concrètement à votre activité.
+
+## La réalité en chiffres
+
+:::stat
+53%
+des visiteurs mobiles quittent un site qui met plus de 3 secondes à charger (source : Google).
+:::
+
+Ce n'est pas une estimation — c'est mesuré par Google sur des millions de sites. Et ça va plus loin : chaque seconde de chargement en plus, c'est **7% de conversions en moins**. Autrement dit, un site à 10 secondes ne convertit quasiment personne.
+
+:::stat
+10 secondes
+C'est la durée maximale d'attention d'un utilisateur web selon Nielsen Norman Group. Au-delà, vous n'existez plus.
+:::
+
+## Les 10 secondes vécues de l'intérieur
+
+Voici ce que traverse réellement votre client, seconde par seconde.
+
+**0 à 1 seconde — L'attente normale.** Il est patient. Son téléphone est peut-être en 4G un peu faible. Il attend, confiant.
+
+**1 à 3 secondes — Le doute s'installe.** La page est encore blanche. Il se demande si le lien fonctionne. Il regarde la barre de chargement du navigateur.
+
+**3 à 5 secondes — L'impatience.** Il commence à taper avec son pouce. Il relit le titre de l'onglet. Il envisage de rafraîchir la page.
+
+**5 à 7 secondes — La question qui tue.** "Ce commerce est-il encore actif ?" Inconsciemment, un site lent = un commerce négligé. C'est injuste, mais c'est humain.
+
+**7 à 10 secondes — La décision.** Il appuie sur le bouton retour. Il retourne sur Google. Il clique sur le site de votre concurrent.
+
+**Au-delà de 10 secondes — Vous n'existez plus.** Il ne reviendra probablement jamais.
+
+:::example
+Un coiffeur à Dinan avait un site WordPress qui mettait 8 secondes à charger sur mobile. Google Analytics montrait un taux de rebond de 78%. Après refonte sur un site rapide, le taux de rebond est passé à 35% — et les prises de rendez-vous en ligne ont doublé.
+:::
+
+## Le problème, c'est que vous ne le voyez jamais
+
+Quand un client pousse votre porte et repart sans acheter, vous le voyez. Vous pouvez réagir, ajuster.
+
+Quand un visiteur quitte votre site en 4 secondes, vous n'en savez rien. Pas de notification, pas de signe. Juste du chiffre d'affaires qui part en silence chez quelqu'un d'autre.
+
+## Pourquoi les sites sont lents
+
+La plupart du temps, ce n'est pas une fatalité. Un site lent, c'est souvent :
+
+- Des **images trop lourdes** — une photo de 4 Mo qu'on aurait pu compresser à 80 ko
+- Un **thème WordPress chargé de plugins** inutiles qui s'exécutent à chaque visite
+- Un **hébergement bas de gamme** partagé avec 500 autres sites
+- Du **JavaScript excessif** qui bloque l'affichage avant même que la page soit visible
+
+:::example
+Un boulanger à Saint-Brieuc avait 12 plugins WordPress actifs sur son site. Temps de chargement : 9 secondes. En passant sur un site sur mesure sans plugins inutiles, le temps est descendu à 1,1 seconde — sans rien perdre en fonctionnalités.
+:::
+
+## Ce qu'on fait différemment chez Djanni Studio
+
+Chez Djanni Studio, la performance n'est pas un bonus — c'est le minimum. Chaque site est conçu pour charger en **moins de 1,2 seconde** sur mobile.
+
+:::brief
+- **Next.js** génère des pages statiques ultra-rapides, sans calcul côté serveur à chaque visite
+- **Images compressées et chargées progressivement** — votre visiteur voit quelque chose immédiatement
+- **Zéro plugin inutile** — chaque fonctionnalité est développée proprement
+- **Hébergement Vercel** — vos pages sont servies depuis le datacenter le plus proche de votre visiteur
+:::
+
+:::stat
+< 1,2 s
+Le temps de chargement moyen des sites livrés par Djanni Studio sur mobile.
+:::
+
+## Comment tester votre site maintenant
+
+Vous pouvez vérifier les performances de votre site gratuitement en quelques secondes. Rendez-vous sur **PageSpeed Insights** de Google (pagespeed.web.dev), entrez l'adresse de votre site, et regardez le score mobile.
+
+:::brief
+- **90-100** : Excellent — votre site est rapide
+- **50-89** : Des améliorations sont possibles
+- **0-49** : Urgent — vous perdez des clients chaque jour
+:::
+
+---
+
+## Ce qu'il faut retenir
+
+Un site lent, ce n'est pas juste un détail technique agaçant. C'est une vitrine avec les volets à moitié fermés. C'est du bouche-à-oreille qui ne convertit jamais.
+
+:::brief
+- 53% des visiteurs partent après 3 secondes de chargement
+- Chaque seconde en plus = 7% de conversions en moins
+- Un site lent donne une image de commerce négligé
+- La lenteur est souvent causée par des images lourdes et des plugins inutiles
+- Un site performant se charge en moins de 1,2 seconde sur mobile
+:::
+
+**Vous voulez savoir ce que vaut vraiment votre site ?** Djanni Studio vous propose un audit de performance gratuit et sans engagement. On vous dit exactement où vous en êtes — et comment améliorer les choses.`,
+	},
 	{
 		slug: "5-raisons-artisan-site-web-2026",
 		title: "5 raisons pour un artisan d'avoir un site web en 2026",
@@ -363,60 +539,66 @@ export type PricingTier = {
 
 export const PRICING_TIERS: PricingTier[] = [
 	{
-		badge: "Essentiel",
+		badge: "Présence",
 		priceLabel: "À partir de",
 		price: "990",
 		priceSuffix: "€",
-		priceNote: "Selon le nombre de pages • Paiement en 2 fois",
-		name: "Site Vitrine",
-		description:
-			"Idéal pour les commerces qui ont besoin d'une présence web propre et efficace rapidement.",
+		priceNote: "495€ à la signature • 495€ à la livraison",
+		name: "Présence",
+		description: "Pour celui qui n'a pas de site et veut être visible rapidement.",
 		features: [
-			"Jusqu'à 5 pages",
+			"1 landing page multi-sections",
+			"Design sur mesure",
 			"100% responsive mobile",
-			"Formulaire de contact",
-			"Horaires & Google Maps",
-			"SSL & mise en ligne",
+			"Numéro cliquable + formulaire",
+			"SEO de base (title, OG)",
+			"SSL + déploiement",
+			"Formation 1h",
+			"Support 30 jours",
 			"Livraison en 2 semaines",
 		],
 		ctaLabel: "Démarrer",
 	},
 	{
-		badge: "Le plus choisi",
+		badge: "La plus choisie",
 		priceLabel: "À partir de",
-		price: "1 990",
+		price: "1 490",
 		priceSuffix: "€",
-		priceNote: "Selon les fonctionnalités • Paiement en 2 fois",
-		name: "Site Premium",
-		description:
-			"Pour les commerces qui veulent se démarquer et donner une vraie image professionnelle.",
+		priceNote: "50% à la signature • 50% à la livraison",
+		name: "Vitrine",
+		description: "Pour celui qui veut un vrai site structuré, pas juste une page.",
 		features: [
-			"Jusqu'à 8 pages",
-			"Catalogue produits / galerie",
-			"Optimisation SEO",
-			"Animations et design soigné",
-			"Formation à la mise à jour",
+			"Jusqu'à 5 pages",
+			"Galerie photos / portfolio",
+			"Réalisations avant/après",
+			"Animations soignées",
+			"SEO intermédiaire (Lighthouse 90+)",
+			"Google Analytics ou Plausible",
+			"Formation 2h",
+			"Support 1 mois",
 			"Livraison en 3 semaines",
 		],
 		ctaLabel: "Démarrer",
 		featured: true,
 	},
 	{
-		badge: "Refonte",
-		priceLabel: "Sur devis",
-		price: "1 500",
-		priceSuffix: "€+",
-		priceNote: "Prix variable selon la complexité du site existant",
-		name: "Refonte Site Existant",
-		description:
-			"Votre site existe mais il vieillit mal. On lui donne une seconde vie sans repartir de zéro.",
+		badge: "Sur mesure",
+		priceLabel: "À partir de",
+		price: "1 990",
+		priceSuffix: "€",
+		priceNote: "Prix défini après échange • Paiement en 2 fois",
+		name: "Sur mesure",
+		description: "Pour celui qui a des besoins spécifiques.",
 		features: [
-			"Analyse du site actuel",
-			"Nouveau design moderne",
-			"Reprise du contenu existant",
-			"Migration sans perte de données",
-			"Correctif SSL & performances",
-			"Devis sur mesure",
+			"Jusqu'à 8 pages",
+			"Prise de RDV (Cal.com)",
+			"Blog CMS",
+			"Catalogue produits",
+			"Multilingue",
+			"SEO avancé (audit, mots-clés)",
+			"Support 3 mois",
+			"Réunion de suivi à 1 mois",
+			"Livraison en 3-5 semaines",
 		],
 		ctaLabel: "Demander un devis",
 	},
