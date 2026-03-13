@@ -41,8 +41,14 @@ export default async function BlogPostPage({
 }) {
 	const { slug, locale } = await params
 	setRequestLocale(locale)
-	const post = BLOG_POSTS.find((p) => p.slug === slug)
-	if (!post) notFound()
+	const sortedPosts = [...BLOG_POSTS].sort(
+		(a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+	)
+	const postIndex = sortedPosts.findIndex((p) => p.slug === slug)
+	if (postIndex === -1) notFound()
+	const post = sortedPosts[postIndex]
+	const prevPost = postIndex < sortedPosts.length - 1 ? sortedPosts[postIndex + 1] : null
+	const nextPost = postIndex > 0 ? sortedPosts[postIndex - 1] : null
 
 	const blogPostJsonLd = {
 		"@context": "https://schema.org",
@@ -100,7 +106,7 @@ export default async function BlogPostPage({
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
 			/>
-			<BlogPostContent post={post} />
+			<BlogPostContent post={post} prevPost={prevPost} nextPost={nextPost} />
 		</main>
 	)
 }

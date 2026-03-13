@@ -12,8 +12,8 @@
 		"checks": "biome check . && turbo type-check"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.6",
-		"turbo": "^2.8.13",
+		"@biomejs/biome": "^2.4.7",
+		"turbo": "^2.8.17",
 		"typescript": "^5.9.3"
 	}
 }

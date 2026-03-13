@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { DM_Sans, Syne } from "next/font/google"
 import Script from "next/script"
 import { getLocale } from "next-intl/server"
@@ -17,6 +17,13 @@ const dmSans = DM_Sans({
 	display: "swap",
 })
 
+export const viewport: Viewport = {
+	width: "device-width",
+	initialScale: 1,
+	maximumScale: 5,
+	themeColor: "#e8500a",
+}
+
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.djannistudio.fr"),
 	alternates: {
@@ -30,7 +37,7 @@ export const metadata: Metadata = {
 	},
 	title: "Djanni Studio — Sites web pour artisans & commerçants",
 	description:
-		"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — juste un site qui vous ressemble et qui ramène des clients.",
+		"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — un site qui vous ressemble et ramène des clients.",
 	keywords: [
 		"site web",
 		"artisan",
@@ -58,7 +65,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Djanni Studio — Sites web pour artisans & commerçants",
 		description:
-			"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — juste un site qui vous ressemble et qui ramène des clients.",
+			"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — un site qui vous ressemble et ramène des clients.",
 		url: "https://www.djannistudio.fr",
 		siteName: "Djanni Studio",
 		type: "website",
@@ -76,7 +83,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Djanni Studio — Sites web pour artisans & commerçants",
 		description:
-			"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — juste un site qui vous ressemble et qui ramène des clients.",
+			"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — un site qui vous ressemble et ramène des clients.",
 		images: ["/og-image.png"],
 	},
 	icons: {

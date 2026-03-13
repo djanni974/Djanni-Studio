@@ -33,11 +33,29 @@ const nextConfig: NextConfig = {
 				],
 			},
 			{
-				source: "/:path*.(js|css|woff2|avif|webp|svg|ico)",
+				source: "/:path*.(js|css|woff2|avif|webp|png|jpg|svg|ico)",
 				headers: [
 					{
 						key: "Cache-Control",
 						value: "public, max-age=31536000, immutable",
+					},
+				],
+			},
+			{
+				source: "/_next/static/:path*",
+				headers: [
+					{
+						key: "Cache-Control",
+						value: "public, max-age=31536000, immutable",
+					},
+				],
+			},
+			{
+				source: "/_next/image/:path*",
+				headers: [
+					{
+						key: "Cache-Control",
+						value: "public, max-age=86400, stale-while-revalidate=604800",
 					},
 				],
 			},

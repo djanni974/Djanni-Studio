@@ -382,7 +382,9 @@
 		"ctaTitle": "Need a website?",
 		"ctaSubtitle": "Free initial consultation. Let's discuss your project.",
 		"ctaButton": "Start a project",
-		"ctaSecondary": "Read more articles"
+		"ctaSecondary": "Read more articles",
+		"prevArticle": "Previous article",
+		"nextArticle": "Next article"
 	},
 	"realisationsPage": {
 		"tag": "Portfolio",
@@ -413,7 +415,10 @@
 		"readMore": "Read article",
 		"minRead": "min read",
 		"backLink": "Back to blog",
-		"shareTitle": "Share this article"
+		"shareTitle": "Share this article",
+		"page": "Page {current} of {total}",
+		"prev": "Previous",
+		"next": "Next"
 	},
 	"notFound": {
 		"title": "Page not found",
@@ -434,42 +439,60 @@
 		"step0Title": "Your project",
 		"step1Title": "Budget & timeline",
 		"step2Title": "Your details",
+		"step2Hint": "Your information stays confidential and will never be shared.",
 		"step3Title": "Describe your project",
+		"step3Hint": "A few ideas: your business, desired pages, examples of sites you like…",
+		"stepLabels": {
+			"0": "Project",
+			"1": "Budget",
+			"2": "Contact",
+			"3": "Message"
+		},
 		"projectTypeLabel": "Project type",
 		"projectType": "Choose a project type",
 		"projectTypes": {
 			"site-vitrine": "Starter Website",
 			"site-premium": "Premium Website",
-			"refonte": "Website Redesign",
+			"refonte": "Redesign",
 			"autre": "Other"
+		},
+		"projectTypeDescs": {
+			"site-vitrine": "A clean presence to attract customers",
+			"site-premium": "A custom site with advanced features",
+			"refonte": "Modernize an existing website",
+			"autre": "A specific project to discuss"
 		},
 		"businessNameLabel": "Business name",
 		"businessNamePlaceholder": "e.g. Martin Bakery",
 		"existingUrlLabel": "Current website URL",
 		"existingUrlPlaceholder": "https://www.yoursite.com",
 		"budgetLabel": "Approximate budget (optional)",
+		"budgetHint": "This helps me guide you to the right plan.",
 		"budget": "Approximate budget",
 		"budgets": {
-			"moins-1000": "Less than €1,000",
-			"1000-2000": "€1,000 – €2,000",
-			"2000-3000": "€2,000 – €3,000",
-			"plus-3000": "More than €3,000",
-			"pas-defini": "Not yet defined"
+			"moins-800": "Less than €800",
+			"800-1500": "€800 – €1,500",
+			"1500-3000": "€1,500 – €3,000",
+			"plus-3000": "€3,000+",
+			"pas-defini": "Not sure yet"
 		},
 		"deadlineLabel": "Desired timeline (optional)",
 		"deadlinePlaceholder": "Desired timeline",
 		"deadlines": {
-			"urgent": "Urgent (< 2 weeks)",
-			"1-mois": "Within a month",
-			"2-3-mois": "Within 2-3 months",
-			"pas-presse": "No rush"
+			"pas-presse": "Flexible",
+			"2-3-mois": "1 to 3 months",
+			"1-mois": "Less than 1 month",
+			"urgent": "Urgent"
 		},
 		"nameLabel": "Your name",
 		"namePlaceholder": "Your name",
 		"emailLabel": "Your email",
 		"emailPlaceholder": "Your email",
+		"phoneLabel": "Your phone (optional)",
+		"phoneHint": "Handy for quickly clarifying your needs.",
+		"phonePlaceholder": "+33 6 12 34 56 78",
 		"messageLabel": "Message",
-		"messagePlaceholder": "Describe your project in a few lines: your business, what you expect from the site, your ideas...",
+		"messagePlaceholder": "E.g.: showcase site for my construction company, 4-5 pages, contact form, portfolio of my work…",
 		"back": "Back",
 		"next": "Next",
 		"send": "Send",

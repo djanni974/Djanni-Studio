@@ -124,20 +124,29 @@ export function Hero() {
 					animate="visible"
 					className="flex flex-wrap items-center gap-5"
 				>
-					<Link
-						href="/demande-projet"
-						className="inline-flex items-center gap-2 rounded-lg bg-djanni-orange px-8 py-4 text-[15px] font-medium text-white transition-all hover:-translate-y-0.5 hover:bg-djanni-orange-light"
-					>
-						<IconPhone size={16} />
-						{t("cta")}
-					</Link>
-					<Link
-						href="#realisations"
-						className="inline-flex items-center gap-2 border-b border-border px-6 py-4 text-[15px] text-djanni-gray-light transition-all hover:border-djanni-gray hover:text-foreground"
-					>
-						{t("seeWork")}
-						<IconArrowRight size={16} />
-					</Link>
+					<motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} className="group">
+						<Link
+							href="/demande-projet"
+							className="relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-djanni-orange px-8 py-4 text-[15px] font-medium text-white shadow-[0_0_0_rgba(232,80,10,0)] transition-all duration-300 hover:bg-djanni-orange-light hover:shadow-[0_8px_30px_rgba(232,80,10,0.35)]"
+						>
+							<span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-[-20deg] bg-linear-to-r from-transparent via-white/15 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
+							<IconPhone size={16} className="relative" />
+							<span className="relative">{t("cta")}</span>
+						</Link>
+					</motion.div>
+					<motion.div whileHover={{ x: 2 }} className="group">
+						<Link
+							href="#realisations"
+							className="relative inline-flex items-center gap-2 px-6 py-4 text-[15px] text-djanni-gray-light transition-colors duration-300 hover:text-foreground"
+						>
+							{t("seeWork")}
+							<IconArrowRight
+								size={16}
+								className="transition-transform duration-300 group-hover:translate-x-1"
+							/>
+							<span className="absolute bottom-3 left-6 right-6 h-px origin-left scale-x-0 bg-foreground/30 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+						</Link>
+					</motion.div>
 				</motion.div>
 
 				<motion.div
