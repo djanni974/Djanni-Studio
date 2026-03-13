@@ -1,7 +1,7 @@
 {
 	"metadata": {
 		"title": "Djanni Studio — Sites web pour artisans & commerçants",
-		"description": "Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — juste un site qui vous ressemble et qui ramène des clients.",
+		"description": "Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — un site qui vous ressemble et ramène des clients.",
 		"about": {
 			"title": "À propos — Djanni Studio",
 			"description": "Charpentier devenu développeur web. Je crée des sites sur mesure pour les artisans et commerçants en Bretagne. Découvrez mon parcours."
@@ -382,7 +382,9 @@
 		"ctaTitle": "Besoin d'un site web ?",
 		"ctaSubtitle": "Premier échange gratuit. Discutons de votre projet.",
 		"ctaButton": "Démarrer un projet",
-		"ctaSecondary": "Lire d'autres articles"
+		"ctaSecondary": "Lire d'autres articles",
+		"prevArticle": "Article précédent",
+		"nextArticle": "Article suivant"
 	},
 	"realisationsPage": {
 		"tag": "Réalisations",
@@ -413,7 +415,10 @@
 		"readMore": "Lire l'article",
 		"minRead": "min de lecture",
 		"backLink": "Retour au blog",
-		"shareTitle": "Partager cet article"
+		"shareTitle": "Partager cet article",
+		"page": "Page {current} sur {total}",
+		"prev": "Précédent",
+		"next": "Suivant"
 	},
 	"notFound": {
 		"title": "Page introuvable",
@@ -434,42 +439,60 @@
 		"step0Title": "Votre projet",
 		"step1Title": "Budget & délai",
 		"step2Title": "Vos coordonnées",
+		"step2Hint": "Ces informations restent confidentielles et ne seront jamais partagées.",
 		"step3Title": "Décrivez votre projet",
+		"step3Hint": "Quelques idées : votre activité, les pages souhaitées, des exemples de sites que vous aimez…",
+		"stepLabels": {
+			"0": "Projet",
+			"1": "Budget",
+			"2": "Contact",
+			"3": "Message"
+		},
 		"projectTypeLabel": "Type de projet",
 		"projectType": "Choisir un type de projet",
 		"projectTypes": {
 			"site-vitrine": "Site Vitrine",
 			"site-premium": "Site Premium",
-			"refonte": "Refonte de site existant",
+			"refonte": "Refonte",
 			"autre": "Autre"
+		},
+		"projectTypeDescs": {
+			"site-vitrine": "Une présence propre pour attirer des clients",
+			"site-premium": "Un site sur-mesure avec fonctionnalités avancées",
+			"refonte": "Moderniser un site existant",
+			"autre": "Un projet spécifique à discuter"
 		},
 		"businessNameLabel": "Nom de l'entreprise",
 		"businessNamePlaceholder": "Ex : Boulangerie Martin",
 		"existingUrlLabel": "URL du site actuel",
 		"existingUrlPlaceholder": "https://www.votresite.fr",
 		"budgetLabel": "Budget approximatif (optionnel)",
+		"budgetHint": "Ça m'aide à vous orienter vers la bonne formule.",
 		"budget": "Budget approximatif",
 		"budgets": {
-			"moins-1000": "Moins de 1 000 €",
-			"1000-2000": "1 000 – 2 000 €",
-			"2000-3000": "2 000 – 3 000 €",
-			"plus-3000": "Plus de 3 000 €",
-			"pas-defini": "Pas encore défini"
+			"moins-800": "Moins de 800 €",
+			"800-1500": "800 € – 1 500 €",
+			"1500-3000": "1 500 € – 3 000 €",
+			"plus-3000": "3 000 €+",
+			"pas-defini": "Je ne sais pas encore"
 		},
 		"deadlineLabel": "Délai souhaité (optionnel)",
 		"deadlinePlaceholder": "Délai souhaité",
 		"deadlines": {
-			"urgent": "Urgent (< 2 semaines)",
-			"1-mois": "Dans le mois",
-			"2-3-mois": "Dans 2-3 mois",
-			"pas-presse": "Pas pressé"
+			"pas-presse": "Flexible",
+			"2-3-mois": "1 à 3 mois",
+			"1-mois": "Moins d'1 mois",
+			"urgent": "Urgent"
 		},
 		"nameLabel": "Votre nom",
 		"namePlaceholder": "Votre nom",
 		"emailLabel": "Votre email",
 		"emailPlaceholder": "Votre email",
+		"phoneLabel": "Votre téléphone (optionnel)",
+		"phoneHint": "Pratique pour clarifier rapidement votre besoin.",
+		"phonePlaceholder": "06 12 34 56 78",
 		"messageLabel": "Message",
-		"messagePlaceholder": "Décrivez votre projet en quelques lignes : votre activité, ce que vous attendez du site, vos idées...",
+		"messagePlaceholder": "Ex : site vitrine pour mon entreprise de maçonnerie, 4-5 pages, formulaire de contact, mise en avant de mes réalisations…",
 		"back": "Retour",
 		"next": "Suivant",
 		"send": "Envoyer",

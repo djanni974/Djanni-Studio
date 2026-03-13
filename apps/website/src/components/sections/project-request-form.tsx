@@ -6,10 +6,14 @@ import {
 	IconArrowRight,
 	IconCheck,
 	IconClock,
+	IconDeviceDesktop,
 	IconMail,
 	IconPhone,
+	IconRefresh,
 	IconSend,
 	IconShieldCheck,
+	IconSparkles,
+	IconWorldWww,
 } from "@tabler/icons-react"
 import { AnimatePresence, motion } from "motion/react"
 import { useTranslations } from "next-intl"
@@ -26,6 +30,7 @@ type FormData = {
 	deadline: string
 	name: string
 	email: string
+	phone: string
 	message: string
 }
 
@@ -33,48 +38,78 @@ type FormErrors = Partial<Record<keyof FormData, string>>
 
 const STEP_COUNT = 4
 
+const STEP_LABEL_KEYS = ["0", "1", "2", "3"] as const
+
+const PROJECT_TYPE_OPTIONS = [
+	{ value: "site-vitrine", icon: IconWorldWww },
+	{ value: "site-premium", icon: IconSparkles },
+	{ value: "refonte", icon: IconRefresh },
+	{ value: "autre", icon: IconDeviceDesktop },
+] as const
+
+const BUDGET_OPTIONS = ["moins-800", "800-1500", "1500-3000", "plus-3000", "pas-defini"] as const
+
+const DEADLINE_OPTIONS = ["pas-presse", "2-3-mois", "1-mois", "urgent"] as const
+
 const inputBaseClass =
 	"w-full rounded-lg border border-border bg-surface-b px-4 py-3.5 text-sm text-foreground placeholder:text-djanni-gray transition-colors focus:border-djanni-orange focus:outline-none focus:ring-1 focus:ring-djanni-orange/50"
 
-const selectClass =
-	"w-full appearance-none rounded-lg border border-border bg-surface-b px-4 py-3.5 text-sm text-foreground transition-colors focus:border-djanni-orange focus:outline-none focus:ring-1 focus:ring-djanni-orange/50"
-
-function StepIndicator({ currentStep }: { currentStep: number }) {
+function StepIndicator({
+	currentStep,
+	t,
+}: {
+	currentStep: number
+	t: ReturnType<typeof useTranslations<"projectRequest">>
+}) {
 	return (
-		<div className="mb-10 flex flex-col items-center gap-4">
+		<div className="mb-10 flex flex-col items-center gap-1">
 			<div className="flex items-center gap-2">
 				{Array.from({ length: STEP_COUNT }, (_, i) => (
 					<div key={i} className="flex items-center gap-2">
-						<motion.div
-							animate={{
-								scale: i === currentStep ? 1.1 : 1,
-								borderColor:
-									i <= currentStep ? "var(--color-djanni-orange)" : "var(--color-border)",
-							}}
-							transition={{ type: "spring", stiffness: 500, damping: 30 }}
-							className={cn(
-								"flex h-8 w-8 items-center justify-center rounded-full border text-xs font-semibold",
-								i < currentStep
-									? "bg-djanni-orange text-white"
-									: i === currentStep
-										? "bg-djanni-orange/10 text-djanni-orange"
-										: "text-djanni-gray",
-							)}
-						>
-							{i < currentStep ? (
-								<motion.span
-									initial={{ scale: 0, rotate: -90 }}
-									animate={{ scale: 1, rotate: 0 }}
-									transition={{ type: "spring", stiffness: 500, damping: 25 }}
-								>
-									<IconCheck size={14} />
-								</motion.span>
-							) : (
-								i + 1
-							)}
-						</motion.div>
+						<div className="flex flex-col items-center gap-1.5">
+							<motion.div
+								animate={{
+									scale: i === currentStep ? 1.1 : 1,
+									borderColor:
+										i <= currentStep ? "var(--color-djanni-orange)" : "var(--color-border)",
+								}}
+								transition={{ type: "spring", stiffness: 500, damping: 30 }}
+								className={cn(
+									"flex h-8 w-8 items-center justify-center rounded-full border text-xs font-semibold",
+									i < currentStep
+										? "bg-djanni-orange text-white"
+										: i === currentStep
+											? "bg-djanni-orange/10 text-djanni-orange"
+											: "text-djanni-gray",
+								)}
+							>
+								{i < currentStep ? (
+									<motion.span
+										initial={{ scale: 0, rotate: -90 }}
+										animate={{ scale: 1, rotate: 0 }}
+										transition={{
+											type: "spring",
+											stiffness: 500,
+											damping: 25,
+										}}
+									>
+										<IconCheck size={14} />
+									</motion.span>
+								) : (
+									i + 1
+								)}
+							</motion.div>
+							<span
+								className={cn(
+									"text-[10px] font-medium transition-colors duration-300",
+									i <= currentStep ? "text-djanni-orange" : "text-djanni-gray/50",
+								)}
+							>
+								{t(`stepLabels.${STEP_LABEL_KEYS[i]}`)}
+							</span>
+						</div>
 						{i < STEP_COUNT - 1 && (
-							<div className="relative h-px w-8 bg-border">
+							<div className="relative mb-5 h-px w-8 bg-border">
 								<motion.div
 									className="absolute inset-y-0 left-0 bg-djanni-orange"
 									initial={{ width: "0%" }}
@@ -86,9 +121,115 @@ function StepIndicator({ currentStep }: { currentStep: number }) {
 					</div>
 				))}
 			</div>
-			<p className="text-xs text-djanni-gray">
-				{currentStep + 1} / {STEP_COUNT}
-			</p>
+		</div>
+	)
+}
+
+function BudgetPicker({
+	options,
+	value,
+	onChange,
+	t,
+}: {
+	options: readonly string[]
+	value: string
+	onChange: (v: string) => void
+	t: ReturnType<typeof useTranslations<"projectRequest">>
+}) {
+	return (
+		<div className="flex flex-wrap gap-2.5">
+			{options.map((opt) => {
+				const selected = value === opt
+				return (
+					<button
+						key={opt}
+						type="button"
+						onClick={() => onChange(selected ? "" : opt)}
+						className={cn(
+							"relative rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200",
+							selected
+								? "border-djanni-orange bg-djanni-orange text-white shadow-[0_2px_12px_rgba(232,80,10,0.3)]"
+								: "border-border text-djanni-gray hover:border-djanni-gray hover:text-foreground",
+						)}
+					>
+						{selected && (
+							<motion.span
+								layoutId="budget-indicator"
+								className="absolute inset-0 rounded-full bg-djanni-orange"
+								transition={{ type: "spring", stiffness: 500, damping: 35 }}
+								style={{ zIndex: 0 }}
+							/>
+						)}
+						<span className="relative z-10">{t(`budgets.${opt}` as Parameters<typeof t>[0])}</span>
+					</button>
+				)
+			})}
+		</div>
+	)
+}
+
+function DeadlinePicker({
+	options,
+	value,
+	onChange,
+	t,
+}: {
+	options: readonly string[]
+	value: string
+	onChange: (v: string) => void
+	t: ReturnType<typeof useTranslations<"projectRequest">>
+}) {
+	const selectedIndex = options.indexOf(value)
+	const urgencyColors = ["#e8500a", "#e8500a", "#e8500a", "#ef4444"]
+
+	return (
+		<div className="space-y-5">
+			<div className="grid grid-cols-4 gap-2">
+				{options.map((opt, _i) => {
+					const selected = value === opt
+					return (
+						<button
+							key={opt}
+							type="button"
+							onClick={() => onChange(selected ? "" : opt)}
+							className={cn(
+								"relative flex flex-col items-center gap-1.5 rounded-lg border px-2 py-3 text-center transition-all duration-200",
+								selected
+									? "border-djanni-orange bg-djanni-orange/8 shadow-[0_0_0_1px_var(--color-djanni-orange)]"
+									: "border-border hover:border-djanni-gray",
+							)}
+						>
+							<span
+								className={cn(
+									"text-[13px] font-medium leading-tight transition-colors",
+									selected ? "text-djanni-orange" : "text-foreground",
+								)}
+							>
+								{t(`deadlines.${opt}` as Parameters<typeof t>[0])}
+							</span>
+						</button>
+					)
+				})}
+			</div>
+			{/* Urgency bar */}
+			<div className="flex h-2 gap-0.5 overflow-hidden rounded-full bg-surface-b">
+				{options.map((opt, i) => (
+					<motion.div
+						key={opt}
+						className="flex-1 rounded-full"
+						animate={{
+							backgroundColor:
+								selectedIndex >= 0 && i <= selectedIndex ? urgencyColors[i] : "transparent",
+							opacity: selectedIndex >= 0 && i <= selectedIndex ? 1 : 0.15,
+						}}
+						transition={{ duration: 0.3, delay: i * 0.05 }}
+						style={{
+							backgroundColor:
+								selectedIndex >= 0 && i <= selectedIndex ? urgencyColors[i] : undefined,
+						}}
+					/>
+				))}
+			</div>
 		</div>
 	)
 }
@@ -104,6 +245,7 @@ export function ProjectRequestForm() {
 		deadline: "",
 		name: "",
 		email: "",
+		phone: "",
 		message: "",
 	})
 	const [errors, setErrors] = useState<FormErrors>({})
@@ -111,31 +253,6 @@ export function ProjectRequestForm() {
 	const [submitting, setSubmitting] = useState(false)
 	const [currentStep, setCurrentStep] = useState(0)
 	const [direction, setDirection] = useState(1)
-
-	const PROJECT_TYPES = [
-		{ value: "", label: t("projectType") },
-		{ value: "site-vitrine", label: t("projectTypes.site-vitrine") },
-		{ value: "site-premium", label: t("projectTypes.site-premium") },
-		{ value: "refonte", label: t("projectTypes.refonte") },
-		{ value: "autre", label: t("projectTypes.autre") },
-	]
-
-	const BUDGET_RANGES = [
-		{ value: "", label: t("budget") },
-		{ value: "moins-1000", label: t("budgets.moins-1000") },
-		{ value: "1000-2000", label: t("budgets.1000-2000") },
-		{ value: "2000-3000", label: t("budgets.2000-3000") },
-		{ value: "plus-3000", label: t("budgets.plus-3000") },
-		{ value: "pas-defini", label: t("budgets.pas-defini") },
-	]
-
-	const DEADLINES = [
-		{ value: "", label: t("deadlinePlaceholder") },
-		{ value: "urgent", label: t("deadlines.urgent") },
-		{ value: "1-mois", label: t("deadlines.1-mois") },
-		{ value: "2-3-mois", label: t("deadlines.2-3-mois") },
-		{ value: "pas-presse", label: t("deadlines.pas-presse") },
-	]
 
 	function validateStep(step: number, data: FormData): FormErrors {
 		const errs: FormErrors = {}
@@ -235,19 +352,27 @@ export function ProjectRequestForm() {
 					transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
 				>
 					<div className="relative overflow-hidden rounded-xl border border-djanni-orange/30 bg-djanni-orange/5 p-12 text-center">
-						{/* Glow behind check */}
 						<div className="pointer-events-none absolute top-1/2 left-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.1)_0%,transparent_70%)]" />
-
 						<motion.div
 							initial={{ scale: 0 }}
 							animate={{ scale: 1 }}
-							transition={{ type: "spring", stiffness: 400, damping: 20, delay: 0.2 }}
+							transition={{
+								type: "spring",
+								stiffness: 400,
+								damping: 20,
+								delay: 0.2,
+							}}
 							className="relative mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-djanni-orange/15"
 						>
 							<motion.div
 								initial={{ scale: 0, rotate: -90 }}
 								animate={{ scale: 1, rotate: 0 }}
-								transition={{ type: "spring", stiffness: 500, damping: 25, delay: 0.4 }}
+								transition={{
+									type: "spring",
+									stiffness: 500,
+									damping: 25,
+									delay: 0.4,
+								}}
 							>
 								<IconCheck size={30} className="text-djanni-orange" />
 							</motion.div>
@@ -277,9 +402,9 @@ export function ProjectRequestForm() {
 						noValidate
 						className="rounded-xl border border-border bg-surface-a p-8 md:p-10"
 					>
-						<StepIndicator currentStep={currentStep} />
+						<StepIndicator currentStep={currentStep} t={t} />
 
-						<div className="min-h-[260px]">
+						<div className="min-h-[280px]">
 							<AnimatePresence mode="wait" custom={direction}>
 								<motion.div
 									key={currentStep}
@@ -287,38 +412,79 @@ export function ProjectRequestForm() {
 									initial={{ opacity: 0, x: direction * 40 }}
 									animate={{ opacity: 1, x: 0 }}
 									exit={{ opacity: 0, x: -direction * 40 }}
-									transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+									transition={{
+										duration: 0.25,
+										ease: [0.22, 1, 0.36, 1],
+									}}
 								>
-									{/* Step 0: Project type + business name */}
+									{/* Step 0: Project type cards + business name */}
 									{currentStep === 0 && (
 										<div className="space-y-5">
 											<h3 className="mb-6 text-center font-heading text-lg font-bold">
 												{t("step0Title")}
 											</h3>
 											<div>
-												<label
-													htmlFor="projectType"
-													className="mb-1.5 block text-xs font-medium text-djanni-gray"
-												>
+												<span className="mb-2 block text-xs font-medium text-djanni-gray">
 													{t("projectTypeLabel")}
-												</label>
-												<select
-													id="projectType"
-													name="projectType"
-													value={formData.projectType}
-													onChange={handleChange}
-													className={cn(
-														selectClass,
-														!formData.projectType && "text-djanni-gray",
-														errors.projectType && "border-red-500/50",
-													)}
+												</span>
+												<div
+													className="grid grid-cols-2 gap-3"
+													role="radiogroup"
+													aria-label={t("projectTypeLabel")}
 												>
-													{PROJECT_TYPES.map((opt) => (
-														<option key={opt.value} value={opt.value} disabled={!opt.value}>
-															{opt.label}
-														</option>
-													))}
-												</select>
+													{PROJECT_TYPE_OPTIONS.map((opt) => {
+														const Icon = opt.icon
+														const selected = formData.projectType === opt.value
+														return (
+															<button
+																key={opt.value}
+																type="button"
+																onClick={() => {
+																	setFormData((prev) => ({
+																		...prev,
+																		projectType: opt.value,
+																	}))
+																	if (errors.projectType) {
+																		setErrors((prev) => ({
+																			...prev,
+																			projectType: undefined,
+																		}))
+																	}
+																}}
+																className={cn(
+																	"group flex flex-col items-start gap-2 rounded-lg border p-4 text-left transition-all duration-200",
+																	selected
+																		? "border-djanni-orange bg-djanni-orange/5 shadow-[0_0_0_1px_var(--color-djanni-orange)]"
+																		: "border-border hover:border-djanni-gray",
+																)}
+															>
+																<div
+																	className={cn(
+																		"flex h-8 w-8 items-center justify-center rounded-md transition-colors duration-200",
+																		selected
+																			? "bg-djanni-orange/15 text-djanni-orange"
+																			: "bg-surface-b text-djanni-gray group-hover:text-foreground",
+																	)}
+																>
+																	<Icon size={18} />
+																</div>
+																<div>
+																	<div
+																		className={cn(
+																			"text-sm font-semibold transition-colors",
+																			selected ? "text-djanni-orange" : "text-foreground",
+																		)}
+																	>
+																		{t(`projectTypes.${opt.value}`)}
+																	</div>
+																	<div className="mt-0.5 text-[12px] leading-snug text-djanni-gray-light">
+																		{t(`projectTypeDescs.${opt.value}`)}
+																	</div>
+																</div>
+															</button>
+														)
+													})}
+												</div>
 												{errors.projectType && (
 													<p className="mt-1.5 text-xs text-red-400">{errors.projectType}</p>
 												)}
@@ -371,51 +537,44 @@ export function ProjectRequestForm() {
 
 									{/* Step 1: Budget + deadline */}
 									{currentStep === 1 && (
-										<div className="space-y-5">
-											<h3 className="mb-6 text-center font-heading text-lg font-bold">
+										<div>
+											<h3 className="mb-8 text-center font-heading text-lg font-bold">
 												{t("step1Title")}
 											</h3>
-											<div>
-												<label
-													htmlFor="budget"
-													className="mb-1.5 block text-xs font-medium text-djanni-gray"
-												>
+											<div className="mb-8">
+												<span className="mb-1 block text-sm font-medium text-foreground">
 													{t("budgetLabel")}
-												</label>
-												<select
-													id="budget"
-													name="budget"
+												</span>
+												<span className="mb-3 block text-xs text-djanni-gray">
+													{t("budgetHint")}
+												</span>
+												<BudgetPicker
+													options={BUDGET_OPTIONS}
 													value={formData.budget}
-													onChange={handleChange}
-													className={cn(selectClass, !formData.budget && "text-djanni-gray")}
-												>
-													{BUDGET_RANGES.map((opt) => (
-														<option key={opt.value} value={opt.value}>
-															{opt.label}
-														</option>
-													))}
-												</select>
+													onChange={(v) =>
+														setFormData((prev) => ({
+															...prev,
+															budget: v,
+														}))
+													}
+													t={t}
+												/>
 											</div>
-											<div>
-												<label
-													htmlFor="deadline"
-													className="mb-1.5 block text-xs font-medium text-djanni-gray"
-												>
+											<div className="border-t border-border pt-7">
+												<span className="mb-3 block text-sm font-medium text-foreground">
 													{t("deadlineLabel")}
-												</label>
-												<select
-													id="deadline"
-													name="deadline"
+												</span>
+												<DeadlinePicker
+													options={DEADLINE_OPTIONS}
 													value={formData.deadline}
-													onChange={handleChange}
-													className={cn(selectClass, !formData.deadline && "text-djanni-gray")}
-												>
-													{DEADLINES.map((opt) => (
-														<option key={opt.value} value={opt.value}>
-															{opt.label}
-														</option>
-													))}
-												</select>
+													onChange={(v) =>
+														setFormData((prev) => ({
+															...prev,
+															deadline: v,
+														}))
+													}
+													t={t}
+												/>
 											</div>
 										</div>
 									)}
@@ -423,9 +582,10 @@ export function ProjectRequestForm() {
 									{/* Step 2: Contact info */}
 									{currentStep === 2 && (
 										<div className="space-y-5">
-											<h3 className="mb-6 text-center font-heading text-lg font-bold">
-												{t("step2Title")}
-											</h3>
+											<div className="mb-6 text-center">
+												<h3 className="font-heading text-lg font-bold">{t("step2Title")}</h3>
+												<p className="mt-1.5 text-xs text-djanni-gray">{t("step2Hint")}</p>
+											</div>
 											<div>
 												<label
 													htmlFor="name"
@@ -466,15 +626,36 @@ export function ProjectRequestForm() {
 													<p className="mt-1.5 text-xs text-red-400">{errors.email}</p>
 												)}
 											</div>
+											<div>
+												<label
+													htmlFor="phone"
+													className="mb-0.5 block text-xs font-medium text-djanni-gray"
+												>
+													{t("phoneLabel")}
+												</label>
+												<span className="mb-1.5 block text-[11px] text-djanni-gray/70">
+													{t("phoneHint")}
+												</span>
+												<input
+													id="phone"
+													type="tel"
+													name="phone"
+													placeholder={t("phonePlaceholder")}
+													value={formData.phone}
+													onChange={handleChange}
+													className={inputBaseClass}
+												/>
+											</div>
 										</div>
 									)}
 
 									{/* Step 3: Message */}
 									{currentStep === 3 && (
 										<div className="space-y-5">
-											<h3 className="mb-6 text-center font-heading text-lg font-bold">
-												{t("step3Title")}
-											</h3>
+											<div className="mb-6 text-center">
+												<h3 className="font-heading text-lg font-bold">{t("step3Title")}</h3>
+												<p className="mt-1.5 text-xs text-djanni-gray">{t("step3Hint")}</p>
+											</div>
 											<div>
 												<label
 													htmlFor="message"

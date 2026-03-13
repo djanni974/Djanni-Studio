@@ -382,7 +382,9 @@
 		"ctaTitle": "Ezhomm eus ul lec'hienn web ?",
 		"ctaSubtitle": "Kensav kentañ digoust. Komzomp eus ho raktres.",
 		"ctaButton": "Kregiñ gant ur raktres",
-		"ctaSecondary": "Lenn pennadoù all"
+		"ctaSecondary": "Lenn pennadoù all",
+		"prevArticle": "Pennad kent",
+		"nextArticle": "Pennad war-lerc'h"
 	},
 	"realisationsPage": {
 		"tag": "Obererezhioù",
@@ -413,7 +415,10 @@
 		"readMore": "Lenn ar pennad",
 		"minRead": "min da lenn",
 		"backLink": "Distreiñ d'ar blog",
-		"shareTitle": "Rannañ ar pennad-mañ"
+		"shareTitle": "Rannañ ar pennad-mañ",
+		"page": "Pajenn {current} war {total}",
+		"prev": "Kent",
+		"next": "War-lerc'h"
 	},
 	"notFound": {
 		"title": "Pajenn dizavet",
@@ -434,42 +439,60 @@
 		"step0Title": "Ho raktres",
 		"step1Title": "Budjed & Amzer",
 		"step2Title": "Ho titouroù",
+		"step2Hint": "Ho titouroù a chom prevez ha ne vint morse rannet.",
 		"step3Title": "Deskrivit ho raktres",
+		"step3Hint": "Un nebeud mennadoù : hoc'h oberiantiz, ar pajennoù goulennet, skouerioù a lec'hiennoù a blij deoc'h…",
+		"stepLabels": {
+			"0": "Raktres",
+			"1": "Budjed",
+			"2": "Darempred",
+			"3": "Kemennadenn"
+		},
 		"projectTypeLabel": "Seurt raktres",
 		"projectType": "Dibab ur seurt raktres",
 		"projectTypes": {
 			"site-vitrine": "Lec'hienn Vitrine",
 			"site-premium": "Lec'hienn Premium",
-			"refonte": "Adneveziañ lec'hienn",
+			"refonte": "Adneveziañ",
 			"autre": "All"
+		},
+		"projectTypeDescs": {
+			"site-vitrine": "Ur prezañs net evit dedennañ kliented",
+			"site-premium": "Ul lec'hienn personelaet gant arc'hantoù araokaet",
+			"refonte": "Nevesaat ul lec'hienn a zo",
+			"autre": "Ur raktres resis da gomz"
 		},
 		"businessNameLabel": "Anv an embregerezh",
 		"businessNamePlaceholder": "Da sk. : Boulanjerezh Martin",
 		"existingUrlLabel": "URL al lec'hienn a zo",
 		"existingUrlPlaceholder": "https://www.ho-lec'hienn.bzh",
 		"budgetLabel": "Budjed a-dost (diret)",
+		"budgetHint": "Skoazell a ra din da ginnig deoc'h ar stumm mat.",
 		"budget": "Budjed a-dost",
 		"budgets": {
-			"moins-1000": "Nebeutoc'h eget 1 000 €",
-			"1000-2000": "1 000 – 2 000 €",
-			"2000-3000": "2 000 – 3 000 €",
-			"plus-3000": "Muioc'h eget 3 000 €",
-			"pas-defini": "N'eo ket resisaet c'hoazh"
+			"moins-800": "Nebeutoc'h eget 800 €",
+			"800-1500": "800 € – 1 500 €",
+			"1500-3000": "1 500 € – 3 000 €",
+			"plus-3000": "3 000 €+",
+			"pas-defini": "N'ouzon ket c'hoazh"
 		},
 		"deadlineLabel": "Amzer goulennet (diret)",
 		"deadlinePlaceholder": "Amzer goulennet",
 		"deadlines": {
-			"urgent": "Prim (< 2 sizhun)",
-			"1-mois": "Er miz",
-			"2-3-mois": "E 2-3 miz",
-			"pas-presse": "Ket war-hast"
+			"pas-presse": "Soupl",
+			"2-3-mois": "1 da 3 miz",
+			"1-mois": "Nebeutoc'h eget 1 miz",
+			"urgent": "Prim"
 		},
 		"nameLabel": "Hoc'h anv",
 		"namePlaceholder": "Hoc'h anv",
 		"emailLabel": "Ho postel",
 		"emailPlaceholder": "Ho postel",
+		"phoneLabel": "Ho pellgomz (diret)",
+		"phoneHint": "Aes evit sklaeraat ho ezhomm buan.",
+		"phonePlaceholder": "06 12 34 56 78",
 		"messageLabel": "Kemennadenn",
-		"messagePlaceholder": "Deskrivit ho raktres e nebeut a linennoù : hoc'h oberiantiz, ar pezh a c'hortit eus al lec'hienn, ho mennadoù...",
+		"messagePlaceholder": "Da sk. : lec'hienn vitrine evit ma embregerezh masoniezh, 4-5 pajenn, furmskrid darempred, diskouez ma labourioù…",
 		"back": "Distreiñ",
 		"next": "Da-heul",
 		"send": "Kas",

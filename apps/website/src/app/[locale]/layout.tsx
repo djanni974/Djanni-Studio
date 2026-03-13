@@ -28,6 +28,12 @@ export default async function LocaleLayout({ children, params }: Props) {
 
 	return (
 		<NextIntlClientProvider locale={locale} messages={messages}>
+			<a
+				href="#main"
+				className="fixed top-4 left-4 z-100 -translate-y-20 rounded-lg bg-djanni-orange px-4 py-2 text-sm font-medium text-white transition-transform focus:translate-y-0"
+			>
+				Skip to content
+			</a>
 			<Navbar />
 			{children}
 			<Footer />

@@ -67,7 +67,7 @@ export default async function CaseStudyPage({
 	}
 
 	return (
-		<main>
+		<main id="main">
 			<script
 				type="application/ld+json"
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data

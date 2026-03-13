@@ -16,9 +16,9 @@ export function Realisations() {
 			<SectionHeader tag={t("tag")} title={t("title")} subtitle={t("subtitle")} />
 
 			<StaggerContainer className="mx-auto mt-16 grid max-w-[1100px] gap-4 md:grid-cols-2">
-				{PROJECTS.map((project) => (
+				{PROJECTS.map((project, i) => (
 					<StaggerItem key={project.name}>
-						<ProjectCard project={project} />
+						<ProjectCard project={project} priority={i === 0} />
 					</StaggerItem>
 				))}
 
