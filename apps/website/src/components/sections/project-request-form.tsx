@@ -431,6 +431,7 @@ export function ProjectRequestForm() {
 													className="grid grid-cols-2 gap-3"
 													role="radiogroup"
 													aria-label={t("projectTypeLabel")}
+													aria-describedby={errors.projectType ? "error-projectType" : undefined}
 												>
 													{PROJECT_TYPE_OPTIONS.map((opt) => {
 														const Icon = opt.icon
@@ -486,7 +487,9 @@ export function ProjectRequestForm() {
 													})}
 												</div>
 												{errors.projectType && (
-													<p className="mt-1.5 text-xs text-red-400">{errors.projectType}</p>
+													<p id="error-projectType" className="mt-1.5 text-xs text-red-400">
+														{errors.projectType}
+													</p>
 												)}
 											</div>
 											<div>
@@ -503,10 +506,13 @@ export function ProjectRequestForm() {
 													placeholder={t("businessNamePlaceholder")}
 													value={formData.businessName}
 													onChange={handleChange}
+													aria-describedby={errors.businessName ? "error-businessName" : undefined}
 													className={cn(inputBaseClass, errors.businessName && "border-red-500/50")}
 												/>
 												{errors.businessName && (
-													<p className="mt-1.5 text-xs text-red-400">{errors.businessName}</p>
+													<p id="error-businessName" className="mt-1.5 text-xs text-red-400">
+														{errors.businessName}
+													</p>
 												)}
 											</div>
 											{formData.projectType === "refonte" && (
@@ -600,10 +606,13 @@ export function ProjectRequestForm() {
 													placeholder={t("namePlaceholder")}
 													value={formData.name}
 													onChange={handleChange}
+													aria-describedby={errors.name ? "error-name" : undefined}
 													className={cn(inputBaseClass, errors.name && "border-red-500/50")}
 												/>
 												{errors.name && (
-													<p className="mt-1.5 text-xs text-red-400">{errors.name}</p>
+													<p id="error-name" className="mt-1.5 text-xs text-red-400">
+														{errors.name}
+													</p>
 												)}
 											</div>
 											<div>
@@ -620,10 +629,13 @@ export function ProjectRequestForm() {
 													placeholder={t("emailPlaceholder")}
 													value={formData.email}
 													onChange={handleChange}
+													aria-describedby={errors.email ? "error-email" : undefined}
 													className={cn(inputBaseClass, errors.email && "border-red-500/50")}
 												/>
 												{errors.email && (
-													<p className="mt-1.5 text-xs text-red-400">{errors.email}</p>
+													<p id="error-email" className="mt-1.5 text-xs text-red-400">
+														{errors.email}
+													</p>
 												)}
 											</div>
 											<div>
@@ -670,6 +682,7 @@ export function ProjectRequestForm() {
 													rows={6}
 													value={formData.message}
 													onChange={handleChange}
+													aria-describedby={errors.message ? "error-message" : undefined}
 													className={cn(
 														inputBaseClass,
 														"resize-none",
@@ -677,7 +690,9 @@ export function ProjectRequestForm() {
 													)}
 												/>
 												{errors.message && (
-													<p className="mt-1.5 text-xs text-red-400">{errors.message}</p>
+													<p id="error-message" className="mt-1.5 text-xs text-red-400">
+														{errors.message}
+													</p>
 												)}
 											</div>
 										</div>

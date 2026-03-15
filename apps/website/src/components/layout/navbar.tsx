@@ -87,20 +87,24 @@ export function Navbar() {
 						className="flex h-9 w-9 items-center justify-center rounded-md text-djanni-gray-light transition-colors hover:bg-secondary hover:text-foreground"
 						aria-label={t("toggleTheme")}
 					>
-						<AnimatePresence mode="wait" initial={false}>
-							{mounted && (
-								<motion.span
-									key={theme}
-									initial={{ rotate: -90, scale: 0, opacity: 0 }}
-									animate={{ rotate: 0, scale: 1, opacity: 1 }}
-									exit={{ rotate: 90, scale: 0, opacity: 0 }}
-									transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-									className="flex items-center justify-center"
-								>
-									{theme === "dark" ? <IconSun size={18} /> : <IconMoon size={18} />}
-								</motion.span>
+						<span className="flex h-[18px] w-[18px] items-center justify-center">
+							{mounted ? (
+								<AnimatePresence mode="wait" initial={false}>
+									<motion.span
+										key={theme}
+										initial={{ rotate: -90, scale: 0, opacity: 0 }}
+										animate={{ rotate: 0, scale: 1, opacity: 1 }}
+										exit={{ rotate: 90, scale: 0, opacity: 0 }}
+										transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+										className="flex items-center justify-center"
+									>
+										{theme === "dark" ? <IconSun size={18} /> : <IconMoon size={18} />}
+									</motion.span>
+								</AnimatePresence>
+							) : (
+								<IconMoon size={18} className="opacity-0" />
 							)}
-						</AnimatePresence>
+						</span>
 					</button>
 				</li>
 				<li>
@@ -122,20 +126,24 @@ export function Navbar() {
 					className="flex h-9 w-9 items-center justify-center rounded-md text-djanni-gray-light transition-colors hover:text-foreground"
 					aria-label={t("toggleTheme")}
 				>
-					<AnimatePresence mode="wait" initial={false}>
-						{mounted && (
-							<motion.span
-								key={theme}
-								initial={{ rotate: -90, scale: 0, opacity: 0 }}
-								animate={{ rotate: 0, scale: 1, opacity: 1 }}
-								exit={{ rotate: 90, scale: 0, opacity: 0 }}
-								transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-								className="flex items-center justify-center"
-							>
-								{theme === "dark" ? <IconSun size={18} /> : <IconMoon size={18} />}
-							</motion.span>
+					<span className="flex h-[18px] w-[18px] items-center justify-center">
+						{mounted ? (
+							<AnimatePresence mode="wait" initial={false}>
+								<motion.span
+									key={theme}
+									initial={{ rotate: -90, scale: 0, opacity: 0 }}
+									animate={{ rotate: 0, scale: 1, opacity: 1 }}
+									exit={{ rotate: 90, scale: 0, opacity: 0 }}
+									transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+									className="flex items-center justify-center"
+								>
+									{theme === "dark" ? <IconSun size={18} /> : <IconMoon size={18} />}
+								</motion.span>
+							</AnimatePresence>
+						) : (
+							<IconMoon size={18} className="opacity-0" />
 						)}
-					</AnimatePresence>
+					</span>
 				</button>
 				<button
 					type="button"

@@ -16,7 +16,7 @@
 		},
 		"offres": {
 			"title": "Pricing & Plans — Djanni Studio",
-			"description": "Discover my website packages for craftspeople and local businesses. Starter, premium or redesign — clear pricing, no surprises."
+			"description": "Discover my website packages for craftspeople and local businesses. Presence, Showcase, Custom or redesign — clear pricing, no surprises."
 		},
 		"avis": {
 			"title": "Leave a Review — Djanni Studio",
@@ -26,6 +26,11 @@
 			"title": "Project Request — Djanni Studio",
 			"description": "Describe your web project and get a response within 24 hours. Simple and quick form."
 		}
+	},
+	"breadcrumb": {
+		"home": "Home",
+		"blog": "Blog",
+		"realisations": "Portfolio"
 	},
 	"nav": {
 		"realisations": "Portfolio",
@@ -37,12 +42,12 @@
 	},
 	"hero": {
 		"badge": "Djanni Studio — Brittany",
-		"titleStart": "Websites that ",
-		"titleHighlight": "work",
-		"titleEnd": " for you.",
-		"subtitle": "I create modern websites for local craftspeople and shop owners. No jargon, no surprises — just a site that represents you and brings in customers.",
-		"cta": "Start a project",
-		"seeWork": "See my work"
+		"titleStart": "Websites designed by a ",
+		"titleHighlight": "craftsman",
+		"titleEnd": ", for craftspeople.",
+		"subtitle": "Former carpenter, now a web developer based in Dinard — I create websites that speak your language and attract your customers. I mainly work with craftspeople in Brittany: Saint-Malo, Dinard, Côte d'Émeraude and surroundings.",
+		"cta": "Get my free quote",
+		"seeWork": "See my work →"
 	},
 	"stats": {
 		"deliveryValue": "2 wks",
@@ -54,8 +59,8 @@
 	},
 	"offres": {
 		"tag": "Pricing",
-		"title": "Simple. Clear. No surprises.",
-		"subtitle": "Three plans tailored to your project. Custom quote, no commitment.",
+		"title": "Websites built for hands-on professionals.",
+		"subtitle": "Not generic templates. Websites designed for your trade, your area, your customers.",
 		"heroTitle": "Pricing ",
 		"heroHighlight": "& Plans",
 		"heroSubtitle": "Choose the plan that fits your project. Every plan includes personalised support from start to finish.",
@@ -65,7 +70,7 @@
 			"items": [
 				{
 					"title": "Fast delivery",
-					"text": "Your site is live in 2 weeks max. No endless delays."
+					"text": "Your site is live in 2 to 3 weeks depending on the plan. No endless delays."
 				},
 				{
 					"title": "Flexible payment",
@@ -73,7 +78,118 @@
 				},
 				{
 					"title": "Support included",
-					"text": "30 days of support after launch. I'm here for your questions."
+					"text": "From 30 days to 3 months of support depending on the plan. I'm here for your questions."
+				}
+			]
+		},
+		"personas": {
+			"tag": "Who is it for?",
+			"title": "This is made for you if...",
+			"items": [
+				{
+					"offer": "Presence — €990",
+					"headline": "You don't have a website at all",
+					"points": [
+						"Plumber, electrician, roofer with no web presence",
+						"You're losing clients who search for you on Google",
+						"You want to be visible quickly, without hassle"
+					]
+				},
+				{
+					"offer": "Showcase — €1,490",
+					"headline": "You have an outdated site or a Yellow Pages listing",
+					"points": [
+						"Hairdresser, craftsperson, shopkeeper with an image to polish",
+						"You want to show your work and inspire trust",
+						"You want customers to find and contact you easily"
+					]
+				},
+				{
+					"offer": "Custom — from €1,990",
+					"headline": "You have specific needs",
+					"points": [
+						"Restaurant with online booking and dynamic menu",
+						"Salon with integrated appointment scheduling",
+						"Shop with product catalog or online store"
+					]
+				}
+			]
+		},
+		"comparison": {
+			"tag": "Comparison",
+			"title": "What's included in each plan",
+			"featureLabel": "Feature",
+			"presenceLabel": "Presence",
+			"presencePrice": "€990",
+			"vitrineLabel": "Showcase",
+			"vitrinePrice": "€1,490",
+			"customLabel": "Custom",
+			"customPrice": "from €1,990"
+		},
+		"addons": {
+			"tag": "À la carte",
+			"title": "Available options",
+			"subtitle": "These options can be added to any plan based on your needs.",
+			"items": [
+				{
+					"label": "Content writing",
+					"price": "+€150",
+					"desc": "I write your site content from a 30-minute conversation."
+				},
+				{
+					"label": "Google Business setup",
+					"price": "+€100",
+					"desc": "Optimised Google listing: photos, hours, description, categories."
+				},
+				{
+					"label": "Optional monthly maintenance",
+					"price": "€49/mo",
+					"desc": "Updates, backups, fixes — you don't have to worry about anything. No commitment, cancel anytime."
+				},
+				{
+					"label": "Additional page",
+					"price": "+€150/page",
+					"desc": "Extra page beyond the plan (gallery, wedding page, etc.)."
+				}
+			]
+		},
+		"roi": {
+			"tag": "Return on investment",
+			"title": "One signed job pays for your website.",
+			"text": "A plumber charging €600 per job only needs 2 new clients per month to recoup their site in under a year. A hairdresser with 3 extra bookings per week covers the investment from the first month.",
+			"stats": [
+				{ "value": "2-3", "label": "new clients are enough to pay for a showcase site" },
+				{ "value": "2 wks", "label": "average time to go live" },
+				{ "value": "€0", "label": "hidden fees" }
+			]
+		},
+		"pricingFaq": {
+			"tag": "FAQ",
+			"title": "Everything you need to know before getting started.",
+			"items": [
+				{
+					"question": "Can I start with Presence and upgrade later?",
+					"answer": "Yes. If you start with Presence and your needs grow, we can upgrade your site to Showcase or Custom. The amount already paid is deducted from the new quote."
+				},
+				{
+					"question": "Is there a mandatory monthly subscription?",
+					"answer": "No. You pay once at signing and once on delivery. Hosting on Vercel is free for your usage. The €49 monthly maintenance is 100% optional with no commitment — you can start, pause or cancel it anytime. No hidden fees."
+				},
+				{
+					"question": "What happens if I want to change the site after delivery?",
+					"answer": "Small fixes are included during the support period. Beyond that, I'm available on quote. You can also opt for monthly maintenance for peace of mind."
+				},
+				{
+					"question": "I don't have texts or photos. Can you help?",
+					"answer": "Yes. We write the texts together from a 30-minute conversation. If you don't have photos, we find a solution: professional stock images or local photographer partner (+€200)."
+				},
+				{
+					"question": "What's the timeline if I don't provide content quickly?",
+					"answer": "The 2-3 week timeline starts from when I have all the elements (texts, photos, info). If you struggle to gather content, the writing option at +€150 solves that."
+				},
+				{
+					"question": "Is there a guarantee on deadlines?",
+					"answer": "Yes. If the site isn't delivered within the agreed timeline for a reason attributable to me, I grant you a 10% discount per week of delay."
 				}
 			]
 		},
@@ -92,7 +208,7 @@
 			"priceSuffix": "€",
 			"priceNote": "€495 upfront • €495 on delivery",
 			"name": "Presence",
-			"description": "For those who don't have a website yet and want to be visible quickly.",
+			"description": "You don't exist on Google. We fix that in 2 weeks.",
 			"features": [
 				"1 multi-section landing page",
 				"Custom design",
@@ -104,7 +220,7 @@
 				"30-day support",
 				"Delivered in 2 weeks"
 			],
-			"ctaLabel": "Get started"
+			"ctaLabel": "Start my site"
 		},
 		"vitrine": {
 			"badge": "Most popular",
@@ -113,7 +229,7 @@
 			"priceSuffix": "€",
 			"priceNote": "50% upfront • 50% on delivery",
 			"name": "Showcase",
-			"description": "For those who want a real structured website, not just a page.",
+			"description": "A real business tool — not just a digital business card.",
 			"features": [
 				"Up to 5 pages",
 				"Photo gallery / portfolio",
@@ -125,7 +241,7 @@
 				"1-month support",
 				"Delivered in 3 weeks"
 			],
-			"ctaLabel": "Get started"
+			"ctaLabel": "Start my site"
 		},
 		"surmesure": {
 			"badge": "Custom",
@@ -134,7 +250,7 @@
 			"priceSuffix": "€",
 			"priceNote": "Price set after discussion • Payment in 2 installments",
 			"name": "Custom",
-			"description": "For those with specific needs.",
+			"description": "You have specific needs. We build exactly what's required.",
 			"features": [
 				"Up to 8 pages",
 				"Appointment booking (Cal.com)",
@@ -146,7 +262,7 @@
 				"1-month follow-up meeting",
 				"Delivered in 3-5 weeks"
 			],
-			"ctaLabel": "Request a quote"
+			"ctaLabel": "Let's talk about my project"
 		}
 	},
 	"pourquoi": {
@@ -156,30 +272,30 @@
 		"reasons": [
 			{
 				"number": "01",
-				"title": "I understand craftspeople",
-				"text": "Carpenter by trade, I know what it's like to work with your hands and manage clients. No jargon, no BS."
+				"title": "I come from the field",
+				"text": "Before coding websites, I was building roof frames. I know the job sites, the quotes to write in the evening, the clients to reassure. No other dev can tell you that."
 			},
 			{
 				"number": "02",
-				"title": "Local & available",
-				"text": "Based in Brittany, available to meet in person. Not a provider on the other side of the world you'll never see."
+				"title": "I come to you",
+				"text": "Based in Dinard, I visit your premises in Saint-Malo, Dinard and across the Côte d'Émeraude. I understand your trade before talking pixels."
 			},
 			{
 				"number": "03",
-				"title": "Fixed price, no surprises",
-				"text": "Signed quote before starting. 50% upfront, 50% on delivery. You know exactly what you're paying."
+				"title": "You stay in control",
+				"text": "Your website doesn't belong to you if you're locked into your provider. With me: no mandatory subscription, no dependency. You're free."
 			},
 			{
 				"number": "04",
-				"title": "Delivered in 2-3 weeks",
-				"text": "No 6-month wait. A clear timeline, defined milestones, a site delivered on schedule."
+				"title": "Delivered in 2-3 weeks, not 6 months",
+				"text": "A clear timeline, defined milestones. One single point of contact, reachable directly — not an agency with 5 different people."
 			}
 		]
 	},
 	"profileCard": {
 		"name": "Gianni — Djanni Studio",
 		"role": "Freelance web developer · Brittany",
-		"quote": "I'm a carpenter by trade. I learned to build things that are solid, lasting, and truly useful. I apply the same philosophy to the web."
+		"quote": "For years, I built roof frames in the Breton rain. I learned that good work doesn't show — it's what holds up over time, without frills. I apply the same logic to the web: solid, clean, and genuinely useful."
 	},
 	"temoignages": {
 		"tag": "Testimonials",
@@ -221,11 +337,11 @@
 		"items": [
 			{
 				"question": "How long does it take to create a website?",
-				"answer": "On average, a starter website is delivered in 2 weeks. A premium site takes about 3 weeks. I give you a precise timeline as soon as the quote is signed."
+				"answer": "On average, a Showcase plan is delivered in 2 weeks. A Custom plan takes about 3 weeks. I give you a precise timeline as soon as the quote is signed."
 			},
 			{
 				"question": "I know nothing about technology, is that a problem?",
-				"answer": "Not at all. That's actually most of my clients. I handle all the technical aspects and explain everything in simple terms. All you need to provide is your texts and photos."
+				"answer": "Not at all. That's actually most of my clients. I handle all the technical aspects and explain everything in simple terms. For the texts, we write them together based on your words — no need to be a writer. If you don't have photos, we find a solution: local photographer or professional stock images. You don't need to prepare anything to get started."
 			},
 			{
 				"question": "What happens after the site goes live?",
@@ -249,25 +365,25 @@
 			},
 			{
 				"question": "Can I edit my site myself?",
-				"answer": "It depends on the plan chosen. For a starter site, changes go through me (included in the maintenance plan). For a premium site, I can integrate a content management system if you want to be autonomous."
+				"answer": "It depends on the plan chosen. For a Showcase site, changes go through me (included in the maintenance plan). For a Custom site, I can integrate a content management system if you want to be autonomous."
 			},
 			{
-				"question": "Do you work outside of Brittany?",
-				"answer": "Of course. Most of my clients are in Brittany, but I work remotely with craftspeople and shop owners throughout France. Video call, phone, email — we adapt."
+				"question": "What area do you cover?",
+				"answer": "My main area is the Dinard / Saint-Malo / Dinan basin — I physically visit my clients in that zone. Beyond that, I work remotely with craftspeople all over France. Video call, phone, email: we adapt."
 			}
 		]
 	},
 	"contact": {
 		"tag": "Contact",
-		"title": "Your project deserves a great site.",
-		"subtitle": "Tell me what you do, I'll show you what it could look like. Free initial consultation, no commitment.",
+		"title": "A project starts with a conversation.",
+		"subtitle": "Tell me what you do, where you are, what you're missing. I'll show you what it could look like. Free initial consultation, no commitment — just like any good craftsman.",
 		"step0Title": "What's your project?",
 		"step1Title": "How can we reach you?",
 		"step2Title": "Tell us about your project",
 		"projectType": "Choose a project type",
 		"projectTypes": {
-			"site-vitrine": "Starter Website",
-			"site-premium": "Premium Website",
+			"site-vitrine": "Showcase",
+			"site-premium": "Custom",
 			"refonte": "Website Redesign",
 			"autre": "Other"
 		},
@@ -363,7 +479,8 @@
 		"cta": {
 			"title": "Want to work together?",
 			"subtitle": "Free initial consultation, no commitment. Tell me about your project.",
-			"button": "Start a project"
+			"button": "Start a project",
+			"seeOffers": "See pricing"
 		}
 	},
 	"realisationsHome": {
@@ -451,8 +568,8 @@
 		"projectTypeLabel": "Project type",
 		"projectType": "Choose a project type",
 		"projectTypes": {
-			"site-vitrine": "Starter Website",
-			"site-premium": "Premium Website",
+			"site-vitrine": "Showcase",
+			"site-premium": "Custom",
 			"refonte": "Redesign",
 			"autre": "Other"
 		},
@@ -514,10 +631,10 @@
 	},
 	"ctaContact": {
 		"tag": "Contact",
-		"title": "Your project deserves a great website.",
-		"subtitle": "Tell me what you do, I'll show you what it could look like. First exchange free, no commitment.",
+		"title": "A project starts with a conversation.",
+		"subtitle": "Tell me what you do, where you are, what you're missing. I'll show you what it could look like. Free initial consultation, no commitment — just like any good craftsman.",
 		"button": "Start my project",
-		"or": "Or call directly"
+		"or": "Or call directly, that works too"
 	},
 	"footer": {
 		"tagline": "Websites for craftspeople and local businesses in Brittany",
@@ -529,6 +646,9 @@
 		"privacy": "Privacy policy",
 		"legal": "Legal notice",
 		"cgv": "Terms",
+		"paymentTransfer": "Bank transfer",
+		"paymentCard": "Credit card",
+		"paymentCheck": "Cheque",
 		"copyright": "© 2026 Djanni Studio — All rights reserved"
 	}
 }

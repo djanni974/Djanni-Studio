@@ -1,9 +1,20 @@
 "use client"
 
-import { IconArrowRight, IconClock, IconCreditCard, IconHeadset } from "@tabler/icons-react"
+import {
+	IconArrowRight,
+	IconCheck,
+	IconClock,
+	IconCreditCard,
+	IconHammer,
+	IconHeadset,
+	IconMinus,
+	IconScissors,
+	IconToolsKitchen2,
+} from "@tabler/icons-react"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 import { PricingCard } from "@/components/cards/pricing-card"
+import { Accordion } from "@/components/ui/accordion"
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section"
 import { SectionHeader } from "@/components/ui/section-header"
 import { Link } from "@/i18n/navigation"
@@ -11,6 +22,31 @@ import type { PricingTier } from "@/lib/constants"
 
 const TIER_KEYS = ["presence", "vitrine", "surmesure"] as const
 const GUARANTEE_ICONS = [IconClock, IconCreditCard, IconHeadset]
+const PERSONA_ICONS = [IconHammer, IconScissors, IconToolsKitchen2]
+
+const COMPARISON_ROWS: {
+	feature: string
+	presence: boolean | string
+	vitrine: boolean | string
+	custom: boolean | string
+}[] = [
+	{ feature: "Design sur mesure", presence: true, vitrine: true, custom: true },
+	{ feature: "100% responsive mobile", presence: true, vitrine: true, custom: true },
+	{ feature: "SEO de base (title, meta, OG)", presence: true, vitrine: true, custom: true },
+	{ feature: "SSL + déploiement", presence: true, vitrine: true, custom: true },
+	{ feature: "Formation à la prise en main", presence: "1h", vitrine: "2h", custom: "3h" },
+	{ feature: "Support après livraison", presence: "30 jours", vitrine: "1 mois", custom: "3 mois" },
+	{ feature: "Nombre de pages", presence: "1", vitrine: "jusqu'à 5", custom: "jusqu'à 8" },
+	{ feature: "Galerie photos / réalisations", presence: false, vitrine: true, custom: true },
+	{ feature: "Animations soignées", presence: false, vitrine: true, custom: true },
+	{ feature: "SEO intermédiaire (Lighthouse 90+)", presence: false, vitrine: true, custom: true },
+	{ feature: "Analytics (Plausible / GA)", presence: false, vitrine: true, custom: true },
+	{ feature: "Prise de RDV en ligne", presence: false, vitrine: false, custom: true },
+	{ feature: "Blog / CMS", presence: false, vitrine: false, custom: true },
+	{ feature: "Catalogue produits", presence: false, vitrine: false, custom: true },
+	{ feature: "Multilingue", presence: false, vitrine: false, custom: true },
+	{ feature: "Réunion de suivi à 1 mois", presence: false, vitrine: false, custom: true },
+]
 
 export function OffresContent() {
 	const t = useTranslations("offres")
@@ -73,6 +109,194 @@ export function OffresContent() {
 							<PricingCard key={tier.name} tier={tier} />
 						))}
 					</div>
+				</div>
+			</section>
+
+			{/* Personas */}
+			<section className="bg-surface-a px-5 py-24 md:px-12">
+				<div className="mx-auto max-w-[1100px]">
+					<AnimatedSection>
+						<SectionHeader tag={t("personas.tag")} title={t("personas.title")} />
+					</AnimatedSection>
+
+					<StaggerContainer className="mt-14 grid gap-6 md:grid-cols-3">
+						{(
+							t.raw("personas.items") as {
+								offer: string
+								headline: string
+								points: string[]
+							}[]
+						).map((item, i) => {
+							const PersonaIcon = PERSONA_ICONS[i]
+							return (
+								<StaggerItem key={i}>
+									<div
+										className={`rounded-2xl border bg-surface-b p-6 ${i === 1 ? "border-djanni-orange ring-1 ring-djanni-orange/20" : "border-border"}`}
+									>
+										<div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface-a">
+											<PersonaIcon size={20} className="text-djanni-orange" />
+										</div>
+										<p className="mb-2 text-[11px] font-medium uppercase tracking-[0.15em] text-djanni-orange">
+											{item.offer}
+										</p>
+										<p className="mb-3 font-heading font-semibold">{item.headline}</p>
+										<ul className="space-y-2 text-sm text-djanni-gray-light">
+											{item.points.map((point, j) => (
+												<li key={j}>→ {point}</li>
+											))}
+										</ul>
+									</div>
+								</StaggerItem>
+							)
+						})}
+					</StaggerContainer>
+				</div>
+			</section>
+
+			{/* Comparison table */}
+			<section className="bg-surface-b px-5 py-24 md:px-12">
+				<div className="mx-auto max-w-[1100px]">
+					<AnimatedSection>
+						<SectionHeader tag={t("comparison.tag")} title={t("comparison.title")} align="center" />
+					</AnimatedSection>
+
+					<AnimatedSection delay={0.2}>
+						<div className="mt-14 overflow-x-auto">
+							<table className="w-full text-sm">
+								<thead>
+									<tr className="border-b border-border">
+										<th className="w-1/2 py-4 pr-6 text-left font-normal text-djanni-gray-light">
+											{t("comparison.featureLabel")}
+										</th>
+										<th className="px-4 py-4 text-center font-semibold">
+											{t("comparison.presenceLabel")}
+											<span className="mt-1 block text-xs font-normal text-djanni-gray-light">
+												{t("comparison.presencePrice")}
+											</span>
+										</th>
+										<th className="px-4 py-4 text-center font-semibold text-djanni-orange">
+											{t("comparison.vitrineLabel")}
+											<span className="mt-1 block text-xs font-normal text-djanni-orange/60">
+												{t("comparison.vitrinePrice")}
+											</span>
+										</th>
+										<th className="px-4 py-4 text-center font-semibold">
+											{t("comparison.customLabel")}
+											<span className="mt-1 block text-xs font-normal text-djanni-gray-light">
+												{t("comparison.customPrice")}
+											</span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									{COMPARISON_ROWS.map((row, i) => (
+										<tr
+											key={i}
+											className={`border-b border-border/50 ${i % 2 === 0 ? "bg-surface-a/50" : ""}`}
+										>
+											<td className="py-3 pr-6 text-djanni-gray-light">{row.feature}</td>
+											{(["presence", "vitrine", "custom"] as const).map((col) => {
+												const val = row[col]
+												return (
+													<td
+														key={col}
+														className={`px-4 py-3 text-center ${col === "vitrine" ? "bg-djanni-orange/5" : ""}`}
+													>
+														{val === true ? (
+															<IconCheck
+																size={16}
+																className={`mx-auto ${col === "vitrine" ? "text-djanni-orange" : "text-green-600"}`}
+															/>
+														) : val === false ? (
+															<IconMinus size={14} className="mx-auto text-foreground/20" />
+														) : (
+															<span
+																className={`text-xs ${col === "vitrine" ? "font-medium text-djanni-orange/80" : "text-djanni-gray-light"}`}
+															>
+																{val}
+															</span>
+														)}
+													</td>
+												)
+											})}
+										</tr>
+									))}
+								</tbody>
+							</table>
+						</div>
+					</AnimatedSection>
+				</div>
+			</section>
+
+			{/* Add-ons */}
+			<section className="bg-surface-a px-5 py-24 md:px-12">
+				<div className="mx-auto max-w-[1100px]">
+					<AnimatedSection>
+						<SectionHeader
+							tag={t("addons.tag")}
+							title={t("addons.title")}
+							subtitle={t("addons.subtitle")}
+						/>
+					</AnimatedSection>
+
+					<StaggerContainer className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+						{(t.raw("addons.items") as { label: string; price: string; desc: string }[]).map(
+							(opt, i) => (
+								<StaggerItem key={i}>
+									<div className="rounded-2xl border border-border bg-surface-b p-6 transition-shadow hover:shadow-md">
+										<p className="mb-1 font-heading text-lg font-bold text-djanni-orange">
+											{opt.price}
+										</p>
+										<p className="mb-2 font-semibold">{opt.label}</p>
+										<p className="text-sm text-djanni-gray-light">{opt.desc}</p>
+									</div>
+								</StaggerItem>
+							),
+						)}
+					</StaggerContainer>
+				</div>
+			</section>
+
+			{/* ROI */}
+			<section className="bg-surface-b px-5 py-24 md:px-12">
+				<div className="mx-auto max-w-[800px] text-center">
+					<AnimatedSection>
+						<SectionHeader
+							tag={t("roi.tag")}
+							title={t("roi.title")}
+							subtitle={t("roi.text")}
+							align="center"
+						/>
+					</AnimatedSection>
+
+					<StaggerContainer className="mt-12 grid gap-6 sm:grid-cols-3">
+						{(t.raw("roi.stats") as { value: string; label: string }[]).map((item, i) => (
+							<StaggerItem key={i}>
+								<div className="rounded-2xl border border-border bg-surface-a p-6">
+									<p className="mb-2 font-heading text-3xl font-bold text-djanni-orange">
+										{item.value}
+									</p>
+									<p className="text-sm text-djanni-gray-light">{item.label}</p>
+								</div>
+							</StaggerItem>
+						))}
+					</StaggerContainer>
+				</div>
+			</section>
+
+			{/* Pricing FAQ */}
+			<section className="bg-surface-b px-5 py-24 md:px-12">
+				<div className="mx-auto max-w-[800px]">
+					<AnimatedSection>
+						<SectionHeader tag={t("pricingFaq.tag")} title={t("pricingFaq.title")} align="center" />
+					</AnimatedSection>
+
+					<AnimatedSection delay={0.2} className="mt-14">
+						<Accordion
+							id="offres-faq"
+							items={t.raw("pricingFaq.items") as { question: string; answer: string }[]}
+						/>
+					</AnimatedSection>
 				</div>
 			</section>
 

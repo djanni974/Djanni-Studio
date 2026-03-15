@@ -1,23 +1,51 @@
+import { Ratelimit } from "@upstash/ratelimit"
+import { Redis } from "@upstash/redis"
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 
-// ─── Rate limiter ────────────────────────────────────────────
-const RATE_LIMIT_WINDOW_MS = 60 * 1000 // 1 minute
-const RATE_LIMIT_MAX = 3 // max 3 requests per window per IP
+// ─── Rate limiter (Upstash Redis — works in serverless) ─────
+// Fallback to in-memory if Upstash is not configured
+const hasUpstash = process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
 
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
+const ratelimit = hasUpstash
+	? new Ratelimit({
+			redis: Redis.fromEnv(),
+			limiter: Ratelimit.slidingWindow(3, "60 s"),
+			analytics: true,
+		})
+	: null
 
-function isRateLimited(ip: string): boolean {
-	const now = Date.now()
-	const entry = rateLimitMap.get(ip)
+const memoryMap = new Map<string, { count: number; resetAt: number }>()
 
-	if (!entry || now > entry.resetAt) {
-		rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS })
-		return false
+async function checkRateLimit(ip: string): Promise<boolean> {
+	if (ratelimit) {
+		const { success } = await ratelimit.limit(ip)
+		return success
 	}
-
+	// In-memory fallback (dev / missing config)
+	const now = Date.now()
+	const entry = memoryMap.get(ip)
+	if (!entry || now > entry.resetAt) {
+		memoryMap.set(ip, { count: 1, resetAt: now + 60_000 })
+		return true
+	}
 	entry.count++
-	return entry.count > RATE_LIMIT_MAX
+	return entry.count <= 3
+}
+
+// ─── Origin / Referer CSRF check ────────────────────────────
+const ALLOWED_ORIGINS = [
+	"https://www.djannistudio.fr",
+	"https://djannistudio.fr",
+	...(process.env.NODE_ENV === "development" ? ["http://localhost:3000"] : []),
+]
+
+function isOriginAllowed(request: Request): boolean {
+	const origin = request.headers.get("origin")
+	const referer = request.headers.get("referer")
+	if (origin) return ALLOWED_ORIGINS.some((o) => origin.startsWith(o))
+	if (referer) return ALLOWED_ORIGINS.some((o) => referer.startsWith(o))
+	return false
 }
 
 function getResend() {
@@ -26,7 +54,7 @@ function getResend() {
 	return new Resend(key)
 }
 
-const RECIPIENT = "contact@djannistudio.fr"
+const RECIPIENT = process.env.CONTACT_EMAIL || "contact@djannistudio.fr"
 
 type ContactPayload = {
 	name: string
@@ -40,8 +68,8 @@ type ContactPayload = {
 }
 
 const PROJECT_LABELS: Record<string, string> = {
-	"site-vitrine": "Site Vitrine",
-	"site-premium": "Site Premium",
+	"site-vitrine": "Vitrine",
+	"site-premium": "Sur mesure",
 	refonte: "Refonte de site existant",
 	autre: "Autre",
 }
@@ -64,18 +92,29 @@ const DEADLINE_LABELS: Record<string, string> = {
 function validate(data: unknown): data is ContactPayload {
 	if (!data || typeof data !== "object") return false
 	const d = data as Record<string, unknown>
-	return (
-		typeof d.name === "string" &&
-		d.name.trim().length > 0 &&
-		typeof d.email === "string" &&
-		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/.test(
-			d.email,
-		) &&
-		typeof d.projectType === "string" &&
-		d.projectType.trim().length > 0 &&
-		typeof d.message === "string" &&
-		d.message.trim().length > 0
+
+	if (
+		typeof d.name !== "string" ||
+		d.name.trim().length === 0 ||
+		typeof d.email !== "string" ||
+		typeof d.projectType !== "string" ||
+		d.projectType.trim().length === 0 ||
+		typeof d.message !== "string" ||
+		d.message.trim().length === 0
 	)
+		return false
+
+	// Email format + reject header injection characters
+	const email = d.email
+	if (/[\r\n%]/.test(email)) return false
+	if (
+		!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/.test(
+			email,
+		)
+	)
+		return false
+
+	return true
 }
 
 function optionalRow(label: string, value: string | undefined): string {
@@ -255,13 +294,21 @@ function escapeHtml(str: string): string {
 		.replace(/</g, "&lt;")
 		.replace(/>/g, "&gt;")
 		.replace(/"/g, "&quot;")
+		.replace(/'/g, "&#39;")
 }
 
 export async function POST(request: Request) {
 	try {
-		const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown"
+		// ─── CSRF: verify origin ─────────────────────────────
+		if (!isOriginAllowed(request)) {
+			return NextResponse.json({ error: "Origine non autorisée." }, { status: 403 })
+		}
 
-		if (isRateLimited(ip)) {
+		// ─── Rate limiting (Upstash Redis / fallback memory) ─
+		const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown"
+		const allowed = await checkRateLimit(ip)
+
+		if (!allowed) {
 			return NextResponse.json(
 				{ error: "Trop de requêtes. Réessayez dans une minute." },
 				{ status: 429 },

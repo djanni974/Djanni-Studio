@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { setRequestLocale } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 import { CaseStudyContent } from "@/components/sections/case-study-content"
 import { PROJECTS } from "@/lib/constants"
 import { getAlternates } from "@/lib/metadata"
@@ -27,6 +27,14 @@ export async function generateMetadata({
 		openGraph: {
 			title: `${project.name} — Djanni Studio`,
 			description: project.context.slice(0, 160),
+			images: [
+				{
+					url: project.image || "/og-image.png",
+					width: 1200,
+					height: 630,
+					alt: project.name,
+				},
+			],
 		},
 	}
 }
@@ -38,6 +46,7 @@ export default async function CaseStudyPage({
 }) {
 	const { slug, locale } = await params
 	setRequestLocale(locale)
+	const bc = await getTranslations({ locale, namespace: "breadcrumb" })
 	const project = PROJECTS.find((p) => p.slug === slug)
 	if (!project) notFound()
 
@@ -48,13 +57,13 @@ export default async function CaseStudyPage({
 			{
 				"@type": "ListItem",
 				position: 1,
-				name: "Accueil",
+				name: bc("home"),
 				item: "https://www.djannistudio.fr",
 			},
 			{
 				"@type": "ListItem",
 				position: 2,
-				name: "Réalisations",
+				name: bc("realisations"),
 				item: "https://www.djannistudio.fr/realisations",
 			},
 			{

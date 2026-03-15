@@ -1,11 +1,15 @@
 import { IconArrowLeft } from "@tabler/icons-react"
 import type { Metadata } from "next"
 import { Link } from "@/i18n/navigation"
+import { getAlternates } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-	title: "Politique de confidentialité — Djanni Studio",
-	description:
-		"Politique de confidentialité du site Djanni Studio — Protection de vos données personnelles conformément au RGPD.",
+export function generateMetadata(): Metadata {
+	return {
+		title: "Politique de confidentialité — Djanni Studio",
+		description:
+			"Politique de confidentialité du site Djanni Studio — Protection de vos données personnelles conformément au RGPD.",
+		alternates: getAlternates("/politique-de-confidentialite"),
+	}
 }
 
 const sections = [

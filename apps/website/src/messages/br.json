@@ -16,7 +16,7 @@
 		},
 		"offres": {
 			"title": "Tarifioù & Kinnigoù — Djanni Studio",
-			"description": "Dizoleiit ma c'hinnigoù evit krouiñ lec'hiennoù web evit an artizaned hag ar c'henwerzhourion. Lec'hienn vitrin, lec'hienn premium pe adnevesaat — tarifioù sklaer, hep souezhadenn."
+			"description": "Dizoleiit ma c'hinnigoù evit krouiñ lec'hiennoù web evit an artizaned hag ar c'henwerzhourion. Prezañs, Vitrine, War-bouez pe adnevesaat — tarifioù sklaer, hep souezhadenn."
 		},
 		"avis": {
 			"title": "Lezit un ali — Djanni Studio",
@@ -26,6 +26,11 @@
 			"title": "Goulenn raktres — Djanni Studio",
 			"description": "Deskrivit ho raktres web ha resevit ur respont a-benn 24e. Furmskrid simpl ha buan."
 		}
+	},
+	"breadcrumb": {
+		"home": "Degemer",
+		"blog": "Blog",
+		"realisations": "Obererezhioù"
 	},
 	"nav": {
 		"realisations": "Obererezhioù",
@@ -37,12 +42,12 @@
 	},
 	"hero": {
 		"badge": "Djanni Studio — Breizh",
-		"titleStart": "Lec'hiennoù web a ",
-		"titleHighlight": "labour",
-		"titleEnd": " evidoc'h.",
-		"subtitle": "Krouiñ a ran lec'hiennoù web modern evit an artizaned hag ar c'henwerzhourion lec'hel. Hep yezh vevenn, hep souezhadenn — ul lec'hienn a zere deoc'h hag a gas kustumerien.",
-		"cta": "Kregiñ gant ur raktres",
-		"seeWork": "Gwelet ma obererezhioù"
+		"titleStart": "Lec'hiennoù web soñjet gant un ",
+		"titleHighlight": "artizaned",
+		"titleEnd": ", evit an artizaned.",
+		"subtitle": "Charpaentour gwechall, diorroerien web e Dinard bremañ — krouiñ a ran lec'hiennoù a gomz ho yezh hag a zedenn ho kustumerien. Labourat a ran dreist-holl gant artizaned e Breizh : Sant-Maloù, Dinarzh, Aod an Emrod ha tro-war-dro.",
+		"cta": "Goulenn ma devis digoust",
+		"seeWork": "Gwelet ma obererezhioù →"
 	},
 	"stats": {
 		"deliveryValue": "2 simun",
@@ -54,8 +59,8 @@
 	},
 	"offres": {
 		"tag": "Tarifioù",
-		"title": "Aes. Splann. Hep souezhadenn.",
-		"subtitle": "Tri formulenn diazezet war ho raktres. Devis personel, hep gwarant.",
+		"title": "Lec'hiennoù savet evit tud ar maez.",
+		"subtitle": "Ket patromoù doareel. Lec'hiennoù krouet evit ho micher, ho korn-bro, ho kustumerien.",
 		"heroTitle": "Tarifioù ",
 		"heroHighlight": "& Kinnigoù",
 		"heroSubtitle": "Dibabit ar formulenn a zere d'ho raktres. Pep formulenn a endalc'h un hentenn personel eus A da Z.",
@@ -65,7 +70,7 @@
 			"items": [
 				{
 					"title": "Livrañ prim",
-					"text": "Ho lec'hienn a zo en linenn e 2 sizhun d'ar muiañ. Hep amlederioù hir."
+					"text": "Ho lec'hienn a zo en linenn e 2 da 3 sizhun hervez ar formulenn. Hep amlederioù hir."
 				},
 				{
 					"title": "Paeañ soubleg",
@@ -73,7 +78,121 @@
 				},
 				{
 					"title": "Skor endalc'het",
-					"text": "30 devezh a skor goude al lakaat en linenn. Hegerz on evit ho goulennoù."
+					"text": "Eus 30 devezh da 3 miz a skor hervez ar formulenn. Hegerz on evit ho goulennoù."
+				}
+			]
+		},
+		"personas": {
+			"tag": "Evit piv ?",
+			"title": "Graet eo evidoc'h ma...",
+			"items": [
+				{
+					"offer": "Prezañs — 990€",
+					"headline": "N'ho peus lec'hienn ebet",
+					"points": [
+						"Plomer, elektriker, toer hep prezañs web",
+						"Koll a rit kustumerien a glasko ac'hanoc'h war Google",
+						"Fellout a ra deoc'h bezañ gwelus buan, hep kemplezhed"
+					]
+				},
+				{
+					"offer": "Vitrine — 1 490€",
+					"headline": "Ul lec'hienn kozh ho peus pe ur fichennad PagesJaunes",
+					"points": [
+						"Kiger, artizaned, kenwerzhour gant ur skeudenn da gempenn",
+						"Fellout a ra deoc'h diskouez ho labourioù ha lakaat fiziañs",
+						"Fellout a ra deoc'h e c'hallfe ho kustumerien ho kavout ha mont e darempred ganeoc'h aes"
+					]
+				},
+				{
+					"offer": "War-bouez — adalek 1 990€",
+					"headline": "Ezhommoù resis ho peus",
+					"points": [
+						"Preti gant rezervadenn en linenn ha roll-dibr buhezek",
+						"Salon gant kemer randevou enframmet",
+						"Kenwerzh gant katalog pe stal en linenn"
+					]
+				}
+			]
+		},
+		"comparison": {
+			"tag": "Keñveriadenn",
+			"title": "Petra a zo endalc'het e pep formulenn",
+			"featureLabel": "Arc'hant",
+			"presenceLabel": "Prezañs",
+			"presencePrice": "990€",
+			"vitrineLabel": "Vitrine",
+			"vitrinePrice": "1 490€",
+			"customLabel": "War-bouez",
+			"customPrice": "adalek 1 990€"
+		},
+		"addons": {
+			"tag": "Diwar-choaz",
+			"title": "Dibarzhioù hegerz",
+			"subtitle": "An dibarzhioù-mañ a c'haller ouzhpennañ da fep formulenn hervez ho ezhommoù.",
+			"items": [
+				{
+					"label": "Skrivañ an testennoù",
+					"price": "+150€",
+					"desc": "Skrivañ a ran danvez ho lec'hienn diwar un eskemm 30 munut."
+				},
+				{
+					"label": "Kefluniañ Google Business",
+					"price": "+100€",
+					"desc": "Fichennad Google gwellaet : skeudennoù, eurioù, deskrivadur, rummadoù."
+				},
+				{
+					"label": "Kendalc'hañ miziek diret",
+					"price": "49€/miz",
+					"desc": "Hizivadennoù, enrolladennoù, reizhadennoù — ne fell ket deoc'h ober netra. Hep engouestl, dilemel a c'heller da bep mare."
+				},
+				{
+					"label": "Pajenn ouzhpenn",
+					"price": "+150€/pajenn",
+					"desc": "Ouzhpennañ ur bajenn dreist ar forfed (galerienn, pajenn eured, hag all)."
+				}
+			]
+		},
+		"roi": {
+			"tag": "Endalc'had war an envestisman",
+			"title": "Ur c'hantier sinet hepken a bae ho lec'hienn.",
+			"text": "Ur plomer a faktur 600€ dre emelezh en deus ezhomm 2 c'hustumer nevez bep miz evit rentabilizañ e lec'hienn e nebeutoc'h eget ur bloaz. Ur c'higer gant 3 rezervadenn ouzhpenn bep sizhun a go an envestisman adalek ar miz kentañ.",
+			"stats": [
+				{
+					"value": "2-3",
+					"label": "kustumer nevez a zo trawalc'h evit paeañ ul lec'hienn vitrine"
+				},
+				{ "value": "2 sim.", "label": "amzer keit evit lakaat en linenn" },
+				{ "value": "0€", "label": "fraoù kuzh" }
+			]
+		},
+		"pricingFaq": {
+			"tag": "Goulennoù alies",
+			"title": "Kement tra a zo da c'houzout a-raok kregiñ.",
+			"items": [
+				{
+					"question": "Ha gallout a ran kregiñ gant Prezañs hag hizivaat diwezhatoc'h ?",
+					"answer": "Ya. Ma krogit gant Prezañs ha ma teu ho ezhommoù da cheñch, e c'hellomp lakaat ho lec'hienn da greskiñ war-du Vitrine pe War-bouez. Ar sammad paeet dija a zo dilamet eus an devis nevez."
+				},
+				{
+					"question": "Ha bez' ez eus un abonnañ miziek rediet ?",
+					"answer": "Nann. Paeañ a rit ur wech d'ar sinadur hag ur wech d'al livradur. Herberc'hiañ war Vercel a zo digoust evit ho implij. Ar c'hendalc'hañ miziek da 49€ a zo 100% diret ha hep engouestl — gallout a rit e gemer, e ehanañ pe e zilemel da bep mare. Fraoù kuzh ebet."
+				},
+				{
+					"question": "Petra a c'hoarvez ma fell din cheñch al lec'hienn goude al livradur ?",
+					"answer": "Ar reizhadennoù bihan a zo endalc'het e-pad ar mare skor. Goude-se, hegerz on war devis. Gallout a rit ivez dibab ar c'hendalc'hañ miziek evit bezañ sioul."
+				},
+				{
+					"question": "N'am eus ket testennoù na skeudennoù. Gallout a rit sikour ?",
+					"answer": "Ya. Skrivañ a reomp an testennoù asambles diwar un eskemm 30 munut. Ma n'ho peus ket skeudennoù, kavout a reomp un diskoulm : stal skeudennoù a-vicher pe luc'hskeudenner lec'hel (+200€)."
+				},
+				{
+					"question": "Pegement a amzer ma ne bourchazan ket an danvezioù buan ?",
+					"answer": "An amzer 2-3 sizhun a grog adalek ma'm eus an holl elfennoù (testennoù, skeudennoù, titouroù). Ma'z eo diaes deoc'h dastum an danvezioù, an dibarzh skrivañ da +150€ a ziskoulm kement-se."
+				},
+				{
+					"question": "Ha bez' ez eus ur garantez war an amzerioù ?",
+					"answer": "Ya. Ma n'eo ket livret al lec'hienn en amzer emglevet en devis evit un abeg din, reiñ a ran deoc'h ur vihannaat a 10% dre sizhun dale."
 				}
 			]
 		},
@@ -92,7 +211,7 @@
 			"priceSuffix": "€",
 			"priceNote": "495€ da sinañ • 495€ da livriñ",
 			"name": "Prezañs",
-			"description": "Evit an hini n'en deus ket a lec'hienn ha fell dezhañ bezañ gwelus buan.",
+			"description": "N'oc'h ket war Google. Reizhañ a raimp kement-se e 2 sizhun.",
 			"features": [
 				"1 pajenn liesrannoù",
 				"Dezign war-bouez",
@@ -104,7 +223,7 @@
 				"Skoazell 30 devezh",
 				"Livret e 2 sizhun"
 			],
-			"ctaLabel": "Kregiñ"
+			"ctaLabel": "Kregiñ gant ma lec'hienn"
 		},
 		"vitrine": {
 			"badge": "Ar muiañ dibabet",
@@ -113,7 +232,7 @@
 			"priceSuffix": "€",
 			"priceNote": "50% da sinañ • 50% da livriñ",
 			"name": "Vitrine",
-			"description": "Evit an hini a fell dezhañ ul lec'hienn strukturoù, ket just ur bajenn.",
+			"description": "Un ostilh labour gwir — ket just ur gartenn-visit niverel.",
 			"features": [
 				"Betek 5 pajenn",
 				"Galerienn skeudennoù / portfolio",
@@ -125,7 +244,7 @@
 				"Skoazell 1 miz",
 				"Livret e 3 sizhun"
 			],
-			"ctaLabel": "Kregiñ"
+			"ctaLabel": "Kregiñ gant ma lec'hienn"
 		},
 		"surmesure": {
 			"badge": "War-bouez",
@@ -134,7 +253,7 @@
 			"priceSuffix": "€",
 			"priceNote": "Priz difinet goude eskemm • Paeañ en 2 gwech",
 			"name": "War-bouez",
-			"description": "Evit an hini en deus ezhommoù resis.",
+			"description": "Ezhommoù resis ho peus. Sevel a raimp ar pezh a zo ret.",
 			"features": [
 				"Betek 8 pajenn",
 				"Kemer randevou (Cal.com)",
@@ -146,7 +265,7 @@
 				"Emvod heuliañ da 1 miz",
 				"Livret e 3-5 sizhun"
 			],
-			"ctaLabel": "Goulenn un devis"
+			"ctaLabel": "Komz eus ma raktres"
 		}
 	},
 	"pourquoi": {
@@ -156,30 +275,30 @@
 		"reasons": [
 			{
 				"number": "01",
-				"title": "Kompren a ran an artizaned",
-				"text": "Charpaentour eus ma micher, gouzout a ran petra eo labourat gant e zaouarn ha merañ ur c'hustumer. Hep yezh vevenn."
+				"title": "Dont a ran eus ar maez",
+				"text": "A-raok kodañ lec'hiennoù, sevel a raen frammoù. Anavezout a ran ar c'hantierioù, an devizoù da ober d'an noz, ar c'hustumerien da sioulaat. Dev ebet 'pur' a c'hall lâret kement-se deoc'h."
 			},
 			{
 				"number": "02",
-				"title": "Lec'hel & hegerz",
-				"text": "E Breizh emaon, hegerz evit en em gavout. Ket ur prestataer e penn all ar bed na welo biken."
+				"title": "Dont a ran d'ho ti",
+				"text": "E Dinarzh emaon, dont a ran en ho lec'hioù e Sant-Maloù, Dinarzh ha war holl Aod an Emrod. Kompren a ran ho micher a-raok komz eus pikseloù."
 			},
 			{
 				"number": "03",
-				"title": "Priz fiskal, hep souezhadenn",
-				"text": "Devis sinet a-raok kregiñ. 50% da siñadur, 50% da vare al livradur. Gouzout a rit penaos e paeit."
+				"title": "Derc'hel a rit ar renerezh",
+				"text": "Ho lec'hienn n'eo ket deoc'h ma'z oc'h prizonier ho prestataer. Ganin : abonnañ ebet rediet, sujedigezh ebet. Dieub oc'h."
 			},
 			{
 				"number": "04",
-				"title": "Livret e 2-3 sizhun",
-				"text": "Ket 6 miz a c'hortoz. Un doare splann, pazennoù resisaet, ul lec'hienn livret en amzer."
+				"title": "Livret e 2-3 sizhun, ket e 6 miz",
+				"text": "Un doare splann, pazennoù resisaet. Unan hepken da gomz gantañ, hegerz war-eeun — ket un ajantur gant 5 den disheñvel."
 			}
 		]
 	},
 	"profileCard": {
 		"name": "Gianni — Djanni Studio",
 		"role": "Diorroerien web dizalc'h · Breizh",
-		"quote": "Charpaentour on eus ma micher. Desket am eus sevel traoù kreñv, a bad, hag a dalvez da vat. Implijout a ran an hevelep prederouriezh evit ar web."
+		"quote": "E-pad bloavezhioù am eus lakaet frammoù dindan ar glav breizhek. Desket am eus ne weler ket al labour mat — ar pezh a bad gant an amzer, hep flouradenn. Implijout a ran an hevelep reizh evit ar web : kreñv, prop, ha talvoudus da vat."
 	},
 	"temoignages": {
 		"tag": "Testenioù",
@@ -221,11 +340,11 @@
 		"items": [
 			{
 				"question": "Pegement a amzer ez eus ezhomm evit krouiñ ul lec'hienn ?",
-				"answer": "E keñver, ul lec'hienn vitrine a zo livret e 2 sizhun. Ul lec'hienn premium a bad 3 sizhun. Reiñ a ran deoc'h un doare resisaet a-benn ma vo sinet an devis."
+				"answer": "E keñver, ar formulenn Vitrine a zo livret e 2 sizhun. Ar formulenn War-bouez a bad 3 sizhun. Reiñ a ran deoc'h un doare resisaet a-benn ma vo sinet an devis."
 			},
 			{
 				"question": "N'ouzon ket netra eus an teknikel, ha ur gudenn eo ?",
-				"answer": "Ket da vat. An darn vrasañ eus ma c'hustumerien eo. Merañ a ran kement tra teknikel ha displegañ a ran pep tra e yezh aes. N'ho peus nemet da reiñ ho testennoù ha ho skeudennoù."
+				"answer": "Ket da vat. An darn vrasañ eus ma c'hustumerien eo. Merañ a ran kement tra teknikel ha displegañ a ran pep tra e yezh aes. Evit an testennoù, skrivañ a reomp asambles diwar ho komzoù — n'eo ket ret bezañ skrivagner. Ma n'ho peus ket a skeudennoù, kavout a reomp un diskoulm : luc'hskeudenner lec'hel pe stal skeudennoù a-vicher. N'ho peus netra da brientiñ evit kregiñ."
 			},
 			{
 				"question": "Petra a c'hoarvez goude al lakaat en linenn ?",
@@ -249,25 +368,25 @@
 			},
 			{
 				"question": "Gallout a ran cheñch ma lec'hienn da-unan ?",
-				"answer": "Hervez ar formulenn dibabet. Evit ul lec'hienn vitrine, ar c'hemmadurioù a dremen dre ma benn (endalc'het er forfed kendalc'hañ). Evit ul lec'hienn premium, e c'hellan enframmañ un reizhiad merañ danvez."
+				"answer": "Hervez ar formulenn dibabet. Evit ar formulenn Vitrine, ar c'hemmadurioù a dremen dre ma benn (endalc'het er forfed kendalc'hañ). Evit ar formulenn War-bouez, e c'hellan enframmañ un reizhiad merañ danvez."
 			},
 			{
-				"question": "Labourat a rit er-maez eus Breizh ?",
-				"answer": "Sur. An darn vrasañ eus ma c'hustumerien a zo e Breizh, met labourat a ran a-bell gant artizaned ha kenwerzhourion e Bro-C'hall a-bezh. Video, pellgomz, postel — dont a reomp a-benn."
+				"question": "War peseurt takad e labourit ?",
+				"answer": "Ma zirienn pennañ eo basin Dinarzh / Sant-Maloù / Dinan — mont a ran da welet ma c'hustumerien war al lec'h. Pelloc'h, labourat a ran a-bell gant artizaned e Bro-C'hall a-bezh. Video, pellgomz, postel : dont a reomp a-benn."
 			}
 		]
 	},
 	"contact": {
 		"tag": "Darempred",
-		"title": "Ho raktres a verit ul lec'hienn vat.",
-		"subtitle": "Lârit din petra a rit, diskouez a rin deoc'h petra a c'hallfe bezañ. Eskemm kentañ digoust, hep gwarant.",
+		"title": "Ur c'hantier a grog gant un eskemm.",
+		"subtitle": "Lârit din petra a rit, pelec'h emaoc'h, petra a vank deoc'h. Diskouez a rin deoc'h petra a c'hallfe bezañ. Eskemm kentañ digoust, hep engouestl — evel gant pep artizaned mat.",
 		"step0Title": "Petra eo ho raktres ?",
 		"step1Title": "Penaos e c'hallan mont e darempred ganeoc'h ?",
 		"step2Title": "Komzit deomp eus ho raktres",
 		"projectType": "Dibab ur seurt raktres",
 		"projectTypes": {
-			"site-vitrine": "Lec'hienn Vitrine",
-			"site-premium": "Lec'hienn Premium",
+			"site-vitrine": "Vitrine",
+			"site-premium": "War-bouez",
 			"refonte": "Adneveziañ lec'hienn",
 			"autre": "All"
 		},
@@ -363,7 +482,8 @@
 		"cta": {
 			"title": "C'hoant labourat asambles ?",
 			"subtitle": "Eskemm kentañ digoust, hep gwarant. Komzit din eus ho raktres.",
-			"button": "Kregiñ gant ur raktres"
+			"button": "Kregiñ gant ur raktres",
+			"seeOffers": "Gwelet an tarifioù"
 		}
 	},
 	"realisationsHome": {
@@ -451,8 +571,8 @@
 		"projectTypeLabel": "Seurt raktres",
 		"projectType": "Dibab ur seurt raktres",
 		"projectTypes": {
-			"site-vitrine": "Lec'hienn Vitrine",
-			"site-premium": "Lec'hienn Premium",
+			"site-vitrine": "Vitrine",
+			"site-premium": "War-bouez",
 			"refonte": "Adneveziañ",
 			"autre": "All"
 		},
@@ -514,10 +634,10 @@
 	},
 	"ctaContact": {
 		"tag": "Darempred",
-		"title": "Ho raktres a verit ul lec'hienn vat.",
-		"subtitle": "Lavrit din petra a rit, me a ziskouez deoc'h petra a c'hallfe bezañ. Eskemm kentañ digoust, hep engouestl.",
+		"title": "Ur c'hantier a grog gant un eskemm.",
+		"subtitle": "Lârit din petra a rit, pelec'h emaoc'h, petra a vank deoc'h. Diskouez a rin deoc'h petra a c'hallfe bezañ. Eskemm kentañ digoust, hep engouestl — evel gant pep artizaned mat.",
 		"button": "Kregiñ gant ma raktres",
-		"or": "Pe pellgomzit war-eeun"
+		"or": "Pe pellgomzit war-eeun, mat eo ivez"
 	},
 	"footer": {
 		"tagline": "Lec'hiennoù web evit artizaned ha kenwerzhourion e Breizh",
@@ -529,6 +649,9 @@
 		"privacy": "Prevezded",
 		"legal": "Menozoù lezennel",
 		"cgv": "DG",
+		"paymentTransfer": "Treuzkas",
+		"paymentCard": "Kartenn bankañ",
+		"paymentCheck": "Chek",
 		"copyright": "© 2026 Djanni Studio — Pep gwir miret"
 	}
 }

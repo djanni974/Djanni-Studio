@@ -2,7 +2,7 @@
 
 import { cn } from "@repo/ui/lib/utils"
 import { IconMinus, IconPlus } from "@tabler/icons-react"
-import { useId, useState } from "react"
+import { useState } from "react"
 
 type AccordionItemProps = {
 	question: string
@@ -56,16 +56,21 @@ function AccordionItem({ question, answer, isOpen, onToggle, isLast, id }: Accor
 	)
 }
 
-export function Accordion({ items }: { items: { question: string; answer: string }[] }) {
+export function Accordion({
+	items,
+	id,
+}: {
+	items: { question: string; answer: string }[]
+	id: string
+}) {
 	const [openIndex, setOpenIndex] = useState<number | null>(null)
-	const baseId = useId()
 
 	return (
 		<div className="rounded-xl border border-border bg-surface-b px-7 md:px-9">
 			{items.map((item, i) => (
 				<AccordionItem
 					key={item.question}
-					id={`${baseId}-${i}`}
+					id={`${id}-${i}`}
 					question={item.question}
 					answer={item.answer}
 					isOpen={openIndex === i}
