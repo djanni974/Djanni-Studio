@@ -1,5 +1,6 @@
 "use client"
 
+import { IconBuildingBank, IconCheck, IconCreditCard } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
 import { TextHoverEffect } from "@/components/ui/text-hover-effect"
 import { Link } from "@/i18n/navigation"
@@ -96,6 +97,21 @@ export function Footer() {
 
 				<div className="mt-8 w-full max-w-[460px] md:mt-10">
 					<TextHoverEffect text="Djanni." />
+				</div>
+
+				<div className="mt-6 mb-4 flex items-center justify-center gap-6 text-xs text-djanni-gray-light">
+					<span className="flex items-center gap-1.5">
+						<IconBuildingBank size={14} />
+						{t("paymentTransfer")}
+					</span>
+					<span className="flex items-center gap-1.5">
+						<IconCreditCard size={14} />
+						{t("paymentCard")}
+					</span>
+					<span className="flex items-center gap-1.5">
+						<IconCheck size={14} />
+						{t("paymentCheck")}
+					</span>
 				</div>
 
 				<span className="mt-4 text-xs text-djanni-gray">{t("copyright")}</span>

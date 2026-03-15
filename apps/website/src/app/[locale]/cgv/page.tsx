@@ -1,11 +1,15 @@
 import { IconArrowLeft } from "@tabler/icons-react"
 import type { Metadata } from "next"
 import { Link } from "@/i18n/navigation"
+import { getAlternates } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-	title: "Conditions Générales de Vente — Djanni Studio",
-	description:
-		"CGV de Djanni Studio — Conditions applicables aux prestations de création de sites web.",
+export function generateMetadata(): Metadata {
+	return {
+		title: "Conditions Générales de Vente — Djanni Studio",
+		description:
+			"CGV de Djanni Studio — Conditions applicables aux prestations de création de sites web.",
+		alternates: getAlternates("/cgv"),
+	}
 }
 
 const sections = [

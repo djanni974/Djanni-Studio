@@ -27,7 +27,7 @@ export function Faq() {
 				</AnimatedSection>
 
 				<AnimatedSection delay={0.15} className="mt-14">
-					<Accordion items={items} />
+					<Accordion id="home-faq" items={items} />
 				</AnimatedSection>
 			</div>
 		</section>

@@ -134,6 +134,8 @@ export function Hero() {
 							<span className="relative">{t("cta")}</span>
 						</Link>
 					</motion.div>
+					{/* TODO: ajouter sous-texte "Réponse sous 24h · Sans engagement" sous le CTA */}
+
 					<motion.div whileHover={{ x: 2 }} className="group">
 						<Link
 							href="#realisations"

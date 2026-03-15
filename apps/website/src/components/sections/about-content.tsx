@@ -172,13 +172,21 @@ export function AboutContent() {
 							<p className="mt-4 max-w-[460px] text-[17px] font-light leading-relaxed text-djanni-gray-light">
 								{t("cta.subtitle")}
 							</p>
-							<Link
-								href="/demande-projet"
-								className="mt-8 inline-flex items-center gap-2 rounded-lg bg-djanni-orange px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light"
-							>
-								{t("cta.button")}
-								<IconArrowRight size={16} />
-							</Link>
+							<div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+								<Link
+									href="/demande-projet"
+									className="inline-flex items-center gap-2 rounded-lg bg-djanni-orange px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light"
+								>
+									{t("cta.button")}
+									<IconArrowRight size={16} />
+								</Link>
+								<Link
+									href="/offres"
+									className="inline-flex items-center gap-2 rounded-lg border border-border px-7 py-3.5 text-sm font-medium transition-colors hover:bg-secondary"
+								>
+									{t("cta.seeOffers")}
+								</Link>
+							</div>
 						</div>
 					</AnimatedSection>
 				</div>

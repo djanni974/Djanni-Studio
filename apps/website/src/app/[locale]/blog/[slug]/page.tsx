@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { setRequestLocale } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 import { BlogPostContent } from "@/components/sections/blog-post-content"
 import { BLOG_POSTS } from "@/lib/constants"
 import { getAlternates } from "@/lib/metadata"
@@ -30,6 +30,14 @@ export async function generateMetadata({
 			type: "article",
 			publishedTime: post.publishedAt,
 			authors: ["Gianni — Djanni Studio"],
+			images: [
+				{
+					url: "/og-image.png",
+					width: 1200,
+					height: 630,
+					alt: post.title,
+				},
+			],
 		},
 	}
 }
@@ -41,6 +49,7 @@ export default async function BlogPostPage({
 }) {
 	const { slug, locale } = await params
 	setRequestLocale(locale)
+	const bc = await getTranslations({ locale, namespace: "breadcrumb" })
 	const sortedPosts = [...BLOG_POSTS].sort(
 		(a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
 	)
@@ -76,13 +85,13 @@ export default async function BlogPostPage({
 			{
 				"@type": "ListItem",
 				position: 1,
-				name: "Accueil",
+				name: bc("home"),
 				item: "https://www.djannistudio.fr",
 			},
 			{
 				"@type": "ListItem",
 				position: 2,
-				name: "Blog",
+				name: bc("blog"),
 				item: "https://www.djannistudio.fr/blog",
 			},
 			{

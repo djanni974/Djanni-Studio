@@ -1,11 +1,15 @@
 import { IconArrowLeft } from "@tabler/icons-react"
 import type { Metadata } from "next"
 import { Link } from "@/i18n/navigation"
+import { getAlternates } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-	title: "Mentions légales — Djanni Studio",
-	description:
-		"Mentions légales du site Djanni Studio — Création de sites web pour artisans et commerçants en Bretagne.",
+export function generateMetadata(): Metadata {
+	return {
+		title: "Mentions légales — Djanni Studio",
+		description:
+			"Mentions légales du site Djanni Studio — Création de sites web pour artisans et commerçants en Bretagne.",
+		alternates: getAlternates("/mentions-legales"),
+	}
 }
 
 const sections = [

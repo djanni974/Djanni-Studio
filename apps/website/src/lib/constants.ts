@@ -361,7 +361,7 @@ Un développeur débutant ou un étudiant peut créer un site à petit prix. Att
 
 C'est le juste milieu. Un freelance expérimenté vous livre un site **sur mesure, performant et optimisé SEO**. Le prix inclut le design, le développement, la mise en ligne et souvent une formation.
 
-Chez Djanni Studio, les tarifs commencent à **990€** pour un site vitrine et **1 990€** pour un site premium avec catalogue et animations.
+Chez Djanni Studio, les tarifs commencent à **990€** pour l'offre Présence et **1 990€** pour l'offre Sur mesure avec catalogue et animations.
 
 ### Les agences (3 000€ - 10 000€+)
 
@@ -513,7 +513,7 @@ export const PRICING_TIERS: PricingTier[] = [
 		priceSuffix: "€",
 		priceNote: "495€ à la signature • 495€ à la livraison",
 		name: "Présence",
-		description: "Pour celui qui n'a pas de site et veut être visible rapidement.",
+		description: "Vous n'existez pas sur Google. On règle ça en 2 semaines.",
 		features: [
 			"1 landing page multi-sections",
 			"Design sur mesure",
@@ -525,7 +525,7 @@ export const PRICING_TIERS: PricingTier[] = [
 			"Support 30 jours",
 			"Livraison en 2 semaines",
 		],
-		ctaLabel: "Démarrer",
+		ctaLabel: "Démarrer mon site",
 	},
 	{
 		badge: "La plus choisie",
@@ -534,7 +534,7 @@ export const PRICING_TIERS: PricingTier[] = [
 		priceSuffix: "€",
 		priceNote: "50% à la signature • 50% à la livraison",
 		name: "Vitrine",
-		description: "Pour celui qui veut un vrai site structuré, pas juste une page.",
+		description: "Un vrai outil de travail — pas juste une carte de visite en ligne.",
 		features: [
 			"Jusqu'à 5 pages",
 			"Galerie photos / portfolio",
@@ -546,7 +546,7 @@ export const PRICING_TIERS: PricingTier[] = [
 			"Support 1 mois",
 			"Livraison en 3 semaines",
 		],
-		ctaLabel: "Démarrer",
+		ctaLabel: "Démarrer mon site",
 		featured: true,
 	},
 	{
@@ -556,7 +556,7 @@ export const PRICING_TIERS: PricingTier[] = [
 		priceSuffix: "€",
 		priceNote: "Prix défini après échange • Paiement en 2 fois",
 		name: "Sur mesure",
-		description: "Pour celui qui a des besoins spécifiques.",
+		description: "Vous avez des besoins spécifiques. On construit exactement ce qu'il faut.",
 		features: [
 			"Jusqu'à 8 pages",
 			"Prise de RDV (Cal.com)",
@@ -568,7 +568,7 @@ export const PRICING_TIERS: PricingTier[] = [
 			"Réunion de suivi à 1 mois",
 			"Livraison en 3-5 semaines",
 		],
-		ctaLabel: "Demander un devis",
+		ctaLabel: "Parler de mon projet",
 	},
 ]
 
@@ -610,23 +610,23 @@ export type WhyReason = {
 export const WHY_REASONS: WhyReason[] = [
 	{
 		number: "01",
-		title: "Je comprends les artisans",
-		text: "Charpentier de métier, je sais ce que c'est de travailler avec ses mains et de gérer un client. Pas de jargon, pas de bullshit.",
+		title: "Je viens du terrain",
+		text: 'Avant de coder des sites, je montais des charpentes. Je connais les chantiers, les devis à faire le soir, les clients à rassurer. Aucun dev "pur" ne peut vous dire ça.',
 	},
 	{
 		number: "02",
-		title: "Local & disponible",
-		text: "Basé en Bretagne, disponible pour vous rencontrer. Pas un prestataire à l'autre bout du monde que vous ne verrez jamais.",
+		title: "Je me déplace chez vous",
+		text: "Basé à Dinard, je viens dans vos locaux à Saint-Malo, Dinard et sur toute la Côte d'Émeraude. Je comprends votre métier avant de parler de pixels.",
 	},
 	{
 		number: "03",
-		title: "Prix fixe, pas de surprise",
-		text: "Devis signé avant de commencer. 50% à la signature, 50% à la livraison. Vous savez exactement ce que vous payez.",
+		title: "Vous gardez la main",
+		text: "Votre site ne vous appartient pas si vous êtes prisonnier de votre prestataire. Chez moi : pas d'abonnement obligatoire, pas de dépendance. Vous êtes libre.",
 	},
 	{
 		number: "04",
-		title: "Livré en 2-3 semaines",
-		text: "Pas 6 mois d'attente. Un planning clair, des étapes définies, un site livré dans les délais.",
+		title: "Livré en 2-3 semaines, pas en 6 mois",
+		text: "Un planning clair, des étapes définies. Un seul interlocuteur, joignable en direct — pas une agence avec 5 contacts différents.",
 	},
 ]
 
@@ -693,12 +693,12 @@ export const FAQ_ITEMS: FaqItem[] = [
 	{
 		question: "Combien de temps faut-il pour créer un site ?",
 		answer:
-			"En moyenne, un site vitrine est livré en 2 semaines. Un site premium prend environ 3 semaines. Je vous donne un planning précis dès la signature du devis.",
+			"En moyenne, une offre Vitrine est livrée en 2 semaines. Une offre Sur mesure prend environ 3 semaines. Je vous donne un planning précis dès la signature du devis.",
 	},
 	{
 		question: "Je n'y connais rien en technique, c'est un problème ?",
 		answer:
-			"Pas du tout. C'est même la majorité de mes clients. Je m'occupe de toute la partie technique et je vous explique tout en langage simple. Vous n'avez qu'à me fournir vos textes et photos.",
+			"Pas du tout. C'est même la majorité de mes clients. Je m'occupe de toute la partie technique et je vous explique tout en langage simple. Pour les textes, on les rédige ensemble à partir de vos mots — pas besoin d'être écrivain. Si vous n'avez pas de photos, on trouve une solution : photographe local ou banque d'images professionnelle. Vous n'avez rien à préparer pour démarrer.",
 	},
 	{
 		question: "Que se passe-t-il après la mise en ligne ?",
@@ -728,11 +728,11 @@ export const FAQ_ITEMS: FaqItem[] = [
 	{
 		question: "Puis-je modifier mon site moi-même ?",
 		answer:
-			"Ça dépend de la formule choisie. Sur un site vitrine, les modifications passent par moi (c'est inclus dans le forfait maintenance). Sur un site premium, je peux intégrer un système de gestion de contenu si vous souhaitez être autonome.",
+			"Ça dépend de la formule choisie. Sur une offre Vitrine, les modifications passent par moi (c'est inclus dans le forfait maintenance). Sur une offre Sur mesure, je peux intégrer un système de gestion de contenu si vous souhaitez être autonome.",
 	},
 	{
-		question: "Travaillez-vous en dehors de la Bretagne ?",
+		question: "Vous intervenez sur quelle zone ?",
 		answer:
-			"Bien sûr. La majorité de mes clients sont en Bretagne, mais je travaille à distance avec des artisans et commerçants partout en France. Visio, téléphone, email — on s'adapte.",
+			"Mon terrain principal c'est le bassin Dinard / Saint-Malo / Dinan — je me déplace physiquement chez mes clients dans cette zone. Au-delà, je travaille à distance avec des artisans partout en France. Visio, téléphone, email : on s'adapte.",
 	},
 ]
