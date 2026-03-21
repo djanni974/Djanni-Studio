@@ -19,9 +19,11 @@ export function Offres() {
 		priceNote: p(`${key}.priceNote`),
 		name: p(`${key}.name`),
 		description: p(`${key}.description`),
+		benefitLine: p(`${key}.benefitLine`),
 		features: p.raw(`${key}.features`) as string[],
 		ctaLabel: p(`${key}.ctaLabel`),
 		featured: key === "vitrine",
+		popularNote: p.has(`${key}.popularNote`) ? p(`${key}.popularNote`) : undefined,
 	}))
 
 	return (

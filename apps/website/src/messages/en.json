@@ -25,6 +25,18 @@
 		"demandeProjet": {
 			"title": "Project Request — Djanni Studio",
 			"description": "Describe your web project and get a response within 24 hours. Simple and quick form."
+		},
+		"offrePresence": {
+			"title": "Presence Plan — 990 € | Djanni Studio",
+			"description": "A professional page to get visible online in 2 weeks. Custom design, responsive, basic SEO included."
+		},
+		"offreVitrine": {
+			"title": "Showcase Plan — 1 490 € | Djanni Studio",
+			"description": "A real structured site up to 5 pages. Polished animations, intermediate SEO, training included."
+		},
+		"offreSurMesure": {
+			"title": "Custom Plan — from 1 990 € | Djanni Studio",
+			"description": "Online booking, CMS blog, multilingual — a site built exactly for your needs."
 		}
 	},
 	"breadcrumb": {
@@ -47,7 +59,7 @@
 		"titleEnd": ", for craftspeople.",
 		"subtitle": "Former carpenter, now a web developer based in Dinard — I create websites that speak your language and attract your customers. I mainly work with craftspeople in Brittany: Saint-Malo, Dinard, Côte d'Émeraude and surroundings.",
 		"cta": "Get my free quote",
-		"seeWork": "See my work →"
+		"seeWork": "See my work"
 	},
 	"stats": {
 		"deliveryValue": "2 wks",
@@ -134,22 +146,26 @@
 				{
 					"label": "Content writing",
 					"price": "+€150",
-					"desc": "I write your site content from a 30-minute conversation."
+					"desc": "I write your site content from a 30-minute conversation.",
+					"hint": "So you don't spend 2 weeks searching for the right words."
 				},
 				{
 					"label": "Google Business setup",
 					"price": "+€100",
-					"desc": "Optimised Google listing: photos, hours, description, categories."
+					"desc": "Optimised Google listing: photos, hours, description, categories.",
+					"hint": "To show up on Google Maps when someone searches \"hairdresser Dinard\"."
 				},
 				{
 					"label": "Optional monthly maintenance",
 					"price": "€49/mo",
-					"desc": "Updates, backups, fixes — you don't have to worry about anything. No commitment, cancel anytime."
+					"desc": "Updates, backups, fixes — you don't have to worry about anything. No commitment, cancel anytime.",
+					"hint": "So you never have to worry about the technical side again."
 				},
 				{
 					"label": "Additional page",
 					"price": "+€150/page",
-					"desc": "Extra page beyond the plan (gallery, wedding page, etc.)."
+					"desc": "Extra page beyond the plan (gallery, wedding page, etc.).",
+					"hint": "For projects that deserve more space."
 				}
 			]
 		},
@@ -196,7 +212,8 @@
 		"cta": {
 			"tag": "Ready?",
 			"title": "Your project deserves the best.",
-			"subtitle": "Let's discuss your project — first call free, no commitment.",
+			"subtitle": "A website that works for you starts with a conversation.",
+			"reassurance": "First call free, no commitment.",
 			"button": "Start my project"
 		}
 	},
@@ -209,13 +226,14 @@
 			"priceNote": "€495 upfront • €495 on delivery",
 			"name": "Presence",
 			"description": "You don't exist on Google. We fix that in 2 weeks.",
+			"benefitLine": "To show up on Google and reassure customers looking for you.",
 			"features": [
 				"1 multi-section landing page",
 				"Custom design",
 				"100% mobile responsive",
 				"Clickable phone + contact form",
-				"Basic SEO (title, OG)",
-				"SSL + deployment",
+				"Basic Google indexing",
+				"SSL security + deployment",
 				"1h training",
 				"30-day support",
 				"Delivered in 2 weeks"
@@ -230,13 +248,15 @@
 			"priceNote": "50% upfront • 50% on delivery",
 			"name": "Showcase",
 			"description": "A real business tool — not just a digital business card.",
+			"benefitLine": "To make customers want to visit before they even walk through the door.",
+			"popularNote": "The best fit for 80% of craftspeople and local businesses.",
 			"features": [
 				"Up to 5 pages",
 				"Photo gallery / portfolio",
 				"Before/after projects",
 				"Polished animations",
-				"Intermediate SEO (Lighthouse 90+)",
-				"Google Analytics or Plausible",
+				"Advanced SEO (fast site, well ranked)",
+				"Visitor statistics",
 				"2h training",
 				"1-month support",
 				"Delivered in 3 weeks"
@@ -251,13 +271,14 @@
 			"priceNote": "Price set after discussion • Payment in 2 installments",
 			"name": "Custom",
 			"description": "You have specific needs. We build exactly what's required.",
+			"benefitLine": "To turn your website into a real sales and booking tool.",
 			"features": [
 				"Up to 8 pages",
-				"Appointment booking (Cal.com)",
-				"Blog CMS",
+				"Online appointment booking",
+				"Built-in blog (publish yourself)",
 				"Product catalog",
 				"Multilingual",
-				"Advanced SEO (audit, keywords)",
+				"Advanced SEO (audit + keyword strategy)",
 				"3-month support",
 				"1-month follow-up meeting",
 				"Delivered in 3-5 weeks"
@@ -382,6 +403,7 @@
 		"step2Title": "Tell us about your project",
 		"projectType": "Choose a project type",
 		"projectTypes": {
+			"presence": "Presence",
 			"site-vitrine": "Showcase",
 			"site-premium": "Custom",
 			"refonte": "Website Redesign",
@@ -568,14 +590,16 @@
 		"projectTypeLabel": "Project type",
 		"projectType": "Choose a project type",
 		"projectTypes": {
+			"presence": "Presence",
 			"site-vitrine": "Showcase",
 			"site-premium": "Custom",
 			"refonte": "Redesign",
 			"autre": "Other"
 		},
 		"projectTypeDescs": {
-			"site-vitrine": "A clean presence to attract customers",
-			"site-premium": "A custom site with advanced features",
+			"presence": "One page to get visible fast",
+			"site-vitrine": "A structured site, up to 5 pages",
+			"site-premium": "Advanced custom features",
 			"refonte": "Modernize an existing website",
 			"autre": "A specific project to discuss"
 		},
@@ -650,5 +674,127 @@
 		"paymentCard": "Credit card",
 		"paymentCheck": "Cheque",
 		"copyright": "© 2026 Djanni Studio — All rights reserved"
+	},
+	"offrePresence": {
+		"tag": "Presence Plan",
+		"title": "Get visible\ntomorrow.",
+		"subtitle": "You don't have a website yet. This plan gives you a professional online presence in 2 weeks, hassle-free.",
+		"price": "990 €",
+		"priceNote": "all included",
+		"payment": "€495 on signing · €495 on delivery",
+		"stats": [
+			{ "value": "1", "label": "complete page" },
+			{ "value": "2 wks", "label": "delivery time" },
+			{ "value": "30 d.", "label": "support included" }
+		],
+		"includedLabel": "What's included",
+		"features": [
+			"Custom multi-section landing page",
+			"Hero, Services, Hours, Contact & Maps sections",
+			"Photo gallery + clickable phone number",
+			"100% mobile responsive",
+			"Basic SEO + SSL + deployment",
+			"1h content management training",
+			"30-day support & corrections"
+		],
+		"excludedLabel": "Not included in this plan",
+		"excluded": [
+			"Additional pages — available with the Showcase plan",
+			"Online booking — available with the Custom plan",
+			"CMS Blog — available with the Custom plan"
+		],
+		"cta": "Start my project — 990 €",
+		"compare": "Compare with Showcase →",
+		"trust": "Free first call · Quote within 24h · No commitment",
+		"back": "All plans",
+		"idealLabel": "Who is it for?",
+		"idealItems": [
+			{ "title": "Solo craftsman", "desc": "Carpenter, plumber, electrician…" },
+			{ "title": "Local shop", "desc": "Bakery, florist, hairdresser…" },
+			{ "title": "Restaurant", "desc": "Menu, hours, reservation…" }
+		],
+		"processLabel": "How it works",
+		"processSteps": [
+			{ "step": "1", "title": "We talk", "desc": "30 min to understand your business" },
+			{ "step": "2", "title": "I build", "desc": "Your site takes shape in 2 weeks" },
+			{ "step": "3", "title": "You're live", "desc": "Deployment + training included" }
+		],
+		"upsellTitle": "Need more?",
+		"upsellText": "The Showcase plan adds up to 5 pages, a portfolio and polished animations.",
+		"upsellCta": "Discover Showcase — 1 490 €"
+	},
+	"offreVitrine": {
+		"tag": "⭐ Most popular",
+		"title": "Showcase",
+		"subtitle": "For those who want a real structured site, not just a page. Up to 5 pages, polished animations and intermediate SEO.",
+		"price": "1 490",
+		"priceSuffix": "€",
+		"priceNote": "starting from",
+		"pagesValue": "5",
+		"pagesLabel": "distinct pages",
+		"delayValue": "3",
+		"delaySuffix": "wks",
+		"delayLabel": "clear timeline from signing",
+		"includedLabel": "What's included",
+		"features": [
+			"Custom design + mobile responsive",
+			"Photo gallery & before/after showcases",
+			"Polished animations (Framer Motion)",
+			"Google Analytics or Plausible",
+			"2h content management training",
+			"SSL + deployment + domain name"
+		],
+		"seoLabel": "Lighthouse score (SEO)",
+		"seoValue": "90+",
+		"seoNote": "Visible on Google from day one",
+		"supportValue": "1",
+		"supportSuffix": "month",
+		"supportLabel": "corrections at no extra cost",
+		"paymentLabel": "Payment in 2 installments",
+		"paymentSteps": [
+			{ "pct": "50%", "when": "on signing" },
+			{ "pct": "50%", "when": "on delivery" }
+		],
+		"ctaTitle": "Ready to launch your project?",
+		"ctaSubtitle": "Free first call — quote within 24h",
+		"cta": "Start my project",
+		"back": "All plans"
+	},
+	"offreSurMesure": {
+		"tag": "Custom",
+		"title": "Your project deserves more than a template.",
+		"subtitle": "Online booking, catalogue, blog, multilingual — we build exactly what you need. No compromises, no arbitrary limits.",
+		"price": "1 990",
+		"priceSuffix": "€",
+		"priceNote": "starting from",
+		"paymentNote": "50% on signing · 50% on delivery",
+		"includedLabel": "What's included",
+		"features": [
+			"Everything in the Showcase plan",
+			"Up to 8 pages",
+			"Online booking (Cal.com)",
+			"CMS Blog — manage your articles yourself",
+			"Advanced SEO — audit & targeted keywords",
+			"Follow-up meeting 1 month after delivery"
+		],
+		"statsItems": [
+			{ "val": "8", "label": "max pages" },
+			{ "val": "3–5", "label": "weeks" },
+			{ "val": "3", "label": "months support" }
+		],
+		"optionsLabel": "Available options",
+		"options": [
+			"Product catalogue",
+			"Multilingual",
+			"Interactive menu",
+			"Interactive map",
+			"Custom animations",
+			"Advanced form"
+		],
+		"ctaTitle": "Have a specific project in mind?",
+		"ctaSubtitle": "Free 30min call · Quote within 24h · No commitment",
+		"compare": "Compare",
+		"cta": "Request a quote",
+		"back": "All plans"
 	}
 }

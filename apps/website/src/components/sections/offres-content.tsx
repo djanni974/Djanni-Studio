@@ -7,9 +7,9 @@ import {
 	IconCreditCard,
 	IconHammer,
 	IconHeadset,
-	IconMinus,
 	IconScissors,
 	IconToolsKitchen2,
+	IconX,
 } from "@tabler/icons-react"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
@@ -32,15 +32,20 @@ const COMPARISON_ROWS: {
 }[] = [
 	{ feature: "Design sur mesure", presence: true, vitrine: true, custom: true },
 	{ feature: "100% responsive mobile", presence: true, vitrine: true, custom: true },
-	{ feature: "SEO de base (title, meta, OG)", presence: true, vitrine: true, custom: true },
-	{ feature: "SSL + déploiement", presence: true, vitrine: true, custom: true },
+	{ feature: "Référencement Google de base", presence: true, vitrine: true, custom: true },
+	{ feature: "Sécurité SSL + mise en ligne", presence: true, vitrine: true, custom: true },
 	{ feature: "Formation à la prise en main", presence: "1h", vitrine: "2h", custom: "3h" },
 	{ feature: "Support après livraison", presence: "30 jours", vitrine: "1 mois", custom: "3 mois" },
 	{ feature: "Nombre de pages", presence: "1", vitrine: "jusqu'à 5", custom: "jusqu'à 8" },
 	{ feature: "Galerie photos / réalisations", presence: false, vitrine: true, custom: true },
 	{ feature: "Animations soignées", presence: false, vitrine: true, custom: true },
-	{ feature: "SEO intermédiaire (Lighthouse 90+)", presence: false, vitrine: true, custom: true },
-	{ feature: "Analytics (Plausible / GA)", presence: false, vitrine: true, custom: true },
+	{
+		feature: "SEO poussé (site rapide, bien classé)",
+		presence: false,
+		vitrine: true,
+		custom: true,
+	},
+	{ feature: "Statistiques de visite", presence: false, vitrine: true, custom: true },
 	{ feature: "Prise de RDV en ligne", presence: false, vitrine: false, custom: true },
 	{ feature: "Blog / CMS", presence: false, vitrine: false, custom: true },
 	{ feature: "Catalogue produits", presence: false, vitrine: false, custom: true },
@@ -60,9 +65,11 @@ export function OffresContent() {
 		priceNote: p(`${key}.priceNote`),
 		name: p(`${key}.name`),
 		description: p(`${key}.description`),
+		benefitLine: p(`${key}.benefitLine`),
 		features: p.raw(`${key}.features`) as string[],
 		ctaLabel: p(`${key}.ctaLabel`),
 		featured: key === "vitrine",
+		popularNote: p.has(`${key}.popularNote`) ? p(`${key}.popularNote`) : undefined,
 	}))
 
 	const guarantees = (t.raw("guarantees.items") as { title: string; text: string }[]).map(
@@ -174,7 +181,8 @@ export function OffresContent() {
 												{t("comparison.presencePrice")}
 											</span>
 										</th>
-										<th className="px-4 py-4 text-center font-semibold text-djanni-orange">
+										<th className="relative px-4 py-4 text-center font-semibold text-djanni-orange">
+											<span className="absolute inset-x-0 top-0 h-1 rounded-t bg-djanni-orange" />
 											{t("comparison.vitrineLabel")}
 											<span className="mt-1 block text-xs font-normal text-djanni-orange/60">
 												{t("comparison.vitrinePrice")}
@@ -204,11 +212,12 @@ export function OffresContent() {
 													>
 														{val === true ? (
 															<IconCheck
-																size={16}
+																size={18}
+																stroke={2.5}
 																className={`mx-auto ${col === "vitrine" ? "text-djanni-orange" : "text-green-600"}`}
 															/>
 														) : val === false ? (
-															<IconMinus size={14} className="mx-auto text-foreground/20" />
+															<IconX size={16} stroke={2} className="mx-auto text-foreground/15" />
 														) : (
 															<span
 																className={`text-xs ${col === "vitrine" ? "font-medium text-djanni-orange/80" : "text-djanni-gray-light"}`}
@@ -240,19 +249,27 @@ export function OffresContent() {
 					</AnimatedSection>
 
 					<StaggerContainer className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-						{(t.raw("addons.items") as { label: string; price: string; desc: string }[]).map(
-							(opt, i) => (
-								<StaggerItem key={i}>
-									<div className="rounded-2xl border border-border bg-surface-b p-6 transition-shadow hover:shadow-md">
-										<p className="mb-1 font-heading text-lg font-bold text-djanni-orange">
-											{opt.price}
-										</p>
-										<p className="mb-2 font-semibold">{opt.label}</p>
-										<p className="text-sm text-djanni-gray-light">{opt.desc}</p>
-									</div>
-								</StaggerItem>
-							),
-						)}
+						{(
+							t.raw("addons.items") as {
+								label: string
+								price: string
+								desc: string
+								hint?: string
+							}[]
+						).map((opt, i) => (
+							<StaggerItem key={i}>
+								<div className="rounded-2xl border border-border bg-surface-b p-6 transition-shadow hover:shadow-md">
+									<p className="mb-1 font-heading text-lg font-bold text-djanni-orange">
+										{opt.price}
+									</p>
+									<p className="mb-2 font-semibold">{opt.label}</p>
+									<p className="text-sm text-djanni-gray-light">{opt.desc}</p>
+									{opt.hint && (
+										<p className="mt-2 text-xs italic text-djanni-orange/70">{opt.hint}</p>
+									)}
+								</div>
+							</StaggerItem>
+						))}
 					</StaggerContainer>
 				</div>
 			</section>
@@ -349,8 +366,9 @@ export function OffresContent() {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
 						viewport={{ once: true }}
-						className="mt-10 flex flex-wrap items-center justify-center gap-5"
+						className="mt-10 flex flex-col items-center gap-4"
 					>
+						<p className="text-sm text-djanni-gray-light">{t("cta.reassurance")}</p>
 						<Link
 							href="/demande-projet"
 							className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-djanni-orange px-9 py-4.5 text-base font-medium text-white shadow-[0_0_0_rgba(232,80,10,0)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-djanni-orange-light hover:shadow-[0_8px_30px_rgba(232,80,10,0.35)]"

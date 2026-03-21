@@ -1,22 +1,8 @@
 "use client"
 
 import { IconArrowRight, IconPhone } from "@tabler/icons-react"
-import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
-
-const fadeUp = {
-	hidden: { opacity: 0, y: 20 },
-	visible: (i: number) => ({
-		opacity: 1,
-		y: 0,
-		transition: {
-			delay: i * 0.1 + 0.1,
-			duration: 0.6,
-			ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
-		},
-	}),
-}
 
 export function Hero() {
 	const t = useTranslations("hero")
@@ -49,12 +35,7 @@ export function Hero() {
 			<div className="pointer-events-none absolute top-0 right-[20%] h-full w-px bg-linear-to-b from-transparent via-djanni-orange/[0.07] to-transparent" />
 
 			{/* Orbital rings — desktop only */}
-			<motion.div
-				initial={{ opacity: 0, scale: 0.85 }}
-				animate={{ opacity: 1, scale: 1 }}
-				transition={{ duration: 1.4, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-				className="pointer-events-none absolute top-1/2 right-[10%] hidden h-[520px] w-[520px] -translate-y-[55%] lg:block"
-			>
+			<div className="pointer-events-none absolute top-1/2 right-[10%] hidden h-[520px] w-[520px] -translate-y-[55%] animate-hero-orbits lg:block">
 				{/* Core glow */}
 				<div className="absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-djanni-orange/25 blur-3xl" />
 				<div className="absolute top-1/2 left-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-djanni-orange/60" />
@@ -67,7 +48,7 @@ export function Hero() {
 				{/* Dashed orbit */}
 				<div className="absolute inset-[8%] rounded-full border border-dashed border-white/8" />
 
-				{/* Accent dots — placed precisely on ring paths */}
+				{/* Accent dots */}
 				<div className="absolute top-[8%] left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-djanni-orange/60" />
 				<div className="absolute top-[25%] right-[15%] h-1.5 w-1.5 rounded-full bg-djanni-orange/40" />
 				<div className="absolute bottom-[15%] left-[25%] h-1.5 w-1.5 rounded-full bg-white/30" />
@@ -78,65 +59,52 @@ export function Hero() {
 
 				{/* Fade mask */}
 				<div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,transparent_35%,var(--color-background)_70%)]" />
-			</motion.div>
+			</div>
 
 			{/* Bottom fade */}
 			<div className="pointer-events-none absolute right-0 bottom-0 left-0 h-40 bg-linear-to-b from-transparent to-(--color-background)" />
 
 			<section className="relative flex min-h-screen flex-col justify-center px-5 pt-[120px] pb-20 md:px-12">
-				<motion.span
-					custom={0}
-					variants={fadeUp}
-					initial="hidden"
-					animate="visible"
-					className="mb-8 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-djanni-orange"
+				<span
+					className="mb-8 inline-flex animate-hero-fade-up items-center gap-2 text-xs font-medium uppercase tracking-widest text-djanni-orange"
+					style={{ animationDelay: "100ms" }}
 				>
 					<span className="inline-block h-px w-6 bg-djanni-orange" />
 					{t("badge")}
-				</motion.span>
+				</span>
 
-				<motion.h1
-					custom={1}
-					variants={fadeUp}
-					initial="hidden"
-					animate="visible"
-					className="mb-8 max-w-[900px] font-heading text-[clamp(44px,7vw,96px)] font-extrabold leading-none tracking-tight"
+				<h1
+					className="mb-8 max-w-[900px] animate-hero-fade-up font-heading text-[clamp(44px,7vw,96px)] font-extrabold leading-none tracking-tight"
+					style={{ animationDelay: "200ms" }}
 				>
 					{t("titleStart")}
 					<em className="not-italic text-djanni-orange">{t("titleHighlight")}</em>
 					{t("titleEnd")}
-				</motion.h1>
+				</h1>
 
-				<motion.p
-					custom={2}
-					variants={fadeUp}
-					initial="hidden"
-					animate="visible"
-					className="mb-12 max-w-[480px] text-lg font-light leading-relaxed text-djanni-gray-light"
+				<p
+					className="mb-12 max-w-[480px] animate-hero-fade-up text-lg font-light leading-relaxed text-djanni-gray-light"
+					style={{ animationDelay: "300ms" }}
 				>
 					{t("subtitle")}
-				</motion.p>
+				</p>
 
-				<motion.div
-					custom={3}
-					variants={fadeUp}
-					initial="hidden"
-					animate="visible"
-					className="flex flex-wrap items-center gap-5"
+				<div
+					className="flex animate-hero-fade-up flex-wrap items-center gap-5"
+					style={{ animationDelay: "400ms" }}
 				>
-					<motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} className="group">
+					<div className="group">
 						<Link
 							href="/demande-projet"
-							className="relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-djanni-orange px-8 py-4 text-[15px] font-medium text-white shadow-[0_0_0_rgba(232,80,10,0)] transition-all duration-300 hover:bg-djanni-orange-light hover:shadow-[0_8px_30px_rgba(232,80,10,0.35)]"
+							className="relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-djanni-orange px-8 py-4 text-[15px] font-medium text-white shadow-[0_0_0_rgba(232,80,10,0)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-djanni-orange-light hover:shadow-[0_8px_30px_rgba(232,80,10,0.35)] active:scale-[0.97]"
 						>
 							<span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-[-20deg] bg-linear-to-r from-transparent via-white/15 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
 							<IconPhone size={16} className="relative" />
 							<span className="relative">{t("cta")}</span>
 						</Link>
-					</motion.div>
-					{/* TODO: ajouter sous-texte "Réponse sous 24h · Sans engagement" sous le CTA */}
+					</div>
 
-					<motion.div whileHover={{ x: 2 }} className="group">
+					<div className="group">
 						<Link
 							href="#realisations"
 							className="relative inline-flex items-center gap-2 px-6 py-4 text-[15px] text-djanni-gray-light transition-colors duration-300 hover:text-foreground"
@@ -148,15 +116,12 @@ export function Hero() {
 							/>
 							<span className="absolute bottom-3 left-6 right-6 h-px origin-left scale-x-0 bg-foreground/30 transition-transform duration-300 ease-out group-hover:scale-x-100" />
 						</Link>
-					</motion.div>
-				</motion.div>
+					</div>
+				</div>
 
-				<motion.div
-					custom={4}
-					variants={fadeUp}
-					initial="hidden"
-					animate="visible"
-					className="mt-20 grid grid-cols-3 divide-x divide-border rounded-xl border border-border bg-white/2 max-md:grid-cols-1 max-md:divide-x-0 max-md:divide-y"
+				<div
+					className="mt-20 grid animate-hero-fade-up grid-cols-3 divide-x divide-border rounded-xl border border-border bg-white/2 max-md:grid-cols-1 max-md:divide-x-0 max-md:divide-y"
+					style={{ animationDelay: "500ms" }}
 				>
 					{stats.map((stat) => (
 						<div key={stat.label} className="px-8 py-6 max-md:px-6 max-md:py-5">
@@ -166,7 +131,7 @@ export function Hero() {
 							<div className="mt-1 text-[13px] text-djanni-gray">{stat.label}</div>
 						</div>
 					))}
-				</motion.div>
+				</div>
 			</section>
 		</div>
 	)

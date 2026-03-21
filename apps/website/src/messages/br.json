@@ -25,6 +25,18 @@
 		"demandeProjet": {
 			"title": "Goulenn raktres — Djanni Studio",
 			"description": "Deskrivit ho raktres web ha resevit ur respont a-benn 24e. Furmskrid simpl ha buan."
+		},
+		"offrePresence": {
+			"title": "Stumm Prezañs — 990 € | Djanni Studio",
+			"description": "Ur bajenn profesionel evit bezañ gwelus enlinenn e 2 sizhun. Dizain personelaet, hezoug, SEO diazez endalc'het."
+		},
+		"offreVitrine": {
+			"title": "Stumm Vitrine — 1 490 € | Djanni Studio",
+			"description": "Ul lec'hienn frammet gwirion betek 5 pajenn. Buhezekadurioù kempenn, SEO etre-daou, stummadur endalc'het."
+		},
+		"offreSurMesure": {
+			"title": "Stumm War-bouez — adalek 1 990 € | Djanni Studio",
+			"description": "Kemer rendez-vous, blog CMS, liesyezhek — ul lec'hienn savet resis evit ho ezhommoù."
 		}
 	},
 	"breadcrumb": {
@@ -47,7 +59,7 @@
 		"titleEnd": ", evit an artizaned.",
 		"subtitle": "Charpaentour gwechall, diorroerien web e Dinard bremañ — krouiñ a ran lec'hiennoù a gomz ho yezh hag a zedenn ho kustumerien. Labourat a ran dreist-holl gant artizaned e Breizh : Sant-Maloù, Dinarzh, Aod an Emrod ha tro-war-dro.",
 		"cta": "Goulenn ma devis digoust",
-		"seeWork": "Gwelet ma obererezhioù →"
+		"seeWork": "Gwelet ma obererezhioù"
 	},
 	"stats": {
 		"deliveryValue": "2 simun",
@@ -134,22 +146,26 @@
 				{
 					"label": "Skrivañ an testennoù",
 					"price": "+150€",
-					"desc": "Skrivañ a ran danvez ho lec'hienn diwar un eskemm 30 munut."
+					"desc": "Skrivañ a ran danvez ho lec'hienn diwar un eskemm 30 munut.",
+					"hint": "Evit chom hep stankañ 2 sizhun o klask ho komzoù."
 				},
 				{
 					"label": "Kefluniañ Google Business",
 					"price": "+100€",
-					"desc": "Fichennad Google gwellaet : skeudennoù, eurioù, deskrivadur, rummadoù."
+					"desc": "Fichennad Google gwellaet : skeudennoù, eurioù, deskrivadur, rummadoù.",
+					"hint": "Evit diskouez war Google Maps pa vez klasket \"kiger Dinarzh\"."
 				},
 				{
 					"label": "Kendalc'hañ miziek diret",
 					"price": "49€/miz",
-					"desc": "Hizivadennoù, enrolladennoù, reizhadennoù — ne fell ket deoc'h ober netra. Hep engouestl, dilemel a c'heller da bep mare."
+					"desc": "Hizivadennoù, enrolladennoù, reizhadennoù — ne fell ket deoc'h ober netra. Hep engouestl, dilemel a c'heller da bep mare.",
+					"hint": "Evit chom hep preder biken eus an teknik."
 				},
 				{
 					"label": "Pajenn ouzhpenn",
 					"price": "+150€/pajenn",
-					"desc": "Ouzhpennañ ur bajenn dreist ar forfed (galerienn, pajenn eured, hag all)."
+					"desc": "Ouzhpennañ ur bajenn dreist ar forfed (galerienn, pajenn eured, hag all).",
+					"hint": "Evit ar raktresoù a verit muioc'h a blas."
 				}
 			]
 		},
@@ -199,7 +215,8 @@
 		"cta": {
 			"tag": "Prest?",
 			"title": "Ho raktres a verit ar gwellañ.",
-			"subtitle": "Komzomp eus ho raktres — eskemm kentañ digoust, hep engouestl.",
+			"subtitle": "Ul lec'hienn a labour evidoc'h, kement-se a grog gant un eskemm.",
+			"reassurance": "Eskemm kentañ digoust ha hep engouestl.",
 			"button": "Kregiñ gant ma raktres"
 		}
 	},
@@ -212,13 +229,14 @@
 			"priceNote": "495€ da sinañ • 495€ da livriñ",
 			"name": "Prezañs",
 			"description": "N'oc'h ket war Google. Reizhañ a raimp kement-se e 2 sizhun.",
+			"benefitLine": "Evit diskouez war Google ha sioulaat ar c'hustumerien a glasko ac'hanoc'h.",
 			"features": [
 				"1 pajenn liesrannoù",
 				"Dezign war-bouez",
 				"100% responsive hezoug",
 				"Niverenn glikadus + formulenn",
-				"SEO diazez (titl, OG)",
-				"SSL + lakaat en linenn",
+				"Klask Google diazez",
+				"Surentez SSL + lakaat en linenn",
 				"Stummadur 1e",
 				"Skoazell 30 devezh",
 				"Livret e 2 sizhun"
@@ -233,13 +251,15 @@
 			"priceNote": "50% da sinañ • 50% da livriñ",
 			"name": "Vitrine",
 			"description": "Un ostilh labour gwir — ket just ur gartenn-visit niverel.",
+			"benefitLine": "Evit reiñ c'hoant a-raok ma teufe ar c'hustumer da dreuziñ an nor.",
+			"popularNote": "Ar formulenn wellañ evit 80% eus an artizaned hag ar c'henwerzhourien.",
 			"features": [
 				"Betek 5 pajenn",
 				"Galerienn skeudennoù / portfolio",
 				"Obererezhioù kent/goude",
 				"Buhezegezh kempenn",
-				"SEO etre (Lighthouse 90+)",
-				"Google Analytics pe Plausible",
+				"SEO buhezek (lec'hienn prim, plaset mat)",
+				"Stadegenn gweladennoù",
 				"Stummadur 2e",
 				"Skoazell 1 miz",
 				"Livret e 3 sizhun"
@@ -254,13 +274,14 @@
 			"priceNote": "Priz difinet goude eskemm • Paeañ en 2 gwech",
 			"name": "War-bouez",
 			"description": "Ezhommoù resis ho peus. Sevel a raimp ar pezh a zo ret.",
+			"benefitLine": "Evit treiñ ho lec'hienn en un ostilh gwerzh ha rezervañ gwir.",
 			"features": [
 				"Betek 8 pajenn",
-				"Kemer randevou (Cal.com)",
-				"Blog CMS",
+				"Kemer randevou en linenn",
+				"Blog enframmet (embanniñ hoc'h-unan)",
 				"Katalog produioù",
 				"Liesyezhek",
-				"SEO araokaet (audit, gerioù-alc'hwez)",
+				"SEO araokaet (audit + stratejenn gerioù-alc'hwez)",
 				"Skoazell 3 miz",
 				"Emvod heuliañ da 1 miz",
 				"Livret e 3-5 sizhun"
@@ -385,6 +406,7 @@
 		"step2Title": "Komzit deomp eus ho raktres",
 		"projectType": "Dibab ur seurt raktres",
 		"projectTypes": {
+			"presence": "Prezañs",
 			"site-vitrine": "Vitrine",
 			"site-premium": "War-bouez",
 			"refonte": "Adneveziañ lec'hienn",
@@ -571,14 +593,16 @@
 		"projectTypeLabel": "Seurt raktres",
 		"projectType": "Dibab ur seurt raktres",
 		"projectTypes": {
+			"presence": "Prezañs",
 			"site-vitrine": "Vitrine",
 			"site-premium": "War-bouez",
 			"refonte": "Adneveziañ",
 			"autre": "All"
 		},
 		"projectTypeDescs": {
-			"site-vitrine": "Ur prezañs net evit dedennañ kliented",
-			"site-premium": "Ul lec'hienn personelaet gant arc'hantoù araokaet",
+			"presence": "Ur bajenn evit bezañ gwelus buan",
+			"site-vitrine": "Ul lec'hienn frammet, betek 5 pajenn",
+			"site-premium": "Arc'hantoù araokaet personelaet",
 			"refonte": "Nevesaat ul lec'hienn a zo",
 			"autre": "Ur raktres resis da gomz"
 		},
@@ -653,5 +677,131 @@
 		"paymentCard": "Kartenn bankañ",
 		"paymentCheck": "Chek",
 		"copyright": "© 2026 Djanni Studio — Pep gwir miret"
+	},
+	"offrePresence": {
+		"tag": "Stumm Prezañs",
+		"title": "Bezit gwelus\na-benn warc'hoazh.",
+		"subtitle": "N'eus ket ul lec'hienn ganeoc'h c'hoazh. Ar stumm-mañ a ro deoc'h ur prezañs profesionel enlinenn e 2 sizhun, hep poan.",
+		"price": "990 €",
+		"priceNote": "pep tra endalc'het",
+		"payment": "495 € ouzh ar sinañ · 495 € ouzh al livradur",
+		"stats": [
+			{ "value": "1", "label": "pajenn glok" },
+			{ "value": "2 sizh.", "label": "amzer livradur" },
+			{ "value": "30 d.", "label": "skoazell endalc'het" }
+		],
+		"includedLabel": "Ar pezh a zo endalc'het",
+		"features": [
+			"Pajenn degemer liesrannoù personelaet",
+			"Rannoù Hero, Servijoù, Eurioù, Darempred & Kartennoù",
+			"Skeudennaoueg + niverenn bellgomz klikadus",
+			"100% hezoug war pellgomzerioù hezoug",
+			"SEO diazez + SSL + lakaat en linenn",
+			"Stummadur 1e evit merañ an endalc'had",
+			"Skoazell & reizhadennoù e-pad 30 devezh"
+		],
+		"excludedLabel": "N'eo ket endalc'het er stumm-mañ",
+		"excluded": [
+			"Pajennoù ouzhpenn — hegerz gant ar stumm Vitrine",
+			"Kemer rendez-vous enlinenn — hegerz gant ar stumm War-bouez",
+			"Blog CMS — hegerz gant ar stumm War-bouez"
+		],
+		"cta": "Kregiñ gant ma raktres — 990 €",
+		"compare": "Keñveriañ gant ar Vitrine →",
+		"trust": "Eskemm kentañ digoust · Devis dindan 24e · Hep enkadenn",
+		"back": "An holl stummadoù",
+		"idealLabel": "Evit piv ?",
+		"idealItems": [
+			{ "title": "Artizaned o-unan", "desc": "Charpaentour, plomer, tredan…" },
+			{ "title": "Stalioù lec'hel", "desc": "Boulanjerezh, bleuniagour, koefer…" },
+			{ "title": "Preti", "desc": "Kartenn, eurioù, prediñ…" }
+		],
+		"processLabel": "Penaos ez a en-dro",
+		"processSteps": [
+			{ "step": "1", "title": "Komzomp", "desc": "30 min evit kompren ho obererezh" },
+			{ "step": "2", "title": "Me a grou", "desc": "Ho lec'hienn a zeu da vezañ e 2 sizhun" },
+			{
+				"step": "3",
+				"title": "Emaoc'h enlinenn",
+				"desc": "Lakaat en linenn + stummadur endalc'het"
+			}
+		],
+		"upsellTitle": "Ezhomm muioc'h ?",
+		"upsellText": "Ar stumm Vitrine a ouzhpenn betek 5 pajenn, ur stalioù-diskouez ha buhezekadurioù kempenn.",
+		"upsellCta": "Dizoloiñ ar Vitrine — 1 490 €"
+	},
+	"offreVitrine": {
+		"tag": "⭐ Ar muiañ dibabet",
+		"title": "Vitrine",
+		"subtitle": "Evit an hini a fell dezhañ ul lec'hienn frammet gwirion, ket hepken ur bajenn. Betek 5 pajenn, buhezekadurioù kempenn ha SEO etre-daou.",
+		"price": "1 490",
+		"priceSuffix": "€",
+		"priceNote": "adalek",
+		"pagesValue": "5",
+		"pagesLabel": "pajennoù disheñvel",
+		"delayValue": "3",
+		"delaySuffix": "sizh.",
+		"delayLabel": "deiziadur sklaer adalek ar sinañ",
+		"includedLabel": "Ar pezh a zo endalc'het",
+		"features": [
+			"Dizain personelaet + hezoug war pellgomzerioù",
+			"Skeudennaoueg & oberoù a-raok/goude",
+			"Buhezekadurioù kempenn (Framer Motion)",
+			"Google Analytics pe Plausible",
+			"Stummadur 2e evit merañ an endalc'had",
+			"SSL + lakaat en linenn + anv domani"
+		],
+		"seoLabel": "Skor Lighthouse (SEO)",
+		"seoValue": "90+",
+		"seoNote": "Gwelus war Google adalek an devezh kentañ",
+		"supportValue": "1",
+		"supportSuffix": "miz",
+		"supportLabel": "reizhadennoù hep muiañ a goust",
+		"paymentLabel": "Paeañ e 2 gwech",
+		"paymentSteps": [
+			{ "pct": "50%", "when": "ouzh ar sinañ" },
+			{ "pct": "50%", "when": "ouzh al livradur" }
+		],
+		"ctaTitle": "Prest da lañsañ ho raktres?",
+		"ctaSubtitle": "Eskemm kentañ digoust — devis dindan 24e",
+		"cta": "Kregiñ gant ma raktres",
+		"back": "An holl stummadoù"
+	},
+	"offreSurMesure": {
+		"tag": "War-bouez",
+		"title": "Ho raktres a verit muioc'h eget ur patrom.",
+		"subtitle": "Kemer rendez-vous, katalog, blog, liesyezhek — sevel a reomp ar pezh a zo ret deoc'h resis. Hep astalenn, hep bevenn dispar.",
+		"price": "1 990",
+		"priceSuffix": "€",
+		"priceNote": "adalek",
+		"paymentNote": "50% ouzh ar sinañ · 50% ouzh al livradur",
+		"includedLabel": "Ar pezh a zo endalc'het",
+		"features": [
+			"Pep tra eus ar stumm Vitrine",
+			"Betek 8 pajenn",
+			"Kemer rendez-vous enlinenn (Cal.com)",
+			"Blog CMS — merit ho pennadoù hoc'h-unan",
+			"SEO araokaet — audit & gerioù-alc'hwez",
+			"Emvod heuliañ 1 miz goude al livradur"
+		],
+		"statsItems": [
+			{ "val": "8", "label": "pajenn d'ar muiañ" },
+			{ "val": "3–5", "label": "sizhunvezhioù" },
+			{ "val": "3", "label": "miz skoazell" }
+		],
+		"optionsLabel": "Dibarzhioù hegerz",
+		"options": [
+			"Katalog produioù",
+			"Liesyezhek",
+			"Lañser etrewezhiat",
+			"Kartenn etrewezhiat",
+			"Buhezekadurioù personelaet",
+			"Furmskrid araokaet"
+		],
+		"ctaTitle": "Ur raktres resis e penn?",
+		"ctaSubtitle": "Eskemm 30 min digoust · Devis dindan 24e · Hep enkadenn",
+		"compare": "Keñveriañ",
+		"cta": "Goulenn un devis",
+		"back": "An holl stummadoù"
 	}
 }
