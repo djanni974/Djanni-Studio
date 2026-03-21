@@ -89,7 +89,7 @@ export function ProjectCard({ project, priority }: { project: Project; priority?
 										alt={project.name}
 										fill
 										className="object-cover object-top"
-										sizes="(max-width: 768px) 90vw, 60vw"
+										sizes="(max-width: 768px) 85vw, 750px"
 										priority={priority}
 									/>
 								</div>
@@ -109,7 +109,7 @@ export function ProjectCard({ project, priority }: { project: Project; priority?
 								alt={project.name}
 								fill
 								className="object-cover object-top"
-								sizes="(max-width: 768px) 90vw, 50vw"
+								sizes="(max-width: 768px) 85vw, 450px"
 							/>
 						</div>
 					</BrowserMockup>

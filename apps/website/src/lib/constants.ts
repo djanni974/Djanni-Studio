@@ -500,9 +500,12 @@ export type PricingTier = {
 	priceNote: string
 	name: string
 	description: string
+	benefitLine: string
 	features: string[]
 	ctaLabel: string
+	href?: string
 	featured?: boolean
+	popularNote?: string
 }
 
 export const PRICING_TIERS: PricingTier[] = [
@@ -514,13 +517,14 @@ export const PRICING_TIERS: PricingTier[] = [
 		priceNote: "495€ à la signature • 495€ à la livraison",
 		name: "Présence",
 		description: "Vous n'existez pas sur Google. On règle ça en 2 semaines.",
+		benefitLine: "Pour apparaître sur Google et rassurer les clients qui vous cherchent.",
 		features: [
 			"1 landing page multi-sections",
 			"Design sur mesure",
 			"100% responsive mobile",
 			"Numéro cliquable + formulaire",
-			"SEO de base (title, OG)",
-			"SSL + déploiement",
+			"Référencement Google de base",
+			"Sécurité SSL + mise en ligne",
 			"Formation 1h",
 			"Support 30 jours",
 			"Livraison en 2 semaines",
@@ -535,13 +539,15 @@ export const PRICING_TIERS: PricingTier[] = [
 		priceNote: "50% à la signature • 50% à la livraison",
 		name: "Vitrine",
 		description: "Un vrai outil de travail — pas juste une carte de visite en ligne.",
+		benefitLine: "Pour donner envie avant même que le client pousse la porte.",
+		popularNote: "L'offre la plus adaptée pour 80% des artisans et commerçants.",
 		features: [
 			"Jusqu'à 5 pages",
 			"Galerie photos / portfolio",
 			"Réalisations avant/après",
 			"Animations soignées",
-			"SEO intermédiaire (Lighthouse 90+)",
-			"Google Analytics ou Plausible",
+			"SEO poussé (site rapide, bien classé)",
+			"Statistiques de visite",
 			"Formation 2h",
 			"Support 1 mois",
 			"Livraison en 3 semaines",
@@ -557,13 +563,14 @@ export const PRICING_TIERS: PricingTier[] = [
 		priceNote: "Prix défini après échange • Paiement en 2 fois",
 		name: "Sur mesure",
 		description: "Vous avez des besoins spécifiques. On construit exactement ce qu'il faut.",
+		benefitLine: "Pour transformer votre site en vrai outil de vente et de réservation.",
 		features: [
 			"Jusqu'à 8 pages",
-			"Prise de RDV (Cal.com)",
-			"Blog CMS",
+			"Prise de RDV en ligne",
+			"Blog intégré (vous publiez vous-même)",
 			"Catalogue produits",
 			"Multilingue",
-			"SEO avancé (audit, mots-clés)",
+			"SEO avancé (audit + stratégie mots-clés)",
 			"Support 3 mois",
 			"Réunion de suivi à 1 mois",
 			"Livraison en 3-5 semaines",

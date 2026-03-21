@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import dynamic from "next/dynamic"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { Hero } from "@/components/sections/hero"
-import { Realisations } from "@/components/sections/realisations"
 import { SectionDivider } from "@/components/ui/section-divider"
 import { FAQ_ITEMS } from "@/lib/constants"
 import { getAlternates } from "@/lib/metadata"
@@ -26,6 +25,9 @@ export async function generateMetadata({
 	}
 }
 
+const Realisations = dynamic(() =>
+	import("@/components/sections/realisations").then((m) => m.Realisations),
+)
 const PourquoiMoi = dynamic(() =>
 	import("@/components/sections/pourquoi-moi").then((m) => m.PourquoiMoi),
 )

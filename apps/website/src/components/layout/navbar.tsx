@@ -2,7 +2,6 @@
 
 import { cn } from "@repo/ui/lib/utils"
 import { IconMenu2, IconMoon, IconPhone, IconSun, IconX } from "@tabler/icons-react"
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react"
 import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
@@ -20,16 +19,39 @@ export function Navbar() {
 	const [scrolled, setScrolled] = useState(false)
 	const [mobileOpen, setMobileOpen] = useState(false)
 	const [mounted, setMounted] = useState(false)
-	const { scrollY } = useScroll()
 	const { theme, setTheme } = useTheme()
 	const t = useTranslations("nav")
 	const pathname = usePathname()
 
 	useEffect(() => setMounted(true), [])
 
-	useMotionValueEvent(scrollY, "change", (latest) => {
-		setScrolled(latest > 40)
-	})
+	useEffect(() => {
+		const onScroll = () => setScrolled(window.scrollY > 40)
+		onScroll()
+		window.addEventListener("scroll", onScroll, { passive: true })
+		return () => window.removeEventListener("scroll", onScroll)
+	}, [])
+
+	const themeButton = (
+		<button
+			type="button"
+			onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+			className="flex h-9 w-9 items-center justify-center rounded-md text-djanni-gray-light transition-colors hover:bg-secondary hover:text-foreground"
+			aria-label={t("toggleTheme")}
+		>
+			<span className="relative flex h-[18px] w-[18px] items-center justify-center">
+				{mounted ? (
+					theme === "dark" ? (
+						<IconSun size={18} className="animate-icon-in" />
+					) : (
+						<IconMoon size={18} className="animate-icon-in" />
+					)
+				) : (
+					<IconMoon size={18} className="opacity-0" />
+				)}
+			</span>
+		</button>
+	)
 
 	return (
 		<nav
@@ -58,19 +80,8 @@ export function Navbar() {
 								{t(link.key)}
 								{isActive && (
 									<>
-										<motion.span
-											initial={{ scale: 0 }}
-											animate={{ scale: 1 }}
-											transition={{ type: "spring", stiffness: 500, damping: 25 }}
-											className="text-djanni-orange"
-										>
-											.
-										</motion.span>
-										<motion.span
-											layoutId="nav-underline"
-											className="absolute right-0 -bottom-0.5 left-0 h-0.5 rounded-full bg-djanni-orange"
-											transition={{ type: "spring", stiffness: 500, damping: 35 }}
-										/>
+										<span className="animate-dot-in text-djanni-orange">.</span>
+										<span className="absolute right-0 -bottom-0.5 left-0 h-0.5 animate-underline-in rounded-full bg-djanni-orange" />
 									</>
 								)}
 							</Link>
@@ -80,33 +91,7 @@ export function Navbar() {
 				<li>
 					<LanguageSwitcher />
 				</li>
-				<li>
-					<button
-						type="button"
-						onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-						className="flex h-9 w-9 items-center justify-center rounded-md text-djanni-gray-light transition-colors hover:bg-secondary hover:text-foreground"
-						aria-label={t("toggleTheme")}
-					>
-						<span className="flex h-[18px] w-[18px] items-center justify-center">
-							{mounted ? (
-								<AnimatePresence mode="wait" initial={false}>
-									<motion.span
-										key={theme}
-										initial={{ rotate: -90, scale: 0, opacity: 0 }}
-										animate={{ rotate: 0, scale: 1, opacity: 1 }}
-										exit={{ rotate: 90, scale: 0, opacity: 0 }}
-										transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-										className="flex items-center justify-center"
-									>
-										{theme === "dark" ? <IconSun size={18} /> : <IconMoon size={18} />}
-									</motion.span>
-								</AnimatePresence>
-							) : (
-								<IconMoon size={18} className="opacity-0" />
-							)}
-						</span>
-					</button>
-				</li>
+				<li>{themeButton}</li>
 				<li>
 					<Link
 						href="/demande-projet"
@@ -117,34 +102,10 @@ export function Navbar() {
 				</li>
 			</ul>
 
-			{/* Mobile right side: language + theme toggle + hamburger */}
+			{/* Mobile right side */}
 			<div className="flex items-center gap-3 lg:hidden">
 				<LanguageSwitcher />
-				<button
-					type="button"
-					onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-					className="flex h-9 w-9 items-center justify-center rounded-md text-djanni-gray-light transition-colors hover:text-foreground"
-					aria-label={t("toggleTheme")}
-				>
-					<span className="flex h-[18px] w-[18px] items-center justify-center">
-						{mounted ? (
-							<AnimatePresence mode="wait" initial={false}>
-								<motion.span
-									key={theme}
-									initial={{ rotate: -90, scale: 0, opacity: 0 }}
-									animate={{ rotate: 0, scale: 1, opacity: 1 }}
-									exit={{ rotate: 90, scale: 0, opacity: 0 }}
-									transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-									className="flex items-center justify-center"
-								>
-									{theme === "dark" ? <IconSun size={18} /> : <IconMoon size={18} />}
-								</motion.span>
-							</AnimatePresence>
-						) : (
-							<IconMoon size={18} className="opacity-0" />
-						)}
-					</span>
-				</button>
+				{themeButton}
 				<button
 					type="button"
 					onClick={() => setMobileOpen(!mobileOpen)}
@@ -152,80 +113,63 @@ export function Navbar() {
 					aria-label="Menu"
 					aria-expanded={mobileOpen}
 				>
-					<AnimatePresence mode="wait" initial={false}>
-						<motion.span
-							key={mobileOpen ? "close" : "menu"}
-							initial={{ rotate: -90, scale: 0.8, opacity: 0 }}
-							animate={{ rotate: 0, scale: 1, opacity: 1 }}
-							exit={{ rotate: 90, scale: 0.8, opacity: 0 }}
-							transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
-							className="flex items-center justify-center"
-						>
-							{mobileOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
-						</motion.span>
-					</AnimatePresence>
+					<span className="flex items-center justify-center">
+						{mobileOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
+					</span>
 				</button>
 			</div>
 
 			{/* Mobile menu */}
-			<AnimatePresence>
-				{mobileOpen && (
-					<motion.div
-						initial={{ opacity: 0, y: -10 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: -10 }}
-						transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-						className="absolute top-full right-0 left-0 border-b border-border bg-background/95 px-6 py-6 backdrop-blur-xl lg:hidden"
-					>
-						<ul className="flex flex-col gap-4">
-							{NAV_KEYS.map((link, i) => (
-								<motion.li
-									key={link.href}
-									initial={{ opacity: 0, x: -12 }}
-									animate={{ opacity: 1, x: 0 }}
-									transition={{
-										delay: 0.04 * i,
-										duration: 0.25,
-										ease: [0.22, 1, 0.36, 1],
-									}}
-								>
-									<Link
-										href={link.href}
-										onClick={() => setMobileOpen(false)}
-										className={cn(
-											"block text-base transition-colors hover:text-foreground",
-											pathname === link.href || pathname.startsWith(`${link.href}/`)
-												? "font-medium text-djanni-orange"
-												: "text-djanni-gray-light",
-										)}
-									>
-										{t(link.key)}
-									</Link>
-								</motion.li>
-							))}
-							<motion.li
-								className="pt-2"
-								initial={{ opacity: 0, x: -12 }}
-								animate={{ opacity: 1, x: 0 }}
-								transition={{
-									delay: 0.04 * NAV_KEYS.length,
-									duration: 0.25,
-									ease: [0.22, 1, 0.36, 1],
-								}}
-							>
-								<Link
-									href="/demande-projet"
-									onClick={() => setMobileOpen(false)}
-									className="flex items-center justify-center gap-2 rounded-md bg-djanni-orange px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light"
-								>
-									<IconPhone size={16} />
-									{t("cta")}
-								</Link>
-							</motion.li>
-						</ul>
-					</motion.div>
+			<div
+				className={cn(
+					"absolute top-full right-0 left-0 border-b border-border bg-background/95 px-6 backdrop-blur-xl transition-all duration-250 ease-out lg:hidden",
+					mobileOpen
+						? "visible translate-y-0 py-6 opacity-100"
+						: "invisible -translate-y-2 py-0 opacity-0",
 				)}
-			</AnimatePresence>
+			>
+				<ul className="flex flex-col gap-4">
+					{NAV_KEYS.map((link, i) => (
+						<li
+							key={link.href}
+							className={cn(
+								"transition-all duration-250 ease-out",
+								mobileOpen ? "translate-x-0 opacity-100" : "-translate-x-3 opacity-0",
+							)}
+							style={{ transitionDelay: mobileOpen ? `${40 * i}ms` : "0ms" }}
+						>
+							<Link
+								href={link.href}
+								onClick={() => setMobileOpen(false)}
+								className={cn(
+									"block text-base transition-colors hover:text-foreground",
+									pathname === link.href || pathname.startsWith(`${link.href}/`)
+										? "font-medium text-djanni-orange"
+										: "text-djanni-gray-light",
+								)}
+							>
+								{t(link.key)}
+							</Link>
+						</li>
+					))}
+					<li
+						className={cn(
+							"pt-2 transition-all duration-250 ease-out",
+							mobileOpen ? "translate-x-0 opacity-100" : "-translate-x-3 opacity-0",
+						)}
+						style={{ transitionDelay: mobileOpen ? `${40 * NAV_KEYS.length}ms` : "0ms" }}
+					>
+						<Link
+							href="/demande-projet"
+							onClick={() => setMobileOpen(false)}
+							className="flex items-center justify-center gap-2 rounded-md bg-djanni-orange px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light"
+						>
+							<IconPhone size={16} />
+							{t("cta")}
+						</Link>
+					</li>
+				</ul>
+			</div>
 		</nav>
 	)
 }

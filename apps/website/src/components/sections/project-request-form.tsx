@@ -7,6 +7,7 @@ import {
 	IconCheck,
 	IconClock,
 	IconDeviceDesktop,
+	IconFileDescription,
 	IconMail,
 	IconPhone,
 	IconRefresh,
@@ -41,6 +42,7 @@ const STEP_COUNT = 4
 const STEP_LABEL_KEYS = ["0", "1", "2", "3"] as const
 
 const PROJECT_TYPE_OPTIONS = [
+	{ value: "presence", icon: IconFileDescription },
 	{ value: "site-vitrine", icon: IconWorldWww },
 	{ value: "site-premium", icon: IconSparkles },
 	{ value: "refonte", icon: IconRefresh },
@@ -428,7 +430,7 @@ export function ProjectRequestForm() {
 													{t("projectTypeLabel")}
 												</span>
 												<div
-													className="grid grid-cols-2 gap-3"
+													className="grid grid-cols-2 gap-3 sm:grid-cols-3"
 													role="radiogroup"
 													aria-label={t("projectTypeLabel")}
 													aria-describedby={errors.projectType ? "error-projectType" : undefined}
