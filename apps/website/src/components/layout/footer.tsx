@@ -92,6 +92,12 @@ export function Footer() {
 						>
 							{t("cgv")}
 						</Link>
+						<Link
+							href="/plan-du-site"
+							className="text-sm text-djanni-gray-light transition-colors hover:text-foreground"
+						>
+							{t("sitemap")}
+						</Link>
 					</nav>
 				</div>
 

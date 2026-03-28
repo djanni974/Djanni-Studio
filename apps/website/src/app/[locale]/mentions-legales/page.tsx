@@ -1,5 +1,6 @@
 import { IconArrowLeft } from "@tabler/icons-react"
 import type { Metadata } from "next"
+import type { ReactNode } from "react"
 import { Link } from "@/i18n/navigation"
 import { getAlternates } from "@/lib/metadata"
 
@@ -12,21 +13,23 @@ export function generateMetadata(): Metadata {
 	}
 }
 
-const sections = [
+const sections: { title: string; content: (string | ReactNode)[] }[] = [
 	{
 		title: "1. Éditeur du site",
 		content: [
 			"Le site djannistudio.fr est édité par :",
-			"**Gianni** — Djanni Studio",
+			"**Gianni Jardin** — Djanni Studio",
 			"Micro-entreprise — Création de sites web",
 			"SIREN : 102 087 822",
 			"SIRET : 102 087 822 00015",
 			"Code APE : 6201Z — Programmation informatique",
 			"Immatriculation au RNE : 06/03/2026",
+			"**Dispensé d'immatriculation au RCS**",
+			"__TVA non applicable, article 293 B du CGI.__",
 			"Adresse : 4 boulevard Jules Verger, 35800 Dinard, France",
 			"Email : __contact@djannistudio.fr__",
 			"Téléphone : 07 49 54 74 98",
-			"Directeur de la publication : Gianni",
+			"Directeur de la publication : Gianni Jardin",
 		],
 	},
 	{
@@ -43,7 +46,16 @@ const sections = [
 		content: [
 			"Djanni Studio est une micro-entreprise spécialisée dans la __conception et le développement de sites web sur mesure__, principalement destinés aux artisans, commerçants et TPE en Bretagne.",
 			"Les prestations proposées incluent : création de sites vitrines, refonte de sites existants, optimisation des performances et du référencement naturel (SEO).",
-			"Les conditions applicables aux prestations de Djanni Studio sont détaillées dans les **Conditions Générales de Vente (CGV)**.",
+			<>
+				Les conditions applicables aux prestations de Djanni Studio sont détaillées dans les{" "}
+				<Link
+					href="/cgv"
+					className="font-semibold text-djanni-orange underline decoration-djanni-orange/40 underline-offset-[3px] transition-colors hover:text-djanni-orange-light"
+				>
+					Conditions Générales de Vente (CGV)
+				</Link>
+				.
+			</>,
 		],
 	},
 	{
@@ -64,7 +76,7 @@ const sections = [
 			"**Données collectées :** Les données recueillies via le formulaire de contact (nom, email, type de projet, budget indicatif, message) sont utilisées __uniquement pour répondre à votre demande__. Elles ne sont ni vendues, ni cédées, ni transmises à des tiers.",
 			"**Base légale :** Le traitement repose sur votre consentement (envoi volontaire du formulaire) et sur l'intérêt légitime de Djanni Studio à répondre aux demandes de contact.",
 			"**Durée de conservation :** Les données sont conservées pendant __12 mois maximum__ après le dernier échange, puis supprimées.",
-			"**Responsable du traitement :** Gianni — Djanni Studio",
+			"**Responsable du traitement :** Gianni Jardin — Djanni Studio",
 			"Pour exercer vos droits ou pour toute question relative à vos données : __contact@djannistudio.fr__",
 			"En cas de litige, vous pouvez adresser une réclamation à la __CNIL__ (Commission Nationale de l'Informatique et des Libertés) — www.cnil.fr",
 		],
@@ -93,10 +105,12 @@ const sections = [
 		],
 	},
 	{
-		title: "9. Droit applicable",
+		title: "9. Droit applicable et médiation",
 		content: [
 			"Les présentes mentions légales sont régies par le __droit français__.",
-			"En cas de litige relatif à l'utilisation de ce site, les tribunaux compétents seront ceux du ressort du domicile de l'éditeur, sauf disposition légale contraire.",
+			// TODO: Remplacer par les vraies coordonnées du médiateur une fois inscrit chez Medicys
+			"**Médiation de la consommation :** Conformément aux articles L.612-1 et suivants du Code de la consommation, tout consommateur a le droit de recourir __gratuitement__ à un médiateur de la consommation en vue de la résolution amiable d'un litige. Les coordonnées du médiateur compétent seront communiquées sur simple demande à __contact@djannistudio.fr__.",
+			"En cas de litige, le consommateur peut saisir le tribunal de son domicile conformément aux dispositions légales en vigueur.",
 		],
 	},
 	{
@@ -156,7 +170,7 @@ export default function MentionsLegales() {
 						<div className="space-y-2.5">
 							{section.content.map((line, i) => (
 								<p key={i} className="text-[15px] leading-relaxed text-djanni-gray-light">
-									{renderLine(line)}
+									{typeof line === "string" ? renderLine(line) : line}
 								</p>
 							))}
 						</div>

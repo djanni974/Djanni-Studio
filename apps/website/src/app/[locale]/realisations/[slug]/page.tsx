@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { CaseStudyContent } from "@/components/sections/case-study-content"
 import { PROJECTS } from "@/lib/constants"
-import { getAlternates } from "@/lib/metadata"
+import { getAlternates, pickMessages } from "@/lib/metadata"
 
 export function generateStaticParams() {
 	return PROJECTS.map((project) => ({
@@ -46,7 +47,10 @@ export default async function CaseStudyPage({
 }) {
 	const { slug, locale } = await params
 	setRequestLocale(locale)
-	const bc = await getTranslations({ locale, namespace: "breadcrumb" })
+	const [bc, messages] = await Promise.all([
+		getTranslations({ locale, namespace: "breadcrumb" }),
+		getMessages(),
+	])
 	const project = PROJECTS.find((p) => p.slug === slug)
 	if (!project) notFound()
 
@@ -82,7 +86,9 @@ export default async function CaseStudyPage({
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
 			/>
-			<CaseStudyContent project={project} />
+			<NextIntlClientProvider messages={pickMessages(messages, ["caseStudy"])}>
+				<CaseStudyContent project={project} />
+			</NextIntlClientProvider>
 		</main>
 	)
 }

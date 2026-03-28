@@ -50,7 +50,8 @@
 		"about": "Diwar-benn",
 		"blog": "Blog",
 		"cta": "Kregiñ gant ur raktres",
-		"toggleTheme": "Cheñch an tem"
+		"toggleTheme": "Cheñch an tem",
+		"skipToContent": "Mont d'ar pennad"
 	},
 	"hero": {
 		"badge": "Djanni Studio — Breizh",
@@ -81,16 +82,20 @@
 			"title": "Petra a zo endalc'het e pep formulenn.",
 			"items": [
 				{
+					"title": "Hep koumanant — ho lec'hienn a zo deoc'h",
+					"text": "Paeañ a rit ur wech, al lec'hienn a zo deoc'h. Hep fraezoù kuzh, hep sujedidigezh. An herbergiñ a zo digoust."
+				},
+				{
 					"title": "Livrañ prim",
-					"text": "Ho lec'hienn a zo en linenn e 2 da 3 sizhun hervez ar formulenn. Hep amlederioù hir."
+					"text": "Ho lec'hienn a zo en linenn e 2 da 5 sizhun hervez ar formulenn. Hep amlederioù hir."
 				},
 				{
 					"title": "Paeañ soubleg",
 					"text": "50% d'ar sinadur, 50% d'al livrañ. Eeun ha sklaer."
 				},
 				{
-					"title": "Skor endalc'het",
-					"text": "Eus 30 devezh da 3 miz a skor hervez ar formulenn. Hegerz on evit ho goulennoù."
+					"title": "Skor endalc'het — ha goude ?",
+					"text": "Eus 30 devezh da 3 miz a skor hervez ar formulenn. Goude-se, ho lec'hienn a gendalc'h mont en-dro. Ezhomm a gemmadurioù ? Hegerz on war goulenn."
 				}
 			]
 		},
@@ -204,11 +209,15 @@
 				},
 				{
 					"question": "Pegement a amzer ma ne bourchazan ket an danvezioù buan ?",
-					"answer": "An amzer 2-3 sizhun a grog adalek ma'm eus an holl elfennoù (testennoù, skeudennoù, titouroù). Ma'z eo diaes deoc'h dastum an danvezioù, an dibarzh skrivañ da +150€ a ziskoulm kement-se."
+					"answer": "An amzer meneget a grog adalek ma'm eus an holl elfennoù (testennoù, skeudennoù, titouroù). Ma'z eo diaes deoc'h dastum an danvezioù, an dibarzh skrivañ da +150€ a ziskoulm kement-se."
 				},
 				{
 					"question": "Ha bez' ez eus ur garantez war an amzerioù ?",
 					"answer": "Ya. Ma n'eo ket livret al lec'hienn en amzer emglevet en devis evit un abeg din, reiñ a ran deoc'h ur vihannaat a 10% dre sizhun dale."
+				},
+				{
+					"question": "Penaos e c'hoarvez ar paeadur ?",
+					"answer": "50% d'ar sinadur, 50% d'al livradur — a-raok mont en linenn. Gallout a rit paeañ dre dreuzkas bankañ, kartenn bankañ pe chek. Fraoù kuzh ebet, abonnañ ebet rediet."
 				}
 			]
 		},
@@ -231,14 +240,14 @@
 			"description": "N'oc'h ket war Google. Reizhañ a raimp kement-se e 2 sizhun.",
 			"benefitLine": "Evit diskouez war Google ha sioulaat ar c'hustumerien a glasko ac'hanoc'h.",
 			"features": [
-				"1 pajenn liesrannoù",
-				"Dezign war-bouez",
-				"100% responsive hezoug",
-				"Niverenn glikadus + formulenn",
-				"Klask Google diazez",
-				"Surentez SSL + lakaat en linenn",
-				"Stummadur 1e",
-				"Skoazell 30 devezh",
+				"1 pajenn glok (Hero, Servijoù, Galerienn, Darempred…)",
+				"Dezign war-bouez hervez ho skeudenn",
+				"Perzhiek war pellgomz ho kustumerien",
+				"Ho kustumerien a c'halv ac'hanoc'h en un taol",
+				"Kavet war Google en ho korn-bro",
+				"Lec'hienn surentet hag en linenn",
+				"Stummadur 1e : kemmañ ho testennoù hag ho skeudennoù",
+				"Skoazell 30 devezh endalc'het",
 				"Livret e 2 sizhun"
 			],
 			"ctaLabel": "Kregiñ gant ma lec'hienn"
@@ -254,14 +263,14 @@
 			"benefitLine": "Evit reiñ c'hoant a-raok ma teufe ar c'hustumer da dreuziñ an nor.",
 			"popularNote": "Ar formulenn wellañ evit 80% eus an artizaned hag ar c'henwerzhourien.",
 			"features": [
-				"Betek 5 pajenn",
-				"Galerienn skeudennoù / portfolio",
-				"Obererezhioù kent/goude",
-				"Buhezegezh kempenn",
-				"SEO buhezek (lec'hienn prim, plaset mat)",
-				"Stadegenn gweladennoù",
-				"Stummadur 2e",
-				"Skoazell 1 miz",
+				"Betek 5 pajenn (Degemer, Servijoù, Obererezhioù, Diwar-benn, Darempred)",
+				"Galerienn skeudennoù evit diskouez hoc'h obererezhioù",
+				"Kent/goude evit diskouez ho gouiziegezh",
+				"Buhezegezh kempenn a ro c'hoant",
+				"Kavet war Google en ho korn-bro (SEO gwellaet)",
+				"Gwelet pegement a weladennerien a zeu d'ho lec'hienn",
+				"Stummadur 2e : merañ ho lec'hienn hoc'h-unan",
+				"Skoazell 1 miz endalc'het",
 				"Livret e 3 sizhun"
 			],
 			"ctaLabel": "Kregiñ gant ma lec'hienn"
@@ -276,13 +285,13 @@
 			"description": "Ezhommoù resis ho peus. Sevel a raimp ar pezh a zo ret.",
 			"benefitLine": "Evit treiñ ho lec'hienn en un ostilh gwerzh ha rezervañ gwir.",
 			"features": [
-				"Betek 8 pajenn",
-				"Kemer randevou en linenn",
-				"Blog enframmet (embanniñ hoc'h-unan)",
-				"Katalog produioù",
-				"Liesyezhek",
-				"SEO araokaet (audit + stratejenn gerioù-alc'hwez)",
-				"Skoazell 3 miz",
+				"Betek 8 pajenn (sk. : Degemer, Servijoù ×3, Obererezhioù, Blog, Diwar-benn, Darempred)",
+				"Ho kustumerien a reserv en linenn",
+				"Blog enframmet — embanniñ hoc'h-unan",
+				"Ho katalog produioù pe servijoù gwelus en linenn",
+				"Liesyezhek evit tizhout muioc'h a gustumerien",
+				"SEO araokaet (audit klok + stratejenn gerioù-alc'hwez)",
+				"Skoazell 3 miz endalc'het",
 				"Emvod heuliañ da 1 miz",
 				"Livret e 3-5 sizhun"
 			],
@@ -311,7 +320,7 @@
 			},
 			{
 				"number": "04",
-				"title": "Livret e 2-3 sizhun, ket e 6 miz",
+				"title": "Livret e 2 da 5 sizhun, ket e 6 miz",
 				"text": "Un doare splann, pazennoù resisaet. Unan hepken da gomz gantañ, hegerz war-eeun — ket un ajantur gant 5 den disheñvel."
 			}
 		]
@@ -353,7 +362,7 @@
 			}
 		]
 	},
-	"pricingNote": "Ul lec'hienn vitrin klok diwar 990 €, livret e 2 sizhun, hep souezhadenn fall.",
+	"pricingNote": "Ul lec'hienn vitrin klok diwar 990 €, livret buan, hep souezhadenn fall.",
 	"faq": {
 		"tag": "Goulennoù alies",
 		"title": "Houzañv c'hoazh ?",
@@ -361,7 +370,7 @@
 		"items": [
 			{
 				"question": "Pegement a amzer ez eus ezhomm evit krouiñ ul lec'hienn ?",
-				"answer": "E keñver, ar formulenn Vitrine a zo livret e 2 sizhun. Ar formulenn War-bouez a bad 3 sizhun. Reiñ a ran deoc'h un doare resisaet a-benn ma vo sinet an devis."
+				"answer": "Ar formulenn Prezañs a zo livret e 2 sizhun, ar formulenn Vitrine e 3 sizhun, hag ar formulenn War-bouez e 3 da 5 sizhun. Reiñ a ran deoc'h un doare resisaet a-benn ma vo sinet an devis."
 			},
 			{
 				"question": "N'ouzon ket netra eus an teknikel, ha ur gudenn eo ?",
@@ -458,18 +467,18 @@
 				},
 				{
 					"year": "2023 — Hiziv",
-					"title": "Diorroerien web emgefredur",
-					"text": "En un dro, emaon bet passionet gant ar c'hod. React, Next.js, TypeScript — desket am eus en ur sevel raktresoù gwir. Hevelep prederouriezh eget ar c'harpaentourezh : kreñv, war-bouez, hep berradenn."
+					"title": "Diorroerien web",
+					"text": "En un dro, emaon bet passionet gant ar c'hod. React, Next.js, TypeScript — desket am eus en ur sevel raktresoù gwir, ket en ur sal kentelioù. Hevelep prederouriezh eget ar c'harpaentourezh : kreñv, war-bouez, hep berradenn."
 				},
 				{
-					"year": "2025",
+					"year": "2026",
 					"title": "Djanni Studio a zo ganet",
 					"text": "Lañset am eus Djanni Studio gant ur gefridi splann : sikour an artizaned hag ar c'henwerzhourion breizhiz da gaout ul lec'hienn web a zere dezho. Abalamour ma anavezan o buhez pemdeziek, komz a ran o yezh."
 				},
 				{
 					"year": "Ma gefridi",
 					"title": "Ar web hegerz d'an artizaned",
-					"text": "Hep yezh vevenn, hep prizioù laket da greskiñ, hep retardiñ hep fin. Ul lec'hienn kaer, buan ha efedus, livret e 2-3 sizhun. Ken aes ha kement-se."
+					"text": "Hep yezh vevenn, hep prizioù laket da greskiñ, hep retardiñ hep fin. Ul lec'hienn kaer, buan ha efedus, livret e 2 da 5 sizhun hervez ar formulenn. Ken aes ha kement-se."
 				}
 			]
 		},
@@ -484,7 +493,7 @@
 				},
 				{
 					"title": "Perzhded",
-					"text": "Pep lec'hienn a zo kodet war-bouez. Patrom ebet, WordPress ebet — kod prop ha performant."
+					"text": "Pep lec'hienn a zo kodet war-bouez gant teknologiezhioù modern — kod prop ha performant, patrom doareel ebet."
 				},
 				{
 					"title": "Tostaat",
@@ -499,7 +508,8 @@
 		"skills": {
 			"tag": "Gouiziegezhoù",
 			"title": "An ostilhoù a implijon.",
-			"subtitle": "Teknologiezhioù modern evit lec'hiennoù buan, surentez ha mat renket."
+			"subtitle": "Teknologiezhioù modern evit lec'hiennoù buan, surentez ha mat renket.",
+			"benefitLine": "E gwirionez : lec'hiennoù a garg e nebeutoc'h eget 2 eilenn hag a zeu war ar bajenn gentañ Google."
 		},
 		"cta": {
 			"title": "C'hoant labourat asambles ?",
@@ -573,6 +583,28 @@
 		"subtitle": "Trugarez da vezañ fiziañs e Djanni Studio. Rannit ho skiant-prenet en ur lezañ un ali war Google.",
 		"cta": "Lezañ un ali war Google",
 		"footer": "30 eilenn eo ha skoazellañ a ra ac'hanon kalz. Trugarez !"
+	},
+	"contactFaq": {
+		"tag": "Goulennoù alies",
+		"title": "A-raok kregiñ",
+		"items": [
+			{
+				"question": "Pegement a amzer a vez ezhomm evit krouiñ ma lec'hienn ?",
+				"answer": "2 sizhun evit ur bajenn unnik (stumm Prezañs), 3 sizhun evit ul lec'hienn lies-pajenn (stumm Vitrine), 3 da 5 sizhun evit ur raktres war-bouez. An amzerioù-mañ a grog pa'm eus resevet an arventez hag an holl elfennoù rekis."
+			},
+			{
+				"question": "Penaos e c'hoarvez ar paeadur ?",
+				"answer": "50% d'ar sinadur evit kregiñ ar raktres, 50% d'al livradur a-raok mont en linenn. Gallout a rit paeañ dre dreuzkas bankañ, kartenn bankañ pe chek. Fraoù kuzh ebet, abonnañ ebet rediet."
+			},
+			{
+				"question": "Hag ezhomm am eus da reiñ an testennoù hag ar skeudennoù ?",
+				"answer": "Nann, n'eo ket rediet. Skrivañ a reomp an testennoù asambles en 30 munut a gomz. Ma n'ho peus ket skeudennoù, implijañ a ran skeudennoù a-vicher heñvel ouzh ho labour. Un dibarzh luc'hskeudenner lec'hel a zo ivez posupl da +200€."
+			},
+			{
+				"question": "Ha deoc'h-c'hwi a dle degas ar raktres ?",
+				"answer": "Ya, ez an d'ho bro war Dinarzh, Sant-Maloù hag ar Roudour a-bezh evit ar c'hentañ eskemm. Ar valdadennoù goude a c'haller ober dre skrin-gomz pe e-unan, diouzh ho c'hoant."
+			}
+		]
 	},
 	"projectRequest": {
 		"tag": "Goulenn raktres",
@@ -673,10 +705,32 @@
 		"privacy": "Prevezded",
 		"legal": "Menozoù lezennel",
 		"cgv": "DG",
+		"sitemap": "Kartenn al lec'hienn",
 		"paymentTransfer": "Treuzkas",
 		"paymentCard": "Kartenn bankañ",
 		"paymentCheck": "Chek",
 		"copyright": "© 2026 Djanni Studio — Pep gwir miret"
+	},
+	"sitemap": {
+		"metaTitle": "Kartenn al lec'hienn — Djanni Studio",
+		"metaDescription": "Kartenn al lec'hienn Djanni Studio — kavit an holl bajennoù.",
+		"title": "Kartenn al lec'hienn",
+		"tag": "Levezon",
+		"subtitle": "Kavit an holl bajennoù, obererezhioù ha pennadoù blog en un dro.",
+		"backHome": "Distreiñ d'ar gêr",
+		"mainPages": "Pajennoù pennañ",
+		"home": "Degemer",
+		"realisations": "Obererezhioù",
+		"offres": "Tarifioù",
+		"about": "Diwar-benn",
+		"blog": "Blog",
+		"contact": "Darempred",
+		"projectsSection": "Obererezhioù",
+		"blogSection": "Pennadoù blog",
+		"legalPages": "Pajennoù lezennel",
+		"legal": "Menozoù lezennel",
+		"cgv": "DG",
+		"privacy": "Prevezded"
 	},
 	"offrePresence": {
 		"tag": "Stumm Prezañs",

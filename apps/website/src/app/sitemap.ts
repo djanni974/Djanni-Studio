@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		{ path: "/blog", changeFrequency: "weekly" as const, priority: 0.8 },
 		{ path: "/mentions-legales", changeFrequency: "yearly" as const, priority: 0.3 },
 		{ path: "/cgv", changeFrequency: "yearly" as const, priority: 0.3 },
+		{ path: "/plan-du-site", changeFrequency: "monthly" as const, priority: 0.3 },
 	]
 
 	for (const page of staticPages) {

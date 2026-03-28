@@ -50,7 +50,8 @@
 		"about": "À propos",
 		"blog": "Blog",
 		"cta": "Démarrer un projet",
-		"toggleTheme": "Changer le thème"
+		"toggleTheme": "Changer le thème",
+		"skipToContent": "Aller au contenu"
 	},
 	"hero": {
 		"badge": "Djanni Studio — Bretagne",
@@ -81,16 +82,20 @@
 			"title": "Ce qui est inclus dans chaque offre.",
 			"items": [
 				{
+					"title": "Pas d'abonnement — votre site vous appartient",
+					"text": "Vous payez une fois, le site est à vous. Pas de frais cachés, pas de dépendance. L'hébergement est gratuit."
+				},
+				{
 					"title": "Livraison rapide",
-					"text": "Votre site est en ligne en 2 à 3 semaines selon la formule. Pas de délais à rallonge."
+					"text": "Votre site est en ligne en 2 à 5 semaines selon la formule. Pas de délais à rallonge."
 				},
 				{
 					"title": "Paiement flexible",
 					"text": "50% à la signature, 50% à la livraison. Simple et transparent."
 				},
 				{
-					"title": "Support inclus",
-					"text": "De 30 jours à 3 mois de support selon l'offre choisie. Je reste disponible pour vos questions."
+					"title": "Support inclus — et après ?",
+					"text": "De 30 jours à 3 mois de support selon l'offre. Après, votre site continue de fonctionner normalement. Besoin de modifications ? Je reste disponible sur devis."
 				}
 			]
 		},
@@ -201,11 +206,15 @@
 				},
 				{
 					"question": "Quel est le délai si je ne fournis pas les contenus rapidement ?",
-					"answer": "Le délai de 2-3 semaines commence à courir à partir du moment où j'ai tous les éléments (textes, photos, infos). Si vous avez du mal à rassembler les contenus, l'option rédaction à +150€ résout ça."
+					"answer": "Le délai indiqué commence à courir à partir du moment où j'ai tous les éléments (textes, photos, infos). Si vous avez du mal à rassembler les contenus, l'option rédaction à +150€ résout ça."
 				},
 				{
 					"question": "Y a-t-il une garantie sur les délais ?",
 					"answer": "Oui. Si le site n'est pas livré dans les délais convenus dans le devis pour une raison qui m'est imputable, je vous accorde une remise de 10% par semaine de retard."
+				},
+				{
+					"question": "Comment se passe le paiement ?",
+					"answer": "50% à la signature du devis, 50% à la livraison — avant la mise en ligne. Vous payez par virement bancaire, carte bancaire ou chèque. Aucun frais caché, aucun abonnement imposé."
 				}
 			]
 		},
@@ -228,14 +237,14 @@
 			"description": "Vous n'existez pas sur Google. On règle ça en 2 semaines.",
 			"benefitLine": "Pour apparaître sur Google et rassurer les clients qui vous cherchent.",
 			"features": [
-				"1 landing page multi-sections",
-				"Design sur mesure",
-				"100% responsive mobile",
-				"Numéro cliquable + formulaire",
-				"Référencement Google de base",
-				"Sécurité SSL + mise en ligne",
-				"Formation 1h",
-				"Support 30 jours",
+				"1 page complète (Hero, Services, Galerie, Contact…)",
+				"Design sur mesure à votre image",
+				"Parfait sur le téléphone de vos clients",
+				"Vos clients vous appellent en un clic",
+				"Visible sur Google dans votre ville",
+				"Site sécurisé et en ligne",
+				"Formation 1h : modifier vos textes et photos",
+				"Support 30 jours inclus",
 				"Livraison en 2 semaines"
 			],
 			"ctaLabel": "Démarrer mon site"
@@ -251,14 +260,14 @@
 			"benefitLine": "Pour donner envie avant même que le client pousse la porte.",
 			"popularNote": "L'offre la plus adaptée pour 80% des artisans et commerçants.",
 			"features": [
-				"Jusqu'à 5 pages",
-				"Galerie photos / portfolio",
-				"Réalisations avant/après",
-				"Animations soignées",
-				"SEO poussé (site rapide, bien classé)",
-				"Statistiques de visite",
-				"Formation 2h",
-				"Support 1 mois",
+				"Jusqu'à 5 pages (Accueil, Prestations, Réalisations, À propos, Contact)",
+				"Galerie photos / portfolio de vos réalisations",
+				"Avant/après pour montrer votre savoir-faire",
+				"Animations soignées qui donnent envie",
+				"Visible sur Google dans votre ville (SEO optimisé)",
+				"Voir combien de visiteurs viennent sur votre site",
+				"Formation 2h : gérer votre site en toute autonomie",
+				"Support 1 mois inclus",
 				"Livraison en 3 semaines"
 			],
 			"ctaLabel": "Démarrer mon site"
@@ -273,13 +282,13 @@
 			"description": "Vous avez des besoins spécifiques. On construit exactement ce qu'il faut.",
 			"benefitLine": "Pour transformer votre site en vrai outil de vente et de réservation.",
 			"features": [
-				"Jusqu'à 8 pages",
-				"Prise de RDV en ligne",
-				"Blog intégré (vous publiez vous-même)",
-				"Catalogue produits",
-				"Multilingue",
-				"SEO avancé (audit + stratégie mots-clés)",
-				"Support 3 mois",
+				"Jusqu'à 8 pages (ex : Accueil, Services ×3, Réalisations, Blog, À propos, Contact)",
+				"Vos clients réservent directement en ligne",
+				"Blog intégré — vous publiez vous-même",
+				"Votre catalogue de produits ou services visible en ligne",
+				"Multilingue pour toucher plus de clients",
+				"SEO avancé (audit complet + stratégie mots-clés)",
+				"Support 3 mois inclus",
 				"Réunion de suivi à 1 mois",
 				"Livraison en 3-5 semaines"
 			],
@@ -308,7 +317,7 @@
 			},
 			{
 				"number": "04",
-				"title": "Livré en 2-3 semaines, pas en 6 mois",
+				"title": "Livré en 2 à 5 semaines, pas en 6 mois",
 				"text": "Un planning clair, des étapes définies. Un seul interlocuteur, joignable en direct — pas une agence avec 5 contacts différents."
 			}
 		]
@@ -350,7 +359,7 @@
 			}
 		]
 	},
-	"pricingNote": "Un site vitrine complet à partir de 990 €, livré en 2 semaines, sans mauvaise surprise.",
+	"pricingNote": "Un site vitrine complet à partir de 990 €, livré rapidement, sans mauvaise surprise.",
 	"faq": {
 		"tag": "Questions fréquentes",
 		"title": "Vous hésitez encore ?",
@@ -358,7 +367,7 @@
 		"items": [
 			{
 				"question": "Combien de temps faut-il pour créer un site ?",
-				"answer": "En moyenne, une offre Vitrine est livrée en 2 semaines. Une offre Sur mesure prend environ 3 semaines. Je vous donne un planning précis dès la signature du devis."
+				"answer": "L'offre Présence est livrée en 2 semaines, l'offre Vitrine en 3 semaines, et l'offre Sur mesure en 3 à 5 semaines. Je vous donne un planning précis dès la signature du devis."
 			},
 			{
 				"question": "Je n'y connais rien en technique, c'est un problème ?",
@@ -455,18 +464,18 @@
 				},
 				{
 					"year": "2023 — Aujourd'hui",
-					"title": "Développeur web autodidacte",
-					"text": "En parallèle, je me suis passionné pour le code. React, Next.js, TypeScript — j'ai appris en construisant des projets concrets. Même philosophie que la charpente : du solide, du sur mesure, pas de raccourci."
+					"title": "Développeur web",
+					"text": "En parallèle, je me suis passionné pour le code. React, Next.js, TypeScript — j'ai appris en construisant des projets concrets, pas dans une salle de cours. Même philosophie que la charpente : du solide, du sur mesure, pas de raccourci."
 				},
 				{
-					"year": "2025",
+					"year": "2026",
 					"title": "Djanni Studio est né",
 					"text": "J'ai lancé Djanni Studio avec une mission claire : aider les artisans et commerçants bretons à avoir un site web qui leur ressemble. Parce que je connais leur quotidien, je parle leur langue."
 				},
 				{
 					"year": "Ma mission",
 					"title": "Le web accessible aux artisans",
-					"text": "Pas de jargon, pas de prix gonflé, pas de délais interminables. Un site beau, rapide et efficace, livré en 2-3 semaines. C'est aussi simple que ça."
+					"text": "Pas de jargon, pas de prix gonflé, pas de délais interminables. Un site beau, rapide et efficace, livré en 2 à 5 semaines selon la formule. C'est aussi simple que ça."
 				}
 			]
 		},
@@ -481,7 +490,7 @@
 				},
 				{
 					"title": "Qualité",
-					"text": "Chaque site est codé sur mesure. Pas de template, pas de WordPress — du code propre et performant."
+					"text": "Chaque site est codé sur mesure avec des technologies modernes — du code propre et performant, aucun template générique."
 				},
 				{
 					"title": "Proximité",
@@ -496,7 +505,8 @@
 		"skills": {
 			"tag": "Compétences",
 			"title": "Les outils que j'utilise.",
-			"subtitle": "Des technologies modernes pour des sites rapides, sécurisés et bien référencés."
+			"subtitle": "Des technologies modernes pour des sites rapides, sécurisés et bien référencés.",
+			"benefitLine": "Concrètement : des sites qui chargent en moins de 2 secondes et apparaissent en première page Google."
 		},
 		"cta": {
 			"title": "Envie de travailler ensemble ?",
@@ -570,6 +580,28 @@
 		"subtitle": "Merci d'avoir fait confiance à Djanni Studio. Partagez votre expérience en laissant un avis sur Google.",
 		"cta": "Laisser un avis sur Google",
 		"footer": "Ça prend 30 secondes et ça m'aide énormément. Merci !"
+	},
+	"contactFaq": {
+		"tag": "Questions fréquentes",
+		"title": "Avant de vous lancer",
+		"items": [
+			{
+				"question": "Combien de temps faut-il pour créer mon site ?",
+				"answer": "2 semaines pour une landing page (offre Présence), 3 semaines pour un site multi-pages (offre Vitrine), 3 à 5 semaines pour un projet sur mesure. Ces délais démarrent une fois que j'ai reçu l'acompte et tous les éléments nécessaires."
+			},
+			{
+				"question": "Comment se passe le paiement ?",
+				"answer": "50% à la signature du devis pour démarrer le projet, 50% à la livraison avant mise en ligne. Vous pouvez payer par virement bancaire, carte bancaire ou chèque. Aucun frais caché, aucun abonnement imposé."
+			},
+			{
+				"question": "Dois-je fournir les textes et les photos ?",
+				"answer": "Non, ce n'est pas obligatoire. On rédige les textes ensemble en 30 minutes d'échange. Si vous n'avez pas de photos, j'utilise des visuels professionnels adaptés à votre métier. Une option photographe local est aussi disponible à +200€."
+			},
+			{
+				"question": "Vous déplacez-vous pour le projet ?",
+				"answer": "Oui, je me déplace chez vous sur Dinard, Saint-Malo et toute la Côte d'Émeraude pour le premier échange. Les allers-retours de validation se font ensuite par visio ou en présentiel selon votre préférence."
+			}
+		]
 	},
 	"projectRequest": {
 		"tag": "Demande de projet",
@@ -670,10 +702,32 @@
 		"privacy": "Confidentialité",
 		"legal": "Mentions légales",
 		"cgv": "CGV",
+		"sitemap": "Plan du site",
 		"paymentTransfer": "Virement",
 		"paymentCard": "Carte bancaire",
 		"paymentCheck": "Chèque",
 		"copyright": "© 2026 Djanni Studio — Tous droits réservés"
+	},
+	"sitemap": {
+		"metaTitle": "Plan du site — Djanni Studio",
+		"metaDescription": "Plan du site Djanni Studio — retrouvez toutes les pages du site.",
+		"title": "Plan du site",
+		"tag": "Navigation",
+		"subtitle": "Retrouvez l'ensemble des pages du site, des réalisations et des articles du blog.",
+		"backHome": "Retour à l'accueil",
+		"mainPages": "Pages principales",
+		"home": "Accueil",
+		"realisations": "Réalisations",
+		"offres": "Offres",
+		"about": "À propos",
+		"blog": "Blog",
+		"contact": "Contact",
+		"projectsSection": "Réalisations",
+		"blogSection": "Articles de blog",
+		"legalPages": "Pages légales",
+		"legal": "Mentions légales",
+		"cgv": "CGV",
+		"privacy": "Politique de confidentialité"
 	},
 	"offrePresence": {
 		"tag": "Formule Présence",

@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { BlogPostContent } from "@/components/sections/blog-post-content"
 import { BLOG_POSTS } from "@/lib/constants"
-import { getAlternates } from "@/lib/metadata"
+import { getAlternates, pickMessages } from "@/lib/metadata"
 
 export function generateStaticParams() {
 	return BLOG_POSTS.map((post) => ({
@@ -49,7 +50,10 @@ export default async function BlogPostPage({
 }) {
 	const { slug, locale } = await params
 	setRequestLocale(locale)
-	const bc = await getTranslations({ locale, namespace: "breadcrumb" })
+	const [bc, messages] = await Promise.all([
+		getTranslations({ locale, namespace: "breadcrumb" }),
+		getMessages(),
+	])
 	const sortedPosts = [...BLOG_POSTS].sort(
 		(a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
 	)
@@ -67,7 +71,7 @@ export default async function BlogPostPage({
 		datePublished: post.publishedAt,
 		author: {
 			"@type": "Person",
-			name: "Gianni",
+			name: "Gianni Jardin",
 			url: "https://www.djannistudio.fr/a-propos",
 		},
 		publisher: {
@@ -115,7 +119,9 @@ export default async function BlogPostPage({
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
 			/>
-			<BlogPostContent post={post} prevPost={prevPost} nextPost={nextPost} />
+			<NextIntlClientProvider messages={pickMessages(messages, ["blogPost"])}>
+				<BlogPostContent post={post} prevPost={prevPost} nextPost={nextPost} />
+			</NextIntlClientProvider>
 		</main>
 	)
 }

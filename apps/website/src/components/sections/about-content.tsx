@@ -157,6 +157,9 @@ export function AboutContent() {
 								</span>
 							))}
 						</div>
+						<p className="mx-auto mt-6 max-w-[500px] text-center text-sm text-djanni-gray">
+							{t("skills.benefitLine")}
+						</p>
 					</AnimatedSection>
 				</div>
 			</section>
@@ -167,7 +170,8 @@ export function AboutContent() {
 					<AnimatedSection>
 						<div className="flex flex-col items-center rounded-2xl border border-border bg-card px-8 py-16 text-center md:px-16">
 							<h2 className="font-heading text-[clamp(28px,3.5vw,40px)] font-extrabold leading-tight tracking-tight">
-								{t("cta.title")}
+								{t("cta.title").replace(/\.$/, "")}
+								<span className="text-djanni-orange">.</span>
 							</h2>
 							<p className="mt-4 max-w-[460px] text-[17px] font-light leading-relaxed text-djanni-gray-light">
 								{t("cta.subtitle")}

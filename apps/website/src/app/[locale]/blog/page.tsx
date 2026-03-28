@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { BlogListContent } from "@/components/sections/blog-list-content"
-import { getAlternates } from "@/lib/metadata"
+import { getAlternates, pickMessages } from "@/lib/metadata"
 
 export async function generateMetadata({
 	params,
@@ -15,6 +16,18 @@ export async function generateMetadata({
 		title: t("title"),
 		description: t("description"),
 		alternates: getAlternates("/blog"),
+		keywords: [
+			"blog site web artisan",
+			"conseils création site internet commerçant",
+			"SEO local Bretagne artisan",
+			"performance web Lighthouse",
+			"guide site web TPE",
+			"stratégie digitale artisan",
+			"site web qui charge vite",
+			"référencement local Bretagne",
+			"combien coûte un site web",
+			"site web vs réseaux sociaux",
+		],
 		openGraph: {
 			title: t("title"),
 			description: t("description"),
@@ -25,10 +38,13 @@ export async function generateMetadata({
 export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params
 	setRequestLocale(locale)
+	const messages = await getMessages()
 
 	return (
 		<main>
-			<BlogListContent />
+			<NextIntlClientProvider messages={pickMessages(messages, ["blogPage"])}>
+				<BlogListContent />
+			</NextIntlClientProvider>
 		</main>
 	)
 }

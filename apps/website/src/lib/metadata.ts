@@ -1,3 +1,11 @@
+import type { Messages } from "next-intl"
+
+export function pickMessages(messages: Messages, keys: string[]) {
+	return Object.fromEntries(
+		keys.filter((k) => k in messages).map((k) => [k, messages[k as keyof Messages]]),
+	) as Messages
+}
+
 const BASE_URL = "https://www.djannistudio.fr"
 const locales = ["fr", "en", "br"] as const
 const defaultLocale = "fr"

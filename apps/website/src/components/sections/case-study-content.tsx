@@ -289,7 +289,8 @@ export function CaseStudyContent({ project }: { project: Project }) {
 					<AnimatedSection>
 						<div className="mb-12 text-center">
 							<h2 className="font-heading text-[clamp(32px,4vw,52px)] font-extrabold leading-[1.1] tracking-tight">
-								{t("results")}
+								{t("results").replace(/\.$/, "")}
+								<span className="text-djanni-orange">.</span>
 							</h2>
 						</div>
 					</AnimatedSection>
@@ -395,7 +396,8 @@ export function CaseStudyContent({ project }: { project: Project }) {
 							style={{ borderTopWidth: "4px", borderTopColor: project.accentColor }}
 						>
 							<h2 className="font-heading text-[clamp(28px,3.5vw,40px)] font-extrabold leading-tight tracking-tight">
-								{t("ctaTitle")}
+								{t("ctaTitle").replace(/\.$/, "")}
+								<span className="text-djanni-orange">.</span>
 							</h2>
 							<p className="mt-4 max-w-[460px] text-[17px] font-light leading-relaxed text-djanni-gray-light">
 								{t("ctaText")}

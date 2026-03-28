@@ -485,7 +485,8 @@ export function BlogPostContent({
 					<AnimatedSection>
 						<div className="flex flex-col items-center rounded-2xl border border-border bg-card px-8 py-14 text-center md:px-16">
 							<h2 className="font-heading text-2xl font-extrabold tracking-tight md:text-3xl">
-								{t("ctaTitle")}
+								{t("ctaTitle").replace(/\.$/, "")}
+								<span className="text-djanni-orange">.</span>
 							</h2>
 							<p className="mt-3 max-w-[400px] text-[15px] font-light text-djanni-gray-light">
 								{t("ctaSubtitle")}
