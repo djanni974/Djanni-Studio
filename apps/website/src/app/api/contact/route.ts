@@ -68,6 +68,7 @@ type ContactPayload = {
 }
 
 const PROJECT_LABELS: Record<string, string> = {
+	presence: "Présence",
 	"site-vitrine": "Vitrine",
 	"site-premium": "Sur mesure",
 	refonte: "Refonte de site existant",
@@ -78,6 +79,9 @@ const BUDGET_LABELS: Record<string, string> = {
 	"moins-1000": "Moins de 1 000 €",
 	"1000-2000": "1 000 – 2 000 €",
 	"2000-3000": "2 000 – 3 000 €",
+	"moins-800": "Moins de 800 €",
+	"800-1500": "800 € – 1 500 €",
+	"1500-3000": "1 500 € – 3 000 €",
 	"plus-3000": "Plus de 3 000 €",
 	"pas-defini": "Pas encore défini",
 }
@@ -89,10 +93,15 @@ const DEADLINE_LABELS: Record<string, string> = {
 	"pas-presse": "Pas pressé",
 }
 
+const VALID_PROJECT_TYPES = new Set(Object.keys(PROJECT_LABELS))
+const VALID_BUDGETS = new Set([...Object.keys(BUDGET_LABELS), ""])
+const VALID_DEADLINES = new Set([...Object.keys(DEADLINE_LABELS), ""])
+
 function validate(data: unknown): data is ContactPayload {
 	if (!data || typeof data !== "object") return false
 	const d = data as Record<string, unknown>
 
+	// Required fields — presence check
 	if (
 		typeof d.name !== "string" ||
 		d.name.trim().length === 0 ||
@@ -103,6 +112,24 @@ function validate(data: unknown): data is ContactPayload {
 		d.message.trim().length === 0
 	)
 		return false
+
+	// Size limits
+	if (d.name.length > 100) return false
+	if (d.email.length > 254) return false
+	if (d.message.length > 5_000) return false
+	if (d.projectType.length > 50) return false
+	if (typeof d.budget === "string" && d.budget.length > 50) return false
+	if (typeof d.deadline === "string" && d.deadline.length > 50) return false
+	if (typeof d.businessName === "string" && d.businessName.length > 200) return false
+	if (typeof d.existingUrl === "string" && d.existingUrl.length > 500) return false
+	if (typeof d.phone === "string" && d.phone.length > 20) return false
+
+	// Whitelist validation
+	if (!VALID_PROJECT_TYPES.has(d.projectType)) return false
+	const budget = typeof d.budget === "string" ? d.budget : ""
+	if (!VALID_BUDGETS.has(budget)) return false
+	const deadline = typeof d.deadline === "string" ? d.deadline : ""
+	if (!VALID_DEADLINES.has(deadline)) return false
 
 	// Email format + reject header injection characters
 	const email = d.email
@@ -299,6 +326,12 @@ function escapeHtml(str: string): string {
 
 export async function POST(request: Request) {
 	try {
+		// ─── Payload size guard ──────────────────────────────
+		const contentLength = Number(request.headers.get("content-length") || 0)
+		if (contentLength > 10_000) {
+			return NextResponse.json({ error: "Requête trop volumineuse." }, { status: 413 })
+		}
+
 		// ─── CSRF: verify origin ─────────────────────────────
 		if (!isOriginAllowed(request)) {
 			return NextResponse.json({ error: "Origine non autorisée." }, { status: 403 })
@@ -316,6 +349,17 @@ export async function POST(request: Request) {
 		}
 
 		const body = await request.json()
+
+		// ─── Anti-bot: honeypot ──────────────────────────────
+		if (body._hp) {
+			return NextResponse.json({ success: true })
+		}
+
+		// ─── Anti-bot: time check (< 3s = likely bot) ────────
+		const submittedAt = Number(body._t || 0)
+		if (submittedAt && Date.now() - submittedAt < 3_000) {
+			return NextResponse.json({ success: true })
+		}
 
 		if (!validate(body)) {
 			return NextResponse.json(

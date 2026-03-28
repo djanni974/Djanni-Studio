@@ -42,7 +42,7 @@
 
 /* Dark theme */
 .dark {
-	--gray: #6b6860;
+	--gray: #7f7a71;
 	--gray-light: #b8b4ac;
 	--background: var(--black);
 	--foreground: var(--white);

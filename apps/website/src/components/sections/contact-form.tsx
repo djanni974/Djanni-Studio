@@ -11,7 +11,7 @@ import {
 } from "@tabler/icons-react"
 import { AnimatePresence, motion } from "motion/react"
 import { useTranslations } from "next-intl"
-import { type FormEvent, useState } from "react"
+import { type FormEvent, useRef, useState } from "react"
 import { toast } from "sonner"
 import { AnimatedSection } from "@/components/ui/animated-section"
 import { SectionHeader } from "@/components/ui/section-header"
@@ -80,6 +80,8 @@ export function ContactForm() {
 		budget: "",
 		message: "",
 	})
+	const [hp, setHp] = useState("")
+	const loadedAt = useRef(Date.now())
 	const [errors, setErrors] = useState<FormErrors>({})
 	const [submitted, setSubmitted] = useState(false)
 	const [submitting, setSubmitting] = useState(false)
@@ -159,7 +161,7 @@ export function ContactForm() {
 			const res = await fetch("/api/contact", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(formData),
+				body: JSON.stringify({ ...formData, _hp: hp, _t: loadedAt.current }),
 			})
 			const data = await res.json()
 			if (!res.ok) {
@@ -206,6 +208,27 @@ export function ContactForm() {
 							noValidate
 							className="rounded-xl border border-border bg-surface-a p-8 md:p-10"
 						>
+							<div
+								aria-hidden="true"
+								style={{
+									position: "absolute",
+									left: "-9999px",
+									opacity: 0,
+									height: 0,
+									overflow: "hidden",
+								}}
+							>
+								<label htmlFor="contact-website">Website</label>
+								<input
+									type="text"
+									id="contact-website"
+									name="website"
+									tabIndex={-1}
+									autoComplete="off"
+									value={hp}
+									onChange={(e) => setHp(e.target.value)}
+								/>
+							</div>
 							<StepIndicator currentStep={currentStep} stepCount={STEPS_FIELDS.length} />
 
 							<div className="min-h-[200px]">

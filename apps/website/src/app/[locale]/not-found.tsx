@@ -1,12 +1,13 @@
 "use client"
 
 import { IconArrowLeft, IconEye } from "@tabler/icons-react"
-import { motion } from "motion/react"
+import { motion, useReducedMotion } from "motion/react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
 
 export default function NotFound() {
 	const t = useTranslations("notFound")
+	const prefersReduced = useReducedMotion()
 
 	return (
 		<main className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden px-6">
@@ -24,9 +25,9 @@ export default function NotFound() {
 
 			<motion.div
 				className="relative flex flex-col items-center text-center"
-				initial={{ opacity: 0, y: 24 }}
+				initial={prefersReduced ? false : { opacity: 0, y: 24 }}
 				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.5, ease: "easeOut" }}
+				transition={{ duration: prefersReduced ? 0 : 0.5, ease: "easeOut" }}
 			>
 				{/* Big 404 */}
 				<h1 className="font-heading text-[clamp(100px,20vw,180px)] font-extrabold leading-none tracking-tighter bg-linear-to-r from-djanni-orange via-djanni-orange-light to-djanni-orange bg-clip-text text-transparent">

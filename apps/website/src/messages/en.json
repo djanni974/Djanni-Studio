@@ -50,7 +50,8 @@
 		"about": "About",
 		"blog": "Blog",
 		"cta": "Start a project",
-		"toggleTheme": "Toggle theme"
+		"toggleTheme": "Toggle theme",
+		"skipToContent": "Skip to content"
 	},
 	"hero": {
 		"badge": "Djanni Studio — Brittany",
@@ -81,16 +82,20 @@
 			"title": "What's included in every plan.",
 			"items": [
 				{
+					"title": "No subscription — your site is yours",
+					"text": "You pay once, the site is yours. No hidden fees, no lock-in. Hosting is free."
+				},
+				{
 					"title": "Fast delivery",
-					"text": "Your site is live in 2 to 3 weeks depending on the plan. No endless delays."
+					"text": "Your site is live in 2 to 5 weeks depending on the plan. No endless delays."
 				},
 				{
 					"title": "Flexible payment",
 					"text": "50% upfront, 50% on delivery. Simple and transparent."
 				},
 				{
-					"title": "Support included",
-					"text": "From 30 days to 3 months of support depending on the plan. I'm here for your questions."
+					"title": "Support included — and after?",
+					"text": "From 30 days to 3 months of support depending on the plan. After that, your site keeps running normally. Need changes? I'm available on request."
 				}
 			]
 		},
@@ -206,6 +211,10 @@
 				{
 					"question": "Is there a guarantee on deadlines?",
 					"answer": "Yes. If the site isn't delivered within the agreed timeline for a reason attributable to me, I grant you a 10% discount per week of delay."
+				},
+				{
+					"question": "How does payment work?",
+					"answer": "50% at signing, 50% on delivery — before going live. You can pay by bank transfer, credit card or cheque. No hidden fees, no imposed subscription."
 				}
 			]
 		},
@@ -228,14 +237,14 @@
 			"description": "You don't exist on Google. We fix that in 2 weeks.",
 			"benefitLine": "To show up on Google and reassure customers looking for you.",
 			"features": [
-				"1 multi-section landing page",
-				"Custom design",
-				"100% mobile responsive",
-				"Clickable phone + contact form",
-				"Basic Google indexing",
-				"SSL security + deployment",
-				"1h training",
-				"30-day support",
+				"1 full page (Hero, Services, Gallery, Contact…)",
+				"Custom design matching your brand",
+				"Perfect on your customers' phones",
+				"Customers call you in one tap",
+				"Found on Google in your area",
+				"Secure site, live and ready",
+				"1h training: update your texts and photos",
+				"30-day support included",
 				"Delivered in 2 weeks"
 			],
 			"ctaLabel": "Start my site"
@@ -251,14 +260,14 @@
 			"benefitLine": "To make customers want to visit before they even walk through the door.",
 			"popularNote": "The best fit for 80% of craftspeople and local businesses.",
 			"features": [
-				"Up to 5 pages",
-				"Photo gallery / portfolio",
-				"Before/after projects",
-				"Polished animations",
-				"Advanced SEO (fast site, well ranked)",
-				"Visitor statistics",
-				"2h training",
-				"1-month support",
+				"Up to 5 pages (Home, Services, Portfolio, About, Contact)",
+				"Photo gallery showcasing your work",
+				"Before/after to show your craftsmanship",
+				"Polished animations that impress",
+				"Found on Google in your area (optimised SEO)",
+				"See how many visitors come to your site",
+				"2h training: manage your site independently",
+				"1-month support included",
 				"Delivered in 3 weeks"
 			],
 			"ctaLabel": "Start my site"
@@ -273,13 +282,13 @@
 			"description": "You have specific needs. We build exactly what's required.",
 			"benefitLine": "To turn your website into a real sales and booking tool.",
 			"features": [
-				"Up to 8 pages",
-				"Online appointment booking",
-				"Built-in blog (publish yourself)",
-				"Product catalog",
-				"Multilingual",
-				"Advanced SEO (audit + keyword strategy)",
-				"3-month support",
+				"Up to 8 pages (e.g. Home, Services ×3, Portfolio, Blog, About, Contact)",
+				"Your customers book appointments online",
+				"Built-in blog — publish content yourself",
+				"Your product or service catalogue visible online",
+				"Multilingual to reach more customers",
+				"Advanced SEO (full audit + keyword strategy)",
+				"3-month support included",
 				"1-month follow-up meeting",
 				"Delivered in 3-5 weeks"
 			],
@@ -308,7 +317,7 @@
 			},
 			{
 				"number": "04",
-				"title": "Delivered in 2-3 weeks, not 6 months",
+				"title": "Delivered in 2 to 5 weeks, not 6 months",
 				"text": "A clear timeline, defined milestones. One single point of contact, reachable directly — not an agency with 5 different people."
 			}
 		]
@@ -350,7 +359,7 @@
 			}
 		]
 	},
-	"pricingNote": "A complete showcase website from €990, delivered in 2 weeks, no nasty surprises.",
+	"pricingNote": "A complete showcase website from €990, delivered fast, no nasty surprises.",
 	"faq": {
 		"tag": "FAQ",
 		"title": "Still hesitating?",
@@ -358,7 +367,7 @@
 		"items": [
 			{
 				"question": "How long does it take to create a website?",
-				"answer": "On average, a Showcase plan is delivered in 2 weeks. A Custom plan takes about 3 weeks. I give you a precise timeline as soon as the quote is signed."
+				"answer": "The Presence plan is delivered in 2 weeks, the Showcase plan in 3 weeks, and the Custom plan in 3 to 5 weeks. I give you a precise timeline as soon as the quote is signed."
 			},
 			{
 				"question": "I know nothing about technology, is that a problem?",
@@ -455,18 +464,18 @@
 				},
 				{
 					"year": "2023 — Today",
-					"title": "Self-taught web developer",
-					"text": "In parallel, I became passionate about code. React, Next.js, TypeScript — I learned by building real projects. Same philosophy as carpentry: solid work, custom-made, no shortcuts."
+					"title": "Web developer",
+					"text": "In parallel, I became passionate about code. React, Next.js, TypeScript — I learned by building real projects, not in a classroom. Same philosophy as carpentry: solid work, custom-made, no shortcuts."
 				},
 				{
-					"year": "2025",
+					"year": "2026",
 					"title": "Djanni Studio was born",
 					"text": "I launched Djanni Studio with a clear mission: help Breton craftspeople and shop owners get a website that truly represents them. Because I know their daily life, I speak their language."
 				},
 				{
 					"year": "My mission",
 					"title": "The web accessible to craftspeople",
-					"text": "No jargon, no inflated prices, no endless delays. A beautiful, fast, and effective site, delivered in 2-3 weeks. It's that simple."
+					"text": "No jargon, no inflated prices, no endless delays. A beautiful, fast, and effective site, delivered in 2 to 5 weeks depending on the plan. It's that simple."
 				}
 			]
 		},
@@ -481,7 +490,7 @@
 				},
 				{
 					"title": "Quality",
-					"text": "Every site is custom coded. No templates, no WordPress — clean, high-performance code."
+					"text": "Every site is custom coded with modern technologies — clean, high-performance code, no generic templates."
 				},
 				{
 					"title": "Proximity",
@@ -496,7 +505,8 @@
 		"skills": {
 			"tag": "Skills",
 			"title": "The tools I use.",
-			"subtitle": "Modern technologies for fast, secure, and well-ranked websites."
+			"subtitle": "Modern technologies for fast, secure, and well-ranked websites.",
+			"benefitLine": "In practice: sites that load in under 2 seconds and appear on the first page of Google."
 		},
 		"cta": {
 			"title": "Want to work together?",
@@ -570,6 +580,28 @@
 		"subtitle": "Thank you for trusting Djanni Studio. Share your experience by leaving a review on Google.",
 		"cta": "Leave a Google review",
 		"footer": "It only takes 30 seconds and helps me a lot. Thank you!"
+	},
+	"contactFaq": {
+		"tag": "FAQ",
+		"title": "Before you get started",
+		"items": [
+			{
+				"question": "How long does it take to build my site?",
+				"answer": "2 weeks for a landing page (Presence plan), 3 weeks for a multi-page site (Showcase plan), 3 to 5 weeks for a custom project. These timelines start once I've received the deposit and all necessary elements."
+			},
+			{
+				"question": "How does payment work?",
+				"answer": "50% at signing to start the project, 50% on delivery before going live. You can pay by bank transfer, credit card or cheque. No hidden fees, no imposed subscription."
+			},
+			{
+				"question": "Do I need to provide the texts and photos?",
+				"answer": "No, it's not required. We write the texts together in 30 minutes of conversation. If you don't have photos, I use professional visuals suited to your trade. A local photographer option is also available at +€200."
+			},
+			{
+				"question": "Do you travel for the project?",
+				"answer": "Yes, I come to you in Dinard, Saint-Malo and the whole Côte d'Émeraude for the first meeting. Follow-up validation rounds are done by video call or in person, your choice."
+			}
+		]
 	},
 	"projectRequest": {
 		"tag": "Project request",
@@ -670,10 +702,32 @@
 		"privacy": "Privacy policy",
 		"legal": "Legal notice",
 		"cgv": "Terms",
+		"sitemap": "Sitemap",
 		"paymentTransfer": "Bank transfer",
 		"paymentCard": "Credit card",
 		"paymentCheck": "Cheque",
 		"copyright": "© 2026 Djanni Studio — All rights reserved"
+	},
+	"sitemap": {
+		"metaTitle": "Sitemap — Djanni Studio",
+		"metaDescription": "Djanni Studio sitemap — find all pages on the site.",
+		"title": "Sitemap",
+		"tag": "Navigation",
+		"subtitle": "Browse all pages, portfolio projects, and blog articles in one place.",
+		"backHome": "Back to home",
+		"mainPages": "Main pages",
+		"home": "Home",
+		"realisations": "Portfolio",
+		"offres": "Pricing",
+		"about": "About",
+		"blog": "Blog",
+		"contact": "Contact",
+		"projectsSection": "Portfolio",
+		"blogSection": "Blog posts",
+		"legalPages": "Legal pages",
+		"legal": "Legal notice",
+		"cgv": "Terms & conditions",
+		"privacy": "Privacy policy"
 	},
 	"offrePresence": {
 		"tag": "Presence Plan",

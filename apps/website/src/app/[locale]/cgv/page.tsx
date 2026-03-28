@@ -24,7 +24,7 @@ const sections = [
 	{
 		title: "Article 2 — Identité du Prestataire",
 		content: [
-			"**Djanni Studio** — Gianni",
+			"**Djanni Studio** — Gianni Jardin",
 			"Micro-entreprise — Création de sites web",
 			"SIREN : 102 087 822",
 			"SIRET : 102 087 822 00015",
@@ -61,11 +61,12 @@ const sections = [
 		content: [
 			"Les prix indiqués sont en euros (€) et nets de taxe (TVA non applicable, article 293 B du CGI).",
 			"**Modalités de paiement :**",
-			"— Un acompte de __30 %__ du montant total est demandé à la signature du devis pour démarrer le projet.",
-			"— Le solde (__70 %__) est dû à la livraison du site, avant sa mise en ligne définitive.",
-			"— Pour les projets supérieurs à 2 000 €, un __paiement en 3 fois__ peut être proposé (30 % / 40 % / 30 %).",
-			"Le paiement s'effectue par virement bancaire ou tout autre moyen convenu entre les parties.",
-			"En cas de retard de paiement, une pénalité de retard égale à 3 fois le taux d'intérêt légal sera appliquée, ainsi qu'une indemnité forfaitaire de __40 €__ pour frais de recouvrement (article L.441-10 du Code de commerce).",
+			"— Un acompte de __50 %__ du montant total est demandé à la signature du devis pour démarrer le projet.",
+			"— Le solde (__50 %__) est dû à la livraison du site, avant sa mise en ligne définitive.",
+			"— Pour les projets supérieurs à 2 000 €, un __paiement en 3 fois__ peut être proposé (34 % / 33 % / 33 %).",
+			"**Moyens de paiement acceptés :** virement bancaire, carte bancaire, chèque.",
+			"**Client professionnel :** En cas de retard de paiement, une pénalité de retard égale à 3 fois le taux d'intérêt légal sera appliquée, ainsi qu'une indemnité forfaitaire de __40 €__ pour frais de recouvrement (article L.441-10 du Code de commerce).",
+			"**Client consommateur :** En cas de retard de paiement, des pénalités pourront être appliquées conformément aux dispositions légales en vigueur.",
 		],
 	},
 	{
@@ -77,6 +78,7 @@ const sections = [
 			"— Site premium / refonte : __4 à 8 semaines__",
 			"Ces délais courent à compter de la réception de l'acompte et de l'ensemble des éléments nécessaires fournis par le Client (textes, images, logos, accès).",
 			"Tout retard dans la transmission des éléments par le Client __reporte d'autant le délai de livraison__, sans responsabilité du Prestataire.",
+			"**Livraison :** La livraison est réputée effectuée à la date de __mise en ligne du site__ ou à la date d'envoi par le Prestataire d'un email de livraison au Client.",
 		],
 	},
 	{
@@ -94,7 +96,7 @@ const sections = [
 		title: "Article 8 — Processus de validation et révisions",
 		content: [
 			"Chaque projet inclut des phases de validation aux étapes clés : maquette, développement, contenu final.",
-			"**Révisions incluses :** Chaque étape de validation inclut jusqu'à __2 tours de modifications__ (retours mineurs : ajustements de textes, couleurs, disposition).",
+			"**Révisions incluses :** Chaque étape de validation inclut jusqu'à __2 tours de modifications__ (retours mineurs : ajustements de textes, couleurs, disposition). Les retours doivent être transmis en __un seul envoi groupé__ par tour, dans un délai de __7 jours ouvrés__ après présentation de l'étape.",
 			"Les modifications majeures (changement de structure, ajout de fonctionnalités, refonte de maquette) qui sortent du périmètre initial du devis feront l'objet d'un __devis complémentaire__.",
 		],
 	},
@@ -102,9 +104,9 @@ const sections = [
 		title: "Article 9 — Propriété intellectuelle",
 		content: [
 			"**Avant paiement intégral :** Le Prestataire __reste propriétaire__ de l'ensemble des créations (design, code source, contenus originaux) réalisées dans le cadre du projet.",
-			"**Après paiement intégral :** Le Client __acquiert les droits__ d'utilisation et d'exploitation du site livré, pour la durée du droit d'auteur et pour le monde entier.",
+			"**Après paiement intégral :** Le Client acquiert la __pleine propriété du code source spécifique à son projet__ ainsi que les droits d'utilisation et d'exploitation du site livré, pour la durée du droit d'auteur et pour le monde entier.",
 			"Le Prestataire conserve le droit de mentionner le projet dans son portfolio et ses supports de communication, sauf accord contraire écrit.",
-			"Les outils, frameworks, bibliothèques et composants génériques développés ou utilisés par le Prestataire restent sa propriété et peuvent être réutilisés pour d'autres projets.",
+			"Les outils, frameworks, bibliothèques et __composants génériques__ développés ou utilisés par le Prestataire restent sa propriété et peuvent être réutilisés pour d'autres projets.",
 		],
 	},
 	{
@@ -121,6 +123,7 @@ const sections = [
 			"**Client consommateur :** Conformément à l'article L.221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour les prestations de services pleinement exécutées avant la fin du délai de rétractation avec l'accord du consommateur.",
 			"Avant le début de la prestation, le Client consommateur dispose d'un délai de __14 jours__ à compter de la signature du devis pour exercer son droit de rétractation, par email à contact@djannistudio.fr. L'acompte sera alors __intégralement remboursé__.",
 			"**Client professionnel :** Le droit de rétractation ne s'applique pas.",
+			"Un __formulaire type de rétractation__ est mis à disposition du Client consommateur sur simple demande par email à contact@djannistudio.fr, conformément à l'article L.221-5 du Code de la consommation.",
 		],
 	},
 	{
@@ -136,7 +139,7 @@ const sections = [
 		title: "Article 13 — Responsabilité",
 		content: [
 			"Le Prestataire s'engage à réaliser les prestations avec soin et professionnalisme, dans le respect des règles de l'art.",
-			"La responsabilité du Prestataire est __limitée au montant total du devis__ validé.",
+			"La responsabilité du Prestataire est __limitée au montant total du devis__ validé, dans la limite des dispositions légales applicables.",
 			"Le Prestataire ne saurait être tenu responsable :",
 			"— Des contenus fournis par le Client (textes, images, données).",
 			"— Des dysfonctionnements liés à l'hébergement, au nom de domaine ou à des services tiers.",
@@ -154,9 +157,10 @@ const sections = [
 		title: "Article 15 — Médiation et litiges",
 		content: [
 			"En cas de litige, les parties s'engagent à rechercher une __solution amiable__ avant toute action en justice.",
-			// TODO: Remplacer par les vraies coordonnées du médiateur de la consommation
-			"**Client consommateur :** Conformément aux articles L.612-1 et suivants du Code de la consommation, vous avez le droit de recourir __gratuitement__ à un médiateur de la consommation. Médiateur compétent : [Nom du médiateur — à compléter]. Site : [URL du médiateur — à compléter].",
-			"À défaut de résolution amiable, les tribunaux compétents seront ceux du ressort du domicile du Prestataire, conformément au droit français.",
+			// TODO: Remplacer par les vraies coordonnées du médiateur une fois inscrit chez Medicys
+			"**Client consommateur :** Conformément aux articles L.612-1 et suivants du Code de la consommation, vous avez le droit de recourir __gratuitement__ à un médiateur de la consommation. Les coordonnées du médiateur compétent seront communiquées sur simple demande à contact@djannistudio.fr.",
+			"**Client professionnel :** À défaut de résolution amiable, les tribunaux compétents seront ceux du ressort du domicile du Prestataire.",
+			"**Client consommateur :** Le consommateur peut saisir le tribunal de son domicile conformément aux dispositions légales en vigueur.",
 		],
 	},
 	{

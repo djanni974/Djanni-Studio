@@ -17,14 +17,14 @@ export function ProcessStepCard({
 	return (
 		<div
 			className={cn(
-				"group relative flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface-b p-7 transition-[border-color,box-shadow] duration-300 hover:border-white/[0.16] hover:shadow-[inset_0_0_60px_rgba(232,80,10,0.04)] md:p-8",
+				"group relative flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface-b p-7 transition-[border-color,box-shadow] duration-300 hover:border-white/16 hover:shadow-[inset_0_0_60px_rgba(232,80,10,0.04)] md:p-8",
 				size === "wide" && "md:flex-row md:items-center md:gap-6 md:p-10",
 			)}
 		>
 			{/* Background number */}
 			<div
 				className={cn(
-					"pointer-events-none absolute font-heading font-extrabold leading-none text-white/[0.03] select-none",
+					"pointer-events-none absolute font-heading font-extrabold leading-none text-white/3 select-none",
 					size === "wide" ? "-top-4 right-6 text-[140px]" : "-top-2 right-4 text-[100px]",
 				)}
 			>

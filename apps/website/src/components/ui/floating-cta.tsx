@@ -20,7 +20,7 @@ export function FloatingCta() {
 	return (
 		<div
 			className={cn(
-				"fixed right-5 bottom-5 z-40 transition-all duration-300 ease-out md:right-8 md:bottom-8",
+				"fixed right-5 bottom-[76px] z-40 transition-all duration-300 ease-out md:right-8 md:bottom-[88px]",
 				visible
 					? "visible translate-y-0 scale-100 opacity-100"
 					: "invisible translate-y-4 scale-90 opacity-0",

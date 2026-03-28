@@ -57,7 +57,7 @@ export const PROJECTS: Project[] = [
 		client: "Troc 35",
 		location: "La Richardais, Bretagne",
 		duration: "3 semaines",
-		year: "2025",
+		year: "2026",
 		url: "https://troc35.vercel.app",
 		context:
 			"Concept réalisé pour Troc 35, un dépôt-vente de 1 300 m² à La Richardais, entre St-Malo et Dinard. Ce projet démontre comment un commerce local avec un site vieillissant pourrait bénéficier d'une refonte moderne. Le site actuel du magasin tourne sur PrestaShop et ne reflète plus la qualité de leur offre.",
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
 		client: "L'Entre Deux",
 		location: "Dinard, Bretagne",
 		duration: "2 semaines",
-		year: "2025",
+		year: "2026",
 		url: "https://entre-deux.vercel.app",
 		context:
 			"L'Entre-Deux est un bistro burger café à Dinard, tenu par un jeune couple passionné. 5 étoiles sur Google, 61 avis — une réputation solide qui mérite un site à la hauteur.",
@@ -140,7 +140,7 @@ export const BLOG_POSTS: BlogPost[] = [
 		excerpt:
 			"53% des visiteurs quittent un site qui met plus de 3 secondes à charger. Voici ce qui se passe vraiment dans la tête de vos clients pendant ces 10 secondes — et ce que ça coûte à votre commerce.",
 		category: "Performance web, concrètement",
-		publishedAt: "2026-03-10",
+		publishedAt: "2026-03-26",
 		readingTime: 4,
 		content: `Votre site met plus de 3 secondes à charger ? Alors vous perdez des clients sans le savoir. Pas parce que votre offre est mauvaise, mais parce que personne ne la voit.
 
@@ -179,7 +179,7 @@ Voici ce que traverse réellement votre client, seconde par seconde.
 **Au-delà de 10 secondes — Vous n'existez plus.** Il ne reviendra probablement jamais.
 
 :::example
-Un coiffeur à Dinan avait un site WordPress qui mettait 8 secondes à charger sur mobile. Google Analytics montrait un taux de rebond de 78%. Après refonte sur un site rapide, le taux de rebond est passé à 35% — et les prises de rendez-vous en ligne ont doublé.
+Prenons l'exemple d'un coiffeur à Dinan avec un site WordPress qui met 8 secondes à charger sur mobile. Un taux de rebond de 78% signifie que 3 visiteurs sur 4 repartent sans rien voir. Après refonte sur un site rapide, ce taux peut descendre à 35% — et les prises de rendez-vous en ligne doubler.
 :::
 
 ## Le problème, c'est que vous ne le voyez jamais
@@ -198,7 +198,7 @@ La plupart du temps, ce n'est pas une fatalité. Un site lent, c'est souvent :
 - Du **JavaScript excessif** qui bloque l'affichage avant même que la page soit visible
 
 :::example
-Un boulanger à Saint-Brieuc avait 12 plugins WordPress actifs sur son site. Temps de chargement : 9 secondes. En passant sur un site sur mesure sans plugins inutiles, le temps est descendu à 1,1 seconde — sans rien perdre en fonctionnalités.
+Imaginons un boulanger à Saint-Brieuc avec 12 plugins WordPress actifs sur son site. Temps de chargement : 9 secondes. En passant sur un site sur mesure sans plugins inutiles, le temps descend à 1,1 seconde — sans rien perdre en fonctionnalités.
 :::
 
 ## Ce qu'on fait différemment chez Djanni Studio
@@ -249,7 +249,7 @@ Un site lent, ce n'est pas juste un détail technique agaçant. C'est une vitrin
 		excerpt:
 			"Vos clients vous cherchent sur Google avant de vous appeler. Voici pourquoi un site web n'est plus optionnel pour un artisan en 2026.",
 		category: "Conseils",
-		publishedAt: "2026-03-01",
+		publishedAt: "2026-03-20",
 		readingTime: 5,
 		content: `En 2026, vos futurs clients ne cherchent plus dans les Pages Jaunes. Ils tapent leur besoin sur Google, regardent les 3 premiers résultats, et appellent. Si vous n'avez pas de site, vous n'existez pas pour eux.
 
@@ -267,7 +267,7 @@ des consommateurs recherchent un artisan ou commerce local sur internet avant de
 Un simple profil sur les Pages Jaunes ou une page Facebook ne suffit plus. Google favorise les **sites web dédiés** dans ses résultats de recherche locale. Sans site, vous laissez ces clients à vos concurrents qui en ont un.
 
 :::example
-Un plombier à Rennes nous a confié recevoir **3 à 5 appels par semaine** uniquement via son site web — des clients qui ne l'auraient jamais trouvé autrement.
+Prenons l'exemple d'un plombier à Rennes qui reçoit **3 à 5 appels par semaine** uniquement via son site web — des clients qui ne l'auraient jamais trouvé autrement.
 :::
 
 ## 2. Un site web vous rend crédible
@@ -277,7 +277,7 @@ Imaginez : un client potentiel hésite entre deux plombiers. L'un a un site prof
 Le choix est vite fait. **Un site web inspire confiance** et montre que vous prenez votre activité au sérieux. C'est votre carte de visite digitale, disponible 24h/24.
 
 :::example
-Une boulangère à Brest a vu ses commandes spéciales (gâteaux d'anniversaire, plateaux) augmenter de 40% après la mise en ligne de son site avec galerie photo de ses créations.
+Imaginons une boulangère à Brest qui met en ligne un site avec galerie photo de ses créations. Résultat typique : les commandes spéciales (gâteaux d'anniversaire, plateaux) peuvent augmenter de 30 à 40% grâce à la visibilité en ligne.
 :::
 
 ## 3. Votre site travaille même quand vous ne travaillez pas
@@ -310,7 +310,7 @@ Un site vitrine professionnel coûte entre **990€ et 2 000€** — c'est un i
 Comparez ça au coût d'une pub dans un journal local (300-500€ par parution) ou d'un flyer (impression + distribution). Le site web est l'investissement **le plus rentable** pour un artisan.
 
 :::example
-Un maçon à Vannes a investi 1 500€ dans son site. En 3 mois, il a reçu 12 demandes de devis via son formulaire en ligne. Un seul chantier signé a couvert 10 fois le coût du site.
+Prenons l'exemple d'un maçon à Vannes qui investit 1 500€ dans son site. En 3 mois, un formulaire de contact bien placé peut générer 10 à 15 demandes de devis. Un seul chantier signé couvre largement le coût du site.
 :::
 
 ---
@@ -335,7 +335,7 @@ Aujourd'hui, ne pas avoir de site web, c'est **laisser des clients à vos concur
 		excerpt:
 			"Les prix varient de 500€ à 10 000€. Voici un guide transparent pour comprendre ce que vous payez vraiment.",
 		category: "Prix",
-		publishedAt: "2026-02-15",
+		publishedAt: "2026-03-14",
 		readingTime: 7,
 		content: `Vous avez décidé de créer un site web pour votre commerce ou votre activité artisanale. Première étape : comprendre les prix. Et là, c'est la jungle. Un devis à 500€, un autre à 5 000€, un troisième à 12 000€. Pour quoi, exactement ?
 
@@ -350,7 +350,7 @@ Dans ce guide, on vous explique **concrètement ce que coûte un site vitrine** 
 Wix, Squarespace, WordPress.com... Ces outils permettent de créer un site soi-même. **Le problème ?** Des templates génériques, des performances médiocres et un abonnement mensuel qui s'accumule.
 
 :::example
-Un fleuriste à Vannes a utilisé Wix pendant 3 ans. Coût total : 30€/mois x 36 = **1 080€**. Résultat : un site lent, mal référencé, et un design qui ressemble à des centaines d'autres. En passant sur un site sur mesure à 990€, il a un meilleur résultat pour moins cher — et sans abonnement.
+Prenons l'exemple d'un fleuriste qui utilise Wix pendant 3 ans. Coût total : 30€/mois x 36 = **1 080€**. Résultat : un site lent, mal référencé, et un design qui ressemble à des centaines d'autres. En passant sur un site sur mesure à 990€, le résultat est meilleur pour moins cher — et sans abonnement.
 :::
 
 ### Les freelances juniors (500€ - 1 500€)
@@ -394,13 +394,13 @@ Plusieurs facteurs influencent le coût final :
 
 Au-delà du prix, voici les questions à poser avant de signer :
 
-- **Quel est le délai de livraison ?** Un bon freelance livre en 2-3 semaines, pas 3 mois.
+- **Quel est le délai de livraison ?** Un bon freelance livre en 2 à 5 semaines selon la complexité, pas 3 mois.
 - **Le prix inclut-il l'hébergement ?** Attention aux frais cachés récurrents.
 - **Qui est propriétaire du site ?** Vous devez pouvoir récupérer votre site si vous changez de prestataire.
 - **Y a-t-il un support après la mise en ligne ?** Un site a besoin de maintenance.
 
 :::example
-Un artisan charpentier à Quimper a signé avec une agence à 4 500€. Délai annoncé : 6 semaines. Résultat : le site a été livré 4 mois plus tard, avec des bugs non corrigés. Il a finalement fait refaire son site chez un freelance spécialisé pour 1 500€ — livré en 2 semaines, sans accroc.
+Imaginons un artisan charpentier à Quimper qui signe avec une agence à 4 500€. Délai annoncé : 6 semaines. Résultat courant : le site est livré 4 mois plus tard, avec des bugs non corrigés. En faisant refaire son site chez un freelance spécialisé pour 1 500€, il obtient un résultat livré en 2 semaines, sans accroc.
 :::
 
 ---
@@ -417,7 +417,7 @@ Pour un artisan ou commerçant en Bretagne, un **budget entre 990€ et 2 000€
 		excerpt:
 			"Facebook, Instagram ou un site web ? On compare les deux approches pour vous aider à choisir la bonne stratégie.",
 		category: "Stratégie",
-		publishedAt: "2026-01-20",
+		publishedAt: "2026-03-08",
 		readingTime: 6,
 		content: `"J'ai déjà une page Facebook, pourquoi j'aurais besoin d'un site ?" C'est la question qu'on entend le plus souvent chez les artisans et commerçants. Et c'est une vraie question.
 
@@ -442,7 +442,7 @@ C'est la part de vos abonnés qui voient réellement vos publications sur Facebo
 - **Image peu professionnelle** : "Allez voir notre Facebook" inspire moins confiance qu'un vrai site web
 
 :::example
-Un restaurateur à Saint-Malo postait tous les jours sur Instagram. Malgré 800 abonnés, ses publications atteignaient en moyenne 60 personnes. Depuis qu'il a un site web optimisé SEO, il reçoit 150 visiteurs par semaine via Google — des gens qui cherchent activement un restaurant dans sa zone.
+Prenons l'exemple d'un restaurateur à Saint-Malo qui poste tous les jours sur Instagram. Malgré 800 abonnés, ses publications atteignent en moyenne 60 personnes. Avec un site web optimisé SEO, il peut recevoir 150 visiteurs par semaine via Google — des gens qui cherchent activement un restaurant dans sa zone.
 :::
 
 ## Ce que le site web fait mieux
@@ -473,7 +473,7 @@ La meilleure approche ? **Combiner les deux.** Un site web comme base solide, et
 Votre site web est votre **quartier général**. Les réseaux sociaux sont vos **haut-parleurs**.
 
 :::example
-Un ébéniste à Quimper utilise Instagram pour montrer ses créations en cours (stories, photos d'atelier). Chaque publication renvoie vers son site où les clients trouvent son catalogue complet, ses tarifs et son formulaire de devis. Résultat : Instagram attire l'attention, le site convertit les visiteurs en clients.
+Imaginons un ébéniste à Quimper qui utilise Instagram pour montrer ses créations en cours (stories, photos d'atelier). Chaque publication renvoie vers son site où les clients trouvent son catalogue complet, ses tarifs et son formulaire de devis. Résultat : Instagram attire l'attention, le site convertit les visiteurs en clients.
 :::
 
 ---
@@ -519,14 +519,14 @@ export const PRICING_TIERS: PricingTier[] = [
 		description: "Vous n'existez pas sur Google. On règle ça en 2 semaines.",
 		benefitLine: "Pour apparaître sur Google et rassurer les clients qui vous cherchent.",
 		features: [
-			"1 landing page multi-sections",
-			"Design sur mesure",
-			"100% responsive mobile",
-			"Numéro cliquable + formulaire",
-			"Référencement Google de base",
-			"Sécurité SSL + mise en ligne",
-			"Formation 1h",
-			"Support 30 jours",
+			"1 page complète (Hero, Services, Galerie, Contact…)",
+			"Design sur mesure à votre image",
+			"Parfait sur le téléphone de vos clients",
+			"Vos clients vous appellent en un clic",
+			"Visible sur Google dans votre ville",
+			"Site sécurisé et en ligne",
+			"Formation 1h : modifier vos textes et photos",
+			"Support 30 jours inclus",
 			"Livraison en 2 semaines",
 		],
 		ctaLabel: "Démarrer mon site",
@@ -542,14 +542,14 @@ export const PRICING_TIERS: PricingTier[] = [
 		benefitLine: "Pour donner envie avant même que le client pousse la porte.",
 		popularNote: "L'offre la plus adaptée pour 80% des artisans et commerçants.",
 		features: [
-			"Jusqu'à 5 pages",
-			"Galerie photos / portfolio",
-			"Réalisations avant/après",
-			"Animations soignées",
-			"SEO poussé (site rapide, bien classé)",
-			"Statistiques de visite",
-			"Formation 2h",
-			"Support 1 mois",
+			"Jusqu'à 5 pages (Accueil, Prestations, Réalisations, À propos, Contact)",
+			"Galerie photos / portfolio de vos réalisations",
+			"Avant/après pour montrer votre savoir-faire",
+			"Animations soignées qui donnent envie",
+			"Visible sur Google dans votre ville (SEO optimisé)",
+			"Voir combien de visiteurs viennent sur votre site",
+			"Formation 2h : gérer votre site en toute autonomie",
+			"Support 1 mois inclus",
 			"Livraison en 3 semaines",
 		],
 		ctaLabel: "Démarrer mon site",
@@ -565,13 +565,13 @@ export const PRICING_TIERS: PricingTier[] = [
 		description: "Vous avez des besoins spécifiques. On construit exactement ce qu'il faut.",
 		benefitLine: "Pour transformer votre site en vrai outil de vente et de réservation.",
 		features: [
-			"Jusqu'à 8 pages",
-			"Prise de RDV en ligne",
-			"Blog intégré (vous publiez vous-même)",
-			"Catalogue produits",
-			"Multilingue",
-			"SEO avancé (audit + stratégie mots-clés)",
-			"Support 3 mois",
+			"Jusqu'à 8 pages (ex : Accueil, Services ×3, Réalisations, Blog, À propos, Contact)",
+			"Vos clients réservent directement en ligne",
+			"Blog intégré — vous publiez vous-même",
+			"Votre catalogue de produits ou services visible en ligne",
+			"Multilingue pour toucher plus de clients",
+			"SEO avancé (audit complet + stratégie mots-clés)",
+			"Support 3 mois inclus",
 			"Réunion de suivi à 1 mois",
 			"Livraison en 3-5 semaines",
 		],
@@ -632,7 +632,7 @@ export const WHY_REASONS: WhyReason[] = [
 	},
 	{
 		number: "04",
-		title: "Livré en 2-3 semaines, pas en 6 mois",
+		title: "Livré en 2 à 5 semaines, pas en 6 mois",
 		text: "Un planning clair, des étapes définies. Un seul interlocuteur, joignable en direct — pas une agence avec 5 contacts différents.",
 	},
 ]
@@ -700,7 +700,7 @@ export const FAQ_ITEMS: FaqItem[] = [
 	{
 		question: "Combien de temps faut-il pour créer un site ?",
 		answer:
-			"En moyenne, une offre Vitrine est livrée en 2 semaines. Une offre Sur mesure prend environ 3 semaines. Je vous donne un planning précis dès la signature du devis.",
+			"L'offre Présence est livrée en 2 semaines, l'offre Vitrine en 3 semaines, et l'offre Sur mesure en 3 à 5 semaines. Je vous donne un planning précis dès la signature du devis.",
 	},
 	{
 		question: "Je n'y connais rien en technique, c'est un problème ?",

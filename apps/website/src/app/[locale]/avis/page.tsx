@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { AvisContent } from "@/components/sections/avis-content"
+import { pickMessages } from "@/lib/metadata"
 
 export async function generateMetadata({
 	params,
@@ -20,10 +22,13 @@ export async function generateMetadata({
 export default async function AvisPage({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params
 	setRequestLocale(locale)
+	const messages = await getMessages()
 
 	return (
 		<main>
-			<AvisContent />
+			<NextIntlClientProvider messages={pickMessages(messages, ["avisPage"])}>
+				<AvisContent />
+			</NextIntlClientProvider>
 		</main>
 	)
 }

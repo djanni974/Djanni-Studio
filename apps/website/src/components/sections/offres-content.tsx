@@ -7,6 +7,7 @@ import {
 	IconCreditCard,
 	IconHammer,
 	IconHeadset,
+	IconLockOpen,
 	IconScissors,
 	IconToolsKitchen2,
 	IconX,
@@ -21,7 +22,7 @@ import { Link } from "@/i18n/navigation"
 import type { PricingTier } from "@/lib/constants"
 
 const TIER_KEYS = ["presence", "vitrine", "surmesure"] as const
-const GUARANTEE_ICONS = [IconClock, IconCreditCard, IconHeadset]
+const GUARANTEE_ICONS = [IconLockOpen, IconClock, IconCreditCard, IconHeadset]
 const PERSONA_ICONS = [IconHammer, IconScissors, IconToolsKitchen2]
 
 const COMPARISON_ROWS: {
@@ -30,24 +31,24 @@ const COMPARISON_ROWS: {
 	vitrine: boolean | string
 	custom: boolean | string
 }[] = [
-	{ feature: "Design sur mesure", presence: true, vitrine: true, custom: true },
-	{ feature: "100% responsive mobile", presence: true, vitrine: true, custom: true },
-	{ feature: "Référencement Google de base", presence: true, vitrine: true, custom: true },
-	{ feature: "Sécurité SSL + mise en ligne", presence: true, vitrine: true, custom: true },
-	{ feature: "Formation à la prise en main", presence: "1h", vitrine: "2h", custom: "3h" },
+	{ feature: "Design sur mesure à votre image", presence: true, vitrine: true, custom: true },
+	{ feature: "Parfait sur mobile", presence: true, vitrine: true, custom: true },
+	{ feature: "Visible sur Google", presence: true, vitrine: true, custom: true },
+	{ feature: "Site sécurisé et en ligne", presence: true, vitrine: true, custom: true },
+	{ feature: "Formation prise en main", presence: "1h", vitrine: "2h", custom: "3h" },
 	{ feature: "Support après livraison", presence: "30 jours", vitrine: "1 mois", custom: "3 mois" },
 	{ feature: "Nombre de pages", presence: "1", vitrine: "jusqu'à 5", custom: "jusqu'à 8" },
 	{ feature: "Galerie photos / réalisations", presence: false, vitrine: true, custom: true },
 	{ feature: "Animations soignées", presence: false, vitrine: true, custom: true },
 	{
-		feature: "SEO poussé (site rapide, bien classé)",
+		feature: "SEO avancé (bien classé sur Google)",
 		presence: false,
 		vitrine: true,
 		custom: true,
 	},
 	{ feature: "Statistiques de visite", presence: false, vitrine: true, custom: true },
-	{ feature: "Prise de RDV en ligne", presence: false, vitrine: false, custom: true },
-	{ feature: "Blog / CMS", presence: false, vitrine: false, custom: true },
+	{ feature: "Réservation en ligne", presence: false, vitrine: false, custom: true },
+	{ feature: "Blog intégré", presence: false, vitrine: false, custom: true },
 	{ feature: "Catalogue produits", presence: false, vitrine: false, custom: true },
 	{ feature: "Multilingue", presence: false, vitrine: false, custom: true },
 	{ feature: "Réunion de suivi à 1 mois", presence: false, vitrine: false, custom: true },
@@ -100,6 +101,7 @@ export function OffresContent() {
 						<h2 className="mx-auto max-w-[700px] font-heading text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.1] tracking-tight">
 							{t("heroTitle")}
 							<span className="text-djanni-orange">{t("heroHighlight")}</span>
+							<span className="text-djanni-orange">.</span>
 						</h2>
 						<p className="mx-auto mt-6 max-w-[540px] text-[17px] font-light leading-relaxed text-djanni-gray-light">
 							{t("heroSubtitle")}
@@ -324,7 +326,7 @@ export function OffresContent() {
 						<SectionHeader tag={t("guarantees.tag")} title={t("guarantees.title")} align="center" />
 					</AnimatedSection>
 
-					<StaggerContainer className="mt-14 grid gap-8 md:grid-cols-3">
+					<StaggerContainer className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 						{guarantees.map((item) => (
 							<StaggerItem key={item.title}>
 								<div className="flex flex-col items-center text-center">

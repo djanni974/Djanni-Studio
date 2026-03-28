@@ -94,6 +94,14 @@ html {
 	animation: underline-in 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Fallback: show content when JavaScript is disabled */
+@media (scripting: none) {
+	[style*="opacity: 0"],
+	[style*="opacity:0"] {
+		opacity: 1 !important;
+	}
+}
+
 /* Accessibility: disable animations for motion-sensitive users */
 @media (prefers-reduced-motion: reduce) {
 	html {
