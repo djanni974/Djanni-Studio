@@ -7,15 +7,15 @@
 			"description": "Charpentier devenu développeur web. Je crée des sites sur mesure pour les artisans et commerçants en Bretagne. Découvrez mon parcours."
 		},
 		"realisations": {
-			"title": "Réalisations — Djanni Studio",
-			"description": "Découvrez les sites web créés par Djanni Studio pour des artisans et commerçants en Bretagne. Études de cas détaillées."
+			"title": "Réalisations — Sites web pour artisans et commerçants | Djanni Studio",
+			"description": "Découvrez les sites web créés par Djanni Studio pour des artisans et commerçants en Bretagne. Études de cas détaillées, performances et résultats concrets."
 		},
 		"blog": {
-			"title": "Blog — Djanni Studio",
+			"title": "Blog — Conseils web pour artisans et commerçants | Djanni Studio",
 			"description": "Conseils, astuces et guides pour les artisans et commerçants qui veulent réussir en ligne. SEO local, sites web, stratégie digitale."
 		},
 		"offres": {
-			"title": "Offres & Tarifs — Djanni Studio",
+			"title": "Offres & Tarifs — Sites web pour artisans et commerçants | Djanni Studio",
 			"description": "Découvrez mes offres de création de sites web pour artisans et commerçants. Présence, Vitrine, Sur mesure ou refonte — des formules claires, sans surprises."
 		},
 		"avis": {
@@ -42,7 +42,14 @@
 	"breadcrumb": {
 		"home": "Accueil",
 		"blog": "Blog",
-		"realisations": "Réalisations"
+		"realisations": "Réalisations",
+		"offres": "Offres",
+		"about": "À propos",
+		"demandeProjet": "Demande de projet",
+		"avis": "Avis",
+		"cgv": "CGV",
+		"mentionsLegales": "Mentions légales",
+		"politiqueConfidentialite": "Politique de confidentialité"
 	},
 	"nav": {
 		"realisations": "Réalisations",
