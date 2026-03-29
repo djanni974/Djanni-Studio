@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { BlogPostContent } from "@/components/sections/blog-post-content"
+import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { BLOG_POSTS } from "@/lib/constants"
 import { getAlternates, pickMessages } from "@/lib/metadata"
 
@@ -82,43 +83,24 @@ export default async function BlogPostPage({
 		mainEntityOfPage: `https://www.djannistudio.fr/blog/${slug}`,
 	}
 
-	const breadcrumbJsonLd = {
-		"@context": "https://schema.org",
-		"@type": "BreadcrumbList",
-		itemListElement: [
-			{
-				"@type": "ListItem",
-				position: 1,
-				name: bc("home"),
-				item: "https://www.djannistudio.fr",
-			},
-			{
-				"@type": "ListItem",
-				position: 2,
-				name: bc("blog"),
-				item: "https://www.djannistudio.fr/blog",
-			},
-			{
-				"@type": "ListItem",
-				position: 3,
-				name: post.title,
-				item: `https://www.djannistudio.fr/blog/${slug}`,
-			},
-		],
-	}
-
 	return (
-		<main>
+		<main className="relative">
 			<script
 				type="application/ld+json"
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostJsonLd) }}
 			/>
-			<script
-				type="application/ld+json"
-				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-			/>
+			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
+				<div className="mx-auto max-w-[1100px]">
+					<Breadcrumb
+						items={[
+							{ label: bc("home"), href: "/" },
+							{ label: bc("blog"), href: "/blog" },
+							{ label: post.title, href: `/blog/${slug}` },
+						]}
+					/>
+				</div>
+			</div>
 			<NextIntlClientProvider messages={pickMessages(messages, ["blogPost"])}>
 				<BlogPostContent post={post} prevPost={prevPost} nextPost={nextPost} />
 			</NextIntlClientProvider>

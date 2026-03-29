@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { ContactFaq } from "@/components/sections/contact-faq"
 import { ProjectRequestForm } from "@/components/sections/project-request-form"
+import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { getAlternates, pickMessages } from "@/lib/metadata"
 
 export async function generateMetadata({
@@ -40,11 +41,24 @@ export default async function DemandeProjetPage({
 }) {
 	const { locale } = await params
 	setRequestLocale(locale)
-	const messages = await getMessages()
+	const [messages, bc] = await Promise.all([
+		getMessages(),
+		getTranslations({ locale, namespace: "breadcrumb" }),
+	])
 
 	return (
 		<NextIntlClientProvider messages={pickMessages(messages, ["projectRequest", "contactFaq"])}>
 			<main className="relative overflow-hidden">
+				<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
+					<div className="mx-auto max-w-[1100px]">
+						<Breadcrumb
+							items={[
+								{ label: bc("home"), href: "/" },
+								{ label: bc("demandeProjet"), href: "/demande-projet" },
+							]}
+						/>
+					</div>
+				</div>
 				{/* Dot grid */}
 				<div
 					className="pointer-events-none absolute inset-0 opacity-[0.03]"

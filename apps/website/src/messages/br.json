@@ -7,15 +7,15 @@
 			"description": "Eus charpaentour da ziorroerien web. Krouiñ a ran lec'hiennoù web war-bouez evit an artizaned hag ar c'henwerzhourion e Breizh."
 		},
 		"realisations": {
-			"title": "Obererezhioù — Djanni Studio",
-			"description": "Dizoleiit al lec'hiennoù web krouet gant Djanni Studio evit artizaned ha kenwerzhourion e Breizh."
+			"title": "Obererezhioù — Lec'hiennoù web evit artizaned ha kenwerzhourion | Djanni Studio",
+			"description": "Dizoleiit al lec'hiennoù web krouet gant Djanni Studio evit artizaned ha kenwerzhourion e Breizh. Studiadennoù resis, performañsoù ha disoc'hoù gwir."
 		},
 		"blog": {
-			"title": "Blog — Djanni Studio",
+			"title": "Blog — Alioù web evit artizaned ha kenwerzhourion | Djanni Studio",
 			"description": "Alioù ha traoù talvoudus evit an artizaned hag ar c'henwerzhourion a fell dezho boud a-raok war internet."
 		},
 		"offres": {
-			"title": "Tarifioù & Kinnigoù — Djanni Studio",
+			"title": "Tarifioù & Kinnigoù — Lec'hiennoù web evit artizaned | Djanni Studio",
 			"description": "Dizoleiit ma c'hinnigoù evit krouiñ lec'hiennoù web evit an artizaned hag ar c'henwerzhourion. Prezañs, Vitrine, War-bouez pe adnevesaat — tarifioù sklaer, hep souezhadenn."
 		},
 		"avis": {
@@ -42,7 +42,14 @@
 	"breadcrumb": {
 		"home": "Degemer",
 		"blog": "Blog",
-		"realisations": "Obererezhioù"
+		"realisations": "Obererezhioù",
+		"offres": "Tarifioù",
+		"about": "Diwar-benn",
+		"demandeProjet": "Goulenn raktres",
+		"avis": "Alioù",
+		"cgv": "Divizegoù",
+		"mentionsLegales": "Menozoù lezennel",
+		"politiqueConfidentialite": "Reolenn prevezded"
 	},
 	"nav": {
 		"realisations": "Obererezhioù",

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { CaseStudyContent } from "@/components/sections/case-study-content"
+import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { PROJECTS } from "@/lib/constants"
 import { getAlternates, pickMessages } from "@/lib/metadata"
 
@@ -54,38 +55,19 @@ export default async function CaseStudyPage({
 	const project = PROJECTS.find((p) => p.slug === slug)
 	if (!project) notFound()
 
-	const breadcrumbJsonLd = {
-		"@context": "https://schema.org",
-		"@type": "BreadcrumbList",
-		itemListElement: [
-			{
-				"@type": "ListItem",
-				position: 1,
-				name: bc("home"),
-				item: "https://www.djannistudio.fr",
-			},
-			{
-				"@type": "ListItem",
-				position: 2,
-				name: bc("realisations"),
-				item: "https://www.djannistudio.fr/realisations",
-			},
-			{
-				"@type": "ListItem",
-				position: 3,
-				name: project.name,
-				item: `https://www.djannistudio.fr/realisations/${slug}`,
-			},
-		],
-	}
-
 	return (
-		<main id="main">
-			<script
-				type="application/ld+json"
-				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-			/>
+		<main id="main" className="relative">
+			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
+				<div className="mx-auto max-w-[1100px]">
+					<Breadcrumb
+						items={[
+							{ label: bc("home"), href: "/" },
+							{ label: bc("realisations"), href: "/realisations" },
+							{ label: project.name, href: `/realisations/${slug}` },
+						]}
+					/>
+				</div>
+			</div>
 			<NextIntlClientProvider messages={pickMessages(messages, ["caseStudy"])}>
 				<CaseStudyContent project={project} />
 			</NextIntlClientProvider>

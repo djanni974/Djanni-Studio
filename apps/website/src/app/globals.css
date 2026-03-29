@@ -100,6 +100,21 @@ html {
 	[style*="opacity:0"] {
 		opacity: 1 !important;
 	}
+
+	/* Mobile menu: show nav links directly when JS is unavailable */
+	nav .lg\:hidden {
+		position: static !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+		transform: none !important;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+	nav .lg\:hidden li {
+		opacity: 1 !important;
+		transform: none !important;
+	}
 }
 
 /* Accessibility: disable animations for motion-sensitive users */

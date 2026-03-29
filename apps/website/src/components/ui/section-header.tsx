@@ -6,12 +6,14 @@ export function SectionHeader({
 	subtitle,
 	className,
 	align = "left",
+	as: Heading = "h2",
 }: {
 	tag: string
 	title: string
 	subtitle?: string
 	className?: string
 	align?: "left" | "center"
+	as?: "h1" | "h2"
 }) {
 	const endsWithEllipsis = title.endsWith("...")
 	const displayTitle = !endsWithEllipsis && title.endsWith(".") ? title.slice(0, -1) : title
@@ -21,10 +23,10 @@ export function SectionHeader({
 			<span className="mb-4 block text-[11px] font-semibold uppercase tracking-[0.15em] text-djanni-orange">
 				{tag}
 			</span>
-			<h2 className="font-heading text-[clamp(32px,4vw,52px)] font-extrabold leading-[1.1] tracking-tight">
+			<Heading className="font-heading text-[clamp(32px,4vw,52px)] font-extrabold leading-[1.1] tracking-tight">
 				{displayTitle}
 				{!endsWithEllipsis && <span className="text-djanni-orange">.</span>}
-			</h2>
+			</Heading>
 			{subtitle && (
 				<p
 					className={cn(

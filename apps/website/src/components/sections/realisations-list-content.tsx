@@ -26,6 +26,7 @@ export function RealisationsListContent() {
 			<div className="relative mx-auto max-w-[1100px]">
 				<AnimatedSection>
 					<SectionHeader
+						as="h1"
 						tag={t("tag")}
 						title={t("title")}
 						subtitle={t("subtitle")}

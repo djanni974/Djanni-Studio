@@ -1,6 +1,7 @@
-import { IconArrowLeft } from "@tabler/icons-react"
 import type { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import type { ReactNode } from "react"
+import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { Link } from "@/i18n/navigation"
 import { getAlternates } from "@/lib/metadata"
 
@@ -147,16 +148,19 @@ function renderLine(line: string) {
 	})
 }
 
-export default function MentionsLegales() {
+export default async function MentionsLegales({ params }: { params: Promise<{ locale: string }> }) {
+	const { locale } = await params
+	const bc = await getTranslations({ locale, namespace: "breadcrumb" })
+
 	return (
 		<main className="mx-auto max-w-[720px] px-6 pt-32 pb-20 md:px-12">
-			<Link
-				href="/"
-				className="mb-10 inline-flex items-center gap-2 text-sm text-djanni-gray-light transition-colors hover:text-foreground"
-			>
-				<IconArrowLeft size={14} />
-				Retour à l&apos;accueil
-			</Link>
+			<Breadcrumb
+				items={[
+					{ label: bc("home"), href: "/" },
+					{ label: bc("mentionsLegales"), href: "/mentions-legales" },
+				]}
+				className="mb-10"
+			/>
 
 			<h1 className="font-heading text-[clamp(28px,4vw,40px)] font-extrabold leading-tight tracking-tight">
 				Mentions légales

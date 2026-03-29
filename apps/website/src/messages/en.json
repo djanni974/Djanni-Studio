@@ -7,15 +7,15 @@
 			"description": "From carpenter to web developer. I create custom websites for craftspeople and local businesses in Brittany. Discover my journey."
 		},
 		"realisations": {
-			"title": "Portfolio — Djanni Studio",
-			"description": "Discover the websites created by Djanni Studio for craftspeople and local businesses in Brittany. Detailed case studies."
+			"title": "Portfolio — Websites for craftspeople & local businesses | Djanni Studio",
+			"description": "Discover the websites created by Djanni Studio for craftspeople and local businesses in Brittany. Detailed case studies, performance and real results."
 		},
 		"blog": {
-			"title": "Blog — Djanni Studio",
+			"title": "Blog — Web tips for craftspeople & local businesses | Djanni Studio",
 			"description": "Tips, tricks and guides for craftspeople and local businesses who want to succeed online. Local SEO, websites, digital strategy."
 		},
 		"offres": {
-			"title": "Pricing & Plans — Djanni Studio",
+			"title": "Pricing & Plans — Website packages for craftspeople | Djanni Studio",
 			"description": "Discover my website packages for craftspeople and local businesses. Presence, Showcase, Custom or redesign — clear pricing, no surprises."
 		},
 		"avis": {
@@ -42,7 +42,14 @@
 	"breadcrumb": {
 		"home": "Home",
 		"blog": "Blog",
-		"realisations": "Portfolio"
+		"realisations": "Portfolio",
+		"offres": "Pricing",
+		"about": "About",
+		"demandeProjet": "Project Request",
+		"avis": "Reviews",
+		"cgv": "Terms",
+		"mentionsLegales": "Legal Notice",
+		"politiqueConfidentialite": "Privacy Policy"
 	},
 	"nav": {
 		"realisations": "Portfolio",

@@ -98,11 +98,11 @@ export function OffresContent() {
 						<span className="mb-4 inline-block text-[11px] font-semibold uppercase tracking-[0.15em] text-djanni-orange">
 							{t("tag")}
 						</span>
-						<h2 className="mx-auto max-w-[700px] font-heading text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.1] tracking-tight">
+						<h1 className="mx-auto max-w-[700px] font-heading text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.1] tracking-tight">
 							{t("heroTitle")}
 							<span className="text-djanni-orange">{t("heroHighlight")}</span>
 							<span className="text-djanni-orange">.</span>
-						</h2>
+						</h1>
 						<p className="mx-auto mt-6 max-w-[540px] text-[17px] font-light leading-relaxed text-djanni-gray-light">
 							{t("heroSubtitle")}
 						</p>
