@@ -105,6 +105,29 @@ function renderMarkdown(content: string) {
 			continue
 		}
 
+		if (line.startsWith(":::cta")) {
+			const blockLines: string[] = []
+			i++
+			while (i < lines.length && lines[i].trim() !== ":::") {
+				if (lines[i].trim()) blockLines.push(lines[i])
+				i++
+			}
+			i++ // skip closing :::
+			elements.push(
+				<div
+					key={`cta-${blockKey++}`}
+					className="my-8 flex flex-wrap items-center justify-center gap-4 rounded-xl border border-border bg-surface-b p-6"
+				>
+					{blockLines.map((l, j) => (
+						<span key={j} className="text-[15px]">
+							{renderInline(l)}
+						</span>
+					))}
+				</div>,
+			)
+			continue
+		}
+
 		if (line.startsWith(":::example")) {
 			const blockLines: string[] = []
 			i++

@@ -17,11 +17,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	// Static pages
 	const staticPages = [
 		{ path: "", changeFrequency: "monthly" as const, priority: 1 },
-		{ path: "/a-propos", changeFrequency: "monthly" as const, priority: 0.8 },
+		{ path: "/offres", changeFrequency: "monthly" as const, priority: 0.9 },
 		{ path: "/realisations", changeFrequency: "monthly" as const, priority: 0.9 },
+		{ path: "/a-propos", changeFrequency: "monthly" as const, priority: 0.8 },
 		{ path: "/blog", changeFrequency: "weekly" as const, priority: 0.8 },
+		{ path: "/demande-projet", changeFrequency: "monthly" as const, priority: 0.8 },
 		{ path: "/mentions-legales", changeFrequency: "yearly" as const, priority: 0.3 },
 		{ path: "/cgv", changeFrequency: "yearly" as const, priority: 0.3 },
+		{ path: "/politique-de-confidentialite", changeFrequency: "yearly" as const, priority: 0.3 },
 		{ path: "/plan-du-site", changeFrequency: "monthly" as const, priority: 0.3 },
 	]
 

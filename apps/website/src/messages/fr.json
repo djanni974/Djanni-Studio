@@ -1,42 +1,42 @@
 {
 	"metadata": {
-		"title": "Djanni Studio — Sites web pour artisans & commerçants",
-		"description": "Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — un site qui vous ressemble et ramène des clients.",
+		"title": "Création de sites web pour artisans & commerçants à Dinard et Saint-Malo",
+		"description": "Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises. Un site qui vous ressemble et ramène des clients.",
 		"about": {
-			"title": "À propos — Djanni Studio",
-			"description": "Charpentier devenu développeur web. Je crée des sites sur mesure pour les artisans et commerçants en Bretagne. Découvrez mon parcours."
+			"title": "Ancien charpentier devenu développeur web à Dinard | Djanni Studio",
+			"description": "Charpentier devenu développeur web à Dinard. Je crée des sites sur mesure pour les artisans et commerçants en Bretagne. Parcours, valeurs et méthode de travail."
 		},
 		"realisations": {
-			"title": "Réalisations — Sites web pour artisans et commerçants | Djanni Studio",
+			"title": "Sites web artisans et commerçants en Bretagne | Djanni Studio",
 			"description": "Découvrez les sites web créés par Djanni Studio pour des artisans et commerçants en Bretagne. Études de cas détaillées, performances et résultats concrets."
 		},
 		"blog": {
-			"title": "Blog — Conseils web pour artisans et commerçants | Djanni Studio",
-			"description": "Conseils, astuces et guides pour les artisans et commerçants qui veulent réussir en ligne. SEO local, sites web, stratégie digitale."
+			"title": "Blog : conseils web pour artisans en Bretagne | Djanni Studio",
+			"description": "Conseils, astuces et guides pour les artisans et commerçants qui veulent réussir en ligne. SEO local, performance web, stratégie digitale en Bretagne."
 		},
 		"offres": {
-			"title": "Offres & Tarifs — Sites web pour artisans et commerçants | Djanni Studio",
-			"description": "Découvrez mes offres de création de sites web pour artisans et commerçants. Présence, Vitrine, Sur mesure ou refonte — des formules claires, sans surprises."
+			"title": "Sites web artisans : offres de 990€ à 1 990€ | Djanni Studio",
+			"description": "Découvrez mes offres de création de sites web pour artisans et commerçants. Présence, Vitrine, Sur mesure ou refonte. Des formules claires, sans surprises."
 		},
 		"avis": {
-			"title": "Laisser un avis — Djanni Studio",
+			"title": "Laisser un avis | Djanni Studio",
 			"description": "Partagez votre expérience avec Djanni Studio en laissant un avis sur Google."
 		},
 		"demandeProjet": {
-			"title": "Demande de projet — Djanni Studio",
-			"description": "Décrivez votre projet web et recevez une réponse sous 24h. Formulaire simple et rapide."
+			"title": "Devis gratuit site web artisan Dinard, Saint-Malo | Djanni Studio",
+			"description": "Décrivez votre projet web et recevez un devis gratuit sous 24h. Sites vitrines pour artisans et commerçants à Dinard, Saint-Malo et en Bretagne."
 		},
 		"offrePresence": {
-			"title": "Offre Présence — 990 € | Djanni Studio",
-			"description": "Une page professionnelle pour être visible en ligne en 2 semaines. Design sur mesure, responsive, SEO de base inclus."
+			"title": "Offre Présence | 990 € | Djanni Studio",
+			"description": "Une page professionnelle pour être visible en ligne en 2 semaines. Design sur mesure, responsive, SEO de base inclus. 495€ à la signature, 495€ à la livraison."
 		},
 		"offreVitrine": {
-			"title": "Offre Vitrine — 1 490 € | Djanni Studio",
-			"description": "Un vrai site structuré jusqu'à 5 pages. Animations soignées, SEO intermédiaire, formation incluse."
+			"title": "Offre Vitrine | 1 490 € | Djanni Studio",
+			"description": "Un vrai site structuré jusqu'à 5 pages pour artisans et commerçants. Animations soignées, SEO intermédiaire, formation et support 1 mois inclus."
 		},
 		"offreSurMesure": {
-			"title": "Offre Sur mesure — à partir de 1 990 € | Djanni Studio",
-			"description": "Prise de RDV, blog CMS, multilingue — un site construit exactement pour vos besoins."
+			"title": "Offre Sur mesure | à partir de 1 990 € | Djanni Studio",
+			"description": "Prise de RDV, blog CMS, catalogue, multilingue. Un site construit exactement pour vos besoins. Devis personnalisé après échange de 30 minutes."
 		}
 	},
 	"breadcrumb": {
@@ -61,11 +61,12 @@
 		"skipToContent": "Aller au contenu"
 	},
 	"hero": {
-		"badge": "Djanni Studio — Bretagne",
-		"titleStart": "Des sites web pensés par un ",
-		"titleHighlight": "artisan",
-		"titleEnd": ", pour les artisans.",
-		"subtitle": "Ancien charpentier, aujourd'hui développeur web basé à Dinard — je crée des sites qui parlent comme vous et qui attirent vos clients. Je travaille principalement avec des artisans en Bretagne : Saint-Malo, Dinard, Côte d'Émeraude et alentours.",
+		"badge": "Djanni Studio · Bretagne",
+		"heading": "Sites web pour artisans et commerçants en Bretagne",
+		"taglineStart": "Des sites web pensés par un ",
+		"taglineHighlight": "artisan",
+		"taglineEnd": ", pour les artisans.",
+		"subtitle": "Ancien charpentier, aujourd'hui développeur web basé à Dinard. Je crée des sites vitrines modernes pour les artisans et commerçants de Dinard, Saint-Malo, Dinan et toute la Côte d'Émeraude.",
 		"cta": "Demander mon devis gratuit",
 		"seeWork": "Voir mes réalisations"
 	},
@@ -89,7 +90,7 @@
 			"title": "Ce qui est inclus dans chaque offre.",
 			"items": [
 				{
-					"title": "Pas d'abonnement — votre site vous appartient",
+					"title": "Pas d'abonnement : votre site vous appartient",
 					"text": "Vous payez une fois, le site est à vous. Pas de frais cachés, pas de dépendance. L'hébergement est gratuit."
 				},
 				{
@@ -101,7 +102,7 @@
 					"text": "50% à la signature, 50% à la livraison. Simple et transparent."
 				},
 				{
-					"title": "Support inclus — et après ?",
+					"title": "Support inclus, et après ?",
 					"text": "De 30 jours à 3 mois de support selon l'offre. Après, votre site continue de fonctionner normalement. Besoin de modifications ? Je reste disponible sur devis."
 				}
 			]
@@ -111,7 +112,7 @@
 			"title": "C'est fait pour vous si...",
 			"items": [
 				{
-					"offer": "Présence — 990€",
+					"offer": "Présence · 990€",
 					"headline": "Vous n'avez pas de site du tout",
 					"points": [
 						"Plombier, électricien, couvreur sans présence web",
@@ -120,7 +121,7 @@
 					]
 				},
 				{
-					"offer": "Vitrine — 1 490€",
+					"offer": "Vitrine · 1 490€",
 					"headline": "Vous avez un vieux site ou une fiche PagesJaunes",
 					"points": [
 						"Coiffeur, artisan, commerçant avec une image à soigner",
@@ -129,7 +130,7 @@
 					]
 				},
 				{
-					"offer": "Sur mesure — dès 1 990€",
+					"offer": "Sur mesure · dès 1 990€",
 					"headline": "Vous avez des besoins spécifiques",
 					"points": [
 						"Restaurant avec réservation en ligne et menu dynamique",
@@ -170,7 +171,7 @@
 				{
 					"label": "Maintenance mensuelle optionnelle",
 					"price": "49€/mois",
-					"desc": "Mises à jour, sauvegardes, corrections — vous ne vous occupez de rien. Sans engagement, résiliable à tout moment.",
+					"desc": "Mises à jour, sauvegardes, corrections. Vous ne vous occupez de rien. Sans engagement, résiliable à tout moment.",
 					"hint": "Pour ne plus jamais vous soucier de la technique."
 				},
 				{
@@ -186,10 +187,20 @@
 			"title": "Un seul chantier signé rembourse votre site.",
 			"text": "Un plombier qui facture 600€ l'intervention a besoin de 2 nouveaux clients par mois pour rentabiliser son site en moins d'un an. Un coiffeur avec 3 réservations supplémentaires par semaine couvre largement l'investissement dès le premier mois.",
 			"stats": [
-				{ "value": "2-3", "label": "nouveaux clients suffisent à rembourser un site vitrine" },
-				{ "value": "2 sem.", "label": "délai moyen de mise en ligne" },
-				{ "value": "0€", "label": "de frais cachés" }
-			]
+				{
+					"value": "2-3",
+					"label": "nouveaux clients suffisent à rembourser un site vitrine"
+				},
+				{
+					"value": "2 sem.",
+					"label": "délai moyen de mise en ligne"
+				},
+				{
+					"value": "0€",
+					"label": "de frais cachés"
+				}
+			],
+			"seeResults": "Voir les résultats concrets"
 		},
 		"pricingFaq": {
 			"tag": "Questions fréquentes",
@@ -201,7 +212,7 @@
 				},
 				{
 					"question": "Y a-t-il un abonnement mensuel obligatoire ?",
-					"answer": "Non. Vous payez une fois à la signature et une fois à la livraison. L'hébergement sur Vercel est gratuit pour votre usage. La maintenance mensuelle à 49€ est 100% optionnelle et sans engagement — vous pouvez la prendre, la suspendre ou l'annuler à tout moment. Aucun frais caché."
+					"answer": "Non. Vous payez une fois à la signature et une fois à la livraison. L'hébergement sur Vercel est gratuit pour votre usage. La maintenance mensuelle à 49€ est 100% optionnelle et sans engagement. Vous pouvez la prendre, la suspendre ou l'annuler à tout moment. Aucun frais caché."
 				},
 				{
 					"question": "Que se passe-t-il si je veux modifier le site après livraison ?",
@@ -221,7 +232,7 @@
 				},
 				{
 					"question": "Comment se passe le paiement ?",
-					"answer": "50% à la signature du devis, 50% à la livraison — avant la mise en ligne. Vous payez par virement bancaire, carte bancaire ou chèque. Aucun frais caché, aucun abonnement imposé."
+					"answer": "50% à la signature du devis, 50% à la livraison, avant la mise en ligne. Vous payez par virement bancaire, carte bancaire ou chèque. Aucun frais caché, aucun abonnement imposé."
 				}
 			]
 		},
@@ -263,7 +274,7 @@
 			"priceSuffix": "€",
 			"priceNote": "50% à la signature • 50% à la livraison",
 			"name": "Vitrine",
-			"description": "Un vrai outil de travail — pas juste une carte de visite en ligne.",
+			"description": "Un vrai outil de travail, pas juste une carte de visite en ligne.",
 			"benefitLine": "Pour donner envie avant même que le client pousse la porte.",
 			"popularNote": "L'offre la plus adaptée pour 80% des artisans et commerçants.",
 			"features": [
@@ -291,7 +302,7 @@
 			"features": [
 				"Jusqu'à 8 pages (ex : Accueil, Services ×3, Réalisations, Blog, À propos, Contact)",
 				"Vos clients réservent directement en ligne",
-				"Blog intégré — vous publiez vous-même",
+				"Blog intégré : vous publiez vous-même",
 				"Votre catalogue de produits ou services visible en ligne",
 				"Multilingue pour toucher plus de clients",
 				"SEO avancé (audit complet + stratégie mots-clés)",
@@ -305,7 +316,7 @@
 	"pourquoi": {
 		"tag": "Pourquoi moi",
 		"title": "Un dev qui parle votre langue.",
-		"subtitle": "Pas une agence, pas un étudiant — un artisan du web qui vient du terrain.",
+		"subtitle": "Pas une agence, pas un étudiant. Un artisan du web qui vient du terrain.",
 		"reasons": [
 			{
 				"number": "01",
@@ -325,14 +336,14 @@
 			{
 				"number": "04",
 				"title": "Livré en 2 à 5 semaines, pas en 6 mois",
-				"text": "Un planning clair, des étapes définies. Un seul interlocuteur, joignable en direct — pas une agence avec 5 contacts différents."
+				"text": "Un planning clair, des étapes définies. Un seul interlocuteur, joignable en direct. Pas une agence avec 5 contacts différents."
 			}
 		]
 	},
 	"profileCard": {
-		"name": "Gianni — Djanni Studio",
+		"name": "Gianni · Djanni Studio",
 		"role": "Développeur web freelance · Bretagne",
-		"quote": "Pendant des années, j'ai posé des charpentes sous la pluie bretonne. J'ai appris que le bon travail, ça se voit pas — c'est ce qui tient dans le temps, sans fioriture. J'applique la même logique au web : solide, propre, et utile pour de vrai."
+		"quote": "Pendant des années, j'ai posé des charpentes sous la pluie bretonne. J'ai appris que le bon travail, ça se voit pas. C'est ce qui tient dans le temps, sans fioriture. J'applique la même logique au web : solide, propre, et utile pour de vrai."
 	},
 	"temoignages": {
 		"tag": "Témoignages",
@@ -378,7 +389,7 @@
 			},
 			{
 				"question": "Je n'y connais rien en technique, c'est un problème ?",
-				"answer": "Pas du tout. C'est même la majorité de mes clients. Je m'occupe de toute la partie technique et je vous explique tout en langage simple. Pour les textes, on les rédige ensemble à partir de vos mots — pas besoin d'être écrivain. Si vous n'avez pas de photos, on trouve une solution : photographe local ou banque d'images professionnelle. Vous n'avez rien à préparer pour démarrer."
+				"answer": "Pas du tout. C'est même la majorité de mes clients. Je m'occupe de toute la partie technique et je vous explique tout en langage simple. Pour les textes, on les rédige ensemble à partir de vos mots. Pas besoin d'être écrivain. Si vous n'avez pas de photos, on trouve une solution : photographe local ou banque d'images professionnelle. Vous n'avez rien à préparer pour démarrer."
 			},
 			{
 				"question": "Que se passe-t-il après la mise en ligne ?",
@@ -386,7 +397,7 @@
 			},
 			{
 				"question": "Pourquoi pas un site WordPress ou Wix ?",
-				"answer": "Ces outils sont pratiques mais limités en performance et personnalisation. Je développe des sites sur mesure, plus rapides, mieux référencés, et qui vous appartiennent vraiment — pas d'abonnement mensuel imposé."
+				"answer": "Ces outils sont pratiques mais limités en performance et personnalisation. Je développe des sites sur mesure, plus rapides, mieux référencés, et qui vous appartiennent vraiment. Pas d'abonnement mensuel imposé."
 			},
 			{
 				"question": "Comment se passe le paiement ?",
@@ -406,14 +417,14 @@
 			},
 			{
 				"question": "Vous intervenez sur quelle zone ?",
-				"answer": "Mon terrain principal c'est le bassin Dinard / Saint-Malo / Dinan — je me déplace physiquement chez mes clients dans cette zone. Au-delà, je travaille à distance avec des artisans partout en France. Visio, téléphone, email : on s'adapte."
+				"answer": "Mon terrain principal c'est le bassin Dinard / Saint-Malo / Dinan. Je me déplace physiquement chez mes clients dans cette zone. Au-delà, je travaille à distance avec des artisans partout en France. Visio, téléphone, email : on s'adapte."
 			}
 		]
 	},
 	"contact": {
 		"tag": "Contact",
 		"title": "Un chantier, ça commence par une discussion.",
-		"subtitle": "Dites-moi ce que vous faites, où vous êtes, ce qui vous manque. Je vous montre ce que ça pourrait donner. Premier échange gratuit, sans engagement — comme chez tout bon artisan.",
+		"subtitle": "Dites-moi ce que vous faites, où vous êtes, ce qui vous manque. Je vous montre ce que ça pourrait donner. Premier échange gratuit, sans engagement. Comme chez tout bon artisan.",
 		"step0Title": "Quel est votre projet ?",
 		"step1Title": "Comment vous contacter ?",
 		"step2Title": "Parlez-nous de votre projet",
@@ -465,14 +476,14 @@
 			"subtitle": "Un chemin pas commun, mais qui fait toute la différence quand on travaille avec des artisans.",
 			"steps": [
 				{
-					"year": "2018 — 2023",
+					"year": "2018 - 2023",
 					"title": "Charpentier de métier",
-					"text": "J'ai commencé sur les chantiers. Couper, ajuster, assembler — construire des choses solides avec mes mains. C'est là que j'ai appris la rigueur, le respect des délais et l'importance du travail bien fait."
+					"text": "J'ai commencé sur les chantiers. Couper, ajuster, assembler. Construire des choses solides avec mes mains. C'est là que j'ai appris la rigueur, le respect des délais et l'importance du travail bien fait."
 				},
 				{
-					"year": "2023 — Aujourd'hui",
+					"year": "2023 - Aujourd'hui",
 					"title": "Développeur web",
-					"text": "En parallèle, je me suis passionné pour le code. React, Next.js, TypeScript — j'ai appris en construisant des projets concrets, pas dans une salle de cours. Même philosophie que la charpente : du solide, du sur mesure, pas de raccourci."
+					"text": "En parallèle, je me suis passionné pour le code. React, Next.js, TypeScript. J'ai appris en construisant des projets concrets, pas dans une salle de cours. Même philosophie que la charpente : du solide, du sur mesure, pas de raccourci."
 				},
 				{
 					"year": "2026",
@@ -484,7 +495,8 @@
 					"title": "Le web accessible aux artisans",
 					"text": "Pas de jargon, pas de prix gonflé, pas de délais interminables. Un site beau, rapide et efficace, livré en 2 à 5 semaines selon la formule. C'est aussi simple que ça."
 				}
-			]
+			],
+			"seeWork": "Voir ce que ça donne concrètement"
 		},
 		"values": {
 			"tag": "Mes valeurs",
@@ -497,7 +509,7 @@
 				},
 				{
 					"title": "Qualité",
-					"text": "Chaque site est codé sur mesure avec des technologies modernes — du code propre et performant, aucun template générique."
+					"text": "Chaque site est codé sur mesure avec des technologies modernes. Du code propre et performant, aucun template générique."
 				},
 				{
 					"title": "Proximité",
@@ -525,9 +537,9 @@
 	"realisationsHome": {
 		"tag": "Réalisations",
 		"title": "Ce que je construis.",
-		"subtitle": "Sites réalisés et concepts — chaque projet est pensé pour le commerce qui le porte.",
+		"subtitle": "Sites réalisés et concepts. Chaque projet est pensé pour le commerce qui le porte.",
 		"ctaTitle": "Votre projet ici ?",
-		"ctaSubtitle": "Discutons de votre idée — premier échange gratuit."
+		"ctaSubtitle": "Discutons de votre idée. Premier échange gratuit."
 	},
 	"blogPost": {
 		"backLink": "Tous les articles",
@@ -545,7 +557,9 @@
 	"realisationsPage": {
 		"tag": "Réalisations",
 		"title": "Des projets qui parlent d'eux-mêmes.",
-		"subtitle": "Chaque site est une histoire. Découvrez comment j'ai aidé des artisans et commerçants à se démarquer en ligne."
+		"subtitle": "Chaque site est une histoire. Découvrez comment j'ai aidé des artisans et commerçants à se démarquer en ligne.",
+		"intro": "Restaurants, salons de coiffure, artisans du bâtiment, dépôts-vente : chaque projet ci-dessous a été conçu sur mesure pour répondre aux besoins spécifiques d'un commerce local en Bretagne. Design personnalisé, performances optimisées et référencement local inclus.",
+		"ctaIntro": "Voir les offres"
 	},
 	"caseStudy": {
 		"backLink": "Retour aux réalisations",
@@ -695,7 +709,7 @@
 	"ctaContact": {
 		"tag": "Contact",
 		"title": "Un chantier, ça commence par une discussion.",
-		"subtitle": "Dites-moi ce que vous faites, où vous êtes, ce qui vous manque. Je vous montre ce que ça pourrait donner. Premier échange gratuit, sans engagement — comme chez tout bon artisan.",
+		"subtitle": "Dites-moi ce que vous faites, où vous êtes, ce qui vous manque. Je vous montre ce que ça pourrait donner. Premier échange gratuit, sans engagement. Comme chez tout bon artisan.",
 		"button": "Démarrer mon projet",
 		"or": "Ou appelez directement, c'est aussi bien"
 	},
@@ -713,11 +727,11 @@
 		"paymentTransfer": "Virement",
 		"paymentCard": "Carte bancaire",
 		"paymentCheck": "Chèque",
-		"copyright": "© 2026 Djanni Studio — Tous droits réservés"
+		"copyright": "© 2026 Djanni Studio · Tous droits réservés"
 	},
 	"sitemap": {
-		"metaTitle": "Plan du site — Djanni Studio",
-		"metaDescription": "Plan du site Djanni Studio — retrouvez toutes les pages du site.",
+		"metaTitle": "Plan du site | Djanni Studio",
+		"metaDescription": "Plan du site Djanni Studio. Retrouvez toutes les pages du site.",
 		"title": "Plan du site",
 		"tag": "Navigation",
 		"subtitle": "Retrouvez l'ensemble des pages du site, des réalisations et des articles du blog.",
@@ -744,9 +758,18 @@
 		"priceNote": "tout inclus",
 		"payment": "495 € à la signature · 495 € à la livraison",
 		"stats": [
-			{ "value": "1", "label": "page complète" },
-			{ "value": "2 sem.", "label": "délai de livraison" },
-			{ "value": "30 j.", "label": "support inclus" }
+			{
+				"value": "1",
+				"label": "page complète"
+			},
+			{
+				"value": "2 sem.",
+				"label": "délai de livraison"
+			},
+			{
+				"value": "30 j.",
+				"label": "support inclus"
+			}
 		],
 		"includedLabel": "Ce qui est inclus",
 		"features": [
@@ -760,19 +783,28 @@
 		],
 		"excludedLabel": "Non inclus dans cette formule",
 		"excluded": [
-			"Pages supplémentaires — disponible avec la formule Vitrine",
-			"Prise de RDV en ligne — disponible avec la formule Sur mesure",
-			"Blog CMS — disponible avec la formule Sur mesure"
+			"Pages supplémentaires (disponible avec la formule Vitrine)",
+			"Prise de RDV en ligne (disponible avec la formule Sur mesure)",
+			"Blog CMS (disponible avec la formule Sur mesure)"
 		],
-		"cta": "Démarrer mon projet — 990 €",
+		"cta": "Démarrer mon projet · 990 €",
 		"compare": "Comparer avec la Vitrine →",
 		"trust": "Premier échange gratuit · Devis sous 24h · Sans engagement",
 		"back": "Toutes les offres",
 		"idealLabel": "Pour qui ?",
 		"idealItems": [
-			{ "title": "Artisan solo", "desc": "Charpentier, plombier, électricien…" },
-			{ "title": "Commerce local", "desc": "Boulangerie, fleuriste, coiffeur…" },
-			{ "title": "Restaurant", "desc": "Carte, horaires, réservation…" }
+			{
+				"title": "Artisan solo",
+				"desc": "Charpentier, plombier, électricien…"
+			},
+			{
+				"title": "Commerce local",
+				"desc": "Boulangerie, fleuriste, coiffeur…"
+			},
+			{
+				"title": "Restaurant",
+				"desc": "Carte, horaires, réservation…"
+			}
 		],
 		"processLabel": "Comment ça marche",
 		"processSteps": [
@@ -797,7 +829,7 @@
 		],
 		"upsellTitle": "Besoin de plus ?",
 		"upsellText": "La formule Vitrine ajoute jusqu'à 5 pages, un portfolio et des animations soignées.",
-		"upsellCta": "Découvrir la Vitrine — 1 490 €"
+		"upsellCta": "Découvrir la Vitrine · 1 490 €"
 	},
 	"offreVitrine": {
 		"tag": "⭐ La plus choisie",
@@ -828,18 +860,24 @@
 		"supportLabel": "corrections sans surcoût",
 		"paymentLabel": "Paiement en 2 fois",
 		"paymentSteps": [
-			{ "pct": "50%", "when": "à la signature" },
-			{ "pct": "50%", "when": "à la livraison" }
+			{
+				"pct": "50%",
+				"when": "à la signature"
+			},
+			{
+				"pct": "50%",
+				"when": "à la livraison"
+			}
 		],
 		"ctaTitle": "Prêt à lancer votre projet ?",
-		"ctaSubtitle": "Premier échange gratuit — devis sous 24h",
+		"ctaSubtitle": "Premier échange gratuit · devis sous 24h",
 		"cta": "Démarrer mon projet",
 		"back": "Toutes les offres"
 	},
 	"offreSurMesure": {
 		"tag": "Sur mesure",
 		"title": "Votre projet mérite plus qu'un template.",
-		"subtitle": "Prise de RDV, catalogue, blog, multilingue — on construit exactement ce dont vous avez besoin. Pas de compromis, pas de limites arbitraires.",
+		"subtitle": "Prise de RDV, catalogue, blog, multilingue. On construit exactement ce dont vous avez besoin. Pas de compromis, pas de limites arbitraires.",
 		"price": "1 990",
 		"priceSuffix": "€",
 		"priceNote": "à partir de",
@@ -849,14 +887,23 @@
 			"Tout ce qui est dans la formule Vitrine",
 			"Jusqu'à 8 pages",
 			"Prise de RDV en ligne (Cal.com)",
-			"Blog CMS — gérez vos articles vous-même",
-			"SEO avancé — audit & mots-clés ciblés",
+			"Blog CMS : gérez vos articles vous-même",
+			"SEO avancé : audit & mots-clés ciblés",
 			"Réunion de suivi à 1 mois après livraison"
 		],
 		"statsItems": [
-			{ "val": "8", "label": "pages max" },
-			{ "val": "3–5", "label": "semaines" },
-			{ "val": "3", "label": "mois support" }
+			{
+				"val": "8",
+				"label": "pages max"
+			},
+			{
+				"val": "3–5",
+				"label": "semaines"
+			},
+			{
+				"val": "3",
+				"label": "mois support"
+			}
 		],
 		"optionsLabel": "Options disponibles",
 		"options": [

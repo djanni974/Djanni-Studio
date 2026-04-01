@@ -1,42 +1,42 @@
 {
 	"metadata": {
-		"title": "Djanni Studio — Websites for craftspeople & local businesses",
-		"description": "I create modern websites for local craftspeople and shop owners. No jargon, no surprises — just a site that represents you and brings in customers.",
+		"title": "Website creation for craftspeople & local businesses in Dinard and Saint-Malo",
+		"description": "I create modern websites for local craftspeople and shop owners. No jargon, no surprises. Just a site that represents you and brings in customers.",
 		"about": {
-			"title": "About — Djanni Studio",
-			"description": "From carpenter to web developer. I create custom websites for craftspeople and local businesses in Brittany. Discover my journey."
+			"title": "Former carpenter turned web developer in Dinard | Djanni Studio",
+			"description": "Carpenter turned web developer in Dinard. I create custom websites for craftspeople and local businesses in Brittany. Approach, values and working method."
 		},
 		"realisations": {
-			"title": "Portfolio — Websites for craftspeople & local businesses | Djanni Studio",
+			"title": "Websites for craftspeople & local businesses in Brittany | Djanni Studio",
 			"description": "Discover the websites created by Djanni Studio for craftspeople and local businesses in Brittany. Detailed case studies, performance and real results."
 		},
 		"blog": {
-			"title": "Blog — Web tips for craftspeople & local businesses | Djanni Studio",
-			"description": "Tips, tricks and guides for craftspeople and local businesses who want to succeed online. Local SEO, websites, digital strategy."
+			"title": "Blog: web tips for craftspeople in Brittany | Djanni Studio",
+			"description": "Tips, tricks and guides for craftspeople and local businesses who want to succeed online. Local SEO, web performance, digital strategy in Brittany."
 		},
 		"offres": {
-			"title": "Pricing & Plans — Website packages for craftspeople | Djanni Studio",
-			"description": "Discover my website packages for craftspeople and local businesses. Presence, Showcase, Custom or redesign — clear pricing, no surprises."
+			"title": "Craftspeople websites: plans from €990 to €1,990 | Djanni Studio",
+			"description": "Discover my website packages for craftspeople and local businesses. Presence, Showcase, Custom or redesign. Clear pricing, no surprises."
 		},
 		"avis": {
-			"title": "Leave a Review — Djanni Studio",
+			"title": "Leave a Review | Djanni Studio",
 			"description": "Share your experience with Djanni Studio by leaving a review on Google."
 		},
 		"demandeProjet": {
-			"title": "Project Request — Djanni Studio",
-			"description": "Describe your web project and get a response within 24 hours. Simple and quick form."
+			"title": "Free quote for craftspeople websites in Dinard, Saint-Malo | Djanni Studio",
+			"description": "Describe your web project and get a free quote within 24 hours. Showcase websites for craftspeople and local businesses in Dinard, Saint-Malo and Brittany."
 		},
 		"offrePresence": {
-			"title": "Presence Plan — 990 € | Djanni Studio",
-			"description": "A professional page to get visible online in 2 weeks. Custom design, responsive, basic SEO included."
+			"title": "Presence Plan · 990 € | Djanni Studio",
+			"description": "A professional page to get visible online in 2 weeks. Custom design, responsive, basic SEO included. €495 at signing, €495 on delivery."
 		},
 		"offreVitrine": {
-			"title": "Showcase Plan — 1 490 € | Djanni Studio",
-			"description": "A real structured site up to 5 pages. Polished animations, intermediate SEO, training included."
+			"title": "Showcase Plan · 1 490 € | Djanni Studio",
+			"description": "A real structured site up to 5 pages for craftspeople and local businesses. Polished animations, intermediate SEO, training and 1 month support included."
 		},
 		"offreSurMesure": {
-			"title": "Custom Plan — from 1 990 € | Djanni Studio",
-			"description": "Online booking, CMS blog, multilingual — a site built exactly for your needs."
+			"title": "Custom Plan · from 1 990 € | Djanni Studio",
+			"description": "Online booking, CMS blog, catalogue, multilingual. A site built exactly for your needs. Custom quote after a 30-minute call."
 		}
 	},
 	"breadcrumb": {
@@ -61,11 +61,12 @@
 		"skipToContent": "Skip to content"
 	},
 	"hero": {
-		"badge": "Djanni Studio — Brittany",
-		"titleStart": "Websites designed by a ",
-		"titleHighlight": "craftsman",
-		"titleEnd": ", for craftspeople.",
-		"subtitle": "Former carpenter, now a web developer based in Dinard — I create websites that speak your language and attract your customers. I mainly work with craftspeople in Brittany: Saint-Malo, Dinard, Côte d'Émeraude and surroundings.",
+		"badge": "Djanni Studio · Brittany",
+		"heading": "Websites for craftspeople and local businesses in Brittany",
+		"taglineStart": "Websites designed by a ",
+		"taglineHighlight": "craftsman",
+		"taglineEnd": ", for craftspeople.",
+		"subtitle": "Former carpenter, now a web developer based in Dinard. I create modern showcase websites for craftspeople and local businesses in Dinard, Saint-Malo, Dinan and the Côte d'Émeraude.",
 		"cta": "Get my free quote",
 		"seeWork": "See my work"
 	},
@@ -89,7 +90,7 @@
 			"title": "What's included in every plan.",
 			"items": [
 				{
-					"title": "No subscription — your site is yours",
+					"title": "No subscription. Your site is yours",
 					"text": "You pay once, the site is yours. No hidden fees, no lock-in. Hosting is free."
 				},
 				{
@@ -101,7 +102,7 @@
 					"text": "50% upfront, 50% on delivery. Simple and transparent."
 				},
 				{
-					"title": "Support included — and after?",
+					"title": "Support included. And after?",
 					"text": "From 30 days to 3 months of support depending on the plan. After that, your site keeps running normally. Need changes? I'm available on request."
 				}
 			]
@@ -111,7 +112,7 @@
 			"title": "This is made for you if...",
 			"items": [
 				{
-					"offer": "Presence — €990",
+					"offer": "Presence · €990",
 					"headline": "You don't have a website at all",
 					"points": [
 						"Plumber, electrician, roofer with no web presence",
@@ -120,7 +121,7 @@
 					]
 				},
 				{
-					"offer": "Showcase — €1,490",
+					"offer": "Showcase · €1,490",
 					"headline": "You have an outdated site or a Yellow Pages listing",
 					"points": [
 						"Hairdresser, craftsperson, shopkeeper with an image to polish",
@@ -129,7 +130,7 @@
 					]
 				},
 				{
-					"offer": "Custom — from €1,990",
+					"offer": "Custom · from €1,990",
 					"headline": "You have specific needs",
 					"points": [
 						"Restaurant with online booking and dynamic menu",
@@ -170,7 +171,7 @@
 				{
 					"label": "Optional monthly maintenance",
 					"price": "€49/mo",
-					"desc": "Updates, backups, fixes — you don't have to worry about anything. No commitment, cancel anytime.",
+					"desc": "Updates, backups, fixes. You don't have to worry about anything. No commitment, cancel anytime.",
 					"hint": "So you never have to worry about the technical side again."
 				},
 				{
@@ -186,10 +187,20 @@
 			"title": "One signed job pays for your website.",
 			"text": "A plumber charging €600 per job only needs 2 new clients per month to recoup their site in under a year. A hairdresser with 3 extra bookings per week covers the investment from the first month.",
 			"stats": [
-				{ "value": "2-3", "label": "new clients are enough to pay for a showcase site" },
-				{ "value": "2 wks", "label": "average time to go live" },
-				{ "value": "€0", "label": "hidden fees" }
-			]
+				{
+					"value": "2-3",
+					"label": "new clients are enough to pay for a showcase site"
+				},
+				{
+					"value": "2 wks",
+					"label": "average time to go live"
+				},
+				{
+					"value": "€0",
+					"label": "hidden fees"
+				}
+			],
+			"seeResults": "See real results"
 		},
 		"pricingFaq": {
 			"tag": "FAQ",
@@ -201,7 +212,7 @@
 				},
 				{
 					"question": "Is there a mandatory monthly subscription?",
-					"answer": "No. You pay once at signing and once on delivery. Hosting on Vercel is free for your usage. The €49 monthly maintenance is 100% optional with no commitment — you can start, pause or cancel it anytime. No hidden fees."
+					"answer": "No. You pay once at signing and once on delivery. Hosting on Vercel is free for your usage. The €49 monthly maintenance is 100% optional with no commitment. You can start, pause or cancel it anytime. No hidden fees."
 				},
 				{
 					"question": "What happens if I want to change the site after delivery?",
@@ -221,7 +232,7 @@
 				},
 				{
 					"question": "How does payment work?",
-					"answer": "50% at signing, 50% on delivery — before going live. You can pay by bank transfer, credit card or cheque. No hidden fees, no imposed subscription."
+					"answer": "50% at signing, 50% on delivery, before going live. You can pay by bank transfer, credit card or cheque. No hidden fees, no imposed subscription."
 				}
 			]
 		},
@@ -263,7 +274,7 @@
 			"priceSuffix": "€",
 			"priceNote": "50% upfront • 50% on delivery",
 			"name": "Showcase",
-			"description": "A real business tool — not just a digital business card.",
+			"description": "A real business tool. Not just a digital business card.",
 			"benefitLine": "To make customers want to visit before they even walk through the door.",
 			"popularNote": "The best fit for 80% of craftspeople and local businesses.",
 			"features": [
@@ -291,7 +302,7 @@
 			"features": [
 				"Up to 8 pages (e.g. Home, Services ×3, Portfolio, Blog, About, Contact)",
 				"Your customers book appointments online",
-				"Built-in blog — publish content yourself",
+				"Built-in blog: publish content yourself",
 				"Your product or service catalogue visible online",
 				"Multilingual to reach more customers",
 				"Advanced SEO (full audit + keyword strategy)",
@@ -305,7 +316,7 @@
 	"pourquoi": {
 		"tag": "Why me",
 		"title": "A dev who speaks your language.",
-		"subtitle": "Not an agency, not a student — a web craftsman who comes from the field.",
+		"subtitle": "Not an agency, not a student. A web craftsman who comes from the field.",
 		"reasons": [
 			{
 				"number": "01",
@@ -325,14 +336,14 @@
 			{
 				"number": "04",
 				"title": "Delivered in 2 to 5 weeks, not 6 months",
-				"text": "A clear timeline, defined milestones. One single point of contact, reachable directly — not an agency with 5 different people."
+				"text": "A clear timeline, defined milestones. One single point of contact, reachable directly. Not an agency with 5 different people."
 			}
 		]
 	},
 	"profileCard": {
-		"name": "Gianni — Djanni Studio",
+		"name": "Gianni · Djanni Studio",
 		"role": "Freelance web developer · Brittany",
-		"quote": "For years, I built roof frames in the Breton rain. I learned that good work doesn't show — it's what holds up over time, without frills. I apply the same logic to the web: solid, clean, and genuinely useful."
+		"quote": "For years, I built roof frames in the Breton rain. I learned that good work doesn't show. It's what holds up over time, without frills. I apply the same logic to the web: solid, clean, and genuinely useful."
 	},
 	"temoignages": {
 		"tag": "Testimonials",
@@ -378,7 +389,7 @@
 			},
 			{
 				"question": "I know nothing about technology, is that a problem?",
-				"answer": "Not at all. That's actually most of my clients. I handle all the technical aspects and explain everything in simple terms. For the texts, we write them together based on your words — no need to be a writer. If you don't have photos, we find a solution: local photographer or professional stock images. You don't need to prepare anything to get started."
+				"answer": "Not at all. That's actually most of my clients. I handle all the technical aspects and explain everything in simple terms. For the texts, we write them together based on your words. No need to be a writer. If you don't have photos, we find a solution: local photographer or professional stock images. You don't need to prepare anything to get started."
 			},
 			{
 				"question": "What happens after the site goes live?",
@@ -386,7 +397,7 @@
 			},
 			{
 				"question": "Why not a WordPress or Wix site?",
-				"answer": "These tools are convenient but limited in performance and customization. I develop custom sites that are faster, better ranked, and truly yours — no forced monthly subscription."
+				"answer": "These tools are convenient but limited in performance and customization. I develop custom sites that are faster, better ranked, and truly yours. No forced monthly subscription."
 			},
 			{
 				"question": "How does payment work?",
@@ -406,14 +417,14 @@
 			},
 			{
 				"question": "What area do you cover?",
-				"answer": "My main area is the Dinard / Saint-Malo / Dinan basin — I physically visit my clients in that zone. Beyond that, I work remotely with craftspeople all over France. Video call, phone, email: we adapt."
+				"answer": "My main area is the Dinard / Saint-Malo / Dinan basin. I physically visit my clients in that zone. Beyond that, I work remotely with craftspeople all over France. Video call, phone, email: we adapt."
 			}
 		]
 	},
 	"contact": {
 		"tag": "Contact",
 		"title": "A project starts with a conversation.",
-		"subtitle": "Tell me what you do, where you are, what you're missing. I'll show you what it could look like. Free initial consultation, no commitment — just like any good craftsman.",
+		"subtitle": "Tell me what you do, where you are, what you're missing. I'll show you what it could look like. Free initial consultation, no commitment. Just like any good craftsman.",
 		"step0Title": "What's your project?",
 		"step1Title": "How can we reach you?",
 		"step2Title": "Tell us about your project",
@@ -465,14 +476,14 @@
 			"subtitle": "An uncommon path, but one that makes all the difference when working with craftspeople.",
 			"steps": [
 				{
-					"year": "2018 — 2023",
+					"year": "2018 - 2023",
 					"title": "Carpenter by trade",
-					"text": "I started on construction sites. Cut, adjust, assemble — building solid things with my hands. That's where I learned rigor, meeting deadlines, and the importance of work well done."
+					"text": "I started on construction sites. Cut, adjust, assemble. Building solid things with my hands. That's where I learned rigor, meeting deadlines, and the importance of work well done."
 				},
 				{
-					"year": "2023 — Today",
+					"year": "2023 - Today",
 					"title": "Web developer",
-					"text": "In parallel, I became passionate about code. React, Next.js, TypeScript — I learned by building real projects, not in a classroom. Same philosophy as carpentry: solid work, custom-made, no shortcuts."
+					"text": "In parallel, I became passionate about code. React, Next.js, TypeScript. I learned by building real projects, not in a classroom. Same philosophy as carpentry: solid work, custom-made, no shortcuts."
 				},
 				{
 					"year": "2026",
@@ -484,7 +495,8 @@
 					"title": "The web accessible to craftspeople",
 					"text": "No jargon, no inflated prices, no endless delays. A beautiful, fast, and effective site, delivered in 2 to 5 weeks depending on the plan. It's that simple."
 				}
-			]
+			],
+			"seeWork": "See the results in real projects"
 		},
 		"values": {
 			"tag": "My values",
@@ -497,7 +509,7 @@
 				},
 				{
 					"title": "Quality",
-					"text": "Every site is custom coded with modern technologies — clean, high-performance code, no generic templates."
+					"text": "Every site is custom coded with modern technologies: clean, high-performance code, no generic templates."
 				},
 				{
 					"title": "Proximity",
@@ -525,9 +537,9 @@
 	"realisationsHome": {
 		"tag": "Portfolio",
 		"title": "What I build.",
-		"subtitle": "Completed sites and concepts — each project is designed for the business behind it.",
+		"subtitle": "Completed sites and concepts. Each project is designed for the business behind it.",
 		"ctaTitle": "Your project here?",
-		"ctaSubtitle": "Let's discuss your idea — first call free."
+		"ctaSubtitle": "Let's discuss your idea. First call free."
 	},
 	"blogPost": {
 		"backLink": "All articles",
@@ -545,7 +557,9 @@
 	"realisationsPage": {
 		"tag": "Portfolio",
 		"title": "Projects that speak for themselves.",
-		"subtitle": "Each site is a story. Discover how I helped craftspeople and local businesses stand out online."
+		"subtitle": "Each site is a story. Discover how I helped craftspeople and local businesses stand out online.",
+		"intro": "Restaurants, hair salons, construction craftspeople, second-hand shops: each project below was custom-built to meet the specific needs of a local business in Brittany. Custom design, optimised performance and local SEO included.",
+		"ctaIntro": "See pricing"
 	},
 	"caseStudy": {
 		"backLink": "Back to portfolio",
@@ -695,7 +709,7 @@
 	"ctaContact": {
 		"tag": "Contact",
 		"title": "A project starts with a conversation.",
-		"subtitle": "Tell me what you do, where you are, what you're missing. I'll show you what it could look like. Free initial consultation, no commitment — just like any good craftsman.",
+		"subtitle": "Tell me what you do, where you are, what you're missing. I'll show you what it could look like. Free initial consultation, no commitment. Just like any good craftsman.",
 		"button": "Start my project",
 		"or": "Or call directly, that works too"
 	},
@@ -713,11 +727,11 @@
 		"paymentTransfer": "Bank transfer",
 		"paymentCard": "Credit card",
 		"paymentCheck": "Cheque",
-		"copyright": "© 2026 Djanni Studio — All rights reserved"
+		"copyright": "© 2026 Djanni Studio · All rights reserved"
 	},
 	"sitemap": {
-		"metaTitle": "Sitemap — Djanni Studio",
-		"metaDescription": "Djanni Studio sitemap — find all pages on the site.",
+		"metaTitle": "Sitemap | Djanni Studio",
+		"metaDescription": "Djanni Studio sitemap. Find all pages on the site.",
 		"title": "Sitemap",
 		"tag": "Navigation",
 		"subtitle": "Browse all pages, portfolio projects, and blog articles in one place.",
@@ -744,9 +758,18 @@
 		"priceNote": "all included",
 		"payment": "€495 on signing · €495 on delivery",
 		"stats": [
-			{ "value": "1", "label": "complete page" },
-			{ "value": "2 wks", "label": "delivery time" },
-			{ "value": "30 d.", "label": "support included" }
+			{
+				"value": "1",
+				"label": "complete page"
+			},
+			{
+				"value": "2 wks",
+				"label": "delivery time"
+			},
+			{
+				"value": "30 d.",
+				"label": "support included"
+			}
 		],
 		"includedLabel": "What's included",
 		"features": [
@@ -760,29 +783,50 @@
 		],
 		"excludedLabel": "Not included in this plan",
 		"excluded": [
-			"Additional pages — available with the Showcase plan",
-			"Online booking — available with the Custom plan",
-			"CMS Blog — available with the Custom plan"
+			"Additional pages (available with the Showcase plan)",
+			"Online booking (available with the Custom plan)",
+			"CMS Blog (available with the Custom plan)"
 		],
-		"cta": "Start my project — 990 €",
+		"cta": "Start my project · 990 €",
 		"compare": "Compare with Showcase →",
 		"trust": "Free first call · Quote within 24h · No commitment",
 		"back": "All plans",
 		"idealLabel": "Who is it for?",
 		"idealItems": [
-			{ "title": "Solo craftsman", "desc": "Carpenter, plumber, electrician…" },
-			{ "title": "Local shop", "desc": "Bakery, florist, hairdresser…" },
-			{ "title": "Restaurant", "desc": "Menu, hours, reservation…" }
+			{
+				"title": "Solo craftsman",
+				"desc": "Carpenter, plumber, electrician…"
+			},
+			{
+				"title": "Local shop",
+				"desc": "Bakery, florist, hairdresser…"
+			},
+			{
+				"title": "Restaurant",
+				"desc": "Menu, hours, reservation…"
+			}
 		],
 		"processLabel": "How it works",
 		"processSteps": [
-			{ "step": "1", "title": "We talk", "desc": "30 min to understand your business" },
-			{ "step": "2", "title": "I build", "desc": "Your site takes shape in 2 weeks" },
-			{ "step": "3", "title": "You're live", "desc": "Deployment + training included" }
+			{
+				"step": "1",
+				"title": "We talk",
+				"desc": "30 min to understand your business"
+			},
+			{
+				"step": "2",
+				"title": "I build",
+				"desc": "Your site takes shape in 2 weeks"
+			},
+			{
+				"step": "3",
+				"title": "You're live",
+				"desc": "Deployment + training included"
+			}
 		],
 		"upsellTitle": "Need more?",
 		"upsellText": "The Showcase plan adds up to 5 pages, a portfolio and polished animations.",
-		"upsellCta": "Discover Showcase — 1 490 €"
+		"upsellCta": "Discover Showcase · 1 490 €"
 	},
 	"offreVitrine": {
 		"tag": "⭐ Most popular",
@@ -813,18 +857,24 @@
 		"supportLabel": "corrections at no extra cost",
 		"paymentLabel": "Payment in 2 installments",
 		"paymentSteps": [
-			{ "pct": "50%", "when": "on signing" },
-			{ "pct": "50%", "when": "on delivery" }
+			{
+				"pct": "50%",
+				"when": "on signing"
+			},
+			{
+				"pct": "50%",
+				"when": "on delivery"
+			}
 		],
 		"ctaTitle": "Ready to launch your project?",
-		"ctaSubtitle": "Free first call — quote within 24h",
+		"ctaSubtitle": "Free first call · quote within 24h",
 		"cta": "Start my project",
 		"back": "All plans"
 	},
 	"offreSurMesure": {
 		"tag": "Custom",
 		"title": "Your project deserves more than a template.",
-		"subtitle": "Online booking, catalogue, blog, multilingual — we build exactly what you need. No compromises, no arbitrary limits.",
+		"subtitle": "Online booking, catalogue, blog, multilingual. We build exactly what you need. No compromises, no arbitrary limits.",
 		"price": "1 990",
 		"priceSuffix": "€",
 		"priceNote": "starting from",
@@ -834,14 +884,23 @@
 			"Everything in the Showcase plan",
 			"Up to 8 pages",
 			"Online booking (Cal.com)",
-			"CMS Blog — manage your articles yourself",
-			"Advanced SEO — audit & targeted keywords",
+			"CMS Blog: manage your articles yourself",
+			"Advanced SEO: audit & targeted keywords",
 			"Follow-up meeting 1 month after delivery"
 		],
 		"statsItems": [
-			{ "val": "8", "label": "max pages" },
-			{ "val": "3–5", "label": "weeks" },
-			{ "val": "3", "label": "months support" }
+			{
+				"val": "8",
+				"label": "max pages"
+			},
+			{
+				"val": "3–5",
+				"label": "weeks"
+			},
+			{
+				"val": "3",
+				"label": "months support"
+			}
 		],
 		"optionsLabel": "Available options",
 		"options": [

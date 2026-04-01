@@ -10,6 +10,12 @@ export function generateMetadata(): Metadata {
 		description:
 			"Politique de confidentialité du site Djanni Studio — Protection de vos données personnelles conformément au RGPD.",
 		alternates: getAlternates("/politique-de-confidentialite"),
+		openGraph: {
+			title: "Politique de confidentialité — Djanni Studio",
+			description:
+				"Politique de confidentialité du site Djanni Studio — Protection de vos données personnelles conformément au RGPD.",
+			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
+		},
 	}
 }
 

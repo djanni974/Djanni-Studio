@@ -74,17 +74,25 @@ export function Hero() {
 				</span>
 
 				<h1
-					className="mb-8 max-w-[900px] animate-hero-fade-up font-heading text-[clamp(44px,7vw,96px)] font-extrabold leading-none tracking-tight"
+					className="mb-6 max-w-[700px] animate-hero-fade-up text-sm font-medium uppercase tracking-widest text-djanni-gray-light"
 					style={{ animationDelay: "200ms" }}
 				>
-					{t("titleStart")}
-					<em className="not-italic text-djanni-orange">{t("titleHighlight")}</em>
-					{t("titleEnd")}
+					{t("heading")}
 				</h1>
 
 				<p
+					className="mb-8 max-w-[900px] animate-hero-fade-up font-heading text-[clamp(44px,7vw,96px)] font-extrabold leading-none tracking-tight"
+					aria-hidden="true"
+					style={{ animationDelay: "250ms" }}
+				>
+					{t("taglineStart")}
+					<em className="not-italic text-djanni-orange">{t("taglineHighlight")}</em>
+					{t("taglineEnd")}
+				</p>
+
+				<p
 					className="mb-12 max-w-[480px] animate-hero-fade-up text-lg font-light leading-relaxed text-djanni-gray-light"
-					style={{ animationDelay: "300ms" }}
+					style={{ animationDelay: "350ms" }}
 				>
 					{t("subtitle")}
 				</p>

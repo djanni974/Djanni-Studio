@@ -18,6 +18,11 @@ export async function generateMetadata({
 		title: t("metaTitle"),
 		description: t("metaDescription"),
 		alternates: getAlternates("/plan-du-site"),
+		openGraph: {
+			title: t("metaTitle"),
+			description: t("metaDescription"),
+			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
+		},
 	}
 }
 
