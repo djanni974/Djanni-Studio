@@ -11,6 +11,12 @@ export function generateMetadata(): Metadata {
 		description:
 			"Mentions légales du site Djanni Studio — Création de sites web pour artisans et commerçants en Bretagne.",
 		alternates: getAlternates("/mentions-legales"),
+		openGraph: {
+			title: "Mentions légales — Djanni Studio",
+			description:
+				"Mentions légales du site Djanni Studio — Création de sites web pour artisans et commerçants en Bretagne.",
+			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
+		},
 	}
 }
 

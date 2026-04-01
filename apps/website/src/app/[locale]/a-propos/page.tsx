@@ -31,6 +31,7 @@ export async function generateMetadata({
 		openGraph: {
 			title: t("title"),
 			description: t("description"),
+			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
 		},
 	}
 }

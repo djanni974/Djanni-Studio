@@ -10,6 +10,12 @@ export function generateMetadata(): Metadata {
 		description:
 			"CGV de Djanni Studio — Conditions applicables aux prestations de création de sites web.",
 		alternates: getAlternates("/cgv"),
+		openGraph: {
+			title: "Conditions Générales de Vente — Djanni Studio",
+			description:
+				"CGV de Djanni Studio — Conditions applicables aux prestations de création de sites web.",
+			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
+		},
 	}
 }
 

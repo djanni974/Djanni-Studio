@@ -34,6 +34,18 @@ export function RealisationsListContent() {
 					/>
 				</AnimatedSection>
 
+				<AnimatedSection delay={0.1}>
+					<p className="mx-auto mt-8 max-w-[700px] text-center text-[15px] leading-relaxed text-djanni-gray-light">
+						{t("intro")}{" "}
+						<Link
+							href="/offres"
+							className="font-medium text-djanni-orange transition-colors hover:text-djanni-orange-light"
+						>
+							{t("ctaIntro")}
+						</Link>
+					</p>
+				</AnimatedSection>
+
 				<StaggerContainer className="mt-16 grid gap-6 md:grid-cols-2">
 					{PROJECTS.map((project) => (
 						<StaggerItem key={project.slug}>

@@ -203,7 +203,7 @@ Imaginons un boulanger à Saint-Brieuc avec 12 plugins WordPress actifs sur son 
 
 ## Ce qu'on fait différemment chez Djanni Studio
 
-Chez Djanni Studio, la performance n'est pas un bonus — c'est le minimum. Chaque site est conçu pour charger en **moins de 1,2 seconde** sur mobile.
+Chez Djanni Studio, la performance n'est pas un bonus, c'est le minimum. Chaque site est conçu pour charger en **moins de 1,2 seconde** sur mobile. [Voir des exemples concrets](/realisations).
 
 :::brief
 - **Next.js** génère des pages statiques ultra-rapides, sans calcul côté serveur à chaque visite
@@ -241,7 +241,11 @@ Un site lent, ce n'est pas juste un détail technique agaçant. C'est une vitrin
 - Un site performant se charge en moins de 1,2 seconde sur mobile
 :::
 
-**Vous voulez savoir ce que vaut vraiment votre site ?** Djanni Studio vous propose un audit de performance gratuit et sans engagement. On vous dit exactement où vous en êtes — et comment améliorer les choses.`,
+**Vous voulez savoir ce que vaut vraiment votre site ?** Djanni Studio vous propose un audit de performance gratuit et sans engagement. On vous dit exactement où vous en êtes et comment améliorer les choses.
+
+:::cta
+[Demander un audit gratuit](/demande-projet) · [Voir nos réalisations](/realisations)
+:::`,
 	},
 	{
 		slug: "5-raisons-artisan-site-web-2026",
@@ -327,7 +331,11 @@ Aujourd'hui, ne pas avoir de site web, c'est **laisser des clients à vos concur
 - Budget : entre 990€ et 2 000€ pour un résultat professionnel
 :::
 
-**Vous êtes artisan ou commerçant en Bretagne ?** Premier échange gratuit et sans engagement pour voir ce qu'un site peut faire pour votre activité.`,
+**Vous êtes artisan ou commerçant en Bretagne ?** Premier échange gratuit et sans engagement pour voir ce qu'un site peut faire pour votre activité.
+
+:::cta
+[Voir les offres](/offres) · [Demander un devis gratuit](/demande-projet)
+:::`,
 	},
 	{
 		slug: "combien-coute-site-vitrine-bretagne",
@@ -361,7 +369,7 @@ Un développeur débutant ou un étudiant peut créer un site à petit prix. Att
 
 C'est le juste milieu. Un freelance expérimenté vous livre un site **sur mesure, performant et optimisé SEO**. Le prix inclut le design, le développement, la mise en ligne et souvent une formation.
 
-Chez Djanni Studio, les tarifs commencent à **990€** pour l'offre Présence et **1 990€** pour l'offre Sur mesure avec catalogue et animations.
+Chez Djanni Studio, les tarifs commencent à **990€** pour [l'offre Présence](/offres) et **1 990€** pour l'offre Sur mesure avec catalogue et animations.
 
 ### Les agences (3 000€ - 10 000€+)
 
@@ -409,7 +417,11 @@ Imaginons un artisan charpentier à Quimper qui signe avec une agence à 4 500�
 
 Pour un artisan ou commerçant en Bretagne, un **budget entre 990€ et 2 000€** vous permet d'avoir un site professionnel qui se rentabilise rapidement. L'important est de choisir un prestataire qui comprend votre métier et qui livre dans les délais.
 
-**Besoin d'un devis transparent ?** Chez Djanni Studio, le prix annoncé est le prix final. Pas de frais cachés, pas d'abonnement imposé. Premier échange gratuit.`,
+**Besoin d'un devis transparent ?** Chez Djanni Studio, le prix annoncé est le prix final. Pas de frais cachés, pas d'abonnement imposé. Premier échange gratuit.
+
+:::cta
+[Voir les offres détaillées](/offres) · [Demander un devis gratuit](/demande-projet)
+:::`,
 	},
 	{
 		slug: "site-web-vs-reseaux-sociaux-artisan",
@@ -488,7 +500,11 @@ Les réseaux sociaux ne remplacent pas un site web — ils le complètent. Pour 
 - La stratégie gagnante : un site web solide + les réseaux pour l'animer
 :::
 
-**Prêt à créer votre site web ?** Djanni Studio accompagne les artisans bretons dans leur transition digitale. Premier échange gratuit et sans engagement.`,
+**Prêt à créer votre site web ?** Djanni Studio accompagne les artisans bretons dans leur transition digitale. Premier échange gratuit et sans engagement.
+
+:::cta
+[Découvrir les offres](/offres) · [Démarrer mon projet](/demande-projet)
+:::`,
 	},
 ]
 

@@ -106,6 +106,18 @@ export function AboutContent() {
 							</StaggerItem>
 						))}
 					</StaggerContainer>
+
+					<AnimatedSection delay={0.2}>
+						<div className="mt-12 text-center">
+							<Link
+								href="/realisations"
+								className="inline-flex items-center gap-2 text-sm font-medium text-djanni-orange transition-colors hover:text-djanni-orange-light"
+							>
+								{t("journey.seeWork")}
+								<IconArrowRight size={14} />
+							</Link>
+						</div>
+					</AnimatedSection>
 				</div>
 			</section>
 

@@ -17,6 +17,11 @@ export async function generateMetadata({
 		title: t("title"),
 		description: t("description"),
 		robots: { index: false, follow: false },
+		openGraph: {
+			title: t("title"),
+			description: t("description"),
+			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
+		},
 	}
 }
 
