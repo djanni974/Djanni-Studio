@@ -143,7 +143,8 @@
 						"Artisan menuisier qui exporte et a besoin d'un site bilingue FR/EN avec portfolio complet"
 					]
 				}
-			]
+			],
+			"seeExamples": "Vous vous reconnaissez ? Voir un exemple de site similaire"
 		},
 		"comparison": {
 			"tag": "Comparatif",
@@ -215,7 +216,7 @@
 					"text": "2 nouvelles clientes par semaine à 45 € la prestation = 4 680 € de CA annuel en plus, soit 3× le prix du site Vitrine."
 				}
 			],
-			"seeResults": "Voir les résultats concrets"
+			"seeResults": "Voir des exemples de sites pour votre métier"
 		},
 		"pricingFaq": {
 			"tag": "Questions fréquentes",

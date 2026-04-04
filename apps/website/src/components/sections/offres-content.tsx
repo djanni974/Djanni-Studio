@@ -178,6 +178,16 @@ export function OffresContent() {
 							)
 						})}
 					</StaggerContainer>
+
+					<AnimatedSection delay={0.2} className="mt-8 text-center">
+						<Link
+							href="/realisations"
+							className="inline-flex items-center gap-2 text-sm font-medium text-djanni-orange transition-colors hover:text-djanni-orange-light"
+						>
+							{t("personas.seeExamples")}
+							<IconArrowRight size={14} />
+						</Link>
+					</AnimatedSection>
 				</div>
 			</section>
 
@@ -335,7 +345,7 @@ export function OffresContent() {
 						<div className="mt-10 text-center">
 							<Link
 								href="/realisations"
-								className="inline-flex items-center gap-2 text-sm font-medium text-djanni-orange transition-colors hover:text-djanni-orange-light"
+								className="inline-flex items-center gap-2 rounded-lg border border-djanni-orange px-6 py-3 text-sm font-medium text-djanni-orange transition-colors hover:bg-djanni-orange hover:text-white"
 							>
 								{t("roi.seeResults")}
 								<IconArrowRight size={14} />
