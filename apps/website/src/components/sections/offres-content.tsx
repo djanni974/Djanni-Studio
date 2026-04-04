@@ -130,6 +130,16 @@ export function OffresContent() {
 				</div>
 			</section>
 
+			{/* Upgrade callout */}
+			<div className="bg-surface-b px-5 pb-12 md:px-12">
+				<AnimatedSection>
+					<div className="mx-auto max-w-[700px] rounded-2xl border border-djanni-orange/20 bg-djanni-orange/5 px-8 py-6 text-center">
+						<p className="mb-2 font-heading text-lg font-semibold">{t("upgrade.title")}</p>
+						<p className="text-sm leading-relaxed text-djanni-gray-light">{t("upgrade.text")}</p>
+					</div>
+				</AnimatedSection>
+			</div>
+
 			{/* Personas */}
 			<section className="bg-surface-a px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">

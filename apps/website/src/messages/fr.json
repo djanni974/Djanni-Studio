@@ -108,6 +108,10 @@
 				}
 			]
 		},
+		"upgrade": {
+			"title": "Vous hésitez entre deux offres ?",
+			"text": "Commencez par Présence, et évoluez quand vous êtes prêt. Si vous passez à Vitrine ou Sur mesure, le montant déjà payé est déduit du nouveau devis. Zéro perte, zéro pression."
+		},
 		"personas": {
 			"tag": "Pour qui ?",
 			"title": "C'est fait pour vous si...",

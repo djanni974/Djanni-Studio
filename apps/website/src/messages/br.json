@@ -108,6 +108,10 @@
 				}
 			]
 		},
+		"upgrade": {
+			"title": "Hep gouiet peseurt formulenn dibab ?",
+			"text": "Krogit gant Prezañs, ha kreskit pa viot prest. Ma tremenit da Vitrine pe War-bouez, ar sammad paeet dija a zo dilamet eus an devis nevez. Koll ebet, broudañ ebet."
+		},
 		"personas": {
 			"tag": "Evit piv ?",
 			"title": "Graet eo evidoc'h ma...",

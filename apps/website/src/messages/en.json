@@ -108,6 +108,10 @@
 				}
 			]
 		},
+		"upgrade": {
+			"title": "Can't decide between two plans?",
+			"text": "Start with Presence and upgrade when you're ready. If you move to Showcase or Custom, the amount already paid is deducted from the new quote. Zero loss, zero pressure."
+		},
 		"personas": {
 			"tag": "Who is it for?",
 			"title": "This is made for you if...",
