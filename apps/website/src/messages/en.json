@@ -201,6 +201,20 @@
 					"label": "hidden fees"
 				}
 			],
+			"scenarios": [
+				{
+					"trade": "Roofer",
+					"text": "Average job at €3,500 → just one new client per quarter is enough to pay for the site in the first year."
+				},
+				{
+					"trade": "Restaurant",
+					"text": "Average ticket at €25 → 5 extra covers per week thanks to online visibility = €6,500 extra revenue per year."
+				},
+				{
+					"trade": "Beautician",
+					"text": "2 new clients per week at €45 per session = €4,680 extra annual revenue, that's 3× the price of a Showcase site."
+				}
+			],
 			"seeResults": "See real results"
 		},
 		"pricingFaq": {

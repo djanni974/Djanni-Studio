@@ -201,6 +201,20 @@
 					"label": "fraoù kuzh"
 				}
 			],
+			"scenarios": [
+				{
+					"trade": "Toer",
+					"text": "Ur c'hantier keitat da 3 500 € → ur c'hustumer nevez hepken bep trimiziad a zo trawalc'h evit paeañ al lec'hienn adalek ar bloaz kentañ."
+				},
+				{
+					"trade": "Preti",
+					"text": "Paner keitat da 25 € → 5 lec'h ouzhpenn bep sizhun dre ar gweluster en linenn = 6 500 € a CA ouzhpenn bep bloaz."
+				},
+				{
+					"trade": "Kaerderc'herez",
+					"text": "2 c'hustumerez nevez bep sizhun da 45 € ar prestadenn = 4 680 € a CA bloaziek ouzhpenn, da lâret eo 3× priz al lec'hienn Vitrine."
+				}
+			],
 			"seeResults": "Gwelet an disoc'hoù gwir"
 		},
 		"pricingFaq": {

@@ -295,7 +295,7 @@ export function OffresContent() {
 
 			{/* ROI */}
 			<section className="bg-surface-b px-5 py-24 md:px-12">
-				<div className="mx-auto max-w-[800px] text-center">
+				<div className="mx-auto max-w-[1100px] text-center">
 					<AnimatedSection>
 						<SectionHeader
 							tag={t("roi.tag")}
@@ -313,6 +313,19 @@ export function OffresContent() {
 										{item.value}
 									</p>
 									<p className="text-sm text-djanni-gray-light">{item.label}</p>
+								</div>
+							</StaggerItem>
+						))}
+					</StaggerContainer>
+
+					<StaggerContainer className="mt-10 grid gap-4 sm:grid-cols-3">
+						{(t.raw("roi.scenarios") as { trade: string; text: string }[]).map((s, i) => (
+							<StaggerItem key={i}>
+								<div className="rounded-xl border border-border bg-surface-a p-5 text-left">
+									<p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-djanni-orange">
+										{s.trade}
+									</p>
+									<p className="text-sm leading-relaxed text-djanni-gray-light">{s.text}</p>
 								</div>
 							</StaggerItem>
 						))}

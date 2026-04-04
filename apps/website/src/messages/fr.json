@@ -201,6 +201,20 @@
 					"label": "de frais cachés"
 				}
 			],
+			"scenarios": [
+				{
+					"trade": "Couvreur",
+					"text": "Un chantier moyen à 3 500 € → un seul nouveau client par trimestre suffit à rentabiliser le site dès la première année."
+				},
+				{
+					"trade": "Restaurant",
+					"text": "Panier moyen à 25 € → 5 couverts supplémentaires par semaine grâce à la visibilité en ligne = 6 500 € de CA en plus par an."
+				},
+				{
+					"trade": "Esthéticienne",
+					"text": "2 nouvelles clientes par semaine à 45 € la prestation = 4 680 € de CA annuel en plus, soit 3× le prix du site Vitrine."
+				}
+			],
 			"seeResults": "Voir les résultats concrets"
 		},
 		"pricingFaq": {
