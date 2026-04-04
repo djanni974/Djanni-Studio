@@ -235,11 +235,11 @@
 				},
 				{
 					"question": "I don't have texts or photos. Can you help?",
-					"answer": "Yes. We write the texts together from a 30-minute conversation. If you don't have photos, we find a solution: professional stock images or local photographer partner (+€200)."
+					"answer": "We write the texts together in a 30-minute chat. No photos? Professional stock images included, or local photographer partner (+€200)."
 				},
 				{
 					"question": "What's the timeline if I don't provide content quickly?",
-					"answer": "The 2-3 week timeline starts from when I have all the elements (texts, photos, info). If you struggle to gather content, the writing option at +€150 solves that."
+					"answer": "The timeline starts when I have your materials (texts, photos, info). Struggling to gather everything? The writing option at +€150 solves that."
 				},
 				{
 					"question": "Is there a guarantee on deadlines?",
@@ -252,6 +252,10 @@
 				{
 					"question": "Who pays for hosting and the domain name?",
 					"answer": "Hosting is included via Vercel: free for your usage, nothing to pay. The domain name (yourname.fr) costs about €10 to €15 per year, registered in your name with a registrar like OVH or Infomaniak. You own it. I handle the setup, you receive the access credentials."
+				},
+				{
+					"question": "I know nothing about technology. Is that a problem?",
+					"answer": "Not at all — that's the case for most of my clients. I handle all the technical side and explain everything simply. For the texts, we write them together using your own words."
 				}
 			]
 		},

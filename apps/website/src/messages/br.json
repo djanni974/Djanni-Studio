@@ -235,11 +235,11 @@
 				},
 				{
 					"question": "N'am eus ket testennoù na skeudennoù. Gallout a rit sikour ?",
-					"answer": "Ya. Skrivañ a reomp an testennoù asambles diwar un eskemm 30 munut. Ma n'ho peus ket skeudennoù, kavout a reomp un diskoulm : stal skeudennoù a-vicher pe luc'hskeudenner lec'hel (+200€)."
+					"answer": "Skrivañ a reomp an testennoù asambles e 30 munut eskemm. Skeudennoù ebet ? Stal skeudennoù a-vicher endalc'het, pe luc'hskeudenner lec'hel (+200 €)."
 				},
 				{
 					"question": "Pegement a amzer ma ne bourchazan ket an danvezioù buan ?",
-					"answer": "An amzer meneget a grog adalek ma'm eus an holl elfennoù (testennoù, skeudennoù, titouroù). Ma'z eo diaes deoc'h dastum an danvezioù, an dibarzh skrivañ da +150€ a ziskoulm kement-se."
+					"answer": "An amzer a grog pa'm eus ho elfennoù (testennoù, skeudennoù, titouroù). Diaes deoc'h dastum kement-se ? An dibarzh skrivañ da +150 € a ziskoulm ar gudenn."
 				},
 				{
 					"question": "Ha bez' ez eus ur garantez war an amzerioù ?",
@@ -252,6 +252,10 @@
 				{
 					"question": "Piv a bae an herbergiñ hag an anv domani ?",
 					"answer": "An herbergiñ a zo endalc'het dre Vercel : digoust evit ho implij, netra da baeañ. An anv domani (hoc'hanv.fr) a goust war-dro 10 da 15 € bep bloaz, enrollet en hoc'h anv e-barzh ur registrar evel OVH pe Infomaniak. Perc'henn anezhañ oc'h. Ober a ran ar c'hefluniadur, resevout a rit an titouroù moned."
+				},
+				{
+					"question": "N'ouzon netra eus an teknologiezh, hag un dra-se eo ?",
+					"answer": "N'eo ket tamm ebet — kement-se eo evit al lodenn vrasañ eus ma c'hustumerien. Merañ a ran an holl deknik ha displegañ a ran pep tra eeun. Evit an testennoù, skrivañ a reomp asambles diwar ho komzoù."
 				}
 			]
 		},

@@ -235,11 +235,11 @@
 				},
 				{
 					"question": "Je n'ai pas de textes ni de photos. Vous pouvez m'aider ?",
-					"answer": "Oui. On rédige les textes ensemble à partir d'un échange de 30 minutes. Si vous n'avez pas de photos, on trouve une solution : banque d'images professionnelle ou photographe local partenaire (+200€)."
+					"answer": "On écrit les textes ensemble en 30 min d'échange. Pas de photos ? Banque d'images pro incluse, ou photographe local partenaire (+200 €)."
 				},
 				{
 					"question": "Quel est le délai si je ne fournis pas les contenus rapidement ?",
-					"answer": "Le délai indiqué commence à courir à partir du moment où j'ai tous les éléments (textes, photos, infos). Si vous avez du mal à rassembler les contenus, l'option rédaction à +150€ résout ça."
+					"answer": "Le délai démarre quand j'ai vos éléments (textes, photos, infos). Du mal à rassembler tout ça ? L'option rédaction à +150 € règle le problème."
 				},
 				{
 					"question": "Y a-t-il une garantie sur les délais ?",
@@ -252,6 +252,10 @@
 				{
 					"question": "Qui paie l'hébergement et le nom de domaine ?",
 					"answer": "L'hébergement est inclus via Vercel : gratuit pour votre usage, rien à payer. Le nom de domaine (votrenom.fr) coûte environ 10 à 15 € par an, enregistré à votre nom chez un registrar comme OVH ou Infomaniak. Vous en êtes propriétaire. Je m'occupe de la configuration, vous recevez les accès."
+				},
+				{
+					"question": "Je n'y connais rien en technologie, c'est un problème ?",
+					"answer": "Pas du tout, c'est le cas de la plupart de mes clients. Je gère toute la technique et j'explique tout simplement. Pour les textes, on les écrit ensemble à partir de vos mots."
 				}
 			]
 		},
