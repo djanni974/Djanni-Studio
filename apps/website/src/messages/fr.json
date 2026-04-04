@@ -114,29 +114,29 @@
 			"items": [
 				{
 					"offer": "Présence · 990€",
-					"headline": "Vous n'avez pas de site du tout",
+					"headline": "Vous n'avez aucun site web",
 					"points": [
-						"Plombier, électricien, couvreur sans présence web",
-						"Vous perdez des clients qui vous cherchent sur Google",
-						"Vous voulez être visible rapidement, sans complication"
+						"Plombier à son compte depuis 2 ans, zéro présence en ligne — les clients le trouvent que par le bouche-à-oreille",
+						"Électricien qui a juste une fiche PagesJaunes avec un numéro et rien d'autre",
+						"Maçon qui perd des chantiers parce que les particuliers veulent « voir un site » avant d'appeler"
 					]
 				},
 				{
 					"offer": "Vitrine · 1 490€",
-					"headline": "Vous avez un vieux site ou une fiche PagesJaunes",
+					"headline": "Vous avez un site vieillissant ou une fiche PagesJaunes",
 					"points": [
-						"Coiffeur, artisan, commerçant avec une image à soigner",
-						"Vous voulez montrer vos réalisations et inspirer confiance",
-						"Vous voulez que vos clients puissent vous trouver et vous contacter facilement"
+						"Coiffeuse avec un Instagram actif mais pas de vrai site pour rassurer les nouvelles clientes",
+						"Boulanger-pâtissier qui veut montrer ses créations et afficher ses horaires proprement",
+						"Couvreur qui fait du beau boulot mais dont le site Wix de 2018 fait fuir les prospects"
 					]
 				},
 				{
 					"offer": "Sur mesure · dès 1 990€",
 					"headline": "Vous avez des besoins spécifiques",
 					"points": [
-						"Restaurant avec réservation en ligne et menu dynamique",
-						"Salon avec prise de RDV intégrée",
-						"Commerce avec catalogue ou boutique en ligne"
+						"Restaurant qui veut sa carte en ligne actualisable + réservation directe sans passer par une plateforme",
+						"Salon d'esthétique avec prise de RDV intégrée et catalogue de prestations",
+						"Artisan menuisier qui exporte et a besoin d'un site bilingue FR/EN avec portfolio complet"
 					]
 				}
 			]

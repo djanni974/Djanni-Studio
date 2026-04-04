@@ -114,29 +114,29 @@
 			"items": [
 				{
 					"offer": "Presence · €990",
-					"headline": "You don't have a website at all",
+					"headline": "You have no website at all",
 					"points": [
-						"Plumber, electrician, roofer with no web presence",
-						"You're losing clients who search for you on Google",
-						"You want to be visible quickly, without hassle"
+						"Self-employed plumber for 2 years, zero online presence — clients only find him through word of mouth",
+						"Electrician with just a Yellow Pages listing showing a phone number and nothing else",
+						"Builder who loses jobs because homeowners want to 'see a website' before calling"
 					]
 				},
 				{
 					"offer": "Showcase · €1,490",
-					"headline": "You have an outdated site or a Yellow Pages listing",
+					"headline": "You have an ageing site or just a directory listing",
 					"points": [
-						"Hairdresser, craftsperson, shopkeeper with an image to polish",
-						"You want to show your work and inspire trust",
-						"You want customers to find and contact you easily"
+						"Hairdresser with an active Instagram but no real website to reassure new clients",
+						"Baker who wants to showcase creations and display opening hours properly",
+						"Roofer who does great work but whose 2018 Wix site is scaring off prospects"
 					]
 				},
 				{
 					"offer": "Custom · from €1,990",
 					"headline": "You have specific needs",
 					"points": [
-						"Restaurant with online booking and dynamic menu",
-						"Salon with integrated appointment scheduling",
-						"Shop with product catalog or online store"
+						"Restaurant wanting an updatable online menu + direct booking without a third-party platform",
+						"Beauty salon with integrated appointment booking and service catalogue",
+						"Carpenter who exports and needs a bilingual FR/EN site with a full portfolio"
 					]
 				}
 			]
