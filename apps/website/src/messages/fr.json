@@ -248,6 +248,10 @@
 				{
 					"question": "Comment se passe le paiement ?",
 					"answer": "50% à la signature du devis, 50% à la livraison, avant la mise en ligne. Vous payez par virement bancaire, carte bancaire ou chèque. Aucun frais caché, aucun abonnement imposé."
+				},
+				{
+					"question": "Qui paie l'hébergement et le nom de domaine ?",
+					"answer": "L'hébergement est inclus via Vercel : gratuit pour votre usage, rien à payer. Le nom de domaine (votrenom.fr) coûte environ 10 à 15 € par an, enregistré à votre nom chez un registrar comme OVH ou Infomaniak. Vous en êtes propriétaire. Je m'occupe de la configuration, vous recevez les accès."
 				}
 			]
 		},

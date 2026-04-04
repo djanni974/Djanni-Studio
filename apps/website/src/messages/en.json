@@ -248,6 +248,10 @@
 				{
 					"question": "How does payment work?",
 					"answer": "50% at signing, 50% on delivery, before going live. You can pay by bank transfer, credit card or cheque. No hidden fees, no imposed subscription."
+				},
+				{
+					"question": "Who pays for hosting and the domain name?",
+					"answer": "Hosting is included via Vercel: free for your usage, nothing to pay. The domain name (yourname.fr) costs about €10 to €15 per year, registered in your name with a registrar like OVH or Infomaniak. You own it. I handle the setup, you receive the access credentials."
 				}
 			]
 		},

@@ -248,6 +248,10 @@
 				{
 					"question": "Penaos e c'hoarvez ar paeadur ?",
 					"answer": "50% d'ar sinadur, 50% d'al livradur, a-raok mont en linenn. Gallout a rit paeañ dre dreuzkas bankañ, kartenn bankañ pe chek. Fraoù kuzh ebet, abonnañ ebet rediet."
+				},
+				{
+					"question": "Piv a bae an herbergiñ hag an anv domani ?",
+					"answer": "An herbergiñ a zo endalc'het dre Vercel : digoust evit ho implij, netra da baeañ. An anv domani (hoc'hanv.fr) a goust war-dro 10 da 15 € bep bloaz, enrollet en hoc'h anv e-barzh ur registrar evel OVH pe Infomaniak. Perc'henn anezhañ oc'h. Ober a ran ar c'hefluniadur, resevout a rit an titouroù moned."
 				}
 			]
 		},
