@@ -88,6 +88,7 @@
 		"guarantees": {
 			"tag": "Engagements",
 			"title": "Ce qui est inclus dans chaque offre.",
+			"subtitle": "Quel que soit l'offre choisie : pas d'abonnement, des délais tenus, et vous gardez le contrôle.",
 			"items": [
 				{
 					"title": "Pas d'abonnement : votre site vous appartient",
@@ -107,38 +108,43 @@
 				}
 			]
 		},
+		"upgrade": {
+			"title": "Vous hésitez entre deux offres ?",
+			"text": "Commencez par Présence, et évoluez quand vous êtes prêt. Si vous passez à Vitrine ou Sur mesure, le montant déjà payé est déduit du nouveau devis. Zéro perte, zéro pression."
+		},
 		"personas": {
 			"tag": "Pour qui ?",
 			"title": "C'est fait pour vous si...",
 			"items": [
 				{
 					"offer": "Présence · 990€",
-					"headline": "Vous n'avez pas de site du tout",
+					"headline": "Vous n'avez aucun site web",
 					"points": [
-						"Plombier, électricien, couvreur sans présence web",
-						"Vous perdez des clients qui vous cherchent sur Google",
-						"Vous voulez être visible rapidement, sans complication"
+						"Plombier à son compte depuis 2 ans, zéro présence en ligne — les clients le trouvent que par le bouche-à-oreille",
+						"Électricien qui a juste une fiche PagesJaunes avec un numéro et rien d'autre",
+						"Maçon qui perd des chantiers parce que les particuliers veulent « voir un site » avant d'appeler"
 					]
 				},
 				{
 					"offer": "Vitrine · 1 490€",
-					"headline": "Vous avez un vieux site ou une fiche PagesJaunes",
+					"headline": "Vous avez un site vieillissant ou une fiche PagesJaunes",
 					"points": [
-						"Coiffeur, artisan, commerçant avec une image à soigner",
-						"Vous voulez montrer vos réalisations et inspirer confiance",
-						"Vous voulez que vos clients puissent vous trouver et vous contacter facilement"
+						"Coiffeuse avec un Instagram actif mais pas de vrai site pour rassurer les nouvelles clientes",
+						"Boulanger-pâtissier qui veut montrer ses créations et afficher ses horaires proprement",
+						"Couvreur qui fait du beau boulot mais dont le site Wix de 2018 fait fuir les prospects"
 					]
 				},
 				{
 					"offer": "Sur mesure · dès 1 990€",
 					"headline": "Vous avez des besoins spécifiques",
 					"points": [
-						"Restaurant avec réservation en ligne et menu dynamique",
-						"Salon avec prise de RDV intégrée",
-						"Commerce avec catalogue ou boutique en ligne"
+						"Restaurant qui veut sa carte en ligne actualisable + réservation directe sans passer par une plateforme",
+						"Salon d'esthétique avec prise de RDV intégrée et catalogue de prestations",
+						"Artisan menuisier qui exporte et a besoin d'un site bilingue FR/EN avec portfolio complet"
 					]
 				}
-			]
+			],
+			"seeExamples": "Vous vous reconnaissez ? Voir un exemple de site similaire"
 		},
 		"comparison": {
 			"tag": "Comparatif",
@@ -159,26 +165,22 @@
 				{
 					"label": "Rédaction des textes",
 					"price": "+150€",
-					"desc": "Je rédige le contenu de votre site à partir d'un échange de 30 minutes.",
-					"hint": "Pour ne pas bloquer 2 semaines à chercher vos mots."
+					"desc": "On écrit tout pour vous à partir d'un simple échange de 30 min."
 				},
 				{
-					"label": "Configuration Google Business",
+					"label": "Fiche Google Business",
 					"price": "+100€",
-					"desc": "Fiche Google optimisée : photos, horaires, description, catégories.",
-					"hint": "Pour ressortir dans Google Maps quand on tape \"coiffeur Dinard\"."
+					"desc": "Vous apparaissez sur Google Maps quand on cherche votre métier dans votre ville."
 				},
 				{
-					"label": "Maintenance mensuelle optionnelle",
+					"label": "Maintenance mensuelle",
 					"price": "49€/mois",
-					"desc": "Mises à jour, sauvegardes, corrections. Vous ne vous occupez de rien. Sans engagement, résiliable à tout moment.",
-					"hint": "Pour ne plus jamais vous soucier de la technique."
+					"desc": "Mises à jour, sauvegardes, dépannage. Sans engagement, résiliable à tout moment."
 				},
 				{
 					"label": "Page supplémentaire",
 					"price": "+150€/page",
-					"desc": "Ajout d'une page au-delà du forfait (galerie, page mariage, etc.).",
-					"hint": "Pour les projets qui méritent plus d'espace."
+					"desc": "Pour les projets qui ont besoin de plus d'espace."
 				}
 			]
 		},
@@ -200,7 +202,21 @@
 					"label": "de frais cachés"
 				}
 			],
-			"seeResults": "Voir les résultats concrets"
+			"scenarios": [
+				{
+					"trade": "Couvreur",
+					"text": "Un chantier moyen à 3 500 € → un seul nouveau client par trimestre suffit à rentabiliser le site dès la première année."
+				},
+				{
+					"trade": "Restaurant",
+					"text": "Panier moyen à 25 € → 5 couverts supplémentaires par semaine grâce à la visibilité en ligne = 6 500 € de CA en plus par an."
+				},
+				{
+					"trade": "Esthéticienne",
+					"text": "2 nouvelles clientes par semaine à 45 € la prestation = 4 680 € de CA annuel en plus, soit 3× le prix du site Vitrine."
+				}
+			],
+			"seeResults": "Voir des exemples de sites pour votre métier"
 		},
 		"pricingFaq": {
 			"tag": "Questions fréquentes",
@@ -220,11 +236,11 @@
 				},
 				{
 					"question": "Je n'ai pas de textes ni de photos. Vous pouvez m'aider ?",
-					"answer": "Oui. On rédige les textes ensemble à partir d'un échange de 30 minutes. Si vous n'avez pas de photos, on trouve une solution : banque d'images professionnelle ou photographe local partenaire (+200€)."
+					"answer": "On écrit les textes ensemble en 30 min d'échange. Pas de photos ? Banque d'images pro incluse, ou photographe local partenaire (+200 €)."
 				},
 				{
 					"question": "Quel est le délai si je ne fournis pas les contenus rapidement ?",
-					"answer": "Le délai indiqué commence à courir à partir du moment où j'ai tous les éléments (textes, photos, infos). Si vous avez du mal à rassembler les contenus, l'option rédaction à +150€ résout ça."
+					"answer": "Le délai démarre quand j'ai vos éléments (textes, photos, infos). Du mal à rassembler tout ça ? L'option rédaction à +150 € règle le problème."
 				},
 				{
 					"question": "Y a-t-il une garantie sur les délais ?",
@@ -233,14 +249,22 @@
 				{
 					"question": "Comment se passe le paiement ?",
 					"answer": "50% à la signature du devis, 50% à la livraison, avant la mise en ligne. Vous payez par virement bancaire, carte bancaire ou chèque. Aucun frais caché, aucun abonnement imposé."
+				},
+				{
+					"question": "Qui paie l'hébergement et le nom de domaine ?",
+					"answer": "L'hébergement est inclus via Vercel : gratuit pour votre usage, rien à payer. Le nom de domaine (votrenom.fr) coûte environ 10 à 15 € par an, enregistré à votre nom chez un registrar comme OVH ou Infomaniak. Vous en êtes propriétaire. Je m'occupe de la configuration, vous recevez les accès."
+				},
+				{
+					"question": "Je n'y connais rien en technologie, c'est un problème ?",
+					"answer": "Pas du tout, c'est le cas de la plupart de mes clients. Je gère toute la technique et j'explique tout simplement. Pour les textes, on les écrit ensemble à partir de vos mots."
 				}
 			]
 		},
 		"cta": {
 			"tag": "Prêt ?",
 			"title": "Votre projet mérite le meilleur.",
-			"subtitle": "Un site qui travaille pour vous, ça commence par une conversation.",
-			"reassurance": "Premier échange gratuit et sans engagement.",
+			"subtitle": "En 30 minutes, je vous donne une estimation claire de prix, un délai précis, et un aperçu de ce que pourrait être votre futur site.",
+			"reassurance": "Premier appel gratuit, sans engagement.",
 			"button": "Démarrer mon projet"
 		}
 	},

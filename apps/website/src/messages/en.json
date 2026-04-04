@@ -88,6 +88,7 @@
 		"guarantees": {
 			"tag": "Commitments",
 			"title": "What's included in every plan.",
+			"subtitle": "Whichever plan you choose: no subscription, deadlines kept, and you stay in control.",
 			"items": [
 				{
 					"title": "No subscription. Your site is yours",
@@ -107,38 +108,43 @@
 				}
 			]
 		},
+		"upgrade": {
+			"title": "Can't decide between two plans?",
+			"text": "Start with Presence and upgrade when you're ready. If you move to Showcase or Custom, the amount already paid is deducted from the new quote. Zero loss, zero pressure."
+		},
 		"personas": {
 			"tag": "Who is it for?",
 			"title": "This is made for you if...",
 			"items": [
 				{
 					"offer": "Presence · €990",
-					"headline": "You don't have a website at all",
+					"headline": "You have no website at all",
 					"points": [
-						"Plumber, electrician, roofer with no web presence",
-						"You're losing clients who search for you on Google",
-						"You want to be visible quickly, without hassle"
+						"Self-employed plumber for 2 years, zero online presence — clients only find him through word of mouth",
+						"Electrician with just a Yellow Pages listing showing a phone number and nothing else",
+						"Builder who loses jobs because homeowners want to 'see a website' before calling"
 					]
 				},
 				{
 					"offer": "Showcase · €1,490",
-					"headline": "You have an outdated site or a Yellow Pages listing",
+					"headline": "You have an ageing site or just a directory listing",
 					"points": [
-						"Hairdresser, craftsperson, shopkeeper with an image to polish",
-						"You want to show your work and inspire trust",
-						"You want customers to find and contact you easily"
+						"Hairdresser with an active Instagram but no real website to reassure new clients",
+						"Baker who wants to showcase creations and display opening hours properly",
+						"Roofer who does great work but whose 2018 Wix site is scaring off prospects"
 					]
 				},
 				{
 					"offer": "Custom · from €1,990",
 					"headline": "You have specific needs",
 					"points": [
-						"Restaurant with online booking and dynamic menu",
-						"Salon with integrated appointment scheduling",
-						"Shop with product catalog or online store"
+						"Restaurant wanting an updatable online menu + direct booking without a third-party platform",
+						"Beauty salon with integrated appointment booking and service catalogue",
+						"Carpenter who exports and needs a bilingual FR/EN site with a full portfolio"
 					]
 				}
-			]
+			],
+			"seeExamples": "See yourself here? View a similar website example"
 		},
 		"comparison": {
 			"tag": "Comparison",
@@ -159,26 +165,22 @@
 				{
 					"label": "Content writing",
 					"price": "+€150",
-					"desc": "I write your site content from a 30-minute conversation.",
-					"hint": "So you don't spend 2 weeks searching for the right words."
+					"desc": "We write everything for you from a simple 30-minute chat."
 				},
 				{
-					"label": "Google Business setup",
+					"label": "Google Business listing",
 					"price": "+€100",
-					"desc": "Optimised Google listing: photos, hours, description, categories.",
-					"hint": "To show up on Google Maps when someone searches \"hairdresser Dinard\"."
+					"desc": "You appear on Google Maps when someone searches for your trade in your area."
 				},
 				{
-					"label": "Optional monthly maintenance",
+					"label": "Monthly maintenance",
 					"price": "€49/mo",
-					"desc": "Updates, backups, fixes. You don't have to worry about anything. No commitment, cancel anytime.",
-					"hint": "So you never have to worry about the technical side again."
+					"desc": "Updates, backups, fixes. No commitment, cancel anytime."
 				},
 				{
 					"label": "Additional page",
 					"price": "+€150/page",
-					"desc": "Extra page beyond the plan (gallery, wedding page, etc.).",
-					"hint": "For projects that deserve more space."
+					"desc": "For projects that need more space."
 				}
 			]
 		},
@@ -200,7 +202,21 @@
 					"label": "hidden fees"
 				}
 			],
-			"seeResults": "See real results"
+			"scenarios": [
+				{
+					"trade": "Roofer",
+					"text": "Average job at €3,500 → just one new client per quarter is enough to pay for the site in the first year."
+				},
+				{
+					"trade": "Restaurant",
+					"text": "Average ticket at €25 → 5 extra covers per week thanks to online visibility = €6,500 extra revenue per year."
+				},
+				{
+					"trade": "Beautician",
+					"text": "2 new clients per week at €45 per session = €4,680 extra annual revenue, that's 3× the price of a Showcase site."
+				}
+			],
+			"seeResults": "See website examples for your trade"
 		},
 		"pricingFaq": {
 			"tag": "FAQ",
@@ -220,11 +236,11 @@
 				},
 				{
 					"question": "I don't have texts or photos. Can you help?",
-					"answer": "Yes. We write the texts together from a 30-minute conversation. If you don't have photos, we find a solution: professional stock images or local photographer partner (+€200)."
+					"answer": "We write the texts together in a 30-minute chat. No photos? Professional stock images included, or local photographer partner (+€200)."
 				},
 				{
 					"question": "What's the timeline if I don't provide content quickly?",
-					"answer": "The 2-3 week timeline starts from when I have all the elements (texts, photos, info). If you struggle to gather content, the writing option at +€150 solves that."
+					"answer": "The timeline starts when I have your materials (texts, photos, info). Struggling to gather everything? The writing option at +€150 solves that."
 				},
 				{
 					"question": "Is there a guarantee on deadlines?",
@@ -233,13 +249,21 @@
 				{
 					"question": "How does payment work?",
 					"answer": "50% at signing, 50% on delivery, before going live. You can pay by bank transfer, credit card or cheque. No hidden fees, no imposed subscription."
+				},
+				{
+					"question": "Who pays for hosting and the domain name?",
+					"answer": "Hosting is included via Vercel: free for your usage, nothing to pay. The domain name (yourname.fr) costs about €10 to €15 per year, registered in your name with a registrar like OVH or Infomaniak. You own it. I handle the setup, you receive the access credentials."
+				},
+				{
+					"question": "I know nothing about technology. Is that a problem?",
+					"answer": "Not at all — that's the case for most of my clients. I handle all the technical side and explain everything simply. For the texts, we write them together using your own words."
 				}
 			]
 		},
 		"cta": {
 			"tag": "Ready?",
 			"title": "Your project deserves the best.",
-			"subtitle": "A website that works for you starts with a conversation.",
+			"subtitle": "In 30 minutes, I give you a clear price estimate, a precise timeline, and a preview of what your future site could look like.",
 			"reassurance": "First call free, no commitment.",
 			"button": "Start my project"
 		}

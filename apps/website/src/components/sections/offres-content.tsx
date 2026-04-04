@@ -10,7 +10,6 @@ import {
 	IconLockOpen,
 	IconScissors,
 	IconToolsKitchen2,
-	IconX,
 } from "@tabler/icons-react"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
@@ -35,8 +34,18 @@ const COMPARISON_ROWS: {
 	{ feature: "Parfait sur mobile", presence: true, vitrine: true, custom: true },
 	{ feature: "Visible sur Google", presence: true, vitrine: true, custom: true },
 	{ feature: "Site sécurisé et en ligne", presence: true, vitrine: true, custom: true },
-	{ feature: "Formation prise en main", presence: "1h", vitrine: "2h", custom: "3h" },
-	{ feature: "Support après livraison", presence: "30 jours", vitrine: "1 mois", custom: "3 mois" },
+	{
+		feature: "Formation prise en main",
+		presence: "1h visio",
+		vitrine: "2h sur place",
+		custom: "3h + doc",
+	},
+	{
+		feature: "Support après livraison",
+		presence: "30j email",
+		vitrine: "1 mois email + tél",
+		custom: "3 mois email + tél + visio",
+	},
 	{ feature: "Nombre de pages", presence: "1", vitrine: "jusqu'à 5", custom: "jusqu'à 8" },
 	{ feature: "Galerie photos / réalisations", presence: false, vitrine: true, custom: true },
 	{ feature: "Animations soignées", presence: false, vitrine: true, custom: true },
@@ -121,6 +130,16 @@ export function OffresContent() {
 				</div>
 			</section>
 
+			{/* Upgrade callout */}
+			<div className="bg-surface-b px-5 pb-12 md:px-12">
+				<AnimatedSection>
+					<div className="mx-auto max-w-[700px] rounded-2xl border border-djanni-orange/20 bg-djanni-orange/5 px-8 py-6 text-center">
+						<p className="mb-2 font-heading text-lg font-semibold">{t("upgrade.title")}</p>
+						<p className="text-sm leading-relaxed text-djanni-gray-light">{t("upgrade.text")}</p>
+					</div>
+				</AnimatedSection>
+			</div>
+
 			{/* Personas */}
 			<section className="bg-surface-a px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
@@ -159,6 +178,16 @@ export function OffresContent() {
 							)
 						})}
 					</StaggerContainer>
+
+					<AnimatedSection delay={0.2} className="mt-8 text-center">
+						<Link
+							href="/realisations"
+							className="inline-flex items-center gap-2 text-sm font-medium text-djanni-orange transition-colors hover:text-djanni-orange-light"
+						>
+							{t("personas.seeExamples")}
+							<IconArrowRight size={14} />
+						</Link>
+					</AnimatedSection>
 				</div>
 			</section>
 
@@ -219,7 +248,7 @@ export function OffresContent() {
 																className={`mx-auto ${col === "vitrine" ? "text-djanni-orange" : "text-green-600"}`}
 															/>
 														) : val === false ? (
-															<IconX size={16} stroke={2} className="mx-auto text-foreground/15" />
+															<span className="text-sm text-foreground/20">—</span>
 														) : (
 															<span
 																className={`text-xs ${col === "vitrine" ? "font-medium text-djanni-orange/80" : "text-djanni-gray-light"}`}
@@ -256,19 +285,17 @@ export function OffresContent() {
 								label: string
 								price: string
 								desc: string
-								hint?: string
 							}[]
 						).map((opt, i) => (
 							<StaggerItem key={i}>
 								<div className="rounded-2xl border border-border bg-surface-b p-6 transition-shadow hover:shadow-md">
-									<p className="mb-1 font-heading text-lg font-bold text-djanni-orange">
-										{opt.price}
-									</p>
-									<p className="mb-2 font-semibold">{opt.label}</p>
+									<div className="mb-3 flex items-center justify-between gap-2">
+										<p className="font-heading font-semibold">{opt.label}</p>
+										<span className="shrink-0 rounded-full bg-djanni-orange/10 px-3 py-1 text-xs font-semibold text-djanni-orange">
+											{opt.price}
+										</span>
+									</div>
 									<p className="text-sm text-djanni-gray-light">{opt.desc}</p>
-									{opt.hint && (
-										<p className="mt-2 text-xs italic text-djanni-orange/70">{opt.hint}</p>
-									)}
 								</div>
 							</StaggerItem>
 						))}
@@ -278,7 +305,7 @@ export function OffresContent() {
 
 			{/* ROI */}
 			<section className="bg-surface-b px-5 py-24 md:px-12">
-				<div className="mx-auto max-w-[800px] text-center">
+				<div className="mx-auto max-w-[1100px] text-center">
 					<AnimatedSection>
 						<SectionHeader
 							tag={t("roi.tag")}
@@ -301,11 +328,24 @@ export function OffresContent() {
 						))}
 					</StaggerContainer>
 
+					<StaggerContainer className="mt-10 grid gap-4 sm:grid-cols-3">
+						{(t.raw("roi.scenarios") as { trade: string; text: string }[]).map((s, i) => (
+							<StaggerItem key={i}>
+								<div className="rounded-xl border border-border bg-surface-a p-5 text-left">
+									<p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-djanni-orange">
+										{s.trade}
+									</p>
+									<p className="text-sm leading-relaxed text-djanni-gray-light">{s.text}</p>
+								</div>
+							</StaggerItem>
+						))}
+					</StaggerContainer>
+
 					<AnimatedSection delay={0.2}>
 						<div className="mt-10 text-center">
 							<Link
 								href="/realisations"
-								className="inline-flex items-center gap-2 text-sm font-medium text-djanni-orange transition-colors hover:text-djanni-orange-light"
+								className="inline-flex items-center gap-2 rounded-lg border border-djanni-orange px-6 py-3 text-sm font-medium text-djanni-orange transition-colors hover:bg-djanni-orange hover:text-white"
 							>
 								{t("roi.seeResults")}
 								<IconArrowRight size={14} />
@@ -335,7 +375,12 @@ export function OffresContent() {
 			<section className="bg-surface-a px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
-						<SectionHeader tag={t("guarantees.tag")} title={t("guarantees.title")} align="center" />
+						<SectionHeader
+							tag={t("guarantees.tag")}
+							title={t("guarantees.title")}
+							subtitle={t("guarantees.subtitle")}
+							align="center"
+						/>
 					</AnimatedSection>
 
 					<StaggerContainer className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
