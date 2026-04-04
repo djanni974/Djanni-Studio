@@ -88,6 +88,7 @@
 		"guarantees": {
 			"tag": "Engagements",
 			"title": "Ce qui est inclus dans chaque offre.",
+			"subtitle": "Quel que soit l'offre choisie : pas d'abonnement, des délais tenus, et vous gardez le contrôle.",
 			"items": [
 				{
 					"title": "Pas d'abonnement : votre site vous appartient",

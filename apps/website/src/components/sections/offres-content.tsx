@@ -344,7 +344,12 @@ export function OffresContent() {
 			<section className="bg-surface-a px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
-						<SectionHeader tag={t("guarantees.tag")} title={t("guarantees.title")} align="center" />
+						<SectionHeader
+							tag={t("guarantees.tag")}
+							title={t("guarantees.title")}
+							subtitle={t("guarantees.subtitle")}
+							align="center"
+						/>
 					</AnimatedSection>
 
 					<StaggerContainer className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
