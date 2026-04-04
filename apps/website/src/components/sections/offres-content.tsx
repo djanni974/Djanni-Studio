@@ -10,7 +10,6 @@ import {
 	IconLockOpen,
 	IconScissors,
 	IconToolsKitchen2,
-	IconX,
 } from "@tabler/icons-react"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
@@ -35,8 +34,18 @@ const COMPARISON_ROWS: {
 	{ feature: "Parfait sur mobile", presence: true, vitrine: true, custom: true },
 	{ feature: "Visible sur Google", presence: true, vitrine: true, custom: true },
 	{ feature: "Site sécurisé et en ligne", presence: true, vitrine: true, custom: true },
-	{ feature: "Formation prise en main", presence: "1h", vitrine: "2h", custom: "3h" },
-	{ feature: "Support après livraison", presence: "30 jours", vitrine: "1 mois", custom: "3 mois" },
+	{
+		feature: "Formation prise en main",
+		presence: "1h visio",
+		vitrine: "2h sur place",
+		custom: "3h + doc",
+	},
+	{
+		feature: "Support après livraison",
+		presence: "30j email",
+		vitrine: "1 mois email + tél",
+		custom: "3 mois email + tél + visio",
+	},
 	{ feature: "Nombre de pages", presence: "1", vitrine: "jusqu'à 5", custom: "jusqu'à 8" },
 	{ feature: "Galerie photos / réalisations", presence: false, vitrine: true, custom: true },
 	{ feature: "Animations soignées", presence: false, vitrine: true, custom: true },
@@ -219,7 +228,7 @@ export function OffresContent() {
 																className={`mx-auto ${col === "vitrine" ? "text-djanni-orange" : "text-green-600"}`}
 															/>
 														) : val === false ? (
-															<IconX size={16} stroke={2} className="mx-auto text-foreground/15" />
+															<span className="text-sm text-foreground/20">—</span>
 														) : (
 															<span
 																className={`text-xs ${col === "vitrine" ? "font-medium text-djanni-orange/80" : "text-djanni-gray-light"}`}
