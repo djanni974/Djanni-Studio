@@ -160,26 +160,22 @@
 				{
 					"label": "Skrivañ an testennoù",
 					"price": "+150€",
-					"desc": "Skrivañ a ran danvez ho lec'hienn diwar un eskemm 30 munut.",
-					"hint": "Evit chom hep stankañ 2 sizhun o klask ho komzoù."
+					"desc": "Skrivañ a reomp kement tra evidoc'h diwar un eskemm eeun 30 munut."
 				},
 				{
-					"label": "Kefluniañ Google Business",
+					"label": "Fichennad Google Business",
 					"price": "+100€",
-					"desc": "Fichennad Google gwellaet : skeudennoù, eurioù, deskrivadur, rummadoù.",
-					"hint": "Evit diskouez war Google Maps pa vez klasket \"kiger Dinarzh\"."
+					"desc": "Diskouez a rit war Google Maps pa vez klasket ho micher en ho korn-bro."
 				},
 				{
-					"label": "Kendalc'hañ miziek diret",
+					"label": "Kendalc'hañ miziek",
 					"price": "49€/miz",
-					"desc": "Hizivadennoù, enrolladennoù, reizhadennoù, ne fell ket deoc'h ober netra. Hep engouestl, dilemel a c'heller da bep mare.",
-					"hint": "Evit chom hep preder biken eus an teknik."
+					"desc": "Hizivadennoù, enrolladennoù, reizhadennoù. Hep engouestl, dilemel a c'heller da bep mare."
 				},
 				{
 					"label": "Pajenn ouzhpenn",
 					"price": "+150€/pajenn",
-					"desc": "Ouzhpennañ ur bajenn dreist ar forfed (galerienn, pajenn eured, hag all).",
-					"hint": "Evit ar raktresoù a verit muioc'h a blas."
+					"desc": "Evit ar raktresoù o deus ezhomm muioc'h a blas."
 				}
 			]
 		},

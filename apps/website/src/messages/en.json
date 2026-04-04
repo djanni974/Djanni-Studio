@@ -160,26 +160,22 @@
 				{
 					"label": "Content writing",
 					"price": "+€150",
-					"desc": "I write your site content from a 30-minute conversation.",
-					"hint": "So you don't spend 2 weeks searching for the right words."
+					"desc": "We write everything for you from a simple 30-minute chat."
 				},
 				{
-					"label": "Google Business setup",
+					"label": "Google Business listing",
 					"price": "+€100",
-					"desc": "Optimised Google listing: photos, hours, description, categories.",
-					"hint": "To show up on Google Maps when someone searches \"hairdresser Dinard\"."
+					"desc": "You appear on Google Maps when someone searches for your trade in your area."
 				},
 				{
-					"label": "Optional monthly maintenance",
+					"label": "Monthly maintenance",
 					"price": "€49/mo",
-					"desc": "Updates, backups, fixes. You don't have to worry about anything. No commitment, cancel anytime.",
-					"hint": "So you never have to worry about the technical side again."
+					"desc": "Updates, backups, fixes. No commitment, cancel anytime."
 				},
 				{
 					"label": "Additional page",
 					"price": "+€150/page",
-					"desc": "Extra page beyond the plan (gallery, wedding page, etc.).",
-					"hint": "For projects that deserve more space."
+					"desc": "For projects that need more space."
 				}
 			]
 		},

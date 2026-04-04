@@ -265,19 +265,17 @@ export function OffresContent() {
 								label: string
 								price: string
 								desc: string
-								hint?: string
 							}[]
 						).map((opt, i) => (
 							<StaggerItem key={i}>
 								<div className="rounded-2xl border border-border bg-surface-b p-6 transition-shadow hover:shadow-md">
-									<p className="mb-1 font-heading text-lg font-bold text-djanni-orange">
-										{opt.price}
-									</p>
-									<p className="mb-2 font-semibold">{opt.label}</p>
+									<div className="mb-3 flex items-center justify-between gap-2">
+										<p className="font-heading font-semibold">{opt.label}</p>
+										<span className="shrink-0 rounded-full bg-djanni-orange/10 px-3 py-1 text-xs font-semibold text-djanni-orange">
+											{opt.price}
+										</span>
+									</div>
 									<p className="text-sm text-djanni-gray-light">{opt.desc}</p>
-									{opt.hint && (
-										<p className="mt-2 text-xs italic text-djanni-orange/70">{opt.hint}</p>
-									)}
 								</div>
 							</StaggerItem>
 						))}

@@ -160,26 +160,22 @@
 				{
 					"label": "Rédaction des textes",
 					"price": "+150€",
-					"desc": "Je rédige le contenu de votre site à partir d'un échange de 30 minutes.",
-					"hint": "Pour ne pas bloquer 2 semaines à chercher vos mots."
+					"desc": "On écrit tout pour vous à partir d'un simple échange de 30 min."
 				},
 				{
-					"label": "Configuration Google Business",
+					"label": "Fiche Google Business",
 					"price": "+100€",
-					"desc": "Fiche Google optimisée : photos, horaires, description, catégories.",
-					"hint": "Pour ressortir dans Google Maps quand on tape \"coiffeur Dinard\"."
+					"desc": "Vous apparaissez sur Google Maps quand on cherche votre métier dans votre ville."
 				},
 				{
-					"label": "Maintenance mensuelle optionnelle",
+					"label": "Maintenance mensuelle",
 					"price": "49€/mois",
-					"desc": "Mises à jour, sauvegardes, corrections. Vous ne vous occupez de rien. Sans engagement, résiliable à tout moment.",
-					"hint": "Pour ne plus jamais vous soucier de la technique."
+					"desc": "Mises à jour, sauvegardes, dépannage. Sans engagement, résiliable à tout moment."
 				},
 				{
 					"label": "Page supplémentaire",
 					"price": "+150€/page",
-					"desc": "Ajout d'une page au-delà du forfait (galerie, page mariage, etc.).",
-					"hint": "Pour les projets qui méritent plus d'espace."
+					"desc": "Pour les projets qui ont besoin de plus d'espace."
 				}
 			]
 		},
