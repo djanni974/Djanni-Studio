@@ -1,3 +1,5 @@
+export const revalidate = 0
+
 import type { Metadata } from "next"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
