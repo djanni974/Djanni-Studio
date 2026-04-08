@@ -40,13 +40,33 @@ export async function generateMetadata({
 export default async function OffresPage({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params
 	setRequestLocale(locale)
-	const [messages, bc] = await Promise.all([
+	const [messages, bc, offresT] = await Promise.all([
 		getMessages(),
 		getTranslations({ locale, namespace: "breadcrumb" }),
+		getTranslations({ locale, namespace: "offres" }),
 	])
+
+	const faqItems = offresT.raw("pricingFaq.items") as { question: string; answer: string }[]
+	const faqJsonLd = {
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		mainEntity: faqItems.map((item) => ({
+			"@type": "Question",
+			name: item.question,
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: item.answer,
+			},
+		})),
+	}
 
 	return (
 		<main className="relative">
+			<script
+				type="application/ld+json"
+				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+			/>
 			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<Breadcrumb
