@@ -155,7 +155,70 @@
 			"vitrineLabel": "Vitrine",
 			"vitrinePrice": "1 490€",
 			"customLabel": "War-bouez",
-			"customPrice": "adalek 1 990€"
+			"customPrice": "adalek 1 990€",
+			"rows": [
+				{
+					"feature": "Dizain personelaet hervez ho skeudenn",
+					"presence": true,
+					"vitrine": true,
+					"custom": true
+				},
+				{
+					"feature": "Perzhel war bep pellgomz",
+					"presence": true,
+					"vitrine": true,
+					"custom": true
+				},
+				{ "feature": "Gwelus war Google", "presence": true, "vitrine": true, "custom": true },
+				{
+					"feature": "Lec'hienn surentez ha war-linenn",
+					"presence": true,
+					"vitrine": true,
+					"custom": true
+				},
+				{
+					"feature": "Stummadur kemer-e-dorn",
+					"presence": "1e video",
+					"vitrine": "2e war al lec'h",
+					"custom": "3e + doc"
+				},
+				{
+					"feature": "Skoazell goude al livradur",
+					"presence": "30d postel",
+					"vitrine": "1 miz postel + pellg.",
+					"custom": "3 miz postel + pellg. + video"
+				},
+				{
+					"feature": "Niver a bajennoù",
+					"presence": "1",
+					"vitrine": "betek 5",
+					"custom": "betek 8"
+				},
+				{
+					"feature": "Skeudennaoueg / obererezhioù",
+					"presence": false,
+					"vitrine": true,
+					"custom": true
+				},
+				{ "feature": "Buhezekadurioù kempenn", "presence": false, "vitrine": true, "custom": true },
+				{
+					"feature": "SEO araokaet (klaset mat war Google)",
+					"presence": false,
+					"vitrine": true,
+					"custom": true
+				},
+				{ "feature": "Stadegoù gweladenn", "presence": false, "vitrine": true, "custom": true },
+				{ "feature": "Mirout war-linenn", "presence": false, "vitrine": false, "custom": true },
+				{ "feature": "Blog enkorfet", "presence": false, "vitrine": false, "custom": true },
+				{ "feature": "Katalog produioù", "presence": false, "vitrine": false, "custom": true },
+				{ "feature": "Liesyezhek", "presence": false, "vitrine": false, "custom": true },
+				{
+					"feature": "Emvod heuliañ goude 1 miz",
+					"presence": false,
+					"vitrine": false,
+					"custom": true
+				}
+			]
 		},
 		"addons": {
 			"tag": "Diwar-choaz",

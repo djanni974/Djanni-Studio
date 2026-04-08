@@ -155,7 +155,65 @@
 			"vitrineLabel": "Showcase",
 			"vitrinePrice": "€1,490",
 			"customLabel": "Custom",
-			"customPrice": "from €1,990"
+			"customPrice": "from €1,990",
+			"rows": [
+				{
+					"feature": "Custom design matching your brand",
+					"presence": true,
+					"vitrine": true,
+					"custom": true
+				},
+				{ "feature": "Perfect on mobile", "presence": true, "vitrine": true, "custom": true },
+				{ "feature": "Found on Google", "presence": true, "vitrine": true, "custom": true },
+				{
+					"feature": "Secure site, live and ready",
+					"presence": true,
+					"vitrine": true,
+					"custom": true
+				},
+				{
+					"feature": "Hands-on training",
+					"presence": "1h video call",
+					"vitrine": "2h on-site",
+					"custom": "3h + docs"
+				},
+				{
+					"feature": "Post-delivery support",
+					"presence": "30d email",
+					"vitrine": "1 month email + phone",
+					"custom": "3 months email + phone + video"
+				},
+				{
+					"feature": "Number of pages",
+					"presence": "1",
+					"vitrine": "up to 5",
+					"custom": "up to 8"
+				},
+				{
+					"feature": "Photo gallery / portfolio",
+					"presence": false,
+					"vitrine": true,
+					"custom": true
+				},
+				{ "feature": "Polished animations", "presence": false, "vitrine": true, "custom": true },
+				{
+					"feature": "Advanced SEO (well ranked on Google)",
+					"presence": false,
+					"vitrine": true,
+					"custom": true
+				},
+				{ "feature": "Visitor analytics", "presence": false, "vitrine": true, "custom": true },
+				{ "feature": "Online booking", "presence": false, "vitrine": false, "custom": true },
+				{ "feature": "Built-in blog", "presence": false, "vitrine": false, "custom": true },
+				{ "feature": "Product catalogue", "presence": false, "vitrine": false, "custom": true },
+				{ "feature": "Multilingual", "presence": false, "vitrine": false, "custom": true },
+				{
+					"feature": "1-month follow-up meeting",
+					"presence": false,
+					"vitrine": false,
+					"custom": true
+				}
+			]
 		},
 		"addons": {
 			"tag": "À la carte",
