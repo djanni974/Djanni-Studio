@@ -24,48 +24,17 @@ const TIER_KEYS = ["presence", "vitrine", "surmesure"] as const
 const GUARANTEE_ICONS = [IconLockOpen, IconClock, IconCreditCard, IconHeadset]
 const PERSONA_ICONS = [IconHammer, IconScissors, IconToolsKitchen2]
 
-const COMPARISON_ROWS: {
+type ComparisonRow = {
 	feature: string
 	presence: boolean | string
 	vitrine: boolean | string
 	custom: boolean | string
-}[] = [
-	{ feature: "Design sur mesure à votre image", presence: true, vitrine: true, custom: true },
-	{ feature: "Parfait sur mobile", presence: true, vitrine: true, custom: true },
-	{ feature: "Visible sur Google", presence: true, vitrine: true, custom: true },
-	{ feature: "Site sécurisé et en ligne", presence: true, vitrine: true, custom: true },
-	{
-		feature: "Formation prise en main",
-		presence: "1h visio",
-		vitrine: "2h sur place",
-		custom: "3h + doc",
-	},
-	{
-		feature: "Support après livraison",
-		presence: "30j email",
-		vitrine: "1 mois email + tél",
-		custom: "3 mois email + tél + visio",
-	},
-	{ feature: "Nombre de pages", presence: "1", vitrine: "jusqu'à 5", custom: "jusqu'à 8" },
-	{ feature: "Galerie photos / réalisations", presence: false, vitrine: true, custom: true },
-	{ feature: "Animations soignées", presence: false, vitrine: true, custom: true },
-	{
-		feature: "SEO avancé (bien classé sur Google)",
-		presence: false,
-		vitrine: true,
-		custom: true,
-	},
-	{ feature: "Statistiques de visite", presence: false, vitrine: true, custom: true },
-	{ feature: "Réservation en ligne", presence: false, vitrine: false, custom: true },
-	{ feature: "Blog intégré", presence: false, vitrine: false, custom: true },
-	{ feature: "Catalogue produits", presence: false, vitrine: false, custom: true },
-	{ feature: "Multilingue", presence: false, vitrine: false, custom: true },
-	{ feature: "Réunion de suivi à 1 mois", presence: false, vitrine: false, custom: true },
-]
+}
 
 export function OffresContent() {
 	const t = useTranslations("offres")
 	const p = useTranslations("pricing")
+	const comparisonRows = t.raw("comparison.rows") as ComparisonRow[]
 
 	const tiers: PricingTier[] = TIER_KEYS.map((key) => ({
 		badge: p(`${key}.badge`),
@@ -228,7 +197,7 @@ export function OffresContent() {
 									</tr>
 								</thead>
 								<tbody>
-									{COMPARISON_ROWS.map((row, i) => (
+									{comparisonRows.map((row, i) => (
 										<tr
 											key={i}
 											className={`border-b border-border/50 ${i % 2 === 0 ? "bg-surface-a/50" : ""}`}

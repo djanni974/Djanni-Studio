@@ -65,26 +65,25 @@ export async function generateMetadata(): Promise<Metadata> {
 		openGraph: {
 			title: "Djanni Studio — Sites web pour artisans & commerçants",
 			description:
-				"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — un site qui vous ressemble et ramène des clients.",
+				"Ancien charpentier devenu développeur web. Je crée des sites modernes pour les artisans et commerçants à Dinard, Saint-Malo et toute la Côte d'Émeraude.",
 			url: "https://www.djannistudio.fr",
 			siteName: "Djanni Studio",
 			type: "website",
 			locale: "fr_FR",
 			images: [
 				{
-					url: "/og-image.png",
+					url: "https://www.djannistudio.fr/og-image.png",
 					width: 1200,
 					height: 630,
-					alt: "Djanni Studio — Sites web pour artisans & commerçants",
+					alt: "Djanni Studio — Sites web pour artisans & commerçants en Bretagne",
 				},
 			],
 		},
 		twitter: {
 			card: "summary_large_image",
 			title: "Djanni Studio — Sites web pour artisans & commerçants",
-			description:
-				"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises — un site qui vous ressemble et ramène des clients.",
-			images: ["/og-image.png"],
+			description: "Sites web pour artisans et commerçants en Bretagne",
+			images: ["https://www.djannistudio.fr/og-image.png"],
 		},
 		icons: {
 			icon: [
@@ -104,7 +103,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const jsonLd = {
 	"@context": "https://schema.org",
-	"@type": "LocalBusiness",
+	"@type": "ProfessionalService",
 	name: "Djanni Studio",
 	description: "Création de sites web sur mesure pour artisans et commerçants en Bretagne",
 	url: "https://www.djannistudio.fr",
@@ -119,11 +118,18 @@ const jsonLd = {
 		addressRegion: "Bretagne",
 		addressCountry: "FR",
 	},
-	priceRange: "€€",
-	areaServed: {
-		"@type": "Place",
-		name: "Bretagne",
+	geo: {
+		"@type": "GeoCoordinates",
+		latitude: 48.6328,
+		longitude: -2.0688,
 	},
+	priceRange: "990€ - 1990€+",
+	areaServed: [
+		{ "@type": "City", name: "Dinard" },
+		{ "@type": "City", name: "Saint-Malo" },
+		{ "@type": "City", name: "Dinan" },
+		{ "@type": "City", name: "Cancale" },
+	],
 	serviceType: [
 		"Création de sites web",
 		"Refonte de sites internet",
@@ -131,6 +137,11 @@ const jsonLd = {
 		"Développement web",
 	],
 	knowsLanguage: ["fr", "en", "br"],
+	founder: {
+		"@type": "Person",
+		name: "Gianni",
+		jobTitle: "Développeur web",
+	},
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
