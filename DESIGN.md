@@ -300,38 +300,46 @@ Orange-based radial glows used as decorative backdrops:
 
 ## 7. Motion & Animation
 
+> **CSS-first approach.** New components must use CSS keyframes and transitions defined in `globals.css`. Do NOT import `motion/react` (Framer Motion) — some legacy components still use it, but all new work uses native CSS animations.
+
 ### Easing
 
 | Name       | Value                            | Usage                |
 |------------|----------------------------------|----------------------|
 | Standard   | `cubic-bezier(0.22, 1, 0.36, 1)`| All entrance/exit    |
-| Spring     | `stiffness: 500, damping: 25`   | Checkmarks, toggles  |
 | Linear     | `linear`                         | Aurora loop only     |
 
-### Entrance animations
+### CSS keyframe animations (defined in `globals.css`)
 
-| Animation     | Duration | Props                      | Trigger          |
-|---------------|----------|----------------------------|-------------------|
-| Fade up       | 0.6s     | `opacity: 0→1, y: 30→0`   | Viewport enter    |
-| Scale + blur  | 0.6s     | `scale: 0.8→1, blur: 4→0` | Viewport enter    |
-| Hero fade     | 0.6s     | `opacity: 0→1, y: 20→0`   | Page load         |
-| Hero orbits   | 1.4s     | `opacity: 0→1, scale: 0.85→1` | Page load (0.3s delay) |
+| Class                    | Keyframe         | Duration | Props                                  |
+|--------------------------|------------------|----------|----------------------------------------|
+| `.animate-hero-fade-up`  | `hero-fade-up`   | 0.6s     | `opacity: 0→1, translate: 0 20px→0 0`  |
+| `.animate-hero-orbits`   | `hero-orbits`    | 1.4s     | `opacity: 0→1, scale: 0.85→1` (0.3s delay) |
+| `.animate-icon-in`       | `icon-in`        | 0.2s     | `opacity/scale/rotate: 0→1`            |
+| `.animate-dot-in`        | `dot-in`         | 0.3s     | `scale: 0→1`                           |
+| `.animate-underline-in`  | `underline-in`   | 0.3s     | `scaleX: 0→1`, origin left             |
 
-### Stagger
+All use `cubic-bezier(0.22, 1, 0.36, 1)` easing and `both` fill mode.
 
-- Container: `staggerChildren: 0.06` to `0.12` depending on density
-- Viewport trigger: `whileInView` with `viewport={{ once: true, margin: "-80px" }}`
-- Always `once: true` — animations play only on first appearance
+### Stagger with `animation-delay`
+
+For staggered entrances, use incremental `animation-delay` on child elements:
+
+```css
+.animate-hero-fade-up:nth-child(1) { animation-delay: 0s; }
+.animate-hero-fade-up:nth-child(2) { animation-delay: 0.1s; }
+.animate-hero-fade-up:nth-child(3) { animation-delay: 0.2s; }
+```
 
 ### Hover effects
 
-| Effect       | Properties                              |
+| Effect       | CSS                                      |
 |--------------|------------------------------------------|
-| Lift         | `translateY(-1px)` or `translateY(-4px)` |
+| Lift         | `hover:-translate-y-1` or `hover:-translate-y-0.5` |
 | Shine sweep  | Skewed gradient (`skew-x-[-20deg]`) slides left→right |
-| Scale image  | `scale(1.02)` on contained images       |
-| Border shift | Border color transitions to accent       |
-| Underline    | `scaleX: 0→1`, origin left              |
+| Scale image  | `hover:scale-[1.02]` on contained images |
+| Border shift | `transition-colors` + hover border color  |
+| Underline    | `scaleX: 0→1` via `hover:scale-x-100`, origin left |
 
 ### Background animations
 
@@ -342,22 +350,30 @@ Orange-based radial glows used as decorative backdrops:
 
 ### Transition defaults
 
-- Standard: `duration-300 ease-out`
+- Standard: `transition-all duration-300 ease-out`
 - Fast (hover states): `duration-200`
 - Slow (reveals): `duration-700`
+
+### Adding new animations
+
+1. Define the `@keyframes` in `apps/website/src/app/globals.css`
+2. Create a utility class (`.animate-*`) with easing, duration, and fill mode
+3. Apply the class in the component — no JS animation library needed
 
 ### Accessibility
 
 ```css
 @media (prefers-reduced-motion: reduce) {
-  animation-duration: 0.01ms;
-  animation-iteration-count: 1;
-  transition-duration: 0.01ms;
-  scroll-behavior: auto;
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
 }
 ```
 
-Always check `useReducedMotion()` from `motion/react` and swap to static variants when true.
+The `prefers-reduced-motion` media query in `globals.css` automatically disables all animations site-wide. No per-component handling needed.
 
 ---
 
@@ -379,13 +395,21 @@ Always check `useReducedMotion()` from `motion/react` and swap to static variant
 | Use `font-sans` (DM Sans) for body text | Use font sizes below 12px |
 | Use `clamp()` for responsive hero text | Use fixed px sizes for large headings |
 
+### Animation
+
+| Do | Don't |
+|----|-------|
+| Use CSS keyframes + utility classes in `globals.css` | Import `motion/react` (Framer Motion) in new components |
+| Use `animation-delay` for stagger effects | Use JS-based stagger (staggerChildren) |
+| Use `transition-all duration-300` for hover states | Use JS animation libraries for simple transitions |
+| Define new keyframes in `globals.css` | Define inline keyframes or style-based animations |
+
 ### Components
 
 | Do | Don't |
 |----|-------|
 | Import shared components from `@repo/ui` | Duplicate Button/Badge/Separator locally |
 | Use `SectionHeader` for section titles | Build custom section title patterns |
-| Use `AnimatedSection` for scroll reveals | Write custom IntersectionObserver logic |
 | Use `BrowserMockup` for project screenshots | Show raw screenshots without framing |
 
 ### Layout
@@ -427,41 +451,41 @@ Easing:       cubic-bezier(0.22, 1, 0.36, 1)
 
 ### Component template
 
-When building a new component for Djanni Studio, follow this pattern:
+When building a new component for Djanni Studio, follow this pattern — **CSS animations only, no motion/react**:
 
 ```tsx
-"use client"
-
-import { motion } from "motion/react"
 import { cn } from "@repo/ui/lib/utils"
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
-}
 
 export function MyComponent({ className }: { className?: string }) {
   return (
-    <motion.div
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+    <div
       className={cn(
-        "rounded-xl border border-border bg-card p-8",
+        "animate-hero-fade-up rounded-xl border border-border bg-card p-8",
         className,
       )}
     >
       <h3 className="font-heading text-xl font-bold">Title</h3>
       <p className="text-muted-foreground">Description</p>
-    </motion.div>
+    </div>
   )
 }
 ```
+
+For staggered children, use `animation-delay` via inline style:
+
+```tsx
+{items.map((item, i) => (
+  <div
+    key={item.id}
+    className="animate-hero-fade-up rounded-xl border border-border bg-card p-8"
+    style={{ animationDelay: `${i * 0.1}s` }}
+  >
+    {item.content}
+  </div>
+))}
+```
+
+If you need a new animation, define the `@keyframes` in `globals.css` first, then use the class.
 
 ### Conformity checklist
 
@@ -471,9 +495,9 @@ Before shipping UI for Djanni Studio, verify:
 - [ ] Headings use Syne (`font-heading`), body uses DM Sans (`font-sans`)
 - [ ] Primary color is `#e8500a`, not a random orange
 - [ ] Cards have `border border-border rounded-xl bg-card`
-- [ ] Animations use `cubic-bezier(0.22, 1, 0.36, 1)` easing
-- [ ] Scroll animations trigger once with `-80px` viewport margin
-- [ ] `prefers-reduced-motion` is respected
+- [ ] Animations use CSS keyframes from `globals.css`, not `motion/react`
+- [ ] New keyframes use `cubic-bezier(0.22, 1, 0.36, 1)` easing
+- [ ] `prefers-reduced-motion` is handled globally (no per-component logic needed)
 - [ ] Noise texture overlay is present (global, not per-component)
 - [ ] Section titles use `SectionHeader` with auto orange dot
 - [ ] All text is internationalized via `next-intl` (fr, en, br)
