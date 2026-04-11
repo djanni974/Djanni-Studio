@@ -4,6 +4,7 @@ import { IconBuildingBank, IconCheck, IconCreditCard } from "@tabler/icons-react
 import { useTranslations } from "next-intl"
 import { TextHoverEffect } from "@/components/ui/text-hover-effect"
 import { Link } from "@/i18n/navigation"
+import { CITY_PAGES } from "@/lib/constants"
 
 export function Footer() {
 	const t = useTranslations("footer")
@@ -99,6 +100,23 @@ export function Footer() {
 							{t("sitemap")}
 						</Link>
 					</nav>
+
+					<div className="mt-6 flex flex-col items-center gap-2">
+						<span className="text-xs font-medium uppercase tracking-[0.15em] text-djanni-gray">
+							{t("zones")}
+						</span>
+						<div className="flex flex-wrap items-center justify-center gap-4">
+							{CITY_PAGES.map((city) => (
+								<Link
+									key={city.slug}
+									href={`/${city.slug}`}
+									className="text-sm text-djanni-gray-light transition-colors hover:text-foreground"
+								>
+									{t(`cities.${city.cityKey}`)}
+								</Link>
+							))}
+						</div>
+					</div>
 				</div>
 
 				<div className="mt-8 w-full max-w-[460px] md:mt-10">

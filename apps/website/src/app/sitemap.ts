@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next"
-import { BLOG_POSTS, PROJECTS } from "@/lib/constants"
+import { BLOG_POSTS, CITY_PAGES, PROJECTS } from "@/lib/constants"
 
 const locales = ["fr", "en", "br"] as const
 const defaultLocale = "fr"
@@ -35,6 +35,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 				lastModified: new Date(),
 				changeFrequency: page.changeFrequency,
 				priority: page.priority,
+			})
+		}
+	}
+
+	// City landing pages
+	for (const city of CITY_PAGES) {
+		for (const locale of locales) {
+			entries.push({
+				url: localizedUrl(baseUrl, `/${city.slug}`, locale),
+				lastModified: new Date(),
+				changeFrequency: "monthly",
+				priority: 0.8,
 			})
 		}
 	}
