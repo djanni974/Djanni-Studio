@@ -91,9 +91,9 @@ export function CaseStudyContent({ project }: { project: Project }) {
 						{t("backLink")}
 					</Link>
 
-					<div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
-						{/* Left: Project info */}
-						<div>
+					<div className="flex flex-col gap-10">
+						{/* Project info */}
+						<div className="max-w-[700px]">
 							<div className="mb-6 flex items-center gap-4">
 								<div
 									className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-heading text-lg font-extrabold text-white"
@@ -114,53 +114,51 @@ export function CaseStudyContent({ project }: { project: Project }) {
 							</h1>
 							<p className="mt-2 text-lg text-djanni-gray-light">{project.type}</p>
 
-							<div className="mt-8 flex flex-wrap gap-6">
+							<div className="mt-8 flex flex-wrap items-center gap-6">
 								<MetaItem icon={IconMapPin}>{project.location}</MetaItem>
 								<MetaItem icon={IconClock}>{project.duration}</MetaItem>
 								<MetaItem icon={IconCalendar}>{project.year}</MetaItem>
-							</div>
 
-							{project.url && (
-								<a
-									href={project.url}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="mt-6 inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-djanni-orange hover:text-djanni-orange"
-								>
-									<IconExternalLink size={16} />
-									{t("visitSite")}
-								</a>
-							)}
+								{project.url && (
+									<a
+										href={project.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-flex items-center gap-2 rounded-lg border border-djanni-orange/40 bg-djanni-orange/10 px-5 py-2.5 text-sm font-medium text-djanni-orange transition-colors hover:bg-djanni-orange hover:text-white"
+									>
+										<IconExternalLink size={16} />
+										{t("visitSite")}
+									</a>
+								)}
+							</div>
 						</div>
 
-						{/* Right: Main screenshot — LCP element */}
+						{/* Main screenshot — full width, LCP element */}
 						{hasScreenshots && (
-							<div className="rotate-1 transition-transform duration-500 hover:rotate-0">
-								<BrowserMockup noPadding>
-									<div className="relative aspect-video w-full">
-										<Image
-											src={project.screenshots?.[0] ?? ""}
-											alt={`${project.name} — Accueil`}
-											fill
-											className="object-cover object-top"
-											sizes="(max-width: 768px) 100vw, 50vw"
-											priority
-										/>
-									</div>
-								</BrowserMockup>
-							</div>
+							<BrowserMockup noPadding>
+								<div className="relative aspect-video w-full">
+									<Image
+										src={project.screenshots?.[0] ?? ""}
+										alt={`${project.name} — Accueil`}
+										fill
+										className="object-cover object-top"
+										sizes="(max-width: 768px) 100vw, 1100px"
+										priority
+									/>
+								</div>
+							</BrowserMockup>
 						)}
 					</div>
 				</div>
 			</section>
 
 			{/* ── Section 2: Story — Context / Problem / Solution ── */}
-			<section className="bg-surface-a px-5 py-28 md:px-12">
+			<section className="bg-surface-a px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[1100px]">
 					<StaggerContainer className="grid gap-0">
 						{/* Context — full width */}
 						<StaggerItem>
-							<div className="mx-auto max-w-[800px] pb-16">
+							<div className="mx-auto max-w-[800px] pb-10">
 								<span className="mb-4 block text-[11px] font-semibold uppercase tracking-[0.15em] text-djanni-orange">
 									{t("context")}
 								</span>
@@ -170,15 +168,19 @@ export function CaseStudyContent({ project }: { project: Project }) {
 							</div>
 						</StaggerItem>
 
-						{/* Connector line */}
-						<div
-							className="mx-auto h-16 w-px opacity-30"
-							style={{ background: project.accentColor }}
-						/>
+						{/* Connector */}
+						<div className="flex flex-col items-center gap-0">
+							<div className="h-8 w-px opacity-20" style={{ background: project.accentColor }} />
+							<div
+								className="h-2 w-2 rounded-full opacity-40"
+								style={{ background: project.accentColor }}
+							/>
+							<div className="h-8 w-px opacity-20" style={{ background: project.accentColor }} />
+						</div>
 
 						{/* Problem — text left, screenshot right */}
 						<StaggerItem>
-							<div className="grid items-center gap-10 py-16 md:grid-cols-[1.2fr_1fr] md:gap-16">
+							<div className="grid items-center gap-10 py-10 md:grid-cols-[1.2fr_1fr] md:gap-16">
 								<div>
 									<span className="mb-4 block text-[11px] font-semibold uppercase tracking-[0.15em] text-djanni-orange">
 										{t("problem")}
@@ -203,15 +205,19 @@ export function CaseStudyContent({ project }: { project: Project }) {
 							</div>
 						</StaggerItem>
 
-						{/* Connector line */}
-						<div
-							className="mx-auto h-16 w-px opacity-30"
-							style={{ background: project.accentColor }}
-						/>
+						{/* Connector */}
+						<div className="flex flex-col items-center gap-0">
+							<div className="h-8 w-px opacity-20" style={{ background: project.accentColor }} />
+							<div
+								className="h-2 w-2 rounded-full opacity-40"
+								style={{ background: project.accentColor }}
+							/>
+							<div className="h-8 w-px opacity-20" style={{ background: project.accentColor }} />
+						</div>
 
 						{/* Solution — screenshot left, text right */}
 						<StaggerItem>
-							<div className="grid items-center gap-10 py-16 md:grid-cols-[1fr_1.2fr] md:gap-16">
+							<div className="grid items-center gap-10 py-10 md:grid-cols-[1fr_1.2fr] md:gap-16">
 								{project.screenshots?.[2] ? (
 									<>
 										<BrowserMockup noPadding>
@@ -252,13 +258,13 @@ export function CaseStudyContent({ project }: { project: Project }) {
 
 			{/* ── Section 3: Visual Gallery (dark) — remaining screenshots ── */}
 			{remainingScreenshots.length > 0 && (
-				<section className="relative overflow-hidden bg-linear-to-b from-[#161614] to-[#1e1e1c] px-5 py-20 md:px-12">
+				<section className="relative overflow-hidden bg-linear-to-b from-[#161614] to-[#1e1e1c] px-5 py-16 md:px-12 md:py-24">
 					<div
 						className="pointer-events-none absolute top-1/2 left-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.05] blur-[120px]"
 						style={{ background: project.accentColor }}
 					/>
 					<div className="relative mx-auto max-w-[1100px]">
-						<StaggerContainer className="grid gap-4 sm:grid-cols-2">
+						<StaggerContainer className="grid gap-6 sm:grid-cols-2">
 							{remainingScreenshots.map((src, i) => (
 								<StaggerItem key={src} className={i === 0 ? "sm:col-span-2" : ""}>
 									<BrowserMockup noPadding>
@@ -284,7 +290,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 			)}
 
 			{/* ── Section 4: Results — Big Numbers ── */}
-			<section className="bg-surface-a px-5 py-28 md:px-12">
+			<section className="bg-surface-a px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<div className="mb-12 text-center">
@@ -302,17 +308,14 @@ export function CaseStudyContent({ project }: { project: Project }) {
 								<StaggerItem key={result}>
 									<div
 										className="flex h-full flex-col rounded-xl border border-border bg-surface-b p-5 transition-colors duration-300 hover:border-djanni-orange/30"
-										style={{ borderTopWidth: "2px", borderTopColor: project.accentColor }}
+										style={{ borderTopWidth: "3px", borderTopColor: project.accentColor }}
 									>
 										{parsed ? (
 											<>
-												<div
-													className="font-heading text-2xl font-extrabold leading-tight lg:text-3xl"
-													style={{ color: project.accentColor }}
-												>
+												<div className="font-heading text-3xl font-extrabold leading-tight text-foreground lg:text-4xl">
 													{parsed.stat}
 												</div>
-												<p className="mt-2 text-xs leading-relaxed text-djanni-gray-light lg:text-sm">
+												<p className="mt-2 text-sm leading-relaxed text-djanni-gray-light">
 													{parsed.label}
 												</p>
 											</>
@@ -321,9 +324,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 												<div className="mb-2 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-djanni-orange/15 text-djanni-orange">
 													<IconCheck size={14} />
 												</div>
-												<p className="text-xs leading-relaxed text-djanni-gray-light lg:text-sm">
-													{result}
-												</p>
+												<p className="text-sm leading-relaxed text-djanni-gray-light">{result}</p>
 											</>
 										)}
 									</div>
@@ -388,7 +389,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 			)}
 
 			{/* ── Section 7: CTA ── */}
-			<section className="bg-surface-a px-5 py-28 md:px-12">
+			<section className="bg-surface-a px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<div

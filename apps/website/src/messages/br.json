@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"title": "Krouiñ lec'hiennoù web evit artizaned ha kenwerzhourion e Dinarzh ha Sant-Maloù",
+		"title": "Lec'hiennoù web artizaned Dinarzh & Sant-Maloù | Djanni",
 		"description": "Krouiñ a ran lec'hiennoù web modern evit an artizaned hag ar c'henwerzhourion lec'hel. Hep yezh vevenn, hep souezhadenn. Ul lec'hienn a zere deoc'h hag a gas kustumerien.",
 		"about": {
 			"title": "Charpaentour deuet da ziorroerien web e Dinarzh | Djanni Studio",
@@ -37,6 +37,20 @@
 		"offreSurMesure": {
 			"title": "Stumm War-bouez · adalek 1 990 € | Djanni Studio",
 			"description": "Kemer rendez-vous, blog CMS, katalog, liesyezhek. Ul lec'hienn savet resis evit ho ezhommoù. Devis personelaet goude un eskemm 30 munutenn."
+		},
+		"cityPages": {
+			"saintMalo": {
+				"title": "Krouiñ lec'hienn web e Sant-Maloù | Djanni Studio",
+				"description": "Diorroerien web e Sant-Maloù. Lec'hiennoù vitrine modern evit artizaned ha kenwerzhourion malouinad. Adalek 990 €, livet e 2-3 sizhun."
+			},
+			"dinan": {
+				"title": "Krouiñ lec'hienn web e Dinan | Djanni Studio",
+				"description": "Diorroerien web evit artizaned ha kenwerzhourion e Dinan. Lec'hiennoù modern, SEO lec'hel, adalek 990 €. Livet e 2-3 sizhun."
+			},
+			"dinard": {
+				"title": "Krouiñ lec'hienn web e Dinarzh | Djanni Studio",
+				"description": "Ho tiorroerien web e Dinarzh. Lec'hiennoù vitrine evit artizaned ha kenwerzhourion Aod an Emrodez. Adalek 990 €, livet e 2-3 sizhun."
+			}
 		}
 	},
 	"breadcrumb": {
@@ -49,7 +63,10 @@
 		"avis": "Alioù",
 		"cgv": "Divizegoù",
 		"mentionsLegales": "Menozoù lezennel",
-		"politiqueConfidentialite": "Reolenn prevezded"
+		"politiqueConfidentialite": "Reolenn prevezded",
+		"citySaintMalo": "Krouiñ lec'hienn web Sant-Maloù",
+		"cityDinan": "Krouiñ lec'hienn web Dinan",
+		"cityDinard": "Krouiñ lec'hienn web Dinarzh"
 	},
 	"nav": {
 		"realisations": "Obererezhioù",
@@ -646,7 +663,8 @@
 		"title": "Raktresoù a gomz anezho o-unan.",
 		"subtitle": "Pep lec'hienn zo un istor. Dizoleiit penaos am eus sikouret artizaned ha kenwerzhourion da vezañ disheñvel en linenn.",
 		"intro": "Preti, salonoù bleo, artizaned ar savadurioù, stalioù eil-dorn : pep raktres amañ dindan a zo bet savet war-bouez evit ezhommoù ur c'henwerzh lec'hel e Breizh. Dizain personelaet, performañsoù gwellaet ha SEO lec'hel endalc'het.",
-		"ctaIntro": "Gwelet an tarifioù"
+		"ctaIntro": "Gwelet an tarifioù",
+		"filterAll": "Pep tra"
 	},
 	"caseStudy": {
 		"backLink": "Distreiñ d'an obererezhioù",
@@ -814,7 +832,13 @@
 		"paymentTransfer": "Treuzkas",
 		"paymentCard": "Kartenn bankañ",
 		"paymentCheck": "Chek",
-		"copyright": "© 2026 Djanni Studio · Pep gwir miret"
+		"copyright": "© 2026 Djanni Studio · Pep gwir miret",
+		"zones": "Takadoù labour",
+		"cities": {
+			"saintMalo": "Krouiñ lec'hienn web Sant-Maloù",
+			"dinan": "Krouiñ lec'hienn web Dinan",
+			"dinard": "Krouiñ lec'hienn web Dinarzh"
+		}
 	},
 	"sitemap": {
 		"metaTitle": "Kartenn al lec'hienn | Djanni Studio",
@@ -1003,5 +1027,192 @@
 		"compare": "Keñveriañ",
 		"cta": "Goulenn un devis",
 		"back": "An holl stummadoù"
+	},
+	"cityPages": {
+		"saintMalo": {
+			"hero": {
+				"title": "Krouiñ lec'hienn web e Sant-Maloù",
+				"subtitle": "Ul lec'hienn profesionel evit artizaned ha kenwerzhourion Sant-Maloù hag ar c'hêr-greiz. Gwelus war Google, soñjet evit ho kustumerien.",
+				"cta": "Goulenn un devis digoust"
+			},
+			"searchExamples": {
+				"tag": "SEO lec'hel",
+				"title": "Ho kustumerien a glask ac'hanoc'h war Google",
+				"subtitle": "Bemdez, annezidi ha touristed a skrid ar c'hlaskoù-mañ. Hep lec'hienn web, dic'hwelus oc'h.",
+				"examples": [
+					"plomer sant-maloù",
+					"koefer sant-maloù",
+					"preti sant-maloù",
+					"tredaner sant-maloù",
+					"boulunti sant-maloù",
+					"saer sant-maloù"
+				]
+			},
+			"whyLocal": {
+				"tag": "Tostañ",
+				"title": "Perak labourat gant un diorroerien lec'hel",
+				"points": [
+					{
+						"title": "Dont a ran d'ho kwelet",
+						"description": "E Dinarzh emaon, 15 munutenn eus Sant-Maloù. Kavout a reomp, eskemm a reomp, kompren a ran ho oberiantiz war al lec'h."
+					},
+					{
+						"title": "Anavezout a ran marc'had Sant-Maloù",
+						"description": "Touristed, koulzad, kendalc'h lec'hel — kompren a ran diaesterioù ar c'henwerzhourion hag an artizaned e Sant-Maloù."
+					},
+					{
+						"title": "Ul lec'hienn a labour en-dro lec'hel",
+						"description": "SEO lec'hel, fichennaoueg Google, gerioù-alc'hwez pizh — ho lec'hienn a zeu war-wel pa glask ho kustumerien ho servijoù e Sant-Maloù."
+					}
+				]
+			},
+			"faq": {
+				"tag": "Goulennoù alies",
+				"title": "Goulennoù diwar-benn krouiñ lec'hienn web e Sant-Maloù",
+				"items": [
+					{
+						"question": "Pegement a goust ul lec'hienn web e Sant-Maloù?",
+						"answer": "Ma stummadoù a grog da 990 € evit ur bajenn profesionel (stumm Prezañs) ha mont a ra betek 1 990 €+ evit ul lec'hienn war-bouez. Hep frazennoù kuzhet."
+					},
+					{
+						"question": "E pegement a amzer e vo ma lec'hienn enlinenn?",
+						"answer": "Etre 2 ha 5 sizhun hervez ar stumm dibabet. Ar stumm Prezañs a zo livet e 2 sizhun, ar stumm Vitrine e 3 sizhun."
+					},
+					{
+						"question": "Ha dont a rit da Sant-Maloù?",
+						"answer": "Ya, e Dinarzh emaon, 15 munutenn eus Sant-Maloù. Dont a ran evit an emgavioù ha tennañ luc'hskeudennoù ma vez ezhomm."
+					},
+					{
+						"question": "Ha gwelus e vo ma lec'hienn war Google e Sant-Maloù?",
+						"answer": "Ya, pep lec'hienn a zo gwellakaet evit ar SEO lec'hel. Ho embregerezh a zeuio war-wel en disoc'hoù klask evit ar goulennoù liammet ouzh ho oberiantiz e Sant-Maloù."
+					}
+				]
+			}
+		},
+		"dinan": {
+			"hero": {
+				"title": "Krouiñ lec'hienn web e Dinan",
+				"subtitle": "Ul lec'hienn modern evit artizaned ha kenwerzhourion Dinan hag ar c'hreiz-kêr istorel. Gwelus war Google, soñjet evit ho kustumerien.",
+				"cta": "Goulenn un devis digoust"
+			},
+			"searchExamples": {
+				"tag": "SEO lec'hel",
+				"title": "Ho kustumerien a glask ac'hanoc'h war Google",
+				"subtitle": "Bemdez, annezidi ha gweladennerion a skrid ar c'hlaskoù-mañ. Hep lec'hienn web, dic'hwelus oc'h.",
+				"examples": [
+					"saer dinan",
+					"tredaner dinan",
+					"preti dinan",
+					"koefer dinan",
+					"plomer dinan",
+					"artizan dinan"
+				]
+			},
+			"whyLocal": {
+				"tag": "Tostañ",
+				"title": "Perak labourat gant un diorroerien lec'hel",
+				"points": [
+					{
+						"title": "Dont a ran d'ho kwelet",
+						"description": "E Dinarzh emaon, 25 munutenn eus Dinan. Kavout a reomp, eskemm a reomp, kompren a ran ho oberiantiz war al lec'h."
+					},
+					{
+						"title": "Anavezout a ran marc'had Dinan",
+						"description": "Kêr kreizennaouek touristel, artizaned arz, kenwerzhourion ar c'hreiz-kêr istorel — kompren a ran ho tiaesterioù."
+					},
+					{
+						"title": "Ul lec'hienn a labour en-dro lec'hel",
+						"description": "SEO lec'hel, fichennaoueg Google, gerioù-alc'hwez pizh — ho lec'hienn a zeu war-wel pa glask ho kustumerien ho servijoù e Dinan."
+					}
+				]
+			},
+			"faq": {
+				"tag": "Goulennoù alies",
+				"title": "Goulennoù diwar-benn krouiñ lec'hienn web e Dinan",
+				"items": [
+					{
+						"question": "Pegement a goust ul lec'hienn web e Dinan?",
+						"answer": "Ma stummadoù a grog da 990 € evit ur bajenn profesionel (stumm Prezañs) ha mont a ra betek 1 990 €+ evit ul lec'hienn war-bouez. Hep frazennoù kuzhet."
+					},
+					{
+						"question": "E pegement a amzer e vo ma lec'hienn enlinenn?",
+						"answer": "Etre 2 ha 5 sizhun hervez ar stumm dibabet. Ar stumm Prezañs a zo livet e 2 sizhun, ar stumm Vitrine e 3 sizhun."
+					},
+					{
+						"question": "Ha dont a rit da Dinan?",
+						"answer": "Ya, e Dinarzh emaon, 25 munutenn eus Dinan. Dont a ran evit an emgavioù ha tennañ luc'hskeudennoù ma vez ezhomm."
+					},
+					{
+						"question": "Ha gwelus e vo ma lec'hienn war Google e Dinan?",
+						"answer": "Ya, pep lec'hienn a zo gwellakaet evit ar SEO lec'hel. Ho embregerezh a zeuio war-wel en disoc'hoù klask evit ar goulennoù liammet ouzh ho oberiantiz e Dinan."
+					}
+				]
+			}
+		},
+		"dinard": {
+			"hero": {
+				"title": "Krouiñ lec'hienn web e Dinarzh",
+				"subtitle": "Ho tiorroerien web e Dinarzh. Lec'hiennoù vitrine evit artizaned ha kenwerzhourion Aod an Emrodez.",
+				"cta": "Goulenn un devis digoust"
+			},
+			"searchExamples": {
+				"tag": "SEO lec'hel",
+				"title": "Ho kustumerien a glask ac'hanoc'h war Google",
+				"subtitle": "Bemdez, annezidi ha vakañserion a skrid ar c'hlaskoù-mañ. Hep lec'hienn web, dic'hwelus oc'h.",
+				"examples": [
+					"kareller dinarzh",
+					"plomer dinarzh",
+					"koefer dinarzh",
+					"preti dinarzh",
+					"boulunti dinarzh",
+					"artizan dinarzh"
+				]
+			},
+			"whyLocal": {
+				"tag": "Tostañ",
+				"title": "Perak labourat gant un diorroerien lec'hel",
+				"points": [
+					{
+						"title": "E Dinarzh emaon",
+						"description": "N'eo ket ret klask pell — amañ on. Kavout a reomp penn-ouzh-penn, kompren a ran ho oberiantiz."
+					},
+					{
+						"title": "Anavezout a ran marc'had Dinarzh",
+						"description": "Stasion balneel, stalioù tost, artizaned ar savadurioù — anavezout a ran diaesterioù Dinarzh hag Aod an Emrodez."
+					},
+					{
+						"title": "Ul lec'hienn a labour en-dro lec'hel",
+						"description": "SEO lec'hel, fichennaoueg Google, gerioù-alc'hwez pizh — ho lec'hienn a zeu war-wel pa glask ho kustumerien ho servijoù e Dinarzh."
+					}
+				]
+			},
+			"faq": {
+				"tag": "Goulennoù alies",
+				"title": "Goulennoù diwar-benn krouiñ lec'hienn web e Dinarzh",
+				"items": [
+					{
+						"question": "Pegement a goust ul lec'hienn web e Dinarzh?",
+						"answer": "Ma stummadoù a grog da 990 € evit ur bajenn profesionel (stumm Prezañs) ha mont a ra betek 1 990 €+ evit ul lec'hienn war-bouez. Hep frazennoù kuzhet."
+					},
+					{
+						"question": "E pegement a amzer e vo ma lec'hienn enlinenn?",
+						"answer": "Etre 2 ha 5 sizhun hervez ar stumm dibabet. Ar stumm Prezañs a zo livet e 2 sizhun, ar stumm Vitrine e 3 sizhun."
+					},
+					{
+						"question": "Perak dibab un diorroerien e Dinarzh?",
+						"answer": "Rak amañ on. Pas a visio dispersonel — kavout a reomp penn-ouzh-penn. Anavezout a ran ar gêr, ar c'henwerzhourion hag an ezhommoù lec'hel."
+					},
+					{
+						"question": "Ha gwelus e vo ma lec'hienn war Google e Dinarzh?",
+						"answer": "Ya, pep lec'hienn a zo gwellakaet evit ar SEO lec'hel. Ho embregerezh a zeuio war-wel en disoc'hoù klask evit ar goulennoù liammet ouzh ho oberiantiz e Dinarzh."
+					}
+				]
+			}
+		},
+		"crossLinks": {
+			"tag": "Takadoù labour",
+			"title": "Labourat a ran ivez er c'hêrioù-mañ",
+			"viewPage": "Krouiñ lec'hienn web {city}"
+		}
 	}
 }

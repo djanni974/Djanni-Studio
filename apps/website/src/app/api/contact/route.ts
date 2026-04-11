@@ -55,10 +55,13 @@ function getResend() {
 }
 
 const RECIPIENT = process.env.CONTACT_EMAIL || "contact@djannistudio.fr"
+const N8N_WEBHOOK_URL = process.env.N8N_WEBHOOK_URL || ""
+const N8N_WEBHOOK_SECRET = process.env.N8N_WEBHOOK_SECRET || ""
 
 type ContactPayload = {
 	name: string
 	email: string
+	phone?: string
 	projectType: string
 	budget: string
 	deadline: string
@@ -140,6 +143,16 @@ function validate(data: unknown): data is ContactPayload {
 		)
 	)
 		return false
+
+	// Phone format (optional) — digits, spaces, +, -, (, ) only
+	if (typeof d.phone === "string" && d.phone.length > 0) {
+		if (!/^[0-9\s+\-().]+$/.test(d.phone)) return false
+	}
+
+	// existingUrl format (optional) — must be http(s) if provided
+	if (typeof d.existingUrl === "string" && d.existingUrl.length > 0) {
+		if (!/^https?:\/\/.+/i.test(d.existingUrl)) return false
+	}
 
 	return true
 }
@@ -326,6 +339,12 @@ function escapeHtml(str: string): string {
 
 export async function POST(request: Request) {
 	try {
+		// ─── Content-Type guard ──────────────────────────────
+		const contentType = request.headers.get("content-type") || ""
+		if (!contentType.includes("application/json")) {
+			return NextResponse.json({ error: "Content-Type invalide." }, { status: 415 })
+		}
+
 		// ─── Payload size guard ──────────────────────────────
 		const contentLength = Number(request.headers.get("content-length") || 0)
 		if (contentLength > 10_000) {
@@ -361,6 +380,13 @@ export async function POST(request: Request) {
 			return NextResponse.json({ success: true })
 		}
 
+		// ─── Sanitize: trim all string fields ────────────────
+		for (const key of Object.keys(body)) {
+			if (typeof body[key] === "string") {
+				body[key] = body[key].trim()
+			}
+		}
+
 		if (!validate(body)) {
 			return NextResponse.json(
 				{ error: "Veuillez remplir tous les champs obligatoires." },
@@ -387,6 +413,30 @@ export async function POST(request: Request) {
 				html: buildConfirmationHtml(body),
 			}),
 		])
+
+		// Notification SMS via n8n (fire-and-forget)
+		if (N8N_WEBHOOK_URL) {
+			fetch(N8N_WEBHOOK_URL, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					...(N8N_WEBHOOK_SECRET && { Authorization: `Bearer ${N8N_WEBHOOK_SECRET}` }),
+				},
+				body: JSON.stringify({
+					name: body.name,
+					email: body.email,
+					phone: body.phone,
+					message: body.message,
+					projectType: body.projectType,
+					budget: body.budget,
+					deadline: body.deadline,
+					businessName: body.businessName,
+					existingUrl: body.existingUrl,
+				}),
+			}).catch((err) => {
+				console.warn("[contact] n8n webhook error:", err)
+			})
+		}
 
 		if (notif.error) {
 			console.error("[contact] Resend notification error:", notif.error)

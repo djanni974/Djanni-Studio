@@ -4,6 +4,8 @@ import createNextIntlPlugin from "next-intl/plugin"
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts")
 
+const isDev = process.env.NODE_ENV === "development"
+
 const nextConfig: NextConfig = {
 	poweredByHeader: false,
 	transpilePackages: ["@repo/ui"],
@@ -30,6 +32,10 @@ const nextConfig: NextConfig = {
 			{
 				source: "/:path*",
 				headers: [
+					{
+						key: "Strict-Transport-Security",
+						value: "max-age=31536000; includeSubDomains; preload",
+					},
 					{ key: "X-Content-Type-Options", value: "nosniff" },
 					{ key: "X-Frame-Options", value: "DENY" },
 					{ key: "X-DNS-Prefetch-Control", value: "off" },
@@ -40,8 +46,7 @@ const nextConfig: NextConfig = {
 					},
 					{
 						key: "Content-Security-Policy",
-						value:
-							"default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'",
+						value: `default-src 'self'; script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'`,
 					},
 				],
 			},
@@ -60,24 +65,6 @@ const nextConfig: NextConfig = {
 					},
 				],
 			},
-			{
-				source: "/_next/static/:path*",
-				headers: [
-					{
-						key: "Cache-Control",
-						value: "public, max-age=31536000, immutable",
-					},
-				],
-			},
-			{
-				source: "/_next/image/:path*",
-				headers: [
-					{
-						key: "Cache-Control",
-						value: "public, max-age=86400, stale-while-revalidate=604800",
-					},
-				],
-			},
 		]
 	},
 }
@@ -85,5 +72,5 @@ const nextConfig: NextConfig = {
 export default withSerwist({
 	swSrc: "src/app/sw.ts",
 	swDest: "public/sw.js",
-	disable: process.env.NODE_ENV === "development",
+	disable: isDev,
 })(withNextIntl(nextConfig))

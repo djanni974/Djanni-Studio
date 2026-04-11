@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"title": "Création de sites web pour artisans & commerçants à Dinard et Saint-Malo",
+		"title": "Sites web artisans Dinard & Saint-Malo | Djanni",
 		"description": "Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises. Un site qui vous ressemble et ramène des clients.",
 		"about": {
 			"title": "Ancien charpentier devenu développeur web à Dinard | Djanni Studio",
@@ -37,6 +37,20 @@
 		"offreSurMesure": {
 			"title": "Offre Sur mesure | à partir de 1 990 € | Djanni Studio",
 			"description": "Prise de RDV, blog CMS, catalogue, multilingue. Un site construit exactement pour vos besoins. Devis personnalisé après échange de 30 minutes."
+		},
+		"cityPages": {
+			"saintMalo": {
+				"title": "Création site web à Saint-Malo | Djanni Studio",
+				"description": "Développeur web à Saint-Malo. Sites vitrines modernes pour artisans et commerçants malouins. À partir de 990 €, livré en 2-3 semaines."
+			},
+			"dinan": {
+				"title": "Création site web à Dinan | Djanni Studio",
+				"description": "Développeur web pour artisans et commerçants à Dinan. Sites vitrines modernes, SEO local, à partir de 990 €. Livré en 2-3 semaines."
+			},
+			"dinard": {
+				"title": "Création site web à Dinard | Djanni Studio",
+				"description": "Votre développeur web à Dinard. Sites vitrines pour artisans et commerçants de la Côte d'Émeraude. À partir de 990 €, livré en 2-3 semaines."
+			}
 		}
 	},
 	"breadcrumb": {
@@ -49,7 +63,10 @@
 		"avis": "Avis",
 		"cgv": "CGV",
 		"mentionsLegales": "Mentions légales",
-		"politiqueConfidentialite": "Politique de confidentialité"
+		"politiqueConfidentialite": "Politique de confidentialité",
+		"citySaintMalo": "Création site web Saint-Malo",
+		"cityDinan": "Création site web Dinan",
+		"cityDinard": "Création site web Dinard"
 	},
 	"nav": {
 		"realisations": "Réalisations",
@@ -641,7 +658,8 @@
 		"title": "Des projets qui parlent d'eux-mêmes.",
 		"subtitle": "Chaque site est une histoire. Découvrez comment j'ai aidé des artisans et commerçants à se démarquer en ligne.",
 		"intro": "Restaurants, salons de coiffure, artisans du bâtiment, dépôts-vente : chaque projet ci-dessous a été conçu sur mesure pour répondre aux besoins spécifiques d'un commerce local en Bretagne. Design personnalisé, performances optimisées et référencement local inclus.",
-		"ctaIntro": "Voir les offres"
+		"ctaIntro": "Voir les offres",
+		"filterAll": "Tous"
 	},
 	"caseStudy": {
 		"backLink": "Retour aux réalisations",
@@ -809,7 +827,13 @@
 		"paymentTransfer": "Virement",
 		"paymentCard": "Carte bancaire",
 		"paymentCheck": "Chèque",
-		"copyright": "© 2026 Djanni Studio · Tous droits réservés"
+		"copyright": "© 2026 Djanni Studio · Tous droits réservés",
+		"zones": "Zones d'intervention",
+		"cities": {
+			"saintMalo": "Création site web Saint-Malo",
+			"dinan": "Création site web Dinan",
+			"dinard": "Création site web Dinard"
+		}
 	},
 	"sitemap": {
 		"metaTitle": "Plan du site | Djanni Studio",
@@ -1001,5 +1025,192 @@
 		"compare": "Comparer",
 		"cta": "Demander un devis",
 		"back": "Toutes les offres"
+	},
+	"cityPages": {
+		"saintMalo": {
+			"hero": {
+				"title": "Création de site web à Saint-Malo",
+				"subtitle": "Un site professionnel pour les artisans et commerçants de Saint-Malo et de l'intra-muros. Visible sur Google, pensé pour vos clients.",
+				"cta": "Demander un devis gratuit"
+			},
+			"searchExamples": {
+				"tag": "SEO local",
+				"title": "Vos clients vous cherchent sur Google",
+				"subtitle": "Chaque jour, des habitants et des touristes tapent ces recherches. Sans site web, vous êtes invisible.",
+				"examples": [
+					"plombier saint-malo",
+					"coiffeur saint-malo",
+					"restaurant saint-malo",
+					"électricien saint-malo",
+					"boulangerie saint-malo",
+					"menuisier saint-malo"
+				]
+			},
+			"whyLocal": {
+				"tag": "Proximité",
+				"title": "Pourquoi travailler avec un développeur local",
+				"points": [
+					{
+						"title": "Je me déplace chez vous",
+						"description": "Basé à Dinard, je suis à 15 minutes de Saint-Malo. On se rencontre, on échange, je comprends votre activité sur place."
+					},
+					{
+						"title": "Je connais le marché malouin",
+						"description": "Tourisme, saisonnalité, concurrence locale — je comprends les enjeux des commerçants et artisans de Saint-Malo."
+					},
+					{
+						"title": "Un site qui performe localement",
+						"description": "SEO local, fiche Google, mots-clés ciblés — votre site apparaît quand vos clients cherchent vos services à Saint-Malo."
+					}
+				]
+			},
+			"faq": {
+				"tag": "Questions fréquentes",
+				"title": "Questions sur la création de site web à Saint-Malo",
+				"items": [
+					{
+						"question": "Combien coûte un site web à Saint-Malo ?",
+						"answer": "Mes formules commencent à 990 € pour une page professionnelle (offre Présence) et vont jusqu'à 1 990 € et plus pour un site sur mesure. Pas de frais cachés."
+					},
+					{
+						"question": "En combien de temps mon site sera-t-il en ligne ?",
+						"answer": "Entre 2 et 5 semaines selon la formule choisie. L'offre Présence est livrée en 2 semaines, l'offre Vitrine en 3 semaines."
+					},
+					{
+						"question": "Est-ce que vous vous déplacez à Saint-Malo ?",
+						"answer": "Oui, je suis basé à Dinard, à 15 minutes de Saint-Malo. Je me déplace pour les rendez-vous et la prise de photos si nécessaire."
+					},
+					{
+						"question": "Mon site sera-t-il visible sur Google à Saint-Malo ?",
+						"answer": "Oui, chaque site est optimisé pour le SEO local. Votre entreprise apparaîtra dans les résultats de recherche pour les requêtes liées à votre activité à Saint-Malo."
+					}
+				]
+			}
+		},
+		"dinan": {
+			"hero": {
+				"title": "Création de site web à Dinan",
+				"subtitle": "Un site moderne pour les artisans et commerçants de Dinan et du centre historique. Visible sur Google, pensé pour vos clients.",
+				"cta": "Demander un devis gratuit"
+			},
+			"searchExamples": {
+				"tag": "SEO local",
+				"title": "Vos clients vous cherchent sur Google",
+				"subtitle": "Chaque jour, des habitants et des visiteurs tapent ces recherches. Sans site web, vous êtes invisible.",
+				"examples": [
+					"menuisier dinan",
+					"électricien dinan",
+					"restaurant dinan",
+					"coiffeur dinan",
+					"plombier dinan",
+					"artisan d'art dinan"
+				]
+			},
+			"whyLocal": {
+				"tag": "Proximité",
+				"title": "Pourquoi travailler avec un développeur local",
+				"points": [
+					{
+						"title": "Je me déplace chez vous",
+						"description": "Basé à Dinard, je suis à 25 minutes de Dinan. On se rencontre, on échange, je comprends votre activité sur place."
+					},
+					{
+						"title": "Je connais le marché dinanais",
+						"description": "Ville médiévale touristique, artisans d'art, commerçants du centre historique — je comprends vos enjeux."
+					},
+					{
+						"title": "Un site qui performe localement",
+						"description": "SEO local, fiche Google, mots-clés ciblés — votre site apparaît quand vos clients cherchent vos services à Dinan."
+					}
+				]
+			},
+			"faq": {
+				"tag": "Questions fréquentes",
+				"title": "Questions sur la création de site web à Dinan",
+				"items": [
+					{
+						"question": "Combien coûte un site web à Dinan ?",
+						"answer": "Mes formules commencent à 990 € pour une page professionnelle (offre Présence) et vont jusqu'à 1 990 € et plus pour un site sur mesure. Pas de frais cachés."
+					},
+					{
+						"question": "En combien de temps mon site sera-t-il en ligne ?",
+						"answer": "Entre 2 et 5 semaines selon la formule choisie. L'offre Présence est livrée en 2 semaines, l'offre Vitrine en 3 semaines."
+					},
+					{
+						"question": "Est-ce que vous vous déplacez à Dinan ?",
+						"answer": "Oui, je suis basé à Dinard, à 25 minutes de Dinan. Je me déplace pour les rendez-vous et la prise de photos si nécessaire."
+					},
+					{
+						"question": "Mon site sera-t-il visible sur Google à Dinan ?",
+						"answer": "Oui, chaque site est optimisé pour le SEO local. Votre entreprise apparaîtra dans les résultats de recherche pour les requêtes liées à votre activité à Dinan."
+					}
+				]
+			}
+		},
+		"dinard": {
+			"hero": {
+				"title": "Création de site web à Dinard",
+				"subtitle": "Votre développeur web basé à Dinard. Sites vitrines pour artisans et commerçants de la Côte d'Émeraude.",
+				"cta": "Demander un devis gratuit"
+			},
+			"searchExamples": {
+				"tag": "SEO local",
+				"title": "Vos clients vous cherchent sur Google",
+				"subtitle": "Chaque jour, des habitants et des vacanciers tapent ces recherches. Sans site web, vous êtes invisible.",
+				"examples": [
+					"carreleur dinard",
+					"plombier dinard",
+					"coiffeur dinard",
+					"restaurant dinard",
+					"boulangerie dinard",
+					"artisan dinard"
+				]
+			},
+			"whyLocal": {
+				"tag": "Proximité",
+				"title": "Pourquoi travailler avec un développeur local",
+				"points": [
+					{
+						"title": "Je suis basé à Dinard",
+						"description": "Pas besoin de chercher loin — je suis sur place. On se rencontre en face à face, je comprends votre activité."
+					},
+					{
+						"title": "Je connais le marché dinardais",
+						"description": "Station balnéaire, commerces de proximité, artisans du bâtiment — je connais les enjeux de Dinard et de la Côte d'Émeraude."
+					},
+					{
+						"title": "Un site qui performe localement",
+						"description": "SEO local, fiche Google, mots-clés ciblés — votre site apparaît quand vos clients cherchent vos services à Dinard."
+					}
+				]
+			},
+			"faq": {
+				"tag": "Questions fréquentes",
+				"title": "Questions sur la création de site web à Dinard",
+				"items": [
+					{
+						"question": "Combien coûte un site web à Dinard ?",
+						"answer": "Mes formules commencent à 990 € pour une page professionnelle (offre Présence) et vont jusqu'à 1 990 € et plus pour un site sur mesure. Pas de frais cachés."
+					},
+					{
+						"question": "En combien de temps mon site sera-t-il en ligne ?",
+						"answer": "Entre 2 et 5 semaines selon la formule choisie. L'offre Présence est livrée en 2 semaines, l'offre Vitrine en 3 semaines."
+					},
+					{
+						"question": "Pourquoi choisir un développeur basé à Dinard ?",
+						"answer": "Parce que je suis sur place. Pas de visio impersonnelle — on se retrouve en face à face. Je connais la ville, les commerçants et les besoins locaux."
+					},
+					{
+						"question": "Mon site sera-t-il visible sur Google à Dinard ?",
+						"answer": "Oui, chaque site est optimisé pour le SEO local. Votre entreprise apparaîtra dans les résultats de recherche pour les requêtes liées à votre activité à Dinard."
+					}
+				]
+			}
+		},
+		"crossLinks": {
+			"tag": "Zones d'intervention",
+			"title": "Je travaille aussi dans ces villes",
+			"viewPage": "Création site web {city}"
+		}
 	}
 }

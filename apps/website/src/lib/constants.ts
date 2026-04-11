@@ -1,3 +1,39 @@
+export type CityPage = {
+	slug: string
+	cityKey: string
+	cityName: string
+	postalCode: string
+	latitude: number
+	longitude: number
+}
+
+export const CITY_PAGES: CityPage[] = [
+	{
+		slug: "creation-site-web-saint-malo",
+		cityKey: "saintMalo",
+		cityName: "Saint-Malo",
+		postalCode: "35400",
+		latitude: 48.6493,
+		longitude: -1.989,
+	},
+	{
+		slug: "creation-site-web-dinan",
+		cityKey: "dinan",
+		cityName: "Dinan",
+		postalCode: "22100",
+		latitude: 48.4534,
+		longitude: -2.0502,
+	},
+	{
+		slug: "creation-site-web-dinard",
+		cityKey: "dinard",
+		cityName: "Dinard",
+		postalCode: "35800",
+		latitude: 48.6328,
+		longitude: -2.0688,
+	},
+]
+
 export const NAV_LINKS = [
 	{ label: "Réalisations", href: "/realisations" },
 	{ label: "Offres", href: "/offres" },
@@ -114,6 +150,46 @@ export const PROJECTS: Project[] = [
 			"Avis Google mis en avant",
 		],
 		techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+	},
+	{
+		name: "L'Artisane",
+		slug: "artisane-dinard",
+		type: "Concept — Salon de coiffure",
+		accentColor: "#8B7D56",
+		logoText: "LA",
+		image: "/projects/artisane-dinard.webp",
+		screenshots: [
+			"/projects/artisane-dinard.webp",
+			"/projects/artisane-dinard-apropos.webp",
+			"/projects/artisane-dinard-prestations.webp",
+			"/projects/artisane-dinard-contact.webp",
+		],
+		client: "L'Artisane",
+		location: "Dinard, Bretagne",
+		duration: "2 semaines",
+		year: "2026",
+		url: "https://l-artisane-a-dinard-website.vercel.app",
+		context:
+			"Concept réalisé pour L'Artisane, un salon de coiffure artisanal situé 1 Place de Newquay à Dinard. Ce projet illustre comment un salon indépendant peut se démarquer avec un site élégant qui reflète son savoir-faire et facilite la prise de rendez-vous.",
+		problem:
+			"Pas de site web dédié. Les clientes découvrent le salon uniquement par le bouche-à-oreille ou Instagram. Impossible de consulter les prestations, les tarifs ou les horaires sans appeler. Aucune visibilité sur Google pour les recherches locales.",
+		solution:
+			"Site vitrine raffiné aux tons crème et vert doré, fidèle à l'identité artisanale du salon. Page prestations détaillée avec tarifs, formulaire de contact avec réservation en ligne, horaires d'ouverture et Google Maps intégrés. Structure SEO locale optimisée.",
+		results: [
+			"Score Lighthouse 97/100",
+			"Chargement sous les 1.2s",
+			"4 pages conçues et intégrées",
+			"100% responsive mobile et desktop",
+		],
+		techStack: [
+			"Next.js",
+			"React",
+			"TypeScript",
+			"Tailwind CSS",
+			"Keystatic",
+			"Framer Motion",
+			"Vercel",
+		],
 	},
 ]
 

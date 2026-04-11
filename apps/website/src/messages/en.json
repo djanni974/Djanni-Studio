@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"title": "Website creation for craftspeople & local businesses in Dinard and Saint-Malo",
+		"title": "Websites for craftspeople Dinard & Saint-Malo | Djanni",
 		"description": "I create modern websites for local craftspeople and shop owners. No jargon, no surprises. Just a site that represents you and brings in customers.",
 		"about": {
 			"title": "Former carpenter turned web developer in Dinard | Djanni Studio",
@@ -37,6 +37,20 @@
 		"offreSurMesure": {
 			"title": "Custom Plan · from 1 990 € | Djanni Studio",
 			"description": "Online booking, CMS blog, catalogue, multilingual. A site built exactly for your needs. Custom quote after a 30-minute call."
+		},
+		"cityPages": {
+			"saintMalo": {
+				"title": "Website creation in Saint-Malo | Djanni Studio",
+				"description": "Web developer in Saint-Malo. Modern showcase websites for local craftspeople and shop owners. From €990, delivered in 2-3 weeks."
+			},
+			"dinan": {
+				"title": "Website creation in Dinan | Djanni Studio",
+				"description": "Web developer for craftspeople and local businesses in Dinan. Modern websites, local SEO, from €990. Delivered in 2-3 weeks."
+			},
+			"dinard": {
+				"title": "Website creation in Dinard | Djanni Studio",
+				"description": "Your web developer in Dinard. Showcase websites for craftspeople and shop owners on the Côte d'Émeraude. From €990, delivered in 2-3 weeks."
+			}
 		}
 	},
 	"breadcrumb": {
@@ -49,7 +63,10 @@
 		"avis": "Reviews",
 		"cgv": "Terms",
 		"mentionsLegales": "Legal Notice",
-		"politiqueConfidentialite": "Privacy Policy"
+		"politiqueConfidentialite": "Privacy Policy",
+		"citySaintMalo": "Web design Saint-Malo",
+		"cityDinan": "Web design Dinan",
+		"cityDinard": "Web design Dinard"
 	},
 	"nav": {
 		"realisations": "Portfolio",
@@ -641,7 +658,8 @@
 		"title": "Projects that speak for themselves.",
 		"subtitle": "Each site is a story. Discover how I helped craftspeople and local businesses stand out online.",
 		"intro": "Restaurants, hair salons, construction craftspeople, second-hand shops: each project below was custom-built to meet the specific needs of a local business in Brittany. Custom design, optimised performance and local SEO included.",
-		"ctaIntro": "See pricing"
+		"ctaIntro": "See pricing",
+		"filterAll": "All"
 	},
 	"caseStudy": {
 		"backLink": "Back to portfolio",
@@ -809,7 +827,13 @@
 		"paymentTransfer": "Bank transfer",
 		"paymentCard": "Credit card",
 		"paymentCheck": "Cheque",
-		"copyright": "© 2026 Djanni Studio · All rights reserved"
+		"copyright": "© 2026 Djanni Studio · All rights reserved",
+		"zones": "Service areas",
+		"cities": {
+			"saintMalo": "Web design Saint-Malo",
+			"dinan": "Web design Dinan",
+			"dinard": "Web design Dinard"
+		}
 	},
 	"sitemap": {
 		"metaTitle": "Sitemap | Djanni Studio",
@@ -998,5 +1022,192 @@
 		"compare": "Compare",
 		"cta": "Request a quote",
 		"back": "All plans"
+	},
+	"cityPages": {
+		"saintMalo": {
+			"hero": {
+				"title": "Website creation in Saint-Malo",
+				"subtitle": "A professional website for craftspeople and shop owners in Saint-Malo and the walled city. Visible on Google, designed for your customers.",
+				"cta": "Get a free quote"
+			},
+			"searchExamples": {
+				"tag": "Local SEO",
+				"title": "Your customers are searching for you on Google",
+				"subtitle": "Every day, locals and tourists type these searches. Without a website, you're invisible.",
+				"examples": [
+					"plumber saint-malo",
+					"hairdresser saint-malo",
+					"restaurant saint-malo",
+					"electrician saint-malo",
+					"bakery saint-malo",
+					"carpenter saint-malo"
+				]
+			},
+			"whyLocal": {
+				"tag": "Local presence",
+				"title": "Why work with a local developer",
+				"points": [
+					{
+						"title": "I come to you",
+						"description": "Based in Dinard, I'm 15 minutes from Saint-Malo. We meet in person, I understand your business on the ground."
+					},
+					{
+						"title": "I know the Saint-Malo market",
+						"description": "Tourism, seasonality, local competition — I understand the challenges facing craftspeople and shop owners in Saint-Malo."
+					},
+					{
+						"title": "A site that performs locally",
+						"description": "Local SEO, Google Business Profile, targeted keywords — your site shows up when customers search for your services in Saint-Malo."
+					}
+				]
+			},
+			"faq": {
+				"tag": "FAQ",
+				"title": "Questions about website creation in Saint-Malo",
+				"items": [
+					{
+						"question": "How much does a website cost in Saint-Malo?",
+						"answer": "My plans start at €990 for a professional one-page site (Presence plan) and go up to €1,990+ for a custom site. No hidden fees."
+					},
+					{
+						"question": "How long until my site is live?",
+						"answer": "Between 2 and 5 weeks depending on the plan. The Presence plan is delivered in 2 weeks, the Showcase plan in 3 weeks."
+					},
+					{
+						"question": "Do you travel to Saint-Malo?",
+						"answer": "Yes, I'm based in Dinard, 15 minutes from Saint-Malo. I travel for meetings and photo shoots if needed."
+					},
+					{
+						"question": "Will my site be visible on Google in Saint-Malo?",
+						"answer": "Yes, every site is optimised for local SEO. Your business will appear in search results for queries related to your trade in Saint-Malo."
+					}
+				]
+			}
+		},
+		"dinan": {
+			"hero": {
+				"title": "Website creation in Dinan",
+				"subtitle": "A modern website for craftspeople and shop owners in Dinan and its historic centre. Visible on Google, designed for your customers.",
+				"cta": "Get a free quote"
+			},
+			"searchExamples": {
+				"tag": "Local SEO",
+				"title": "Your customers are searching for you on Google",
+				"subtitle": "Every day, locals and visitors type these searches. Without a website, you're invisible.",
+				"examples": [
+					"carpenter dinan",
+					"electrician dinan",
+					"restaurant dinan",
+					"hairdresser dinan",
+					"plumber dinan",
+					"artisan dinan"
+				]
+			},
+			"whyLocal": {
+				"tag": "Local presence",
+				"title": "Why work with a local developer",
+				"points": [
+					{
+						"title": "I come to you",
+						"description": "Based in Dinard, I'm 25 minutes from Dinan. We meet in person, I understand your business on the ground."
+					},
+					{
+						"title": "I know the Dinan market",
+						"description": "Medieval tourist town, art craftspeople, historic centre shops — I understand your challenges."
+					},
+					{
+						"title": "A site that performs locally",
+						"description": "Local SEO, Google Business Profile, targeted keywords — your site shows up when customers search for your services in Dinan."
+					}
+				]
+			},
+			"faq": {
+				"tag": "FAQ",
+				"title": "Questions about website creation in Dinan",
+				"items": [
+					{
+						"question": "How much does a website cost in Dinan?",
+						"answer": "My plans start at €990 for a professional one-page site (Presence plan) and go up to €1,990+ for a custom site. No hidden fees."
+					},
+					{
+						"question": "How long until my site is live?",
+						"answer": "Between 2 and 5 weeks depending on the plan. The Presence plan is delivered in 2 weeks, the Showcase plan in 3 weeks."
+					},
+					{
+						"question": "Do you travel to Dinan?",
+						"answer": "Yes, I'm based in Dinard, 25 minutes from Dinan. I travel for meetings and photo shoots if needed."
+					},
+					{
+						"question": "Will my site be visible on Google in Dinan?",
+						"answer": "Yes, every site is optimised for local SEO. Your business will appear in search results for queries related to your trade in Dinan."
+					}
+				]
+			}
+		},
+		"dinard": {
+			"hero": {
+				"title": "Website creation in Dinard",
+				"subtitle": "Your web developer based in Dinard. Showcase websites for craftspeople and shop owners on the Côte d'Émeraude.",
+				"cta": "Get a free quote"
+			},
+			"searchExamples": {
+				"tag": "Local SEO",
+				"title": "Your customers are searching for you on Google",
+				"subtitle": "Every day, locals and holidaymakers type these searches. Without a website, you're invisible.",
+				"examples": [
+					"tiler dinard",
+					"plumber dinard",
+					"hairdresser dinard",
+					"restaurant dinard",
+					"bakery dinard",
+					"tradesman dinard"
+				]
+			},
+			"whyLocal": {
+				"tag": "Local presence",
+				"title": "Why work with a local developer",
+				"points": [
+					{
+						"title": "I'm based in Dinard",
+						"description": "No need to look far — I'm right here. We meet face to face, I understand your business."
+					},
+					{
+						"title": "I know the Dinard market",
+						"description": "Seaside resort, local shops, building trades — I know the challenges of Dinard and the Côte d'Émeraude."
+					},
+					{
+						"title": "A site that performs locally",
+						"description": "Local SEO, Google Business Profile, targeted keywords — your site shows up when customers search for your services in Dinard."
+					}
+				]
+			},
+			"faq": {
+				"tag": "FAQ",
+				"title": "Questions about website creation in Dinard",
+				"items": [
+					{
+						"question": "How much does a website cost in Dinard?",
+						"answer": "My plans start at €990 for a professional one-page site (Presence plan) and go up to €1,990+ for a custom site. No hidden fees."
+					},
+					{
+						"question": "How long until my site is live?",
+						"answer": "Between 2 and 5 weeks depending on the plan. The Presence plan is delivered in 2 weeks, the Showcase plan in 3 weeks."
+					},
+					{
+						"question": "Why choose a developer based in Dinard?",
+						"answer": "Because I'm right here. No impersonal video calls — we meet face to face. I know the town, the shop owners and the local needs."
+					},
+					{
+						"question": "Will my site be visible on Google in Dinard?",
+						"answer": "Yes, every site is optimised for local SEO. Your business will appear in search results for queries related to your trade in Dinard."
+					}
+				]
+			}
+		},
+		"crossLinks": {
+			"tag": "Service areas",
+			"title": "I also work in these towns",
+			"viewPage": "Website creation {city}"
+		}
 	}
 }
