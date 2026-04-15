@@ -7,13 +7,13 @@
 	--black: #0c0c0b;
 	--white: #f5f2ec;
 	--cream: #ede9e0;
-	--orange: #e8500a;
-	--orange-light: #f07040;
 	--radius: 0.75rem;
 }
 
 /* Light theme (default) */
 :root {
+	--orange: #c9331f;
+	--orange-light: #d93820;
 	--gray: #55524a;
 	--gray-light: #4a4540;
 	--background: #faf8f5;
@@ -42,6 +42,8 @@
 
 /* Dark theme */
 .dark {
+	--orange: #e8500a;
+	--orange-light: #f07040;
 	--gray: #7f7a71;
 	--gray-light: #b8b4ac;
 	--background: var(--black);
@@ -109,6 +111,12 @@
 	--font-heading: "Syne", ui-sans-serif, system-ui, sans-serif;
 
 	--animate-aurora: aurora 60s linear infinite;
+}
+
+/* A11y: dark mode CTA buttons get dark text on bright orange (contrast AA). */
+.dark .bg-djanni-orange,
+.dark .bg-djanni-orange-light {
+	color: var(--black);
 }
 
 @keyframes aurora {

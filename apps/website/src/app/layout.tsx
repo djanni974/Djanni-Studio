@@ -161,14 +161,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 				<Script id="plausible-init" strategy="afterInteractive">
 					{`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}
 				</Script>
-				<Script
-					async
-					src="https://www.googletagmanager.com/gtag/js?id=AW-18045871071"
-					strategy="afterInteractive"
-				/>
-				<Script id="google-ads" strategy="afterInteractive">
-					{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-18045871071');`}
-				</Script>
 				<script
 					type="application/ld+json"
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data

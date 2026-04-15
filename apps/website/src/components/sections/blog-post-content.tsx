@@ -1,13 +1,10 @@
 "use client"
 
 import { IconArrowLeft, IconArrowRight, IconCalendar, IconClock } from "@tabler/icons-react"
-import { motion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 import { AnimatedSection } from "@/components/ui/animated-section"
 import { Link } from "@/i18n/navigation"
 import type { BlogPost } from "@/lib/constants"
-
-const MotionLink = motion.create(Link)
 
 // ─── Custom block renderers ────────────────────────────────────
 
@@ -422,29 +419,15 @@ export function BlogPostContent({
 							</div>
 							<nav className="grid grid-cols-1 gap-4 sm:grid-cols-2">
 								{prevPost ? (
-									<MotionLink
+									<Link
 										href={`/blog/${prevPost.slug}`}
-										initial="idle"
-										whileHover="hover"
-										variants={{
-											idle: { y: 0 },
-											hover: { y: -4 },
-										}}
-										transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-										className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-surface-b p-6 transition-[border-color,box-shadow] duration-300 hover:border-djanni-orange/30 hover:shadow-[0_4px_24px_rgba(0,0,0,0.12)]"
+										className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-surface-b p-6 transition-[transform,border-color,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:border-djanni-orange/30 hover:shadow-[0_4px_24px_rgba(0,0,0,0.12)]"
 									>
 										<div className="pointer-events-none absolute bottom-0 left-0 h-24 w-24 translate-y-1/2 -translate-x-1/2 rounded-full bg-djanni-orange/4 blur-2xl" />
 										<span className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-djanni-gray/60">
-											<motion.span
-												className="inline-flex items-center justify-center rounded-full border border-border p-1 transition-[border-color,background-color] duration-300 group-hover:border-djanni-orange/40 group-hover:bg-djanni-orange/10"
-												variants={{
-													idle: { x: 0 },
-													hover: { x: -3 },
-												}}
-												transition={{ duration: 0.2 }}
-											>
+											<span className="inline-flex items-center justify-center rounded-full border border-border p-1 transition-[transform,border-color,background-color] duration-200 group-hover:-translate-x-1 group-hover:border-djanni-orange/40 group-hover:bg-djanni-orange/10">
 												<IconArrowLeft size={10} />
-											</motion.span>
+											</span>
 											{t("prevArticle")}
 										</span>
 										<span className="mt-3 font-heading text-[15px] font-bold leading-snug tracking-tight transition-colors group-hover:text-djanni-orange">
@@ -454,36 +437,22 @@ export function BlogPostContent({
 											<IconClock size={10} />
 											{prevPost.readingTime} {t("readingTime")}
 										</span>
-									</MotionLink>
+									</Link>
 								) : (
 									<div />
 								)}
 
 								{nextPost ? (
-									<MotionLink
+									<Link
 										href={`/blog/${nextPost.slug}`}
-										initial="idle"
-										whileHover="hover"
-										variants={{
-											idle: { y: 0 },
-											hover: { y: -4 },
-										}}
-										transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-										className="group relative flex flex-col items-end overflow-hidden rounded-xl border border-border bg-surface-b p-6 text-right transition-[border-color,box-shadow] duration-300 hover:border-djanni-orange/30 hover:shadow-[0_4px_24px_rgba(0,0,0,0.12)]"
+										className="group relative flex flex-col items-end overflow-hidden rounded-xl border border-border bg-surface-b p-6 text-right transition-[transform,border-color,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:border-djanni-orange/30 hover:shadow-[0_4px_24px_rgba(0,0,0,0.12)]"
 									>
 										<div className="pointer-events-none absolute right-0 bottom-0 h-24 w-24 translate-x-1/2 translate-y-1/2 rounded-full bg-djanni-orange/4 blur-2xl" />
 										<span className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-djanni-gray/60">
 											{t("nextArticle")}
-											<motion.span
-												className="inline-flex items-center justify-center rounded-full border border-border p-1 transition-[border-color,background-color] duration-300 group-hover:border-djanni-orange/40 group-hover:bg-djanni-orange/10"
-												variants={{
-													idle: { x: 0 },
-													hover: { x: 3 },
-												}}
-												transition={{ duration: 0.2 }}
-											>
+											<span className="inline-flex items-center justify-center rounded-full border border-border p-1 transition-[transform,border-color,background-color] duration-200 group-hover:translate-x-1 group-hover:border-djanni-orange/40 group-hover:bg-djanni-orange/10">
 												<IconArrowRight size={10} />
-											</motion.span>
+											</span>
 										</span>
 										<span className="mt-3 font-heading text-[15px] font-bold leading-snug tracking-tight transition-colors group-hover:text-djanni-orange">
 											{nextPost.title}
@@ -492,7 +461,7 @@ export function BlogPostContent({
 											<IconClock size={10} />
 											{nextPost.readingTime} {t("readingTime")}
 										</span>
-									</MotionLink>
+									</Link>
 								) : (
 									<div />
 								)}

@@ -1,30 +1,33 @@
 "use client"
 
-import { motion, useReducedMotion, type Variants } from "motion/react"
-import type { ReactNode } from "react"
+import { cn } from "@repo/ui/lib/utils"
+import { type ReactNode, useEffect, useRef, useState } from "react"
 
-const fadeUpVariants: Variants = {
-	hidden: { opacity: 0, y: 30 },
-	visible: {
-		opacity: 1,
-		y: 0,
-		transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-	},
-}
+function useInView<T extends Element>(rootMargin = "-80px") {
+	const ref = useRef<T | null>(null)
+	const [inView, setInView] = useState(false)
 
-const noMotionVariants: Variants = {
-	hidden: { opacity: 1, y: 0 },
-	visible: { opacity: 1, y: 0 },
-}
+	useEffect(() => {
+		const el = ref.current
+		if (!el) return
+		if (typeof IntersectionObserver === "undefined") {
+			setInView(true)
+			return
+		}
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry?.isIntersecting) {
+					setInView(true)
+					observer.disconnect()
+				}
+			},
+			{ rootMargin },
+		)
+		observer.observe(el)
+		return () => observer.disconnect()
+	}, [rootMargin])
 
-const staggerContainerVariants: Variants = {
-	hidden: {},
-	visible: { transition: { staggerChildren: 0.12 } },
-}
-
-const noStaggerVariants: Variants = {
-	hidden: {},
-	visible: {},
+	return { ref, inView }
 }
 
 export function AnimatedSection({
@@ -36,18 +39,15 @@ export function AnimatedSection({
 	className?: string
 	delay?: number
 }) {
-	const prefersReduced = useReducedMotion()
+	const { ref, inView } = useInView<HTMLDivElement>()
 	return (
-		<motion.div
-			variants={prefersReduced ? noMotionVariants : fadeUpVariants}
-			initial="hidden"
-			whileInView="visible"
-			viewport={{ once: true, margin: "-80px" }}
-			transition={{ delay }}
-			className={className}
+		<div
+			ref={ref}
+			className={cn("animate-fade-up", inView && "in-view", className)}
+			style={delay ? ({ "--fade-up-delay": `${delay}s` } as React.CSSProperties) : undefined}
 		>
 			{children}
-		</motion.div>
+		</div>
 	)
 }
 
@@ -58,25 +58,14 @@ export function StaggerContainer({
 	children: ReactNode
 	className?: string
 }) {
-	const prefersReduced = useReducedMotion()
+	const { ref, inView } = useInView<HTMLDivElement>()
 	return (
-		<motion.div
-			variants={prefersReduced ? noStaggerVariants : staggerContainerVariants}
-			initial="hidden"
-			whileInView="visible"
-			viewport={{ once: true, margin: "-80px" }}
-			className={className}
-		>
+		<div ref={ref} className={cn("stagger-container", inView && "in-view", className)}>
 			{children}
-		</motion.div>
+		</div>
 	)
 }
 
 export function StaggerItem({ children, className }: { children: ReactNode; className?: string }) {
-	const prefersReduced = useReducedMotion()
-	return (
-		<motion.div variants={prefersReduced ? noMotionVariants : fadeUpVariants} className={className}>
-			{children}
-		</motion.div>
-	)
+	return <div className={className}>{children}</div>
 }

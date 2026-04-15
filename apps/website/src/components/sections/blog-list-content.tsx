@@ -1,15 +1,12 @@
 "use client"
 
 import { IconArrowLeft, IconArrowRight, IconClock } from "@tabler/icons-react"
-import { AnimatePresence, motion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 import { useCallback, useMemo, useState } from "react"
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section"
 import { SectionHeader } from "@/components/ui/section-header"
 import { Link } from "@/i18n/navigation"
 import { BLOG_POSTS } from "@/lib/constants"
-
-const MotionLink = motion.create(Link)
 
 const POSTS_PER_PAGE = 6
 
@@ -70,16 +67,9 @@ export function BlogListContent() {
 				{/* Featured article */}
 				{featured && (
 					<AnimatedSection className="mt-16">
-						<MotionLink
+						<Link
 							href={`/blog/${featured.slug}`}
-							initial="idle"
-							whileHover="hover"
-							variants={{
-								idle: { y: 0 },
-								hover: { y: -4 },
-							}}
-							transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-							className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface-b transition-[border-color,box-shadow] duration-300 hover:border-white/16 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] md:flex-row"
+							className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface-b transition-[transform,border-color,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:border-white/16 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] md:flex-row"
 						>
 							<div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(232,80,10,0.06)_0%,transparent_60%)]" />
 							<div className="relative flex flex-1 flex-col justify-center p-8 md:p-10">
@@ -105,85 +95,56 @@ export function BlogListContent() {
 									</span>
 									<span className="inline-flex items-center gap-2 text-sm font-medium text-djanni-orange">
 										{t("readMore")}
-										<motion.span
-											className="inline-flex"
-											variants={{
-												idle: { x: 0 },
-												hover: { x: 4 },
-											}}
-											transition={{ duration: 0.2 }}
-										>
+										<span className="inline-flex transition-transform duration-200 group-hover:translate-x-1">
 											<IconArrowRight size={14} />
-										</motion.span>
+										</span>
 									</span>
 								</div>
 							</div>
-						</MotionLink>
+						</Link>
 					</AnimatedSection>
 				)}
 
 				{/* Other articles */}
 				{rest.length > 0 && (
 					<div id="blog-grid" className="scroll-mt-32">
-						<AnimatePresence mode="wait">
-							<StaggerContainer
-								key={page}
-								className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
-							>
-								{paginatedPosts.map((post) => (
-									<StaggerItem key={post.slug}>
-										<MotionLink
-											href={`/blog/${post.slug}`}
-											initial="idle"
-											whileHover="hover"
-											variants={{
-												idle: { y: 0 },
-												hover: { y: -4 },
-											}}
-											transition={{
-												duration: 0.2,
-												ease: [0.22, 1, 0.36, 1],
-											}}
-											className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface-b transition-[border-color,box-shadow] duration-300 hover:border-white/16 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
-										>
-											<div className="flex items-center justify-between border-b border-border px-6 py-3">
-												<span className="text-[11px] font-semibold uppercase tracking-wider text-djanni-orange">
-													{post.category}
-												</span>
-												<span className="flex items-center gap-1.5 text-xs text-djanni-gray">
-													<IconClock size={12} />
-													{post.readingTime} {t("minRead")}
-												</span>
-											</div>
+						<StaggerContainer key={page} className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+							{paginatedPosts.map((post) => (
+								<StaggerItem key={post.slug}>
+									<Link
+										href={`/blog/${post.slug}`}
+										className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface-b transition-[transform,border-color,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:border-white/16 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
+									>
+										<div className="flex items-center justify-between border-b border-border px-6 py-3">
+											<span className="text-[11px] font-semibold uppercase tracking-wider text-djanni-orange">
+												{post.category}
+											</span>
+											<span className="flex items-center gap-1.5 text-xs text-djanni-gray">
+												<IconClock size={12} />
+												{post.readingTime} {t("minRead")}
+											</span>
+										</div>
 
-											<div className="flex flex-1 flex-col p-6">
-												<h2 className="font-heading text-lg font-bold leading-snug transition-colors group-hover:text-djanni-orange">
-													{post.title}
-												</h2>
-												<p className="mt-3 flex-1 text-sm leading-relaxed text-djanni-gray-light">
-													{post.excerpt}
-												</p>
-												<div className="mt-6 flex items-center justify-between">
-													<span className="text-xs text-djanni-gray">
-														{formatDate(post.publishedAt)}
-													</span>
-													<motion.div
-														className="flex h-8 w-8 items-center justify-center rounded-full border border-border text-djanni-gray transition-[border-color,background-color,color] duration-300 group-hover:border-djanni-orange group-hover:bg-djanni-orange group-hover:text-white"
-														variants={{
-															idle: { x: 0 },
-															hover: { x: 4 },
-														}}
-														transition={{ duration: 0.2 }}
-													>
-														<IconArrowRight size={14} />
-													</motion.div>
+										<div className="flex flex-1 flex-col p-6">
+											<h2 className="font-heading text-lg font-bold leading-snug transition-colors group-hover:text-djanni-orange">
+												{post.title}
+											</h2>
+											<p className="mt-3 flex-1 text-sm leading-relaxed text-djanni-gray-light">
+												{post.excerpt}
+											</p>
+											<div className="mt-6 flex items-center justify-between">
+												<span className="text-xs text-djanni-gray">
+													{formatDate(post.publishedAt)}
+												</span>
+												<div className="flex h-8 w-8 items-center justify-center rounded-full border border-border text-djanni-gray transition-[transform,border-color,background-color,color] duration-200 group-hover:translate-x-1 group-hover:border-djanni-orange group-hover:bg-djanni-orange group-hover:text-white">
+													<IconArrowRight size={14} />
 												</div>
 											</div>
-										</MotionLink>
-									</StaggerItem>
-								))}
-							</StaggerContainer>
-						</AnimatePresence>
+										</div>
+									</Link>
+								</StaggerItem>
+							))}
+						</StaggerContainer>
 
 						{/* Pagination */}
 						{totalPages > 1 && (
@@ -209,24 +170,13 @@ export function BlogListContent() {
 												onClick={() => goToPage(p)}
 												className={`relative flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium transition-all duration-200 ${
 													p === page
-														? "text-white"
+														? "bg-djanni-orange text-white shadow-[0_2px_8px_rgba(232,80,10,0.3)]"
 														: "text-djanni-gray hover:bg-surface-c hover:text-foreground"
 												}`}
 												aria-label={`Page ${p}`}
 												aria-current={p === page ? "page" : undefined}
 											>
-												{p === page && (
-													<motion.span
-														layoutId="pagination-active"
-														className="absolute inset-0 rounded-full bg-djanni-orange shadow-[0_2px_8px_rgba(232,80,10,0.3)]"
-														transition={{
-															type: "spring",
-															stiffness: 400,
-															damping: 30,
-														}}
-													/>
-												)}
-												<span className="relative z-10">{p}</span>
+												{p}
 											</button>
 										))}
 

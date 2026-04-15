@@ -9,7 +9,6 @@ import {
 	IconPhone,
 	IconSend,
 } from "@tabler/icons-react"
-import { AnimatePresence, motion } from "motion/react"
 import { useTranslations } from "next-intl"
 import { type FormEvent, useRef, useState } from "react"
 import { toast } from "sonner"
@@ -232,139 +231,131 @@ export function ContactForm() {
 							<StepIndicator currentStep={currentStep} stepCount={STEPS_FIELDS.length} />
 
 							<div className="min-h-[200px]">
-								<AnimatePresence mode="wait" custom={direction}>
-									<motion.div
-										key={currentStep}
-										custom={direction}
-										initial={{ opacity: 0, x: direction * 40 }}
-										animate={{ opacity: 1, x: 0 }}
-										exit={{ opacity: 0, x: -direction * 40 }}
-										transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-									>
-										{currentStep === 0 && (
-											<div className="space-y-5">
-												<h3 className="mb-6 text-center font-heading text-lg font-bold">
-													{t("step0Title")}
-												</h3>
-												<div>
-													<label htmlFor="contact-projectType" className="sr-only">
-														{t("projectType")}
-													</label>
-													<select
-														id="contact-projectType"
-														name="projectType"
-														value={formData.projectType}
-														onChange={handleChange}
-														aria-invalid={!!errors.projectType}
-														className={cn(
-															selectClass,
-															!formData.projectType && "text-djanni-gray",
-															errors.projectType && "border-red-500/50",
-														)}
-													>
-														{PROJECT_TYPES.map((opt) => (
-															<option key={opt.value} value={opt.value} disabled={!opt.value}>
-																{opt.label}
-															</option>
-														))}
-													</select>
-													{errors.projectType && (
-														<p className="mt-1.5 text-xs text-red-400">{errors.projectType}</p>
+								<div key={currentStep} className="animate-fade-up in-view">
+									{void direction}
+									{currentStep === 0 && (
+										<div className="space-y-5">
+											<h3 className="mb-6 text-center font-heading text-lg font-bold">
+												{t("step0Title")}
+											</h3>
+											<div>
+												<label htmlFor="contact-projectType" className="sr-only">
+													{t("projectType")}
+												</label>
+												<select
+													id="contact-projectType"
+													name="projectType"
+													value={formData.projectType}
+													onChange={handleChange}
+													aria-invalid={!!errors.projectType}
+													className={cn(
+														selectClass,
+														!formData.projectType && "text-djanni-gray",
+														errors.projectType && "border-red-500/50",
 													)}
-												</div>
-												<div>
-													<label htmlFor="contact-budget" className="sr-only">
-														{t("budget")}
-													</label>
-													<select
-														id="contact-budget"
-														name="budget"
-														value={formData.budget}
-														onChange={handleChange}
-														className={cn(selectClass, !formData.budget && "text-djanni-gray")}
-													>
-														{BUDGET_RANGES.map((opt) => (
-															<option key={opt.value} value={opt.value}>
-																{opt.label}
-															</option>
-														))}
-													</select>
-												</div>
+												>
+													{PROJECT_TYPES.map((opt) => (
+														<option key={opt.value} value={opt.value} disabled={!opt.value}>
+															{opt.label}
+														</option>
+													))}
+												</select>
+												{errors.projectType && (
+													<p className="mt-1.5 text-xs text-red-400">{errors.projectType}</p>
+												)}
 											</div>
-										)}
+											<div>
+												<label htmlFor="contact-budget" className="sr-only">
+													{t("budget")}
+												</label>
+												<select
+													id="contact-budget"
+													name="budget"
+													value={formData.budget}
+													onChange={handleChange}
+													className={cn(selectClass, !formData.budget && "text-djanni-gray")}
+												>
+													{BUDGET_RANGES.map((opt) => (
+														<option key={opt.value} value={opt.value}>
+															{opt.label}
+														</option>
+													))}
+												</select>
+											</div>
+										</div>
+									)}
 
-										{currentStep === 1 && (
-											<div className="space-y-5">
-												<h3 className="mb-6 text-center font-heading text-lg font-bold">
-													{t("step1Title")}
-												</h3>
-												<div>
-													<label htmlFor="contact-name" className="sr-only">
-														{t("namePlaceholder")}
-													</label>
-													<input
-														id="contact-name"
-														type="text"
-														name="name"
-														placeholder={t("namePlaceholder")}
-														value={formData.name}
-														onChange={handleChange}
-														className={cn(inputBaseClass, errors.name && "border-red-500/50")}
-													/>
-													{errors.name && (
-														<p className="mt-1.5 text-xs text-red-400">{errors.name}</p>
-													)}
-												</div>
-												<div>
-													<label htmlFor="contact-email" className="sr-only">
-														{t("emailPlaceholder")}
-													</label>
-													<input
-														id="contact-email"
-														type="email"
-														name="email"
-														placeholder={t("emailPlaceholder")}
-														value={formData.email}
-														onChange={handleChange}
-														className={cn(inputBaseClass, errors.email && "border-red-500/50")}
-													/>
-													{errors.email && (
-														<p className="mt-1.5 text-xs text-red-400">{errors.email}</p>
-													)}
-												</div>
+									{currentStep === 1 && (
+										<div className="space-y-5">
+											<h3 className="mb-6 text-center font-heading text-lg font-bold">
+												{t("step1Title")}
+											</h3>
+											<div>
+												<label htmlFor="contact-name" className="sr-only">
+													{t("namePlaceholder")}
+												</label>
+												<input
+													id="contact-name"
+													type="text"
+													name="name"
+													placeholder={t("namePlaceholder")}
+													value={formData.name}
+													onChange={handleChange}
+													className={cn(inputBaseClass, errors.name && "border-red-500/50")}
+												/>
+												{errors.name && (
+													<p className="mt-1.5 text-xs text-red-400">{errors.name}</p>
+												)}
 											</div>
-										)}
+											<div>
+												<label htmlFor="contact-email" className="sr-only">
+													{t("emailPlaceholder")}
+												</label>
+												<input
+													id="contact-email"
+													type="email"
+													name="email"
+													placeholder={t("emailPlaceholder")}
+													value={formData.email}
+													onChange={handleChange}
+													className={cn(inputBaseClass, errors.email && "border-red-500/50")}
+												/>
+												{errors.email && (
+													<p className="mt-1.5 text-xs text-red-400">{errors.email}</p>
+												)}
+											</div>
+										</div>
+									)}
 
-										{currentStep === 2 && (
-											<div className="space-y-5">
-												<h3 className="mb-6 text-center font-heading text-lg font-bold">
-													{t("step2Title")}
-												</h3>
-												<div>
-													<label htmlFor="contact-message" className="sr-only">
-														{t("messagePlaceholder")}
-													</label>
-													<textarea
-														id="contact-message"
-														name="message"
-														placeholder={t("messagePlaceholder")}
-														rows={5}
-														value={formData.message}
-														onChange={handleChange}
-														className={cn(
-															inputBaseClass,
-															"resize-none",
-															errors.message && "border-red-500/50",
-														)}
-													/>
-													{errors.message && (
-														<p className="mt-1.5 text-xs text-red-400">{errors.message}</p>
+									{currentStep === 2 && (
+										<div className="space-y-5">
+											<h3 className="mb-6 text-center font-heading text-lg font-bold">
+												{t("step2Title")}
+											</h3>
+											<div>
+												<label htmlFor="contact-message" className="sr-only">
+													{t("messagePlaceholder")}
+												</label>
+												<textarea
+													id="contact-message"
+													name="message"
+													placeholder={t("messagePlaceholder")}
+													rows={5}
+													value={formData.message}
+													onChange={handleChange}
+													className={cn(
+														inputBaseClass,
+														"resize-none",
+														errors.message && "border-red-500/50",
 													)}
-												</div>
+												/>
+												{errors.message && (
+													<p className="mt-1.5 text-xs text-red-400">{errors.message}</p>
+												)}
 											</div>
-										)}
-									</motion.div>
-								</AnimatePresence>
+										</div>
+									)}
+								</div>
 							</div>
 
 							<div className="mt-8 flex items-center justify-between gap-4">
@@ -391,12 +382,10 @@ export function ContactForm() {
 										<IconArrowRight size={16} />
 									</button>
 								) : (
-									<motion.button
+									<button
 										type="submit"
 										disabled={submitting}
-										className="inline-flex items-center gap-2 rounded-lg bg-djanni-orange px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-djanni-orange-light disabled:opacity-60"
-										whileHover={{ y: -2 }}
-										whileTap={{ scale: 0.98 }}
+										className="inline-flex items-center gap-2 rounded-lg bg-djanni-orange px-8 py-3 text-sm font-medium text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-djanni-orange-light active:scale-[0.98] disabled:opacity-60"
 									>
 										{submitting ? (
 											<>
@@ -409,7 +398,7 @@ export function ContactForm() {
 												{t("send")}
 											</>
 										)}
-									</motion.button>
+									</button>
 								)}
 							</div>
 						</form>
