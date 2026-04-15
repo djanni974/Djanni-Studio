@@ -37,8 +37,8 @@ function parseResultStat(result: string): { stat: string; label: string } | null
 	const range = result.match(/passé de (\S+) à (\S+)/i)
 	if (range) return { stat: `${range[1]} → ${range[2]}`, label: "Temps de chargement" }
 
-	// "Score Lighthouse 98/100"
-	const score = result.match(/Score (\w+) (\d+\/\d+)/i)
+	// "Score Lighthouse 98/100" / "Score Best Practices 100/100"
+	const score = result.match(/Score (.+?) (\d+\/\d+)$/i)
 	if (score) return { stat: score[2], label: `Score ${score[1]}` }
 
 	// "Chargement sous les 1.5s"

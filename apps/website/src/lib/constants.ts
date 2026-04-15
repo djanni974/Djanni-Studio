@@ -164,22 +164,22 @@ export const PROJECTS: Project[] = [
 			"/projects/artisane-dinard-prestations.webp",
 			"/projects/artisane-dinard-contact.webp",
 		],
-		client: "L'Artisane",
+		client: "L'Artisane, Pauline Besnard",
 		location: "Dinard, Bretagne",
-		duration: "2 semaines",
+		duration: "3 semaines",
 		year: "2026",
 		url: "https://l-artisane-a-dinard-website.vercel.app",
 		context:
-			"Concept réalisé pour L'Artisane, un salon de coiffure artisanal situé 1 Place de Newquay à Dinard. Ce projet illustre comment un salon indépendant peut se démarquer avec un site élégant qui reflète son savoir-faire et facilite la prise de rendez-vous.",
+			"Pauline Besnard a passé 20 ans à perfectionner son art avant d'ouvrir son propre salon au cœur du quartier Newquay à Dinard. Spécialisée en coloration végétale et soins naturels, partenaire officielle Kydra Le Salon, elle avait tout pour attirer une clientèle exigeante, sauf un site web à la hauteur de son savoir-faire. Son salon vivait sur Instagram et le bouche-à-oreille, mais elle perdait les clientes qui cherchaient « coiffeuse Dinard » ou « coloration végétale Dinard » sur Google, et qui tombaient sur ses concurrents.",
 		problem:
-			"Pas de site web dédié. Les clientes découvrent le salon uniquement par le bouche-à-oreille ou Instagram. Impossible de consulter les prestations, les tarifs ou les horaires sans appeler. Aucune visibilité sur Google pour les recherches locales.",
+			"Créer un site qui reflète l'univers de Pauline : naturel, élégant, artisanal. Pas un template générique de salon. Un site qui donne envie de pousser la porte avant même d'y avoir mis les pieds. Les contraintes : budget maîtrisé (offre Vitrine à 1 490 €), délai serré de 3 semaines, et une cliente sans aucune expérience du web. Le process devait rester simple pour elle, le site rapide, accessible, et optimisé pour le SEO local.",
 		solution:
-			"Site vitrine raffiné aux tons crème et vert doré, fidèle à l'identité artisanale du salon. Page prestations détaillée avec tarifs, formulaire de contact avec réservation en ligne, horaires d'ouverture et Google Maps intégrés. Structure SEO locale optimisée.",
+			"Cinq pages pensées pour convertir : Accueil qui accroche, À propos qui inspire confiance, Prestations claires, Galerie qui prouve le savoir-faire, Contact qui convertit. Palette sur mesure (vert forêt profond, or subtil, crème naturel) et typographie Cormorant Garamond × Inter pour un rendu artisanal et lisible. Stack solide : Next.js App Router, TypeScript strict, Tailwind CSS v4, shadcn/ui, Resend avec rate limiting Upstash pour le formulaire, Plausible sans cookies pour les analytics, JSON-LD HairSalon pour le SEO local. Headers HTTP complets, protection CSRF, sanitization serveur : la même rigueur technique qu'un site e-commerce.",
 		results: [
-			"Score Lighthouse 97/100",
-			"Chargement sous les 1.2s",
-			"4 pages conçues et intégrées",
-			"100% responsive mobile et desktop",
+			"Score Performance 100/100",
+			"Score Accessibilité 96/100",
+			"Score Best Practices 100/100",
+			"Score SEO 100/100",
 		],
 		techStack: [
 			"Next.js",
