@@ -187,21 +187,21 @@ function buildEmailHtml(data: ContactPayload): string {
 
     <!-- Logo -->
     <div style="padding:0 0 32px 0">
-      <span style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#1a1a18;letter-spacing:-0.02em">Djanni<span style="color:#e8500a">.</span></span>
+      <span style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#1a1a18;letter-spacing:-0.02em">Djanni<span style="color:#c9331f">.</span></span>
     </div>
 
     <!-- Card -->
     <div style="background:#ffffff;border-radius:12px;border:1px solid rgba(0,0,0,0.08);overflow:hidden">
 
       <!-- Orange accent bar -->
-      <div style="height:3px;background:linear-gradient(to right,#e8500a,#f07040)"></div>
+      <div style="height:3px;background:linear-gradient(to right,#c9331f,#d93820)"></div>
 
       <!-- Header -->
       <div style="padding:32px 32px 0">
         <p style="margin:0 0 4px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.15em;color:#78756c">Nouvelle demande de projet</p>
         <h1 style="margin:0;font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#1a1a18;line-height:1.3">${escapeHtml(data.name)}</h1>
         <p style="margin:6px 0 0;font-size:14px;color:#78756c">
-          <a href="mailto:${escapeHtml(data.email)}" style="color:#e8500a;text-decoration:none">${escapeHtml(data.email)}</a>
+          <a href="mailto:${escapeHtml(data.email)}" style="color:#c9331f;text-decoration:none">${escapeHtml(data.email)}</a>
         </p>
       </div>
 
@@ -269,14 +269,14 @@ function buildConfirmationHtml(data: ContactPayload): string {
 
     <!-- Logo -->
     <div style="padding:0 0 32px 0">
-      <span style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#1a1a18;letter-spacing:-0.02em">Djanni<span style="color:#e8500a">.</span></span>
+      <span style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#1a1a18;letter-spacing:-0.02em">Djanni<span style="color:#c9331f">.</span></span>
     </div>
 
     <!-- Card -->
     <div style="background:#ffffff;border-radius:12px;border:1px solid rgba(0,0,0,0.08);overflow:hidden">
 
       <!-- Orange accent bar -->
-      <div style="height:3px;background:linear-gradient(to right,#e8500a,#f07040)"></div>
+      <div style="height:3px;background:linear-gradient(to right,#c9331f,#d93820)"></div>
 
       <!-- Header -->
       <div style="padding:32px 32px 0">

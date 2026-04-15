@@ -11,7 +11,6 @@ import {
 	IconScissors,
 	IconToolsKitchen2,
 } from "@tabler/icons-react"
-import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 import { PricingCard } from "@/components/cards/pricing-card"
 import { Accordion } from "@/components/ui/accordion"
@@ -372,14 +371,8 @@ export function OffresContent() {
 
 			{/* CTA */}
 			<section className="relative overflow-hidden px-5 py-28 text-center md:px-12">
-				{/* Animated radial glow */}
-				<motion.div
-					initial={{ opacity: 0, scale: 0.6 }}
-					whileInView={{ opacity: 1, scale: 1 }}
-					transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-					viewport={{ once: true }}
-					className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.1)_0%,transparent_70%)]"
-				/>
+				{/* Radial glow */}
+				<div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.1)_0%,transparent_70%)]" />
 
 				<AnimatedSection className="relative">
 					<SectionHeader
@@ -389,13 +382,7 @@ export function OffresContent() {
 						align="center"
 					/>
 
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-						viewport={{ once: true }}
-						className="mt-10 flex flex-col items-center gap-4"
-					>
+					<div className="mt-10 flex flex-col items-center gap-4">
 						<p className="text-sm text-djanni-gray-light">{t("cta.reassurance")}</p>
 						<Link
 							href="/demande-projet"
@@ -409,7 +396,7 @@ export function OffresContent() {
 								className="relative transition-transform duration-300 group-hover:translate-x-1"
 							/>
 						</Link>
-					</motion.div>
+					</div>
 				</AnimatedSection>
 			</section>
 		</>

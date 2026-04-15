@@ -1,8 +1,7 @@
 "use client"
 
 import { cn } from "@repo/ui/lib/utils"
-import { motion, useReducedMotion } from "motion/react"
-import { type MouseEvent, type TouchEvent, useCallback, useRef, useState } from "react"
+import { type MouseEvent, type TouchEvent, useCallback, useEffect, useRef, useState } from "react"
 
 interface TextHoverEffectProps {
 	text: string
@@ -13,18 +12,35 @@ export function TextHoverEffect({ text, className }: TextHoverEffectProps) {
 	const svgRef = useRef<SVGSVGElement>(null)
 	const [hovered, setHovered] = useState(false)
 	const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" })
-	const prefersReduced = useReducedMotion()
+	const [inView, setInView] = useState(false)
 
-	const updateMaskPosition = useCallback(
-		(clientX: number, clientY: number) => {
-			if (!svgRef.current || prefersReduced) return
-			const rect = svgRef.current.getBoundingClientRect()
-			const x = ((clientX - rect.left) / rect.width) * 100
-			const y = ((clientY - rect.top) / rect.height) * 100
-			setMaskPosition({ cx: `${x}%`, cy: `${y}%` })
-		},
-		[prefersReduced],
-	)
+	useEffect(() => {
+		const el = svgRef.current
+		if (!el) return
+		if (typeof IntersectionObserver === "undefined") {
+			setInView(true)
+			return
+		}
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry?.isIntersecting) {
+					setInView(true)
+					observer.disconnect()
+				}
+			},
+			{ rootMargin: "-80px" },
+		)
+		observer.observe(el)
+		return () => observer.disconnect()
+	}, [])
+
+	const updateMaskPosition = useCallback((clientX: number, clientY: number) => {
+		if (!svgRef.current) return
+		const rect = svgRef.current.getBoundingClientRect()
+		const x = ((clientX - rect.left) / rect.width) * 100
+		const y = ((clientY - rect.top) / rect.height) * 100
+		setMaskPosition({ cx: `${x}%`, cy: `${y}%` })
+	}, [])
 
 	const handleMouseMove = useCallback(
 		(e: MouseEvent<SVGSVGElement>) => {
@@ -62,7 +78,7 @@ export function TextHoverEffect({ text, className }: TextHoverEffectProps) {
 			onTouchMove={handleTouchMove}
 		>
 			<defs>
-				{/* Brand gradient — orange */}
+				{/* Brand gradient orange */}
 				<linearGradient id="footer-text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
 					<stop offset="0%" stopColor="#e8500a" />
 					<stop offset="50%" stopColor="#f07040" />
@@ -75,7 +91,7 @@ export function TextHoverEffect({ text, className }: TextHoverEffectProps) {
 					gradientUnits="userSpaceOnUse"
 					cx={maskPosition.cx}
 					cy={maskPosition.cy}
-					r="250"
+					r={hovered ? 250 : 0}
 				>
 					<stop offset="0%" stopColor="white" />
 					<stop offset="100%" stopColor="black" />
@@ -83,18 +99,17 @@ export function TextHoverEffect({ text, className }: TextHoverEffectProps) {
 
 				<mask id="footer-text-mask">
 					<rect width="100%" height="100%" fill="black" />
-					<motion.circle
+					<circle
 						cx={maskPosition.cx}
 						cy={maskPosition.cy}
+						r={hovered ? 250 : 0}
 						fill="url(#footer-reveal-mask)"
-						initial={{ r: 0 }}
-						animate={{ r: hovered ? 250 : 0 }}
-						transition={{ duration: 0.4, ease: "easeOut" }}
+						style={{ transition: "r 0.4s ease-out" }}
 					/>
 				</mask>
 			</defs>
 
-			{/* Layer 1: Base outline — always visible */}
+			{/* Layer 1: Base outline, always visible */}
 			<text
 				x="50%"
 				y="50%"
@@ -109,35 +124,29 @@ export function TextHoverEffect({ text, className }: TextHoverEffectProps) {
 			</text>
 
 			{/* Layer 2: Animated stroke draw */}
-			{!prefersReduced && (
-				<motion.text
-					x="50%"
-					y="50%"
-					textAnchor="middle"
-					dominantBaseline="central"
-					fill="none"
-					stroke="url(#footer-text-gradient)"
-					strokeWidth="1"
-					style={textStyle}
-					initial={{ strokeDashoffset: 1000, strokeDasharray: "0 1500" }}
-					whileInView={{ strokeDashoffset: 0, strokeDasharray: "1500 0" }}
-					viewport={{ once: true, margin: "-80px" }}
-					transition={{ duration: 4, ease: "easeInOut" }}
-				/>
-			)}
+			<text
+				x="50%"
+				y="50%"
+				textAnchor="middle"
+				dominantBaseline="central"
+				fill="none"
+				stroke="url(#footer-text-gradient)"
+				strokeWidth="1"
+				style={textStyle}
+				className={cn("animate-stroke-draw", inView && "in-view")}
+			>
+				{text}
+			</text>
 
-			{/* Layer 3: Gradient fill — revealed by cursor mask */}
+			{/* Layer 3: Gradient fill, revealed by cursor mask */}
 			<text
 				x="50%"
 				y="50%"
 				textAnchor="middle"
 				dominantBaseline="central"
 				fill="url(#footer-text-gradient)"
-				style={{
-					...textStyle,
-					opacity: prefersReduced ? 0.2 : undefined,
-				}}
-				mask={prefersReduced ? undefined : "url(#footer-text-mask)"}
+				style={textStyle}
+				mask="url(#footer-text-mask)"
 			>
 				{text}
 			</text>

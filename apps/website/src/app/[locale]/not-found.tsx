@@ -1,13 +1,9 @@
-"use client"
-
 import { IconArrowLeft, IconEye } from "@tabler/icons-react"
-import { motion, useReducedMotion } from "motion/react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
 
 export default function NotFound() {
 	const t = useTranslations("notFound")
-	const prefersReduced = useReducedMotion()
 
 	return (
 		<main className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden px-6">
@@ -23,12 +19,7 @@ export default function NotFound() {
 			{/* Radial glow */}
 			<div className="pointer-events-none absolute top-1/2 left-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.08)_0%,transparent_70%)]" />
 
-			<motion.div
-				className="relative flex flex-col items-center text-center"
-				initial={prefersReduced ? false : { opacity: 0, y: 24 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: prefersReduced ? 0 : 0.5, ease: "easeOut" }}
-			>
+			<div className="relative flex animate-hero-fade-up flex-col items-center text-center">
 				{/* Big 404 */}
 				<h1 className="font-heading text-[clamp(100px,20vw,180px)] font-extrabold leading-none tracking-tighter bg-linear-to-r from-djanni-orange via-djanni-orange-light to-djanni-orange bg-clip-text text-transparent">
 					404
@@ -57,7 +48,7 @@ export default function NotFound() {
 						{t("seeWork")}
 					</Link>
 				</div>
-			</motion.div>
+			</div>
 		</main>
 	)
 }

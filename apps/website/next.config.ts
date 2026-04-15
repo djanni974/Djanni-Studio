@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
 		formats: ["image/avif", "image/webp"],
 	},
 	experimental: {
-		optimizePackageImports: ["@tabler/icons-react", "motion/react"],
+		optimizePackageImports: ["@tabler/icons-react"],
 	},
 	async rewrites() {
 		return [

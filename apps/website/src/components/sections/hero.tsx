@@ -73,17 +73,13 @@ export function Hero() {
 					{t("badge")}
 				</span>
 
-				<h1
-					className="mb-6 max-w-[700px] animate-hero-fade-up text-sm font-medium uppercase tracking-widest text-djanni-gray-light"
-					style={{ animationDelay: "200ms" }}
-				>
+				<h1 className="mb-6 max-w-[700px] text-sm font-medium uppercase tracking-widest text-djanni-gray-light">
 					{t("heading")}
 				</h1>
 
 				<p
-					className="mb-8 max-w-[900px] animate-hero-fade-up font-heading text-[clamp(44px,7vw,96px)] font-extrabold leading-none tracking-tight"
+					className="mb-8 max-w-[900px] font-heading text-[clamp(44px,7vw,96px)] font-extrabold leading-none tracking-tight"
 					aria-hidden="true"
-					style={{ animationDelay: "250ms" }}
 				>
 					{t("taglineStart")}
 					<em className="not-italic text-djanni-orange">{t("taglineHighlight")}</em>
