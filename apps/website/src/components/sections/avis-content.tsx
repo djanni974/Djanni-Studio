@@ -9,7 +9,7 @@ export function AvisContent() {
 	const t = useTranslations("avisPage")
 
 	return (
-		<section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden bg-surface-a px-5 py-28 md:px-12">
+		<section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden px-5 py-28 md:px-12">
 			<div
 				className="pointer-events-none absolute inset-0 opacity-[0.03]"
 				style={{

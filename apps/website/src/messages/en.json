@@ -3,8 +3,8 @@
 		"title": "Websites for craftspeople Dinard & Saint-Malo | Djanni",
 		"description": "I create modern websites for local craftspeople and shop owners. No jargon, no surprises. Just a site that represents you and brings in customers.",
 		"about": {
-			"title": "Former carpenter turned web developer in Dinard | Djanni Studio",
-			"description": "Carpenter turned web developer in Dinard. I create custom websites for craftspeople and local businesses in Brittany. Approach, values and working method."
+			"title": "About - Former carpenter turned web developer | Djanni Studio",
+			"description": "From carpenter to web developer: discover Gianni's journey, founder of Djanni Studio. Custom websites for craftspeople and local businesses in Brittany. Lighthouse 100/100."
 		},
 		"realisations": {
 			"title": "Websites for craftspeople & local businesses in Brittany | Djanni Studio",
@@ -566,7 +566,8 @@
 		"titleLine1": "Carpenter by trade.",
 		"titleHighlight": "Developer",
 		"titleLine2": " by passion.",
-		"intro": "I'm Gianni, founder of Djanni Studio. I create custom websites for craftspeople and local businesses in Brittany. My unconventional background is my strength: I understand your craft because I come from the field.",
+		"purpose": "Craftspeople deserve to be visible online as much as they are on their job sites. That's why I created Djanni Studio.",
+		"intro": "I help Breton craftspeople and shop owners turn word-of-mouth into real customers, with a website that's clear, fast and easy to keep up to date.",
 		"founderName": "Gianni",
 		"founderRole": "Founder · Djanni Studio",
 		"journey": {
@@ -577,60 +578,68 @@
 				{
 					"year": "2018 - 2023",
 					"title": "Carpenter by trade",
-					"text": "I started on construction sites. Cut, adjust, assemble. Building solid things with my hands. That's where I learned rigor, meeting deadlines, and the importance of work well done."
+					"text": "I started on construction sites. Cut, adjust, assemble. I spent winters on rooftops dealing with weather setbacks, supplier delays and impatient clients. That's where I learned discipline, respecting deadlines, and the value of work done right."
 				},
 				{
-					"year": "2023 - Today",
+					"year": "2023 - today",
 					"title": "Web developer",
-					"text": "In parallel, I became passionate about code. React, Next.js, TypeScript. I learned by building real projects, not in a classroom. Same philosophy as carpentry: solid work, custom-made, no shortcuts."
+					"text": "In parallel, I got hooked on code. React, Next.js, TypeScript. I learned by building real projects, not in a classroom. Today I apply the same logic as carpentry: plan ahead, explain clearly where we stand, and deliver on time."
 				},
 				{
 					"year": "2026",
 					"title": "Djanni Studio was born",
 					"text": "I launched Djanni Studio with a clear mission: help Breton craftspeople and shop owners get a website that truly represents them. Because I know their daily life, I speak their language."
-				},
-				{
-					"year": "My mission",
-					"title": "The web accessible to craftspeople",
-					"text": "No jargon, no inflated prices, no endless delays. A beautiful, fast, and effective site, delivered in 2 to 5 weeks depending on the plan. It's that simple."
 				}
 			],
 			"seeWork": "See the results in real projects"
 		},
-		"values": {
-			"tag": "My values",
-			"title": "What I believe in.",
-			"subtitle": "Simple principles that guide every project.",
+		"method": {
+			"tag": "My method",
+			"title": "What sets me apart.",
+			"subtitle": "Not an agency. Not a template. A web craftsman.",
 			"items": [
 				{
-					"title": "Honesty",
-					"text": "Fixed price, clear quote, no hidden fees. What I say is what I do."
+					"title": "I speak craftsman, not tech",
+					"text": "No jargon. Instead of 'SEO optimization', I say 'we'll make sure that when someone types tiler in Dinard, you show up at the top'."
 				},
 				{
-					"title": "Quality",
-					"text": "Every site is custom coded with modern technologies: clean, high-performance code, no generic templates."
+					"title": "I build like a carpenter",
+					"text": "A roof structure must be planned before it's built. Same for a website. Every site is held to the most demanding web standards."
 				},
 				{
-					"title": "Proximity",
+					"title": "I simplify everything",
+					"text": "Three clear offers, upfront prices, a single point of contact. We talk on the phone or over a coffee, I write everything: you don't have to 'write your site'."
+				},
+				{
+					"title": "I stay local and accessible",
 					"text": "Based in Brittany, available for a coffee. Not a ghost provider behind a screen."
-				},
-				{
-					"title": "Simplicity",
-					"text": "I explain everything in simple terms. Your only job: tell me about your business."
 				}
 			]
+		},
+		"proofs": {
+			"tag": "The proof",
+			"title": "Results, not promises.",
+			"items": [
+				{ "value": "100/100", "label": "Lighthouse performance" },
+				{ "value": "100/100", "label": "Accessibility" },
+				{ "value": "0.3s", "label": "Load time" },
+				{ "value": "€0/month", "label": "Mandatory subscription" }
+			],
+			"note": "In plain terms: your site shows up instantly, even on a poor connection, and Google rewards it. You pay once for the build, the site is yours.",
+			"cta": "See the work"
 		},
 		"skills": {
 			"tag": "Skills",
 			"title": "The tools I use.",
 			"subtitle": "Modern technologies for fast, secure, and well-ranked websites.",
-			"benefitLine": "In practice: sites that load in under 2 seconds and appear on the first page of Google."
+			"benefitLine": "For a fast, durable site I use Next.js and TypeScript, modern technologies trusted by major companies. For design, Tailwind CSS and a mobile-first approach guarantee a great experience on phones, where your customers are looking for you most."
 		},
 		"cta": {
 			"title": "Want to work together?",
 			"subtitle": "Free initial consultation, no commitment. Tell me about your project.",
 			"button": "Start a project",
-			"seeOffers": "See pricing"
+			"seeOffers": "See pricing",
+			"reassurance": "In 20 minutes we'll go over your business and your needs. I'll tell you straight whether a website really makes sense for you."
 		}
 	},
 	"realisationsHome": {

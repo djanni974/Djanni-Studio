@@ -68,7 +68,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 	return (
 		<>
 			{/* ── Section 1: Immersive Hero (dark) ── */}
-			<section className="relative overflow-hidden bg-surface-a px-5 pt-32 pb-20 md:px-12 md:pt-40 md:pb-28">
+			<section className="relative overflow-hidden px-5 pt-32 pb-20 md:px-12 md:pt-40 md:pb-28">
 				<div
 					className="pointer-events-none absolute inset-0 opacity-[0.03]"
 					style={{
@@ -153,7 +153,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 			</section>
 
 			{/* ── Section 2: Story — Context / Problem / Solution ── */}
-			<section className="bg-surface-a px-5 py-16 md:px-12 md:py-20">
+			<section className="px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[1100px]">
 					<StaggerContainer className="grid gap-0">
 						{/* Context — full width */}
@@ -290,7 +290,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 			)}
 
 			{/* ── Section 4: Results — Big Numbers ── */}
-			<section className="bg-surface-a px-5 py-16 md:px-12 md:py-20">
+			<section className="px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<div className="mb-12 text-center">
@@ -336,7 +336,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 			</section>
 
 			{/* ── Section 5: Tech Stack ── */}
-			<section className="bg-surface-b px-5 py-20 md:px-12">
+			<section className="px-5 py-20 md:px-12">
 				<div className="mx-auto max-w-[800px]">
 					<AnimatedSection>
 						<div className="flex flex-col items-center gap-6">
@@ -389,7 +389,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 			)}
 
 			{/* ── Section 7: CTA ── */}
-			<section className="bg-surface-a px-5 py-16 md:px-12 md:py-20">
+			<section className="px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<div

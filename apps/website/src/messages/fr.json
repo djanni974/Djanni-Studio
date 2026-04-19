@@ -3,8 +3,8 @@
 		"title": "Sites web artisans Dinard & Saint-Malo | Djanni",
 		"description": "Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises. Un site qui vous ressemble et ramène des clients.",
 		"about": {
-			"title": "Ancien charpentier devenu développeur web à Dinard | Djanni Studio",
-			"description": "Charpentier devenu développeur web à Dinard. Je crée des sites sur mesure pour les artisans et commerçants en Bretagne. Parcours, valeurs et méthode de travail."
+			"title": "À propos - Ancien charpentier devenu développeur web | Djanni Studio",
+			"description": "De charpentier à développeur web : découvrez le parcours de Gianni, fondateur de Djanni Studio. Sites web sur mesure pour artisans et commerçants en Bretagne. Lighthouse 100/100."
 		},
 		"realisations": {
 			"title": "Sites web artisans et commerçants en Bretagne | Djanni Studio",
@@ -566,7 +566,8 @@
 		"titleLine1": "Charpentier de métier.",
 		"titleHighlight": "Développeur",
 		"titleLine2": " par passion.",
-		"intro": "Je suis Gianni, fondateur de Djanni Studio. Je crée des sites web sur mesure pour les artisans et commerçants en Bretagne. Mon parcours atypique est ma force : je comprends votre métier parce que je viens du terrain.",
+		"purpose": "Les artisans méritent d'être visibles en ligne autant qu'ils le sont sur leurs chantiers. C'est pour ça que j'ai créé Djanni Studio.",
+		"intro": "J'aide les artisans et commerçants bretons à transformer le bouche-à-oreille en clients, grâce à un site web clair, rapide et facile à mettre à jour.",
 		"founderName": "Gianni",
 		"founderRole": "Fondateur · Djanni Studio",
 		"journey": {
@@ -577,60 +578,68 @@
 				{
 					"year": "2018 - 2023",
 					"title": "Charpentier de métier",
-					"text": "J'ai commencé sur les chantiers. Couper, ajuster, assembler. Construire des choses solides avec mes mains. C'est là que j'ai appris la rigueur, le respect des délais et l'importance du travail bien fait."
+					"text": "J'ai commencé sur les chantiers. Couper, ajuster, assembler. J'ai passé des hivers sur les toits, à gérer les imprévus météo, les retards de fournisseurs et les clients pressés. C'est là que j'ai appris la rigueur, le respect des délais et l'importance du travail bien fait."
 				},
 				{
-					"year": "2023 - Aujourd'hui",
+					"year": "2023 - aujourd'hui",
 					"title": "Développeur web",
-					"text": "En parallèle, je me suis passionné pour le code. React, Next.js, TypeScript. J'ai appris en construisant des projets concrets, pas dans une salle de cours. Même philosophie que la charpente : du solide, du sur mesure, pas de raccourci."
+					"text": "En parallèle, je me suis passionné pour le code. React, Next.js, TypeScript. J'ai appris en construisant des projets concrets, pas dans une salle de cours. Aujourd'hui, j'applique la même logique qu'à la charpente : anticiper, expliquer clairement où on en est, et livrer dans les temps."
 				},
 				{
 					"year": "2026",
 					"title": "Djanni Studio est né",
 					"text": "J'ai lancé Djanni Studio avec une mission claire : aider les artisans et commerçants bretons à avoir un site web qui leur ressemble. Parce que je connais leur quotidien, je parle leur langue."
-				},
-				{
-					"year": "Ma mission",
-					"title": "Le web accessible aux artisans",
-					"text": "Pas de jargon, pas de prix gonflé, pas de délais interminables. Un site beau, rapide et efficace, livré en 2 à 5 semaines selon la formule. C'est aussi simple que ça."
 				}
 			],
 			"seeWork": "Voir ce que ça donne concrètement"
 		},
-		"values": {
-			"tag": "Mes valeurs",
-			"title": "Ce en quoi je crois.",
-			"subtitle": "Des principes simples qui guident chaque projet.",
+		"method": {
+			"tag": "Ma méthode",
+			"title": "Ce qui me différencie.",
+			"subtitle": "Pas une agence. Pas un template. Un artisan du web.",
 			"items": [
 				{
-					"title": "Honnêteté",
-					"text": "Prix fixe, devis clair, pas de frais cachés. Ce que je dis, c'est ce que je fais."
+					"title": "Je parle artisan, pas tech",
+					"text": "Pas de jargon. Plutôt que « optimisation SEO », je dis « on fera en sorte que quand quelqu'un tape carreleur à Dinard, vous apparaissiez en haut »."
 				},
 				{
-					"title": "Qualité",
-					"text": "Chaque site est codé sur mesure avec des technologies modernes. Du code propre et performant, aucun template générique."
+					"title": "Je construis comme un charpentier",
+					"text": "Une charpente, ça se pense avant de se monter. Un site aussi. Chaque site passe au crible des standards les plus exigeants du web."
 				},
 				{
-					"title": "Proximité",
+					"title": "Je simplifie tout",
+					"text": "Trois offres claires, des prix affichés, un seul interlocuteur. On se parle au téléphone ou autour d'un café, je rédige tout : vous n'avez pas à écrire votre site."
+				},
+				{
+					"title": "Je reste local et accessible",
 					"text": "Basé en Bretagne, disponible pour un café. Pas un prestataire fantôme derrière un écran."
-				},
-				{
-					"title": "Simplicité",
-					"text": "Je vous explique tout en langage simple. Votre seul travail : me parler de votre activité."
 				}
 			]
+		},
+		"proofs": {
+			"tag": "Les preuves",
+			"title": "Des résultats, pas des promesses.",
+			"items": [
+				{ "value": "100/100", "label": "Performance Lighthouse" },
+				{ "value": "100/100", "label": "Accessibilité" },
+				{ "value": "0.3s", "label": "Temps de chargement" },
+				{ "value": "0 €/mois", "label": "Abonnement obligatoire" }
+			],
+			"note": "Concrètement : votre site s'affiche tout de suite, même avec une mauvaise connexion, et Google le valorise. Vous payez la création une fois, le site est à vous.",
+			"cta": "Voir les réalisations"
 		},
 		"skills": {
 			"tag": "Compétences",
 			"title": "Les outils que j'utilise.",
 			"subtitle": "Des technologies modernes pour des sites rapides, sécurisés et bien référencés.",
-			"benefitLine": "Concrètement : des sites qui chargent en moins de 2 secondes et apparaissent en première page Google."
+			"benefitLine": "Pour un site rapide et durable, j'utilise Next.js et TypeScript, des technologies modernes utilisées par de grosses entreprises. Pour le design, Tailwind CSS et une approche mobile-first garantissent un site agréable sur téléphone, là où vos clients vous cherchent le plus."
 		},
 		"cta": {
 			"title": "Envie de travailler ensemble ?",
 			"subtitle": "Premier échange gratuit, sans engagement. Parlez-moi de votre projet.",
 			"button": "Démarrer un projet",
-			"seeOffers": "Voir les offres"
+			"seeOffers": "Voir les offres",
+			"reassurance": "En 20 minutes, on fait le point sur votre activité et vos besoins. Je vous dis clairement si un site est vraiment pertinent pour vous."
 		}
 	},
 	"realisationsHome": {

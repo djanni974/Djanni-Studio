@@ -15,7 +15,7 @@ export function Faq() {
 	}))
 
 	return (
-		<section id="faq" className="bg-surface-b px-5 py-24 md:px-12">
+		<section id="faq" className="px-5 py-24 md:px-12">
 			<div className="mx-auto max-w-[800px]">
 				<AnimatedSection>
 					<SectionHeader

@@ -27,7 +27,7 @@ export function Offres() {
 	}))
 
 	return (
-		<section id="offres" className="bg-surface-a px-5 py-24 md:px-12">
+		<section id="offres" className="px-5 py-24 md:px-12">
 			<SectionHeader tag={t("tag")} title={t("title")} subtitle={t("subtitle")} />
 
 			<div className="mt-16 grid gap-5 md:grid-cols-3">

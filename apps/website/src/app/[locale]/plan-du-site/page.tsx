@@ -77,7 +77,7 @@ export default async function SitemapPage({ params }: { params: Promise<{ locale
 	return (
 		<main>
 			{/* Hero */}
-			<section className="relative overflow-hidden bg-surface-a px-5 pt-32 pb-20 md:px-12 md:pt-40 md:pb-24">
+			<section className="relative overflow-hidden px-5 pt-32 pb-20 md:px-12 md:pt-40 md:pb-24">
 				{/* Dot grid */}
 				<div
 					className="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -106,7 +106,7 @@ export default async function SitemapPage({ params }: { params: Promise<{ locale
 			</section>
 
 			{/* Grid */}
-			<section className="bg-surface-a px-5 pb-28 md:px-12">
+			<section className="px-5 pb-28 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<StaggerContainer className="grid gap-5 sm:grid-cols-2">
 						{sections.map((section) => (

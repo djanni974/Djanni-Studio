@@ -44,7 +44,7 @@ export function BlogListContent() {
 	}
 
 	return (
-		<section className="relative overflow-hidden bg-surface-a px-5 pt-32 pb-28 md:px-12 md:pt-40">
+		<section className="relative overflow-hidden px-5 pt-32 pb-28 md:px-12 md:pt-40">
 			<div
 				className="pointer-events-none absolute inset-0 opacity-[0.03]"
 				style={{
