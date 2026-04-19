@@ -3,8 +3,8 @@
 		"title": "Lec'hiennoù web artizaned Dinarzh & Sant-Maloù | Djanni",
 		"description": "Krouiñ a ran lec'hiennoù web modern evit an artizaned hag ar c'henwerzhourion lec'hel. Hep yezh vevenn, hep souezhadenn. Ul lec'hienn a zere deoc'h hag a gas kustumerien.",
 		"about": {
-			"title": "Charpaentour deuet da ziorroerien web e Dinarzh | Djanni Studio",
-			"description": "Charpaentour deuet da ziorroerien web e Dinarzh. Krouiñ a ran lec'hiennoù web war-bouez evit an artizaned hag ar c'henwerzhourion e Breizh. Hent, talvoudoù ha hentenn labour."
+			"title": "Diwar-benn - Charpaentour gwechall, diorroer web bremañ | Djanni Studio",
+			"description": "Eus ur c'harpaentour da ziorroer web : dizoleit hent Gianni, krouer Djanni Studio. Lec'hiennoù web war-bouez evit an artizaned hag ar c'henwerzhourion e Breizh. Lighthouse 100/100."
 		},
 		"realisations": {
 			"title": "Lec'hiennoù web evit artizaned ha kenwerzhourion e Breizh | Djanni Studio",
@@ -571,7 +571,8 @@
 		"titleLine1": "Charpaentour eus ma micher.",
 		"titleHighlight": "Diorroerien",
 		"titleLine2": " dre passion.",
-		"intro": "Gianni on, krouer Djanni Studio. Krouiñ a ran lec'hiennoù web war-bouez evit an artizaned hag ar c'henwerzhourion e Breizh. Ma hent dizingal eo ma nerzh : kompren a ran ho micher abalamour ma teuon eus ar maez.",
+		"purpose": "An artizaned o deus ar gwir da vezañ gwelet enlinenn evel ma 'z eus war o c'hantierioù. Setu perak em eus krouet Djanni Studio.",
+		"intro": "Sikour a ran an artizaned hag ar c'henwerzhourion breizhiz da dreuzfurmiñ ar c'homzoù etre an dud e gwir kustumerien, gant ul lec'hienn web splann, buan hag aes da nevesaat.",
 		"founderName": "Gianni",
 		"founderRole": "Krouer · Djanni Studio",
 		"journey": {
@@ -582,60 +583,68 @@
 				{
 					"year": "2018 - 2023",
 					"title": "Charpaentour eus ma micher",
-					"text": "Kregiñ am boa war ar c'hantierioù. Troc'hañ, kempenn, kemmañ, sevel traoù kreñv gant ma daouarn. Eno am boa desket ar rigor, an doujañs d'an amzerioù ha talvoud al labour graet mat."
+					"text": "Kregiñ am boa war ar c'hantierioù. Troc'hañ, kempenn, kemmañ, sevel traoù kreñv gant ma daouarn. Tremenet em eus goañvioù war an toennoù, o verañ reuz an amzer, dalc'h ar fournisserien hag ar gustumerien buan. Eno am boa desket ar rigor, an doujañs d'an amzerioù ha talvoud al labour graet mat."
 				},
 				{
-					"year": "2023 - Hiziv",
+					"year": "2023 - hiziv",
 					"title": "Diorroerien web",
-					"text": "En un dro, emaon bet passionet gant ar c'hod. React, Next.js, TypeScript, desket am eus en ur sevel raktresoù gwir, ket en ur sal kentelioù. Hevelep prederouriezh eget ar c'harpaentourezh : kreñv, war-bouez, hep berradenn."
+					"text": "En un dro, emaon bet passionet gant ar c'hod. React, Next.js, TypeScript, desket am eus en ur sevel raktresoù gwir, ket en ur sal kentelioù. Hiziv e lakaan e pleustr ar memes logik eget ar c'harpaentourezh : rakwelet, displegañ splann pelec'h emaomp, ha livret d'an amzer mat."
 				},
 				{
 					"year": "2026",
 					"title": "Djanni Studio a zo ganet",
 					"text": "Lañset am eus Djanni Studio gant ur gefridi splann : sikour an artizaned hag ar c'henwerzhourion breizhiz da gaout ul lec'hienn web a zere dezho. Abalamour ma anavezan o buhez pemdeziek, komz a ran o yezh."
-				},
-				{
-					"year": "Ma gefridi",
-					"title": "Ar web hegerz d'an artizaned",
-					"text": "Hep yezh vevenn, hep prizioù laket da greskiñ, hep retardiñ hep fin. Ul lec'hienn kaer, buan ha efedus, livret e 2 da 5 sizhun hervez ar formulenn. Ken aes ha kement-se."
 				}
 			],
 			"seeWork": "Gwelet an disoc'hoù e raktresoù gwir"
 		},
-		"values": {
-			"tag": "Ma zalvoudoù",
-			"title": "Ar pezh a gredan.",
-			"subtitle": "Pennadoù aes a rener pep raktres.",
+		"method": {
+			"tag": "Ma doare-ober",
+			"title": "Ar pezh a ra ma diforc'h.",
+			"subtitle": "Ket un ajañs. Ket ur patrom. Un artizan eus ar web.",
 			"items": [
 				{
-					"title": "Reizhdedouriezh",
-					"text": "Priz fiskal, devis splann, fraoù kuzh ebet. Ar pezh a lâran, ar pezh a ran."
+					"title": "Komz a ran evel un artizan, ket evel un den teknik",
+					"text": "Yezh teknik ebet. E-lec'h « optimisadur SEO », e lavaran « graet e vo ma teuot en nec'h pa skriv unan bennak karrelour e Dinarzh »."
 				},
 				{
-					"title": "Perzhded",
-					"text": "Pep lec'hienn a zo kodet war-bouez gant teknologiezhioù modern : kod prop ha performant, patrom doareel ebet."
+					"title": "Sevel a ran evel ur c'harpaentour",
+					"text": "Ur c'hempenn a ranker soñjal a-raok e sevel. Hag ul lec'hienn ivez. Pep lec'hienn a dremen dre standardoù ar gwellañ eus ar web."
 				},
 				{
-					"title": "Tostaat",
+					"title": "Eeunaat a ran pep tra",
+					"text": "Tri ginnig sklaer, prizioù skrivet, un den nemetañ. Komz a reomp war ar pellgomz pe tro-dro ur gafé, skrivañ a ran pep tra : n'hoc'h eus ket da skrivañ ho lec'hienn."
+				},
+				{
+					"title": "Lec'hel ha hegerz emaon",
 					"text": "E Breizh emaon, hegerz evit ur gafé. Ket ur prestataer skeud a-dreñv ur skramm."
-				},
-				{
-					"title": "Eeunded",
-					"text": "Displegañ a ran pep tra e yezh aes. Hoc'h hini labour : komz din eus hoc'h oberiantiz."
 				}
 			]
+		},
+		"proofs": {
+			"tag": "An disoc'hoù",
+			"title": "Disoc'hoù, ket gourzhouezhoù.",
+			"items": [
+				{ "value": "100/100", "label": "Performans Lighthouse" },
+				{ "value": "100/100", "label": "Hegerzhted" },
+				{ "value": "0.3s", "label": "Amzer karg" },
+				{ "value": "0 €/miz", "label": "Koumanantadur ret" }
+			],
+			"note": "E gwirionez : ho lec'hienn a zeu war wel diouzhtu, zoken gant ur gennask fall, ha Google he talvouda. Paeañ a reot ur wech evit ar c'hrouiñ, ho lec'hienn a zo deoc'h.",
+			"cta": "Gwelet an obererezhioù"
 		},
 		"skills": {
 			"tag": "Gouiziegezhoù",
 			"title": "An ostilhoù a implijon.",
 			"subtitle": "Teknologiezhioù modern evit lec'hiennoù buan, surentez ha mat renket.",
-			"benefitLine": "E gwirionez : lec'hiennoù a garg e nebeutoc'h eget 2 eilenn hag a zeu war ar bajenn gentañ Google."
+			"benefitLine": "Evit ul lec'hienn buan ha padus, e implijon Next.js ha TypeScript, teknologiezhioù modern a implij an embregerezhioù bras. Evit ar pourvez, Tailwind CSS hag un doare mobile-first evit ul lec'hienn plijus war ar pellgomz, lec'h ma klask ho kustumerien ac'hanoc'h ar muiañ."
 		},
 		"cta": {
 			"title": "C'hoant labourat asambles ?",
 			"subtitle": "Eskemm kentañ digoust, hep gwarant. Komzit din eus ho raktres.",
 			"button": "Kregiñ gant ur raktres",
-			"seeOffers": "Gwelet an tarifioù"
+			"seeOffers": "Gwelet an tarifioù",
+			"reassurance": "E 20 munutenn, e rannomp ho oberiantiz hag hoc'h ezhommoù. E lavaran deoc'h splann ma 'z eo dedennus ul lec'hienn evidoc'h."
 		}
 	},
 	"realisationsHome": {
