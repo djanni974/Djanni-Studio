@@ -15,7 +15,7 @@ export function PourquoiMoi() {
 	}))
 
 	return (
-		<section id="pourquoi" className="bg-surface-b px-5 py-28 md:px-12">
+		<section id="pourquoi" className="px-5 py-28 md:px-12">
 			<div className="grid items-center gap-10 md:grid-cols-2 md:gap-20">
 				{/* Left */}
 				<div>

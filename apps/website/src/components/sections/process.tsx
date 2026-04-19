@@ -18,7 +18,7 @@ export function Process() {
 	}))
 
 	return (
-		<section id="process" className="bg-surface-a px-5 py-20 md:px-12">
+		<section id="process" className="px-5 py-20 md:px-12">
 			<SectionHeader tag={t("tag")} title={t("title")} subtitle={t("subtitle")} />
 
 			<StaggerContainer className="mx-auto mt-16 grid max-w-[1100px] gap-4 md:grid-cols-3">

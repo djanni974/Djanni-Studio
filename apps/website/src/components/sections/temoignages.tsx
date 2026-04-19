@@ -10,7 +10,7 @@ export function Temoignages() {
 	const t = useTranslations("temoignages")
 
 	return (
-		<section id="temoignages" className="bg-surface-c px-5 py-24 md:px-12">
+		<section id="temoignages" className="px-5 py-24 md:px-12">
 			<AnimatedSection>
 				<SectionHeader tag={t("tag")} title={t("title")} subtitle={t("subtitle")} align="center" />
 			</AnimatedSection>

@@ -60,7 +60,7 @@ export function OffresContent() {
 	return (
 		<>
 			{/* Hero */}
-			<section className="relative overflow-hidden bg-surface-a px-5 pt-32 pb-20 md:px-12 md:pt-40 md:pb-28">
+			<section className="relative overflow-hidden px-5 pt-32 pb-20 md:px-12 md:pt-40 md:pb-28">
 				<div
 					className="pointer-events-none absolute inset-0 opacity-[0.03]"
 					style={{
@@ -88,7 +88,7 @@ export function OffresContent() {
 			</section>
 
 			{/* Pricing cards */}
-			<section className="bg-surface-b px-5 py-24 md:px-12">
+			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<div className="grid gap-5 md:grid-cols-3">
 						{tiers.map((tier) => (
@@ -99,7 +99,7 @@ export function OffresContent() {
 			</section>
 
 			{/* Upgrade callout */}
-			<div className="bg-surface-b px-5 pb-12 md:px-12">
+			<div className="px-5 pb-12 md:px-12">
 				<AnimatedSection>
 					<div className="mx-auto max-w-[700px] rounded-2xl border border-djanni-orange/20 bg-djanni-orange/5 px-8 py-6 text-center">
 						<p className="mb-2 font-heading text-lg font-semibold">{t("upgrade.title")}</p>
@@ -109,7 +109,7 @@ export function OffresContent() {
 			</div>
 
 			{/* Personas */}
-			<section className="bg-surface-a px-5 py-24 md:px-12">
+			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<SectionHeader tag={t("personas.tag")} title={t("personas.title")} />
@@ -160,7 +160,7 @@ export function OffresContent() {
 			</section>
 
 			{/* Comparison table */}
-			<section className="bg-surface-b px-5 py-24 md:px-12">
+			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<SectionHeader tag={t("comparison.tag")} title={t("comparison.title")} align="center" />
@@ -199,7 +199,7 @@ export function OffresContent() {
 									{comparisonRows.map((row, i) => (
 										<tr
 											key={i}
-											className={`border-b border-border/50 ${i % 2 === 0 ? "bg-surface-a/50" : ""}`}
+											className={`border-b border-border/50 ${i % 2 === 0 ? "bg-foreground/4" : ""}`}
 										>
 											<td className="py-3 pr-6 text-djanni-gray-light">{row.feature}</td>
 											{(["presence", "vitrine", "custom"] as const).map((col) => {
@@ -237,7 +237,7 @@ export function OffresContent() {
 			</section>
 
 			{/* Add-ons */}
-			<section className="bg-surface-a px-5 py-24 md:px-12">
+			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<SectionHeader
@@ -272,7 +272,7 @@ export function OffresContent() {
 			</section>
 
 			{/* ROI */}
-			<section className="bg-surface-b px-5 py-24 md:px-12">
+			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px] text-center">
 					<AnimatedSection>
 						<SectionHeader
@@ -324,7 +324,7 @@ export function OffresContent() {
 			</section>
 
 			{/* Pricing FAQ */}
-			<section className="bg-surface-b px-5 py-24 md:px-12">
+			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[800px]">
 					<AnimatedSection>
 						<SectionHeader tag={t("pricingFaq.tag")} title={t("pricingFaq.title")} align="center" />
@@ -340,7 +340,7 @@ export function OffresContent() {
 			</section>
 
 			{/* Guarantees */}
-			<section className="bg-surface-a px-5 py-24 md:px-12">
+			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<SectionHeader

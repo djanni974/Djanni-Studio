@@ -12,7 +12,7 @@ export function Realisations() {
 	const t = useTranslations("realisationsHome")
 
 	return (
-		<section id="realisations" className="bg-surface-b px-5 py-28 md:px-12">
+		<section id="realisations" className="px-5 py-28 md:px-12">
 			<SectionHeader tag={t("tag")} title={t("title")} subtitle={t("subtitle")} />
 
 			<StaggerContainer className="mx-auto mt-16 grid max-w-[1100px] gap-4 md:grid-cols-2">

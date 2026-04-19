@@ -315,7 +315,7 @@ export function BlogPostContent({
 	return (
 		<>
 			{/* Hero */}
-			<section className="relative overflow-hidden bg-surface-a px-5 pt-32 pb-16 md:px-12 md:pt-40 md:pb-20">
+			<section className="relative overflow-hidden px-5 pt-32 pb-16 md:px-12 md:pt-40 md:pb-20">
 				<div
 					className="pointer-events-none absolute inset-0 opacity-[0.03]"
 					style={{
@@ -367,7 +367,7 @@ export function BlogPostContent({
 			</section>
 
 			{/* Article content */}
-			<section className="bg-surface-b px-5 py-16 md:px-12 md:py-20">
+			<section className="px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[720px]">
 					<AnimatedSection>
 						<article className="prose-djanni">{renderMarkdown(post.content)}</article>
@@ -376,7 +376,7 @@ export function BlogPostContent({
 			</section>
 
 			{/* Author block */}
-			<section className="bg-surface-b px-5 pb-16 md:px-12">
+			<section className="px-5 pb-16 md:px-12">
 				<div className="mx-auto max-w-[720px]">
 					<div className="rounded-xl border border-border bg-card p-6 md:p-8">
 						<div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
@@ -407,7 +407,7 @@ export function BlogPostContent({
 
 			{/* Prev / Next navigation */}
 			{(prevPost || nextPost) && (
-				<section className="bg-surface-a px-5 pt-16 md:px-12">
+				<section className="px-5 pt-16 md:px-12">
 					<div className="mx-auto max-w-[720px]">
 						<AnimatedSection>
 							<div className="mb-6 flex items-center gap-4">
@@ -472,7 +472,7 @@ export function BlogPostContent({
 			)}
 
 			{/* CTA */}
-			<section className="bg-surface-a px-5 py-28 md:px-12">
+			<section className="px-5 py-28 md:px-12">
 				<div className="mx-auto max-w-[720px]">
 					<AnimatedSection>
 						<div className="flex flex-col items-center rounded-2xl border border-border bg-card px-8 py-14 text-center md:px-16">

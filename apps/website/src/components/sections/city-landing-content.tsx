@@ -17,7 +17,7 @@ export function CityLandingContent({ cityKey }: { cityKey: string }) {
 	return (
 		<>
 			{/* Hero */}
-			<section className="bg-surface-a px-5 pt-32 pb-24 md:px-12">
+			<section className="px-5 pt-32 pb-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<SectionHeader
@@ -40,7 +40,7 @@ export function CityLandingContent({ cityKey }: { cityKey: string }) {
 			</section>
 
 			{/* Search examples */}
-			<section className="bg-surface-b px-5 py-24 md:px-12">
+			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<SectionHeader
@@ -67,7 +67,7 @@ export function CityLandingContent({ cityKey }: { cityKey: string }) {
 			<Offres />
 
 			{/* Why local */}
-			<section className="bg-surface-b px-5 py-24 md:px-12">
+			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<SectionHeader
@@ -97,7 +97,7 @@ export function CityLandingContent({ cityKey }: { cityKey: string }) {
 			</section>
 
 			{/* Cross-links */}
-			<section className="bg-surface-a px-5 py-24 md:px-12">
+			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
 						<SectionHeader tag={t("crossLinks.tag")} title={t("crossLinks.title")} align="center" />
@@ -119,7 +119,7 @@ export function CityLandingContent({ cityKey }: { cityKey: string }) {
 			</section>
 
 			{/* FAQ */}
-			<section className="bg-surface-b px-5 py-24 md:px-12">
+			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[800px]">
 					<AnimatedSection>
 						<SectionHeader
