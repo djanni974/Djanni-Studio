@@ -31,7 +31,6 @@ pnpm-debug.log*
 # claude code
 .claude/
 settings.local.json
-CLAUDE.md
 
 # serwist (generated at build)
 apps/website/public/sw.js
