@@ -147,10 +147,15 @@ Copier `apps/website/.env.example` en `apps/website/.env.local` puis remplir :
 | `N8N_WEBHOOK_URL`              | Optionnel    | Notification SMS prospects (désactivé si vide)  |
 | `N8N_WEBHOOK_SECRET`           | Optionnel    | Secret partagé avec le workflow n8n             |
 | `ANTHROPIC_API_KEY`            | Optionnel    | Chatbot IA                                      |
-| `NEXT_PUBLIC_SUPABASE_URL`     | Optionnel    | Stockage leads chatbot                          |
-| `SUPABASE_SERVICE_ROLE_KEY`    | Optionnel    | Clé serveur Supabase                            |
+| `NEXT_PUBLIC_SUPABASE_URL`     | Prod         | URL projet Supabase (CRM, audits, témoignages)  |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY`| Prod         | Clé anon (lecture publique + session)           |
+| `SUPABASE_SERVICE_ROLE_KEY`    | Prod         | Clé serveur Supabase (bypass RLS, server-only)  |
+| `NEXT_PUBLIC_SITE_URL`         | Prod         | URL publique (liens audits partageables)        |
+| `AUDIT_VIEW_IP_SALT`           | Prod         | Sel pour hasher les IP des vues d'audit (RGPD)  |
 
 Ne jamais committer de fichier `.env*` contenant des secrets.
+
+Détails du pipeline Supabase (routes API, auth admin, exemples de consommation) : [docs/supabase.md](docs/supabase.md).
 
 ---
 
