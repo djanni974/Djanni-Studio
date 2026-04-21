@@ -6,6 +6,22 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts")
 
 const isDev = process.env.NODE_ENV === "development"
 
+const csp = [
+	"default-src 'self'",
+	`script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
+	"style-src 'self' 'unsafe-inline'",
+	"img-src 'self' data: https:",
+	"font-src 'self' data:",
+	"connect-src 'self'",
+	"manifest-src 'self'",
+	"worker-src 'self' blob:",
+	"frame-ancestors 'none'",
+	"base-uri 'self'",
+	"form-action 'self'",
+	"object-src 'none'",
+	"upgrade-insecure-requests",
+].join("; ")
+
 const nextConfig: NextConfig = {
 	poweredByHeader: false,
 	transpilePackages: ["@repo/ui"],
@@ -46,7 +62,7 @@ const nextConfig: NextConfig = {
 					},
 					{
 						key: "Content-Security-Policy",
-						value: `default-src 'self'; script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'`,
+						value: csp,
 					},
 				],
 			},
