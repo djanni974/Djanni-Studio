@@ -115,11 +115,11 @@ export function BlogListContent() {
 										href={`/blog/${post.slug}`}
 										className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface-b transition-[transform,border-color,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:border-white/16 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
 									>
-										<div className="flex items-center justify-between border-b border-border px-6 py-3">
-											<span className="text-[11px] font-semibold uppercase tracking-wider text-djanni-orange">
+										<div className="flex items-start justify-between gap-3 border-b border-border px-6 py-3">
+											<span className="text-[11px] font-semibold uppercase leading-tight tracking-wider text-djanni-orange">
 												{post.category}
 											</span>
-											<span className="flex items-center gap-1.5 text-xs text-djanni-gray">
+											<span className="flex shrink-0 items-center gap-1.5 whitespace-nowrap text-xs text-djanni-gray">
 												<IconClock size={12} />
 												{post.readingTime} {t("minRead")}
 											</span>
