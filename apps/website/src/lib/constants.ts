@@ -211,11 +211,129 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
 	{
+		slug: "10-actions-site-rapide-moins-seconde",
+		title: "10 actions concrètes pour que votre site charge en moins d'une seconde",
+		excerpt:
+			"Un site qui charge en plus de 3 secondes, c'est la moitié de vos visiteurs qui repartent. Voici 10 actions concrètes pour tomber sous la barre de la seconde, classées par difficulté.",
+		category: "Performance web",
+		publishedAt: "2026-04-23",
+		readingTime: 5,
+		content: `Votre site s'ouvre en 2 secondes chez vous, depuis le wifi fibre de votre atelier. Jusque-là tout va bien. Sauf que 70% de vos visiteurs, eux, viennent en 4G, parfois faible, depuis un café ou une voiture. Et là, votre site met 6 secondes.
+
+Le problème, c'est que vous ne le voyez jamais. Vos clients qui partent avant que la page soit affichée ne vous envoient pas de mail pour vous le dire. C'est juste du chiffre d'affaires qui file en silence vers vos concurrents.
+
+Dans cet article, 10 actions concrètes pour passer votre site sous la barre de **1 seconde de chargement** sur mobile. Certaines se font en 10 minutes sans être développeur, d'autres nécessitent un peu de technique. Elles sont classées par difficulté.
+
+## Comment savoir si votre site est trop lent en 2 minutes
+
+Avant de corriger, il faut mesurer. Et bonne nouvelle : Google propose un outil gratuit qui teste votre site en 30 secondes.
+
+:::stat
+53%
+des visiteurs mobiles quittent un site qui met plus de 3 secondes à charger (source : Google).
+:::
+
+Rendez-vous sur **pagespeed.web.dev**, entrez l'adresse de votre site, cliquez "Analyser". Vous obtenez un score mobile de 0 à 100 et surtout trois chiffres qui comptent vraiment :
+
+:::brief
+- **LCP (Largest Contentful Paint)** : temps pour afficher l'image ou le titre principal de votre page. Objectif : moins de 2,5 secondes.
+- **CLS (Cumulative Layout Shift)** : stabilité visuelle. Les boutons ne doivent pas bouger pendant le chargement.
+- **INP (Interaction to Next Paint)** : réactivité. Quand on clique sur un bouton, il répond en combien de temps ? Moins de 200 ms idéalement.
+:::
+
+Si votre score mobile est en dessous de 50, vous perdez probablement plus de clients que vous n'en gagnez. Les 10 actions ci-dessous vont vous permettre de remonter ça.
+
+## Vos images, là où vous perdez le plus de vitesse
+
+Sur un site d'artisan, les images font souvent **70% du poids de la page** : photos de chantiers, galerie de réalisations, avant et après. C'est là qu'on gagne le plus de vitesse, et souvent le plus facilement.
+
+:::example
+Prenons l'exemple d'un plombier à Saint-Malo avec 30 photos de ses chantiers sur son site. Chaque photo pèse 4 Mo. La page d'accueil charge donc 120 Mo de données sur le téléphone du visiteur, soit 15 secondes en 4G correcte. En compressant les photos et en les redimensionnant, le poids total tombe à 2 Mo et le chargement passe à 0,8 seconde.
+:::
+
+Les 4 actions concrètes sur vos images :
+
+**1. Compressez avant de mettre en ligne.** Un outil comme **TinyPNG** (gratuit) divise par 5 le poids d'une photo sans perte visible. Une photo de 4 Mo passe à 800 Ko en 10 secondes.
+
+**2. Utilisez le bon format.** Le **WebP** est 3 fois plus léger que le JPEG pour la même qualité visuelle. Tous les navigateurs modernes le lisent sans problème.
+
+**3. Redimensionnez à la taille d'affichage.** Une photo de 4000 x 3000 pixels affichée dans un cadre de 800 x 600, c'est 95% de poids inutile. Recadrez avant l'upload.
+
+**4. Activez le chargement progressif (lazy loading).** Les images en bas de page ne se chargent que lorsque le visiteur scrolle vers elles. Votre première seconde est libérée pour afficher l'essentiel.
+
+:::stat
+80 Ko
+Le poids cible d'une photo bien optimisée sur un site d'artisan. Au-dessus de 200 Ko, elle ralentit votre page.
+:::
+
+## Le code de votre site, allégez ce qui pèse
+
+Les images ne sont pas seules. Le code qui fait tourner votre site pèse aussi, et souvent beaucoup trop. Ces actions nécessitent soit un développeur soit un bon hébergeur.
+
+**5. Supprimez les plugins WordPress inutiles.** Chaque plugin charge son propre code à chaque visite. Un site WordPress moyen a **une vingtaine de plugins** actifs, dont la moitié ne sert à rien ou fait doublon. C'est souvent 50% du temps de chargement.
+
+**6. Chargez le JavaScript uniquement quand nécessaire.** Le script de votre chat en ligne, votre popup newsletter, votre tracking marketing : rien de tout ça n'a besoin d'être chargé avant l'affichage de la page. Un développeur sait faire ça en une heure.
+
+**7. Minifiez le CSS et le JavaScript.** C'est une option qui s'active en 2 clics sur un bon hébergeur. Le code est compressé : espaces, retours à la ligne et commentaires supprimés. Gain typique : 30% de poids en moins.
+
+:::example
+Imaginons une boulangère à Saint-Brieuc avec un site WordPress à 12 plugins actifs (newsletter, chat, réservation, 3 plugins SEO différents, slider, etc.). Temps de chargement : 9 secondes sur mobile. En supprimant 8 plugins inutiles et en minifiant le code, le site passe à 1,1 seconde. Les commandes en ligne peuvent doubler dans le mois qui suit.
+:::
+
+## L'hébergement et la livraison, votre infrastructure compte
+
+Les 3 dernières actions, souvent ignorées parce qu'elles sont invisibles. Pourtant elles peuvent diviser votre temps de chargement par 3.
+
+**8. Choisissez un bon hébergeur.** L'offre à 2 EUR par mois partagée avec 500 autres sites ne peut pas être rapide. Un hébergement moderne (Vercel, Netlify, un bon OVH) commence autour de 10 à 20 EUR par mois et change radicalement la donne.
+
+**9. Activez un CDN.** Un CDN (Content Delivery Network) duplique votre site sur des serveurs répartis dans le monde. Un visiteur à Rennes reçoit votre site depuis Paris, un visiteur à Marseille depuis un serveur plus proche. Résultat : **50% de temps de chargement en moins** pour les visiteurs loin du serveur principal.
+
+**10. Activez le cache navigateur.** La première visite charge tout. Les visites suivantes chargent uniquement ce qui a changé. Un visiteur qui revient sur votre site voit la page s'afficher quasiment instantanément.
+
+:::stat
+3x plus rapide
+La différence typique entre un hébergement partagé bas de gamme et un hébergement moderne avec CDN activé.
+:::
+
+## Ce qu'on fait différemment chez Djanni Studio
+
+Chez Djanni Studio, ces 10 actions sont appliquées **par défaut** sur tous les sites livrés. Pas en option, pas en supplément : c'est le standard minimum.
+
+:::brief
+- **Next.js** génère des pages statiques ultra-rapides, pas de calcul côté serveur à chaque visite
+- **Images compressées et redimensionnées automatiquement**, format WebP servi automatiquement aux navigateurs modernes
+- **Zéro plugin inutile** : chaque fonctionnalité est développée proprement, rien ne traîne
+- **Hébergement Vercel** avec CDN mondial et cache configuré correctement
+:::
+
+Temps de chargement moyen mesuré sur les sites Djanni : **moins de 1,2 seconde sur mobile**. [Voir des exemples concrets](/realisations).
+
+---
+
+## Ce qu'il faut retenir
+
+Un site rapide, ce n'est pas un luxe technique. C'est le minimum pour que vos clients restent assez longtemps pour vous contacter. Et la bonne nouvelle, c'est que la plupart des optimisations sont accessibles même sans être développeur.
+
+:::brief
+- Mesurez votre site avec PageSpeed Insights avant de corriger quoi que ce soit
+- Les images font 70% du poids de votre site : commencez par là
+- Les plugins WordPress inutiles peuvent peser autant que tout le reste du code
+- L'hébergement bas de gamme bride votre performance, quoi que vous fassiez
+- L'objectif réaliste pour un site d'artisan en 2026 : moins de 1 seconde de chargement sur mobile
+:::
+
+Vous voulez savoir où se situe votre site aujourd'hui, et quelles sont les 2 ou 3 actions qui auraient le plus d'impact pour vous ? Djanni Studio vous propose un **audit de performance gratuit et sans engagement**. On vous dit exactement où vous en êtes et par où commencer.
+
+:::cta
+[Demander un audit gratuit](/demande-projet) · [Voir nos réalisations](/realisations)
+:::`,
+	},
+	{
 		slug: "site-lent-10-secondes",
 		title: "Ce que vos clients vivent quand votre site met 10 secondes à charger",
 		excerpt:
 			"53% des visiteurs quittent un site qui met plus de 3 secondes à charger. Voici ce qui se passe vraiment dans la tête de vos clients pendant ces 10 secondes — et ce que ça coûte à votre commerce.",
-		category: "Performance web, concrètement",
+		category: "Performance web",
 		publishedAt: "2026-03-26",
 		readingTime: 4,
 		content: `Votre site met plus de 3 secondes à charger ? Alors vous perdez des clients sans le savoir. Pas parce que votre offre est mauvaise, mais parce que personne ne la voit.
