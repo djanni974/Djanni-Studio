@@ -35,7 +35,7 @@ const nextConfig: NextConfig = {
 		return [
 			{
 				source: "/js/script.js",
-				destination: "https://plausible.io/js/pa-aLxLCVOVZYCrqMpHaGGKF.js",
+				destination: "https://plausible.io/js/script.js",
 			},
 			{
 				source: "/api/event",
