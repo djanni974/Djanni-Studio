@@ -65,6 +65,7 @@ type ContactPayload = {
 	projectType: string
 	budget: string
 	deadline: string
+	tier?: string
 	businessName: string
 	existingUrl: string
 	message: string
@@ -90,6 +91,9 @@ const BUDGET_LABELS: Record<string, string> = {
 	"1500-3000": "1 500 € – 3 000 €",
 	"plus-3000": "Plus de 3 000 €",
 	"pas-defini": "Pas encore défini",
+}
+
+const TIER_LABELS: Record<string, string> = {
 	essentiel: "Maintenance Essentiel - 29 €/mois",
 	confort: "Maintenance Confort - 49 €/mois",
 	serenite: "Maintenance Sérénité - 99 €/mois",
@@ -108,6 +112,7 @@ const DEADLINE_LABELS: Record<string, string> = {
 const VALID_PROJECT_TYPES = new Set(Object.keys(PROJECT_LABELS))
 const VALID_BUDGETS = new Set([...Object.keys(BUDGET_LABELS), ""])
 const VALID_DEADLINES = new Set([...Object.keys(DEADLINE_LABELS), ""])
+const VALID_TIERS = new Set([...Object.keys(TIER_LABELS), ""])
 
 const ADDON_LABELS: Record<string, string> = {
 	maintenance: "Maintenance après livraison",
@@ -138,6 +143,7 @@ function validate(data: unknown): data is ContactPayload {
 	if (d.projectType.length > 50) return false
 	if (typeof d.budget === "string" && d.budget.length > 50) return false
 	if (typeof d.deadline === "string" && d.deadline.length > 50) return false
+	if (typeof d.tier === "string" && d.tier.length > 50) return false
 	if (typeof d.businessName === "string" && d.businessName.length > 200) return false
 	if (typeof d.existingUrl === "string" && d.existingUrl.length > 500) return false
 	if (typeof d.phone === "string" && d.phone.length > 20) return false
@@ -148,6 +154,8 @@ function validate(data: unknown): data is ContactPayload {
 	if (!VALID_BUDGETS.has(budget)) return false
 	const deadline = typeof d.deadline === "string" ? d.deadline : ""
 	if (!VALID_DEADLINES.has(deadline)) return false
+	const tier = typeof d.tier === "string" ? d.tier : ""
+	if (!VALID_TIERS.has(tier)) return false
 
 	// Email format + reject header injection characters
 	const email = d.email
@@ -196,6 +204,7 @@ function buildEmailHtml(data: ContactPayload): string {
 	const businessName = data.businessName?.trim() || ""
 	const existingUrl = data.existingUrl?.trim() || ""
 	const addonsLabel = (data.addons ?? []).map((a) => ADDON_LABELS[a] ?? a).join(", ")
+	const tierLabel = data.tier ? (TIER_LABELS[data.tier] ?? data.tier) : ""
 
 	return `
 <!DOCTYPE html>
@@ -245,6 +254,7 @@ function buildEmailHtml(data: ContactPayload): string {
             <td style="padding:10px 0;color:#78756c;font-size:13px;font-weight:500;vertical-align:top">Budget</td>
             <td style="padding:10px 0;color:#1a1a18;font-size:14px;font-weight:400">${escapeHtml(budgetLabel)}</td>
           </tr>
+          ${optionalRow("Palier", tierLabel)}
           ${optionalRow("Délai", deadlineLabel)}
           ${optionalRow("Site actuel", existingUrl)}
           ${optionalRow("À ajouter", addonsLabel)}
@@ -280,6 +290,7 @@ function buildConfirmationHtml(data: ContactPayload): string {
 	const firstName = data.name.split(" ")[0]
 	const businessName = data.businessName?.trim() || ""
 	const addonsLabel = (data.addons ?? []).map((a) => ADDON_LABELS[a] ?? a).join(", ")
+	const tierLabel = data.tier ? (TIER_LABELS[data.tier] ?? data.tier) : ""
 
 	return `
 <!DOCTYPE html>
@@ -328,6 +339,7 @@ function buildConfirmationHtml(data: ContactPayload): string {
             <td style="padding:10px 0;color:#78756c;font-size:13px;font-weight:500;vertical-align:top">Budget</td>
             <td style="padding:10px 0;color:#1a1a18;font-size:14px;font-weight:400">${escapeHtml(budgetLabel)}</td>
           </tr>
+          ${optionalRow("Palier", tierLabel)}
           ${optionalRow("Délai", deadlineLabel)}
           ${optionalRow("À ajouter", addonsLabel)}
         </table>
@@ -458,6 +470,7 @@ export async function POST(request: Request) {
 					projectType: body.projectType,
 					budget: body.budget,
 					deadline: body.deadline,
+					tier: body.tier ?? "",
 					businessName: body.businessName,
 					existingUrl: body.existingUrl,
 					addons: body.addons ?? [],
