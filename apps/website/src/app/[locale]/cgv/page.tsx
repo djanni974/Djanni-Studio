@@ -50,8 +50,11 @@ const sections = [
 			"— Refonte de sites existants",
 			"— Optimisation des performances et du référencement naturel (SEO)",
 			"— Intégration de maquettes et contenus",
-			"— Maintenance et mises à jour (sur devis)",
+			"— Maintenance et mises à jour ponctuelles (sur devis)",
+			"- Abonnements de maintenance mensuels (paliers Essentiel, Confort, Sérénité)",
+			"- Options récurrentes (gestion de réseaux sociaux mensuelle)",
 			"Le détail précis de chaque prestation, ses caractéristiques et son périmètre sont définis dans le devis validé par le Client.",
+			"**Les abonnements de maintenance et les options récurrentes sont régis par les dispositions spécifiques de l'article 17.**",
 		],
 	},
 	{
@@ -74,6 +77,7 @@ const sections = [
 			"**Moyens de paiement acceptés :** virement bancaire, carte bancaire, chèque.",
 			"**Client professionnel :** En cas de retard de paiement, une pénalité de retard égale à 3 fois le taux d'intérêt légal sera appliquée, ainsi qu'une indemnité forfaitaire de __40 €__ pour frais de recouvrement (article L.441-10 du Code de commerce).",
 			"**Client consommateur :** En cas de retard de paiement, des pénalités pourront être appliquées conformément aux dispositions légales en vigueur.",
+			"**Pour les abonnements mensuels (maintenance et options récurrentes) :** voir les modalités spécifiques de l'article 17.",
 		],
 	},
 	{
@@ -131,6 +135,7 @@ const sections = [
 			"Avant le début de la prestation, le Client consommateur dispose d'un délai de __14 jours__ à compter de la signature du devis pour exercer son droit de rétractation, par email à contact@djannistudio.fr. L'acompte sera alors __intégralement remboursé__.",
 			"**Client professionnel :** Le droit de rétractation ne s'applique pas.",
 			"Un __formulaire type de rétractation__ est mis à disposition du Client consommateur sur simple demande par email à contact@djannistudio.fr, conformément à l'article L.221-5 du Code de la consommation.",
+			"**Abonnements de maintenance et options récurrentes :** Le Client consommateur dispose d'un délai de __14 jours__ à compter de la souscription pour exercer son droit de rétractation, par email à contact@djannistudio.fr. Si l'exécution de la prestation a commencé avec son accord exprès avant la fin de ce délai, le Client pourra être tenu de payer le __prorata__ des services déjà rendus à la date de rétractation.",
 		],
 	},
 	{
@@ -140,6 +145,7 @@ const sections = [
 			"— __L'acompte versé reste acquis__ au Prestataire.",
 			"— Si les travaux réalisés excèdent le montant de l'acompte, le Client devra régler le complément correspondant au travail effectué.",
 			"En cas de manquement grave de l'une des parties à ses obligations, l'autre partie pourra résilier le contrat par lettre recommandée avec accusé de réception, après mise en demeure restée infructueuse pendant __15 jours__.",
+			"**Pour la résiliation des abonnements de maintenance et options récurrentes, voir les modalités spécifiques de l'article 17.**",
 		],
 	},
 	{
@@ -164,8 +170,12 @@ const sections = [
 		title: "Article 15 — Médiation et litiges",
 		content: [
 			"En cas de litige, les parties s'engagent à rechercher une __solution amiable__ avant toute action en justice.",
-			// TODO: Remplacer par les vraies coordonnées du médiateur une fois inscrit chez Medicys
-			"**Client consommateur :** Conformément aux articles L.612-1 et suivants du Code de la consommation, vous avez le droit de recourir __gratuitement__ à un médiateur de la consommation. Les coordonnées du médiateur compétent seront communiquées sur simple demande à contact@djannistudio.fr.",
+			"**Client consommateur :** Conformément aux articles L.612-1 et suivants du Code de la consommation, vous avez le droit de recourir __gratuitement__ à un médiateur de la consommation.",
+			"**Le médiateur de la consommation désigné par le Prestataire est :**",
+			"__AME CONSO__ (Association des Médiateurs Européens - Consommation)",
+			"197 boulevard Saint-Germain, 75007 Paris",
+			"Site : https://www.mediationconso-ame.com",
+			"Le Client consommateur peut saisir gratuitement le médiateur après échec d'une réclamation écrite préalable adressée au Prestataire à contact@djannistudio.fr restée sans réponse satisfaisante pendant __1 mois__.",
 			"**Client professionnel :** À défaut de résolution amiable, les tribunaux compétents seront ceux du ressort du domicile du Prestataire.",
 			"**Client consommateur :** Le consommateur peut saisir le tribunal de son domicile conformément aux dispositions légales en vigueur.",
 		],
@@ -175,6 +185,49 @@ const sections = [
 		content: [
 			"Les présentes CGV sont soumises au __droit français__.",
 			"En cas de contradiction entre les CGV et le devis, les dispositions du devis prévaudront.",
+		],
+	},
+	{
+		title: "Article 17 — Abonnements de maintenance et options récurrentes",
+		content: [
+			"**17.1 Objet**",
+			"Le présent article régit les __abonnements mensuels__ souscrits par le Client, à savoir :",
+			"- Les paliers de maintenance (Essentiel, Confort, Sérénité) présentés sur la page /maintenance du site.",
+			"- Les options récurrentes (gestion de réseaux sociaux mensuelle) présentées sur la page /options du site.",
+			"Le détail des prestations incluses dans chaque palier ou option est précisé dans le devis ou bon de commande signé par le Client.",
+			"**17.2 Souscription**",
+			"La souscription à un abonnement résulte de la __signature d'un devis__ ou d'un bon de commande dédié, distinct du devis de création éventuelle du site.",
+			"L'abonnement prend effet à la date de __réception du paiement de la première facture mensuelle__.",
+			"**17.3 Tarifs**",
+			"Les tarifs mensuels HT sont indiqués sur les pages /maintenance et /options du site, et rappelés dans le devis. TVA non applicable, article 293 B du CGI.",
+			"**Évolution tarifaire :** Le Prestataire peut modifier les tarifs avec un __préavis de 60 jours__ notifié par email. Le Client dispose alors d'un délai de __30 jours__ pour résilier sans frais ni pénalité avant l'application du nouveau tarif.",
+			"**17.4 Durée et reconduction**",
+			"L'abonnement est conclu pour une durée d'__un mois__, sans engagement minimum.",
+			"Il est __reconduit tacitement__ chaque mois, jusqu'à résiliation par l'une des parties dans les conditions prévues à l'article 17.6.",
+			"**17.5 Modalités de paiement**",
+			"Une facture est émise par le Prestataire au __début de chaque période mensuelle__, payable à __7 jours__ par :",
+			"- virement bancaire,",
+			"- carte bancaire (lien de paiement transmis avec la facture),",
+			"- chèque.",
+			"__Aucun prélèvement automatique__ n'est mis en place.",
+			"**Retard de paiement :** En cas de retard, les pénalités prévues à l'article 5 s'appliquent.",
+			"**17.6 Résiliation**",
+			"Le Client peut résilier son abonnement __à tout moment__, sans pénalité, par email à contact@djannistudio.fr.",
+			"Un __préavis de 30 jours__ s'applique : la résiliation prend effet à la fin du __mois civil suivant__ la demande. Le Client reste redevable des mensualités dues jusqu'à cette date.",
+			"Le Prestataire peut résilier l'abonnement dans les mêmes conditions, par email avec accusé de réception.",
+			"**17.7 Impayé et suspension**",
+			"En cas de non-paiement d'une facture à son échéance, le Prestataire adresse une __mise en demeure par email__.",
+			"À défaut de régularisation sous __15 jours__, les prestations de l'abonnement sont __suspendues__. À défaut de régularisation sous __30 jours__, l'abonnement est __résilié de plein droit__.",
+			"La suspension n'affecte pas l'hébergement du site (couvert par l'article 10), qui reste assuré par le fournisseur d'hébergement choisi par le Client.",
+			"**17.8 Restitution en fin d'abonnement**",
+			"À la fin de l'abonnement, quel qu'en soit le motif, le Client __conserve la propriété de son site__, de son code source et de ses accès, conformément à l'article 9.",
+			"Une __sauvegarde finale__ (base de données et fichiers) est transmise au Client par email sur simple demande, dans un délai de 15 jours suivant la résiliation.",
+			"**17.9 Modification des prestations incluses**",
+			"Le Prestataire peut faire évoluer le contenu d'un palier de maintenance ou d'une option récurrente (par exemple, ajout d'heures incluses, mise à jour des outils utilisés).",
+			"Toute modification __substantielle défavorable__ au Client est notifiée par email avec un __préavis de 60 jours__. Le Client dispose alors d'un délai de __30 jours__ pour résilier sans frais ni pénalité.",
+			"**17.10 Force majeure et responsabilité**",
+			"Les dispositions des articles 13 et 14 s'appliquent aux abonnements.",
+			"Pour les prestations récurrentes, la responsabilité du Prestataire est limitée à __trois mois d'abonnement__, ce plafond étant distinct du plafond applicable aux prestations ponctuelles.",
 		],
 	},
 ]
@@ -221,7 +274,7 @@ export default async function CGV({ params }: { params: Promise<{ locale: string
 			<h1 className="font-heading text-[clamp(28px,4vw,40px)] font-extrabold leading-tight tracking-tight">
 				Conditions Générales de Vente
 			</h1>
-			<p className="mt-3 text-sm text-djanni-gray-light">Dernière mise à jour : mars 2026</p>
+			<p className="mt-3 text-sm text-djanni-gray-light">Dernière mise à jour : avril 2026</p>
 
 			<div className="mt-12 space-y-10">
 				{sections.map((section) => (

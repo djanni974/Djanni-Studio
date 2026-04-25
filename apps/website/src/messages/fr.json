@@ -1235,7 +1235,8 @@
 		"ctaTitle": "Choisissons ensemble le bon palier.",
 		"ctaSubtitle": "Pas sûr de l'offre qui vous correspond ? On en parle 30 minutes, je vous oriente sans pression.",
 		"ctaReassurance": "Premier appel gratuit, sans engagement.",
-		"disclaimerCgv": "Conditions détaillées communiquées à la souscription.",
+		"disclaimerCgv": "Conditions de souscription, paiement et résiliation détaillées dans nos",
+		"disclaimerCgvLink": "CGV · Article 17",
 		"reassurancesTag": "Engagements",
 		"reassurancesTitle": "Ce que vous avez dans tous les paliers",
 		"reassurances": [
