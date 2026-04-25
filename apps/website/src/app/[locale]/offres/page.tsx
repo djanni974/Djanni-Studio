@@ -77,7 +77,7 @@ export default async function OffresPage({ params }: { params: Promise<{ locale:
 					/>
 				</div>
 			</div>
-			<NextIntlClientProvider messages={pickMessages(messages, ["offres", "pricing"])}>
+			<NextIntlClientProvider messages={pickMessages(messages, ["offres", "pricing", "legal"])}>
 				<OffresContent />
 			</NextIntlClientProvider>
 		</main>
