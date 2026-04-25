@@ -38,6 +38,14 @@
 			"title": "Offre Sur mesure | à partir de 1 990 € | Djanni Studio",
 			"description": "Prise de RDV, blog CMS, catalogue, multilingue. Un site construit exactement pour vos besoins. Devis personnalisé après échange de 30 minutes."
 		},
+		"maintenance": {
+			"title": "Maintenance site web : 29 € à 99 €/mois | Djanni Studio",
+			"description": "Trois paliers de maintenance pour votre site : Essentiel, Confort et Sérénité. Hébergement, sécurité, mises à jour. Sans engagement, résiliable à tout moment."
+		},
+		"options": {
+			"title": "Options pour votre site web | Djanni Studio",
+			"description": "Toutes les options disponibles pour enrichir votre site : rédaction, SEO local, fonctionnalités, accompagnement. Tarifs fixes à partir de 40 €."
+		},
 		"cityPages": {
 			"saintMalo": {
 				"title": "Création site web à Saint-Malo | Djanni Studio",
@@ -64,6 +72,8 @@
 		"cgv": "CGV",
 		"mentionsLegales": "Mentions légales",
 		"politiqueConfidentialite": "Politique de confidentialité",
+		"maintenance": "Maintenance",
+		"options": "Options",
 		"citySaintMalo": "Création site web Saint-Malo",
 		"cityDinan": "Création site web Dinan",
 		"cityDinard": "Création site web Dinard"
@@ -104,7 +114,7 @@
 		"heroSubtitle": "Choisissez l'offre qui correspond à votre projet. Chaque formule inclut un accompagnement personnalisé de A à Z.",
 		"guarantees": {
 			"tag": "Engagements",
-			"title": "Ce qui est inclus dans chaque offre.",
+			"title": "Mes engagements, peu importe l'offre.",
 			"subtitle": "Quel que soit l'offre choisie : pas d'abonnement, des délais tenus, et vous gardez le contrôle.",
 			"items": [
 				{
@@ -165,7 +175,7 @@
 		},
 		"comparison": {
 			"tag": "Comparatif",
-			"title": "Ce qui est inclus dans chaque offre",
+			"title": "Comparez les offres en détail.",
 			"featureLabel": "Fonctionnalité",
 			"presenceLabel": "Présence",
 			"presencePrice": "990€",
@@ -229,33 +239,6 @@
 					"presence": false,
 					"vitrine": false,
 					"custom": true
-				}
-			]
-		},
-		"addons": {
-			"tag": "À la carte",
-			"title": "Options disponibles",
-			"subtitle": "Ces options s'ajoutent à n'importe quelle formule selon vos besoins.",
-			"items": [
-				{
-					"label": "Rédaction des textes",
-					"price": "+150€",
-					"desc": "On écrit tout pour vous à partir d'un simple échange de 30 min."
-				},
-				{
-					"label": "Fiche Google Business",
-					"price": "+100€",
-					"desc": "Vous apparaissez sur Google Maps quand on cherche votre métier dans votre ville."
-				},
-				{
-					"label": "Maintenance mensuelle",
-					"price": "49€/mois",
-					"desc": "Mises à jour, sauvegardes, dépannage. Sans engagement, résiliable à tout moment."
-				},
-				{
-					"label": "Page supplémentaire",
-					"price": "+150€/page",
-					"desc": "Pour les projets qui ont besoin de plus d'espace."
 				}
 			]
 		},
@@ -341,6 +324,18 @@
 			"subtitle": "En 30 minutes, je vous donne une estimation claire de prix, un délai précis, et un aperçu de ce que pourrait être votre futur site.",
 			"reassurance": "Premier appel gratuit, sans engagement.",
 			"button": "Démarrer mon projet"
+		},
+		"maintenanceCallout": {
+			"tag": "Maintenance",
+			"title": "Et après la mise en ligne ?",
+			"text": "Trois paliers pour garder votre site rapide, sécurisé et à jour, à partir de 29 €/mois. Sans engagement, résiliable à tout moment.",
+			"cta": "Voir les paliers de maintenance"
+		},
+		"optionsCallout": {
+			"tag": "Options",
+			"title": "Pour aller plus loin",
+			"text": "18 options à la carte : rédaction, SEO local, fonctionnalités, accompagnement. Pas d'abonnement obligatoire.",
+			"cta": "Voir toutes les options"
 		}
 	},
 	"pricing": {
@@ -832,6 +827,8 @@
 		"privacy": "Confidentialité",
 		"legal": "Mentions légales",
 		"cgv": "CGV",
+		"maintenance": "Maintenance",
+		"options": "Options",
 		"sitemap": "Plan du site",
 		"paymentTransfer": "Virement",
 		"paymentCard": "Carte bancaire",
@@ -1220,6 +1217,116 @@
 			"tag": "Zones d'intervention",
 			"title": "Je travaille aussi dans ces villes",
 			"viewPage": "Création site web {city}"
+		}
+	},
+	"legal": {
+		"vatNotice": "Tarifs HT, TVA non applicable, art. 293B du CGI."
+	},
+	"maintenance": {
+		"tag": "Maintenance",
+		"title": "Maintenance",
+		"subtitle": "Trois paliers pour garder votre site rapide, sécurisé et à jour. Sans engagement, résiliable à tout moment.",
+		"priceLabel": "À partir de",
+		"perMonth": "/ mois",
+		"recommendedBadge": "Recommandé",
+		"ctaSelect": "Choisir {tier}",
+		"ctaContact": "Discuter de votre projet",
+		"ctaTag": "Prêt ?",
+		"ctaTitle": "Choisissons ensemble le bon palier.",
+		"ctaSubtitle": "Pas sûr de l'offre qui vous correspond ? On en parle 30 minutes, je vous oriente sans pression.",
+		"ctaReassurance": "Premier appel gratuit, sans engagement.",
+		"disclaimerCgv": "Conditions détaillées communiquées à la souscription.",
+		"reassurancesTag": "Engagements",
+		"reassurancesTitle": "Ce que vous avez dans tous les paliers",
+		"reassurances": [
+			{
+				"title": "Sans engagement",
+				"text": "Vous résiliez quand vous voulez, sans pénalité. Préavis de 30 jours, c'est tout."
+			},
+			{
+				"title": "Sécurité incluse",
+				"text": "Hébergement, certificat SSL, mises à jour critiques. Votre site reste en ligne, point."
+			},
+			{
+				"title": "Un humain à l'autre bout",
+				"text": "C'est moi qui réponds. Pas un ticket dans une file d'attente, pas un chatbot."
+			}
+		],
+		"tiers": {
+			"essentiel": {
+				"name": "Essentiel",
+				"tagline": "L'indispensable pour rester en ligne sereinement.",
+				"features": ["Hébergement", "SSL", "Support email sous 48 h"]
+			},
+			"confort": {
+				"name": "Confort",
+				"tagline": "Le palier le plus choisi par les artisans.",
+				"features": ["Tout Essentiel inclus", "1 h/mois de modifications", "Sauvegarde mensuelle"]
+			},
+			"serenite": {
+				"name": "Sérénité",
+				"tagline": "Maintenance complète, sans rien à gérer.",
+				"features": [
+					"Tout Confort inclus",
+					"3 h/mois de modifications",
+					"Refonte annuelle",
+					"WhatsApp prioritaire"
+				]
+			}
+		}
+	},
+	"options": {
+		"tag": "Options",
+		"title": "Options",
+		"subtitle": "Tout ce que vous pouvez ajouter à votre site, à la carte. Pas d'abonnement obligatoire, sauf options récurrentes (Instagram, Instagram + Facebook).",
+		"statOptions": "options à la carte",
+		"statCategories": "catégories",
+		"statFromPrice": "à partir de {price} €",
+		"ctaContact": "Discuter de votre projet",
+		"ctaTag": "Une idée en tête ?",
+		"ctaTitle": "Dites-moi ce que vous voulez ajouter.",
+		"ctaSubtitle": "Combinez les options qui vous parlent, je chiffre tout dans un devis clair sous 24 h.",
+		"ctaReassurance": "Premier appel gratuit, sans engagement.",
+		"columns": {
+			"option": "Option",
+			"price": "Prix HT"
+		},
+		"units": {
+			"unique": "",
+			"mensuel": " / mois",
+			"par_unite": " / unité"
+		},
+		"unitBadges": {
+			"unique": "Forfait",
+			"mensuel": "Mensuel",
+			"par_unite": "À l'unité"
+		},
+		"categories": {
+			"contenus": "Contenus et rédaction",
+			"visuel": "Visuel et médias",
+			"seo": "SEO et visibilité",
+			"fonctionnalites": "Fonctionnalités",
+			"accompagnement": "Accompagnement"
+		},
+		"items": {
+			"redaction-textes": "Rédaction textes site complet",
+			"article-blog": "Article blog SEO 800 mots avec SEO on-page",
+			"pack-3-articles": "Pack 3 articles blog",
+			"galerie-cms": "Module galerie photos avec CMS léger upload mobile",
+			"photos-stock": "Pack photos stock premium 10 photos optimisées",
+			"feed-instagram": "Intégration feed Instagram",
+			"retouche-photo": "Retouche photo client",
+			"gbp-config": "Configuration Google Business Profile",
+			"seo-local-etendu": "Pack SEO local étendu GBP plus 3 annuaires plus cocon",
+			"page-seo-ville": "Page SEO ville supplémentaire",
+			"page-supplementaire": "Page supplémentaire",
+			"formulaire-devis": "Formulaire devis avancé avec champs conditionnels",
+			"rdv-fresha-planity": "Intégration prise de RDV Fresha ou Planity",
+			"newsletter": "Module newsletter avec form Brevo ou Mailchimp",
+			"multilingue": "Multilingue FR plus EN avec traduction et hreflang",
+			"formation-1h": "Formation client 1 h en visio ou présentiel sous 15 km",
+			"gestion-instagram": "Gestion Instagram mensuelle 8 posts plus 4 stories",
+			"gestion-instagram-facebook": "Gestion Instagram et Facebook avec cross-posting"
 		}
 	}
 }

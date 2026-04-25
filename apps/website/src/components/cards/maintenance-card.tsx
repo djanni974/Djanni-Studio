@@ -2,25 +2,18 @@
 
 import { cn } from "@repo/ui/lib/utils"
 import { IconCheck } from "@tabler/icons-react"
+import { useTranslations } from "next-intl"
 import { useEffect, useRef, useState } from "react"
 import { Link } from "@/i18n/navigation"
-import type { PricingTier } from "@/lib/constants"
+import { trackPlausibleEvent } from "@/lib/plausible"
+import type { MaintenanceTier } from "@/lib/pricing"
 
-export function PricingCard({ tier, onSelect }: { tier: PricingTier; onSelect?: () => void }) {
-	const {
-		badge,
-		priceLabel,
-		price,
-		priceSuffix,
-		priceNote,
-		name,
-		description,
-		benefitLine,
-		features,
-		ctaLabel,
-		featured,
-		popularNote,
-	} = tier
+export function MaintenanceCard({ tier }: { tier: MaintenanceTier }) {
+	const t = useTranslations("maintenance")
+	const tt = useTranslations(`maintenance.tiers.${tier.id}`)
+	const features = tt.raw("features") as string[]
+	const name = tt("name")
+	const featured = Boolean(tier.highlighted)
 
 	const ref = useRef<HTMLDivElement>(null)
 	const [inView, setInView] = useState(false)
@@ -46,7 +39,11 @@ export function PricingCard({ tier, onSelect }: { tier: PricingTier; onSelect?: 
 	}, [])
 
 	return (
-		<Link href="/demande-projet" className="block" onClick={onSelect}>
+		<Link
+			href="/demande-projet"
+			className="block"
+			onClick={() => trackPlausibleEvent("clic_palier_maintenance", { palier: tier.id })}
+		>
 			<div
 				ref={ref}
 				className={cn(
@@ -80,7 +77,7 @@ export function PricingCard({ tier, onSelect }: { tier: PricingTier; onSelect?: 
 					)}
 				>
 					{featured && "⭐ "}
-					{badge}
+					{name}
 				</span>
 
 				{/* Price label */}
@@ -90,7 +87,7 @@ export function PricingCard({ tier, onSelect }: { tier: PricingTier; onSelect?: 
 						featured ? "text-white/70" : "text-djanni-gray",
 					)}
 				>
-					{priceLabel}
+					{t("priceLabel")}
 				</div>
 
 				{/* Price */}
@@ -100,40 +97,26 @@ export function PricingCard({ tier, onSelect }: { tier: PricingTier; onSelect?: 
 						!featured && "text-foreground",
 					)}
 				>
-					{price} <span className="text-2xl font-normal">{priceSuffix}</span>
+					{tier.monthlyPriceHT}{" "}
+					<span className="text-2xl font-normal">
+						€<span className="ml-1 text-base font-normal opacity-80">{t("perMonth")}</span>
+					</span>
 				</div>
 
-				{/* Price note */}
-				<div className={cn("mb-7 text-[13px]", featured ? "text-white/70" : "text-djanni-gray")}>
-					{priceNote}
-				</div>
-
-				{/* Plan name */}
-				<div className={cn("mb-2 font-heading text-xl font-bold", !featured && "text-foreground")}>
-					{name}
-				</div>
-
-				{/* Description */}
-				<div
+				{/* Tagline */}
+				<p
 					className={cn(
-						"mb-2 text-sm leading-relaxed",
+						"mt-5 mb-7 text-sm leading-relaxed",
 						featured ? "text-white/80" : "text-djanni-gray",
 					)}
 				>
-					{description}
-				</div>
-
-				{/* Benefit line */}
-				<p
-					className={cn("mb-7 text-xs italic", featured ? "text-white/60" : "text-djanni-gray/70")}
-				>
-					{benefitLine}
+					{tt("tagline")}
 				</p>
 
-				{/* Popular note (featured only) */}
-				{featured && popularNote && (
+				{/* Recommended note (featured only) */}
+				{featured && (
 					<div className="mb-7 rounded-md bg-white/15 px-3 py-2 text-center text-xs font-medium text-white">
-						{popularNote}
+						{t("recommendedBadge")}
 					</div>
 				)}
 
@@ -162,6 +145,7 @@ export function PricingCard({ tier, onSelect }: { tier: PricingTier; onSelect?: 
 				{/* CTA */}
 				<div className="mt-9">
 					<span
+						data-tier={tier.id}
 						className={cn(
 							"block rounded-md py-3.5 text-center text-sm font-medium transition-all duration-300",
 							featured
@@ -169,7 +153,7 @@ export function PricingCard({ tier, onSelect }: { tier: PricingTier; onSelect?: 
 								: "border border-border text-foreground group-hover:border-djanni-orange/40 group-hover:bg-foreground/4 group-hover:shadow-[0_4px_20px_rgba(232,80,10,0.08)]",
 						)}
 					>
-						{ctaLabel}
+						{t("ctaSelect", { tier: name })}
 					</span>
 				</div>
 			</div>

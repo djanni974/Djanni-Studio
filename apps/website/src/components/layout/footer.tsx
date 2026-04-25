@@ -58,6 +58,18 @@ export function Footer() {
 							{t("offres")}
 						</Link>
 						<Link
+							href="/maintenance"
+							className="text-sm text-djanni-gray-light transition-colors hover:text-foreground"
+						>
+							{t("maintenance")}
+						</Link>
+						<Link
+							href="/options"
+							className="text-sm text-djanni-gray-light transition-colors hover:text-foreground"
+						>
+							{t("options")}
+						</Link>
+						<Link
 							href="/a-propos"
 							className="text-sm text-djanni-gray-light transition-colors hover:text-foreground"
 						>

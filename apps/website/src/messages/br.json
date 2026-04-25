@@ -38,6 +38,14 @@
 			"title": "Stumm War-bouez · adalek 1 990 € | Djanni Studio",
 			"description": "Kemer rendez-vous, blog CMS, katalog, liesyezhek. Ul lec'hienn savet resis evit ho ezhommoù. Devis personelaet goude un eskemm 30 munutenn."
 		},
+		"maintenance": {
+			"title": "Mirout lec'hienn web : 29 € da 99 €/miz | Djanni Studio",
+			"description": "Tri live mirout evit ho lec'hienn : Pennañ, Aez ha Habask. Herbergiñ, surentez, hizivadennoù. Hep engouestl, dispennadus pa garit."
+		},
+		"options": {
+			"title": "Dibarzhioù evit ho lec'hienn web | Djanni Studio",
+			"description": "An holl ddibarzhioù da binvellañ ho lec'hienn : skridaozañ, SEO lec'hel, perzhioù, ambroug. Tarifioù sed adalek 40 €."
+		},
 		"cityPages": {
 			"saintMalo": {
 				"title": "Krouiñ lec'hienn web e Sant-Maloù | Djanni Studio",
@@ -64,6 +72,8 @@
 		"cgv": "Divizegoù",
 		"mentionsLegales": "Menozoù lezennel",
 		"politiqueConfidentialite": "Reolenn prevezded",
+		"maintenance": "Mirout",
+		"options": "Dibarzhioù",
 		"citySaintMalo": "Krouiñ lec'hienn web Sant-Maloù",
 		"cityDinan": "Krouiñ lec'hienn web Dinan",
 		"cityDinard": "Krouiñ lec'hienn web Dinarzh"
@@ -104,7 +114,7 @@
 		"heroSubtitle": "Dibabit ar formulenn a zere d'ho raktres. Pep formulenn a endalc'h un hentenn personel eus A da Z.",
 		"guarantees": {
 			"tag": "Gouarnamantoù",
-			"title": "Petra a zo endalc'het e pep formulenn.",
+			"title": "Ma engouestlioù, ne vern peseurt stumm.",
 			"subtitle": "Pe formulenn bennag ho peus dibabet : hep koumanant, amzerioù dalc'het, ha chom a rit mestr.",
 			"items": [
 				{
@@ -165,7 +175,7 @@
 		},
 		"comparison": {
 			"tag": "Keñveriadenn",
-			"title": "Petra a zo endalc'het e pep formulenn",
+			"title": "Keñveriit ar stummoù en disterañ.",
 			"featureLabel": "Arc'hant",
 			"presenceLabel": "Prezañs",
 			"presencePrice": "990€",
@@ -234,33 +244,6 @@
 					"presence": false,
 					"vitrine": false,
 					"custom": true
-				}
-			]
-		},
-		"addons": {
-			"tag": "Diwar-choaz",
-			"title": "Dibarzhioù hegerz",
-			"subtitle": "An dibarzhioù-mañ a c'haller ouzhpennañ da fep formulenn hervez ho ezhommoù.",
-			"items": [
-				{
-					"label": "Skrivañ an testennoù",
-					"price": "+150€",
-					"desc": "Skrivañ a reomp kement tra evidoc'h diwar un eskemm eeun 30 munut."
-				},
-				{
-					"label": "Fichennad Google Business",
-					"price": "+100€",
-					"desc": "Diskouez a rit war Google Maps pa vez klasket ho micher en ho korn-bro."
-				},
-				{
-					"label": "Kendalc'hañ miziek",
-					"price": "49€/miz",
-					"desc": "Hizivadennoù, enrolladennoù, reizhadennoù. Hep engouestl, dilemel a c'heller da bep mare."
-				},
-				{
-					"label": "Pajenn ouzhpenn",
-					"price": "+150€/pajenn",
-					"desc": "Evit ar raktresoù o deus ezhomm muioc'h a blas."
 				}
 			]
 		},
@@ -346,6 +329,18 @@
 			"subtitle": "E 30 munut, reiñ a ran deoc'h un estimadenn sklaer a brizioù, un amzer resis, hag ur sell war ar pezh e c'hallfe bezañ ho lec'hienn da zont.",
 			"reassurance": "Galvadenn gentañ digoust, hep engouestl.",
 			"button": "Kregiñ gant ma raktres"
+		},
+		"maintenanceCallout": {
+			"tag": "Mirout",
+			"title": "Ha goude lakaat enlinenn ?",
+			"text": "Tri live evit derc'hel ho lec'hienn buan, surr ha hizivaet, adalek 29 €/miz. Hep engouestl, dispennadus pa garit.",
+			"cta": "Gwelet al liveoù mirout"
+		},
+		"optionsCallout": {
+			"tag": "Dibarzhioù",
+			"title": "Evit mont pelloc'h",
+			"text": "18 dibarzh a la carte : skridaozañ, SEO lec'hel, perzhioù, ambroug. Hep koumanant ret.",
+			"cta": "Gwelet an holl dibarzhioù"
 		}
 	},
 	"pricing": {
@@ -837,6 +832,8 @@
 		"privacy": "Prevezded",
 		"legal": "Menozoù lezennel",
 		"cgv": "DG",
+		"maintenance": "Mirout",
+		"options": "Dibarzhioù",
 		"sitemap": "Kartenn al lec'hienn",
 		"paymentTransfer": "Treuzkas",
 		"paymentCard": "Kartenn bankañ",
@@ -1222,6 +1219,116 @@
 			"tag": "Takadoù labour",
 			"title": "Labourat a ran ivez er c'hêrioù-mañ",
 			"viewPage": "Krouiñ lec'hienn web {city}"
+		}
+	},
+	"legal": {
+		"vatNotice": "Tarifioù DTA, TVA na red ket, mell. 293B CGI."
+	},
+	"maintenance": {
+		"tag": "Mirout",
+		"title": "Mirout",
+		"subtitle": "Tri live evit derc'hel ho lec'hienn buan, surr ha hizivaet. Hep engouestl, dispennadus pa garit.",
+		"priceLabel": "Adalek",
+		"perMonth": "/ miz",
+		"recommendedBadge": "Erbedet",
+		"ctaSelect": "Dibab {tier}",
+		"ctaContact": "Komz eus ho raktres",
+		"ctaTag": "Prest ?",
+		"ctaTitle": "Dibabomp asambles al live mat.",
+		"ctaSubtitle": "N'oc'h ket sur eus al live a glot ganeoc'h ? Komzomp 30 munutenn, sturiañ a rin ac'hanoc'h hep gwask.",
+		"ctaReassurance": "Galvadenn gentañ digoust, hep engouestl.",
+		"disclaimerCgv": "Divizegoù munut roet pa goumananter.",
+		"reassurancesTag": "Engouestlioù",
+		"reassurancesTitle": "Ar pezh ho peus e pep live",
+		"reassurances": [
+			{
+				"title": "Hep engouestl",
+				"text": "Dispennit pa garit, hep kastiz. Ragvenneg 30 deiz, ne zlefe ket bezañ muioc'h."
+			},
+			{
+				"title": "Surentez enroll",
+				"text": "Herbergiñ, testeni SSL, hizivadennoù tonket. Ho lec'hienn a chom enlinenn, n'eus ken."
+			},
+			{
+				"title": "Un den e penn ar fil",
+				"text": "Me eo a respont. Tiket ebet en ur c'hoazh, robot ebet."
+			}
+		],
+		"tiers": {
+			"essentiel": {
+				"name": "Pennañ",
+				"tagline": "An traoù ret evit chom enlinenn habask.",
+				"features": ["Herbergiñ", "SSL", "Skoazell postel e-barzh 48 h"]
+			},
+			"confort": {
+				"name": "Aez",
+				"tagline": "Al live dibabet ar muiañ gant an artizaned.",
+				"features": ["Pep tra Pennañ enroll", "1 h/miz a c'hemmoù", "Sauveteg miziek"]
+			},
+			"serenite": {
+				"name": "Habask",
+				"tagline": "Mirout klok, hep netra da verañ.",
+				"features": [
+					"Pep tra Aez enroll",
+					"3 h/miz a c'hemmoù",
+					"Adsavadur bep bloaz",
+					"WhatsApp prioritarezh"
+				]
+			}
+		}
+	},
+	"options": {
+		"tag": "Dibarzhioù",
+		"title": "Dibarzhioù",
+		"subtitle": "Pep tra a c'hallit ouzhpennañ d'ho lec'hienn, a la carte. Hep koumanant ret, nemet evit an dibarzhioù aliesadek (Instagram, Instagram + Facebook).",
+		"statOptions": "dibarzh a la carte",
+		"statCategories": "rummad",
+		"statFromPrice": "adalek {price} €",
+		"ctaContact": "Komz eus ho raktres",
+		"ctaTag": "Ur soñj ?",
+		"ctaTitle": "Lavarit din ar pezh a fell deoc'h ouzhpennañ.",
+		"ctaSubtitle": "Kemmesket an dibarzhioù a glot ganeoc'h, kontañ a rin pep tra en un devis sklaer e-barzh 24 h.",
+		"ctaReassurance": "Galvadenn gentañ digoust, hep engouestl.",
+		"columns": {
+			"option": "Dibarzh",
+			"price": "Priz DTA"
+		},
+		"units": {
+			"unique": "",
+			"mensuel": " / miz",
+			"par_unite": " / unanenn"
+		},
+		"unitBadges": {
+			"unique": "Forfed",
+			"mensuel": "Miziek",
+			"par_unite": "Dre unanenn"
+		},
+		"categories": {
+			"contenus": "Endalc'h ha skridaozañ",
+			"visuel": "Gweladur ha mediaoù",
+			"seo": "SEO ha gweladenn",
+			"fonctionnalites": "Perzhioù",
+			"accompagnement": "Ambroug"
+		},
+		"items": {
+			"redaction-textes": "Skridaozañ testennoù lec'hienn klok",
+			"article-blog": "Pennad blog SEO 800 ger gant SEO on-page",
+			"pack-3-articles": "Pakad 3 fennad blog",
+			"galerie-cms": "Modul oriadeg luc'hskeudennoù gant CMS aes pellgargañ pellgomzer",
+			"photos-stock": "Pakad luc'hskeudennoù stock 10 luc'hskeudenn optimised",
+			"feed-instagram": "Enkorfadur feed Instagram",
+			"retouche-photo": "Adskeudennañ luc'hskeudenn kustumer",
+			"gbp-config": "Kefluniañ Google Business Profile",
+			"seo-local-etendu": "Pakad SEO lec'hel astennet GBP gant 3 lec'hienn-meneg ha cocon",
+			"page-seo-ville": "Pajenn SEO kêr ouzhpenn",
+			"page-supplementaire": "Pajenn ouzhpenn",
+			"formulaire-devis": "Furmskrid devis araokaet gant maeziennoù divizadek",
+			"rdv-fresha-planity": "Enkorfadur kemer rendez-vous Fresha pe Planity",
+			"newsletter": "Modul newsletter gant furmskrid Brevo pe Mailchimp",
+			"multilingue": "Liesyezhek FR ha SX gant troidigezh ha hreflang",
+			"formation-1h": "Stummadur kustumer 1 h dre webgomz pe e-leur dindan 15 km",
+			"gestion-instagram": "Merañ Instagram miziek 8 post ha 4 stori",
+			"gestion-instagram-facebook": "Merañ Instagram ha Facebook gant cross-posting"
 		}
 	}
 }
