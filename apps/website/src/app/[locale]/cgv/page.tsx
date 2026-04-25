@@ -50,8 +50,11 @@ const sections = [
 			"— Refonte de sites existants",
 			"— Optimisation des performances et du référencement naturel (SEO)",
 			"— Intégration de maquettes et contenus",
-			"— Maintenance et mises à jour (sur devis)",
+			"— Maintenance et mises à jour ponctuelles (sur devis)",
+			"- Abonnements de maintenance mensuels (paliers Essentiel, Confort, Sérénité)",
+			"- Options récurrentes (gestion de réseaux sociaux mensuelle)",
 			"Le détail précis de chaque prestation, ses caractéristiques et son périmètre sont définis dans le devis validé par le Client.",
+			"**Les abonnements de maintenance et les options récurrentes sont régis par les dispositions spécifiques de l'article 17.**",
 		],
 	},
 	{
@@ -74,6 +77,7 @@ const sections = [
 			"**Moyens de paiement acceptés :** virement bancaire, carte bancaire, chèque.",
 			"**Client professionnel :** En cas de retard de paiement, une pénalité de retard égale à 3 fois le taux d'intérêt légal sera appliquée, ainsi qu'une indemnité forfaitaire de __40 €__ pour frais de recouvrement (article L.441-10 du Code de commerce).",
 			"**Client consommateur :** En cas de retard de paiement, des pénalités pourront être appliquées conformément aux dispositions légales en vigueur.",
+			"**Pour les abonnements mensuels (maintenance et options récurrentes) :** voir les modalités spécifiques de l'article 17.",
 		],
 	},
 	{
@@ -131,6 +135,7 @@ const sections = [
 			"Avant le début de la prestation, le Client consommateur dispose d'un délai de __14 jours__ à compter de la signature du devis pour exercer son droit de rétractation, par email à contact@djannistudio.fr. L'acompte sera alors __intégralement remboursé__.",
 			"**Client professionnel :** Le droit de rétractation ne s'applique pas.",
 			"Un __formulaire type de rétractation__ est mis à disposition du Client consommateur sur simple demande par email à contact@djannistudio.fr, conformément à l'article L.221-5 du Code de la consommation.",
+			"**Abonnements de maintenance et options récurrentes :** Le Client consommateur dispose d'un délai de __14 jours__ à compter de la souscription pour exercer son droit de rétractation, par email à contact@djannistudio.fr. Si l'exécution de la prestation a commencé avec son accord exprès avant la fin de ce délai, le Client pourra être tenu de payer le __prorata__ des services déjà rendus à la date de rétractation.",
 		],
 	},
 	{
@@ -140,6 +145,7 @@ const sections = [
 			"— __L'acompte versé reste acquis__ au Prestataire.",
 			"— Si les travaux réalisés excèdent le montant de l'acompte, le Client devra régler le complément correspondant au travail effectué.",
 			"En cas de manquement grave de l'une des parties à ses obligations, l'autre partie pourra résilier le contrat par lettre recommandée avec accusé de réception, après mise en demeure restée infructueuse pendant __15 jours__.",
+			"**Pour la résiliation des abonnements de maintenance et options récurrentes, voir les modalités spécifiques de l'article 17.**",
 		],
 	},
 	{
