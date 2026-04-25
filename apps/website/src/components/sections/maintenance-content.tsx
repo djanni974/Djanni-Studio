@@ -20,8 +20,7 @@ export function MaintenanceContent() {
 				<div
 					className="pointer-events-none absolute inset-0 opacity-[0.03]"
 					style={{
-						backgroundImage:
-							"radial-gradient(circle, rgba(184,180,172,0.8) 1px, transparent 1px)",
+						backgroundImage: "radial-gradient(circle, rgba(184,180,172,0.8) 1px, transparent 1px)",
 						backgroundSize: "24px 24px",
 					}}
 				/>
@@ -29,7 +28,12 @@ export function MaintenanceContent() {
 
 				<div className="relative mx-auto max-w-[800px] text-center">
 					<AnimatedSection>
-						<SectionHeader tag={t("tag")} title={t("title")} subtitle={t("subtitle")} align="center" />
+						<SectionHeader
+							tag={t("tag")}
+							title={t("title")}
+							subtitle={t("subtitle")}
+							align="center"
+						/>
 					</AnimatedSection>
 				</div>
 			</section>

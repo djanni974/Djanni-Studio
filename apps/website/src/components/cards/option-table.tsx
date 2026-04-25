@@ -1,6 +1,7 @@
 "use client"
 
 import { useTranslations } from "next-intl"
+import { useEffect, useRef } from "react"
 import { trackPlausibleEvent } from "@/lib/plausible"
 import type { OptionCategory, OptionUnit } from "@/lib/pricing"
 
@@ -11,11 +12,29 @@ export function OptionTable({ category }: { category: OptionCategory }) {
 	const colPrice = t("columns.price")
 	const formatUnit = (unit: OptionUnit) => t(`units.${unit}`)
 
+	const sectionRef = useRef<HTMLElement>(null)
+	const firedRef = useRef(false)
+
+	useEffect(() => {
+		const el = sectionRef.current
+		if (!el) return
+		if (typeof IntersectionObserver === "undefined") return
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry?.isIntersecting && !firedRef.current) {
+					firedRef.current = true
+					trackPlausibleEvent("clic_categorie_options", { categorie: category.id })
+					observer.disconnect()
+				}
+			},
+			{ threshold: 0.4 },
+		)
+		observer.observe(el)
+		return () => observer.disconnect()
+	}, [category.id])
+
 	return (
-		<section
-			aria-labelledby={`category-${category.id}`}
-			onMouseEnter={() => trackPlausibleEvent("clic_categorie_options", { categorie: category.id })}
-		>
+		<section ref={sectionRef} aria-labelledby={`category-${category.id}`}>
 			<h2
 				id={`category-${category.id}`}
 				className="mb-5 font-heading text-2xl font-bold tracking-tight md:text-3xl"
@@ -51,9 +70,7 @@ export function OptionTable({ category }: { category: OptionCategory }) {
 							<tr
 								key={item.id}
 								data-category={category.id}
-								className={
-									index !== category.items.length - 1 ? "border-b border-border/60" : ""
-								}
+								className={index !== category.items.length - 1 ? "border-b border-border/60" : ""}
 							>
 								<td className="px-6 py-4 text-djanni-gray-light">{t(`items.${item.id}`)}</td>
 								<td className="whitespace-nowrap px-6 py-4 text-right font-medium text-foreground">

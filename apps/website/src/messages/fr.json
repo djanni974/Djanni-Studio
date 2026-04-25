@@ -1267,11 +1267,7 @@
 			"confort": {
 				"name": "Confort",
 				"tagline": "Le palier le plus choisi par les artisans.",
-				"features": [
-					"Tout Essentiel inclus",
-					"1 h/mois de modifications",
-					"Sauvegarde mensuelle"
-				]
+				"features": ["Tout Essentiel inclus", "1 h/mois de modifications", "Sauvegarde mensuelle"]
 			},
 			"serenite": {
 				"name": "Sérénité",

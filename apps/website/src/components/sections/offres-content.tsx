@@ -20,8 +20,8 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/
 import { SectionHeader } from "@/components/ui/section-header"
 import { VatNotice } from "@/components/ui/vat-notice"
 import { Link } from "@/i18n/navigation"
-import { trackPlausibleEvent } from "@/lib/plausible"
 import type { PricingTier } from "@/lib/constants"
+import { trackPlausibleEvent } from "@/lib/plausible"
 
 const TIER_KEYS = ["presence", "vitrine", "surmesure"] as const
 const TIER_EVENT_KEYS: Record<(typeof TIER_KEYS)[number], "presence" | "vitrine" | "sur_mesure"> = {

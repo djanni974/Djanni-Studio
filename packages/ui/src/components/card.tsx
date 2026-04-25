@@ -48,12 +48,4 @@ function CardFooter({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
 	return <div className={cn("mt-auto flex flex-col p-8 pt-4", className)} {...props} />
 }
 
-export {
-	Card,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-	cardVariants,
-}
+export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, cardVariants }

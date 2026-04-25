@@ -42,10 +42,7 @@ export function MaintenanceCard({ tier }: { tier: MaintenanceTier }) {
 			<CardContent>
 				<ul className="flex flex-col gap-2.5">
 					{features.map((feature) => (
-						<li
-							key={feature}
-							className="flex items-start gap-2.5 text-sm text-djanni-gray-light"
-						>
+						<li key={feature} className="flex items-start gap-2.5 text-sm text-djanni-gray-light">
 							<IconCheck size={16} stroke={2.5} className="mt-0.5 shrink-0 text-djanni-orange" />
 							<span>{feature}</span>
 						</li>
@@ -57,9 +54,7 @@ export function MaintenanceCard({ tier }: { tier: MaintenanceTier }) {
 				<Link
 					href="/demande-projet"
 					data-tier={tier.id}
-					onClick={() =>
-						trackPlausibleEvent("clic_palier_maintenance", { palier: tier.id })
-					}
+					onClick={() => trackPlausibleEvent("clic_palier_maintenance", { palier: tier.id })}
 					className="block rounded-md border border-border bg-foreground/4 py-3.5 text-center text-sm font-medium text-foreground transition-colors hover:border-djanni-orange/40 hover:bg-djanni-orange hover:text-white"
 				>
 					{t("ctaSelect", { tier: name })}

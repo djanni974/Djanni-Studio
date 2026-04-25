@@ -14,12 +14,7 @@ export type OptionItem = {
 	unit: OptionUnit
 }
 
-export type OptionCategoryId =
-	| "contenus"
-	| "visuel"
-	| "seo"
-	| "fonctionnalites"
-	| "accompagnement"
+export type OptionCategoryId = "contenus" | "visuel" | "seo" | "fonctionnalites" | "accompagnement"
 
 export type OptionCategory = {
 	id: OptionCategoryId
