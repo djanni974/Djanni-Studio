@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata, Viewport } from "next"
 import { DM_Sans, Syne } from "next/font/google"
 import Script from "next/script"
@@ -167,6 +168,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
 				/>
 				<Providers>{children}</Providers>
+				<SpeedInsights />
 			</body>
 		</html>
 	)
