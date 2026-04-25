@@ -170,8 +170,12 @@ const sections = [
 		title: "Article 15 — Médiation et litiges",
 		content: [
 			"En cas de litige, les parties s'engagent à rechercher une __solution amiable__ avant toute action en justice.",
-			// TODO: Remplacer par les vraies coordonnées du médiateur une fois inscrit chez Medicys
-			"**Client consommateur :** Conformément aux articles L.612-1 et suivants du Code de la consommation, vous avez le droit de recourir __gratuitement__ à un médiateur de la consommation. Les coordonnées du médiateur compétent seront communiquées sur simple demande à contact@djannistudio.fr.",
+			"**Client consommateur :** Conformément aux articles L.612-1 et suivants du Code de la consommation, vous avez le droit de recourir __gratuitement__ à un médiateur de la consommation.",
+			"**Le médiateur de la consommation désigné par le Prestataire est :**",
+			"__AME CONSO__ (Association des Médiateurs Européens - Consommation)",
+			"197 boulevard Saint-Germain, 75007 Paris",
+			"Site : https://www.mediationconso-ame.com",
+			"Le Client consommateur peut saisir gratuitement le médiateur après échec d'une réclamation écrite préalable adressée au Prestataire à contact@djannistudio.fr restée sans réponse satisfaisante pendant __1 mois__.",
 			"**Client professionnel :** À défaut de résolution amiable, les tribunaux compétents seront ceux du ressort du domicile du Prestataire.",
 			"**Client consommateur :** Le consommateur peut saisir le tribunal de son domicile conformément aux dispositions légales en vigueur.",
 		],
