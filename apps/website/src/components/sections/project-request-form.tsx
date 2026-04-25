@@ -64,6 +64,14 @@ const TIER_OPTIONS_MAINTENANCE = ["essentiel", "confort", "serenite", "unsure"] 
 const TIER_OPTIONS_RESEAUX = ["insta", "ig-fb", "unsure"] as const
 const FIXED_TIER_TYPES = new Set(["maintenance", "reseaux-sociaux"])
 
+const isFixedTier = (type: string) => FIXED_TIER_TYPES.has(type)
+
+function getTierOptions(type: string): readonly string[] {
+	if (type === "maintenance") return TIER_OPTIONS_MAINTENANCE
+	if (type === "reseaux-sociaux") return TIER_OPTIONS_RESEAUX
+	return []
+}
+
 const ADDON_OPTIONS = [
 	{ value: "maintenance", icon: IconShield },
 	{ value: "reseaux-sociaux", icon: IconBrandInstagram },
@@ -235,24 +243,22 @@ function TierPicker({
 	t: ReturnType<typeof useTranslations<"projectRequest">>
 }) {
 	return (
-		<div className="flex flex-wrap gap-2.5">
+		<div className="flex flex-wrap gap-3">
 			{options.map((opt) => {
 				const selected = value === opt
 				return (
 					<button
 						key={opt}
 						type="button"
-						onClick={() => onChange(selected ? "" : opt)}
+						onClick={() => onChange(opt)}
 						className={cn(
-							"relative rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200",
+							"rounded-full border px-5 py-2.5 text-sm transition-colors",
 							selected
-								? "border-djanni-orange bg-djanni-orange text-white shadow-[0_2px_12px_rgba(232,80,10,0.3)]"
-								: "border-border text-djanni-gray hover:border-djanni-gray hover:text-foreground",
+								? "border-djanni-orange bg-djanni-orange text-white"
+								: "border-border text-djanni-gray-light hover:border-djanni-gray",
 						)}
 					>
-						<span className="relative z-10">
-							{t(`tier.options.${opt}` as Parameters<typeof t>[0])}
-						</span>
+						{t(`tier.options.${opt}` as Parameters<typeof t>[0])}
 					</button>
 				)
 			})}
@@ -496,7 +502,7 @@ export function ProjectRequestForm() {
 															key={opt.value}
 															type="button"
 															onClick={() => {
-																const isFixed = FIXED_TIER_TYPES.has(opt.value)
+																const isFixed = isFixedTier(opt.value)
 																setFormData((prev) => ({
 																	...prev,
 																	projectType: opt.value,
@@ -601,20 +607,18 @@ export function ProjectRequestForm() {
 										<h3 className="mb-8 text-center font-heading text-lg font-bold">
 											{t("step1Title")}
 										</h3>
-										{FIXED_TIER_TYPES.has(formData.projectType) ? (
-											<div>
-												<span className="mb-1 block text-xs font-medium text-djanni-gray">
-													{t("tier.label")}
-												</span>
-												<span className="mb-3 block text-xs text-djanni-gray-light">
-													{t("tier.helpText")}
-												</span>
+										{isFixedTier(formData.projectType) ? (
+											<div className="space-y-3">
+												<div>
+													<span className="block text-xs font-medium text-djanni-gray">
+														{t("tier.label")}
+													</span>
+													<span className="mt-0.5 block text-xs text-djanni-gray-light">
+														{t("tier.helpText")}
+													</span>
+												</div>
 												<TierPicker
-													options={
-														formData.projectType === "maintenance"
-															? TIER_OPTIONS_MAINTENANCE
-															: TIER_OPTIONS_RESEAUX
-													}
+													options={getTierOptions(formData.projectType)}
 													value={formData.tier}
 													onChange={(v) =>
 														setFormData((prev) => ({
