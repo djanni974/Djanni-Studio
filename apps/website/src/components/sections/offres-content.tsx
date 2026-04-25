@@ -9,6 +9,8 @@ import {
 	IconHeadset,
 	IconLockOpen,
 	IconScissors,
+	IconShieldCheck,
+	IconSparkles,
 	IconToolsKitchen2,
 } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
@@ -16,10 +18,17 @@ import { PricingCard } from "@/components/cards/pricing-card"
 import { Accordion } from "@/components/ui/accordion"
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section"
 import { SectionHeader } from "@/components/ui/section-header"
+import { VatNotice } from "@/components/ui/vat-notice"
 import { Link } from "@/i18n/navigation"
+import { trackPlausibleEvent } from "@/lib/plausible"
 import type { PricingTier } from "@/lib/constants"
 
 const TIER_KEYS = ["presence", "vitrine", "surmesure"] as const
+const TIER_EVENT_KEYS: Record<(typeof TIER_KEYS)[number], "presence" | "vitrine" | "sur_mesure"> = {
+	presence: "presence",
+	vitrine: "vitrine",
+	surmesure: "sur_mesure",
+}
 const GUARANTEE_ICONS = [IconLockOpen, IconClock, IconCreditCard, IconHeadset]
 const PERSONA_ICONS = [IconHammer, IconScissors, IconToolsKitchen2]
 
@@ -91,10 +100,23 @@ export function OffresContent() {
 			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<div className="grid gap-5 md:grid-cols-3">
-						{tiers.map((tier) => (
-							<PricingCard key={tier.name} tier={tier} />
-						))}
+						{tiers.map((tier, index) => {
+							const tierKey = TIER_KEYS[index]
+							const eventKey = tierKey ? TIER_EVENT_KEYS[tierKey] : undefined
+							return (
+								<PricingCard
+									key={tier.name}
+									tier={tier}
+									onSelect={
+										eventKey
+											? () => trackPlausibleEvent("clic_card_offre", { offre: eventKey })
+											: undefined
+									}
+								/>
+							)
+						})}
 					</div>
+					<VatNotice className="mt-10" />
 				</div>
 			</section>
 
@@ -369,6 +391,67 @@ export function OffresContent() {
 				</div>
 			</section>
 
+			{/* Maintenance + Options callouts */}
+			<section className="px-5 py-20 md:px-12">
+				<div className="mx-auto max-w-[1100px]">
+					<div className="grid gap-5 md:grid-cols-2">
+						<AnimatedSection>
+							<Link
+								href="/maintenance"
+								className="group flex h-full flex-col rounded-2xl border border-border bg-surface-b p-8 transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-djanni-orange/30 hover:shadow-[0_8px_30px_rgba(232,80,10,0.08)]"
+							>
+								<div className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-surface-a">
+									<IconShieldCheck size={22} className="text-djanni-orange" />
+								</div>
+								<span className="mb-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-djanni-orange">
+									{t("maintenanceCallout.tag")}
+								</span>
+								<h3 className="mb-3 font-heading text-2xl font-bold leading-tight">
+									{t("maintenanceCallout.title")}
+								</h3>
+								<p className="mb-6 text-sm leading-relaxed text-djanni-gray-light">
+									{t("maintenanceCallout.text")}
+								</p>
+								<span className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-djanni-orange transition-colors group-hover:text-djanni-orange-light">
+									{t("maintenanceCallout.cta")}
+									<IconArrowRight
+										size={14}
+										className="transition-transform duration-300 group-hover:translate-x-1"
+									/>
+								</span>
+							</Link>
+						</AnimatedSection>
+
+						<AnimatedSection delay={0.1}>
+							<Link
+								href="/options"
+								className="group flex h-full flex-col rounded-2xl border border-border bg-surface-b p-8 transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-djanni-orange/30 hover:shadow-[0_8px_30px_rgba(232,80,10,0.08)]"
+							>
+								<div className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-surface-a">
+									<IconSparkles size={22} className="text-djanni-orange" />
+								</div>
+								<span className="mb-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-djanni-orange">
+									{t("optionsCallout.tag")}
+								</span>
+								<h3 className="mb-3 font-heading text-2xl font-bold leading-tight">
+									{t("optionsCallout.title")}
+								</h3>
+								<p className="mb-6 text-sm leading-relaxed text-djanni-gray-light">
+									{t("optionsCallout.text")}
+								</p>
+								<span className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-djanni-orange transition-colors group-hover:text-djanni-orange-light">
+									{t("optionsCallout.cta")}
+									<IconArrowRight
+										size={14}
+										className="transition-transform duration-300 group-hover:translate-x-1"
+									/>
+								</span>
+							</Link>
+						</AnimatedSection>
+					</div>
+				</div>
+			</section>
+
 			{/* CTA */}
 			<section className="relative overflow-hidden px-5 py-28 text-center md:px-12">
 				{/* Radial glow */}
@@ -386,6 +469,7 @@ export function OffresContent() {
 						<p className="text-sm text-djanni-gray-light">{t("cta.reassurance")}</p>
 						<Link
 							href="/demande-projet"
+							onClick={() => trackPlausibleEvent("clic_cta_contact", { page: "offres" })}
 							className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-djanni-orange px-9 py-4.5 text-base font-medium text-white shadow-[0_0_0_rgba(232,80,10,0)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-djanni-orange-light hover:shadow-[0_8px_30px_rgba(232,80,10,0.35)]"
 						>
 							{/* Shine sweep on hover */}

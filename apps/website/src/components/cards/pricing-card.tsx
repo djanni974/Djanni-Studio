@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react"
 import { Link } from "@/i18n/navigation"
 import type { PricingTier } from "@/lib/constants"
 
-export function PricingCard({ tier }: { tier: PricingTier }) {
+export function PricingCard({ tier, onSelect }: { tier: PricingTier; onSelect?: () => void }) {
 	const {
 		badge,
 		priceLabel,
@@ -46,7 +46,7 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
 	}, [])
 
 	return (
-		<Link href="/demande-projet" className="block">
+		<Link href="/demande-projet" className="block" onClick={onSelect}>
 			<div
 				ref={ref}
 				className={cn(
