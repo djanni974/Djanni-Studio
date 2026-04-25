@@ -756,6 +756,8 @@
 			"site-vitrine": "Vitrine",
 			"site-premium": "War-bouez",
 			"refonte": "Adneveziañ",
+			"maintenance": "Mirout",
+			"reseaux-sociaux": "Rouedadoù sokial",
 			"autre": "All"
 		},
 		"projectTypeDescs": {
@@ -763,6 +765,8 @@
 			"site-vitrine": "Ul lec'hienn frammet, betek 5 pajenn",
 			"site-premium": "Arc'hantoù araokaet personelaet",
 			"refonte": "Nevesaat ul lec'hienn a zo",
+			"maintenance": "Fiziañ mirout ma lec'hienn",
+			"reseaux-sociaux": "Merourezh mizel Instagram, Facebook",
 			"autre": "Ur raktres resis da gomz"
 		},
 		"businessNameLabel": "Anv an embregerezh",
@@ -787,6 +791,18 @@
 			"1-mois": "Nebeutoc'h eget 1 miz",
 			"urgent": "Prim"
 		},
+		"tier": {
+			"label": "Pe live a zeu ganeoc'h ?",
+			"helpText": "Evit ar mirout hag ar rouedadoù sokial, ar prizioù a zo fiks ha diskouezet war ar pajennoù /maintenance ha /options.",
+			"options": {
+				"essentiel": "Diazez - 29 EUR/miz",
+				"confort": "Aez - 49 EUR/miz",
+				"serenite": "Habask - 99 EUR/miz",
+				"insta": "Instagram - 180 EUR/miz",
+				"ig-fb": "Instagram + Facebook - 280 EUR/miz",
+				"unsure": "N'ouzon ket c'hoazh"
+			}
+		},
 		"nameLabel": "Hoc'h anv",
 		"namePlaceholder": "Hoc'h anv",
 		"emailLabel": "Ho postel",
@@ -796,12 +812,12 @@
 		"phonePlaceholder": "06 12 34 56 78",
 		"messageLabel": "Kemennadenn",
 		"messagePlaceholder": "Da sk. : lec'hienn vitrine evit ma embregerezh masoniezh, 4-5 pajenn, furmskrid darempred, diskouez ma labourioù…",
+		"messagePlaceholderMaintenance": "Da sk. : Ma lec'hienn WordPress a zo gorrek, fellout a ra din fiziañ ar mirout...",
+		"messagePlaceholderReseauxSociaux": "Da sk. : Fellout a ra din ur post Instagram bep sizhun evit ma boulanjerezh...",
 		"back": "Distreiñ",
 		"next": "Da-heul",
 		"send": "Kas",
 		"sending": "O kas...",
-		"successTitle": "Goulenn kaset !",
-		"successMessage": "Trugarez evit ho koulenn. Distro a rin deoc'h a-benn 24e evit komz anezhi.",
 		"or": "Pe war-eeun :",
 		"trustResponse": "Respont a-benn 24e",
 		"trustFree": "Devis digoust",
@@ -813,6 +829,57 @@
 			"email": "Ho postel a zo rekis",
 			"emailInvalid": "Postel direizh",
 			"message": "Deskrivit ho raktres"
+		},
+		"aboutGianni": {
+			"greeting": "Salud, Gianni eo.",
+			"tagline": "Kalvez kozh deuet diorroer web e Dinard.",
+			"bio": "Krouiñ a ran lec'hiennoù web evit ar verdeoned hag ar genwerzhourien war Aod ar Maen-Strink. N'eus na hanterour kompagnunezh, na yezh teknik. Komz a rit war-eeun gant an hini a goder ho lec'hienn.",
+			"cta": "Gouzout muioc'h diwar ma fenn",
+			"photoAlt": "Skeudenn Gianni Jardin"
+		},
+		"recentWork": {
+			"tag": "Labour nevez",
+			"title": "L'Artisane e Dinard",
+			"subtitle": "Lec'hienn vitrine evit Pauline Besnard, koloreourez",
+			"cta": "Gwelet ma holl labourioù",
+			"imageAlt": "Pakad lec'hienn L'Artisane e Dinard"
+		},
+		"altContact": {
+			"title": "N'ho po ket c'hoant da leuniañ ar furmskrid ?",
+			"subtitle": "Aes oc'h da skoazellañ war-eeun.",
+			"phone": {
+				"title": "Galvit ac'hanon war-eeun",
+				"number": "07 49 54 74 98",
+				"hours": "Lun-Gwe 8e-19e, Sad 9e-12e"
+			},
+			"calcom": {
+				"title": "Mirit ur galvadeg dizoloiñ",
+				"subtitle": "30 munutenn, e gweled, digoust",
+				"cta": "Mirout bremañ"
+			}
+		},
+		"privacy": {
+			"title": "Petra a vez gant ho koulenn ?",
+			"points": {
+				"0": "Ho titouroù ne vint morse rannet na gwerzhet.",
+				"1": "N'eus prospekt direizh ebet : ne gomzin deoc'h nemet diwar-benn ho koulenn.",
+				"2": "Titouroù dilamet goude 12 miz hep heuliañ.",
+				"3": "Ostilhoù RGPD : Resend evit ar postoù, herberc'h Vercel."
+			},
+			"cta": "Muioc'h a ditouroù er politikerezh kuzhvougañ"
+		},
+		"success": {
+			"title": "Goulenn kaset !",
+			"confirmation": "Trugarez {firstName}. Resev a reot ur postel kadarnaat e {email} a-benn ur munutenn.",
+			"timelineTitle": "Setu ar pezh a zeu",
+			"timeline": {
+				"0": { "label": "Hiziv", "text": "Kas a rit ho koulenn din" },
+				"1": { "label": "A-benn 24e", "text": "Respont a ran dre bostel evit sklaeraat" },
+				"2": { "label": "A-benn 3 deiz", "text": "Resev a rit un devis personelaet" },
+				"3": { "label": "Pa vefot prest", "text": "Sinañ a reomp, kregiñ a reomp" }
+			},
+			"ctaPrimary": "Mirit ur galvadeg dizoloiñ",
+			"ctaSecondary": "E-pad ar c'houlz, sellit ouzh ma labourioù"
 		}
 	},
 	"ctaContact": {
