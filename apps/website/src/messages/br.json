@@ -1255,11 +1255,28 @@
 		"tag": "Mirout",
 		"title": "Mirout",
 		"subtitle": "Tri live evit derc'hel ho lec'hienn buan, surr ha hizivaet. Hep engouestl, dispennadus pa garit.",
+		"priceLabel": "Adalek",
 		"perMonth": "/ miz",
 		"recommendedBadge": "Erbedet",
 		"ctaSelect": "Dibab {tier}",
 		"ctaContact": "Komz eus ho raktres",
 		"disclaimerCgv": "Divizegoù munut roet pa goumananter.",
+		"reassurancesTag": "Engouestlioù",
+		"reassurancesTitle": "Ar pezh ho peus e pep live",
+		"reassurances": [
+			{
+				"title": "Hep engouestl",
+				"text": "Dispennit pa garit, hep kastiz. Ragvenneg 30 deiz, ne zlefe ket bezañ muioc'h."
+			},
+			{
+				"title": "Surentez enroll",
+				"text": "Herbergiñ, testeni SSL, hizivadennoù tonket. Ho lec'hienn a chom enlinenn, n'eus ken."
+			},
+			{
+				"title": "Un den e penn ar fil",
+				"text": "Me eo a respont. Tiket ebet en ur c'hoazh, robot ebet."
+			}
+		],
 		"tiers": {
 			"essentiel": {
 				"name": "Pennañ",
@@ -1287,6 +1304,9 @@
 		"tag": "Dibarzhioù",
 		"title": "Dibarzhioù",
 		"subtitle": "Pep tra a c'hallit ouzhpennañ d'ho lec'hienn, a la carte. Hep koumanant ret, nemet evit an dibarzhioù aliesadek (Instagram, Instagram + Facebook).",
+		"statOptions": "dibarzh a la carte",
+		"statCategories": "rummad",
+		"statFromPrice": "adalek {price} €",
 		"ctaContact": "Komz eus ho raktres",
 		"columns": {
 			"option": "Dibarzh",
@@ -1296,6 +1316,11 @@
 			"unique": "",
 			"mensuel": " / miz",
 			"par_unite": " / unanenn"
+		},
+		"unitBadges": {
+			"unique": "Forfed",
+			"mensuel": "Miziek",
+			"par_unite": "Dre unanenn"
 		},
 		"categories": {
 			"contenus": "Endalc'h ha skridaozañ",

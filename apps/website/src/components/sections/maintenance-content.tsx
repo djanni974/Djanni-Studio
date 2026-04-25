@@ -1,6 +1,11 @@
 "use client"
 
-import { IconArrowRight } from "@tabler/icons-react"
+import {
+	IconArrowRight,
+	IconCalendarOff,
+	IconHeartHandshake,
+	IconShieldCheck,
+} from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
 import { MaintenanceCard } from "@/components/cards/maintenance-card"
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section"
@@ -10,8 +15,13 @@ import { Link } from "@/i18n/navigation"
 import { trackPlausibleEvent } from "@/lib/plausible"
 import { MAINTENANCE_TIERS } from "@/lib/pricing"
 
+const REASSURANCE_ICONS = [IconCalendarOff, IconShieldCheck, IconHeartHandshake]
+
 export function MaintenanceContent() {
 	const t = useTranslations("maintenance")
+	const reassurances = (t.raw("reassurances") as { title: string; text: string }[]).map(
+		(item, i) => ({ ...item, Icon: REASSURANCE_ICONS[i] }),
+	)
 
 	return (
 		<>
@@ -39,7 +49,7 @@ export function MaintenanceContent() {
 			</section>
 
 			{/* Tiers */}
-			<section className="px-5 pb-12 md:px-12">
+			<section className="px-5 pb-16 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<StaggerContainer className="grid gap-6 md:grid-cols-3 md:gap-5">
 						{MAINTENANCE_TIERS.map((tier) => (
@@ -57,6 +67,35 @@ export function MaintenanceContent() {
 					</AnimatedSection>
 
 					<VatNotice className="mt-4" />
+				</div>
+			</section>
+
+			{/* Reassurances */}
+			<section className="px-5 py-20 md:px-12">
+				<div className="mx-auto max-w-[1100px]">
+					<AnimatedSection>
+						<SectionHeader
+							tag={t("reassurancesTag")}
+							title={t("reassurancesTitle")}
+							align="center"
+						/>
+					</AnimatedSection>
+
+					<StaggerContainer className="mt-14 grid gap-8 sm:grid-cols-3">
+						{reassurances.map((item) => (
+							<StaggerItem key={item.title}>
+								<div className="flex flex-col items-center text-center">
+									<div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-surface-b">
+										{item.Icon ? <item.Icon size={22} className="text-djanni-orange" /> : null}
+									</div>
+									<h3 className="mb-2 font-heading text-lg font-bold">{item.title}</h3>
+									<p className="max-w-[320px] text-sm leading-relaxed text-djanni-gray-light">
+										{item.text}
+									</p>
+								</div>
+							</StaggerItem>
+						))}
+					</StaggerContainer>
 				</div>
 			</section>
 

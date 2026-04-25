@@ -1253,11 +1253,28 @@
 		"tag": "Maintenance",
 		"title": "Maintenance",
 		"subtitle": "Trois paliers pour garder votre site rapide, sécurisé et à jour. Sans engagement, résiliable à tout moment.",
+		"priceLabel": "À partir de",
 		"perMonth": "/ mois",
 		"recommendedBadge": "Recommandé",
 		"ctaSelect": "Choisir {tier}",
 		"ctaContact": "Discuter de votre projet",
 		"disclaimerCgv": "Conditions détaillées communiquées à la souscription.",
+		"reassurancesTag": "Engagements",
+		"reassurancesTitle": "Ce que vous avez dans tous les paliers",
+		"reassurances": [
+			{
+				"title": "Sans engagement",
+				"text": "Vous résiliez quand vous voulez, sans pénalité. Préavis de 30 jours, c'est tout."
+			},
+			{
+				"title": "Sécurité incluse",
+				"text": "Hébergement, certificat SSL, mises à jour critiques. Votre site reste en ligne, point."
+			},
+			{
+				"title": "Un humain à l'autre bout",
+				"text": "C'est moi qui réponds. Pas un ticket dans une file d'attente, pas un chatbot."
+			}
+		],
 		"tiers": {
 			"essentiel": {
 				"name": "Essentiel",
@@ -1285,6 +1302,9 @@
 		"tag": "Options",
 		"title": "Options",
 		"subtitle": "Tout ce que vous pouvez ajouter à votre site, à la carte. Pas d'abonnement obligatoire, sauf options récurrentes (Instagram, Instagram + Facebook).",
+		"statOptions": "options à la carte",
+		"statCategories": "catégories",
+		"statFromPrice": "à partir de {price} €",
 		"ctaContact": "Discuter de votre projet",
 		"columns": {
 			"option": "Option",
@@ -1294,6 +1314,11 @@
 			"unique": "",
 			"mensuel": " / mois",
 			"par_unite": " / unité"
+		},
+		"unitBadges": {
+			"unique": "Forfait",
+			"mensuel": "Mensuel",
+			"par_unite": "À l'unité"
 		},
 		"categories": {
 			"contenus": "Contenus et rédaction",

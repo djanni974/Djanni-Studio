@@ -1250,11 +1250,28 @@
 		"tag": "Maintenance",
 		"title": "Maintenance",
 		"subtitle": "Three tiers to keep your site fast, secure and up to date. No commitment, cancel anytime.",
+		"priceLabel": "Starting at",
 		"perMonth": "/ month",
 		"recommendedBadge": "Recommended",
 		"ctaSelect": "Choose {tier}",
 		"ctaContact": "Discuss your project",
 		"disclaimerCgv": "Detailed terms provided at subscription.",
+		"reassurancesTag": "Commitments",
+		"reassurancesTitle": "What you get in every tier",
+		"reassurances": [
+			{
+				"title": "No lock-in",
+				"text": "Cancel whenever you like, no penalty. 30 days notice, that's it."
+			},
+			{
+				"title": "Security included",
+				"text": "Hosting, SSL certificate, critical updates. Your site stays online, period."
+			},
+			{
+				"title": "A human on the other end",
+				"text": "I'm the one replying. No ticket queue, no chatbot."
+			}
+		],
 		"tiers": {
 			"essentiel": {
 				"name": "Essential",
@@ -1282,6 +1299,9 @@
 		"tag": "Add-ons",
 		"title": "Add-ons",
 		"subtitle": "Everything you can add to your site, a la carte. No mandatory subscription, except recurring options (Instagram, Instagram + Facebook).",
+		"statOptions": "a la carte add-ons",
+		"statCategories": "categories",
+		"statFromPrice": "from €{price}",
 		"ctaContact": "Discuss your project",
 		"columns": {
 			"option": "Add-on",
@@ -1291,6 +1311,11 @@
 			"unique": "",
 			"mensuel": " / month",
 			"par_unite": " / unit"
+		},
+		"unitBadges": {
+			"unique": "One-off",
+			"mensuel": "Monthly",
+			"par_unite": "Per unit"
 		},
 		"categories": {
 			"contenus": "Content and copywriting",

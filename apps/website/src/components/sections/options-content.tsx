@@ -2,13 +2,16 @@
 
 import { IconArrowRight } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
-import { OptionTable } from "@/components/cards/option-table"
+import { OptionCard } from "@/components/cards/option-card"
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section"
 import { SectionHeader } from "@/components/ui/section-header"
 import { VatNotice } from "@/components/ui/vat-notice"
 import { Link } from "@/i18n/navigation"
 import { trackPlausibleEvent } from "@/lib/plausible"
 import { OPTION_CATEGORIES } from "@/lib/pricing"
+
+const TOTAL_OPTIONS = OPTION_CATEGORIES.reduce((sum, c) => sum + c.items.length, 0)
+const MIN_PRICE = Math.min(...OPTION_CATEGORIES.flatMap((c) => c.items.map((i) => i.priceHT)))
 
 export function OptionsContent() {
 	const t = useTranslations("options")
@@ -35,21 +38,39 @@ export function OptionsContent() {
 							align="center"
 						/>
 					</AnimatedSection>
+
+					<AnimatedSection delay={0.15}>
+						<div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs">
+							<span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-b px-4 py-2 font-medium text-djanni-gray-light">
+								<span className="font-heading font-bold text-djanni-orange">{TOTAL_OPTIONS}</span>{" "}
+								{t("statOptions")}
+							</span>
+							<span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-b px-4 py-2 font-medium text-djanni-gray-light">
+								<span className="font-heading font-bold text-djanni-orange">
+									{OPTION_CATEGORIES.length}
+								</span>{" "}
+								{t("statCategories")}
+							</span>
+							<span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-b px-4 py-2 font-medium text-djanni-gray-light">
+								{t("statFromPrice", { price: MIN_PRICE })}
+							</span>
+						</div>
+					</AnimatedSection>
 				</div>
 			</section>
 
 			{/* Categories */}
 			<section className="px-5 pb-12 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
-					<StaggerContainer className="flex flex-col gap-14">
+					<StaggerContainer className="flex flex-col gap-16 md:gap-20">
 						{OPTION_CATEGORIES.map((category) => (
 							<StaggerItem key={category.id}>
-								<OptionTable category={category} />
+								<OptionCard category={category} />
 							</StaggerItem>
 						))}
 					</StaggerContainer>
 
-					<VatNotice className="mt-12" />
+					<VatNotice className="mt-16" />
 				</div>
 			</section>
 
