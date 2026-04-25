@@ -23,8 +23,8 @@ import { useTranslations } from "next-intl"
 import { type FormEvent, useRef, useState } from "react"
 import { toast } from "sonner"
 import { AnimatedSection } from "@/components/ui/animated-section"
+import { CalPopupButton } from "@/components/ui/cal-popup-button"
 import { Link } from "@/i18n/navigation"
-import { CAL_COM_URL } from "@/lib/constants"
 
 type FormData = {
 	projectType: string
@@ -403,15 +403,10 @@ export function ProjectRequestForm() {
 
 					{/* Bloc 3 : CTA */}
 					<div className="flex flex-col justify-center gap-3 sm:flex-row">
-						<a
-							href={CAL_COM_URL}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="inline-flex items-center justify-center gap-2 rounded-lg bg-djanni-orange px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-djanni-orange-light hover:shadow-[0_6px_24px_rgba(232,80,10,0.3)]"
-						>
+						<CalPopupButton className="inline-flex items-center justify-center gap-2 rounded-lg bg-djanni-orange px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-djanni-orange-light hover:shadow-[0_6px_24px_rgba(232,80,10,0.3)]">
 							<IconCalendar size={16} />
 							{t("success.ctaPrimary")}
-						</a>
+						</CalPopupButton>
 						<Link
 							href="/realisations"
 							className="group inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-surface-a px-6 py-3 text-sm font-medium text-foreground transition-all duration-200 hover:border-djanni-orange/30 hover:text-djanni-orange"

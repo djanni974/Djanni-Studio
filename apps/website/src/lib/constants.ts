@@ -1,5 +1,7 @@
-// TODO DS-25 : remplacer par la vraie URL Cal.com une fois fournie par Gianni.
-export const CAL_COM_URL = "https://cal.com/djanni-studio"
+// Format attendu pour CAL_COM_LINK : "username/event-type" (sans le https://cal.com/).
+export const CAL_COM_LINK = "djanni-studio/prendre-rendez-vous"
+export const CAL_COM_URL = `https://cal.com/${CAL_COM_LINK}`
+export const CAL_COM_NAMESPACE = "decouverte"
 
 export type CityPage = {
 	slug: string

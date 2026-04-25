@@ -1,6 +1,6 @@
 import { IconArrowRight, IconCalendar, IconPhone } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
-import { CAL_COM_URL } from "@/lib/constants"
+import { CalPopupButton } from "@/components/ui/cal-popup-button"
 
 export function AltContact() {
 	const t = useTranslations("projectRequest.altContact")
@@ -26,11 +26,9 @@ export function AltContact() {
 					<p className="text-xs text-djanni-gray-light">{t("phone.hours")}</p>
 				</a>
 
-				<a
-					href={CAL_COM_URL}
-					target="_blank"
-					rel="noopener noreferrer"
-					className="group flex flex-col items-start gap-3 rounded-xl border-2 border-border bg-surface-a/60 p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-djanni-orange hover:bg-surface-a"
+				<CalPopupButton
+					className="group flex w-full flex-col items-start gap-3 rounded-xl border-2 border-border bg-surface-a/60 p-6 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-djanni-orange hover:bg-surface-a"
+					aria-label={t("calcom.title")}
 				>
 					<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-b text-djanni-orange transition-colors group-hover:bg-djanni-orange/10">
 						<IconCalendar size={22} />
@@ -44,7 +42,7 @@ export function AltContact() {
 						/>
 					</span>
 					<p className="text-xs text-djanni-gray-light">{t("calcom.subtitle")}</p>
-				</a>
+				</CalPopupButton>
 			</div>
 		</section>
 	)
