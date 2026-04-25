@@ -38,6 +38,7 @@ type FormData = {
 	phone: string
 	message: string
 	addons: string[]
+	addonTiers: Record<string, string>
 }
 
 type FormErrors = Partial<Record<keyof FormData, string>>
@@ -281,6 +282,7 @@ export function ProjectRequestForm() {
 		phone: "",
 		message: "",
 		addons: [],
+		addonTiers: {},
 	})
 	const [hp, setHp] = useState("")
 	const loadedAt = useRef(Date.now())
@@ -336,11 +338,19 @@ export function ProjectRequestForm() {
 	}
 
 	function toggleAddon(value: string) {
+		setFormData((prev) => {
+			const isOn = prev.addons.includes(value)
+			const nextAddons = isOn ? prev.addons.filter((a) => a !== value) : [...prev.addons, value]
+			const nextAddonTiers = { ...prev.addonTiers }
+			if (isOn) delete nextAddonTiers[value]
+			return { ...prev, addons: nextAddons, addonTiers: nextAddonTiers }
+		})
+	}
+
+	function setAddonTier(addon: string, tier: string) {
 		setFormData((prev) => ({
 			...prev,
-			addons: prev.addons.includes(value)
-				? prev.addons.filter((a) => a !== value)
-				: [...prev.addons, value],
+			addonTiers: { ...prev.addonTiers, [addon]: tier },
 		}))
 	}
 
@@ -507,6 +517,7 @@ export function ProjectRequestForm() {
 																	...prev,
 																	projectType: opt.value,
 																	addons: isFixed ? [] : prev.addons,
+																	addonTiers: isFixed ? {} : prev.addonTiers,
 																	tier: isFixed ? prev.tier : "",
 																}))
 																if (errors.projectType) {
@@ -733,6 +744,29 @@ export function ProjectRequestForm() {
 															)
 														})}
 													</div>
+													{ADDON_OPTIONS.filter((opt) => formData.addons.includes(opt.value)).map(
+														(opt) => (
+															<div
+																key={opt.value}
+																className="mt-4 space-y-3 rounded-lg border border-djanni-orange/20 bg-djanni-orange/5 p-4"
+															>
+																<div>
+																	<span className="block text-xs font-medium text-djanni-gray">
+																		{t("tier.label")}{" "}
+																		<span className="text-djanni-orange">
+																			· {t(`addons.${opt.value}.title` as Parameters<typeof t>[0])}
+																		</span>
+																	</span>
+																</div>
+																<TierPicker
+																	options={getTierOptions(opt.value)}
+																	value={formData.addonTiers[opt.value] ?? ""}
+																	onChange={(v) => setAddonTier(opt.value, v)}
+																	t={t}
+																/>
+															</div>
+														),
+													)}
 												</div>
 											</>
 										)}

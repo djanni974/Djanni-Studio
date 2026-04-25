@@ -70,6 +70,7 @@ type ContactPayload = {
 	existingUrl: string
 	message: string
 	addons?: string[]
+	addonTiers?: Record<string, string>
 }
 
 const PROJECT_LABELS: Record<string, string> = {
@@ -186,6 +187,18 @@ function validate(data: unknown): data is ContactPayload {
 		}
 	}
 
+	// addonTiers (optional) — small record { addon: tier }, both whitelisted
+	if (d.addonTiers !== undefined) {
+		if (typeof d.addonTiers !== "object" || d.addonTiers === null || Array.isArray(d.addonTiers))
+			return false
+		const entries = Object.entries(d.addonTiers as Record<string, unknown>)
+		if (entries.length > 5) return false
+		for (const [k, v] of entries) {
+			if (!VALID_ADDONS.has(k)) return false
+			if (typeof v !== "string" || !VALID_TIERS.has(v)) return false
+		}
+	}
+
 	return true
 }
 
@@ -203,7 +216,14 @@ function buildEmailHtml(data: ContactPayload): string {
 	const deadlineLabel = data.deadline ? (DEADLINE_LABELS[data.deadline] ?? data.deadline) : ""
 	const businessName = data.businessName?.trim() || ""
 	const existingUrl = data.existingUrl?.trim() || ""
-	const addonsLabel = (data.addons ?? []).map((a) => ADDON_LABELS[a] ?? a).join(", ")
+	const addonsLabel = (data.addons ?? [])
+		.map((a) => {
+			const base = ADDON_LABELS[a] ?? a
+			const t = data.addonTiers?.[a]
+			const tierLbl = t ? (TIER_LABELS[t] ?? t) : ""
+			return tierLbl ? `${base} (${tierLbl})` : base
+		})
+		.join(", ")
 	const tierLabel = data.tier ? (TIER_LABELS[data.tier] ?? data.tier) : ""
 
 	return `
@@ -289,7 +309,14 @@ function buildConfirmationHtml(data: ContactPayload): string {
 	const deadlineLabel = data.deadline ? (DEADLINE_LABELS[data.deadline] ?? data.deadline) : ""
 	const firstName = data.name.split(" ")[0]
 	const businessName = data.businessName?.trim() || ""
-	const addonsLabel = (data.addons ?? []).map((a) => ADDON_LABELS[a] ?? a).join(", ")
+	const addonsLabel = (data.addons ?? [])
+		.map((a) => {
+			const base = ADDON_LABELS[a] ?? a
+			const t = data.addonTiers?.[a]
+			const tierLbl = t ? (TIER_LABELS[t] ?? t) : ""
+			return tierLbl ? `${base} (${tierLbl})` : base
+		})
+		.join(", ")
 	const tierLabel = data.tier ? (TIER_LABELS[data.tier] ?? data.tier) : ""
 
 	return `
@@ -474,6 +501,7 @@ export async function POST(request: Request) {
 					businessName: body.businessName,
 					existingUrl: body.existingUrl,
 					addons: body.addons ?? [],
+					addonTiers: body.addonTiers ?? {},
 				}),
 			}).catch((err) => {
 				console.warn("[contact] n8n webhook error:", err)
