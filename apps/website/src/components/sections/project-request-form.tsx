@@ -4,6 +4,8 @@ import { cn } from "@repo/ui/lib/utils"
 import {
 	IconArrowLeft,
 	IconArrowRight,
+	IconBrandInstagram,
+	IconCalendar,
 	IconCheck,
 	IconClock,
 	IconDeviceDesktop,
@@ -12,6 +14,7 @@ import {
 	IconPhone,
 	IconRefresh,
 	IconSend,
+	IconShield,
 	IconShieldCheck,
 	IconSparkles,
 	IconWorldWww,
@@ -20,6 +23,7 @@ import { useTranslations } from "next-intl"
 import { type FormEvent, useRef, useState } from "react"
 import { toast } from "sonner"
 import { AnimatedSection } from "@/components/ui/animated-section"
+import { CalPopupButton } from "@/components/ui/cal-popup-button"
 import { Link } from "@/i18n/navigation"
 
 type FormData = {
@@ -28,10 +32,13 @@ type FormData = {
 	existingUrl: string
 	budget: string
 	deadline: string
+	tier: string
 	name: string
 	email: string
 	phone: string
 	message: string
+	addons: string[]
+	addonTiers: Record<string, string>
 }
 
 type FormErrors = Partial<Record<keyof FormData, string>>
@@ -45,12 +52,33 @@ const PROJECT_TYPE_OPTIONS = [
 	{ value: "site-vitrine", icon: IconWorldWww },
 	{ value: "site-premium", icon: IconSparkles },
 	{ value: "refonte", icon: IconRefresh },
+	{ value: "maintenance", icon: IconShield },
+	{ value: "reseaux-sociaux", icon: IconBrandInstagram },
 	{ value: "autre", icon: IconDeviceDesktop },
 ] as const
 
 const BUDGET_OPTIONS = ["moins-800", "800-1500", "1500-3000", "plus-3000", "pas-defini"] as const
 
 const DEADLINE_OPTIONS = ["pas-presse", "2-3-mois", "1-mois", "urgent"] as const
+
+const TIER_OPTIONS_MAINTENANCE = ["essentiel", "confort", "serenite", "unsure"] as const
+const TIER_OPTIONS_RESEAUX = ["insta", "ig-fb", "unsure"] as const
+const FIXED_TIER_TYPES = new Set(["maintenance", "reseaux-sociaux"])
+
+const isFixedTier = (type: string) => FIXED_TIER_TYPES.has(type)
+
+function getTierOptions(type: string): readonly string[] {
+	if (type === "maintenance") return TIER_OPTIONS_MAINTENANCE
+	if (type === "reseaux-sociaux") return TIER_OPTIONS_RESEAUX
+	return []
+}
+
+const ADDON_OPTIONS = [
+	{ value: "maintenance", icon: IconShield },
+	{ value: "reseaux-sociaux", icon: IconBrandInstagram },
+] as const
+
+const TIMELINE_KEYS = ["0", "1", "2", "3"] as const
 
 const inputBaseClass =
 	"w-full rounded-lg border border-border bg-surface-b px-4 py-3.5 text-sm text-foreground placeholder:text-djanni-gray transition-colors focus:border-djanni-orange focus:outline-none focus:ring-1 focus:ring-djanni-orange/50"
@@ -204,6 +232,41 @@ function DeadlinePicker({
 	)
 }
 
+function TierPicker({
+	options,
+	value,
+	onChange,
+	t,
+}: {
+	options: readonly string[]
+	value: string
+	onChange: (v: string) => void
+	t: ReturnType<typeof useTranslations<"projectRequest">>
+}) {
+	return (
+		<div className="flex flex-wrap gap-3">
+			{options.map((opt) => {
+				const selected = value === opt
+				return (
+					<button
+						key={opt}
+						type="button"
+						onClick={() => onChange(opt)}
+						className={cn(
+							"rounded-full border px-5 py-2.5 text-sm transition-colors",
+							selected
+								? "border-djanni-orange bg-djanni-orange text-white"
+								: "border-border text-djanni-gray-light hover:border-djanni-gray",
+						)}
+					>
+						{t(`tier.options.${opt}` as Parameters<typeof t>[0])}
+					</button>
+				)
+			})}
+		</div>
+	)
+}
+
 export function ProjectRequestForm() {
 	const t = useTranslations("projectRequest")
 
@@ -213,10 +276,13 @@ export function ProjectRequestForm() {
 		existingUrl: "",
 		budget: "",
 		deadline: "",
+		tier: "",
 		name: "",
 		email: "",
 		phone: "",
 		message: "",
+		addons: [],
+		addonTiers: {},
 	})
 	const [hp, setHp] = useState("")
 	const loadedAt = useRef(Date.now())
@@ -271,6 +337,23 @@ export function ProjectRequestForm() {
 		setCurrentStep((prev) => prev - 1)
 	}
 
+	function toggleAddon(value: string) {
+		setFormData((prev) => {
+			const isOn = prev.addons.includes(value)
+			const nextAddons = isOn ? prev.addons.filter((a) => a !== value) : [...prev.addons, value]
+			const nextAddonTiers = { ...prev.addonTiers }
+			if (isOn) delete nextAddonTiers[value]
+			return { ...prev, addons: nextAddons, addonTiers: nextAddonTiers }
+		})
+	}
+
+	function setAddonTier(addon: string, tier: string) {
+		setFormData((prev) => ({
+			...prev,
+			addonTiers: { ...prev.addonTiers, [addon]: tier },
+		}))
+	}
+
 	async function handleSubmit(e: FormEvent) {
 		e.preventDefault()
 		const stepErrors = validateStep(currentStep, formData)
@@ -303,29 +386,73 @@ export function ProjectRequestForm() {
 		<div className="relative mx-auto max-w-[720px]">
 			<div className="pointer-events-none absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.06)_0%,transparent_70%)]" />
 
-			<AnimatedSection className="relative">
-				<div className="mb-10 text-center">
-					<span className="mb-4 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-djanni-orange">
-						<span className="inline-block h-px w-6 bg-djanni-orange" />
-						{t("tag")}
-						<span className="inline-block h-px w-6 bg-djanni-orange" />
-					</span>
-					<h1 className="font-heading text-[clamp(28px,5vw,44px)] font-extrabold leading-tight tracking-tight">
-						{t("title")}
-					</h1>
-					<p className="mt-3 text-[15px] text-djanni-gray-light">{t("subtitle")}</p>
-				</div>
-			</AnimatedSection>
-
 			{submitted ? (
-				<div className="animate-fade-up in-view">
-					<div className="relative overflow-hidden rounded-xl border border-djanni-orange/30 bg-djanni-orange/5 p-12 text-center">
+				<div className="animate-fade-up in-view space-y-8 text-center">
+					{/* Bloc 1 : Confirmation */}
+					<div className="relative overflow-hidden rounded-xl border border-djanni-orange/30 bg-djanni-orange/5 p-10">
 						<div className="pointer-events-none absolute top-1/2 left-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.1)_0%,transparent_70%)]" />
 						<div className="relative mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-djanni-orange/15">
-							<IconCheck size={30} className="text-djanni-orange" />
+							<IconCheck size={32} className="text-djanni-orange" />
 						</div>
-						<h3 className="relative mb-2 font-heading text-xl font-bold">{t("successTitle")}</h3>
-						<p className="relative text-sm text-djanni-gray-light">{t("successMessage")}</p>
+						<h3 className="relative mb-2 font-heading text-2xl font-bold">{t("success.title")}</h3>
+						<p className="relative mx-auto max-w-md text-sm leading-relaxed text-djanni-gray-light">
+							{t("success.confirmation", {
+								firstName: formData.name.split(" ")[0] || formData.name,
+								email: formData.email,
+							})}
+						</p>
+					</div>
+
+					{/* Bloc 2 : Timeline */}
+					<div className="rounded-xl border border-border bg-surface-b p-6 text-left md:p-8">
+						<h4 className="mb-6 text-center font-heading text-base font-bold">
+							{t("success.timelineTitle")}
+						</h4>
+						<ol className="space-y-5">
+							{TIMELINE_KEYS.map((key, i) => {
+								const isFirst = i === 0
+								return (
+									<li key={key} className="flex items-start gap-4">
+										<div
+											className={cn(
+												"flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-xs font-semibold",
+												isFirst
+													? "border-djanni-orange bg-djanni-orange text-white"
+													: "border-border bg-surface-a text-djanni-gray",
+											)}
+										>
+											{isFirst ? <IconCheck size={14} /> : i + 1}
+										</div>
+										<div className="flex-1 pt-0.5">
+											<span className="block text-[11px] font-medium uppercase tracking-widest text-djanni-orange">
+												{t(`success.timeline.${key}.label` as Parameters<typeof t>[0])}
+											</span>
+											<p className="mt-0.5 text-sm text-foreground">
+												{t(`success.timeline.${key}.text` as Parameters<typeof t>[0])}
+											</p>
+										</div>
+									</li>
+								)
+							})}
+						</ol>
+					</div>
+
+					{/* Bloc 3 : CTA */}
+					<div className="flex flex-col justify-center gap-3 sm:flex-row">
+						<CalPopupButton className="inline-flex items-center justify-center gap-2 rounded-lg bg-djanni-orange px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-djanni-orange-light hover:shadow-[0_6px_24px_rgba(232,80,10,0.3)]">
+							<IconCalendar size={16} />
+							{t("success.ctaPrimary")}
+						</CalPopupButton>
+						<Link
+							href="/realisations"
+							className="group inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-surface-a px-6 py-3 text-sm font-medium text-foreground transition-all duration-200 hover:border-djanni-orange/30 hover:text-djanni-orange"
+						>
+							{t("success.ctaSecondary")}
+							<IconArrowRight
+								size={14}
+								className="transition-transform duration-300 group-hover:translate-x-0.5"
+							/>
+						</Link>
 					</div>
 				</div>
 			) : (
@@ -385,9 +512,13 @@ export function ProjectRequestForm() {
 															key={opt.value}
 															type="button"
 															onClick={() => {
+																const isFixed = isFixedTier(opt.value)
 																setFormData((prev) => ({
 																	...prev,
 																	projectType: opt.value,
+																	addons: isFixed ? [] : prev.addons,
+																	addonTiers: isFixed ? {} : prev.addonTiers,
+																	tier: isFixed ? prev.tier : "",
 																}))
 																if (errors.projectType) {
 																	setErrors((prev) => ({
@@ -481,45 +612,164 @@ export function ProjectRequestForm() {
 									</div>
 								)}
 
-								{/* Step 1: Budget + deadline */}
+								{/* Step 1: Budget + deadline (or Tier picker for maintenance / reseaux-sociaux) */}
 								{currentStep === 1 && (
 									<div>
 										<h3 className="mb-8 text-center font-heading text-lg font-bold">
 											{t("step1Title")}
 										</h3>
-										<div className="mb-8">
-											<span className="mb-1 block text-sm font-medium text-foreground">
-												{t("budgetLabel")}
-											</span>
-											<span className="mb-3 block text-xs text-djanni-gray">{t("budgetHint")}</span>
-											<BudgetPicker
-												options={BUDGET_OPTIONS}
-												value={formData.budget}
-												onChange={(v) =>
-													setFormData((prev) => ({
-														...prev,
-														budget: v,
-													}))
-												}
-												t={t}
-											/>
-										</div>
-										<div className="border-t border-border pt-7">
-											<span className="mb-3 block text-sm font-medium text-foreground">
-												{t("deadlineLabel")}
-											</span>
-											<DeadlinePicker
-												options={DEADLINE_OPTIONS}
-												value={formData.deadline}
-												onChange={(v) =>
-													setFormData((prev) => ({
-														...prev,
-														deadline: v,
-													}))
-												}
-												t={t}
-											/>
-										</div>
+										{isFixedTier(formData.projectType) ? (
+											<div className="space-y-3">
+												<div>
+													<span className="block text-xs font-medium text-djanni-gray">
+														{t("tier.label")}
+													</span>
+													<span className="mt-0.5 block text-xs text-djanni-gray-light">
+														{t("tier.helpText")}
+													</span>
+												</div>
+												<TierPicker
+													options={getTierOptions(formData.projectType)}
+													value={formData.tier}
+													onChange={(v) =>
+														setFormData((prev) => ({
+															...prev,
+															tier: v,
+															budget: "",
+															deadline: "",
+														}))
+													}
+													t={t}
+												/>
+											</div>
+										) : (
+											<>
+												<div className="mb-8">
+													<span className="mb-1 block text-sm font-medium text-foreground">
+														{t("budgetLabel")}
+													</span>
+													<span className="mb-3 block text-xs text-djanni-gray">
+														{t("budgetHint")}
+													</span>
+													<BudgetPicker
+														options={BUDGET_OPTIONS}
+														value={formData.budget}
+														onChange={(v) =>
+															setFormData((prev) => ({
+																...prev,
+																budget: v,
+															}))
+														}
+														t={t}
+													/>
+												</div>
+												<div className="border-t border-border pt-7">
+													<span className="mb-3 block text-sm font-medium text-foreground">
+														{t("deadlineLabel")}
+													</span>
+													<DeadlinePicker
+														options={DEADLINE_OPTIONS}
+														value={formData.deadline}
+														onChange={(v) =>
+															setFormData((prev) => ({
+																...prev,
+																deadline: v,
+															}))
+														}
+														t={t}
+													/>
+												</div>
+												<div className="mt-7 border-t border-border pt-7">
+													<span className="mb-1 block text-sm font-medium text-foreground">
+														{t("addons.title")}
+													</span>
+													<span className="mb-3 block text-xs text-djanni-gray">
+														{t("addons.subtitle")}
+													</span>
+													<div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+														{ADDON_OPTIONS.map((opt) => {
+															const Icon = opt.icon
+															const selected = formData.addons.includes(opt.value)
+															return (
+																<button
+																	key={opt.value}
+																	type="button"
+																	onClick={() => toggleAddon(opt.value)}
+																	aria-pressed={selected}
+																	className={cn(
+																		"group flex items-start gap-3 rounded-lg border p-4 text-left transition-all duration-200",
+																		selected
+																			? "border-djanni-orange bg-djanni-orange/5 shadow-[0_0_0_1px_var(--color-djanni-orange)]"
+																			: "border-border hover:border-djanni-gray",
+																	)}
+																>
+																	<div
+																		className={cn(
+																			"flex h-8 w-8 shrink-0 items-center justify-center rounded-md transition-colors duration-200",
+																			selected
+																				? "bg-djanni-orange/15 text-djanni-orange"
+																				: "bg-surface-b text-djanni-gray",
+																		)}
+																	>
+																		<Icon size={18} />
+																	</div>
+																	<div className="min-w-0 flex-1">
+																		<div
+																			className={cn(
+																				"text-sm font-semibold transition-colors",
+																				selected ? "text-djanni-orange" : "text-foreground",
+																			)}
+																		>
+																			{t(`addons.${opt.value}.title` as Parameters<typeof t>[0])}
+																		</div>
+																		<div className="mt-0.5 text-[12px] leading-snug text-djanni-gray-light">
+																			{t(
+																				`addons.${opt.value}.description` as Parameters<
+																					typeof t
+																				>[0],
+																			)}
+																		</div>
+																	</div>
+																	<div
+																		className={cn(
+																			"flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-all",
+																			selected
+																				? "border-djanni-orange bg-djanni-orange text-white"
+																				: "border-border",
+																		)}
+																	>
+																		{selected && <IconCheck size={12} />}
+																	</div>
+																</button>
+															)
+														})}
+													</div>
+													{ADDON_OPTIONS.filter((opt) => formData.addons.includes(opt.value)).map(
+														(opt) => (
+															<div
+																key={opt.value}
+																className="mt-4 space-y-3 rounded-lg border border-djanni-orange/20 bg-djanni-orange/5 p-4"
+															>
+																<div>
+																	<span className="block text-xs font-medium text-djanni-gray">
+																		{t("tier.label")}{" "}
+																		<span className="text-djanni-orange">
+																			· {t(`addons.${opt.value}.title` as Parameters<typeof t>[0])}
+																		</span>
+																	</span>
+																</div>
+																<TierPicker
+																	options={getTierOptions(opt.value)}
+																	value={formData.addonTiers[opt.value] ?? ""}
+																	onChange={(v) => setAddonTier(opt.value, v)}
+																	t={t}
+																/>
+															</div>
+														),
+													)}
+												</div>
+											</>
+										)}
 									</div>
 								)}
 
@@ -616,7 +866,13 @@ export function ProjectRequestForm() {
 											<textarea
 												id="message"
 												name="message"
-												placeholder={t("messagePlaceholder")}
+												placeholder={
+													formData.projectType === "maintenance"
+														? t("messagePlaceholderMaintenance")
+														: formData.projectType === "reseaux-sociaux"
+															? t("messagePlaceholderReseauxSociaux")
+															: t("messagePlaceholder")
+												}
 												rows={6}
 												value={formData.message}
 												onChange={handleChange}

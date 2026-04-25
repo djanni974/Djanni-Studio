@@ -751,6 +751,8 @@
 			"site-vitrine": "Showcase",
 			"site-premium": "Custom",
 			"refonte": "Redesign",
+			"maintenance": "Maintenance",
+			"reseaux-sociaux": "Social media",
 			"autre": "Other"
 		},
 		"projectTypeDescs": {
@@ -758,6 +760,8 @@
 			"site-vitrine": "A structured site, up to 5 pages",
 			"site-premium": "Advanced custom features",
 			"refonte": "Modernize an existing website",
+			"maintenance": "Outsource my site's maintenance",
+			"reseaux-sociaux": "Monthly Instagram, Facebook management",
 			"autre": "A specific project to discuss"
 		},
 		"businessNameLabel": "Business name",
@@ -782,6 +786,30 @@
 			"1-mois": "Less than 1 month",
 			"urgent": "Urgent"
 		},
+		"addons": {
+			"title": "Want to add?",
+			"subtitle": "These services can be added to your main project. We'll discuss at the call.",
+			"maintenance": {
+				"title": "Post-launch maintenance",
+				"description": "Updates, backups, security"
+			},
+			"reseaux-sociaux": {
+				"title": "Social media management",
+				"description": "Monthly Instagram and Facebook posts"
+			}
+		},
+		"tier": {
+			"label": "Which tier interests you?",
+			"helpText": "For maintenance and social media, prices are fixed and listed on the /maintenance and /options pages.",
+			"options": {
+				"essentiel": "Essential - EUR 29/month",
+				"confort": "Comfort - EUR 49/month",
+				"serenite": "Serenity - EUR 99/month",
+				"insta": "Instagram - EUR 180/month",
+				"ig-fb": "Instagram + Facebook - EUR 280/month",
+				"unsure": "Not sure yet"
+			}
+		},
 		"nameLabel": "Your name",
 		"namePlaceholder": "Your name",
 		"emailLabel": "Your email",
@@ -791,12 +819,12 @@
 		"phonePlaceholder": "+33 6 12 34 56 78",
 		"messageLabel": "Message",
 		"messagePlaceholder": "E.g.: showcase site for my construction company, 4-5 pages, contact form, portfolio of my work…",
+		"messagePlaceholderMaintenance": "E.g.: My WordPress site is slow, I want to outsource maintenance...",
+		"messagePlaceholderReseauxSociaux": "E.g.: I want one Instagram post per week for my bakery...",
 		"back": "Back",
 		"next": "Next",
 		"send": "Send",
 		"sending": "Sending...",
-		"successTitle": "Request sent!",
-		"successMessage": "Thank you for your request. I'll get back to you within 24 hours to discuss.",
 		"or": "Or directly:",
 		"trustResponse": "Response within 24h",
 		"trustFree": "Free quote",
@@ -808,6 +836,57 @@
 			"email": "Your email is required",
 			"emailInvalid": "Invalid email",
 			"message": "Describe your project"
+		},
+		"aboutGianni": {
+			"greeting": "Hi, I'm Gianni.",
+			"tagline": "Former carpenter turned web developer in Dinard.",
+			"bio": "I build websites for craftspeople and small businesses on Brittany's Emerald Coast. No agency middlemen, no jargon. You talk directly with the person coding your site.",
+			"cta": "More about me",
+			"photoAlt": "Photo of Gianni Jardin"
+		},
+		"recentWork": {
+			"tag": "Recent work",
+			"title": "L'Artisane in Dinard",
+			"subtitle": "Showcase site for Pauline Besnard, colourist",
+			"cta": "See all my projects",
+			"imageAlt": "Screenshot of L'Artisane Dinard website"
+		},
+		"altContact": {
+			"title": "Don't want to fill out the form?",
+			"subtitle": "You can reach me directly.",
+			"phone": {
+				"title": "Call me directly",
+				"number": "+33 7 49 54 74 98",
+				"hours": "Mon-Fri 8am-7pm, Sat 9am-12pm"
+			},
+			"calcom": {
+				"title": "Book a discovery call",
+				"subtitle": "30 minutes, video call, free",
+				"cta": "Book now"
+			}
+		},
+		"privacy": {
+			"title": "What happens to your request?",
+			"points": {
+				"0": "Your data is never shared or sold.",
+				"1": "No cold outreach: I only contact you about your specific request.",
+				"2": "Data deleted after 12 months without follow-up.",
+				"3": "GDPR-compliant tools: Resend for emails, Vercel for hosting."
+			},
+			"cta": "More details in the privacy policy"
+		},
+		"success": {
+			"title": "Request sent!",
+			"confirmation": "Thanks {firstName}. You'll receive a confirmation email at {email} within a minute.",
+			"timelineTitle": "Here's what's next",
+			"timeline": {
+				"0": { "label": "Today", "text": "You send me your request" },
+				"1": { "label": "Within 24h", "text": "I reply by email to clarify" },
+				"2": { "label": "Within 3 days", "text": "You receive a custom quote" },
+				"3": { "label": "When you're ready", "text": "We sign, we get started" }
+			},
+			"ctaPrimary": "Book a discovery call",
+			"ctaSecondary": "Meanwhile, take a look at my projects"
 		}
 	},
 	"ctaContact": {

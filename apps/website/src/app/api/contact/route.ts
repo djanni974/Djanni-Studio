@@ -65,9 +65,12 @@ type ContactPayload = {
 	projectType: string
 	budget: string
 	deadline: string
+	tier?: string
 	businessName: string
 	existingUrl: string
 	message: string
+	addons?: string[]
+	addonTiers?: Record<string, string>
 }
 
 const PROJECT_LABELS: Record<string, string> = {
@@ -75,6 +78,8 @@ const PROJECT_LABELS: Record<string, string> = {
 	"site-vitrine": "Vitrine",
 	"site-premium": "Sur mesure",
 	refonte: "Refonte de site existant",
+	maintenance: "Maintenance",
+	"reseaux-sociaux": "Réseaux sociaux",
 	autre: "Autre",
 }
 
@@ -89,6 +94,15 @@ const BUDGET_LABELS: Record<string, string> = {
 	"pas-defini": "Pas encore défini",
 }
 
+const TIER_LABELS: Record<string, string> = {
+	essentiel: "Maintenance Essentiel - 29 €/mois",
+	confort: "Maintenance Confort - 49 €/mois",
+	serenite: "Maintenance Sérénité - 99 €/mois",
+	insta: "Réseaux sociaux Instagram - 180 €/mois",
+	"ig-fb": "Réseaux sociaux Instagram + Facebook - 280 €/mois",
+	unsure: "Pas encore défini",
+}
+
 const DEADLINE_LABELS: Record<string, string> = {
 	urgent: "Urgent (< 2 semaines)",
 	"1-mois": "Dans le mois",
@@ -99,6 +113,13 @@ const DEADLINE_LABELS: Record<string, string> = {
 const VALID_PROJECT_TYPES = new Set(Object.keys(PROJECT_LABELS))
 const VALID_BUDGETS = new Set([...Object.keys(BUDGET_LABELS), ""])
 const VALID_DEADLINES = new Set([...Object.keys(DEADLINE_LABELS), ""])
+const VALID_TIERS = new Set([...Object.keys(TIER_LABELS), ""])
+
+const ADDON_LABELS: Record<string, string> = {
+	maintenance: "Maintenance après livraison",
+	"reseaux-sociaux": "Gestion réseaux sociaux",
+}
+const VALID_ADDONS = new Set(Object.keys(ADDON_LABELS))
 
 function validate(data: unknown): data is ContactPayload {
 	if (!data || typeof data !== "object") return false
@@ -123,6 +144,7 @@ function validate(data: unknown): data is ContactPayload {
 	if (d.projectType.length > 50) return false
 	if (typeof d.budget === "string" && d.budget.length > 50) return false
 	if (typeof d.deadline === "string" && d.deadline.length > 50) return false
+	if (typeof d.tier === "string" && d.tier.length > 50) return false
 	if (typeof d.businessName === "string" && d.businessName.length > 200) return false
 	if (typeof d.existingUrl === "string" && d.existingUrl.length > 500) return false
 	if (typeof d.phone === "string" && d.phone.length > 20) return false
@@ -133,6 +155,8 @@ function validate(data: unknown): data is ContactPayload {
 	if (!VALID_BUDGETS.has(budget)) return false
 	const deadline = typeof d.deadline === "string" ? d.deadline : ""
 	if (!VALID_DEADLINES.has(deadline)) return false
+	const tier = typeof d.tier === "string" ? d.tier : ""
+	if (!VALID_TIERS.has(tier)) return false
 
 	// Email format + reject header injection characters
 	const email = d.email
@@ -154,6 +178,27 @@ function validate(data: unknown): data is ContactPayload {
 		if (!/^https?:\/\/.+/i.test(d.existingUrl)) return false
 	}
 
+	// addons (optional) — must be a small array of whitelisted strings
+	if (d.addons !== undefined) {
+		if (!Array.isArray(d.addons)) return false
+		if (d.addons.length > 5) return false
+		for (const a of d.addons) {
+			if (typeof a !== "string" || !VALID_ADDONS.has(a)) return false
+		}
+	}
+
+	// addonTiers (optional) — small record { addon: tier }, both whitelisted
+	if (d.addonTiers !== undefined) {
+		if (typeof d.addonTiers !== "object" || d.addonTiers === null || Array.isArray(d.addonTiers))
+			return false
+		const entries = Object.entries(d.addonTiers as Record<string, unknown>)
+		if (entries.length > 5) return false
+		for (const [k, v] of entries) {
+			if (!VALID_ADDONS.has(k)) return false
+			if (typeof v !== "string" || !VALID_TIERS.has(v)) return false
+		}
+	}
+
 	return true
 }
 
@@ -171,6 +216,15 @@ function buildEmailHtml(data: ContactPayload): string {
 	const deadlineLabel = data.deadline ? (DEADLINE_LABELS[data.deadline] ?? data.deadline) : ""
 	const businessName = data.businessName?.trim() || ""
 	const existingUrl = data.existingUrl?.trim() || ""
+	const addonsLabel = (data.addons ?? [])
+		.map((a) => {
+			const base = ADDON_LABELS[a] ?? a
+			const t = data.addonTiers?.[a]
+			const tierLbl = t ? (TIER_LABELS[t] ?? t) : ""
+			return tierLbl ? `${base} (${tierLbl})` : base
+		})
+		.join(", ")
+	const tierLabel = data.tier ? (TIER_LABELS[data.tier] ?? data.tier) : ""
 
 	return `
 <!DOCTYPE html>
@@ -220,8 +274,10 @@ function buildEmailHtml(data: ContactPayload): string {
             <td style="padding:10px 0;color:#78756c;font-size:13px;font-weight:500;vertical-align:top">Budget</td>
             <td style="padding:10px 0;color:#1a1a18;font-size:14px;font-weight:400">${escapeHtml(budgetLabel)}</td>
           </tr>
+          ${optionalRow("Palier", tierLabel)}
           ${optionalRow("Délai", deadlineLabel)}
           ${optionalRow("Site actuel", existingUrl)}
+          ${optionalRow("À ajouter", addonsLabel)}
         </table>
       </div>
 
@@ -253,6 +309,15 @@ function buildConfirmationHtml(data: ContactPayload): string {
 	const deadlineLabel = data.deadline ? (DEADLINE_LABELS[data.deadline] ?? data.deadline) : ""
 	const firstName = data.name.split(" ")[0]
 	const businessName = data.businessName?.trim() || ""
+	const addonsLabel = (data.addons ?? [])
+		.map((a) => {
+			const base = ADDON_LABELS[a] ?? a
+			const t = data.addonTiers?.[a]
+			const tierLbl = t ? (TIER_LABELS[t] ?? t) : ""
+			return tierLbl ? `${base} (${tierLbl})` : base
+		})
+		.join(", ")
+	const tierLabel = data.tier ? (TIER_LABELS[data.tier] ?? data.tier) : ""
 
 	return `
 <!DOCTYPE html>
@@ -301,7 +366,9 @@ function buildConfirmationHtml(data: ContactPayload): string {
             <td style="padding:10px 0;color:#78756c;font-size:13px;font-weight:500;vertical-align:top">Budget</td>
             <td style="padding:10px 0;color:#1a1a18;font-size:14px;font-weight:400">${escapeHtml(budgetLabel)}</td>
           </tr>
+          ${optionalRow("Palier", tierLabel)}
           ${optionalRow("Délai", deadlineLabel)}
+          ${optionalRow("À ajouter", addonsLabel)}
         </table>
       </div>
 
@@ -430,8 +497,11 @@ export async function POST(request: Request) {
 					projectType: body.projectType,
 					budget: body.budget,
 					deadline: body.deadline,
+					tier: body.tier ?? "",
 					businessName: body.businessName,
 					existingUrl: body.existingUrl,
+					addons: body.addons ?? [],
+					addonTiers: body.addonTiers ?? {},
 				}),
 			}).catch((err) => {
 				console.warn("[contact] n8n webhook error:", err)

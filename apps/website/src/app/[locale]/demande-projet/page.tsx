@@ -7,6 +7,11 @@ import { ContactFaq } from "@/components/sections/contact-faq"
 import { ProjectRequestForm } from "@/components/sections/project-request-form"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { getAlternates, pickMessages } from "@/lib/metadata"
+import { AboutGianni } from "./_components/AboutGianni"
+import { AltContact } from "./_components/AltContact"
+import { PageHeader } from "./_components/PageHeader"
+import { PrivacyReassurance } from "./_components/PrivacyReassurance"
+import { RecentWork } from "./_components/RecentWork"
 
 export async function generateMetadata({
 	params,
@@ -92,8 +97,13 @@ export default async function DemandeProjetPage({
 				{/* Top glow */}
 				<div className="pointer-events-none absolute top-0 left-1/2 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse,rgba(232,80,10,0.08)_0%,transparent_70%)]" />
 
-				<div className="relative px-5 pt-32 pb-20 md:px-12 md:pt-40">
+				<div className="relative px-5 pt-32 pb-12 md:px-12 md:pt-40">
+					<PageHeader />
+					<AboutGianni />
 					<ProjectRequestForm />
+					<AltContact />
+					<PrivacyReassurance />
+					<RecentWork />
 				</div>
 				<ContactFaq />
 			</main>

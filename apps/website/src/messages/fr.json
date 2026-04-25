@@ -751,6 +751,8 @@
 			"site-vitrine": "Vitrine",
 			"site-premium": "Sur mesure",
 			"refonte": "Refonte",
+			"maintenance": "Maintenance",
+			"reseaux-sociaux": "Réseaux sociaux",
 			"autre": "Autre"
 		},
 		"projectTypeDescs": {
@@ -758,6 +760,8 @@
 			"site-vitrine": "Un vrai site structuré, jusqu'à 5 pages",
 			"site-premium": "Fonctionnalités avancées sur mesure",
 			"refonte": "Moderniser un site existant",
+			"maintenance": "Confier la maintenance de mon site",
+			"reseaux-sociaux": "Gestion mensuelle Instagram, Facebook",
 			"autre": "Un projet spécifique à discuter"
 		},
 		"businessNameLabel": "Nom de l'entreprise",
@@ -782,6 +786,30 @@
 			"1-mois": "Moins d'1 mois",
 			"urgent": "Urgent"
 		},
+		"addons": {
+			"title": "Souhaitez-vous ajouter ?",
+			"subtitle": "Ces services peuvent s'ajouter à votre projet principal. On en parle au RDV.",
+			"maintenance": {
+				"title": "Maintenance après livraison",
+				"description": "Mises à jour, sauvegardes, sécurité"
+			},
+			"reseaux-sociaux": {
+				"title": "Gestion réseaux sociaux",
+				"description": "Posts mensuels Instagram et Facebook"
+			}
+		},
+		"tier": {
+			"label": "Quel palier vous intéresse ?",
+			"helpText": "Pour la maintenance et les réseaux sociaux, les tarifs sont fixes et indiqués sur les pages /maintenance et /options.",
+			"options": {
+				"essentiel": "Essentiel - 29 EUR/mois",
+				"confort": "Confort - 49 EUR/mois",
+				"serenite": "Sérénité - 99 EUR/mois",
+				"insta": "Instagram - 180 EUR/mois",
+				"ig-fb": "Instagram + Facebook - 280 EUR/mois",
+				"unsure": "Je ne sais pas encore"
+			}
+		},
 		"nameLabel": "Votre nom",
 		"namePlaceholder": "Votre nom",
 		"emailLabel": "Votre email",
@@ -791,12 +819,12 @@
 		"phonePlaceholder": "06 12 34 56 78",
 		"messageLabel": "Message",
 		"messagePlaceholder": "Ex : site vitrine pour mon entreprise de maçonnerie, 4-5 pages, formulaire de contact, mise en avant de mes réalisations…",
+		"messagePlaceholderMaintenance": "Ex : Mon site WordPress est lent, je veux confier la maintenance...",
+		"messagePlaceholderReseauxSociaux": "Ex : Je veux un post Instagram par semaine pour ma boulangerie...",
 		"back": "Retour",
 		"next": "Suivant",
 		"send": "Envoyer",
 		"sending": "Envoi...",
-		"successTitle": "Demande envoyée !",
-		"successMessage": "Merci pour votre demande. Je reviens vers vous sous 24h pour en discuter.",
 		"or": "Ou directement :",
 		"trustResponse": "Réponse sous 24h",
 		"trustFree": "Devis gratuit",
@@ -808,6 +836,57 @@
 			"email": "Votre email est requis",
 			"emailInvalid": "Email invalide",
 			"message": "Décrivez votre projet"
+		},
+		"aboutGianni": {
+			"greeting": "Bonjour, c'est Gianni.",
+			"tagline": "Ancien charpentier reconverti développeur web à Dinard.",
+			"bio": "Je conçois des sites web pour les artisans et commerçants de la Côte d'Émeraude. Pas d'agence intermédiaire, pas de jargon. Vous parlez directement avec celui qui code votre site.",
+			"cta": "En savoir plus sur moi",
+			"photoAlt": "Photo de Gianni Jardin"
+		},
+		"recentWork": {
+			"tag": "Réalisation récente",
+			"title": "L'Artisane à Dinard",
+			"subtitle": "Site vitrine pour Pauline Besnard, coloriste",
+			"cta": "Voir toutes mes réalisations",
+			"imageAlt": "Capture du site L'Artisane à Dinard"
+		},
+		"altContact": {
+			"title": "Pas envie de remplir le formulaire ?",
+			"subtitle": "Je suis aussi joignable directement.",
+			"phone": {
+				"title": "Appelez-moi directement",
+				"number": "07 49 54 74 98",
+				"hours": "Lun-Ven 8h-19h, Sam 9h-12h"
+			},
+			"calcom": {
+				"title": "Réservez un appel découverte",
+				"subtitle": "30 minutes, en visio, gratuit",
+				"cta": "Réserver maintenant"
+			}
+		},
+		"privacy": {
+			"title": "Que devient votre demande ?",
+			"points": {
+				"0": "Vos données ne sont jamais partagées ni revendues.",
+				"1": "Aucune prospection sauvage : je vous recontacte uniquement par rapport à votre demande.",
+				"2": "Données supprimées après 12 mois sans suite.",
+				"3": "Outils certifiés RGPD : Resend pour les emails, hébergement Vercel."
+			},
+			"cta": "Plus de détails dans la politique de confidentialité"
+		},
+		"success": {
+			"title": "Demande envoyée !",
+			"confirmation": "Merci {firstName}. Vous allez recevoir un email de confirmation à {email} dans la minute.",
+			"timelineTitle": "Voici la suite",
+			"timeline": {
+				"0": { "label": "Aujourd'hui", "text": "Vous m'envoyez votre demande" },
+				"1": { "label": "Sous 24h", "text": "Je vous réponds par email pour clarifier" },
+				"2": { "label": "Sous 3 jours", "text": "Vous recevez un devis personnalisé" },
+				"3": { "label": "Quand vous êtes prêt", "text": "On signe, on démarre" }
+			},
+			"ctaPrimary": "Réservez un créneau découverte",
+			"ctaSecondary": "En attendant, jetez un œil à mes réalisations"
 		}
 	},
 	"ctaContact": {
