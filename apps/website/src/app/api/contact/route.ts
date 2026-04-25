@@ -75,6 +75,8 @@ const PROJECT_LABELS: Record<string, string> = {
 	"site-vitrine": "Vitrine",
 	"site-premium": "Sur mesure",
 	refonte: "Refonte de site existant",
+	maintenance: "Maintenance",
+	"reseaux-sociaux": "Réseaux sociaux",
 	autre: "Autre",
 }
 
@@ -87,6 +89,12 @@ const BUDGET_LABELS: Record<string, string> = {
 	"1500-3000": "1 500 € – 3 000 €",
 	"plus-3000": "Plus de 3 000 €",
 	"pas-defini": "Pas encore défini",
+	essentiel: "Maintenance Essentiel - 29 €/mois",
+	confort: "Maintenance Confort - 49 €/mois",
+	serenite: "Maintenance Sérénité - 99 €/mois",
+	insta: "Réseaux sociaux Instagram - 180 €/mois",
+	"ig-fb": "Réseaux sociaux Instagram + Facebook - 280 €/mois",
+	unsure: "Pas encore défini",
 }
 
 const DEADLINE_LABELS: Record<string, string> = {
