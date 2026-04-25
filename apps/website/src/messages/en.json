@@ -1232,7 +1232,8 @@
 		"ctaTitle": "Let's pick the right tier together.",
 		"ctaSubtitle": "Not sure which tier fits you? Let's spend 30 minutes on it, I'll guide you with no pressure.",
 		"ctaReassurance": "First call free, no commitment.",
-		"disclaimerCgv": "Detailed terms provided at subscription.",
+		"disclaimerCgv": "Subscription, billing and cancellation terms detailed in our",
+		"disclaimerCgvLink": "Terms · Article 17",
 		"reassurancesTag": "Commitments",
 		"reassurancesTitle": "What you get in every tier",
 		"reassurances": [

@@ -61,8 +61,14 @@ export function MaintenanceContent() {
 
 					<AnimatedSection delay={0.2}>
 						<p className="mt-12 text-center text-sm text-djanni-gray-light">
-							{/* TODO DS-22 : remplacer par lien CGV mis a jour */}
-							{t("disclaimerCgv")}
+							{t("disclaimerCgv")}{" "}
+							<Link
+								href="/cgv"
+								className="font-medium text-djanni-orange transition-colors hover:text-djanni-orange-light"
+							>
+								{t("disclaimerCgvLink")}
+							</Link>
+							.
 						</p>
 					</AnimatedSection>
 
