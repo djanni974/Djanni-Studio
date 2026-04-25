@@ -1,3 +1,6 @@
+// TODO DS-25 : remplacer par la vraie URL Cal.com une fois fournie par Gianni.
+export const CAL_COM_URL = "https://cal.com/djanni-studio"
+
 export type CityPage = {
 	slug: string
 	cityKey: string
