@@ -786,6 +786,18 @@
 			"1-mois": "Less than 1 month",
 			"urgent": "Urgent"
 		},
+		"addons": {
+			"title": "Want to add?",
+			"subtitle": "These services can be added to your main project. We'll discuss at the call.",
+			"maintenance": {
+				"title": "Post-launch maintenance",
+				"description": "Updates, backups, security"
+			},
+			"reseaux-sociaux": {
+				"title": "Social media management",
+				"description": "Monthly Instagram and Facebook posts"
+			}
+		},
 		"tier": {
 			"label": "Which tier interests you?",
 			"helpText": "For maintenance and social media, prices are fixed and listed on the /maintenance and /options pages.",

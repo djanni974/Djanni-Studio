@@ -791,6 +791,18 @@
 			"1-mois": "Nebeutoc'h eget 1 miz",
 			"urgent": "Prim"
 		},
+		"addons": {
+			"title": "C'hoant ho peus da ouzhpennañ ?",
+			"subtitle": "Ar servijoù-mañ a c'hall bezañ ouzhpennet d'ho raktres pennañ. Komz a reomp anezho er c'hejadenn.",
+			"maintenance": {
+				"title": "Mirout goude lañsadenn",
+				"description": "Hizivadennoù, gwarezioù, surentez"
+			},
+			"reseaux-sociaux": {
+				"title": "Merourezh rouedadoù sokial",
+				"description": "Postoù mizel Instagram ha Facebook"
+			}
+		},
 		"tier": {
 			"label": "Pe live a zeu ganeoc'h ?",
 			"helpText": "Evit ar mirout hag ar rouedadoù sokial, ar prizioù a zo fiks ha diskouezet war ar pajennoù /maintenance ha /options.",

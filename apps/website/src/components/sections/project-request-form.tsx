@@ -36,6 +36,7 @@ type FormData = {
 	email: string
 	phone: string
 	message: string
+	addons: string[]
 }
 
 type FormErrors = Partial<Record<keyof FormData, string>>
@@ -61,6 +62,11 @@ const DEADLINE_OPTIONS = ["pas-presse", "2-3-mois", "1-mois", "urgent"] as const
 const TIER_OPTIONS_MAINTENANCE = ["essentiel", "confort", "serenite", "unsure"] as const
 const TIER_OPTIONS_RESEAUX = ["insta", "ig-fb", "unsure"] as const
 const FIXED_TIER_TYPES = new Set(["maintenance", "reseaux-sociaux"])
+
+const ADDON_OPTIONS = [
+	{ value: "maintenance", icon: IconShield },
+	{ value: "reseaux-sociaux", icon: IconBrandInstagram },
+] as const
 
 const TIMELINE_KEYS = ["0", "1", "2", "3"] as const
 
@@ -264,6 +270,7 @@ export function ProjectRequestForm() {
 		email: "",
 		phone: "",
 		message: "",
+		addons: [],
 	})
 	const [hp, setHp] = useState("")
 	const loadedAt = useRef(Date.now())
@@ -316,6 +323,15 @@ export function ProjectRequestForm() {
 		setErrors({})
 		setDirection(-1)
 		setCurrentStep((prev) => prev - 1)
+	}
+
+	function toggleAddon(value: string) {
+		setFormData((prev) => ({
+			...prev,
+			addons: prev.addons.includes(value)
+				? prev.addons.filter((a) => a !== value)
+				: [...prev.addons, value],
+		}))
 	}
 
 	async function handleSubmit(e: FormEvent) {
@@ -479,6 +495,7 @@ export function ProjectRequestForm() {
 																setFormData((prev) => ({
 																	...prev,
 																	projectType: opt.value,
+																	addons: FIXED_TIER_TYPES.has(opt.value) ? [] : prev.addons,
 																}))
 																if (errors.projectType) {
 																	setErrors((prev) => ({
@@ -641,6 +658,72 @@ export function ProjectRequestForm() {
 														}
 														t={t}
 													/>
+												</div>
+												<div className="mt-7 border-t border-border pt-7">
+													<span className="mb-1 block text-sm font-medium text-foreground">
+														{t("addons.title")}
+													</span>
+													<span className="mb-3 block text-xs text-djanni-gray">
+														{t("addons.subtitle")}
+													</span>
+													<div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+														{ADDON_OPTIONS.map((opt) => {
+															const Icon = opt.icon
+															const selected = formData.addons.includes(opt.value)
+															return (
+																<button
+																	key={opt.value}
+																	type="button"
+																	onClick={() => toggleAddon(opt.value)}
+																	aria-pressed={selected}
+																	className={cn(
+																		"group flex items-start gap-3 rounded-lg border p-4 text-left transition-all duration-200",
+																		selected
+																			? "border-djanni-orange bg-djanni-orange/5 shadow-[0_0_0_1px_var(--color-djanni-orange)]"
+																			: "border-border hover:border-djanni-gray",
+																	)}
+																>
+																	<div
+																		className={cn(
+																			"flex h-8 w-8 shrink-0 items-center justify-center rounded-md transition-colors duration-200",
+																			selected
+																				? "bg-djanni-orange/15 text-djanni-orange"
+																				: "bg-surface-b text-djanni-gray",
+																		)}
+																	>
+																		<Icon size={18} />
+																	</div>
+																	<div className="min-w-0 flex-1">
+																		<div
+																			className={cn(
+																				"text-sm font-semibold transition-colors",
+																				selected ? "text-djanni-orange" : "text-foreground",
+																			)}
+																		>
+																			{t(`addons.${opt.value}.title` as Parameters<typeof t>[0])}
+																		</div>
+																		<div className="mt-0.5 text-[12px] leading-snug text-djanni-gray-light">
+																			{t(
+																				`addons.${opt.value}.description` as Parameters<
+																					typeof t
+																				>[0],
+																			)}
+																		</div>
+																	</div>
+																	<div
+																		className={cn(
+																			"flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-all",
+																			selected
+																				? "border-djanni-orange bg-djanni-orange text-white"
+																				: "border-border",
+																		)}
+																	>
+																		{selected && <IconCheck size={12} />}
+																	</div>
+																</button>
+															)
+														})}
+													</div>
 												</div>
 											</>
 										)}

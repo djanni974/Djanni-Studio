@@ -68,6 +68,7 @@ type ContactPayload = {
 	businessName: string
 	existingUrl: string
 	message: string
+	addons?: string[]
 }
 
 const PROJECT_LABELS: Record<string, string> = {
@@ -107,6 +108,12 @@ const DEADLINE_LABELS: Record<string, string> = {
 const VALID_PROJECT_TYPES = new Set(Object.keys(PROJECT_LABELS))
 const VALID_BUDGETS = new Set([...Object.keys(BUDGET_LABELS), ""])
 const VALID_DEADLINES = new Set([...Object.keys(DEADLINE_LABELS), ""])
+
+const ADDON_LABELS: Record<string, string> = {
+	maintenance: "Maintenance après livraison",
+	"reseaux-sociaux": "Gestion réseaux sociaux",
+}
+const VALID_ADDONS = new Set(Object.keys(ADDON_LABELS))
 
 function validate(data: unknown): data is ContactPayload {
 	if (!data || typeof data !== "object") return false
@@ -162,6 +169,15 @@ function validate(data: unknown): data is ContactPayload {
 		if (!/^https?:\/\/.+/i.test(d.existingUrl)) return false
 	}
 
+	// addons (optional) — must be a small array of whitelisted strings
+	if (d.addons !== undefined) {
+		if (!Array.isArray(d.addons)) return false
+		if (d.addons.length > 5) return false
+		for (const a of d.addons) {
+			if (typeof a !== "string" || !VALID_ADDONS.has(a)) return false
+		}
+	}
+
 	return true
 }
 
@@ -179,6 +195,7 @@ function buildEmailHtml(data: ContactPayload): string {
 	const deadlineLabel = data.deadline ? (DEADLINE_LABELS[data.deadline] ?? data.deadline) : ""
 	const businessName = data.businessName?.trim() || ""
 	const existingUrl = data.existingUrl?.trim() || ""
+	const addonsLabel = (data.addons ?? []).map((a) => ADDON_LABELS[a] ?? a).join(", ")
 
 	return `
 <!DOCTYPE html>
@@ -230,6 +247,7 @@ function buildEmailHtml(data: ContactPayload): string {
           </tr>
           ${optionalRow("Délai", deadlineLabel)}
           ${optionalRow("Site actuel", existingUrl)}
+          ${optionalRow("À ajouter", addonsLabel)}
         </table>
       </div>
 
@@ -261,6 +279,7 @@ function buildConfirmationHtml(data: ContactPayload): string {
 	const deadlineLabel = data.deadline ? (DEADLINE_LABELS[data.deadline] ?? data.deadline) : ""
 	const firstName = data.name.split(" ")[0]
 	const businessName = data.businessName?.trim() || ""
+	const addonsLabel = (data.addons ?? []).map((a) => ADDON_LABELS[a] ?? a).join(", ")
 
 	return `
 <!DOCTYPE html>
@@ -310,6 +329,7 @@ function buildConfirmationHtml(data: ContactPayload): string {
             <td style="padding:10px 0;color:#1a1a18;font-size:14px;font-weight:400">${escapeHtml(budgetLabel)}</td>
           </tr>
           ${optionalRow("Délai", deadlineLabel)}
+          ${optionalRow("À ajouter", addonsLabel)}
         </table>
       </div>
 
@@ -440,6 +460,7 @@ export async function POST(request: Request) {
 					deadline: body.deadline,
 					businessName: body.businessName,
 					existingUrl: body.existingUrl,
+					addons: body.addons ?? [],
 				}),
 			}).catch((err) => {
 				console.warn("[contact] n8n webhook error:", err)

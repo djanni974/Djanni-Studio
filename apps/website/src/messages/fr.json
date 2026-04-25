@@ -786,6 +786,18 @@
 			"1-mois": "Moins d'1 mois",
 			"urgent": "Urgent"
 		},
+		"addons": {
+			"title": "Souhaitez-vous ajouter ?",
+			"subtitle": "Ces services peuvent s'ajouter à votre projet principal. On en parle au RDV.",
+			"maintenance": {
+				"title": "Maintenance après livraison",
+				"description": "Mises à jour, sauvegardes, sécurité"
+			},
+			"reseaux-sociaux": {
+				"title": "Gestion réseaux sociaux",
+				"description": "Posts mensuels Instagram et Facebook"
+			}
+		},
 		"tier": {
 			"label": "Quel palier vous intéresse ?",
 			"helpText": "Pour la maintenance et les réseaux sociaux, les tarifs sont fixes et indiqués sur les pages /maintenance et /options.",
