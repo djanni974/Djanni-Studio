@@ -32,6 +32,7 @@ type FormData = {
 	existingUrl: string
 	budget: string
 	deadline: string
+	tier: string
 	name: string
 	email: string
 	phone: string
@@ -234,7 +235,7 @@ function TierPicker({
 	t: ReturnType<typeof useTranslations<"projectRequest">>
 }) {
 	return (
-		<div className="grid grid-cols-1 gap-2.5">
+		<div className="flex flex-wrap gap-2.5">
 			{options.map((opt) => {
 				const selected = value === opt
 				return (
@@ -243,13 +244,15 @@ function TierPicker({
 						type="button"
 						onClick={() => onChange(selected ? "" : opt)}
 						className={cn(
-							"rounded-lg border px-4 py-3 text-left text-sm font-medium transition-all duration-200",
+							"relative rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200",
 							selected
-								? "border-djanni-orange bg-djanni-orange/8 text-djanni-orange shadow-[0_0_0_1px_var(--color-djanni-orange)]"
-								: "border-border text-foreground hover:border-djanni-gray",
+								? "border-djanni-orange bg-djanni-orange text-white shadow-[0_2px_12px_rgba(232,80,10,0.3)]"
+								: "border-border text-djanni-gray hover:border-djanni-gray hover:text-foreground",
 						)}
 					>
-						{t(`tier.options.${opt}` as Parameters<typeof t>[0])}
+						<span className="relative z-10">
+							{t(`tier.options.${opt}` as Parameters<typeof t>[0])}
+						</span>
 					</button>
 				)
 			})}
@@ -266,6 +269,7 @@ export function ProjectRequestForm() {
 		existingUrl: "",
 		budget: "",
 		deadline: "",
+		tier: "",
 		name: "",
 		email: "",
 		phone: "",
@@ -492,10 +496,12 @@ export function ProjectRequestForm() {
 															key={opt.value}
 															type="button"
 															onClick={() => {
+																const isFixed = FIXED_TIER_TYPES.has(opt.value)
 																setFormData((prev) => ({
 																	...prev,
 																	projectType: opt.value,
-																	addons: FIXED_TIER_TYPES.has(opt.value) ? [] : prev.addons,
+																	addons: isFixed ? [] : prev.addons,
+																	tier: isFixed ? prev.tier : "",
 																}))
 																if (errors.projectType) {
 																	setErrors((prev) => ({
@@ -596,32 +602,31 @@ export function ProjectRequestForm() {
 											{t("step1Title")}
 										</h3>
 										{FIXED_TIER_TYPES.has(formData.projectType) ? (
-											<>
-												<div className="mb-6 rounded-lg border border-djanni-orange/30 bg-djanni-orange/10 p-4 text-sm leading-relaxed text-djanni-gray-light">
+											<div>
+												<span className="mb-1 block text-xs font-medium text-djanni-gray">
+													{t("tier.label")}
+												</span>
+												<span className="mb-3 block text-xs text-djanni-gray-light">
 													{t("tier.helpText")}
-												</div>
-												<div>
-													<span className="mb-3 block text-sm font-medium text-foreground">
-														{t("tier.label")}
-													</span>
-													<TierPicker
-														options={
-															formData.projectType === "maintenance"
-																? TIER_OPTIONS_MAINTENANCE
-																: TIER_OPTIONS_RESEAUX
-														}
-														value={formData.budget}
-														onChange={(v) =>
-															setFormData((prev) => ({
-																...prev,
-																budget: v,
-																deadline: "",
-															}))
-														}
-														t={t}
-													/>
-												</div>
-											</>
+												</span>
+												<TierPicker
+													options={
+														formData.projectType === "maintenance"
+															? TIER_OPTIONS_MAINTENANCE
+															: TIER_OPTIONS_RESEAUX
+													}
+													value={formData.tier}
+													onChange={(v) =>
+														setFormData((prev) => ({
+															...prev,
+															tier: v,
+															budget: "",
+															deadline: "",
+														}))
+													}
+													t={t}
+												/>
+											</div>
 										) : (
 											<>
 												<div className="mb-8">
