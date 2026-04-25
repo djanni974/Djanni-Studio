@@ -3,8 +3,7 @@ import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
 
-// TODO DS-25 : ajouter la photo dans apps/website/public/images/team/gianni.webp puis affecter "/images/team/gianni.webp" ici.
-const GIANNI_PHOTO_PATH: string | null = null
+const GIANNI_PHOTO_PATH: string | null = "/gianni.webp"
 
 export function AboutGianni() {
 	const t = useTranslations("projectRequest.aboutGianni")
