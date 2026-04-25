@@ -114,7 +114,7 @@
 		"heroSubtitle": "Dibabit ar formulenn a zere d'ho raktres. Pep formulenn a endalc'h un hentenn personel eus A da Z.",
 		"guarantees": {
 			"tag": "Gouarnamantoù",
-			"title": "Petra a zo endalc'het e pep formulenn.",
+			"title": "Ma engouestlioù, ne vern peseurt stumm.",
 			"subtitle": "Pe formulenn bennag ho peus dibabet : hep koumanant, amzerioù dalc'het, ha chom a rit mestr.",
 			"items": [
 				{
@@ -175,7 +175,7 @@
 		},
 		"comparison": {
 			"tag": "Keñveriadenn",
-			"title": "Petra a zo endalc'het e pep formulenn",
+			"title": "Keñveriit ar stummoù en disterañ.",
 			"featureLabel": "Arc'hant",
 			"presenceLabel": "Prezañs",
 			"presencePrice": "990€",
@@ -244,33 +244,6 @@
 					"presence": false,
 					"vitrine": false,
 					"custom": true
-				}
-			]
-		},
-		"addons": {
-			"tag": "Diwar-choaz",
-			"title": "Dibarzhioù hegerz",
-			"subtitle": "An dibarzhioù-mañ a c'haller ouzhpennañ da fep formulenn hervez ho ezhommoù.",
-			"items": [
-				{
-					"label": "Skrivañ an testennoù",
-					"price": "+150€",
-					"desc": "Skrivañ a reomp kement tra evidoc'h diwar un eskemm eeun 30 munut."
-				},
-				{
-					"label": "Fichennad Google Business",
-					"price": "+100€",
-					"desc": "Diskouez a rit war Google Maps pa vez klasket ho micher en ho korn-bro."
-				},
-				{
-					"label": "Kendalc'hañ miziek",
-					"price": "49€/miz",
-					"desc": "Hizivadennoù, enrolladennoù, reizhadennoù. Hep engouestl, dilemel a c'heller da bep mare."
-				},
-				{
-					"label": "Pajenn ouzhpenn",
-					"price": "+150€/pajenn",
-					"desc": "Evit ar raktresoù o deus ezhomm muioc'h a blas."
 				}
 			]
 		},

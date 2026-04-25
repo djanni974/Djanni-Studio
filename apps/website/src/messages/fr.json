@@ -114,7 +114,7 @@
 		"heroSubtitle": "Choisissez l'offre qui correspond à votre projet. Chaque formule inclut un accompagnement personnalisé de A à Z.",
 		"guarantees": {
 			"tag": "Engagements",
-			"title": "Ce qui est inclus dans chaque offre.",
+			"title": "Mes engagements, peu importe l'offre.",
 			"subtitle": "Quel que soit l'offre choisie : pas d'abonnement, des délais tenus, et vous gardez le contrôle.",
 			"items": [
 				{
@@ -175,7 +175,7 @@
 		},
 		"comparison": {
 			"tag": "Comparatif",
-			"title": "Ce qui est inclus dans chaque offre",
+			"title": "Comparez les offres en détail.",
 			"featureLabel": "Fonctionnalité",
 			"presenceLabel": "Présence",
 			"presencePrice": "990€",
@@ -239,33 +239,6 @@
 					"presence": false,
 					"vitrine": false,
 					"custom": true
-				}
-			]
-		},
-		"addons": {
-			"tag": "À la carte",
-			"title": "Options disponibles",
-			"subtitle": "Ces options s'ajoutent à n'importe quelle formule selon vos besoins.",
-			"items": [
-				{
-					"label": "Rédaction des textes",
-					"price": "+150€",
-					"desc": "On écrit tout pour vous à partir d'un simple échange de 30 min."
-				},
-				{
-					"label": "Fiche Google Business",
-					"price": "+100€",
-					"desc": "Vous apparaissez sur Google Maps quand on cherche votre métier dans votre ville."
-				},
-				{
-					"label": "Maintenance mensuelle",
-					"price": "49€/mois",
-					"desc": "Mises à jour, sauvegardes, dépannage. Sans engagement, résiliable à tout moment."
-				},
-				{
-					"label": "Page supplémentaire",
-					"price": "+150€/page",
-					"desc": "Pour les projets qui ont besoin de plus d'espace."
 				}
 			]
 		},

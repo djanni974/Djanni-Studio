@@ -258,41 +258,6 @@ export function OffresContent() {
 				</div>
 			</section>
 
-			{/* Add-ons */}
-			<section className="px-5 py-24 md:px-12">
-				<div className="mx-auto max-w-[1100px]">
-					<AnimatedSection>
-						<SectionHeader
-							tag={t("addons.tag")}
-							title={t("addons.title")}
-							subtitle={t("addons.subtitle")}
-						/>
-					</AnimatedSection>
-
-					<StaggerContainer className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-						{(
-							t.raw("addons.items") as {
-								label: string
-								price: string
-								desc: string
-							}[]
-						).map((opt, i) => (
-							<StaggerItem key={i}>
-								<div className="rounded-2xl border border-border bg-surface-b p-6 transition-shadow hover:shadow-md">
-									<div className="mb-3 flex items-center justify-between gap-2">
-										<p className="font-heading font-semibold">{opt.label}</p>
-										<span className="shrink-0 rounded-full bg-djanni-orange/10 px-3 py-1 text-xs font-semibold text-djanni-orange">
-											{opt.price}
-										</span>
-									</div>
-									<p className="text-sm text-djanni-gray-light">{opt.desc}</p>
-								</div>
-							</StaggerItem>
-						))}
-					</StaggerContainer>
-				</div>
-			</section>
-
 			{/* ROI */}
 			<section className="px-5 py-24 md:px-12">
 				<div className="mx-auto max-w-[1100px] text-center">

@@ -114,7 +114,7 @@
 		"heroSubtitle": "Choose the plan that fits your project. Every plan includes personalised support from start to finish.",
 		"guarantees": {
 			"tag": "Commitments",
-			"title": "What's included in every plan.",
+			"title": "My commitments, whichever plan you pick.",
 			"subtitle": "Whichever plan you choose: no subscription, deadlines kept, and you stay in control.",
 			"items": [
 				{
@@ -175,7 +175,7 @@
 		},
 		"comparison": {
 			"tag": "Comparison",
-			"title": "What's included in each plan",
+			"title": "Compare the plans side by side.",
 			"featureLabel": "Feature",
 			"presenceLabel": "Presence",
 			"presencePrice": "€990",
@@ -239,33 +239,6 @@
 					"presence": false,
 					"vitrine": false,
 					"custom": true
-				}
-			]
-		},
-		"addons": {
-			"tag": "À la carte",
-			"title": "Available options",
-			"subtitle": "These options can be added to any plan based on your needs.",
-			"items": [
-				{
-					"label": "Content writing",
-					"price": "+€150",
-					"desc": "We write everything for you from a simple 30-minute chat."
-				},
-				{
-					"label": "Google Business listing",
-					"price": "+€100",
-					"desc": "You appear on Google Maps when someone searches for your trade in your area."
-				},
-				{
-					"label": "Monthly maintenance",
-					"price": "€49/mo",
-					"desc": "Updates, backups, fixes. No commitment, cancel anytime."
-				},
-				{
-					"label": "Additional page",
-					"price": "+€150/page",
-					"desc": "For projects that need more space."
 				}
 			]
 		},
