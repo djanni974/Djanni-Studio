@@ -38,6 +38,14 @@
 			"title": "Stumm War-bouez · adalek 1 990 € | Djanni Studio",
 			"description": "Kemer rendez-vous, blog CMS, katalog, liesyezhek. Ul lec'hienn savet resis evit ho ezhommoù. Devis personelaet goude un eskemm 30 munutenn."
 		},
+		"maintenance": {
+			"title": "Mirout lec'hienn web : 29 € da 99 €/miz | Djanni Studio",
+			"description": "Tri live mirout evit ho lec'hienn : Pennañ, Aez ha Habask. Herbergiñ, surentez, hizivadennoù. Hep engouestl, dispennadus pa garit."
+		},
+		"options": {
+			"title": "Dibarzhioù evit ho lec'hienn web | Djanni Studio",
+			"description": "An holl ddibarzhioù da binvellañ ho lec'hienn : skridaozañ, SEO lec'hel, perzhioù, ambroug. Tarifioù sed adalek 40 €."
+		},
 		"cityPages": {
 			"saintMalo": {
 				"title": "Krouiñ lec'hienn web e Sant-Maloù | Djanni Studio",
@@ -64,6 +72,8 @@
 		"cgv": "Divizegoù",
 		"mentionsLegales": "Menozoù lezennel",
 		"politiqueConfidentialite": "Reolenn prevezded",
+		"maintenance": "Mirout",
+		"options": "Dibarzhioù",
 		"citySaintMalo": "Krouiñ lec'hienn web Sant-Maloù",
 		"cityDinan": "Krouiñ lec'hienn web Dinan",
 		"cityDinard": "Krouiñ lec'hienn web Dinarzh"
@@ -346,6 +356,18 @@
 			"subtitle": "E 30 munut, reiñ a ran deoc'h un estimadenn sklaer a brizioù, un amzer resis, hag ur sell war ar pezh e c'hallfe bezañ ho lec'hienn da zont.",
 			"reassurance": "Galvadenn gentañ digoust, hep engouestl.",
 			"button": "Kregiñ gant ma raktres"
+		},
+		"maintenanceCallout": {
+			"tag": "Mirout",
+			"title": "Ha goude lakaat enlinenn ?",
+			"text": "Tri live evit derc'hel ho lec'hienn buan, surr ha hizivaet, adalek 29 €/miz. Hep engouestl, dispennadus pa garit.",
+			"cta": "Gwelet al liveoù mirout"
+		},
+		"optionsCallout": {
+			"tag": "Dibarzhioù",
+			"title": "Evit mont pelloc'h",
+			"text": "18 dibarzh a la carte : skridaozañ, SEO lec'hel, perzhioù, ambroug. Hep koumanant ret.",
+			"cta": "Gwelet an holl dibarzhioù"
 		}
 	},
 	"pricing": {
@@ -837,6 +859,8 @@
 		"privacy": "Prevezded",
 		"legal": "Menozoù lezennel",
 		"cgv": "DG",
+		"maintenance": "Mirout",
+		"options": "Dibarzhioù",
 		"sitemap": "Kartenn al lec'hienn",
 		"paymentTransfer": "Treuzkas",
 		"paymentCard": "Kartenn bankañ",
@@ -1222,6 +1246,87 @@
 			"tag": "Takadoù labour",
 			"title": "Labourat a ran ivez er c'hêrioù-mañ",
 			"viewPage": "Krouiñ lec'hienn web {city}"
+		}
+	},
+	"legal": {
+		"vatNotice": "Tarifioù DTA, TVA na red ket, mell. 293B CGI."
+	},
+	"maintenance": {
+		"tag": "Mirout",
+		"title": "Mirout",
+		"subtitle": "Tri live evit derc'hel ho lec'hienn buan, surr ha hizivaet. Hep engouestl, dispennadus pa garit.",
+		"perMonth": "/ miz",
+		"recommendedBadge": "Erbedet",
+		"ctaSelect": "Dibab {tier}",
+		"ctaContact": "Komz eus ho raktres",
+		"disclaimerCgv": "Divizegoù munut roet pa goumananter.",
+		"tiers": {
+			"essentiel": {
+				"name": "Pennañ",
+				"tagline": "An traoù ret evit chom enlinenn habask.",
+				"features": ["Herbergiñ", "SSL", "Skoazell postel e-barzh 48 h"]
+			},
+			"confort": {
+				"name": "Aez",
+				"tagline": "Al live dibabet ar muiañ gant an artizaned.",
+				"features": [
+					"Pep tra Pennañ enroll",
+					"1 h/miz a c'hemmoù",
+					"Sauveteg miziek"
+				]
+			},
+			"serenite": {
+				"name": "Habask",
+				"tagline": "Mirout klok, hep netra da verañ.",
+				"features": [
+					"Pep tra Aez enroll",
+					"3 h/miz a c'hemmoù",
+					"Adsavadur bep bloaz",
+					"WhatsApp prioritarezh"
+				]
+			}
+		}
+	},
+	"options": {
+		"tag": "Dibarzhioù",
+		"title": "Dibarzhioù",
+		"subtitle": "Pep tra a c'hallit ouzhpennañ d'ho lec'hienn, a la carte. Hep koumanant ret, nemet evit an dibarzhioù aliesadek (Instagram, Instagram + Facebook).",
+		"ctaContact": "Komz eus ho raktres",
+		"columns": {
+			"option": "Dibarzh",
+			"price": "Priz DTA"
+		},
+		"units": {
+			"unique": "",
+			"mensuel": " / miz",
+			"par_unite": " / unanenn"
+		},
+		"categories": {
+			"contenus": "Endalc'h ha skridaozañ",
+			"visuel": "Gweladur ha mediaoù",
+			"seo": "SEO ha gweladenn",
+			"fonctionnalites": "Perzhioù",
+			"accompagnement": "Ambroug"
+		},
+		"items": {
+			"redaction-textes": "Skridaozañ testennoù lec'hienn klok",
+			"article-blog": "Pennad blog SEO 800 ger gant SEO on-page",
+			"pack-3-articles": "Pakad 3 fennad blog",
+			"galerie-cms": "Modul oriadeg luc'hskeudennoù gant CMS aes pellgargañ pellgomzer",
+			"photos-stock": "Pakad luc'hskeudennoù stock 10 luc'hskeudenn optimised",
+			"feed-instagram": "Enkorfadur feed Instagram",
+			"retouche-photo": "Adskeudennañ luc'hskeudenn kustumer",
+			"gbp-config": "Kefluniañ Google Business Profile",
+			"seo-local-etendu": "Pakad SEO lec'hel astennet GBP gant 3 lec'hienn-meneg ha cocon",
+			"page-seo-ville": "Pajenn SEO kêr ouzhpenn",
+			"page-supplementaire": "Pajenn ouzhpenn",
+			"formulaire-devis": "Furmskrid devis araokaet gant maeziennoù divizadek",
+			"rdv-fresha-planity": "Enkorfadur kemer rendez-vous Fresha pe Planity",
+			"newsletter": "Modul newsletter gant furmskrid Brevo pe Mailchimp",
+			"multilingue": "Liesyezhek FR ha SX gant troidigezh ha hreflang",
+			"formation-1h": "Stummadur kustumer 1 h dre webgomz pe e-leur dindan 15 km",
+			"gestion-instagram": "Merañ Instagram miziek 8 post ha 4 stori",
+			"gestion-instagram-facebook": "Merañ Instagram ha Facebook gant cross-posting"
 		}
 	}
 }

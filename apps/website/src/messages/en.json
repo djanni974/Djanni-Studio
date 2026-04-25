@@ -38,6 +38,14 @@
 			"title": "Custom Plan · from 1 990 € | Djanni Studio",
 			"description": "Online booking, CMS blog, catalogue, multilingual. A site built exactly for your needs. Custom quote after a 30-minute call."
 		},
+		"maintenance": {
+			"title": "Website Maintenance: €29 to €99/month | Djanni Studio",
+			"description": "Three maintenance tiers for your website: Essential, Comfort and Serenity. Hosting, security, updates. No commitment, cancel anytime."
+		},
+		"options": {
+			"title": "Add-ons for your website | Djanni Studio",
+			"description": "All available add-ons to enhance your site: copywriting, local SEO, features, support. Fixed prices starting at €40."
+		},
 		"cityPages": {
 			"saintMalo": {
 				"title": "Website creation in Saint-Malo | Djanni Studio",
@@ -64,6 +72,8 @@
 		"cgv": "Terms",
 		"mentionsLegales": "Legal Notice",
 		"politiqueConfidentialite": "Privacy Policy",
+		"maintenance": "Maintenance",
+		"options": "Add-ons",
 		"citySaintMalo": "Web design Saint-Malo",
 		"cityDinan": "Web design Dinan",
 		"cityDinard": "Web design Dinard"
@@ -341,6 +351,18 @@
 			"subtitle": "In 30 minutes, I give you a clear price estimate, a precise timeline, and a preview of what your future site could look like.",
 			"reassurance": "First call free, no commitment.",
 			"button": "Start my project"
+		},
+		"maintenanceCallout": {
+			"tag": "Maintenance",
+			"title": "And after launch?",
+			"text": "Three tiers to keep your site fast, secure and up to date, starting at €29/month. No commitment, cancel anytime.",
+			"cta": "View maintenance tiers"
+		},
+		"optionsCallout": {
+			"tag": "Add-ons",
+			"title": "Want to go further?",
+			"text": "18 a la carte add-ons: copywriting, local SEO, features, support. No mandatory subscription.",
+			"cta": "View all add-ons"
 		}
 	},
 	"pricing": {
@@ -832,6 +854,8 @@
 		"privacy": "Privacy policy",
 		"legal": "Legal notice",
 		"cgv": "Terms",
+		"maintenance": "Maintenance",
+		"options": "Add-ons",
 		"sitemap": "Sitemap",
 		"paymentTransfer": "Bank transfer",
 		"paymentCard": "Credit card",
@@ -1217,6 +1241,87 @@
 			"tag": "Service areas",
 			"title": "I also work in these towns",
 			"viewPage": "Website creation {city}"
+		}
+	},
+	"legal": {
+		"vatNotice": "Prices excl. VAT, VAT not applicable, art. 293B French Tax Code."
+	},
+	"maintenance": {
+		"tag": "Maintenance",
+		"title": "Maintenance",
+		"subtitle": "Three tiers to keep your site fast, secure and up to date. No commitment, cancel anytime.",
+		"perMonth": "/ month",
+		"recommendedBadge": "Recommended",
+		"ctaSelect": "Choose {tier}",
+		"ctaContact": "Discuss your project",
+		"disclaimerCgv": "Detailed terms provided at subscription.",
+		"tiers": {
+			"essentiel": {
+				"name": "Essential",
+				"tagline": "The basics to stay online with peace of mind.",
+				"features": ["Hosting", "SSL", "Email support within 48 h"]
+			},
+			"confort": {
+				"name": "Comfort",
+				"tagline": "The tier most chosen by craftspeople.",
+				"features": [
+					"Everything in Essential",
+					"1 h/month of edits",
+					"Monthly backup"
+				]
+			},
+			"serenite": {
+				"name": "Serenity",
+				"tagline": "Full maintenance, hands off.",
+				"features": [
+					"Everything in Comfort",
+					"3 h/month of edits",
+					"Annual refresh",
+					"Priority WhatsApp"
+				]
+			}
+		}
+	},
+	"options": {
+		"tag": "Add-ons",
+		"title": "Add-ons",
+		"subtitle": "Everything you can add to your site, a la carte. No mandatory subscription, except recurring options (Instagram, Instagram + Facebook).",
+		"ctaContact": "Discuss your project",
+		"columns": {
+			"option": "Add-on",
+			"price": "Price excl. VAT"
+		},
+		"units": {
+			"unique": "",
+			"mensuel": " / month",
+			"par_unite": " / unit"
+		},
+		"categories": {
+			"contenus": "Content and copywriting",
+			"visuel": "Visuals and media",
+			"seo": "SEO and visibility",
+			"fonctionnalites": "Features",
+			"accompagnement": "Support"
+		},
+		"items": {
+			"redaction-textes": "Full website copywriting",
+			"article-blog": "SEO blog post 800 words with on-page SEO",
+			"pack-3-articles": "Pack of 3 blog posts",
+			"galerie-cms": "Photo gallery module with light CMS, mobile upload",
+			"photos-stock": "Premium stock photo pack, 10 optimised photos",
+			"feed-instagram": "Instagram feed integration",
+			"retouche-photo": "Client photo retouching",
+			"gbp-config": "Google Business Profile setup",
+			"seo-local-etendu": "Extended local SEO pack: GBP plus 3 directories plus topic cluster",
+			"page-seo-ville": "Additional city SEO page",
+			"page-supplementaire": "Additional page",
+			"formulaire-devis": "Advanced quote form with conditional fields",
+			"rdv-fresha-planity": "Booking integration with Fresha or Planity",
+			"newsletter": "Newsletter module with Brevo or Mailchimp form",
+			"multilingue": "Multilingual FR plus EN with translation and hreflang",
+			"formation-1h": "Client training 1 h, video call or on-site within 15 km",
+			"gestion-instagram": "Monthly Instagram management, 8 posts plus 4 stories",
+			"gestion-instagram-facebook": "Instagram and Facebook management with cross-posting"
 		}
 	}
 }
