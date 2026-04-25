@@ -270,7 +270,7 @@ export default async function CGV({ params }: { params: Promise<{ locale: string
 			<h1 className="font-heading text-[clamp(28px,4vw,40px)] font-extrabold leading-tight tracking-tight">
 				Conditions Générales de Vente
 			</h1>
-			<p className="mt-3 text-sm text-djanni-gray-light">Dernière mise à jour : mars 2026</p>
+			<p className="mt-3 text-sm text-djanni-gray-light">Dernière mise à jour : avril 2026</p>
 
 			<div className="mt-12 space-y-10">
 				{sections.map((section) => (
