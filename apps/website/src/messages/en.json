@@ -1255,6 +1255,10 @@
 		"recommendedBadge": "Recommended",
 		"ctaSelect": "Choose {tier}",
 		"ctaContact": "Discuss your project",
+		"ctaTag": "Ready?",
+		"ctaTitle": "Let's pick the right tier together.",
+		"ctaSubtitle": "Not sure which tier fits you? Let's spend 30 minutes on it, I'll guide you with no pressure.",
+		"ctaReassurance": "First call free, no commitment.",
 		"disclaimerCgv": "Detailed terms provided at subscription.",
 		"reassurancesTag": "Commitments",
 		"reassurancesTitle": "What you get in every tier",
@@ -1303,6 +1307,10 @@
 		"statCategories": "categories",
 		"statFromPrice": "from €{price}",
 		"ctaContact": "Discuss your project",
+		"ctaTag": "Got something in mind?",
+		"ctaTitle": "Tell me what you want to add.",
+		"ctaSubtitle": "Combine the add-ons you like, I'll bundle it into a clear quote within 24 hours.",
+		"ctaReassurance": "First call free, no commitment.",
 		"columns": {
 			"option": "Add-on",
 			"price": "Price excl. VAT"

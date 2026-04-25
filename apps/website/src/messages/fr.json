@@ -1258,6 +1258,10 @@
 		"recommendedBadge": "Recommandé",
 		"ctaSelect": "Choisir {tier}",
 		"ctaContact": "Discuter de votre projet",
+		"ctaTag": "Prêt ?",
+		"ctaTitle": "Choisissons ensemble le bon palier.",
+		"ctaSubtitle": "Pas sûr de l'offre qui vous correspond ? On en parle 30 minutes, je vous oriente sans pression.",
+		"ctaReassurance": "Premier appel gratuit, sans engagement.",
 		"disclaimerCgv": "Conditions détaillées communiquées à la souscription.",
 		"reassurancesTag": "Engagements",
 		"reassurancesTitle": "Ce que vous avez dans tous les paliers",
@@ -1306,6 +1310,10 @@
 		"statCategories": "catégories",
 		"statFromPrice": "à partir de {price} €",
 		"ctaContact": "Discuter de votre projet",
+		"ctaTag": "Une idée en tête ?",
+		"ctaTitle": "Dites-moi ce que vous voulez ajouter.",
+		"ctaSubtitle": "Combinez les options qui vous parlent, je chiffre tout dans un devis clair sous 24 h.",
+		"ctaReassurance": "Premier appel gratuit, sans engagement.",
 		"columns": {
 			"option": "Option",
 			"price": "Prix HT"

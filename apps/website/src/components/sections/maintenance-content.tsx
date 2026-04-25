@@ -100,22 +100,32 @@ export function MaintenanceContent() {
 			</section>
 
 			{/* CTA */}
-			<section className="relative overflow-hidden px-5 py-24 text-center md:px-12">
+			<section className="relative overflow-hidden px-5 py-28 text-center md:px-12">
 				<div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.1)_0%,transparent_70%)]" />
 
 				<AnimatedSection className="relative">
-					<Link
-						href="/demande-projet"
-						onClick={() => trackPlausibleEvent("clic_cta_contact", { page: "maintenance" })}
-						className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-djanni-orange px-9 py-4.5 text-base font-medium text-white shadow-[0_0_0_rgba(232,80,10,0)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-djanni-orange-light hover:shadow-[0_8px_30px_rgba(232,80,10,0.35)]"
-					>
-						<span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-[-20deg] bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
-						<span className="relative">{t("ctaContact")}</span>
-						<IconArrowRight
-							size={18}
-							className="relative transition-transform duration-300 group-hover:translate-x-1"
-						/>
-					</Link>
+					<SectionHeader
+						tag={t("ctaTag")}
+						title={t("ctaTitle")}
+						subtitle={t("ctaSubtitle")}
+						align="center"
+					/>
+
+					<div className="mt-10 flex flex-col items-center gap-4">
+						<p className="text-sm text-djanni-gray-light">{t("ctaReassurance")}</p>
+						<Link
+							href="/demande-projet"
+							onClick={() => trackPlausibleEvent("clic_cta_contact", { page: "maintenance" })}
+							className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-djanni-orange px-9 py-4.5 text-base font-medium text-white shadow-[0_0_0_rgba(232,80,10,0)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-djanni-orange-light hover:shadow-[0_8px_30px_rgba(232,80,10,0.35)]"
+						>
+							<span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-[-20deg] bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
+							<span className="relative">{t("ctaContact")}</span>
+							<IconArrowRight
+								size={18}
+								className="relative transition-transform duration-300 group-hover:translate-x-1"
+							/>
+						</Link>
+					</div>
 				</AnimatedSection>
 			</section>
 		</>
