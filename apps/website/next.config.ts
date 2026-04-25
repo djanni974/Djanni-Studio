@@ -8,11 +8,12 @@ const isDev = process.env.NODE_ENV === "development"
 
 const csp = [
 	"default-src 'self'",
-	`script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
+	`script-src 'self' 'unsafe-inline' https://app.cal.com${isDev ? " 'unsafe-eval'" : ""}`,
 	"style-src 'self' 'unsafe-inline'",
 	"img-src 'self' data: https:",
 	"font-src 'self' data:",
-	"connect-src 'self'",
+	"connect-src 'self' https://app.cal.com https://cal.com",
+	"frame-src 'self' https://app.cal.com https://cal.com",
 	"manifest-src 'self'",
 	"worker-src 'self' blob:",
 	"frame-ancestors 'none'",
