@@ -1,0 +1,42 @@
+export const siteJsonLd = {
+	"@context": "https://schema.org",
+	"@type": "ProfessionalService",
+	name: "Djanni Studio",
+	description: "Création de sites web sur mesure pour artisans et commerçants en Bretagne",
+	url: "https://www.djannistudio.fr",
+	email: "contact@djannistudio.fr",
+	telephone: "+33749547498",
+	image: "https://www.djannistudio.fr/og-image.png",
+	address: {
+		"@type": "PostalAddress",
+		streetAddress: "4 boulevard Jules Verger",
+		addressLocality: "Dinard",
+		postalCode: "35800",
+		addressRegion: "Bretagne",
+		addressCountry: "FR",
+	},
+	geo: {
+		"@type": "GeoCoordinates",
+		latitude: 48.6328,
+		longitude: -2.0688,
+	},
+	priceRange: "990€ - 1990€+",
+	areaServed: [
+		{ "@type": "City", name: "Dinard" },
+		{ "@type": "City", name: "Saint-Malo" },
+		{ "@type": "City", name: "Dinan" },
+		{ "@type": "City", name: "Cancale" },
+	],
+	serviceType: [
+		"Création de sites web",
+		"Refonte de sites internet",
+		"Optimisation SEO",
+		"Développement web",
+	],
+	knowsLanguage: ["fr", "en", "br"],
+	founder: {
+		"@type": "Person",
+		name: "Gianni",
+		jobTitle: "Développeur web",
+	},
+}
