@@ -3,7 +3,7 @@ import { Redis } from "@upstash/redis"
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 
-// ─── Rate limiter (Upstash Redis — works in serverless) ─────
+// ─── Rate limiter (Upstash Redis - works in serverless) ─────
 // Fallback to in-memory if Upstash is not configured
 const hasUpstash = process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
 
@@ -125,7 +125,7 @@ function validate(data: unknown): data is ContactPayload {
 	if (!data || typeof data !== "object") return false
 	const d = data as Record<string, unknown>
 
-	// Required fields — presence check
+	// Required fields - presence check
 	if (
 		typeof d.name !== "string" ||
 		d.name.trim().length === 0 ||
@@ -168,17 +168,17 @@ function validate(data: unknown): data is ContactPayload {
 	)
 		return false
 
-	// Phone format (optional) — digits, spaces, +, -, (, ) only
+	// Phone format (optional) - digits, spaces, +, -, (, ) only
 	if (typeof d.phone === "string" && d.phone.length > 0) {
 		if (!/^[0-9\s+\-().]+$/.test(d.phone)) return false
 	}
 
-	// existingUrl format (optional) — must be http(s) if provided
+	// existingUrl format (optional) - must be http(s) if provided
 	if (typeof d.existingUrl === "string" && d.existingUrl.length > 0) {
 		if (!/^https?:\/\/.+/i.test(d.existingUrl)) return false
 	}
 
-	// addons (optional) — must be a small array of whitelisted strings
+	// addons (optional) - must be a small array of whitelisted strings
 	if (d.addons !== undefined) {
 		if (!Array.isArray(d.addons)) return false
 		if (d.addons.length > 5) return false
@@ -187,7 +187,7 @@ function validate(data: unknown): data is ContactPayload {
 		}
 	}
 
-	// addonTiers (optional) — small record { addon: tier }, both whitelisted
+	// addonTiers (optional) - small record { addon: tier }, both whitelisted
 	if (d.addonTiers !== undefined) {
 		if (typeof d.addonTiers !== "object" || d.addonTiers === null || Array.isArray(d.addonTiers))
 			return false
@@ -294,7 +294,7 @@ function buildEmailHtml(data: ContactPayload): string {
     <!-- Footer -->
     <div style="padding:24px 0;text-align:center">
       <p style="margin:0;color:#78756c;font-size:11px;font-weight:400;letter-spacing:0.02em">
-        Envoyé depuis le formulaire de demande de projet — djannistudio.fr
+        Envoyé depuis le formulaire de demande de projet - djannistudio.fr
       </p>
     </div>
 
@@ -384,7 +384,7 @@ function buildConfirmationHtml(data: ContactPayload): string {
 
     <!-- Footer -->
     <div style="padding:24px 0;text-align:center">
-      <p style="margin:0 0 8px;color:#55524a;font-size:13px;font-weight:400">Gianni — Djanni Studio</p>
+      <p style="margin:0 0 8px;color:#55524a;font-size:13px;font-weight:400">Gianni - Djanni Studio</p>
       <p style="margin:0 0 6px;color:#78756c;font-size:11px;font-weight:400;letter-spacing:0.02em">
         <a href="tel:+33749547498" style="color:#78756c;text-decoration:none">07 49 54 74 98</a> · djannistudio.fr
       </p>
@@ -470,13 +470,13 @@ export async function POST(request: Request) {
 				from: "Djanni Studio <noreply@djannistudio.fr>",
 				to: [RECIPIENT],
 				replyTo: body.email,
-				subject: `Nouvelle demande — ${body.businessName || body.name} (${projectLabel})`,
+				subject: `Nouvelle demande - ${body.businessName || body.name} (${projectLabel})`,
 				html: buildEmailHtml(body),
 			}),
 			resend.emails.send({
 				from: "Djanni Studio <noreply@djannistudio.fr>",
 				to: [body.email],
-				subject: "Votre demande a bien été reçue — Djanni Studio",
+				subject: "Votre demande a bien été reçue - Djanni Studio",
 				html: buildConfirmationHtml(body),
 			}),
 		])

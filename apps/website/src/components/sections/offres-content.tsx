@@ -238,7 +238,7 @@ export function OffresContent() {
 																className={`mx-auto ${col === "vitrine" ? "text-djanni-orange" : "text-green-600"}`}
 															/>
 														) : val === false ? (
-															<span className="text-sm text-foreground/20">—</span>
+															<span className="text-sm text-foreground/20">-</span>
 														) : (
 															<span
 																className={`text-xs ${col === "vitrine" ? "font-medium text-djanni-orange/80" : "text-djanni-gray-light"}`}

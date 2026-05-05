@@ -25,16 +25,16 @@ export function Hero() {
 				}}
 			/>
 
-			{/* Primary glow — top right */}
+			{/* Primary glow - top right */}
 			<div className="pointer-events-none absolute -top-[15%] -right-[10%] h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.14)_0%,transparent_65%)] blur-2xl" />
 
-			{/* Secondary glow — bottom left */}
+			{/* Secondary glow - bottom left */}
 			<div className="pointer-events-none absolute -bottom-[10%] -left-[5%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle,rgba(232,80,10,0.06)_0%,transparent_70%)] blur-2xl" />
 
 			{/* Diagonal accent line */}
 			<div className="pointer-events-none absolute top-0 right-[20%] h-full w-px bg-linear-to-b from-transparent via-djanni-orange/[0.07] to-transparent" />
 
-			{/* Orbital rings — desktop only */}
+			{/* Orbital rings - desktop only */}
 			<div className="pointer-events-none absolute top-1/2 right-[10%] hidden h-[520px] w-[520px] -translate-y-[55%] animate-hero-orbits lg:block">
 				{/* Core glow */}
 				<div className="absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-djanni-orange/25 blur-3xl" />

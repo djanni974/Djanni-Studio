@@ -23,15 +23,15 @@ export async function generateMetadata({
 	if (!post) return {}
 
 	return {
-		title: `${post.title} — Blog Djanni Studio`,
+		title: `${post.title} - Blog Djanni Studio`,
 		description: post.excerpt,
 		alternates: getAlternates(`/blog/${slug}`),
 		openGraph: {
-			title: `${post.title} — Blog Djanni Studio`,
+			title: `${post.title} - Blog Djanni Studio`,
 			description: post.excerpt,
 			type: "article",
 			publishedTime: post.publishedAt,
-			authors: ["Gianni — Djanni Studio"],
+			authors: ["Gianni - Djanni Studio"],
 			images: [
 				{
 					url: "/og-image.png",

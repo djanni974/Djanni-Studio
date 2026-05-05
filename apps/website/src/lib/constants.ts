@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
 	{
 		name: "Troc 35",
 		slug: "troc-35",
-		type: "Concept — Dépôt-vente",
+		type: "Concept - Dépôt-vente",
 		accentColor: "#00b1c9",
 		logoText: "TR",
 		image: "/projects/troc-35.webp",
@@ -125,7 +125,7 @@ export const PROJECTS: Project[] = [
 	{
 		name: "L'Entre Deux",
 		slug: "entre-deux",
-		type: "Concept — Restaurant & bistro",
+		type: "Concept - Restaurant & bistro",
 		accentColor: "#c4956a",
 		logoText: "ED",
 		image: "/projects/entre-deux.webp",
@@ -143,7 +143,7 @@ export const PROJECTS: Project[] = [
 		year: "2026",
 		url: "https://entre-deux.vercel.app",
 		context:
-			"L'Entre-Deux est un bistro burger café à Dinard, tenu par un jeune couple passionné. 5 étoiles sur Google, 61 avis — une réputation solide qui mérite un site à la hauteur.",
+			"L'Entre-Deux est un bistro burger café à Dinard, tenu par un jeune couple passionné. 5 étoiles sur Google, 61 avis - une réputation solide qui mérite un site à la hauteur.",
 		problem:
 			"Pas de présence web propre. Les clients passent par des plateformes tierces pour trouver les horaires ou réserver, ce qui dilue l'image et coûte des commissions inutiles.",
 		solution:
@@ -159,7 +159,7 @@ export const PROJECTS: Project[] = [
 	{
 		name: "L'Artisane",
 		slug: "artisane-dinard",
-		type: "Concept — Salon de coiffure",
+		type: "Concept - Salon de coiffure",
 		accentColor: "#8B7D56",
 		logoText: "LA",
 		image: "/projects/artisane-dinard.webp",
@@ -337,7 +337,7 @@ Vous voulez savoir où se situe votre site aujourd'hui, et quelles sont les 2 ou
 		slug: "site-lent-10-secondes",
 		title: "Ce que vos clients vivent quand votre site met 10 secondes à charger",
 		excerpt:
-			"53% des visiteurs quittent un site qui met plus de 3 secondes à charger. Voici ce qui se passe vraiment dans la tête de vos clients pendant ces 10 secondes — et ce que ça coûte à votre commerce.",
+			"53% des visiteurs quittent un site qui met plus de 3 secondes à charger. Voici ce qui se passe vraiment dans la tête de vos clients pendant ces 10 secondes - et ce que ça coûte à votre commerce.",
 		category: "Performance web",
 		publishedAt: "2026-03-26",
 		readingTime: 4,
@@ -345,7 +345,7 @@ Vous voulez savoir où se situe votre site aujourd'hui, et quelles sont les 2 ou
 
 Le problème, c'est que la lenteur d'un site est invisible pour celui qui le possède. Vous, vous le trouvez "correct". Vos clients, eux, sont déjà partis chez un concurrent.
 
-Dans cet article, on vous montre **ce que vos visiteurs vivent réellement** quand votre site met du temps à s'afficher — et ce que ça coûte concrètement à votre activité.
+Dans cet article, on vous montre **ce que vos visiteurs vivent réellement** quand votre site met du temps à s'afficher - et ce que ça coûte concrètement à votre activité.
 
 ## La réalité en chiffres
 
@@ -354,7 +354,7 @@ Dans cet article, on vous montre **ce que vos visiteurs vivent réellement** qua
 des visiteurs mobiles quittent un site qui met plus de 3 secondes à charger (source : Google).
 :::
 
-Ce n'est pas une estimation — c'est mesuré par Google sur des millions de sites. Et ça va plus loin : chaque seconde de chargement en plus, c'est **7% de conversions en moins**. Autrement dit, un site à 10 secondes ne convertit quasiment personne.
+Ce n'est pas une estimation - c'est mesuré par Google sur des millions de sites. Et ça va plus loin : chaque seconde de chargement en plus, c'est **7% de conversions en moins**. Autrement dit, un site à 10 secondes ne convertit quasiment personne.
 
 :::stat
 10 secondes
@@ -365,20 +365,20 @@ C'est la durée maximale d'attention d'un utilisateur web selon Nielsen Norman G
 
 Voici ce que traverse réellement votre client, seconde par seconde.
 
-**0 à 1 seconde — L'attente normale.** Il est patient. Son téléphone est peut-être en 4G un peu faible. Il attend, confiant.
+**0 à 1 seconde - L'attente normale.** Il est patient. Son téléphone est peut-être en 4G un peu faible. Il attend, confiant.
 
-**1 à 3 secondes — Le doute s'installe.** La page est encore blanche. Il se demande si le lien fonctionne. Il regarde la barre de chargement du navigateur.
+**1 à 3 secondes - Le doute s'installe.** La page est encore blanche. Il se demande si le lien fonctionne. Il regarde la barre de chargement du navigateur.
 
-**3 à 5 secondes — L'impatience.** Il commence à taper avec son pouce. Il relit le titre de l'onglet. Il envisage de rafraîchir la page.
+**3 à 5 secondes - L'impatience.** Il commence à taper avec son pouce. Il relit le titre de l'onglet. Il envisage de rafraîchir la page.
 
-**5 à 7 secondes — La question qui tue.** "Ce commerce est-il encore actif ?" Inconsciemment, un site lent = un commerce négligé. C'est injuste, mais c'est humain.
+**5 à 7 secondes - La question qui tue.** "Ce commerce est-il encore actif ?" Inconsciemment, un site lent = un commerce négligé. C'est injuste, mais c'est humain.
 
-**7 à 10 secondes — La décision.** Il appuie sur le bouton retour. Il retourne sur Google. Il clique sur le site de votre concurrent.
+**7 à 10 secondes - La décision.** Il appuie sur le bouton retour. Il retourne sur Google. Il clique sur le site de votre concurrent.
 
-**Au-delà de 10 secondes — Vous n'existez plus.** Il ne reviendra probablement jamais.
+**Au-delà de 10 secondes - Vous n'existez plus.** Il ne reviendra probablement jamais.
 
 :::example
-Prenons l'exemple d'un coiffeur à Dinan avec un site WordPress qui met 8 secondes à charger sur mobile. Un taux de rebond de 78% signifie que 3 visiteurs sur 4 repartent sans rien voir. Après refonte sur un site rapide, ce taux peut descendre à 35% — et les prises de rendez-vous en ligne doubler.
+Prenons l'exemple d'un coiffeur à Dinan avec un site WordPress qui met 8 secondes à charger sur mobile. Un taux de rebond de 78% signifie que 3 visiteurs sur 4 repartent sans rien voir. Après refonte sur un site rapide, ce taux peut descendre à 35% - et les prises de rendez-vous en ligne doubler.
 :::
 
 ## Le problème, c'est que vous ne le voyez jamais
@@ -391,13 +391,13 @@ Quand un visiteur quitte votre site en 4 secondes, vous n'en savez rien. Pas de 
 
 La plupart du temps, ce n'est pas une fatalité. Un site lent, c'est souvent :
 
-- Des **images trop lourdes** — une photo de 4 Mo qu'on aurait pu compresser à 80 ko
+- Des **images trop lourdes** - une photo de 4 Mo qu'on aurait pu compresser à 80 ko
 - Un **thème WordPress chargé de plugins** inutiles qui s'exécutent à chaque visite
 - Un **hébergement bas de gamme** partagé avec 500 autres sites
 - Du **JavaScript excessif** qui bloque l'affichage avant même que la page soit visible
 
 :::example
-Imaginons un boulanger à Saint-Brieuc avec 12 plugins WordPress actifs sur son site. Temps de chargement : 9 secondes. En passant sur un site sur mesure sans plugins inutiles, le temps descend à 1,1 seconde — sans rien perdre en fonctionnalités.
+Imaginons un boulanger à Saint-Brieuc avec 12 plugins WordPress actifs sur son site. Temps de chargement : 9 secondes. En passant sur un site sur mesure sans plugins inutiles, le temps descend à 1,1 seconde - sans rien perdre en fonctionnalités.
 :::
 
 ## Ce qu'on fait différemment chez Djanni Studio
@@ -406,9 +406,9 @@ Chez Djanni Studio, la performance n'est pas un bonus, c'est le minimum. Chaque 
 
 :::brief
 - **Next.js** génère des pages statiques ultra-rapides, sans calcul côté serveur à chaque visite
-- **Images compressées et chargées progressivement** — votre visiteur voit quelque chose immédiatement
-- **Zéro plugin inutile** — chaque fonctionnalité est développée proprement
-- **Hébergement Vercel** — vos pages sont servies depuis le datacenter le plus proche de votre visiteur
+- **Images compressées et chargées progressivement** - votre visiteur voit quelque chose immédiatement
+- **Zéro plugin inutile** - chaque fonctionnalité est développée proprement
+- **Hébergement Vercel** - vos pages sont servies depuis le datacenter le plus proche de votre visiteur
 :::
 
 :::stat
@@ -421,9 +421,9 @@ Le temps de chargement moyen des sites livrés par Djanni Studio sur mobile.
 Vous pouvez vérifier les performances de votre site gratuitement en quelques secondes. Rendez-vous sur **PageSpeed Insights** de Google (pagespeed.web.dev), entrez l'adresse de votre site, et regardez le score mobile.
 
 :::brief
-- **90-100** : Excellent — votre site est rapide
+- **90-100** : Excellent - votre site est rapide
 - **50-89** : Des améliorations sont possibles
-- **0-49** : Urgent — vous perdez des clients chaque jour
+- **0-49** : Urgent - vous perdez des clients chaque jour
 :::
 
 ---
@@ -458,7 +458,7 @@ Un site lent, ce n'est pas juste un détail technique agaçant. C'est une vitrin
 
 Le problème, c'est que beaucoup d'artisans pensent encore qu'une page Facebook ou le bouche-à-oreille suffisent. Ce n'est plus le cas depuis longtemps.
 
-Dans cet article, vous allez découvrir **5 raisons concrètes** pour lesquelles un site web est devenu indispensable pour un artisan ou commerçant — et pourquoi c'est plus accessible que vous ne le pensez.
+Dans cet article, vous allez découvrir **5 raisons concrètes** pour lesquelles un site web est devenu indispensable pour un artisan ou commerçant - et pourquoi c'est plus accessible que vous ne le pensez.
 
 ## 1. Vos clients vous cherchent sur Google
 
@@ -470,7 +470,7 @@ des consommateurs recherchent un artisan ou commerce local sur internet avant de
 Un simple profil sur les Pages Jaunes ou une page Facebook ne suffit plus. Google favorise les **sites web dédiés** dans ses résultats de recherche locale. Sans site, vous laissez ces clients à vos concurrents qui en ont un.
 
 :::example
-Prenons l'exemple d'un plombier à Rennes qui reçoit **3 à 5 appels par semaine** uniquement via son site web — des clients qui ne l'auraient jamais trouvé autrement.
+Prenons l'exemple d'un plombier à Rennes qui reçoit **3 à 5 appels par semaine** uniquement via son site web - des clients qui ne l'auraient jamais trouvé autrement.
 :::
 
 ## 2. Un site web vous rend crédible
@@ -499,7 +499,7 @@ Les clients peuvent consulter vos services, voir vos réalisations et vous conta
 
 Un site bien optimisé pour le **SEO local** vous positionne dans les premiers résultats quand quelqu'un cherche "artisan + votre ville". C'est le canal d'acquisition le plus rentable sur le long terme.
 
-Pas besoin de payer de la pub en continu — un bon référencement naturel vous apporte des clients gratuitement, mois après mois.
+Pas besoin de payer de la pub en continu - un bon référencement naturel vous apporte des clients gratuitement, mois après mois.
 
 :::stat
 Top 3 Google
@@ -508,7 +508,7 @@ Un artisan en première page de Google pour sa ville reçoit en moyenne 5 à 10 
 
 ## 5. C'est plus abordable que vous ne le pensez
 
-Un site vitrine professionnel coûte entre **990€ et 2 000€** — c'est un investissement unique qui se rentabilise dès le premier client acquis grâce à votre présence en ligne.
+Un site vitrine professionnel coûte entre **990€ et 2 000€** - c'est un investissement unique qui se rentabilise dès le premier client acquis grâce à votre présence en ligne.
 
 Comparez ça au coût d'une pub dans un journal local (300-500€ par parution) ou d'un flyer (impression + distribution). Le site web est l'investissement **le plus rentable** pour un artisan.
 
@@ -520,7 +520,7 @@ Prenons l'exemple d'un maçon à Vannes qui investit 1 500€ dans son site. En 
 
 ## Ce qu'il faut retenir
 
-Aujourd'hui, ne pas avoir de site web, c'est **laisser des clients à vos concurrents**. Un site simple, clair et bien référencé peut vous amener des dizaines de prospects qualifiés chaque mois — sans effort de votre part.
+Aujourd'hui, ne pas avoir de site web, c'est **laisser des clients à vos concurrents**. Un site simple, clair et bien référencé peut vous amener des dizaines de prospects qualifiés chaque mois - sans effort de votre part.
 
 :::brief
 - 97% des clients cherchent en ligne avant d'appeler
@@ -557,7 +557,7 @@ Dans ce guide, on vous explique **concrètement ce que coûte un site vitrine** 
 Wix, Squarespace, WordPress.com... Ces outils permettent de créer un site soi-même. **Le problème ?** Des templates génériques, des performances médiocres et un abonnement mensuel qui s'accumule.
 
 :::example
-Prenons l'exemple d'un fleuriste qui utilise Wix pendant 3 ans. Coût total : 30€/mois x 36 = **1 080€**. Résultat : un site lent, mal référencé, et un design qui ressemble à des centaines d'autres. En passant sur un site sur mesure à 990€, le résultat est meilleur pour moins cher — et sans abonnement.
+Prenons l'exemple d'un fleuriste qui utilise Wix pendant 3 ans. Coût total : 30€/mois x 36 = **1 080€**. Résultat : un site lent, mal référencé, et un design qui ressemble à des centaines d'autres. En passant sur un site sur mesure à 990€, le résultat est meilleur pour moins cher - et sans abonnement.
 :::
 
 ### Les freelances juniors (500€ - 1 500€)
@@ -575,7 +575,7 @@ Chez Djanni Studio, les tarifs commencent à **990€** pour [l'offre Présence]
 Les agences web ont des coûts de structure importants (locaux, salariés, commercial...). Vous payez souvent **le commercial et le chef de projet** autant que le développeur qui code réellement votre site.
 
 :::stat
-990€ — 2 000€
+990€ - 2 000€
 La fourchette idéale pour un artisan ou commerçant qui veut un site professionnel, performant et rentable.
 :::
 
@@ -653,7 +653,7 @@ C'est la part de vos abonnés qui voient réellement vos publications sur Facebo
 - **Image peu professionnelle** : "Allez voir notre Facebook" inspire moins confiance qu'un vrai site web
 
 :::example
-Prenons l'exemple d'un restaurateur à Saint-Malo qui poste tous les jours sur Instagram. Malgré 800 abonnés, ses publications atteignent en moyenne 60 personnes. Avec un site web optimisé SEO, il peut recevoir 150 visiteurs par semaine via Google — des gens qui cherchent activement un restaurant dans sa zone.
+Prenons l'exemple d'un restaurateur à Saint-Malo qui poste tous les jours sur Instagram. Malgré 800 abonnés, ses publications atteignent en moyenne 60 personnes. Avec un site web optimisé SEO, il peut recevoir 150 visiteurs par semaine via Google - des gens qui cherchent activement un restaurant dans sa zone.
 :::
 
 ## Ce que le site web fait mieux
@@ -691,7 +691,7 @@ Imaginons un ébéniste à Quimper qui utilise Instagram pour montrer ses créat
 
 ## Ce qu'il faut retenir
 
-Les réseaux sociaux ne remplacent pas un site web — ils le complètent. Pour un artisan, le site est la **fondation** de votre présence en ligne. C'est lui qui vous rend visible sur Google, qui inspire confiance, et qui travaille pour vous 24h/24.
+Les réseaux sociaux ne remplacent pas un site web - ils le complètent. Pour un artisan, le site est la **fondation** de votre présence en ligne. C'est lui qui vous rend visible sur Google, qui inspire confiance, et qui travaille pour vous 24h/24.
 
 :::brief
 - Facebook/Instagram = visibilité temporaire auprès de vos abonnés
@@ -753,7 +753,7 @@ export const PRICING_TIERS: PricingTier[] = [
 		priceSuffix: "€",
 		priceNote: "50% à la signature • 50% à la livraison",
 		name: "Vitrine",
-		description: "Un vrai outil de travail — pas juste une carte de visite en ligne.",
+		description: "Un vrai outil de travail - pas juste une carte de visite en ligne.",
 		benefitLine: "Pour donner envie avant même que le client pousse la porte.",
 		popularNote: "L'offre la plus adaptée pour 80% des artisans et commerçants.",
 		features: [
@@ -782,7 +782,7 @@ export const PRICING_TIERS: PricingTier[] = [
 		features: [
 			"Jusqu'à 8 pages (ex : Accueil, Services ×3, Réalisations, Blog, À propos, Contact)",
 			"Vos clients réservent directement en ligne",
-			"Blog intégré — vous publiez vous-même",
+			"Blog intégré - vous publiez vous-même",
 			"Votre catalogue de produits ou services visible en ligne",
 			"Multilingue pour toucher plus de clients",
 			"SEO avancé (audit complet + stratégie mots-clés)",
@@ -848,7 +848,7 @@ export const WHY_REASONS: WhyReason[] = [
 	{
 		number: "04",
 		title: "Livré en 2 à 5 semaines, pas en 6 mois",
-		text: "Un planning clair, des étapes définies. Un seul interlocuteur, joignable en direct — pas une agence avec 5 contacts différents.",
+		text: "Un planning clair, des étapes définies. Un seul interlocuteur, joignable en direct - pas une agence avec 5 contacts différents.",
 	},
 ]
 
@@ -871,35 +871,35 @@ export type Testimonial = {
 export const TESTIMONIALS: Testimonial[] = [
 	{
 		name: "Marie Lefevre",
-		role: "Gérante — Boulangerie du Port",
+		role: "Gérante - Boulangerie du Port",
 		quote:
 			"Gianni a compris mon commerce en 30 minutes. Le site est exactement ce que j'avais en tête, et mes clients me disent qu'ils nous trouvent enfin sur Google.",
 		rating: 5,
 	},
 	{
 		name: "Thomas Renard",
-		role: "Artisan charpentier — Renard Bois",
+		role: "Artisan charpentier - Renard Bois",
 		quote:
 			"Simple, rapide, efficace. Pas de blabla, un vrai résultat. J'ai enfin un site qui reflète la qualité de mon travail.",
 		rating: 5,
 	},
 	{
 		name: "Sophie Martin",
-		role: "Fleuriste — Les Fleurs de Sophie",
+		role: "Fleuriste - Les Fleurs de Sophie",
 		quote:
 			"Je voulais un site beau et simple. Gianni a livré en 10 jours, tout était parfait. Je recommande à 100%.",
 		rating: 5,
 	},
 	{
 		name: "Florian Kervadec",
-		role: "Ébéniste — Atelier Kervadec, Quimper",
+		role: "Ébéniste - Atelier Kervadec, Quimper",
 		quote:
 			"En tant qu'artisan, j'avais besoin d'un site qui montre mon savoir-faire. Gianni a créé quelque chose d'élégant qui met en valeur mes créations. Les demandes de devis ont doublé.",
 		rating: 5,
 	},
 	{
 		name: "Nathalie Guégan",
-		role: "Gérante — Au Jardin de Nath, Vannes",
+		role: "Gérante - Au Jardin de Nath, Vannes",
 		quote:
 			"Mon ancien site était daté et lent. Gianni l'a entièrement refait : moderne, rapide, et mes clients adorent. Le meilleur investissement de l'année.",
 		rating: 5,
@@ -920,7 +920,7 @@ export const FAQ_ITEMS: FaqItem[] = [
 	{
 		question: "Je n'y connais rien en technique, c'est un problème ?",
 		answer:
-			"Pas du tout. C'est même la majorité de mes clients. Je m'occupe de toute la partie technique et je vous explique tout en langage simple. Pour les textes, on les rédige ensemble à partir de vos mots — pas besoin d'être écrivain. Si vous n'avez pas de photos, on trouve une solution : photographe local ou banque d'images professionnelle. Vous n'avez rien à préparer pour démarrer.",
+			"Pas du tout. C'est même la majorité de mes clients. Je m'occupe de toute la partie technique et je vous explique tout en langage simple. Pour les textes, on les rédige ensemble à partir de vos mots - pas besoin d'être écrivain. Si vous n'avez pas de photos, on trouve une solution : photographe local ou banque d'images professionnelle. Vous n'avez rien à préparer pour démarrer.",
 	},
 	{
 		question: "Que se passe-t-il après la mise en ligne ?",
@@ -930,7 +930,7 @@ export const FAQ_ITEMS: FaqItem[] = [
 	{
 		question: "Pourquoi pas un site WordPress ou Wix ?",
 		answer:
-			"Ces outils sont pratiques mais limités en performance et personnalisation. Je développe des sites sur mesure, plus rapides, mieux référencés, et qui vous appartiennent vraiment — pas d'abonnement mensuel imposé.",
+			"Ces outils sont pratiques mais limités en performance et personnalisation. Je développe des sites sur mesure, plus rapides, mieux référencés, et qui vous appartiennent vraiment - pas d'abonnement mensuel imposé.",
 	},
 	{
 		question: "Comment se passe le paiement ?",
@@ -955,6 +955,6 @@ export const FAQ_ITEMS: FaqItem[] = [
 	{
 		question: "Vous intervenez sur quelle zone ?",
 		answer:
-			"Mon terrain principal c'est le bassin Dinard / Saint-Malo / Dinan — je me déplace physiquement chez mes clients dans cette zone. Au-delà, je travaille à distance avec des artisans partout en France. Visio, téléphone, email : on s'adapte.",
+			"Mon terrain principal c'est le bassin Dinard / Saint-Malo / Dinan - je me déplace physiquement chez mes clients dans cette zone. Au-delà, je travaille à distance avec des artisans partout en France. Visio, téléphone, email : on s'adapte.",
 	},
 ]

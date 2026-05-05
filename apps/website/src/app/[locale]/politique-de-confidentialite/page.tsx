@@ -6,14 +6,14 @@ import { getAlternates } from "@/lib/metadata"
 
 export function generateMetadata(): Metadata {
 	return {
-		title: "Politique de confidentialité — Djanni Studio",
+		title: "Politique de confidentialité - Djanni Studio",
 		description:
-			"Politique de confidentialité du site Djanni Studio — Protection de vos données personnelles conformément au RGPD.",
+			"Politique de confidentialité du site Djanni Studio - Protection de vos données personnelles conformément au RGPD.",
 		alternates: getAlternates("/politique-de-confidentialite"),
 		openGraph: {
-			title: "Politique de confidentialité — Djanni Studio",
+			title: "Politique de confidentialité - Djanni Studio",
 			description:
-				"Politique de confidentialité du site Djanni Studio — Protection de vos données personnelles conformément au RGPD.",
+				"Politique de confidentialité du site Djanni Studio - Protection de vos données personnelles conformément au RGPD.",
 			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
 		},
 	}
@@ -24,8 +24,8 @@ const sections = [
 		title: "1. Responsable du traitement",
 		content: [
 			"Le responsable du traitement des données personnelles collectées sur le site djannistudio.fr est :",
-			"**Gianni** — Djanni Studio",
-			"Micro-entreprise — Création de sites web",
+			"**Gianni** - Djanni Studio",
+			"Micro-entreprise - Création de sites web",
 			"SIREN : 102 087 822",
 			"SIRET : 102 087 822 00015",
 			"Adresse : 4 boulevard Jules Verger, 35800 Dinard, France",
@@ -37,11 +37,11 @@ const sections = [
 		title: "2. Données collectées",
 		content: [
 			"Les données personnelles collectées sur ce site proviennent exclusivement du __formulaire de contact__ et du __formulaire de demande de projet__. Les données recueillies sont :",
-			"— Nom ou prénom",
-			"— Adresse email",
-			"— Numéro de téléphone (facultatif)",
-			"— Type de projet et budget indicatif",
-			"— Message libre",
+			"- Nom ou prénom",
+			"- Adresse email",
+			"- Numéro de téléphone (facultatif)",
+			"- Type de projet et budget indicatif",
+			"- Message libre",
 			"__Aucune donnée n'est collectée automatiquement__ (pas de cookies de tracking, pas de fingerprinting, pas de pixels de suivi).",
 		],
 	},
@@ -49,8 +49,8 @@ const sections = [
 		title: "3. Finalité et base légale du traitement",
 		content: [
 			"Les données collectées sont utilisées __uniquement__ pour :",
-			"— Répondre à votre demande de contact ou de devis",
-			"— Assurer le suivi d'une relation commerciale éventuelle",
+			"- Répondre à votre demande de contact ou de devis",
+			"- Assurer le suivi d'une relation commerciale éventuelle",
 			"**Base légale :** Le traitement repose sur votre __consentement__ (envoi volontaire du formulaire) conformément à l'article 6.1.a du RGPD, ainsi que sur l'__intérêt légitime__ de Djanni Studio à répondre aux sollicitations (article 6.1.f du RGPD).",
 			"Vos données ne sont __jamais__ utilisées à des fins de prospection commerciale non sollicitée.",
 		],
@@ -60,8 +60,8 @@ const sections = [
 		content: [
 			"Vos données personnelles sont strictement confidentielles. Elles ne sont __ni vendues, ni cédées, ni louées__ à des tiers.",
 			"Les seuls destinataires techniques sont :",
-			"— **Resend** (resend.com) : service d'envoi d'emails transactionnels utilisé pour recevoir les messages du formulaire de contact. Resend agit en tant que sous-traitant et est conforme au RGPD.",
-			"— **Vercel Inc.** (vercel.com) : hébergeur du site. Les données transitent par leurs serveurs situés aux États-Unis. Vercel adhère au Data Privacy Framework (DPF) UE–États-Unis pour garantir un niveau de protection adéquat.",
+			"- **Resend** (resend.com) : service d'envoi d'emails transactionnels utilisé pour recevoir les messages du formulaire de contact. Resend agit en tant que sous-traitant et est conforme au RGPD.",
+			"- **Vercel Inc.** (vercel.com) : hébergeur du site. Les données transitent par leurs serveurs situés aux États-Unis. Vercel adhère au Data Privacy Framework (DPF) UE–États-Unis pour garantir un niveau de protection adéquat.",
 			"Aucun autre tiers n'a accès à vos données.",
 		],
 	},
@@ -87,12 +87,12 @@ const sections = [
 		title: "7. Vos droits",
 		content: [
 			"Conformément au RGPD (Règlement UE 2016/679) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée, vous disposez des droits suivants :",
-			"— **Droit d'accès :** obtenir la confirmation que vos données sont traitées et en recevoir une copie",
-			"— **Droit de rectification :** corriger des données inexactes ou incomplètes",
-			"— **Droit de suppression :** demander l'effacement de vos données",
-			"— **Droit à la portabilité :** recevoir vos données dans un format structuré et lisible",
-			"— **Droit d'opposition :** vous opposer au traitement de vos données",
-			"— **Droit à la limitation :** demander la suspension du traitement",
+			"- **Droit d'accès :** obtenir la confirmation que vos données sont traitées et en recevoir une copie",
+			"- **Droit de rectification :** corriger des données inexactes ou incomplètes",
+			"- **Droit de suppression :** demander l'effacement de vos données",
+			"- **Droit à la portabilité :** recevoir vos données dans un format structuré et lisible",
+			"- **Droit d'opposition :** vous opposer au traitement de vos données",
+			"- **Droit à la limitation :** demander la suspension du traitement",
 			"Pour exercer ces droits, contactez-nous à : __contact@djannistudio.fr__",
 			"Nous nous engageons à répondre dans un délai de __30 jours__ conformément au RGPD.",
 		],
@@ -101,11 +101,11 @@ const sections = [
 		title: "8. Contact et réclamation",
 		content: [
 			"Pour toute question relative à la protection de vos données personnelles :",
-			"**Gianni** — Djanni Studio",
+			"**Gianni** - Djanni Studio",
 			"Email : __contact@djannistudio.fr__",
 			"Adresse : 4 boulevard Jules Verger, 35800 Dinard, France",
 			"Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation auprès de la __CNIL__ (Commission Nationale de l'Informatique et des Libertés) :",
-			"CNIL — 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07",
+			"CNIL - 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07",
 			"Site : __www.cnil.fr__",
 		],
 	},

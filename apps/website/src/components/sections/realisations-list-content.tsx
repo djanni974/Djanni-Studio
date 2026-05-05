@@ -17,7 +17,7 @@ export function RealisationsListContent() {
 
 	const categories = useMemo(() => {
 		const types = PROJECTS.map((p) => {
-			const parts = p.type.split("—")
+			const parts = p.type.split(" - ")
 			return parts.length > 1 ? parts[1].trim() : p.type
 		})
 		return [...new Set(types)]
