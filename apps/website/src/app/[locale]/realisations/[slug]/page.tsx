@@ -23,11 +23,11 @@ export async function generateMetadata({
 	if (!project) return {}
 
 	return {
-		title: `${project.name} — Djanni Studio`,
+		title: `${project.name} - Djanni Studio`,
 		description: project.context.slice(0, 160),
 		alternates: getAlternates(`/realisations/${slug}`),
 		openGraph: {
-			title: `${project.name} — Djanni Studio`,
+			title: `${project.name} - Djanni Studio`,
 			description: project.context.slice(0, 160),
 			images: [
 				{

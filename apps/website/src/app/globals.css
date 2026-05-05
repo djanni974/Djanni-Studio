@@ -17,7 +17,7 @@ html {
 	overflow-x: clip;
 }
 
-/* Hero CSS animations — visible by default for LCP, animation is progressive enhancement */
+/* Hero CSS animations - visible by default for LCP, animation is progressive enhancement */
 @keyframes hero-fade-up {
 	from {
 		opacity: 0;

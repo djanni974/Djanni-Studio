@@ -6,14 +6,14 @@ import { getAlternates } from "@/lib/metadata"
 
 export function generateMetadata(): Metadata {
 	return {
-		title: "Conditions Générales de Vente — Djanni Studio",
+		title: "Conditions Générales de Vente - Djanni Studio",
 		description:
-			"CGV de Djanni Studio — Conditions applicables aux prestations de création de sites web.",
+			"CGV de Djanni Studio - Conditions applicables aux prestations de création de sites web.",
 		alternates: getAlternates("/cgv"),
 		openGraph: {
-			title: "Conditions Générales de Vente — Djanni Studio",
+			title: "Conditions Générales de Vente - Djanni Studio",
 			description:
-				"CGV de Djanni Studio — Conditions applicables aux prestations de création de sites web.",
+				"CGV de Djanni Studio - Conditions applicables aux prestations de création de sites web.",
 			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
 		},
 	}
@@ -21,7 +21,7 @@ export function generateMetadata(): Metadata {
 
 const sections = [
 	{
-		title: "Article 1 — Objet",
+		title: "Article 1 - Objet",
 		content: [
 			"Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent l'ensemble des prestations de services réalisées par Djanni Studio (ci-après « le Prestataire ») pour ses clients (ci-après « le Client »).",
 			"Elles s'appliquent à toute commande passée auprès du Prestataire, que le Client soit un professionnel ou un particulier.",
@@ -29,13 +29,13 @@ const sections = [
 		],
 	},
 	{
-		title: "Article 2 — Identité du Prestataire",
+		title: "Article 2 - Identité du Prestataire",
 		content: [
-			"**Djanni Studio** — Gianni Jardin",
-			"Micro-entreprise — Création de sites web",
+			"**Djanni Studio** - Gianni Jardin",
+			"Micro-entreprise - Création de sites web",
 			"SIREN : 102 087 822",
 			"SIRET : 102 087 822 00015",
-			"Code APE : 6201Z — Programmation informatique",
+			"Code APE : 6201Z - Programmation informatique",
 			"Adresse : 4 boulevard Jules Verger, 35800 Dinard, France",
 			"Email : contact@djannistudio.fr",
 			"Téléphone : 07 49 54 74 98",
@@ -43,14 +43,14 @@ const sections = [
 		],
 	},
 	{
-		title: "Article 3 — Prestations",
+		title: "Article 3 - Prestations",
 		content: [
 			"Djanni Studio propose des prestations de conception et développement de sites web, incluant notamment :",
-			"— Création de sites vitrines",
-			"— Refonte de sites existants",
-			"— Optimisation des performances et du référencement naturel (SEO)",
-			"— Intégration de maquettes et contenus",
-			"— Maintenance et mises à jour ponctuelles (sur devis)",
+			"- Création de sites vitrines",
+			"- Refonte de sites existants",
+			"- Optimisation des performances et du référencement naturel (SEO)",
+			"- Intégration de maquettes et contenus",
+			"- Maintenance et mises à jour ponctuelles (sur devis)",
 			"- Abonnements de maintenance mensuels (paliers Essentiel, Confort, Sérénité)",
 			"- Options récurrentes (gestion de réseaux sociaux mensuelle)",
 			"Le détail précis de chaque prestation, ses caractéristiques et son périmètre sont définis dans le devis validé par le Client.",
@@ -58,7 +58,7 @@ const sections = [
 		],
 	},
 	{
-		title: "Article 4 — Devis et commande",
+		title: "Article 4 - Devis et commande",
 		content: [
 			"Tout projet fait l'objet d'un __devis gratuit__ et personnalisé, établi après échange avec le Client.",
 			"Le devis détaille : la nature des prestations, le calendrier prévisionnel, le prix total et les modalités de paiement.",
@@ -67,13 +67,13 @@ const sections = [
 		],
 	},
 	{
-		title: "Article 5 — Tarifs et paiement",
+		title: "Article 5 - Tarifs et paiement",
 		content: [
 			"Les prix indiqués sont en euros (€) et nets de taxe (TVA non applicable, article 293 B du CGI).",
 			"**Modalités de paiement :**",
-			"— Un acompte de __50 %__ du montant total est demandé à la signature du devis pour démarrer le projet.",
-			"— Le solde (__50 %__) est dû à la livraison du site, avant sa mise en ligne définitive.",
-			"— Pour les projets supérieurs à 2 000 €, un __paiement en 3 fois__ peut être proposé (34 % / 33 % / 33 %).",
+			"- Un acompte de __50 %__ du montant total est demandé à la signature du devis pour démarrer le projet.",
+			"- Le solde (__50 %__) est dû à la livraison du site, avant sa mise en ligne définitive.",
+			"- Pour les projets supérieurs à 2 000 €, un __paiement en 3 fois__ peut être proposé (34 % / 33 % / 33 %).",
 			"**Moyens de paiement acceptés :** virement bancaire, carte bancaire, chèque.",
 			"**Client professionnel :** En cas de retard de paiement, une pénalité de retard égale à 3 fois le taux d'intérêt légal sera appliquée, ainsi qu'une indemnité forfaitaire de __40 €__ pour frais de recouvrement (article L.441-10 du Code de commerce).",
 			"**Client consommateur :** En cas de retard de paiement, des pénalités pourront être appliquées conformément aux dispositions légales en vigueur.",
@@ -81,30 +81,30 @@ const sections = [
 		],
 	},
 	{
-		title: "Article 6 — Délais de réalisation",
+		title: "Article 6 - Délais de réalisation",
 		content: [
 			"Les délais de réalisation sont indiqués à titre prévisionnel dans le devis et dépendent de la complexité du projet.",
 			"**Délais indicatifs :**",
-			"— Site vitrine : __2 à 4 semaines__",
-			"— Site premium / refonte : __4 à 8 semaines__",
+			"- Site vitrine : __2 à 4 semaines__",
+			"- Site premium / refonte : __4 à 8 semaines__",
 			"Ces délais courent à compter de la réception de l'acompte et de l'ensemble des éléments nécessaires fournis par le Client (textes, images, logos, accès).",
 			"Tout retard dans la transmission des éléments par le Client __reporte d'autant le délai de livraison__, sans responsabilité du Prestataire.",
 			"**Livraison :** La livraison est réputée effectuée à la date de __mise en ligne du site__ ou à la date d'envoi par le Prestataire d'un email de livraison au Client.",
 		],
 	},
 	{
-		title: "Article 7 — Obligations du Client",
+		title: "Article 7 - Obligations du Client",
 		content: [
 			"Le Client s'engage à :",
-			"— Fournir les contenus nécessaires (textes, images, logos) dans les délais convenus.",
-			"— Désigner un __interlocuteur unique__ pour faciliter les échanges.",
-			"— Valider les étapes clés du projet (maquette, développement, mise en ligne) dans un délai raisonnable.",
-			"— Régler les factures selon les modalités prévues.",
+			"- Fournir les contenus nécessaires (textes, images, logos) dans les délais convenus.",
+			"- Désigner un __interlocuteur unique__ pour faciliter les échanges.",
+			"- Valider les étapes clés du projet (maquette, développement, mise en ligne) dans un délai raisonnable.",
+			"- Régler les factures selon les modalités prévues.",
 			"En l'absence de retour du Client sous __15 jours ouvrés__ après une demande de validation, l'étape en cours est considérée comme validée.",
 		],
 	},
 	{
-		title: "Article 8 — Processus de validation et révisions",
+		title: "Article 8 - Processus de validation et révisions",
 		content: [
 			"Chaque projet inclut des phases de validation aux étapes clés : maquette, développement, contenu final.",
 			"**Révisions incluses :** Chaque étape de validation inclut jusqu'à __2 tours de modifications__ (retours mineurs : ajustements de textes, couleurs, disposition). Les retours doivent être transmis en __un seul envoi groupé__ par tour, dans un délai de __7 jours ouvrés__ après présentation de l'étape.",
@@ -112,7 +112,7 @@ const sections = [
 		],
 	},
 	{
-		title: "Article 9 — Propriété intellectuelle",
+		title: "Article 9 - Propriété intellectuelle",
 		content: [
 			"**Avant paiement intégral :** Le Prestataire __reste propriétaire__ de l'ensemble des créations (design, code source, contenus originaux) réalisées dans le cadre du projet.",
 			"**Après paiement intégral :** Le Client acquiert la __pleine propriété du code source spécifique à son projet__ ainsi que les droits d'utilisation et d'exploitation du site livré, pour la durée du droit d'auteur et pour le monde entier.",
@@ -121,7 +121,7 @@ const sections = [
 		],
 	},
 	{
-		title: "Article 10 — Hébergement et nom de domaine",
+		title: "Article 10 - Hébergement et nom de domaine",
 		content: [
 			"Sauf mention contraire dans le devis, l'hébergement et le nom de domaine __ne sont pas inclus__ dans la prestation de création du site.",
 			"Le Prestataire peut accompagner le Client dans le choix et la mise en place de l'hébergement et du nom de domaine, mais ces services restent souscrits directement par le Client auprès du fournisseur de son choix.",
@@ -129,7 +129,7 @@ const sections = [
 		],
 	},
 	{
-		title: "Article 11 — Droit de rétractation",
+		title: "Article 11 - Droit de rétractation",
 		content: [
 			"**Client consommateur :** Conformément à l'article L.221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour les prestations de services pleinement exécutées avant la fin du délai de rétractation avec l'accord du consommateur.",
 			"Avant le début de la prestation, le Client consommateur dispose d'un délai de __14 jours__ à compter de la signature du devis pour exercer son droit de rétractation, par email à contact@djannistudio.fr. L'acompte sera alors __intégralement remboursé__.",
@@ -139,35 +139,35 @@ const sections = [
 		],
 	},
 	{
-		title: "Article 12 — Résiliation",
+		title: "Article 12 - Résiliation",
 		content: [
 			"En cas de résiliation du contrat à l'initiative du Client après le début des travaux :",
-			"— __L'acompte versé reste acquis__ au Prestataire.",
-			"— Si les travaux réalisés excèdent le montant de l'acompte, le Client devra régler le complément correspondant au travail effectué.",
+			"- __L'acompte versé reste acquis__ au Prestataire.",
+			"- Si les travaux réalisés excèdent le montant de l'acompte, le Client devra régler le complément correspondant au travail effectué.",
 			"En cas de manquement grave de l'une des parties à ses obligations, l'autre partie pourra résilier le contrat par lettre recommandée avec accusé de réception, après mise en demeure restée infructueuse pendant __15 jours__.",
 			"**Pour la résiliation des abonnements de maintenance et options récurrentes, voir les modalités spécifiques de l'article 17.**",
 		],
 	},
 	{
-		title: "Article 13 — Responsabilité",
+		title: "Article 13 - Responsabilité",
 		content: [
 			"Le Prestataire s'engage à réaliser les prestations avec soin et professionnalisme, dans le respect des règles de l'art.",
 			"La responsabilité du Prestataire est __limitée au montant total du devis__ validé, dans la limite des dispositions légales applicables.",
 			"Le Prestataire ne saurait être tenu responsable :",
-			"— Des contenus fournis par le Client (textes, images, données).",
-			"— Des dysfonctionnements liés à l'hébergement, au nom de domaine ou à des services tiers.",
-			"— De l'utilisation que le Client fait du site après livraison.",
-			"— De tout dommage indirect (perte de chiffre d'affaires, perte de données, etc.).",
+			"- Des contenus fournis par le Client (textes, images, données).",
+			"- Des dysfonctionnements liés à l'hébergement, au nom de domaine ou à des services tiers.",
+			"- De l'utilisation que le Client fait du site après livraison.",
+			"- De tout dommage indirect (perte de chiffre d'affaires, perte de données, etc.).",
 		],
 	},
 	{
-		title: "Article 14 — Force majeure",
+		title: "Article 14 - Force majeure",
 		content: [
 			"Aucune des parties ne pourra être tenue responsable d'un retard ou d'une inexécution causé par un événement de force majeure tel que défini par l'article 1218 du Code civil (catastrophe naturelle, pandémie, panne technique généralisée, etc.).",
 		],
 	},
 	{
-		title: "Article 15 — Médiation et litiges",
+		title: "Article 15 - Médiation et litiges",
 		content: [
 			"En cas de litige, les parties s'engagent à rechercher une __solution amiable__ avant toute action en justice.",
 			"**Client consommateur :** Conformément aux articles L.612-1 et suivants du Code de la consommation, vous avez le droit de recourir __gratuitement__ à un médiateur de la consommation.",
@@ -181,14 +181,14 @@ const sections = [
 		],
 	},
 	{
-		title: "Article 16 — Droit applicable",
+		title: "Article 16 - Droit applicable",
 		content: [
 			"Les présentes CGV sont soumises au __droit français__.",
 			"En cas de contradiction entre les CGV et le devis, les dispositions du devis prévaudront.",
 		],
 	},
 	{
-		title: "Article 17 — Abonnements de maintenance et options récurrentes",
+		title: "Article 17 - Abonnements de maintenance et options récurrentes",
 		content: [
 			"**17.1 Objet**",
 			"Le présent article régit les __abonnements mensuels__ souscrits par le Client, à savoir :",

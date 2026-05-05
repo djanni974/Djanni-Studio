@@ -81,7 +81,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 					style={{ background: project.accentColor }}
 				/>
 
-				{/* Hero content rendered immediately — no AnimatedSection for LCP */}
+				{/* Hero content rendered immediately - no AnimatedSection for LCP */}
 				<div className="relative mx-auto max-w-[1100px]">
 					<Link
 						href="/realisations"
@@ -133,13 +133,13 @@ export function CaseStudyContent({ project }: { project: Project }) {
 							</div>
 						</div>
 
-						{/* Main screenshot — full width, LCP element */}
+						{/* Main screenshot - full width, LCP element */}
 						{hasScreenshots && (
 							<BrowserMockup noPadding>
 								<div className="relative aspect-video w-full">
 									<Image
 										src={project.screenshots?.[0] ?? ""}
-										alt={`${project.name} — Accueil`}
+										alt={`${project.name} - Accueil`}
 										fill
 										className="object-cover object-top"
 										sizes="(max-width: 768px) 100vw, 1100px"
@@ -152,11 +152,11 @@ export function CaseStudyContent({ project }: { project: Project }) {
 				</div>
 			</section>
 
-			{/* ── Section 2: Story — Context / Problem / Solution ── */}
+			{/* ── Section 2: Story - Context / Problem / Solution ── */}
 			<section className="px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[1100px]">
 					<StaggerContainer className="grid gap-0">
-						{/* Context — full width */}
+						{/* Context - full width */}
 						<StaggerItem>
 							<div className="mx-auto max-w-[800px] pb-10">
 								<span className="mb-4 block text-[11px] font-semibold uppercase tracking-[0.15em] text-djanni-orange">
@@ -178,7 +178,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 							<div className="h-8 w-px opacity-20" style={{ background: project.accentColor }} />
 						</div>
 
-						{/* Problem — text left, screenshot right */}
+						{/* Problem - text left, screenshot right */}
 						<StaggerItem>
 							<div className="grid items-center gap-10 py-10 md:grid-cols-[1.2fr_1fr] md:gap-16">
 								<div>
@@ -194,7 +194,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 										<div className="relative aspect-video w-full">
 											<Image
 												src={project.screenshots[1]}
-												alt={`${project.name} — Capture`}
+												alt={`${project.name} - Capture`}
 												fill
 												className="object-cover object-top"
 												sizes="(max-width: 768px) 95vw, 450px"
@@ -215,7 +215,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 							<div className="h-8 w-px opacity-20" style={{ background: project.accentColor }} />
 						</div>
 
-						{/* Solution — screenshot left, text right */}
+						{/* Solution - screenshot left, text right */}
 						<StaggerItem>
 							<div className="grid items-center gap-10 py-10 md:grid-cols-[1fr_1.2fr] md:gap-16">
 								{project.screenshots?.[2] ? (
@@ -224,7 +224,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 											<div className="relative aspect-video w-full">
 												<Image
 													src={project.screenshots[2]}
-													alt={`${project.name} — Capture`}
+													alt={`${project.name} - Capture`}
 													fill
 													className="object-cover object-top"
 													sizes="(max-width: 768px) 95vw, 450px"
@@ -256,7 +256,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 				</div>
 			</section>
 
-			{/* ── Section 3: Visual Gallery (dark) — remaining screenshots ── */}
+			{/* ── Section 3: Visual Gallery (dark) - remaining screenshots ── */}
 			{remainingScreenshots.length > 0 && (
 				<section className="relative overflow-hidden bg-linear-to-b from-[#161614] to-[#1e1e1c] px-5 py-16 md:px-12 md:py-24">
 					<div
@@ -271,7 +271,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 										<div className="relative aspect-video w-full">
 											<Image
 												src={src}
-												alt={`${project.name} — Capture ${i + 4}`}
+												alt={`${project.name} - Capture ${i + 4}`}
 												fill
 												className="object-cover object-top"
 												sizes={
@@ -289,7 +289,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 				</section>
 			)}
 
-			{/* ── Section 4: Results — Big Numbers ── */}
+			{/* ── Section 4: Results - Big Numbers ── */}
 			<section className="px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>

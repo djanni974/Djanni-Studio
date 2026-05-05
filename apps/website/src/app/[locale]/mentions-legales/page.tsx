@@ -7,14 +7,14 @@ import { getAlternates } from "@/lib/metadata"
 
 export function generateMetadata(): Metadata {
 	return {
-		title: "Mentions légales — Djanni Studio",
+		title: "Mentions légales - Djanni Studio",
 		description:
-			"Mentions légales du site Djanni Studio — Création de sites web pour artisans et commerçants en Bretagne.",
+			"Mentions légales du site Djanni Studio - Création de sites web pour artisans et commerçants en Bretagne.",
 		alternates: getAlternates("/mentions-legales"),
 		openGraph: {
-			title: "Mentions légales — Djanni Studio",
+			title: "Mentions légales - Djanni Studio",
 			description:
-				"Mentions légales du site Djanni Studio — Création de sites web pour artisans et commerçants en Bretagne.",
+				"Mentions légales du site Djanni Studio - Création de sites web pour artisans et commerçants en Bretagne.",
 			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
 		},
 	}
@@ -25,11 +25,11 @@ const sections: { title: string; content: (string | ReactNode)[] }[] = [
 		title: "1. Éditeur du site",
 		content: [
 			"Le site djannistudio.fr est édité par :",
-			"**Gianni Jardin** — Djanni Studio",
-			"Micro-entreprise — Création de sites web",
+			"**Gianni Jardin** - Djanni Studio",
+			"Micro-entreprise - Création de sites web",
 			"SIREN : 102 087 822",
 			"SIRET : 102 087 822 00015",
-			"Code APE : 6201Z — Programmation informatique",
+			"Code APE : 6201Z - Programmation informatique",
 			"Immatriculation au RNE : 06/03/2026",
 			"**Dispensé d'immatriculation au RCS**",
 			"__TVA non applicable, article 293 B du CGI.__",
@@ -76,16 +76,16 @@ const sections: { title: string; content: (string | ReactNode)[] }[] = [
 	{
 		title: "5. Protection des données personnelles (RGPD)",
 		content: [
-			"Conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée, vous disposez des droits suivants concernant vos données personnelles :",
-			"— Droit d'accès, de rectification et de suppression",
-			"— Droit à la portabilité de vos données",
-			"— Droit d'opposition et de limitation du traitement",
+			"Conformément au Règlement Général sur la Protection des Données (RGPD - Règlement UE 2016/679) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée, vous disposez des droits suivants concernant vos données personnelles :",
+			"- Droit d'accès, de rectification et de suppression",
+			"- Droit à la portabilité de vos données",
+			"- Droit d'opposition et de limitation du traitement",
 			"**Données collectées :** Les données recueillies via le formulaire de contact (nom, email, type de projet, budget indicatif, message) sont utilisées __uniquement pour répondre à votre demande__. Elles ne sont ni vendues, ni cédées, ni transmises à des tiers.",
 			"**Base légale :** Le traitement repose sur votre consentement (envoi volontaire du formulaire) et sur l'intérêt légitime de Djanni Studio à répondre aux demandes de contact.",
 			"**Durée de conservation :** Les données sont conservées pendant __12 mois maximum__ après le dernier échange, puis supprimées.",
-			"**Responsable du traitement :** Gianni Jardin — Djanni Studio",
+			"**Responsable du traitement :** Gianni Jardin - Djanni Studio",
 			"Pour exercer vos droits ou pour toute question relative à vos données : __contact@djannistudio.fr__",
-			"En cas de litige, vous pouvez adresser une réclamation à la __CNIL__ (Commission Nationale de l'Informatique et des Libertés) — www.cnil.fr",
+			"En cas de litige, vous pouvez adresser une réclamation à la __CNIL__ (Commission Nationale de l'Informatique et des Libertés) - www.cnil.fr",
 		],
 	},
 	{
