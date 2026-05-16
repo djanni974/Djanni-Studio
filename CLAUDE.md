@@ -1,16 +1,14 @@
 # CLAUDE.md - Djanni Studio (djannistudio.fr)
 
-> Reference complete pour Claude sur ce repo. Tout le detail operationnel (stack,
-> scripts, conventions) est aussi dans `README.md`. Lire `DESIGN.md` avant toute
-> modification UI.
+> Reference seche pour Claude. Tout le detail (stack, conventions, scripts) est dans
+> `README.md`. Ce fichier liste UNIQUEMENT les pointeurs, les regles absolues et les
+> gotchas qui ont deja coute du temps. Lire `README.md` en parallele a la premiere session.
 
 ---
 
-## Contexte projet
+## Contexte une ligne
 
-Repo du site djannistudio.fr, vitrine et moteur d'acquisition de Djanni Studio : micro-entreprise de developpement web freelance fondee par Gianni Jardin (charpentier-bardeur reconverti dev), basee a Dinard (35). Cible : artisans, commercants et TPE de la Cote d'Emeraude (Saint-Malo, Dinard, Dinan) + remote France.
-
-Le site lui-meme sert de preuve de savoir-faire : ce qui est code ici doit etre exemplaire en perf, accessibilite, SEO, securite.
+Site vitrine et moteur d'acquisition de Djanni Studio (micro-entreprise dev web freelance, Dinard, fondee par Gianni Jardin). Le site lui-meme sert de preuve de savoir-faire : perf, accessibilite, SEO et securite doivent etre exemplaires.
 
 ---
 
@@ -40,27 +38,6 @@ Le site lui-meme sert de preuve de savoir-faire : ce qui est code ici doit etre 
 
 ---
 
-## Identite administrative (references rapides)
-
-| Champ | Valeur |
-|-------|--------|
-| Nom commercial | Djanni Studio |
-| Raison sociale | Gianni Jardin (EI) |
-| SIRET | 102 087 822 00015 |
-| APE | 6201Z (Programmation informatique) |
-| Email | contact@djannistudio.fr |
-| Telephone | 07 49 54 74 98 |
-| Mail pro heberge chez | Hostinger |
-| Nameservers DNS | Vercel |
-| TVA | Non applicable (art. 293B CGI) |
-| ACRE | Active jusqu'au 31/12/2026 |
-| Facturation | Indy (outil externe, pas dans ce repo) |
-
-Detail admin/fiscal complet : voir skill `djanni-admin-fiscal`.
-Detail charte/branding : voir skill `djanni-brand`.
-
----
-
 ## Regles absolues
 
 Non negociables, quel que soit le contexte ou la pression.
@@ -72,104 +49,9 @@ Non negociables, quel que soit le contexte ou la pression.
 5. **Pas de `dark:` inline** - dark mode via CSS custom properties dans `globals.css`
 6. **Pas de force push sur `main`** - branches creees depuis main fresh, jamais depuis une autre feature
 7. **Donnees statiques dans `constants.ts`** - source unique de verite, ne jamais dupliquer
-8. **Composants UI partages dans `@repo/ui`** - Button, Badge, Separator, `cn()`. Import depuis `@repo/ui/components/*` ou `@repo/ui/lib/*`
+8. **Composants UI partages dans `@repo/ui`** - import depuis `@repo/ui/components/*` ou `@repo/ui/lib/*`
 9. **ASCII propre dans tout document genere** - tirets simples `-`, guillemets droits `"` `'`, pas d'espaces insecables, pas d'apostrophes courbes. Accents francais OK
 10. **Aucune librairie d'animation JS** - ni Framer Motion, ni motion, ni autre. CSS-first uniquement (keyframes, transitions). Voir DESIGN.md section 9
-
----
-
-## Stack technique
-
-- **Framework** : Next.js 16.2.3 (App Router)
-- **Runtime** : Node 20+
-- **Langage** : TypeScript (strict)
-- **Package manager** : pnpm 10.30.2
-- **Architecture** : Monorepo Turborepo
-- **Style** : Tailwind CSS v4 (`@theme inline` + CSS custom properties dans `packages/ui/src/styles/globals.css`)
-- **Animations** : CSS-first (keyframes, transitions CSS)
-- **Linter / formatter** : Biome
-- **i18n** : next-intl (locales : fr, en, br)
-- **Analytics** : Plausible (sans cookies, RGPD-friendly)
-- **Email transactionnel** : Resend
-- **Rate limit** : Upstash
-- **Service Worker** : Serwist
-- **CI** : GitHub Actions
-- **Deploiement** : Vercel
-
----
-
-## Structure du monorepo
-
-```
-apps/
-  website/                    # Next.js 16 (App Router) - site principal
-    src/
-      app/
-        globals.css           # Imports UI globals + animations + noise overlay
-        layout.tsx            # Root layout (fonts, metadata, JSON-LD, Plausible)
-        robots.ts             # SEO (disallow /api/)
-        sitemap.ts            # Sitemap dynamique (locales + projets + blog)
-        sw.ts                 # Service Worker Serwist
-        api/
-          contact/route.ts    # POST - formulaire contact (Resend + rate limit Upstash)
-        [locale]/
-          layout.tsx          # Navbar, Footer, FloatingCta
-          template.tsx        # Animations de transition
-          page.tsx            # Accueil
-          a-propos/
-          avis/
-          blog/               # Index + [slug]
-          cgv/
-          demande-projet/     # Formulaire de demande de projet
-          mentions-legales/
-          offres/
-          politique-de-confidentialite/
-          realisations/       # Index + [slug] (etudes de cas)
-      components/
-        cards/                # pricing-card, project-card, testimonial-card, process-step-card
-        layout/               # navbar, footer, language-switcher
-        sections/             # hero, offres, realisations, faq, blog, contact-form,
-                              # project-request-form, about-content, case-study-content, etc.
-        ui/                   # animated-section, aurora-background, browser-mockup, floating-cta,
-                              # lamp, accordion, section-header, section-divider,
-                              # text-hover-effect, profile-card
-        providers.tsx         # ThemeProvider + QueryClient + Sonner
-      i18n/
-        routing.ts            # Locales config (fr, en, br) + prefix as-needed
-        request.ts            # Chargement des messages par locale
-        navigation.ts         # Link, redirect, usePathname, useRouter, getPathname
-      lib/
-        constants.ts          # Donnees statiques (~745 lignes) - TOUT est ici
-        metadata.ts           # Helper metadata par page
-      messages/
-        fr.json               # ~815 lignes - francais (defaut)
-        en.json               # ~800 lignes - anglais
-        br.json               # ~807 lignes - breton
-    public/
-      projects/               # Screenshots realisations
-      icons/                  # PWA icons (192, 512)
-      manifest.json           # PWA manifest
-      og-image.png            # Image OpenGraph
-packages/
-  ui/                         # Composants partages + design tokens
-    src/
-      components/             # badge, button, separator
-      lib/utils.ts            # cn() - class merge helper (clsx + tailwind-merge)
-      styles/globals.css      # @theme inline (Tailwind v4) + CSS custom properties
-```
-
----
-
-## Source de verite design
-
-`DESIGN.md` a la racine du repo est LA reference pour toute decision visuelle ou UI.
-
-Sections cles :
-- Section 7 : approche CSS-first (toujours prioriser CSS natif avant JS)
-- Section 9 : interdiction Framer Motion et librairies d'animation JS
-- Tokens couleurs, typographie, spacing, breakpoints
-
-Avant toute modification de composant ou de page, lire `DESIGN.md` si ce n'est pas deja fait dans la session.
 
 ---
 
@@ -188,79 +70,36 @@ Patterns appris a la dure. Ne pas re-tomber dedans.
 
 ---
 
-## Workflow Git
+## Workflow Git, Linear, devis (condense)
 
-- Toujours creer les branches depuis `main` fresh (jamais depuis une autre feature)
-- Un ticket Linear = une branche = une PR
-- Format nom de branche : `ds-NNN-slug-court` (ex: `ds-019-a-propos-v2`)
-- Messages de commit : francais, imperatif present, concis
-- Jamais de force-push sur `main`
-- PR toujours passee par review avant merge
+- Branches depuis `main` fresh, format `ds-NNN-slug-court` (ex: `ds-019-a-propos-v2`)
+- Un ticket Linear = une branche = une PR. Equipe Linear : `Djanni Studio` (DS-XXX)
+- Commits : francais, imperatif present, concis. Jamais de force-push sur main
+- Avant de creer un ticket : `list_issues` pour eviter doublons
+- Devis : format `DS-YYYY-NNN`, validite 30 jours, acompte 50/50 (sauf Presence 495/495)
+- Mention obligatoire commerciale : `TVA non applicable, art. 293B du CGI`
 
----
-
-## Tickets Linear
-
-- Equipe : **Djanni Studio**
-- Format ID : `DS-XXX` (numerotation continue)
-- Avant de creer un nouveau ticket, toujours lister les tickets existants (`list_issues`) pour eviter les doublons
-
----
-
-## Numerotation devis
-
-- Format : `DS-YYYY-NNN` (ex: `DS-2026-001`)
-- Validite standard : **30 jours**
-- Acompte : **50% signature / 50% livraison**, sauf offre Presence = 495 EUR / 495 EUR
-- Penalites de retard : 3x taux legal
-- Mention obligatoire sur tout document commercial : `TVA non applicable, art. 293B du CGI`
-
-Detail complet des clauses : voir skill `djanni-devis`.
-
----
-
-## Skills Djanni disponibles (pointeur)
-
-Claude charge le skill pertinent avant toute tache metier. `djanni-brand` se charge automatiquement en complement des autres skills Djanni.
-
-| Skill | Usage |
-|-------|-------|
-| `djanni-brand` | Source de verite ton/voix/identite - charge avec les autres |
-| `djanni-presence` | Offre Presence (990 EUR, 1 page, 2 semaines) |
-| `djanni-vitrine` | Offre Vitrine (1 490 EUR, jusqu'a 5 pages, 3 semaines) |
-| `djanni-sur-mesure` | Offre Sur mesure (1 990 EUR+, jusqu'a 8 pages, 3-5 semaines) |
-| `djanni-devis` | Devis, propositions commerciales, bons de commande |
-| `djanni-prospection` | Recherche prospects, scripts cold call, objections |
-| `djanni-relance` | Relance prospect/client silencieux |
-| `djanni-onboarding-client` | Process post-signature jusqu'a livraison |
-| `djanni-case-study` | Etudes de cas (/realisations, contenu social) |
-| `djanni-social-posts` | Posts Instagram / LinkedIn / Facebook |
-| `djanni-web-audit` | Audit sites prospects ou concurrents |
-| `djanni-review` | Review interne pages (juridique, copy, coherence) |
-| `djanni-admin-fiscal` | URSSAF, ACRE, declarations, echeances |
-| `djanni-brainstorm` | Brainstorming strategique et deblocage |
-| `pcg-traducteur` | Comptabilite PCG (compte pour une operation) |
+Detail clauses devis : skill `djanni-devis`. Detail admin/fiscal : skill `djanni-admin-fiscal`.
 
 ---
 
 ## Ce que ce repo N'EST PAS
 
-- **Pas un site client** : djannistudio.fr est la vitrine de Djanni Studio lui-meme
-- **Pas le GOAF Companion App** : autre projet, autre repo, autre stack
-- **Pas un site WordPress ou page builder** : pur Next.js, code ecrit a la main
-- **Pas un monorepo apps/api + apps/web** : architecture actuelle = `apps/website` + `packages/ui` uniquement
+- Pas un site client (djannistudio.fr = vitrine de Djanni Studio lui-meme)
+- Pas le GOAF Companion App (autre projet, autre repo, autre stack)
+- Pas un site WordPress ou page builder (pur Next.js, code ecrit a la main)
+- Pas un monorepo apps/api + apps/web (architecture actuelle : `apps/website` + `packages/ui` uniquement)
 
 ---
 
-## Check rapide avant chaque session
+## Check avant chaque session
 
 1. Lire `DESIGN.md` si on touche a l'UI
-2. Verifier qu'on est sur une branche creee depuis `main` fresh
-3. Identifier le ticket DS-XXX cible avant de coder
-4. Charger le skill Djanni pertinent avant une tache metier
-5. i18n : toute cle ajoutee dans les 3 fichiers (`fr.json`, `en.json`, `br.json`)
+2. Verifier branche creee depuis `main` fresh
+3. Identifier le ticket DS-XXX cible
+4. Charger le skill Djanni pertinent pour les taches metier
+5. i18n : toute cle ajoutee dans LES 3 fichiers de messages
 6. `pnpm lint:fix && pnpm format` avant commit, `pnpm checks` avant push
-7. Formater les outputs en ASCII propre (pas d'em dashes, pas de guillemets typographiques)
 
 ---
 
@@ -285,10 +124,10 @@ A traiter au fil des sessions. Mis a jour par stop hook (a configurer en etape 3
 ### [CHOIX EN ATTENTE]
 
 - **Audience CLAUDE.md** confirmee : toi + Claude exclusivement. Si un freelance arrive un jour, creer `CONTRIBUTING.md` separe (pas ici)
-- **Niveau de detail** confirme : reference complete au racine, conventions specifiques dans les sous-CLAUDE.md
+- **Niveau de detail** confirme : reference seche au racine, detail dans les sous-CLAUDE.md
 - **MCP servers a connecter par defaut** sur ce repo : a trancher en etape 4 (extension A3). Candidats : Linear DS, Supabase, Vercel, n8n
 - **Strategie subagents** : a definir en etape 4
 
 ---
 
-*Source de verite repo Djanni Studio - v4 fusionnee - mai 2026. Iteration sur v3 (avril 2026).*
+*Source de verite repo Djanni Studio - v4 index sec - mai 2026. Iteration sur v4 fusionnee (DS-70).*
