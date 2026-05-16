@@ -6,7 +6,7 @@ import { AnimatedSection } from "@/components/ui/animated-section"
 import { Link } from "@/i18n/navigation"
 import type { BlogPost } from "@/lib/constants"
 
-// ─── Custom block renderers ────────────────────────────────────
+// --- Custom block renderers ------------------------------------
 
 function BriefBlock({ children }: { children: React.ReactNode[] }) {
 	return (
@@ -49,7 +49,7 @@ function Blockquote({ children }: { children: React.ReactNode[] }) {
 	)
 }
 
-// ─── Markdown parser ───────────────────────────────────────────
+// --- Markdown parser -------------------------------------------
 
 function renderMarkdown(content: string) {
 	const lines = content.split("\n")
@@ -287,7 +287,7 @@ function renderInline(text: string): React.ReactNode {
 	})
 }
 
-// ─── Component ─────────────────────────────────────────────────
+// --- Component -------------------------------------------------
 
 export function BlogPostContent({
 	post,
