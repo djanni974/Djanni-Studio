@@ -32,8 +32,8 @@ Site vitrine et moteur d'acquisition de Djanni Studio (micro-entreprise dev web 
 |----------|---------------|---------------------|
 | `README.md` | Stack precise, scripts, variables d'env, design system, i18n, checklist PR | Source de verite |
 | `DESIGN.md` | Toute decision UI/visuelle. Section 7 (CSS-first), section 9 (no JS animation lib) | Source de verite |
-| `apps/website/CLAUDE.md` | Conventions specifiques au site (App Router, sections, constants.ts) | Source de verite (a creer DS-XXX) |
-| `packages/ui/CLAUDE.md` | Conventions composants partages, design tokens | Source de verite (a creer DS-XXX) |
+| `apps/website/CLAUDE.md` | Conventions specifiques au site (App Router, i18n, sections, constants.ts, API routes, gestion d'erreurs) | Source de verite (DS-72) |
+| `packages/ui/CLAUDE.md` | Decision DS-72 : non cree (3 primitives, DESIGN.md couvre les tokens). Conventions `@repo/ui` documentees dans apps/website/CLAUDE.md section 9 | N/A |
 | Skills `djanni-*` | Taches metier (devis, prospection, blog, brand, etc) - chargement automatique | Source de verite |
 
 ---
@@ -111,7 +111,10 @@ A traiter au fil des sessions. Mis a jour par stop hook (a configurer en etape 3
 
 - **DS-22** (CGV + AME CONSO mediator refonte) en draft - DOIT merger avant prochaine signature client pour conformite L.215-1 / L.221-5 / L.612-1
 - **`motion` 12.x liste dans README** mais regle absolue n.10 interdit toute lib d'animation JS - soit retirer la dep du package.json, soit retirer la regle. Trancher
-- **Pas de packages/db ni packages/api** alors que le projet utilise Supabase et a un router tRPC potentiel - actuellement tout dans `apps/website`. A statuer : extraire dans des packages ou rester monolithique cote app
+- **Stack declaree vs stack utilisee dans apps/website** (verifie code reel, DS-72) :
+  - tRPC et Zod : declares dans la stack potentielle, 0 occurrence dans apps/website. API routes Next directes, validation manuelle (voir `apps/website/CLAUDE.md` section 6)
+  - Drizzle : non utilise. Supabase : utilise via `@supabase/supabase-js` pour le CRM, pas dans `/api/contact` (route email-only)
+  - Pas de `packages/db` ni `packages/api` dans le repo. Architecture monolithique cote app. A reconsiderer si un 2e app arrive (back-office, etc.)
 
 ### [INCONNU - a verifier en CLI]
 
