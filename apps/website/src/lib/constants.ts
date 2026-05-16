@@ -198,11 +198,11 @@ export const PROJECTS: Project[] = [
 	},
 ]
 
-// ─── Google Reviews ──────────────────────────────────────────
+// ----- Google Reviews -----
 // Remplace "#" par ton lien Google Reviews quand tu auras ta fiche
 export const GOOGLE_REVIEW_URL = "#"
 
-// ─── Blog ────────────────────────────────────────────────────
+// ----- Blog -----
 
 export type BlogPost = {
 	slug: string

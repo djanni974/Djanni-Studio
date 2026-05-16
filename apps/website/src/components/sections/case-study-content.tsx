@@ -67,7 +67,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 
 	return (
 		<>
-			{/* ── Section 1: Immersive Hero (dark) ── */}
+			{/* -- Section 1: Immersive Hero (dark) -- */}
 			<section className="relative overflow-hidden px-5 pt-32 pb-20 md:px-12 md:pt-40 md:pb-28">
 				<div
 					className="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -152,7 +152,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 				</div>
 			</section>
 
-			{/* ── Section 2: Story - Context / Problem / Solution ── */}
+			{/* -- Section 2: Story - Context / Problem / Solution -- */}
 			<section className="px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[1100px]">
 					<StaggerContainer className="grid gap-0">
@@ -256,7 +256,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 				</div>
 			</section>
 
-			{/* ── Section 3: Visual Gallery (dark) - remaining screenshots ── */}
+			{/* -- Section 3: Visual Gallery (dark) - remaining screenshots -- */}
 			{remainingScreenshots.length > 0 && (
 				<section className="relative overflow-hidden bg-linear-to-b from-[#161614] to-[#1e1e1c] px-5 py-16 md:px-12 md:py-24">
 					<div
@@ -289,7 +289,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 				</section>
 			)}
 
-			{/* ── Section 4: Results - Big Numbers ── */}
+			{/* -- Section 4: Results - Big Numbers -- */}
 			<section className="px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>
@@ -335,7 +335,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 				</div>
 			</section>
 
-			{/* ── Section 5: Tech Stack ── */}
+			{/* -- Section 5: Tech Stack -- */}
 			<section className="px-5 py-20 md:px-12">
 				<div className="mx-auto max-w-[800px]">
 					<AnimatedSection>
@@ -358,7 +358,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 				</div>
 			</section>
 
-			{/* ── Section 6: Testimonial (dark) ── */}
+			{/* -- Section 6: Testimonial (dark) -- */}
 			{project.testimonial && (
 				<section className="relative overflow-hidden bg-linear-to-b from-[#161614] to-[#1e1e1c] px-5 py-28 md:px-12">
 					<div
@@ -388,7 +388,7 @@ export function CaseStudyContent({ project }: { project: Project }) {
 				</section>
 			)}
 
-			{/* ── Section 7: CTA ── */}
+			{/* -- Section 7: CTA -- */}
 			<section className="px-5 py-16 md:px-12 md:py-20">
 				<div className="mx-auto max-w-[1100px]">
 					<AnimatedSection>

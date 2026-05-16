@@ -3,7 +3,7 @@ import { Redis } from "@upstash/redis"
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 
-// ─── Rate limiter (Upstash Redis - works in serverless) ─────
+// --- Rate limiter (Upstash Redis - works in serverless) -----
 // Fallback to in-memory if Upstash is not configured
 const hasUpstash = process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
 
@@ -33,7 +33,7 @@ async function checkRateLimit(ip: string): Promise<boolean> {
 	return entry.count <= 3
 }
 
-// ─── Origin / Referer CSRF check ────────────────────────────
+// --- Origin / Referer CSRF check ----------------------------
 const ALLOWED_ORIGINS = [
 	"https://www.djannistudio.fr",
 	"https://djannistudio.fr",
@@ -406,24 +406,24 @@ function escapeHtml(str: string): string {
 
 export async function POST(request: Request) {
 	try {
-		// ─── Content-Type guard ──────────────────────────────
+		// --- Content-Type guard ------------------------------
 		const contentType = request.headers.get("content-type") || ""
 		if (!contentType.includes("application/json")) {
 			return NextResponse.json({ error: "Content-Type invalide." }, { status: 415 })
 		}
 
-		// ─── Payload size guard ──────────────────────────────
+		// --- Payload size guard ------------------------------
 		const contentLength = Number(request.headers.get("content-length") || 0)
 		if (contentLength > 10_000) {
 			return NextResponse.json({ error: "Requête trop volumineuse." }, { status: 413 })
 		}
 
-		// ─── CSRF: verify origin ─────────────────────────────
+		// --- CSRF: verify origin -----------------------------
 		if (!isOriginAllowed(request)) {
 			return NextResponse.json({ error: "Origine non autorisée." }, { status: 403 })
 		}
 
-		// ─── Rate limiting (Upstash Redis / fallback memory) ─
+		// --- Rate limiting (Upstash Redis / fallback memory) -
 		const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown"
 		const allowed = await checkRateLimit(ip)
 
@@ -436,18 +436,18 @@ export async function POST(request: Request) {
 
 		const body = await request.json()
 
-		// ─── Anti-bot: honeypot ──────────────────────────────
+		// --- Anti-bot: honeypot ------------------------------
 		if (body._hp) {
 			return NextResponse.json({ success: true })
 		}
 
-		// ─── Anti-bot: time check (< 3s = likely bot) ────────
+		// --- Anti-bot: time check (< 3s = likely bot) --------
 		const submittedAt = Number(body._t || 0)
 		if (submittedAt && Date.now() - submittedAt < 3_000) {
 			return NextResponse.json({ success: true })
 		}
 
-		// ─── Sanitize: trim all string fields ────────────────
+		// --- Sanitize: trim all string fields ----------------
 		for (const key of Object.keys(body)) {
 			if (typeof body[key] === "string") {
 				body[key] = body[key].trim()
