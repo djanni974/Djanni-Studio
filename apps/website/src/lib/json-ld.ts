@@ -1,12 +1,16 @@
+import type { BlogPost } from "@/lib/constants"
+
+const SITE_URL = "https://www.djannistudio.fr"
+
 export const siteJsonLd = {
 	"@context": "https://schema.org",
 	"@type": "ProfessionalService",
 	name: "Djanni Studio",
 	description: "Création de sites web sur mesure pour artisans et commerçants en Bretagne",
-	url: "https://www.djannistudio.fr",
+	url: SITE_URL,
 	email: "contact@djannistudio.fr",
 	telephone: "+33749547498",
-	image: "https://www.djannistudio.fr/og-image.png",
+	image: `${SITE_URL}/og-image.png`,
 	address: {
 		"@type": "PostalAddress",
 		streetAddress: "4 boulevard Jules Verger",
@@ -39,4 +43,67 @@ export const siteJsonLd = {
 		name: "Gianni",
 		jobTitle: "Développeur web",
 	},
+}
+
+export type BreadcrumbItem = {
+	name: string
+	path: string
+}
+
+export function breadcrumbSchema(items: BreadcrumbItem[]) {
+	return {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		itemListElement: items.map((item, index) => ({
+			"@type": "ListItem",
+			position: index + 1,
+			name: item.name,
+			item: `${SITE_URL}${item.path}`,
+		})),
+	}
+}
+
+export function blogPostingSchema(post: BlogPost) {
+	return {
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		headline: post.title,
+		description: post.excerpt,
+		datePublished: post.publishedAt,
+		author: {
+			"@type": "Person",
+			name: "Gianni Jardin",
+			url: `${SITE_URL}/a-propos`,
+		},
+		publisher: {
+			"@type": "Organization",
+			name: "Djanni Studio",
+			url: SITE_URL,
+			logo: {
+				"@type": "ImageObject",
+				url: `${SITE_URL}/og-image.png`,
+			},
+		},
+		mainEntityOfPage: {
+			"@type": "WebPage",
+			"@id": `${SITE_URL}/blog/${post.slug}`,
+		},
+		image: `${SITE_URL}/og-image.png`,
+		articleSection: post.category,
+	}
+}
+
+export function websiteSchema() {
+	return {
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		name: "Djanni Studio",
+		url: SITE_URL,
+		inLanguage: ["fr", "en", "br"],
+		publisher: {
+			"@type": "Organization",
+			name: "Djanni Studio",
+			url: SITE_URL,
+		},
+	}
 }

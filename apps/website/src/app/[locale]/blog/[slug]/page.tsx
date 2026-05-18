@@ -3,8 +3,10 @@ import { notFound } from "next/navigation"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { BlogPostContent } from "@/components/sections/blog-post-content"
+import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { BLOG_POSTS } from "@/lib/constants"
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/json-ld"
 import { getAlternates, pickMessages } from "@/lib/metadata"
 
 export function generateStaticParams() {
@@ -64,41 +66,19 @@ export default async function BlogPostPage({
 	const prevPost = postIndex < sortedPosts.length - 1 ? sortedPosts[postIndex + 1] : null
 	const nextPost = postIndex > 0 ? sortedPosts[postIndex - 1] : null
 
-	const blogPostJsonLd = {
-		"@context": "https://schema.org",
-		"@type": "BlogPosting",
-		headline: post.title,
-		description: post.excerpt,
-		datePublished: post.publishedAt,
-		author: {
-			"@type": "Person",
-			name: "Gianni Jardin",
-			url: "https://www.djannistudio.fr/a-propos",
-		},
-		publisher: {
-			"@type": "Organization",
-			name: "Djanni Studio",
-			url: "https://www.djannistudio.fr",
-		},
-		mainEntityOfPage: `https://www.djannistudio.fr/blog/${slug}`,
-	}
+	const trail = [
+		{ name: bc("home"), path: "/" },
+		{ name: bc("blog"), path: "/blog" },
+		{ name: post.title, path: `/blog/${slug}` },
+	]
 
 	return (
 		<main className="relative">
-			<script
-				type="application/ld+json"
-				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostJsonLd) }}
-			/>
+			<JsonLd data={blogPostingSchema(post)} />
+			<JsonLd data={breadcrumbSchema(trail)} />
 			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
-					<Breadcrumb
-						items={[
-							{ label: bc("home"), href: "/" },
-							{ label: bc("blog"), href: "/blog" },
-							{ label: post.title, href: `/blog/${slug}` },
-						]}
-					/>
+					<Breadcrumb items={trail.map((t) => ({ label: t.name, href: t.path }))} />
 				</div>
 			</div>
 			<NextIntlClientProvider messages={pickMessages(messages, ["blogPost"])}>
