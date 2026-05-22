@@ -5,7 +5,7 @@ import { getLocale } from "next-intl/server"
 import { PlausibleScript } from "@/components/analytics/plausible-script"
 import { Providers } from "@/components/providers"
 import { JsonLd } from "@/components/seo/json-ld"
-import { siteJsonLd } from "@/lib/json-ld"
+import { siteJsonLd, websiteSchema } from "@/lib/json-ld"
 import { getRootMetadata } from "@/lib/metadata"
 import "./globals.css"
 
@@ -38,6 +38,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 			<body className="overflow-x-clip antialiased" suppressHydrationWarning>
 				<PlausibleScript />
 				<JsonLd data={siteJsonLd} />
+				<JsonLd data={websiteSchema()} />
 				<Providers>{children}</Providers>
 				<SpeedInsights />
 			</body>

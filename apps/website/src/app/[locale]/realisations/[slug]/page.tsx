@@ -3,8 +3,10 @@ import { notFound } from "next/navigation"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { CaseStudyContent } from "@/components/sections/case-study-content"
+import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { PROJECTS } from "@/lib/constants"
+import { breadcrumbSchema } from "@/lib/json-ld"
 import { getAlternates, pickMessages } from "@/lib/metadata"
 
 export function generateStaticParams() {
@@ -55,17 +57,18 @@ export default async function CaseStudyPage({
 	const project = PROJECTS.find((p) => p.slug === slug)
 	if (!project) notFound()
 
+	const trail = [
+		{ name: bc("home"), path: "/" },
+		{ name: bc("realisations"), path: "/realisations" },
+		{ name: project.name, path: `/realisations/${slug}` },
+	]
+
 	return (
 		<main id="main" className="relative">
+			<JsonLd data={breadcrumbSchema(trail)} />
 			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
-					<Breadcrumb
-						items={[
-							{ label: bc("home"), href: "/" },
-							{ label: bc("realisations"), href: "/realisations" },
-							{ label: project.name, href: `/realisations/${slug}` },
-						]}
-					/>
+					<Breadcrumb items={trail.map((t) => ({ label: t.name, href: t.path }))} />
 				</div>
 			</div>
 			<NextIntlClientProvider messages={pickMessages(messages, ["caseStudy"])}>
