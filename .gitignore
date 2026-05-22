@@ -30,6 +30,7 @@ pnpm-debug.log*
 
 # claude code
 .claude/
+.agents/
 settings.local.json
 
 # serwist (generated at build)
