@@ -29,7 +29,14 @@ pnpm-debug.log*
 .turbo/
 
 # claude code
-.claude/
+# ignore tout .claude/ sauf nos agents et skills versionnes a la main.
+# Les skills installes via skills-lock.json vivent dans .agents/ (symlinks) -> ignores.
+.claude/*
+!.claude/agents/
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/pr-ready/
+!.claude/skills/audit-prospect/
 .agents/
 settings.local.json
 
