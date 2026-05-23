@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Viewport } from "next"
 import { DM_Sans, Syne } from "next/font/google"
@@ -40,6 +41,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 				<JsonLd data={siteJsonLd} />
 				<JsonLd data={websiteSchema()} />
 				<Providers>{children}</Providers>
+				<Analytics />
 				<SpeedInsights />
 			</body>
 		</html>
