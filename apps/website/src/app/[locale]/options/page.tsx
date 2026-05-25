@@ -33,7 +33,7 @@ export default async function OptionsPage({ params }: { params: Promise<{ locale
 	])
 
 	return (
-		<main className="relative">
+		<main id="main" className="relative">
 			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<Breadcrumb

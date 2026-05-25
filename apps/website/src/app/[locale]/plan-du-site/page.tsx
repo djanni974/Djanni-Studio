@@ -75,7 +75,7 @@ export default async function SitemapPage({ params }: { params: Promise<{ locale
 	]
 
 	return (
-		<main>
+		<main id="main">
 			{/* Hero */}
 			<section className="relative overflow-hidden px-5 pt-32 pb-20 md:px-12 md:pt-40 md:pb-24">
 				{/* Dot grid */}

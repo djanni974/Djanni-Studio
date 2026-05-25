@@ -73,7 +73,7 @@ export default async function BlogPostPage({
 	]
 
 	return (
-		<main className="relative">
+		<main id="main" className="relative">
 			<JsonLd data={blogPostingSchema(post)} />
 			<JsonLd data={breadcrumbSchema(trail)} />
 			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">

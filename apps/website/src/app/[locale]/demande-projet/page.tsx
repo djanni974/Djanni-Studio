@@ -70,7 +70,7 @@ export default async function DemandeProjetPage({
 
 	return (
 		<NextIntlClientProvider messages={pickMessages(messages, ["projectRequest", "contactFaq"])}>
-			<main className="relative overflow-hidden">
+			<main id="main" className="relative overflow-hidden">
 				<script
 					type="application/ld+json"
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data

@@ -121,7 +121,7 @@ export default async function CityPage({
 	]
 
 	return (
-		<main className="relative">
+		<main id="main" className="relative">
 			<script
 				type="application/ld+json"
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data

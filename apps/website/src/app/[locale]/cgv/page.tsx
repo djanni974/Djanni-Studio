@@ -267,7 +267,7 @@ export default async function CGV({ params }: { params: Promise<{ locale: string
 	const bc = await getTranslations({ locale, namespace: "breadcrumb" })
 
 	return (
-		<main className="mx-auto max-w-[720px] px-6 pt-32 pb-20 md:px-12">
+		<main id="main" className="mx-auto max-w-[720px] px-6 pt-32 pb-20 md:px-12">
 			<Breadcrumb
 				items={[
 					{ label: bc("home"), href: "/" },
