@@ -24,7 +24,7 @@ export async function generateMetadata({
 	return {
 		title: t("title"),
 		description: t("description"),
-		alternates: getAlternates("/demande-projet"),
+		alternates: getAlternates("/demande-projet", locale),
 		keywords: [
 			"devis site web gratuit Bretagne",
 			"demande création site internet artisan",

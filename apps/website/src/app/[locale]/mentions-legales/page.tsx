@@ -5,12 +5,17 @@ import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { Link } from "@/i18n/navigation"
 import { getAlternates } from "@/lib/metadata"
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+	const { locale } = await params
 	return {
 		title: "Mentions légales - Djanni Studio",
 		description:
 			"Mentions légales du site Djanni Studio - Création de sites web pour artisans et commerçants en Bretagne.",
-		alternates: getAlternates("/mentions-legales"),
+		alternates: getAlternates("/mentions-legales", locale),
 		openGraph: {
 			title: "Mentions légales - Djanni Studio",
 			description:

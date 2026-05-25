@@ -20,14 +20,14 @@ export async function generateMetadata({
 }: {
 	params: Promise<{ slug: string; locale: string }>
 }): Promise<Metadata> {
-	const { slug } = await params
+	const { slug, locale } = await params
 	const post = BLOG_POSTS.find((p) => p.slug === slug)
 	if (!post) return {}
 
 	return {
 		title: `${post.title} - Blog Djanni Studio`,
 		description: post.excerpt,
-		alternates: getAlternates(`/blog/${slug}`),
+		alternates: getAlternates(`/blog/${slug}`, locale),
 		openGraph: {
 			title: `${post.title} - Blog Djanni Studio`,
 			description: post.excerpt,

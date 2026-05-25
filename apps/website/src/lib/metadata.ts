@@ -16,15 +16,15 @@ function localizedPath(path: string, locale: string) {
 	return `/${locale}${path}`
 }
 
-export function getAlternates(path: string) {
+export function getAlternates(path: string, locale: string = defaultLocale) {
 	const languages: Record<string, string> = {}
-	for (const locale of locales) {
-		languages[locale] = `${BASE_URL}${localizedPath(path, locale)}`
+	for (const loc of locales) {
+		languages[loc] = `${BASE_URL}${localizedPath(path, loc)}`
 	}
 	languages["x-default"] = `${BASE_URL}${localizedPath(path, defaultLocale)}`
 
 	return {
-		canonical: `${BASE_URL}${path || "/"}`,
+		canonical: `${BASE_URL}${localizedPath(path, locale)}`,
 		languages,
 	}
 }

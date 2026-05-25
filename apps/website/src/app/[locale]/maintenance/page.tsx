@@ -16,7 +16,7 @@ export async function generateMetadata({
 	return {
 		title: t("title"),
 		description: t("description"),
-		alternates: getAlternates("/maintenance"),
+		alternates: getAlternates("/maintenance", locale),
 		openGraph: {
 			title: t("title"),
 			description: t("description"),

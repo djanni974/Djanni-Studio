@@ -16,7 +16,7 @@ export async function generateMetadata({
 	return {
 		title: t("title"),
 		description: t("description"),
-		alternates: getAlternates("/realisations"),
+		alternates: getAlternates("/realisations", locale),
 		keywords: [
 			"portfolio site web artisan Bretagne",
 			"réalisations web Dinard",

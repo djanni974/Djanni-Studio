@@ -4,12 +4,17 @@ import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { Link } from "@/i18n/navigation"
 import { getAlternates } from "@/lib/metadata"
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+	const { locale } = await params
 	return {
 		title: "Politique de confidentialité - Djanni Studio",
 		description:
 			"Politique de confidentialité du site Djanni Studio - Protection de vos données personnelles conformément au RGPD.",
-		alternates: getAlternates("/politique-de-confidentialite"),
+		alternates: getAlternates("/politique-de-confidentialite", locale),
 		openGraph: {
 			title: "Politique de confidentialité - Djanni Studio",
 			description:

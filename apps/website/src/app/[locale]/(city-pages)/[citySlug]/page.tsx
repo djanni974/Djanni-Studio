@@ -33,7 +33,7 @@ export async function generateMetadata({
 	return {
 		title: t("title"),
 		description: t("description"),
-		alternates: getAlternates(`/${city.slug}`),
+		alternates: getAlternates(`/${city.slug}`, locale),
 		keywords: [
 			`création site web ${city.cityName}`,
 			`développeur web ${city.cityName}`,
