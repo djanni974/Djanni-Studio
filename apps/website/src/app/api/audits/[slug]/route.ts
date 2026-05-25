@@ -18,17 +18,30 @@ import type { AuditPublic } from "@/lib/supabase/types"
 
 export const dynamic = "force-dynamic"
 
+let cachedIpHashSalt: string | null = null
+
 /**
- * Resout le sel de hash des IP une seule fois au chargement du module.
+ * Resout le sel de hash des IP a la PREMIERE requete, pas au chargement du module.
+ *
+ * Lire le sel au niveau module le faisait evaluer pendant `next build` (collecte
+ * des page data, NODE_ENV=production) ou la variable n'est pas injectee dans
+ * l'environnement du build (Turborepo la filtre) : le throw fail-closed cassait
+ * alors le build de prod. On differe donc la resolution au runtime, ou Vercel
+ * injecte bien la variable dans la fonction serverless.
  *
  * RGPD : sans sel secret, les hash d IP sont reversibles (l espace IPv4 est
  * brute-forcable en SHA-256). En production, l absence de AUDIT_VIEW_IP_SALT
- * est donc une erreur fatale (fail-closed) plutot qu un fallback silencieux.
- * En dev/test uniquement, on tolere un sel par defaut explicite.
+ * reste une erreur fatale (fail-closed) au moment de la requete ; en dev/test
+ * on tolere un sel par defaut explicite.
  */
-function resolveIpHashSalt(): string {
+function getIpHashSalt(): string {
+	if (cachedIpHashSalt !== null) return cachedIpHashSalt
+
 	const salt = process.env.AUDIT_VIEW_IP_SALT
-	if (salt && salt.length > 0) return salt
+	if (salt && salt.length > 0) {
+		cachedIpHashSalt = salt
+		return cachedIpHashSalt
+	}
 
 	if (process.env.NODE_ENV === "production") {
 		throw new Error(
@@ -39,14 +52,13 @@ function resolveIpHashSalt(): string {
 	console.warn(
 		"[api/audits/:slug] AUDIT_VIEW_IP_SALT absent : fallback dev. NE JAMAIS utiliser en production.",
 	)
-	return "djanni-dev-only-salt"
+	cachedIpHashSalt = "djanni-dev-only-salt"
+	return cachedIpHashSalt
 }
-
-const IP_HASH_SALT = resolveIpHashSalt()
 
 function hashIp(ip: string | null): string | null {
 	if (!ip) return null
-	return createHash("sha256").update(`${IP_HASH_SALT}:${ip}`).digest("hex").slice(0, 32)
+	return createHash("sha256").update(`${getIpHashSalt()}:${ip}`).digest("hex").slice(0, 32)
 }
 
 function extractClientIp(request: Request): string | null {
