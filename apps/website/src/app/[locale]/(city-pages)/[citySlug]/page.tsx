@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { CITY_PAGES } from "@/lib/constants"
 import { breadcrumbSchema } from "@/lib/json-ld"
-import { getAlternates, pickMessages } from "@/lib/metadata"
+import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 
 export const dynamicParams = false
 
@@ -43,6 +43,7 @@ export async function generateMetadata({
 			`site web artisan ${city.cityName}`,
 		],
 		openGraph: {
+			images: getOgImage(locale),
 			title: t("title"),
 			description: t("description"),
 		},

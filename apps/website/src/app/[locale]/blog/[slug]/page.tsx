@@ -34,14 +34,6 @@ export async function generateMetadata({
 			type: "article",
 			publishedTime: post.publishedAt,
 			authors: ["Gianni - Djanni Studio"],
-			images: [
-				{
-					url: "/og-image.png",
-					width: 1200,
-					height: 630,
-					alt: post.title,
-				},
-			],
 		},
 	}
 }

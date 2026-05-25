@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { AvisContent } from "@/components/sections/avis-content"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
-import { pickMessages } from "@/lib/metadata"
+import { getOgImage, pickMessages } from "@/lib/metadata"
 
 export async function generateMetadata({
 	params,
@@ -18,9 +18,9 @@ export async function generateMetadata({
 		description: t("description"),
 		robots: { index: false, follow: false },
 		openGraph: {
+			images: getOgImage(locale),
 			title: t("title"),
 			description: t("description"),
-			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
 		},
 	}
 }

@@ -6,7 +6,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { ContactFaq } from "@/components/sections/contact-faq"
 import { ProjectRequestForm } from "@/components/sections/project-request-form"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
-import { getAlternates, pickMessages } from "@/lib/metadata"
+import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 import { AboutGianni } from "./_components/AboutGianni"
 import { AltContact } from "./_components/AltContact"
 import { PageHeader } from "./_components/PageHeader"
@@ -35,6 +35,7 @@ export async function generateMetadata({
 			"réponse 24h création site web",
 		],
 		openGraph: {
+			images: getOgImage(locale),
 			title: t("title"),
 			description: t("description"),
 		},

@@ -31,14 +31,6 @@ export async function generateMetadata({
 		openGraph: {
 			title: `${project.name} - Djanni Studio`,
 			description: project.context.slice(0, 160),
-			images: [
-				{
-					url: project.image || "/og-image.png",
-					width: 1200,
-					height: 630,
-					alt: project.name,
-				},
-			],
 		},
 	}
 }

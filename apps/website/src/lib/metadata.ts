@@ -29,13 +29,24 @@ export function getAlternates(path: string, locale: string = defaultLocale) {
 	}
 }
 
+// Image OG dynamique (opengraph-image.tsx) pour la locale. URL alignee sur
+// localizedPath : sans prefixe pour fr (defaut), prefixee pour en/br.
+export function getOgImage(locale: string) {
+	return [
+		{
+			url: `${BASE_URL}${localizedPath("/opengraph-image", locale)}`,
+			width: 1200,
+			height: 630,
+			alt: "Djanni Studio",
+		},
+	]
+}
+
 const SITE_TITLE = "Djanni Studio - Sites web pour artisans & commerçants"
 const SITE_DESCRIPTION =
 	"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises - un site qui vous ressemble et ramène des clients."
 const OG_DESCRIPTION =
 	"Ancien charpentier devenu développeur web. Je crée des sites modernes pour les artisans et commerçants à Dinard, Saint-Malo et toute la Côte d'Émeraude."
-const OG_IMAGE_URL = `${BASE_URL}/og-image.png`
-
 const KEYWORDS = [
 	"création site web Bretagne",
 	"développeur web freelance Bretagne",
@@ -81,20 +92,11 @@ export function getRootMetadata(): Metadata {
 			siteName: "Djanni Studio",
 			type: "website",
 			locale: "fr_FR",
-			images: [
-				{
-					url: OG_IMAGE_URL,
-					width: 1200,
-					height: 630,
-					alt: "Djanni Studio - Sites web pour artisans & commerçants en Bretagne",
-				},
-			],
 		},
 		twitter: {
 			card: "summary_large_image",
 			title: SITE_TITLE,
 			description: "Sites web pour artisans et commerçants en Bretagne",
-			images: [OG_IMAGE_URL],
 		},
 		icons: {
 			icon: [

@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { RealisationsListContent } from "@/components/sections/realisations-list-content"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
-import { getAlternates, pickMessages } from "@/lib/metadata"
+import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 
 export async function generateMetadata({
 	params,
@@ -29,6 +29,7 @@ export async function generateMetadata({
 			"site web Lighthouse 99",
 		],
 		openGraph: {
+			images: getOgImage(locale),
 			title: t("title"),
 			description: t("description"),
 		},

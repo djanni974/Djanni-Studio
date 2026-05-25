@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { Link } from "@/i18n/navigation"
-import { getAlternates } from "@/lib/metadata"
+import { getAlternates, getOgImage } from "@/lib/metadata"
 
 export async function generateMetadata({
 	params,
@@ -16,10 +16,10 @@ export async function generateMetadata({
 			"CGV de Djanni Studio - Conditions applicables aux prestations de création de sites web.",
 		alternates: getAlternates("/cgv", locale),
 		openGraph: {
+			images: getOgImage(locale),
 			title: "Conditions Générales de Vente - Djanni Studio",
 			description:
 				"CGV de Djanni Studio - Conditions applicables aux prestations de création de sites web.",
-			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
 		},
 	}
 }
