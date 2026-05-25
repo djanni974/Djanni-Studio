@@ -18,7 +18,7 @@ export async function generateMetadata({
 	return {
 		title: t("title"),
 		description: t("description"),
-		alternates: getAlternates(""),
+		alternates: getAlternates("", locale),
 		keywords: [
 			"création site web artisan Bretagne",
 			"site web artisan Dinard",

@@ -26,6 +26,13 @@ const csp = [
 const nextConfig: NextConfig = {
 	poweredByHeader: false,
 	transpilePackages: ["@repo/ui"],
+	// Les polices Syne lues au runtime par les opengraph-image.tsx (via fs) doivent etre
+	// embarquees dans le bundle serverless (le tracing auto ne suit pas readFile dynamique).
+	// Glob "/**" pour matcher toutes les routes : les chemins contiennent [locale]/[slug],
+	// dont les crochets casseraient un match glob plus specifique.
+	outputFileTracingIncludes: {
+		"/**": ["./src/lib/og-fonts/*.ttf"],
+	},
 	images: {
 		formats: ["image/avif", "image/webp"],
 	},

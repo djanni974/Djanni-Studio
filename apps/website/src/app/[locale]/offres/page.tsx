@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { OffresContent } from "@/components/sections/offres-content"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
-import { getAlternates, pickMessages } from "@/lib/metadata"
+import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 
 export async function generateMetadata({
 	params,
@@ -16,7 +16,7 @@ export async function generateMetadata({
 	return {
 		title: t("title"),
 		description: t("description"),
-		alternates: getAlternates("/offres"),
+		alternates: getAlternates("/offres", locale),
 		keywords: [
 			"tarif création site web artisan",
 			"prix site vitrine Bretagne",
@@ -31,6 +31,7 @@ export async function generateMetadata({
 			"création site web sur mesure Bretagne",
 		],
 		openGraph: {
+			images: getOgImage(locale),
 			title: t("title"),
 			description: t("description"),
 		},
@@ -61,7 +62,7 @@ export default async function OffresPage({ params }: { params: Promise<{ locale:
 	}
 
 	return (
-		<main className="relative">
+		<main id="main" className="relative">
 			<script
 				type="application/ld+json"
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data

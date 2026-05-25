@@ -8,7 +8,10 @@ export default function Error({ reset }: { error: globalThis.Error; reset: () =>
 	const t = useTranslations("notFound")
 
 	return (
-		<main className="flex min-h-[60vh] flex-col items-center justify-center px-5 text-center">
+		<main
+			id="main"
+			className="flex min-h-[60vh] flex-col items-center justify-center px-5 text-center"
+		>
 			<h1 className="mb-4 font-heading text-4xl font-extrabold">Oops</h1>
 			<p className="mb-8 max-w-md text-lg text-djanni-gray-light">{t("subtitle")}</p>
 			<button

@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section"
 import { Link } from "@/i18n/navigation"
 import { BLOG_POSTS, PROJECTS } from "@/lib/constants"
-import { getAlternates } from "@/lib/metadata"
+import { getAlternates, getOgImage } from "@/lib/metadata"
 
 export async function generateMetadata({
 	params,
@@ -17,11 +17,11 @@ export async function generateMetadata({
 	return {
 		title: t("metaTitle"),
 		description: t("metaDescription"),
-		alternates: getAlternates("/plan-du-site"),
+		alternates: getAlternates("/plan-du-site", locale),
 		openGraph: {
+			images: getOgImage(locale),
 			title: t("metaTitle"),
 			description: t("metaDescription"),
-			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
 		},
 	}
 }
@@ -75,7 +75,7 @@ export default async function SitemapPage({ params }: { params: Promise<{ locale
 	]
 
 	return (
-		<main>
+		<main id="main">
 			{/* Hero */}
 			<section className="relative overflow-hidden px-5 pt-32 pb-20 md:px-12 md:pt-40 md:pb-24">
 				{/* Dot grid */}

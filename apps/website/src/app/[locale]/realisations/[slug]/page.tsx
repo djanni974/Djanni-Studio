@@ -20,25 +20,17 @@ export async function generateMetadata({
 }: {
 	params: Promise<{ slug: string; locale: string }>
 }): Promise<Metadata> {
-	const { slug } = await params
+	const { slug, locale } = await params
 	const project = PROJECTS.find((p) => p.slug === slug)
 	if (!project) return {}
 
 	return {
 		title: `${project.name} - Djanni Studio`,
 		description: project.context.slice(0, 160),
-		alternates: getAlternates(`/realisations/${slug}`),
+		alternates: getAlternates(`/realisations/${slug}`, locale),
 		openGraph: {
 			title: `${project.name} - Djanni Studio`,
 			description: project.context.slice(0, 160),
-			images: [
-				{
-					url: project.image || "/og-image.png",
-					width: 1200,
-					height: 630,
-					alt: project.name,
-				},
-			],
 		},
 	}
 }

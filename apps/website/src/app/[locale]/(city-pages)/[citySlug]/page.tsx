@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { CITY_PAGES } from "@/lib/constants"
 import { breadcrumbSchema } from "@/lib/json-ld"
-import { getAlternates, pickMessages } from "@/lib/metadata"
+import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 
 export const dynamicParams = false
 
@@ -33,7 +33,7 @@ export async function generateMetadata({
 	return {
 		title: t("title"),
 		description: t("description"),
-		alternates: getAlternates(`/${city.slug}`),
+		alternates: getAlternates(`/${city.slug}`, locale),
 		keywords: [
 			`création site web ${city.cityName}`,
 			`développeur web ${city.cityName}`,
@@ -43,6 +43,7 @@ export async function generateMetadata({
 			`site web artisan ${city.cityName}`,
 		],
 		openGraph: {
+			images: getOgImage(locale),
 			title: t("title"),
 			description: t("description"),
 		},
@@ -121,7 +122,7 @@ export default async function CityPage({
 	]
 
 	return (
-		<main className="relative">
+		<main id="main" className="relative">
 			<script
 				type="application/ld+json"
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data

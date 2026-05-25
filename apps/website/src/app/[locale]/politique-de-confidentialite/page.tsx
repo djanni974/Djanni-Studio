@@ -2,19 +2,24 @@ import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { Link } from "@/i18n/navigation"
-import { getAlternates } from "@/lib/metadata"
+import { getAlternates, getOgImage } from "@/lib/metadata"
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+	const { locale } = await params
 	return {
 		title: "Politique de confidentialité - Djanni Studio",
 		description:
 			"Politique de confidentialité du site Djanni Studio - Protection de vos données personnelles conformément au RGPD.",
-		alternates: getAlternates("/politique-de-confidentialite"),
+		alternates: getAlternates("/politique-de-confidentialite", locale),
 		openGraph: {
+			images: getOgImage(locale),
 			title: "Politique de confidentialité - Djanni Studio",
 			description:
 				"Politique de confidentialité du site Djanni Studio - Protection de vos données personnelles conformément au RGPD.",
-			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
 		},
 	}
 }
@@ -144,7 +149,7 @@ export default async function PolitiqueDeConfidentialite({
 	const bc = await getTranslations({ locale, namespace: "breadcrumb" })
 
 	return (
-		<main className="mx-auto max-w-[720px] px-6 pt-32 pb-20 md:px-12">
+		<main id="main" className="mx-auto max-w-[720px] px-6 pt-32 pb-20 md:px-12">
 			<Breadcrumb
 				items={[
 					{ label: bc("home"), href: "/" },

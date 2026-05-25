@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { AboutContent } from "@/components/sections/about-content"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
-import { getAlternates, pickMessages } from "@/lib/metadata"
+import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 
 export async function generateMetadata({
 	params,
@@ -16,7 +16,7 @@ export async function generateMetadata({
 	return {
 		title: t("title"),
 		description: t("description"),
-		alternates: getAlternates("/a-propos"),
+		alternates: getAlternates("/a-propos", locale),
 		keywords: [
 			"développeur web freelance Dinard",
 			"Gianni Djanni Studio",
@@ -29,9 +29,9 @@ export async function generateMetadata({
 			"site web sur mesure artisan",
 		],
 		openGraph: {
+			images: getOgImage(locale),
 			title: t("title"),
 			description: t("description"),
-			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
 		},
 	}
 }
@@ -45,7 +45,7 @@ export default async function AProposPage({ params }: { params: Promise<{ locale
 	])
 
 	return (
-		<main className="relative">
+		<main id="main" className="relative">
 			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<Breadcrumb

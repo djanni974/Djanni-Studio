@@ -3,19 +3,24 @@ import { getTranslations } from "next-intl/server"
 import type { ReactNode } from "react"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { Link } from "@/i18n/navigation"
-import { getAlternates } from "@/lib/metadata"
+import { getAlternates, getOgImage } from "@/lib/metadata"
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+	const { locale } = await params
 	return {
 		title: "Mentions légales - Djanni Studio",
 		description:
 			"Mentions légales du site Djanni Studio - Création de sites web pour artisans et commerçants en Bretagne.",
-		alternates: getAlternates("/mentions-legales"),
+		alternates: getAlternates("/mentions-legales", locale),
 		openGraph: {
+			images: getOgImage(locale),
 			title: "Mentions légales - Djanni Studio",
 			description:
 				"Mentions légales du site Djanni Studio - Création de sites web pour artisans et commerçants en Bretagne.",
-			images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Djanni Studio" }],
 		},
 	}
 }
@@ -159,7 +164,7 @@ export default async function MentionsLegales({ params }: { params: Promise<{ lo
 	const bc = await getTranslations({ locale, namespace: "breadcrumb" })
 
 	return (
-		<main className="mx-auto max-w-[720px] px-6 pt-32 pb-20 md:px-12">
+		<main id="main" className="mx-auto max-w-[720px] px-6 pt-32 pb-20 md:px-12">
 			<Breadcrumb
 				items={[
 					{ label: bc("home"), href: "/" },

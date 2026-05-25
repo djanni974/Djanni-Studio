@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { BlogListContent } from "@/components/sections/blog-list-content"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
-import { getAlternates, pickMessages } from "@/lib/metadata"
+import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 
 export async function generateMetadata({
 	params,
@@ -16,7 +16,7 @@ export async function generateMetadata({
 	return {
 		title: t("title"),
 		description: t("description"),
-		alternates: getAlternates("/blog"),
+		alternates: getAlternates("/blog", locale),
 		keywords: [
 			"blog site web artisan",
 			"conseils création site internet commerçant",
@@ -30,6 +30,7 @@ export async function generateMetadata({
 			"site web vs réseaux sociaux",
 		],
 		openGraph: {
+			images: getOgImage(locale),
 			title: t("title"),
 			description: t("description"),
 		},
@@ -45,7 +46,7 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
 	])
 
 	return (
-		<main className="relative">
+		<main id="main" className="relative">
 			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<Breadcrumb

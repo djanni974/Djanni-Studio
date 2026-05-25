@@ -6,7 +6,10 @@ export default function NotFound() {
 	const t = useTranslations("notFound")
 
 	return (
-		<main className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden px-6">
+		<main
+			id="main"
+			className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden px-6"
+		>
 			{/* Dot grid background */}
 			<div
 				className="pointer-events-none absolute inset-0 opacity-[0.03]"

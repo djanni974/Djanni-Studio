@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { RealisationsListContent } from "@/components/sections/realisations-list-content"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
-import { getAlternates, pickMessages } from "@/lib/metadata"
+import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 
 export async function generateMetadata({
 	params,
@@ -16,7 +16,7 @@ export async function generateMetadata({
 	return {
 		title: t("title"),
 		description: t("description"),
-		alternates: getAlternates("/realisations"),
+		alternates: getAlternates("/realisations", locale),
 		keywords: [
 			"portfolio site web artisan Bretagne",
 			"réalisations web Dinard",
@@ -29,6 +29,7 @@ export async function generateMetadata({
 			"site web Lighthouse 99",
 		],
 		openGraph: {
+			images: getOgImage(locale),
 			title: t("title"),
 			description: t("description"),
 		},
@@ -48,7 +49,7 @@ export default async function RealisationsPage({
 	])
 
 	return (
-		<main className="relative">
+		<main id="main" className="relative">
 			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<Breadcrumb

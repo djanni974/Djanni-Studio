@@ -16,17 +16,30 @@ function localizedPath(path: string, locale: string) {
 	return `/${locale}${path}`
 }
 
-export function getAlternates(path: string) {
+export function getAlternates(path: string, locale: string = defaultLocale) {
 	const languages: Record<string, string> = {}
-	for (const locale of locales) {
-		languages[locale] = `${BASE_URL}${localizedPath(path, locale)}`
+	for (const loc of locales) {
+		languages[loc] = `${BASE_URL}${localizedPath(path, loc)}`
 	}
 	languages["x-default"] = `${BASE_URL}${localizedPath(path, defaultLocale)}`
 
 	return {
-		canonical: `${BASE_URL}${path || "/"}`,
+		canonical: `${BASE_URL}${localizedPath(path, locale)}`,
 		languages,
 	}
+}
+
+// Image OG dynamique (opengraph-image.tsx) pour la locale. URL alignee sur
+// localizedPath : sans prefixe pour fr (defaut), prefixee pour en/br.
+export function getOgImage(locale: string) {
+	return [
+		{
+			url: `${BASE_URL}${localizedPath("/opengraph-image", locale)}`,
+			width: 1200,
+			height: 630,
+			alt: "Djanni Studio",
+		},
+	]
 }
 
 const SITE_TITLE = "Djanni Studio - Sites web pour artisans & commerçants"
@@ -34,8 +47,6 @@ const SITE_DESCRIPTION =
 	"Je crée des sites modernes pour les artisans et commerçants locaux. Pas de jargon, pas de surprises - un site qui vous ressemble et ramène des clients."
 const OG_DESCRIPTION =
 	"Ancien charpentier devenu développeur web. Je crée des sites modernes pour les artisans et commerçants à Dinard, Saint-Malo et toute la Côte d'Émeraude."
-const OG_IMAGE_URL = `${BASE_URL}/og-image.png`
-
 const KEYWORDS = [
 	"création site web Bretagne",
 	"développeur web freelance Bretagne",
@@ -81,20 +92,11 @@ export function getRootMetadata(): Metadata {
 			siteName: "Djanni Studio",
 			type: "website",
 			locale: "fr_FR",
-			images: [
-				{
-					url: OG_IMAGE_URL,
-					width: 1200,
-					height: 630,
-					alt: "Djanni Studio - Sites web pour artisans & commerçants en Bretagne",
-				},
-			],
 		},
 		twitter: {
 			card: "summary_large_image",
 			title: SITE_TITLE,
 			description: "Sites web pour artisans et commerçants en Bretagne",
-			images: [OG_IMAGE_URL],
 		},
 		icons: {
 			icon: [

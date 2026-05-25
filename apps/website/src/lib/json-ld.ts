@@ -1,4 +1,4 @@
-import type { BlogPost } from "@/lib/constants"
+import { type BlogPost, PRICING_TIERS } from "@/lib/constants"
 
 const SITE_URL = "https://www.djannistudio.fr"
 
@@ -38,10 +38,22 @@ export const siteJsonLd = {
 		"Développement web",
 	],
 	knowsLanguage: ["fr", "en", "br"],
+	hasOfferCatalog: {
+		"@type": "OfferCatalog",
+		name: "Formules de création de site web",
+		itemListElement: PRICING_TIERS.map((tier) => ({
+			"@type": "Offer",
+			name: tier.name,
+			description: tier.description,
+			price: tier.price.replace(/\s/g, ""),
+			priceCurrency: "EUR",
+		})),
+	},
 	founder: {
 		"@type": "Person",
-		name: "Gianni",
-		jobTitle: "Développeur web",
+		name: "Gianni Jardin",
+		jobTitle: "Développeur web freelance",
+		description: "Ancien charpentier devenu développeur web, basé à Dinard.",
 	},
 }
 
