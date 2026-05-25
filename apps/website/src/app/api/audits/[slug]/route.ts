@@ -18,10 +18,35 @@ import type { AuditPublic } from "@/lib/supabase/types"
 
 export const dynamic = "force-dynamic"
 
+/**
+ * Resout le sel de hash des IP une seule fois au chargement du module.
+ *
+ * RGPD : sans sel secret, les hash d IP sont reversibles (l espace IPv4 est
+ * brute-forcable en SHA-256). En production, l absence de AUDIT_VIEW_IP_SALT
+ * est donc une erreur fatale (fail-closed) plutot qu un fallback silencieux.
+ * En dev/test uniquement, on tolere un sel par defaut explicite.
+ */
+function resolveIpHashSalt(): string {
+	const salt = process.env.AUDIT_VIEW_IP_SALT
+	if (salt && salt.length > 0) return salt
+
+	if (process.env.NODE_ENV === "production") {
+		throw new Error(
+			"AUDIT_VIEW_IP_SALT manquant en production : requis pour anonymiser les IP des vues d audit (RGPD). Definir la variable dans les env Vercel.",
+		)
+	}
+
+	console.warn(
+		"[api/audits/:slug] AUDIT_VIEW_IP_SALT absent : fallback dev. NE JAMAIS utiliser en production.",
+	)
+	return "djanni-dev-only-salt"
+}
+
+const IP_HASH_SALT = resolveIpHashSalt()
+
 function hashIp(ip: string | null): string | null {
 	if (!ip) return null
-	const salt = process.env.AUDIT_VIEW_IP_SALT ?? "djanni-default-salt"
-	return createHash("sha256").update(`${salt}:${ip}`).digest("hex").slice(0, 32)
+	return createHash("sha256").update(`${IP_HASH_SALT}:${ip}`).digest("hex").slice(0, 32)
 }
 
 function extractClientIp(request: Request): string | null {
