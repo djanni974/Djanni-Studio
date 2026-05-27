@@ -6,7 +6,7 @@ import { BlogPostContent } from "@/components/sections/blog-post-content"
 import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { BLOG_POSTS } from "@/lib/constants"
-import { blogPostingSchema, breadcrumbSchema } from "@/lib/json-ld"
+import { blogPostingSchema } from "@/lib/json-ld"
 import { getAlternates, pickMessages } from "@/lib/metadata"
 
 export function generateStaticParams() {
@@ -67,7 +67,6 @@ export default async function BlogPostPage({
 	return (
 		<main id="main" className="relative">
 			<JsonLd data={blogPostingSchema(post)} />
-			<JsonLd data={breadcrumbSchema(trail)} />
 			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<Breadcrumb items={trail.map((t) => ({ label: t.name, href: t.path }))} />
