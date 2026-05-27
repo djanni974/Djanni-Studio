@@ -31,7 +31,7 @@ export const siteJsonLd = {
 		{ "@type": "City", name: "Dinan" },
 		{ "@type": "City", name: "Cancale" },
 	],
-	serviceType: [
+	knowsAbout: [
 		"Création de sites web",
 		"Refonte de sites internet",
 		"Optimisation SEO",
