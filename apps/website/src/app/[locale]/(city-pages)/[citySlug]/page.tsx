@@ -3,10 +3,8 @@ import { notFound } from "next/navigation"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { CityLandingContent } from "@/components/sections/city-landing-content"
-import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { CITY_PAGES } from "@/lib/constants"
-import { breadcrumbSchema } from "@/lib/json-ld"
 import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 
 export const dynamicParams = false
@@ -133,7 +131,6 @@ export default async function CityPage({
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
 			/>
-			<JsonLd data={breadcrumbSchema(trail)} />
 			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<Breadcrumb items={trail.map((t) => ({ label: t.name, href: t.path }))} />
