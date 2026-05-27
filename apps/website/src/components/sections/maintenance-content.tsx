@@ -39,6 +39,7 @@ export function MaintenanceContent() {
 				<div className="relative mx-auto max-w-[800px] text-center">
 					<AnimatedSection>
 						<SectionHeader
+							as="h1"
 							tag={t("tag")}
 							title={t("title")}
 							subtitle={t("subtitle")}
