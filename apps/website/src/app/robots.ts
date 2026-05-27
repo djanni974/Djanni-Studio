@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 
-const DISALLOW = ["/api/", "/demande-projet"]
+const DISALLOW = ["/api/"]
 
 // Politique crawlers IA : on AUTORISE explicitement les bots des moteurs generatifs.
 // Djanni Studio est un site d'acquisition - etre cite par ChatGPT, Claude, Perplexity et
