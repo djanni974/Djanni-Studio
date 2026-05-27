@@ -141,7 +141,7 @@ export const PROJECTS: Project[] = [
 		location: "Dinard, Bretagne",
 		duration: "2 semaines",
 		year: "2026",
-		url: "https://entre-deux.vercel.app",
+		url: "https://royalblue-seal-722225.hostingersite.com",
 		context:
 			"L'Entre-Deux est un bistro burger café à Dinard, tenu par un jeune couple passionné. 5 étoiles sur Google, 61 avis - une réputation solide qui mérite un site à la hauteur.",
 		problem:
