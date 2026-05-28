@@ -1,4 +1,5 @@
 import { cn } from "@repo/ui/lib/utils"
+import { JsonLd } from "@/components/seo/json-ld"
 import { Link } from "@/i18n/navigation"
 
 const SITE_URL = "https://www.djannistudio.fr"
@@ -24,11 +25,7 @@ export function Breadcrumb({ items, className }: { items: BreadcrumbItem[]; clas
 
 	return (
 		<>
-			<script
-				type="application/ld+json"
-				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-			/>
+			<JsonLd data={jsonLd} />
 			<nav aria-label="Breadcrumb" className={cn("text-xs", className)}>
 				<ol className="flex items-center gap-1.5 text-djanni-gray-light">
 					{items.map((item, i) => (

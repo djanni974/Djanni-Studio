@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { OffresContent } from "@/components/sections/offres-content"
+import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 
@@ -63,11 +64,7 @@ export default async function OffresPage({ params }: { params: Promise<{ locale:
 
 	return (
 		<main id="main" className="relative">
-			<script
-				type="application/ld+json"
-				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-			/>
+			<JsonLd data={faqJsonLd} />
 			<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 				<div className="mx-auto max-w-[1100px]">
 					<Breadcrumb
