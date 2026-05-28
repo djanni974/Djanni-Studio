@@ -17,8 +17,10 @@ import {
 	IconX,
 } from "@tabler/icons-react"
 import type { Metadata } from "next"
+import { headers } from "next/headers"
 import { notFound } from "next/navigation"
-import type { ReactNode } from "react"
+import { cache, type ReactNode } from "react"
+import { getPublishedAuditAndTrackView } from "@/lib/supabase/audits"
 
 /**
  * Page publique d audit partageable : `/audit/[slug]`
@@ -68,25 +70,27 @@ interface AuditPublic {
 
 // ---------- Data fetching ----------
 
-async function getAudit(slug: string): Promise<AuditPublic | null> {
-	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+/**
+ * Lit l'audit directement en base (lib server-only) plutot que via un self-fetch
+ * HTTP : on garde la vraie IP client (depuis headers()) pour le tracking, et
+ * `cache()` deduplique l'appel entre generateMetadata et le rendu de page, ce qui
+ * evite de compter deux vues par affichage.
+ */
+const loadAudit = cache(async (slug: string): Promise<AuditPublic | null> => {
+	const headerStore = await headers()
+	const forwarded = headerStore.get("x-forwarded-for")
+	const ip = forwarded ? forwarded.split(",")[0].trim() : headerStore.get("x-real-ip")
 
-	try {
-		const res = await fetch(`${baseUrl}/api/audits/${slug}`, { cache: "no-store" })
+	const result = await getPublishedAuditAndTrackView(slug, {
+		ip,
+		userAgent: headerStore.get("user-agent"),
+		referer: headerStore.get("referer"),
+	})
 
-		if (res.status === 404 || res.status === 410) return null
-		if (!res.ok) {
-			console.error(`[audit/${slug}] fetch failed with status ${res.status}`)
-			return null
-		}
-
-		const json = (await res.json()) as { data: AuditPublic }
-		return json.data
-	} catch (err) {
-		console.error(`[audit/${slug}] fetch error`, err)
-		return null
-	}
-}
+	// La couche DB est typee de facon lache (scores JSON) : on rattache au type
+	// local de la page, structurellement compatible.
+	return result.status === "ok" ? (result.audit as AuditPublic) : null
+})
 
 // ---------- Metadata Open Graph dynamique ----------
 
@@ -96,7 +100,7 @@ export async function generateMetadata({
 	params: Promise<{ slug: string }>
 }): Promise<Metadata> {
 	const { slug } = await params
-	const audit = await getAudit(slug)
+	const audit = await loadAudit(slug)
 
 	if (!audit) {
 		return {
@@ -125,7 +129,7 @@ export async function generateMetadata({
 
 export default async function AuditPage({ params }: { params: Promise<{ slug: string }> }) {
 	const { slug } = await params
-	const audit = await getAudit(slug)
+	const audit = await loadAudit(slug)
 
 	if (!audit) notFound()
 

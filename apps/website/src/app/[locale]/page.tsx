@@ -3,6 +3,7 @@ import dynamic from "next/dynamic"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { Hero } from "@/components/sections/hero"
+import { JsonLd } from "@/components/seo/json-ld"
 import { SectionDivider } from "@/components/ui/section-divider"
 import { FAQ_ITEMS } from "@/lib/constants"
 import { getAlternates, pickMessages } from "@/lib/metadata"
@@ -75,11 +76,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
 	return (
 		<main id="main">
-			<script
-				type="application/ld+json"
-				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-			/>
+			<JsonLd data={faqJsonLd} />
 			<NextIntlClientProvider
 				messages={pickMessages(messages, [
 					"hero",

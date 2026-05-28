@@ -6,7 +6,8 @@
  *
  * Body POST (voir AuditCreateInput) :
  *   {
- *     slug: "vincent-carreleur-a7x",        // unique, URL-safe
+ *     slug: "vincent-carreleur",             // base lisible ; un suffixe aleatoire
+ *                                            // est ajoute cote serveur (non devinable)
  *     contact_id: "uuid" | null,
  *     target_url: "https://client.fr",
  *     target_business_name: "SARL Carrelages Masson",
@@ -20,6 +21,7 @@
  *   }
  */
 
+import { randomBytes } from "node:crypto"
 import { NextResponse } from "next/server"
 import { createSupabaseAdminClient } from "@/lib/supabase/admin"
 import { requireAdmin } from "@/lib/supabase/server"
@@ -30,10 +32,22 @@ export const dynamic = "force-dynamic"
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://djannistudio.fr"
 const VALID_STATUSES: readonly AuditStatus[] = ["draft", "published", "archived"]
 
+// Le slug fourni par l'admin sert de base lisible ; on borne sa longueur pour
+// laisser la place au suffixe aleatoire ajoute par buildShareableSlug().
 function isValidSlug(slug: unknown): slug is string {
 	return (
-		typeof slug === "string" && slug.length > 0 && slug.length <= 120 && /^[a-z0-9-]+$/.test(slug)
+		typeof slug === "string" && slug.length > 0 && slug.length <= 100 && /^[a-z0-9-]+$/.test(slug)
 	)
+}
+
+/**
+ * Le lien d'audit est partage en clair et lu sans authentification : le slug est
+ * donc le secret d'acces. On suffixe la base lisible de 64 bits aleatoires (16
+ * caracteres hex) pour le rendre non devinable, sinon un pattern `<nom>-<court>`
+ * serait brute-forcable. Charset conserve dans [a-z0-9-].
+ */
+function buildShareableSlug(base: string): string {
+	return `${base}-${randomBytes(8).toString("hex")}`
 }
 
 function isValidUrl(value: unknown): value is string {
@@ -61,7 +75,7 @@ export async function POST(request: Request) {
 
 	if (!isValidSlug(body.slug)) {
 		return NextResponse.json(
-			{ error: "slug invalide : lowercase alphanumerique + tirets, <= 120 car." },
+			{ error: "slug invalide : lowercase alphanumerique + tirets, <= 100 car." },
 			{ status: 400 },
 		)
 	}
@@ -77,7 +91,7 @@ export async function POST(request: Request) {
 		body.status && VALID_STATUSES.includes(body.status) ? body.status : "draft"
 
 	const payload = {
-		slug: body.slug,
+		slug: buildShareableSlug(body.slug),
 		contact_id: body.contact_id ?? null,
 		target_url: body.target_url,
 		target_business_name: body.target_business_name ?? null,

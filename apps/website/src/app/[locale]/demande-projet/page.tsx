@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import { ContactFaq } from "@/components/sections/contact-faq"
 import { ProjectRequestForm } from "@/components/sections/project-request-form"
+import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 import { AboutGianni } from "./_components/AboutGianni"
@@ -72,11 +73,7 @@ export default async function DemandeProjetPage({
 	return (
 		<NextIntlClientProvider messages={pickMessages(messages, ["projectRequest", "contactFaq"])}>
 			<main id="main" className="relative overflow-hidden">
-				<script
-					type="application/ld+json"
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
-					dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-				/>
+				<JsonLd data={faqJsonLd} />
 				<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 					<div className="mx-auto max-w-[1100px]">
 						<Breadcrumb
