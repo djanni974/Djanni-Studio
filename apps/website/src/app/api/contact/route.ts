@@ -1,37 +1,6 @@
-import { Ratelimit } from "@upstash/ratelimit"
-import { Redis } from "@upstash/redis"
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
-
-// --- Rate limiter (Upstash Redis - works in serverless) -----
-// Fallback to in-memory if Upstash is not configured
-const hasUpstash = process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
-
-const ratelimit = hasUpstash
-	? new Ratelimit({
-			redis: Redis.fromEnv(),
-			limiter: Ratelimit.slidingWindow(3, "60 s"),
-			analytics: true,
-		})
-	: null
-
-const memoryMap = new Map<string, { count: number; resetAt: number }>()
-
-async function checkRateLimit(ip: string): Promise<boolean> {
-	if (ratelimit) {
-		const { success } = await ratelimit.limit(ip)
-		return success
-	}
-	// In-memory fallback (dev / missing config)
-	const now = Date.now()
-	const entry = memoryMap.get(ip)
-	if (!entry || now > entry.resetAt) {
-		memoryMap.set(ip, { count: 1, resetAt: now + 60_000 })
-		return true
-	}
-	entry.count++
-	return entry.count <= 3
-}
+import { rateLimit } from "@/lib/rate-limit"
 
 // --- Origin / Referer CSRF check ----------------------------
 const ALLOWED_ORIGINS = [
@@ -425,7 +394,7 @@ export async function POST(request: Request) {
 
 		// --- Rate limiting (Upstash Redis / fallback memory) -
 		const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown"
-		const allowed = await checkRateLimit(ip)
+		const allowed = await rateLimit(ip, { prefix: "contact", limit: 3, windowSeconds: 60 })
 
 		if (!allowed) {
 			return NextResponse.json(
