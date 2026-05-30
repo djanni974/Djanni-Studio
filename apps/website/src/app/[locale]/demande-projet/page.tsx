@@ -6,6 +6,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { ContactFaq } from "@/components/sections/contact-faq"
 import { ProjectRequestForm } from "@/components/sections/project-request-form"
 import { JsonLd } from "@/components/seo/json-ld"
+import { AppToaster } from "@/components/ui/app-toaster"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { getAlternates, getOgImage, pickMessages } from "@/lib/metadata"
 import { AboutGianni } from "./_components/AboutGianni"
@@ -74,6 +75,7 @@ export default async function DemandeProjetPage({
 		<NextIntlClientProvider messages={pickMessages(messages, ["projectRequest", "contactFaq"])}>
 			<main id="main" className="relative overflow-hidden">
 				<JsonLd data={faqJsonLd} />
+				<AppToaster />
 				<div className="absolute top-20 left-0 z-10 w-full px-5 md:px-12">
 					<div className="mx-auto max-w-[1100px]">
 						<Breadcrumb
